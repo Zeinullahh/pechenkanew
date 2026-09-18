@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Providers.jsx",
+    "path": "src/components/layout/Providers.jsx",
+    "sha": "e21ade9464c2c03a9778ae33456477b527c42ef3",
+    "size": 873,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/layout/Providers.jsx?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/blob/main/src/components/layout/Providers.jsx",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/blobs/e21ade9464c2c03a9778ae33456477b527c42ef3",
+    "download_url": "https://raw.githubusercontent.com/DavidHDev/react-bits/main/src/components/layout/Providers.jsx",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/layout/Providers.jsx?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/blobs/e21ade9464c2c03a9778ae33456477b527c42ef3",
+      "html": "https://github.com/DavidHDev/react-bits/blob/main/src/components/layout/Providers.jsx"
+    }
+  },
+  {
+    "name": "SidebarLayout.jsx",
+    "path": "src/components/layout/SidebarLayout.jsx",
+    "sha": "150333bf1995f1d9d924255ad57c3351a8904287",
+    "size": 736,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/layout/SidebarLayout.jsx?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/blob/main/src/components/layout/SidebarLayout.jsx",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/blobs/150333bf1995f1d9d924255ad57c3351a8904287",
+    "download_url": "https://raw.githubusercontent.com/DavidHDev/react-bits/main/src/components/layout/SidebarLayout.jsx",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/layout/SidebarLayout.jsx?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/blobs/150333bf1995f1d9d924255ad57c3351a8904287",
+      "html": "https://github.com/DavidHDev/react-bits/blob/main/src/components/layout/SidebarLayout.jsx"
+    }
+  }
+]

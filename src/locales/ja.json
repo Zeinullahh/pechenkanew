@@ -1,0 +1,2477 @@
+{
+  "aiSocModal": {
+    "title": "管理コンソール",
+    "emailSecurity": "メールセキュリティのログイン/登録",
+    "webSecurity": "ウェブセキュリティのログイン/登録",
+    "getOnlyOffice": "OnlyOfficeを入手"
+  },
+  "emailSecurityModal": {
+    "title": "メールセキュリティ",
+    "subtitle": "アカウントへのアクセス方法を選択してください",
+    "webmail": {
+      "title": "Webmail",
+      "desc": "受信トレイに直接アクセスする"
+    },
+    "admin": {
+      "title": "管理コンソール",
+      "desc": "セキュリティ設定とユーザーを管理する"
+    }
+  },
+  "languageSelector": {
+    "triggerLabel": "言語を選択",
+    "menuLabel": "言語を選んでください",
+    "searchLabel": "Search languages",
+    "searchPlaceholder": "Search by name or native script",
+    "searchResults": "Search results",
+    "noMatches": "No languages match your search.",
+    "popular": "Most popular",
+    "allLanguages": "All languages"
+  },
+  "homeCompliance": {
+    "badge": "規制コンプライアンス",
+    "title": "グローバルコンプライアンス対応",
+    "subtitle": "継続的なライブコンプライアンスカバレッジ",
+    "statusLabel": "準拠",
+    "supremeOnly": "Supremeのみ",
+    "cards": {
+      "gdpr": {
+        "desc": "すべてのEU居住者の個人データを規制する、世界で最も厳格なプライバシーおよびセキュリティ法。世界中のデータ保護のグローバルスタンダードを設定しています。"
+      },
+      "ukGdpr": {
+        "desc": "EU GDPRに相当する、Brexit後に国内法として維持された英国法。範囲と義務は実質的に同一であり、EU GDPRへの準拠はUK GDPRにも適用されます。"
+      },
+      "ccpa": {
+        "desc": "登録にはGoogle OAuthを使用しており、プロフィールデータ(氏名、メールアドレス、Google ID)がサーバーに送信されます。これはCCPAに基づく個人データです。ユーザーはアカウントデータをいつでも確認、アクセス、および削除する権利を有します。"
+      },
+      "pipeda": {
+        "desc": "企業の所在地に関わらず、カナダ居住者のデータを扱うすべての商業組織に適用されます。グローバルに拡大するにあたり、カナダユーザーの個人データも同様の最小収集基準で管理されます。"
+      },
+      "ksaPdpl": {
+        "desc": "SDAIAが施行するサウジアラビアの個人データ保護法。個人データの収集、処理、および国境を越えた転送を規制しています。"
+      },
+      "uaePdpl": {
+        "desc": "DIFCやADGMを含む本土およびフリーゾーン全体での個人データ処理を規制する、UAEの個人データ保護法。"
+      },
+      "qatarPdpl": {
+        "desc": "交通通信省が管轄するカタールの個人データプライバシー保護法。"
+      },
+      "bahrainPdpl": {
+        "desc": "PDPAによって規制され、国際標準に準拠したバーレーンの個人データ保護法。"
+      },
+      "kuwaitDp": {
+        "desc": "電子サービスプロバイダーに対するデータ保護義務を定めるクウェートの電子通信取引法。"
+      },
+      "omanPdpl": {
+        "desc": "データ主体の包括的な権利と、コントローラー及びプロセッサーの義務を規定するオマーンの個人データ保護法。"
+      },
+      "privacyByDesign": {
+        "desc": "Supremeのコードスキャンはすべてローカルマシン上で実行され、ソースコードが外部に送信または処理されることはありません。アカウントデータ(Google OAuthプロフィール)はプライバシーポリシーに従って別途管理されます。"
+      }
+    }
+  },
+  "homePartners": {
+    "title": "クライアントとパートナー",
+    "subtitle": "ここでは主要なクライアントとパートナーの一部をご紹介しています。全一覧ではありません。",
+    "marketCap": "時価総額",
+    "billion": "十億",
+    "million": "百万"
+  },
+  "supremeInstructions": {
+    "light": "ライト",
+    "videoInstructions": "ビデオガイド",
+    "lightVideoTitle": "Supreme Light ビデオガイド",
+    "openYoutube": "YouTubeで動画を開く",
+    "maxPlaceholder": "動画プレースホルダー — 完全なチュートリアルは近日追加予定です。"
+  },
+  "header": {
+    "andManyMore": "そして他にも多数...",
+    "nav": {
+      "main": "ホーム",
+      "mail": "メール",
+      "affiliate": "アフィリエイト",
+      "instructions": "手順",
+      "product": "AI-CSD",
+      "systemsSithub": "Sithub",
+      "systemsSupreme": "Supreme",
+      "instructionsAiSoc": "AI-CSD",
+      "instructionsSupreme": "Supreme",
+      "instructionsSithub": "Sithub"
+    },
+    "login": "ログイン",
+    "cta": {
+      "contact": "Contact",
+      "download": "Download",
+      "requestDemo": "Request Demo",
+      "get": "Get"
+    }
+  },
+  "affiliate": {
+    "hero": {
+      "tagline": "Silence AI のパートナープログラムに参加しましょう",
+      "title": "招待を収益に変えよう。",
+      "subtitle": "招待された顧客のすべての支出に対して、6か月間10%の報酬を提供します。",
+      "cta": "パートナープログラムに参加する",
+      "earnings": "$2,940.00",
+      "growth": "+18%(前月比)",
+      "snapshot": {
+        "label": "ライブスナップショット",
+        "caption": "パフォーマンスは60秒ごとに更新され、確定した支払いは即座に同期されます。"
+      },
+      "graph": {
+        "label": "収益トレンド",
+        "title": "紹介収益の成長",
+        "window": "直近30日間",
+        "label0": "第1週",
+        "label1": "第2週",
+        "label2": "第3週",
+        "label3": "第4週",
+        "label4": "第5週",
+        "label5": "第6週",
+        "label6": "今日"
+      },
+      "metric": {
+        "conversion": "有効化",
+        "conversionChange": "今月は新規24チーム",
+        "pending": "保留中の報酬",
+        "pendingChange": "出金は営業日2日以内に処理されます"
+      }
+    },
+    "howItWorks": {
+      "title": "仕組み",
+      "create": {
+        "title": "リンクを作成",
+        "description": "Silence AI ダッシュボードで独自の紹介リンクまたはプロモコードを作成します。"
+      },
+      "share": {
+        "title": "共有",
+        "description": "メール、LinkedIn、コミュニティを通じてチームを招待し、リアルタイムで成果を追跡します。"
+      },
+      "earn": {
+        "title": "収益化",
+        "description": "紹介した顧客が Silence AI の保護を有効化するとすぐにコミッションを受け取ります。"
+      }
+    },
+    "commission": {
+      "heading": "残高リワード",
+      "highlight": {
+        "label": "パートナーが喜ぶ理由"
+      },
+      "reward": {
+        "title": "残高チャージごとに10%のリワード",
+        "description": "招待したチームが Silence AI ウォレットをチャージすると、純額の10%が即座にあなたに入ります。"
+      },
+      "settlement": {
+        "title": "リアルタイム台帳反映",
+        "description": "取引完了から1分以内にリワードがパートナー残高へ反映され、手動承認は不要です。"
+      },
+      "withdrawal": {
+        "title": "出金は営業日2日以内に処理",
+        "description": "出金リクエストは自動で審査され、営業日2日以内に銀行口座へ入金されます。"
+      },
+      "sample": {
+        "label": "チャージ例",
+        "caption": "各チャージでパートナー収益が伸びます—レベルリセットや製品のマッピングは不要です。",
+        "topup": "$250 チャージ → $25 リワード",
+        "topupHigher": "$1,000 チャージ → $100 リワード"
+      },
+      "note": "コミッションは支払い処理手数料を差し引いた純額に対して計算されます。"
+    },
+    "faq": {
+      "title": "よくある質問",
+      "payments": {
+        "question": "支払いはどのように受け取りますか?",
+        "answer": "プロフィールに VISA または Mastercard の番号を登録すると、指定カードへ直接出金できます。"
+      },
+      "discounts": {
+        "question": "紹介された顧客に割引はありますか?",
+        "answer": "いいえ。紹介された顧客に割引はなく、成功した紹介のコミッションはパートナーのみが受け取ります。"
+      },
+      "statistics": {
+        "question": "紹介統計はいつ確認できますか?",
+        "answer": "ユーザーがプロモコードや紹介リンクで登録すると、そのメールアドレスとリワードがダッシュボードに表示されます。"
+      }
+    },
+    "termsAff": {
+      "label": "Affiliate Program",
+      "title": "Affiliate Terms of Service",
+      "gitServer": {
+        "title": "Gitリポジトリサーバー",
+        "tag": "セルフホストのバージョン管理"
+      },
+      "analyzer": {
+        "title": "セキュリティアナライザー",
+        "tag": "ローカルコードスキャンエンジン"
+      },
+      "vulnDb": {
+        "title": "脆弱性データベース",
+        "tag": "ダウンロード済みセキュリティパッチ"
+      },
+      "intro": "These terms describe how rewards are issued and paid to partners participating in the Silence AI affiliate program.",
+      "meta": {
+        "effective": "Effective date: 10 November 2024",
+        "lastUpdated": "Last updated: 10 November 2024"
+      },
+      "sections": {
+        "overview": {
+          "title": "1. Program Overview",
+          "body1": "1.1 Agreement Scope: These Affiliate Terms of Service (\"Terms\") govern your participation in the Silence AI affiliate program operated by Silence AI LLC (\"Silence AI,\" \"we,\" \"us,\" or \"our\"). These Terms apply to you, the individual or entity enrolling as an affiliate partner (\"you\" or \"your\"), and, where applicable, your employer, principal, or organization if you act on their behalf.",
+          "body2": "1.2 Program Summary: Under this program, qualified partners earn commission-based rewards when referred customers purchase or top up the AI-CSD 1 product. Participation in the affiliate program also requires compliance with the general Silence AI Terms of Service."
+        },
+        "eligibility": {
+          "title": "2. Partner Eligibility",
+          "item1": "You must maintain an active Silence AI affiliate account with accurate business and payment details.",
+          "item2": "Referrals must complete registration through your issued link or promo code.",
+          "item3": "Accounts found to be fraudulent, self-referred, or in breach of applicable law are not eligible for rewards."
+        },
+        "commission": {
+          "title": "3. Commission Structure",
+          "body1": "You earn a 10% reward on every balance top-up completed by an account registered through your invitation.",
+          "body2": "Commission is calculated from the net top-up amount after payment processing fees are deducted."
+        },
+        "rewardPosting": {
+          "title": "4. Reward Posting",
+          "body1": "Rewards post to your partner balance within one minute after the transaction successfully clears. There is no manual approval queue.",
+          "body2": "Notifications appear in your affiliate dashboard alongside the customer identifier and top-up amount."
+        },
+        "withdrawals": {
+          "title": "5. Withdrawals",
+          "body1": "Withdrawal requests are processed within two business days and paid out using the settlement method on file.",
+          "body2": "Minimum withdrawal thresholds and supported payout networks are published inside the affiliate dashboard."
+        },
+        "productScope": {
+          "title": "6. Product Scope",
+          "body1": "Rewards are only provided for the AI-CSD 1 product. Other Silence AI services are excluded from the affiliate program unless explicitly stated otherwise in writing.",
+          "body2": "If additional products become eligible, Silence AI will publish an updated list inside these terms."
+        },
+        "compliance": {
+          "title": "7. Partner Conduct & Compliance",
+          "item1": "Partners must represent Silence AI accurately and avoid misleading claims about features or pricing.",
+          "item2": "Marketing communications must comply with applicable anti-spam, privacy, and advertising regulations.",
+          "item3": "Silence AI may suspend or terminate accounts that violate these obligations or harm the brand."
+        },
+        "changes": {
+          "title": "8. Changes & Contact",
+          "body1": "Silence AI may update these affiliate terms to reflect changes in the program or applicable law. Updated versions take effect upon publication on this page.",
+          "body2": "Questions about the affiliate program can be sent to support@silence.codes."
+        }
+      }
+    },
+    "balanceRewards": {
+      "lampTitle": "Nagrody salda"
+    }
+  },
+  "hero": {
+    "headline": "AI-CSD 1:サイバーセキュリティはもはや高価でも複雑でもない",
+    "subheading": "統合されたAIサイバーセキュリティプラットフォームが提供するもの:",
+    "playgroundHeading": "AI搭載サイバーセキュリティ部門",
+    "bullets": {
+      "web": "リアルタイムのWeb攻撃防御",
+      "email": "メール攻撃防御",
+      "vulnerability": "脆弱性ファインダー"
+    },
+    "buttons": {
+      "connect": "4分で接続",
+      "tour": "90秒ツアーを見る"
+    },
+    "tooltips": {
+      "web": {
+        "title": "Web攻撃防御",
+        "content": "本システムはDDoSやSQLiなどのあらゆるWeb攻撃から保護します(ビジネスロジックの脆弱性を除く)。"
+      },
+      "email": {
+        "title": "メール攻撃防御",
+        "content": "本システムはフィッシング、悪意のある添付ファイル、危険なリンクなど、あらゆるメール攻撃から保護します。"
+      },
+      "vulnerability": {
+        "title": "脆弱性ファインダー",
+        "content": "アプリケーションコードやWeb/APIとの動的なやり取りを通じて脆弱性を特定し、インテリジェンス機能も活用します"
+      }
+    }
+  },
+  "playground": {
+    "options": {
+      "globeShield": "Webセキュリティとトラフィック管理",
+      "emailSecurity": "メールセキュリティ"
+    }
+  },
+  "cookie": {
+    "title": "技術Cookieに関する通知",
+    "description": "当サイトでは、言語設定を保持し次回以降にこの通知を表示しないようにするため、当社が設定した技術Cookieのみを使用しています。トラッキングCookieや第三者Cookieは使用していません。",
+    "more": "詳しくは",
+    "link": "Cookieポリシー",
+    "ok": "OK"
+  },
+  "pricing": {
+    "title": "料金",
+    "tooltips": {
+      "cmcGlobal": {
+        "title": "グローバルトラフィック監視付きCMC",
+        "content": "集中管理コンソール(CMC)は他のセキュリティシステムとシームレスに連携し、Global ShieldやSecurity Testerと同じドメインとインターフェイスを共有します。ここから国別ブロックやポート遮断などを実行できます"
+      },
+      "countryBlacklisting": {
+        "title": "国別ブロック",
+        "content": "特定の国からのトラフィックをすべて遮断します"
+      },
+      "portManagement": {
+        "title": "ポート管理",
+        "content": "未使用ポートを閉じて攻撃面を減らします。例:SSHが不要な場合はポート22を無効化する"
+      },
+      "cmcEmail": {
+        "title": "高度なメールフロー可視化付きCMC",
+        "content": "CMCは他のセキュリティシステムと連携し、追加した全社ユーザーのメールフローを監視・確認できます"
+      },
+      "dynamicVulnerability": {
+        "title": "動的脆弱性検出",
+        "content": "Webサイトとの対話を通じて脆弱性を検出し、インテリジェンスシステムも活用します"
+      },
+      "codeAnalyzer": {
+        "title": "コードアナライザー",
+        "content": "VS Codeプラグインを通じてコードベースのセキュリティ問題を直接検出し、リリース前に修正できます"
+      },
+      "intelligenceReport": {
+        "title": "インテリジェンスレポート",
+        "content": "対象について詳細な洞察を提供:開いているポート、稼働中のサービス、サブドメインなど"
+      },
+      "fullVulnerability": {
+        "title": "完全な脆弱性チェック",
+        "content": "完全チェックには動的スキャンとコードスキャンの両方が含まれます"
+      }
+    },
+    "aiSoc": {
+      "tabs": {
+        "email": "メール保護",
+        "web": "Webセキュリティ"
+      },
+      "billing": {
+        "yearly": "年額",
+        "monthly": "月額"
+      },
+      "cta": "システムをリクエスト",
+      "contactSupport": "サポートに連絡",
+      "planTitles": {
+        "premium": "Business Premium 100",
+        "max": "Business MAX",
+        "standard": "Business Standard"
+      },
+      "features": {
+        "common": {
+          "customDomainEmail": "独自ドメインの法人メール (you@yourcompany.com)",
+          "officeSuite": "デスクトップ/モバイル対応のオフィススイート:文書・表計算・プレゼン・メール",
+          "adminConsole": "ドメイン全体のメールを管理し一括操作できる管理コンソール",
+          "dnsSecuritySetup": "管理コンソールでのDNSベースのメール保護設定 (SPF・DKIM・DMARC)",
+          "emailMigration": "メール移行サポート",
+          "aiThreatProtection": "AIによる5層防御と自動分類(安全・スパム・危険リンク・フィッシング・スプーフィング)",
+          "emailFlowVisualization": "管理コンソールでのドメイン全体のメールフロー可視化と高度なフィルター",
+          "domainWideDeletion": "管理者がドメイン内の全ユーザーからメールを一括削除可能"
+        },
+        "shared": {
+          "unlimitedSecurity": "無制限の4層メール防御"
+        },
+        "premium": {
+          "userLimit": "最大100ユーザー",
+          "adminLimit": "最大5名の管理者",
+          "aiAnalysis": "ユーザーあたり月60件までの詳細AIフィッシング分析(第5レイヤー防御)",
+          "storage": "ユーザーあたり最大50GB"
+        },
+        "max": {
+          "userLimit": "最大300ユーザー",
+          "adminLimit": "最大10名の管理者",
+          "aiAnalysis": "ユーザーあたり月100件までの詳細AIフィッシング分析(第5レイヤー防御)",
+          "storage": "ユーザーあたり最大200GB"
+        },
+        "standard": {
+          "userLimit": "最大10ユーザー",
+          "adminLimit": "管理者1名まで",
+          "aiAnalysis": "ユーザーあたり月10件までの詳細AIフィッシング分析(第5レイヤー防御)",
+          "storage": "ユーザーあたり最大8GB"
+        }
+      }
+    },
+    "plans": {
+      "globalShield": {
+        "title": "Webセキュリティとトラフィック管理",
+        "price": "$0.06/GB",
+        "description": "無制限\n追加料金なし",
+        "button": "WebアプリとAPIを保護",
+        "features": {
+          "webProtection": "ビジネスロジック以外のすべてのWeb攻撃を防御",
+          "ddosProtection": "リアルタイムDDoS防御",
+          "cmc": "グローバルトラフィック監視付きCMC",
+          "country": "国別ブロック機能",
+          "port": "ポート遮断機能",
+          "aiManager": "AIマネージャー:セキュリティレポートを表示し、指示を実行します — IPアドレス範囲のブラックリスト登録を指示すれば、自動で追加します",
+          "captcha": "reCAPTCHAより200倍最適化された行動CAPTCHA — AIがユーザーの行動を追跡し、ボットを検出した場合のみCloudflare Turnstile風のチェックを表示します"
+        }
+      },
+      "emailProtector": {
+        "title": "メールセキュリティ",
+        "price": "$10/月/アカウント",
+        "description": "1日10通まで\n追加メール: 1通あたり$0.035",
+        "button": "メールを保護",
+        "features": {
+          "cmcEmail": "最先端のメールフロー可視化を備えたCMC",
+          "visibility": "送受信メールを完全に可視化し、自動で脅威分類",
+          "webClient": "安全なWebメールクライアント",
+          "phishing": "フィッシング防御",
+          "malware": "マルウェア添付のスキャン",
+          "links": "危険なリンクの検出",
+          "spam": "スパムフィルタ",
+          "fakeSender": "なりすまし送信者の防止"
+        }
+      },
+      "securityTester": {
+        "title": "脆弱性ファインダー",
+        "price": "$25/月",
+        "description": "月50回までの完全チェック\n追加チェック: 1回$0.5",
+        "button": "テストを開始",
+        "features": {
+          "dynamic": "動的脆弱性検出",
+          "codeAnalyzer": "コードアナライザー",
+          "reports": "分かりやすいセキュリティレポート",
+          "intelligence": "インテリジェンスレポート"
+        }
+      },
+      "basic": {
+        "name": "ベーシック",
+        "features": {
+          "fix": "重大バグ修正(48時間SLA)",
+          "updates": "月次アップデート",
+          "audit": "四半期セキュリティ監査",
+          "manager": "専任マネージャー"
+        }
+      },
+      "pro": {
+        "name": "プロ",
+        "badge": "最も人気",
+        "features": {
+          "fix": "重大バグ修正(24時間SLA)",
+          "updates": "月10時間のアップデート",
+          "audit": "月次セキュリティ監査",
+          "manager": "専任マネージャー"
+        }
+      },
+      "enterprise": {
+        "name": "エンタープライズ",
+        "badge": "ベストバリュー",
+        "features": {
+          "fix": "緊急バグ修正(4時間SLA)",
+          "updates": "無制限アップデート + ロードマップ",
+          "audit": "週次監査 + バックアップ",
+          "manager": "専任マネージャー"
+        }
+      }
+    },
+    "subtitle": "モバイルファーストのプランは、あなたの製品とともに拡張するように構築されています...",
+    "percentMaintenance": "{percent}% 年間メンテナンス",
+    "planEstimate": "${value}",
+    "perYear": "年あたり(概算)",
+    "calculator": {
+      "title": "プロジェクト費用計算",
+      "subtitle": "スライドして年間メンテナンスを確認",
+      "projectCost": "プロジェクト費用:",
+      "projectValue": "${value}"
+    }
+  },
+  "solution": {
+    "sectionTitle": "私たちのソリューション",
+    "sectionSubtitle": "4分で導入完了。サイバーセキュリティの専門知識がなくてもIT担当者なら誰でも利用できます。高度な可視化とコスト効率を提供します。",
+    "cards": {
+      "globalShield": {
+        "title": "Global Shield - CIAレベルのトラフィック監視",
+        "description": "インタラクティブな3Dグローブが、秒間リクエスト数、アクティブユーザー数、バイト量を鮮明に表示します。",
+        "bullets": {
+          "one": "設定は簡単:IPとドメインを指定するだけ。",
+          "two": "DNSに追加するエージェントIPを受け取る。",
+          "three": "ポートを閉じて露出をゼロに。"
+        }
+      },
+      "emailProtector": {
+        "title": "Email Protector - 世界初のAIメール防御",
+        "description": "世界初のAIを活用した商用メール防御システム。ベクタービューによりメールフローを時系列で追跡し、脅威を特定しやすくします。",
+        "bullets": {
+          "one": "スプーフィング、スパム、フィッシング、マルウェアを検知。",
+          "two": "管理者は保護対象のメールアカウントを追加可能。",
+          "three": "市場で最も高度なメールフロー可視化。"
+        }
+      },
+      "securityTester": {
+        "title": "Security Tester - 次世代の脆弱性テスト",
+        "description": "システムはワンタイムトークン(OTT)を発行し、ブラウザまたはVS Code拡張からフルカバレッジのチェックを実施できます。",
+        "bullets": {
+          "one": "CMCでスコープとターゲットを設定。",
+          "two": "OTTを貼り付けてチェック開始。",
+          "three": "インテリジェンス主導のリスク洞察。"
+        }
+      }
+    },
+    "cmc": {
+      "title": "集中管理コンソール(CMC)",
+      "description": "3つのコンポーネントを統合コンソールで管理し、集中可視化・容易な設定と監視・包括的なセキュリティレポートを提供します。"
+    }
+  },
+  "insights": {
+    "items": [
+      {
+        "title": "39ç§'",
+        "description": "39秒ごとにハッカー攻撃が発生"
+      },
+      {
+        "title": "2,000万件のDDoS攻撃",
+        "description": "2025年第1四半期だけで2,050万件のDDoS攻撃"
+      },
+      {
+        "title": "毎日",
+        "description": "毎日3万件のWebサイトが侵害されています"
+      }
+    ]
+  },
+  "floatingText": {
+    "headline": "ハッカーの思考を知る",
+    "description": "実際の攻撃手法と脅威に関する日々のリサーチをチェック"
+  },
+  "modal": {
+    "title": "開発中",
+    "body": "システムは10月10日にリリース予定です"
+  },
+  "lamp": {
+    "title": "サイバー攻撃の現実"
+  },
+  "stickySolution": {
+    "webSecurity": {
+      "title": "Webセキュリティシステム:サイト/APIは2分で接続",
+      "description": "DDoSやSQLiなどのWeb攻撃から保護。不要な場合はポート22を閉じるのが良い実践です。"
+    },
+    "ciaMonitoring": {
+      "title": "CIAレベルのトラフィック監視",
+      "description": "インタラクティブ3Dグローブでリクエスト数、ユーザー数、ボリューム、履歴を表示。"
+    },
+    "userGrowth": {
+      "title": "ユーザー成長に関する有益な洞察",
+      "description": "ユーザー数の変化履歴を確認"
+    },
+    "aiEmailProtection": {
+      "title": "AIによるメール保護:2分でネットワーク接続",
+      "description": "CMCが送受信メールを全面可視化し、自動で脅威分類(なりすまし、スパム、フィッシング、危険リンク、マルウェア)します。"
+    },
+    "emailVisualization": {
+      "title": "送受信メールの可視化",
+      "description": "商用で最も高度なメールフロー可視化を備えたCMC"
+    },
+    "secureWebmail": {
+      "title": "安全なWebメールクライアント",
+      "description": "管理者が追加したアカウント向けに、なりすまし・スパム・フィッシング・マルウェアを検知・分類する安全なWebクライアントを提供します。"
+    }
+  },
+  "footer": {
+    "contactLabel": "連絡先:",
+    "contactValue": "support@silence.codes",
+    "addressLabel": "住所:",
+    "addressValue": "Media City Free Zone, Al Messaned, Sharjah, UAE",
+    "links": {
+      "termsUse": "利用規約",
+      "termsService": "サービス利用規約",
+      "privacy": "プライバシーポリシー",
+      "cookies": "クッキーポリシー",
+      "affiliateTerms": "アフィリエイト利用規約"
+    },
+    "copyright": "© {year} Silence AI. 無断複写・転載を禁じます。"
+  },
+  "notFound": {
+    "title": "ページが見つかりません",
+    "description": "あらゆる場所を探しましたが、このページを見つけることができませんでした。",
+    "cta": "ホームページに戻る"
+  },
+  "heroSection": {
+    "badge": "生産準備完了のAIとソフトウェア",
+    "title": "カスタムAIおよびソフトウェア開発",
+    "description": "私たちは{country}と{market}向けに、生産準備完了のAIエージェントとカスタムソフトウェアを構築します。",
+    "country": "カザフスタン",
+    "market": "グローバル市場",
+    "startProject": "プロジェクトを開始",
+    "liveDemo": "ライブデモ — AIエージェント",
+    "live": "ライブ",
+    "aiAgent": "AIエージェント v2.1",
+    "processing": "リクエストを処理中...",
+    "active": "アクティブ",
+    "userMessage": "顧客データの傾向を分析",
+    "aiResponse": "分析中",
+    "tasks": {
+      "dataCollection": "データ収集",
+      "aiAnalysis": "AI分析",
+      "reportGeneration": "レポート生成"
+    },
+    "stats": {
+      "tasks": "タスク",
+      "success": "成功率",
+      "speed": "速度"
+    }
+  },
+  "secureDevelopment": {
+    "hero": {
+      "badge": "SLNC-env · セキュア開発環境",
+      "title": "安全でプライベートなコードでシステムを構築",
+      "description": "コードが企業ネットワークを離れることのない、企業向けプライベート開発環境。最新のAI技術を提供します",
+      "requestSystem": "システムをリクエスト"
+    },
+    "components": {
+      "title": "すべてが内部に留まる",
+      "subtitle": "3つのコンポーネント、1つの閉じたループ",
+      "description": "コード、プロンプト、ビルドはネットワークを離れません。SLNC-envはAI支援、レビュー、配信をクラウドプロバイダー、政府チーム、産業プラント向けにプライベートに保ちます。",
+      "sithub": {
+        "title": "Sithubサーバー",
+        "tag": "ローカルバージョン管理"
+      },
+      "llm": {
+        "title": "LLMサーバー (Qwen-Code)",
+        "tag": "オンプレミスインテリジェンス"
+      },
+      "ide": {
+        "title": "ローカルCopilot付きIDE",
+        "tag": "Cursorクラスの体験"
+      },
+      "staysOnPrem": "オンプレミスに留まる。外部流出なし。",
+      "gitServer": {
+        "title": "Git Repository Server",
+        "tag": "Self-hosted"
+      },
+      "analyzer": {
+        "title": "Security Analyzer",
+        "tag": "Local scanning"
+      },
+      "vulnDb": {
+        "title": "Vulnerability Database",
+        "tag": "Synced daily"
+      },
+      "onPremNotice": "Stays on-prem. No egress."
+    },
+    "timeline": {
+      "title": "なぜ隔離され検証されたコードが重要なのか",
+      "subtitle": "最近の警告",
+      "incident": {
+        "title": "重大インシデント — コード漏洩",
+        "heading": "DeepSeekの侵害によりソースコードとプロンプトが公開インターネットに流出",
+        "description": "推論とスキャンをオンプレミスで保持。外部モデルの流出なし。デフォルトで監査証跡を記録。",
+        "seePlan": "封じ込め計画を確認"
+      },
+      "stuxnet": {
+        "year": "2010",
+        "attack": "Stuxnet",
+        "target": "ナタンズ濃縮施設",
+        "impact": "約1,000台の遠心分離機を破壊",
+        "severity": "重大"
+      },
+      "blackEnergy": {
+        "year": "2015",
+        "attack": "BlackEnergy",
+        "target": "ウクライナ電力網",
+        "impact": "23万世帯が停電",
+        "severity": "高"
+      },
+      "triton": {
+        "year": "2017",
+        "attack": "TRITON",
+        "target": "サウジアラビア石油化学プラント",
+        "impact": "安全システムが無効化",
+        "severity": "重大"
+      },
+      "colonialPipeline": {
+        "year": "2021",
+        "attack": "Colonial Pipeline",
+        "target": "米国燃料パイプライン",
+        "impact": "6日間の燃料麻痺",
+        "severity": "高"
+      },
+      "pdvsa": {
+        "year": "2025",
+        "attack": "PDVSA",
+        "target": "ベネズエラ製油所",
+        "impact": "製油所操業が中断",
+        "severity": "中"
+      }
+    },
+    "analyzer": {
+      "title": "CodeQLを超えるアナライザー",
+      "subtitle": "ライブ保証",
+      "features": {
+        "quality": {
+          "title": "自動コード品質",
+          "description": "安全クリティカルなコードに合わせた構造、スタイル、ベストプラクティスのチェック"
+        },
+        "vulnerability": {
+          "title": "脆弱性スイープ",
+          "description": "SQLi、XSS、認証バイパス、安全でない依存関係を瞬時に検出"
+        },
+        "secrets": {
+          "title": "シークレットガード",
+          "description": "キー、トークン、資格情報をコミット時にブロック"
+        },
+        "config": {
+          "title": "設定強化",
+          "description": "Docker/K8s、IAM、ネットワークポリシーを権限クリープについてスキャン"
+        }
+      },
+      "beyondCodeQL": {
+        "title": "静的クエリが見逃すものを発見",
+        "subtitle": "CodeQLを超えて",
+        "description": "設定ミスや脆弱なパッケージをCodeQLより速く発見し、警告だけでなく修正を提供します。",
+        "points": {
+          "packages": "パッケージグラフを把握し、リスクのある依存関係を数秒でフラグ付け。",
+          "config": "設定のドリフトと権限クリープを検出 — 静的ルールを超えて。",
+          "patches": "各発見には提案されたパッチと担当者が含まれます。"
+        }
+      },
+      "visualizer": {
+        "title": "動作中のコードアナライザー",
+        "subtitle": "ビジュアライザー",
+        "description": "最近のスキャンからの鮮明なスナップショットが、オンプレミスコンソール内で美しくレンダリングされます。",
+        "privateWorkspace": "プライベートワークスペースのみ",
+        "andManyMore": "そして他にも多数...",
+        "shots": {
+          "scanOverview": {
+            "title": "スキャン概要",
+            "description": "コードがネットワークを離れる前に、重大度別にグループ化された問題を確認。"
+          },
+          "misconfigurations": {
+            "title": "設定ミスの検出",
+            "description": "当社のAI駆動コードアナライザーは、コード内の設定ミスも検出します。"
+          },
+          "inlineDiffs": {
+            "title": "インラインディフ",
+            "description": "セキュリティコンテキストと共に提案されたパッチをインラインでレビュー。"
+          }
+        },
+        "frame": "SLNC-env Analyzer"
+      }
+    },
+    "industries": {
+      "title": "規制された高影響セクター向けに構築",
+      "subtitle": "導入先",
+      "oilGas": {
+        "title": "石油・ガス",
+        "description": "掘削、精製、パイプライン制御"
+      },
+      "energy": {
+        "title": "エネルギー",
+        "description": "グリッド、配電、EMS"
+      },
+      "nuclear": {
+        "title": "原子力",
+        "description": "原子炉制御と安全"
+      },
+      "manufacturing": {
+        "title": "製造",
+        "description": "ICS、OT、ロボティクス"
+      },
+      "government": {
+        "title": "政府",
+        "description": "省庁、防衛、重要機関"
+      }
+    },
+    "pricing": {
+      "subtitle": "シンプルで透明な価格設定",
+      "title": "プランを選ぶ",
+      "limitedOffer": "期間限定オファー",
+      "priceIncreaseNotice": "現在の価格をロックしてください!6ヶ月後、価格は30%上昇します",
+      "monthlyPlan": "月次",
+      "monthlyDesc": "柔軟な請求",
+      "yearlyPlan": "年次",
+      "yearlyDesc": "最高の価値",
+      "month": "月",
+      "billedAnnually": "年間請求",
+      "doubleSavings": "2倍の節約",
+      "getStarted": "始める",
+      "features": {
+        "fullAccess": "フルプラットフォームアクセス",
+        "support": "優先サポート",
+        "cancelAnytime": "いつでもキャンセル",
+        "priceLock": "12ヶ月間価格固定"
+      }
+    },
+    "comingSoon": {
+      "title": "Coming Soon",
+      "message": "This feature is currently under development."
+    }
+  },
+  "pricingCta": {
+    "requestSystem": "システムをリクエスト"
+  },
+  "contactForm": {
+    "title": "Contact Us",
+    "success": "Thanks! Your message has been sent. We will contact you shortly.",
+    "errorRequired": "Please fill in your name, email and a short message.",
+    "errorSend": "Unable to send message. Please try again later.",
+    "placeholders": {
+      "name": "Your name",
+      "email": "Email",
+      "type": "Project Type (optional)",
+      "budget": "Budget (optional)",
+      "message": "Tell us about your project..."
+    },
+    "submit": {
+      "idle": "Send Message",
+      "loading": "Sending…"
+    }
+  },
+  "consulting": {
+    "title": "Consulting Questionnaire",
+    "searchPlaceholder": "Search questions...",
+    "noResults": "No questions found.",
+    "questions": [
+      {
+        "question": "What is your company's core value proposition beyond competitive pricing?",
+        "answer": "Security is our primary differentiator. We position ourselves as a company that builds highly secure systems with enterprise-grade security practices embedded throughout the development lifecycle."
+      },
+      {
+        "question": "How long has your company been in business, and what is your track record?",
+        "answer": "We have successfully delivered major projects including: NAK (Nur Astana Kurylys) - AI-powered team management platform, and Chic Flowers - Complete digital platform for a major flower retail company."
+      },
+      {
+        "question": "What differentiates your technical capabilities and service quality from EPAM and other competitors?",
+        "answer": "Our key differentiator is our security-first development approach. We integrate security practices from project inception through deployment and maintenance."
+      },
+      {
+        "question": "How do you maintain quality while offering competitive pricing?",
+        "answer": "We offer services at 15% below market rates while maintaining exceptional quality through optimized operations, strategic talent sourcing, and efficient project management methodologies."
+      },
+      {
+        "question": "What specific software development services do you provide?",
+        "answer": "End-to-end software development: custom applications, AI-powered solutions, cybersecurity product development (Silence AI-CSD), system integration, cloud migration, and DevOps. We also offer dedicated product development and staff augmentation."
+      },
+      {
+        "question": "Which industries and domains do you specialize in?",
+        "answer": "Construction, retail, fintech, cybersecurity, and digital platforms — including AI-driven team management, e-commerce, and enterprise security solutions."
+      },
+      {
+        "question": "What technology stacks and platforms does your team have expertise in?",
+        "answer": "GO, Swift, Flutter, cloud platforms (AWS/Azure/GCP), Docker/Kubernetes, FastAPI, JavaScript, and AI/ML frameworks. We build proprietary security tools like Silence AI-CSD."
+      },
+      {
+        "question": "Do you offer end-to-end product development or specific services only?",
+        "answer": "We offer both: MVPs, full-cycle product delivery, staff augmentation, and cybersecurity integration."
+      },
+      {
+        "question": "Can you provide both staff augmentation and dedicated team models?",
+        "answer": "Yes, we provide flexible engagement models: staff augmentation, dedicated teams, and project-based outsourcing."
+      },
+      {
+        "question": "Do you offer consulting, architecture, and advisory services beyond development?",
+        "answer": "Yes: cybersecurity consulting, system architecture design, technology advisory, and security compliance assessments using Silence AI-CSD."
+      }
+    ]
+  },
+  "requestDemoModal": {
+    "title": "デモを依頼",
+    "name": "お名前",
+    "email": "メールアドレス",
+    "company": "会社名",
+    "placeholders": {
+      "name": "山田 太郎",
+      "email": "taro@company.com",
+      "company": "Acme株式会社"
+    },
+    "submit": "依頼を送信",
+    "successTitle": "ありがとうございます!",
+    "successBody": "デモ日程のご案内のため、追ってご連絡します。",
+    "close": "閉じる"
+  },
+  "requestSystemModal": {
+    "title": "システムをリクエスト",
+    "name": "お名前",
+    "email": "会社メール",
+    "company": "会社名",
+    "placeholders": {
+      "name": "山田 太郎",
+      "email": "taro@company.com",
+      "company": "Acme株式会社"
+    },
+    "submit": "ダウンロード",
+    "successTitle": "送信しました!",
+    "successBody": "ありがとうございます。システムのダウンロード手順をメールでお送りします。",
+    "close": "閉じる"
+  },
+  "policySidebar": {
+    "tableOfContents": "Table of Contents",
+    "close": "Close",
+    "topics": "Topics"
+  },
+  "whyChooseUs": {
+    "badge": "結果重視のエンジニアリング",
+    "title": "選ばれる理由",
+    "subtitle": "信頼されるチーム:",
+    "subtitleHighlight": "数十億ドル規模の企業",
+    "subtitleTail": "— そしてスタートアップのスピードで出荷します。",
+    "learnMore": "詳細を見る",
+    "logos": {
+      "kmg": "KazMunayGas",
+      "nak": "Nur Astana Kurylys"
+    },
+    "features": {
+      "fast": {
+        "title": "企業品質での迅速なデリバリー",
+        "description": "エンタープライズグレードの信頼性とコンプライアンスを満たす、迅速で反復的なデリバリーサイクル。",
+        "pill": "スピード + 品質"
+      },
+      "ai": {
+        "title": "AIファーストの製品エンジニアリング",
+        "description": "プロトタイプから本番AIエージェントまで — 実際のビジネス課題を解決するモデルを設計、トレーニング、デプロイします。",
+        "pill": "AI エンジニアリング"
+      },
+      "local": {
+        "title": "地元の専門知識、グローバルな展開",
+        "description": "カザフスタン市場と規制に関する深い知識と、国際的なベストプラクティスの融合。",
+        "pill": "KZ + グローバル"
+      }
+    }
+  },
+  "servicesBlock": {
+    "badge": "提供サービス",
+    "title": "当社のサービス",
+    "description": "プレミアムなUI、強力なエンジニアリング、そして迅速なデリバリ — トップティアブランドのような製品を立ち上げるために必要なすべて。",
+    "learnMore": "詳細を見る",
+    "learnMoreAria": "このサービスについて詳しく見る",
+    "services": {
+      "aiAgents": {
+        "title": "AIエージェント",
+        "description": "サポート、運用、分析のためのカスタム対話型および自律型エージェント。",
+        "tag": "自動化"
+      },
+      "customSoftware": {
+        "title": "カスタムソフトウェア",
+        "description": "ワークフローに合わせたエンドツーエンドのWebおよびデスクトップアプリ。",
+        "tag": "構築"
+      },
+      "cybersecurity": {
+        "title": "サイバーセキュリティ",
+        "description": "監査、侵入テスト、継続的なモニタリング。",
+        "tag": "保護"
+      },
+      "backend": {
+        "title": "バックエンド / DevOps",
+        "description": "スケーラブルなAPI、CI/CDパイプライン、クラウドインフラストラクチャ。",
+        "tag": "スケール"
+      },
+      "mobile": {
+        "title": "モバイル",
+        "description": "ネイティブなパフォーマンスと洗練されたUXを備えたクロスプラットフォームアプリ。",
+        "tag": "出荷"
+      }
+    }
+  },
+  "caseStudies": {
+    "badge": "実証されたインパクト",
+    "title": "導入事例",
+    "subtitle": "機能を出荷するのではなく、成果を出荷します。",
+    "problem": "課題:",
+    "solution": "解決策:",
+    "liveImpact": "実際の効果",
+    "before": "導入前",
+    "after": "導入後",
+    "buildCta": "これと同様のものを構築する →",
+    "caseStudy": "ケーススタディ",
+    "items": {
+      "nak": {
+        "title": "NAK — チーム管理AI",
+        "problem": "手動でのリソース割り当て",
+        "solution": "AI駆動のスケジューリングエージェント",
+        "result": "生産性 +32%",
+        "metricLabel": "チームアウトプット指数"
+      },
+      "chic": {
+        "title": "Chic Flowers — Eコマース",
+        "problem": "低いオンラインコンバージョン",
+        "solution": "パーソナライズされたレコメンダー + UX刷新",
+        "result": "オンライン売上 +45%",
+        "metricLabel": "コンバージョン率成長"
+      },
+      "silence": {
+        "title": "Silence AI-CSD",
+        "problem": "多くのアラートノイズ",
+        "solution": "AI検知と自動応答",
+        "result": "誤検知 −68%",
+        "metricLabel": "誤アラート量"
+      }
+    }
+  },
+  "howWeWork": {
+    "title": "進め方",
+    "subtitle": "超高速デリバリーパイプライン — 速度のために最適化されています。",
+    "steps": {
+      "discovery": {
+        "title": "発見",
+        "desc": "要件、ステークホルダー、成功指標。"
+      },
+      "design": {
+        "title": "設計",
+        "desc": "UX、アーキテクチャ、プロトタイプ。"
+      },
+      "poc": {
+        "title": "概念実証 (PoC)",
+        "desc": "測定可能なKPIを用いた迅速な検証。"
+      },
+      "build": {
+        "title": "構築",
+        "desc": "反復的なスプリント、自動テスト。"
+      },
+      "deploy": {
+        "title": "デプロイ",
+        "desc": "CI/CD、モニタリング、セキュリティ強化。"
+      },
+      "support": {
+        "title": "サポートと拡大",
+        "desc": "メンテナンス、ロードマップ、継続的改善。"
+      }
+    }
+  },
+  "technologyStack": {
+    "title": "技術スタック",
+    "subtitle": "スピード、スケーラビリティ、そして美しいユーザー体験のために設計された、厳選された本番グレードのスタック。"
+  },
+  "backToTop": {
+    "label": "トップに戻る"
+  },
+  "pricingCustom": {
+    "title": "透明な価格設定",
+    "subtitle": "製品とともにスケールするモバイルファーストプラン。",
+    "percentMaintenance": "{percent}% 年間保守",
+    "planEstimate": "${value}",
+    "perYear": "年間 (推定)",
+    "calculator": {
+      "title": "プロジェクトコスト計算",
+      "subtitle": "スライドして年間保守費用を確認",
+      "projectCost": "プロジェクト費用:",
+      "projectValue": "${value}"
+    },
+    "plans": {
+      "basic": {
+        "name": "ベーシック",
+        "features": {
+          "fix": "緊急バグ修正 (48時間 SLA)",
+          "updates": "月次アップデート",
+          "audit": "四半期ごとのセキュリティ監査",
+          "manager": "専任マネージャー"
+        }
+      },
+      "pro": {
+        "name": "プロ",
+        "badge": "一番人気",
+        "features": {
+          "fix": "緊急バグ修正 (24時間, SLA)",
+          "updates": "月10時間のアップデート",
+          "audit": "月次セキュリティ監査",
+          "manager": "専任マネージャー"
+        }
+      },
+      "enterprise": {
+        "name": "エンタープライズ",
+        "badge": "ベストバリュー",
+        "features": {
+          "fix": "緊急バグ修正 (4時間 SLA)",
+          "updates": "無制限のアップデート + ロードマップ",
+          "audit": "週次監査 + バックアップ",
+          "manager": "専任マネージャー"
+        }
+      }
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "サイバーセキュリティはもう",
+      "titleHighlight": "複雑でも高価でもありません",
+      "subtitle": "安全に構築。自信を持ってデプロイ。"
+    },
+    "systems": {
+      "title": "システム",
+      "cta": "詳細を見る",
+      "aiSoc": {
+        "title": "AI-CSD",
+        "desc": "AIによって駆動・運用される管理型検出・対応システム。Webおよびメール攻撃の防止に使用されます",
+        "badge": "サブスクリプション"
+      },
+      "sithub": {
+        "title": "Sithub",
+        "desc": "組み込みセキュリティスキャンを備えたセルフホスト型GitHub代替品。すべてのリポジトリとコード分析はネットワーク内に留まります。",
+        "badge": "サブスクリプション"
+      },
+      "supreme": {
+        "title": "Supreme",
+        "desc": "Lokalny skaner podatności kodu dla VSCode. Analizuj kod bez wysyłania go na zewnętrzne serwery.",
+        "badge": "Rozszerzenie"
+      }
+    },
+    "services": {
+      "title": "カスタム開発サービス",
+      "subtitle": "AIエージェント、統合、そして初日からセキュリティが組み込まれたフルサイクルソフトウェアデリバリー。",
+      "cta": "サービスを見る",
+      "cardsTitle": {
+        "agents": "エージェント",
+        "integrations": "統合",
+        "delivery": "デリバリー"
+      },
+      "cards": {
+        "agents": "ガードレール、RAG、安全なコネクタを備えた本番グレードのAIエージェント。",
+        "integrations": "スタック、IAM、データガバナンスとのベンダーニュートラルな統合。",
+        "delivery": "信頼性SLO、可観測性、セキュリティレビューを備えたフルサイクルデリバリー。"
+      }
+    },
+    "resources": {
+      "title": "注目記事",
+      "subtitle": "Silence AIは政府レベルのインテリジェンスを持つ数少ない民間企業の一つです。",
+      "viewAll": "すべての記事を見る"
+    }
+  },
+  "documentation": {
+    "tabs": {
+      "web": "Web セキュリティ",
+      "email": "メールセキュリティ"
+    },
+    "system": {
+      "sections": "セクション",
+      "topics": "トピック",
+      "tableOfContents": "目次",
+      "close": "閉じる"
+    },
+    "webSecurity": {
+      "placeholder": {
+        "badge": "Web セキュリティ",
+        "title": "ドキュメントは近日公開予定です",
+        "description": "Web アプリケーションの設定と保護方法を詳細に説明するガイドを準備中です。まもなく公開されますので、しばらくお待ちください。"
+      }
+    },
+    "emailSecurity": {
+      "title": "メールセキュリティシステム",
+      "subtitle": "ドキュメント | バージョン 1.0",
+      "description": "企業向けメールセキュリティプラットフォームの設定と運用方法。",
+      "chapters": [
+        {
+          "id": "getting-started",
+          "title": "はじめに",
+          "label": "はじめに",
+          "description": "CMC 管理コンソールでの初期オンボーディング手順とドメイン / DNS 設定。",
+          "sections": [
+            {
+              "id": "admin-setup",
+              "title": "管理者向け",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "システムを導入するには次の手順を実行します。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Google または Microsoft の OAuth を使って admin.silenceai.net の CMC 管理コンソールにサインインします。",
+                    "自社ドメインを登録します。",
+                    "DNS を使ってドメイン所有権を確認します。",
+                    "セキュリティ用 DNS レコード(SPF・DKIM・DMARC)を設定します。",
+                    "従業員用のメールアカウントを作成します。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "設定が完了すると、ユーザーは Web メールクライアントにアクセスして保護されたメールを送信できるようになります。"
+                }
+              ]
+            },
+            {
+              "id": "user-onboarding",
+              "title": "エンドユーザー向け",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "メールを使い始めるには次の手順を実行します。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "管理者からログイン情報を受け取ります。",
+                    "メールアドレスとパスワード、または OAuth を使って mail.silenceai.net にサインインします。",
+                    "画面の「作成」ボタンから最初のメールを送信します。",
+                    "セキュリティレベルに応じて自動分類されるシステムフォルダを確認します。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "受信メールは自動的に脅威スキャンされ、結果に応じて各フォルダへ振り分けられます。"
+                }
+              ]
+            },
+            {
+              "id": "add-domain",
+              "title": "ドメインを追加する",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "ドメインの管理はすべて CMC 管理コンソールから行います。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "CMC 管理コンソールを開きます。",
+                    "「Add Domain」をクリックします。",
+                    "www を付けずにドメイン名を入力します(例: company.com)。",
+                    "「Add」をクリックします。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "システムはドメイン所有権を確認するための検証トークンを発行します。"
+                }
+              ]
+            },
+            {
+              "id": "verify-domain",
+              "title": "ドメイン所有権の検証",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "ドメインを追加したら、そのドメインを所有していることを証明する必要があります。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "CMC に表示される TXT レコードをコピーします。"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "_cmc-verification.company.com TXT \"cmc-verify-abc123xyz\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "このレコードをドメインの DNS 設定に追加します。",
+                    "自動チェック(5 分ごと)を待つか、「Check Now」をクリックして即時確認します。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "検証には最大 48 時間かかる場合があります。成功すると、ドメインのステータスが Verified(検証済み)になります。"
+                }
+              ]
+            },
+            {
+              "id": "configure-spf",
+              "title": "SPF レコードを設定する",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "SPF は、自社ドメインの差出人としてメール送信を許可するサーバーを定義する DNS レコードです。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "CMC で「DNS Configuration」→「SPF」を開きます。",
+                    "「Check Current SPF」をクリックして既存レコードを確認します。",
+                    "「Generate SPF Record」をクリックします。",
+                    "提案されたレコードをコピーします。"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "company.com TXT \"v=spf1 include:_spf.silenceai.net -all\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "このレコードを DNS に追加します。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "既に SPF レコードが存在する場合(例: Gmail 用)、最後の -all の前に当社の include を追加してください。"
+                }
+              ]
+            },
+            {
+              "id": "configure-dkim",
+              "title": "DKIM キーを生成する",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DKIM はメールに暗号署名を追加し、改ざんやなりすましを防ぎます。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "CMC で「DNS Configuration」→「DKIM」を開きます。",
+                    "「Generate DKIM Keys」をクリックします。",
+                    "システムが鍵ペアを生成します(秘密鍵はサーバーに保持され、公開鍵のみ DNS に公開されます)。",
+                    "表示された DNS レコードをコピーします。"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "silenceai._domainkey.company.com TXT \"v=DKIM1; k=rsa; p=MIIBIjAN...\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "このレコードを DNS に追加します。",
+                    "「Verify DKIM」を実行して設定を確認します。"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "configure-dmarc",
+              "title": "DMARC ポリシーを設定する",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DMARC は SPF または DKIM の検証に失敗したメールをどのように扱うかを定義する仕組みです。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "CMC で「DNS Configuration」→「DMARC」を開きます。",
+                    "適用するポリシーを選択します。"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "quarantine — スパムフォルダへ移動(推奨)",
+                    "reject — メールを拒否"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "「Generate DMARC Record」をクリックします。",
+                    "表示されたレコードをコピーします。"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "_dmarc.company.com TXT \"v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@silenceai.net\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "このレコードを DNS に追加します。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "まずは quarantine ポリシーから開始し、1〜2 週間レポートを監視して問題がなければ reject への切り替えを検討してください。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "user-management",
+          "title": "ユーザー管理",
+          "label": "ユーザー管理",
+          "description": "メールアカウントの作成と維持管理。",
+          "sections": [
+            {
+              "id": "create-account",
+              "title": "メールアカウントを作成する",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "CMC で「Email Accounts」セクションを開きます。",
+                    "「Create Account」をクリックします。",
+                    "各項目を入力します。"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Email: john.doe@company.com",
+                    "氏名(名・姓)",
+                    "パスワード(8 文字以上で英大文字・英小文字・数字・記号を含める)",
+                    "ストレージクォータ: メールボックス容量を選択"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "「Create」をクリックします。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "ユーザーはすぐに Web メールへサインインして利用を開始できます。"
+                }
+              ]
+            },
+            {
+              "id": "suspend-activate",
+              "title": "アカウントの一時停止と再有効化",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "「Email Accounts」の一覧から対象ユーザーを探します。",
+                    "Actions メニューから以下のいずれかを選択します。"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Suspend — アクセスを一時停止(ユーザーはサインインできなくなります)",
+                    "Activate — アクセスを再有効化"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "操作を確認して適用します。"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "change-quota",
+              "title": "ストレージクォータを変更する",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "ユーザー一覧から対象ユーザーを見つけます。",
+                    "Actions メニューで「Edit Quota」を選択します。",
+                    "新しいストレージ容量を選択します。",
+                    "変更を保存します。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "変更は即時に反映されます。"
+                }
+              ]
+            },
+            {
+              "id": "delete-account",
+              "title": "アカウントを削除する",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "ユーザー一覧から対象ユーザーを見つけます。",
+                    "Actions メニューで「Delete」を選択します。",
+                    "削除を確認します。"
+                  ]
+                },
+                {
+                  "type": "callout",
+                  "intent": "warning",
+                  "content": "警告: この操作を行うと、そのユーザーのデータはすべて完全に削除されます。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mail-operations",
+          "title": "メール操作",
+          "label": "メール操作",
+          "description": "Web メールクライアントで日常的に行う操作。",
+          "sections": [
+            {
+              "id": "send-letter",
+              "title": "メールを送信する",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Web メール画面で「Compose」をクリックします。",
+                    "次の項目を入力します。"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "To: 受信者アドレス",
+                    "Subject: 件名",
+                    "Body: 本文(リッチテキスト形式も利用可能)"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "必要に応じてファイルを添付します(1 ファイルあたり最大 25 MB)。",
+                    "「Send」をクリックします。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "送信メールには自動的に DKIM 署名が付与され、相手に配信されます。"
+                }
+              ]
+            },
+            {
+              "id": "custom-folder",
+              "title": "ルール付きのカスタムフォルダを作成する",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "カスタムフォルダを使うと、自分で定義したルールに基づいてメールを自動仕分けできます。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "サイドバーで「Create Folder」をクリックします。",
+                    "フォルダ名を入力します(例: Clients)。",
+                    "「Add Rules」をクリックします。",
+                    "ルール内容を設定します。"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Filter by: 送信元ドメイン",
+                    "Match mode: Contains",
+                    "Value: client.com"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "既存メールにも適用したい場合は「Apply to existing emails」を有効にします。",
+                    "「Create」をクリックします。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "今後 *@client.com から届くメールはすべて自動的に「Clients」フォルダへ振り分けられます。"
+                }
+              ]
+            },
+            {
+              "id": "add-whitelist",
+              "title": "送信者をホワイトリストに追加する",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "本来は正当なメールなのに誤ってスパム判定された場合は次の手順で送信者をホワイトリストに追加します。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "SPAM フォルダ内の該当メールを開きます。",
+                    "「Not Spam」→「Add to Whitelist」をクリックします。",
+                    "次のいずれかを選択します。"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "送信者メールアドレスをホワイトリストに追加",
+                    "送信者ドメインをホワイトリストに追加"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "操作を確認して適用します。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "今後この送信者から届くメールは SPAM フォルダに振り分けられなくなります。"
+                }
+              ]
+            },
+            {
+              "id": "email-signature",
+              "title": "メール署名を設定する",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "設定画面で「Email Signature」を開きます。",
+                    "「Enable signature」を有効にします。",
+                    "エディタに署名テキストを入力します。",
+                    "「Save」をクリックします。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "設定した署名は送信するすべてのメールに自動で追加されます。"
+                }
+              ]
+            },
+            {
+              "id": "vacation-responder",
+              "title": "自動返信(不在返信)を設定する",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "設定画面で「Vacation Responder」を開きます。",
+                    "「Enable vacation responder」を有効にします。",
+                    "開始日と終了日を設定します。",
+                    "自動返信メッセージの本文を入力します。",
+                    "「Reply once per sender」をオンにすると、送信者ごとに 1 回だけ返信されます。",
+                    "「Save」をクリックします。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "指定した期間中のみ自動返信が動作し、期間終了後は自動的に停止します。"
+                }
+              ]
+            },
+            {
+              "id": "forwarding",
+              "title": "メール転送を設定する",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "設定画面で「Email Forwarding」を開きます。",
+                    "「Add Forwarding Address」をクリックします。",
+                    "転送先メールアドレスを入力します。",
+                    "受信トレイにもコピーを残したい場合は「Keep copy in inbox」を有効にします。",
+                    "「Save」をクリックします。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "以後、すべての受信メールが指定したアドレスへ転送されます。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "domain-administration",
+          "title": "ドメイン管理",
+          "label": "ドメイン管理",
+          "description": "ドメイン全体の分析と一括メール操作。",
+          "sections": [
+            {
+              "id": "view-activity",
+              "title": "ドメイン内のメールアクティビティを確認する",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "管理者はドメイン内すべてのユーザーのメールメッセージを確認できます。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "CMC で「Email Activity」を開きます。",
+                    "次のフィルターを利用します。"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "ユーザー別",
+                    "フォルダ別(Secure、Spam、Phishing など)",
+                    "日付別",
+                    "脅威タイプ別"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "検索バーを使って件名や送信者で絞り込みできます。"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "bulk-delete",
+              "title": "全ユーザーからメッセージを一括削除する",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "悪意あるメールが全ユーザーに送信されてしまった場合は次の手順で一括削除します。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "「Email Activity」を開きます。",
+                    "フィルターや検索を使って対象メッセージを特定します。",
+                    "削除したいメッセージを選択します。",
+                    "「Delete Selected」をクリックします。",
+                    "一括削除を確認します。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "選択したメッセージはすべてのユーザーのメールボックスから削除されます。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "concepts",
+          "title": "基本概念",
+          "label": "基本概念",
+          "description": "プラットフォームの主要な概念とセキュリティフロー。",
+          "sections": [
+            {
+              "id": "system-overview",
+              "title": "システム概要",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Email Security System は、企業メールをサイバー脅威から保護するためのプラットフォームです。"
+                },
+                {
+                  "type": "list",
+                  "title": "コンポーネント:",
+                  "items": [
+                    "CMC Admin Panel — ドメイン・ユーザー・DNS 設定を管理する管理者コンソール",
+                    "Webmail Client — 脅威保護が組み込まれた従業員向けメールボックス",
+                    "Infrastructure Services — メッセージ処理を行う SMTP サーバーとセキュリティパイプライン"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "security-stack",
+              "title": "セキュリティパイプライン",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "すべての受信メールは次の 6 段階の保護レイヤーを通過します。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Layer 0: Phishing Domain Check — 既知のフィッシングドメインデータベースと照合して送信元ドメインを評価",
+                    "Layer 1: Spoof Detection — SPF・DKIM・DMARC の整合性を検証",
+                    "Layer 2: Spam Detection — RSPAMD によるコンテンツ分析でスパム判定",
+                    "Layer 3: Link Scanner — URLScan.io による URL スキャンで悪意のあるリンクを検出",
+                    "Layer 4: Antivirus — Bitdefender による添付ファイルのウイルススキャン",
+                    "Layer 5: AI Phishing Detection — AI によるメッセージ内容の解析でフィッシング兆候を検出"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "いずれかのレイヤーで脅威が検出された場合、その時点で処理が停止し、結果に応じたフォルダへ振り分けられます。"
+                }
+              ]
+            },
+            {
+              "id": "system-folders",
+              "title": "システムフォルダ",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "検査結果に応じてメッセージは次のフォルダに振り分けられます。"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Unfiltered — まだ処理されていない新着メール(一時フォルダ)",
+                    "Secure — すべてのチェックを通過した安全なメール",
+                    "Possibly Spoofed — 差出人の正当性が疑わしいメール",
+                    "SPAM — スパムと判定されたメール",
+                    "Dangerous Links — 危険な URL を含むメール",
+                    "Malware — 感染した添付ファイルを含むメール",
+                    "Possibly Phishing — フィッシングの兆候が検出されたメール",
+                    "Sent — 送信済みメール"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "1 通のメールが複数のフォルダに表示される場合もあります(例: SPAM と Possibly Spoofed の両方)。"
+                }
+              ]
+            },
+            {
+              "id": "custom-folders",
+              "title": "カスタムフォルダ",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "ユーザーは自動フィルタリングルール付きのカスタムフォルダを自由に作成できます。"
+                },
+                {
+                  "type": "list",
+                  "title": "フィルタリングルール:",
+                  "items": [
+                    "送信元ドメイン",
+                    "送信元メールアドレス",
+                    "件名",
+                    "送信者名"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "title": "マッチ条件:",
+                  "items": [
+                    "Contains(含む)",
+                    "Equals(完全一致)",
+                    "Starts with(前方一致)",
+                    "Ends with(後方一致)"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "ルールは既存メールにも適用でき、後から一括で再分類することも可能です。"
+                }
+              ]
+            },
+            {
+              "id": "spf",
+              "title": "SPF(Sender Policy Framework)",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "SPF は、そのドメインのメール送信を許可するサーバーを定義する DNS レコードです。"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "書式:"
+                },
+                {
+                  "type": "code",
+                  "content": "v=spf1 include:_spf.silenceai.net -all"
+                },
+                {
+                  "type": "list",
+                  "title": "メカニズム:",
+                  "items": [
+                    "include:domain — 指定ドメインに定義されたサーバーを許可",
+                    "ip4:x.x.x.x — 特定の IP アドレスを許可",
+                    "-all — それ以外は拒否",
+                    "~all — それ以外は疑わしいものとしてマーク"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "SPF チェックでは、受信側が送信元 IP がドメインの SPF レコードで許可されているかを検証します。失敗した場合、そのメールは疑わしいものとしてフラグ付けされます。"
+                }
+              ]
+            },
+            {
+              "id": "dkim",
+              "title": "DKIM(DomainKeys Identified Mail)",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DKIM は暗号署名を付与することで、メールがドメイン所有者によって送信され、途中で改ざんされていないことを確認します。"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "仕組み:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "送信時にサーバーが秘密鍵でメッセージに署名し、DKIM-Signature ヘッダーを追加します。",
+                    "受信側は DNS から公開鍵を取得し、その署名を検証します。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "DNS レコードの例:"
+                },
+                {
+                  "type": "code",
+                  "content": "selector._domainkey.domain.com TXT \"v=DKIM1; k=rsa; p=public_key\""
+                },
+                {
+                  "type": "paragraph",
+                  "content": "秘密鍵はサーバー上で暗号化された状態で保管され、クライアント側へ共有されることはありません。"
+                }
+              ]
+            },
+            {
+              "id": "dmarc",
+              "title": "DMARC(Domain-based Message Authentication)",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DMARC は、SPF または DKIM の検証に失敗したメールに対してどのような処理を行うかを定義する仕組みです。"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "書式:"
+                },
+                {
+                  "type": "code",
+                  "content": "_dmarc.domain.com TXT \"v=DMARC1; p=quarantine; rua=mailto:reports@domain.com\""
+                },
+                {
+                  "type": "list",
+                  "title": "パラメータ:",
+                  "items": [
+                    "p=quarantine — スパムフォルダへ配信",
+                    "p=reject — メールを拒否",
+                    "p=none — モニタリングのみ(動作は変更しない)",
+                    "rua= — 集計レポート送信先アドレス"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "DMARC チェックでは、SPF または DKIM がドメイン整合性を保った状態で成功しているかを確認します。条件を満たさない場合、設定されたポリシーに従って処理されます。"
+                }
+              ]
+            },
+            {
+              "id": "attachments",
+              "title": "添付ファイルとアンチウイルス",
+              "body": [
+                {
+                  "type": "list",
+                  "title": "制限事項:",
+                  "items": [
+                    "最大ファイルサイズ: 25 MB",
+                    "ファイル形式の種類による制限はなし"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "添付ファイルスキャン: すべての添付ファイルは Bitdefender によってスキャンされます。マルウェアが検出された場合、そのメールは Malware フォルダに移動され、添付ファイルはブロックされます。"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "保存: 添付ファイルはメッセージ単位でサーバーに保存されます。感染が判明したファイルは隔離領域に移動されます。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "access-control",
+          "title": "アクセス制御",
+          "label": "アクセス制御",
+          "description": "ユーザーのロールとアクセス保護。",
+          "sections": [
+            {
+              "id": "user-roles",
+              "title": "ユーザーロール",
+              "body": [
+                {
+                  "type": "list",
+                  "title": "Admin",
+                  "items": [
+                    "CMC 管理コンソールへのフルアクセス",
+                    "ドメインおよび DNS の管理",
+                    "ユーザーの作成と管理",
+                    "ドメイン内すべてのメール閲覧",
+                    "メールの一括操作を実行可能"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "title": "Subordinate",
+                  "items": [
+                    "限定された CMC アクセス権",
+                    "ユーザー一覧の閲覧",
+                    "自分のメールへのみアクセス可能"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "title": "User",
+                  "items": [
+                    "Web メールクライアントへのアクセス",
+                    "自分のメールの送受信・管理",
+                    "個人設定の変更"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "role-assignment",
+              "title": "ロールの割り当て",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "自動管理者付与: OAuth で最初にサインインしたユーザーは自動的に Admin ロールになります。"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Subordinate ユーザーの作成: Admin は CMC の「User Management」で Subordinate アカウントを追加します。"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "User アカウントの作成: Admin は「Email Accounts」でメールボックスを作成し、そのアカウントに User ロールが付与されます。"
+                }
+              ]
+            },
+            {
+              "id": "authentication",
+              "title": "認証",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "OAuth 2.0: Google または Microsoft のサインイン(PKCE によりセキュリティを強化)",
+                    "メール / パスワード: 管理者が CMC で発行する認証情報",
+                    "JWT トークン: アクセストークンは 7 日間有効で httpOnly Cookie に保存",
+                    "トークンリフレッシュ: アクセストークンはリフレッシュトークン経由で自動更新され、リフレッシュトークンが期限切れになると再サインインが必要"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "access-protection",
+              "title": "アクセス保護",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "レート制限: 同一 IP からのサインイン試行は 15 分間に最大 5 回まで",
+                    "セッション管理: アクティブセッションはデータベースに保存され、各リクエスト時に検証されます",
+                    "監査ログ: 管理者およびユーザーによる重要な操作は監査ログとして記録されます"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quotas-limits",
+          "title": "クォータと制限",
+          "label": "クォータと制限",
+          "description": "ストレージ・送信数・ユーザー数の制限。",
+          "sections": [
+            {
+              "id": "storage-quota",
+              "title": "ストレージクォータ",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "各ユーザーにはメールボックス容量のクォータが割り当てられます。使用量が 100% に達すると、そのユーザーはメールの送受信ができなくなります。"
+                }
+              ]
+            },
+            {
+              "id": "sending-limits",
+              "title": "送信制限",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "Business Basic: 1 ユーザーあたり 1 日 500 通",
+                    "Business Standard: 1 日 1000 通",
+                    "Business Premium: 1 日 2000 通",
+                    "Enterprise: 1 日 10000 通"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "user-limit",
+              "title": "ユーザー数の上限",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "Business プラン: 最大 300 ユーザー",
+                    "Enterprise プラン: ユーザー数無制限"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pricingMicrosoft": {
+      "business": "Business",
+      "enterprise": "Enterprise",
+      "withoutTeams": "Plans without Teams",
+      "withTeams": "With Teams",
+      "yearly": "Yearly",
+      "monthly": "Monthly",
+      "planHighlights": "Plan highlights",
+      "userMonth": "user/month",
+      "paidYearly": "paid yearly",
+      "paidMonthly": "paid monthly",
+      "plans": {
+        "businessPremium": {
+          "title": "Silence 365 Business Max"
+        },
+        "businessStandard": {
+          "title": "Silence 365 Business Standard"
+        },
+        "businessBasic": {
+          "title": "Microsoft 365 Business Basic (no Teams)"
+        },
+        "enterpriseE3": {
+          "title": "Silence 365 Enterprise 300+"
+        },
+        "enterpriseE5": {
+          "title": "Silence 365 Enterprise 500+"
+        }
+      },
+      "features": {
+        "secureAccess300": "Secure access for up to 300 users",
+        "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
+        "adminConsole": "Admin console with domain-wide email management and bulk operations",
+        "aiThreatDetection": "AI-powered threat detection with automatic email categorization",
+        "securityPipeline": "Multi-layered email security pipeline (SPF, DKIM, DMARC, spam, malware, phishing)",
+        "securityFolders": "Email sorting into security folders (Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed)",
+        "linkScannerAv": "Advanced link scanner and antivirus protection for attachments",
+        "emailFlowVisualization": "Email flow visualization across the domain/organization with comprehensive filters",
+        "bulkManageDelete": "Ability to manage and delete emails across all users in the domain",
+        "customFoldersRules": "Custom folders with auto-filtering rules (sender, domain, subject)",
+        "storage10gb": "10 GB secure mailbox storage per user",
+        "storage5tb": "5 TB secure mailbox storage per user",
+        "storage10tb": "10 TB secure mailbox storage per user",
+        "multiAccountSupport": "Multi-account support (Gmail/Outlook integration)",
+        "support247": "24/7 email and web support",
+        "fullTextSearch": "Email search with full-text capabilities",
+        "aiAssistedCategorization": "AI-assisted email categorization into security folders",
+        "basicFiltering": "Custom folders with basic filtering rules",
+        "prioritySupport": "Priority support with faster response times",
+        "dedicatedAM": "Dedicated account management",
+        "unlimitedUsers": "Supports unlimited users"
+      }
+    }
+  },
+  "supreme": {
+    "title": "Supreme",
+    "hero": {
+      "badge": "Supreme · VSCode 拡張機能",
+      "title": "ローカルコード脆弱性スキャナー",
+      "description": "外部サーバーに送信せずにローカルでコードをスキャン。エディタ内で高速かつ包括的に脆弱性を検出します。"
+    },
+    "video": {
+      "title": "インストール&使用方法チュートリアル(5分)",
+      "cardTitle": "Supreme の使い方",
+      "cardSubtitle": "インストール&セットアップガイド"
+    },
+    "pricing": {
+      "title": "シンプルな料金",
+      "subtitle": "最適なプランをお選びください",
+      "monthly": {
+        "title": "月額",
+        "description": "柔軟、いつでも解約可能"
+      },
+      "month": "月",
+      "subscribe": "今すぐ購読",
+      "saveBadge": "30%お得",
+      "yearly": {
+        "title": "年額",
+        "description": "最高の価値"
+      },
+      "year": "å¹´",
+      "perMonthApprox": "月あたり約{value}"
+    },
+    "languages": {
+      "title": "対応言語",
+      "subtitle": "主要なプログラミング言語を網羅したセキュリティスキャン"
+    },
+    "cicd": {
+      "title": "CI/CD & Container Scanning",
+      "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
+    },
+    "features": {
+      "title": "強力な機能",
+      "subtitle": "安全なコード開発に必要なすべて",
+      "items": [
+        "コードアナライザーはローカルで動作し、コードは外部サーバーに送信されません",
+        "プロジェクト内の脆弱なパッケージを検出",
+        "設定ミスとシークレットを検出",
+        "CI/CD の設定ミスと脆弱性をスキャン可能"
+      ]
+    },
+    "screenshots": [
+      {
+        "title": "とても分かりやすいインターフェース"
+      },
+      {
+        "title": "構造化されたセキュリティレポート"
+      },
+      {
+        "title": "スキャン履歴"
+      }
+    ],
+    "lightbox": {
+      "close": "閉じる",
+      "alt": "スクリーンショット"
+    },
+    "landing": {
+      "hero": {
+        "headline": "高速に作り、安全に届ける。",
+        "subheadline": "AIがコードを書く。Supreme 2がそれを守る。",
+        "tagline": "74以上のインテリジェントスキャナー。深層アーキテクチャ解析。世界初MCPベースのコードスキャナー。",
+        "ctaMax": "Supreme 2 MAXにアップグレード",
+        "ctaFree": "Supreme 2 Lightで無料スタート"
+      },
+      "pricingLight": {
+        "name": "Supreme 2 Light",
+        "price": "無料",
+        "subprice": "永久無料・クレジットカード不要",
+        "features": [
+          "VSCode拡張機能",
+          "全プロジェクトスキャン",
+          "74以上のスキャナー",
+          "総合レポート",
+          "レポートのみワークフロー(自動修正なし)"
+        ],
+        "cta": "Supreme 2 Lightを入手"
+      },
+      "pricingMax": {
+        "name": "Supreme 2 MAX",
+        "price": "$18/月",
+        "subprice": "$150/年・最高の価値",
+        "badge": "最高の価値",
+        "features": [
+          "MCPサーバーベースのスキャナー",
+          "全プロジェクトスキャン",
+          "74以上のスキャナー",
+          "総合レポート",
+          "LLMフレンドリーな自動修正レポート",
+          "自律的な脆弱性修正",
+          "脅威インテリジェンスによる強化された検出"
+        ],
+        "cta": "Supreme 2 MAXにアップグレード",
+        "videoLabel": "動画プレースホルダー – Supreme 2 MAX セットアップ"
+      },
+      "hiddenRisk": {
+        "title": "AIが生成したコードの潜在的リスク",
+        "llmTitle": "LLM = 部分的な可視性",
+        "llmItems": [
+          "貼り付けたスニペットしか見えない",
+          "隠しファイルを見落とす",
+          "依存関係チェーンを無視する",
+          "アーキテクチャをスキャンしない",
+          "設定ファイルを体系的に監査しない"
+        ],
+        "supremeTitle": "Supreme 2 = 完全リポジトリスキャン",
+        "diagramRepo": "リポジトリ",
+        "diagramScanner": "深層スキャナー",
+        "diagramFindings": "完全な検出結果"
+      },
+      "meet": {
+        "title": "SUPREME 2について",
+        "features": [
+          "74以上のスキャナー",
+          "深い多言語対応",
+          "アーキテクチャ認識解析",
+          "並列スキャンエンジン",
+          "インテリジェントな脆弱性検出"
+        ]
+      },
+      "mcp": {
+        "title": "世界初のMCPベースのコードスキャナー",
+        "subtitle": "Supreme 2 MAXはMCPサーバーとして動作し、LLMが完全スキャンを起動し、構造化JSONを利用し、分類済みの脆弱性を把握し、安全にリファクタリングし、修正を再検証できます。"
+      },
+      "comparison": {
+        "title": "Supreme 2 Light vs Supreme 2 MAX",
+        "maxAdvantage": "MAXの利点:詳細な脅威インテリジェンスを含み、LLMが使用するMCPサーバーとして動作します。"
+      },
+      "whyLeads": {
+        "title": "Supreme が市場をリードする理由"
+      },
+      "llmVsSupreme": {
+        "title": "LLMを使った脆弱性・設定ミス探索 VS Supreme 2",
+        "llmTitle": "LLMのみのレビュー",
+        "llmItems": [
+          "断片的にしか分析できない",
+          "設定ファイルを見落とす",
+          "隠しモジュールをスキップする",
+          "依存関係グラフを無視する"
+        ],
+        "supremeTitle": "Supreme 2",
+        "supremeItems": [
+          "リポジトリ全体をスキャン",
+          "設定ファイルを解析",
+          "依存ツリーをチェック",
+          "ファイル横断パターンを検出",
+          "アーキテクチャ解析を実行"
+        ]
+      },
+      "faq": {
+        "title": "よくある質問",
+        "q1": "Supreme 2 はどのプログラミング言語をサポートしていますか?",
+        "a1": "Supreme 2はバックエンド、フロントエンド、クラウド、スクリプト、ドキュメントワークフロー全般にわたる主要な現代言語、設定フォーマット、インフラファイルをサポートしています。",
+        "a1Coverage": "41種類のスキャナータイプで100以上のファイル拡張子をカバーしています。",
+        "q2": "詳細にどのスキャナータイプとファイル形式がカバーされていますか?",
+        "a2Intro": "Supreme 2はすべての主要なプログラミング言語とファイル形式をカバーする41種類のスキャナータイプをサポートしています。",
+        "a2Total": "合計:41種類のスキャナータイプで100以上のファイル拡張子をカバー。",
+        "q3": "MCPとは何ですか?なぜ重要なのですか?",
+        "a3": "MCPにより、Supreme 2 MAXは構造化されたセキュリティサーバーとして動作します。生テキストではなく、自動修正、AI駆動の修正、プログラム的解釈、継続的改善ワークフローのためのカテゴリ化されたJSON脆弱性レポートを返します。",
+        "q4": "Supreme 2はコードを保存しますか?",
+        "a4": "Supreme 2はあなたの環境でローカルにスキャンします。コードはスキャナーが動作するコンピュータから一切外に出ることはありません。GitHubでSupreme 2 Lightのソースコードを確認したり、コードスキャン中のネットワーク活動を監視することもできます。",
+        "q5": "インストール前の要件は何ですか?",
+        "a5Prefix": "Supreme 2を実行するには、",
+        "a5Python": "Python 3.0以上",
+        "a5Suffix": "がマシンにインストールされている必要があります。さらに、Supreme本体のインストール前に",
+        "a5Pip": "pip",
+        "a5End": "がインストールされていることを確認する必要があります。",
+        "q6": "Supreme 2はスタートアップに適していますか?",
+        "a6": "はい。特にLLM生成コードで素早くリリースするAIファーストのスタートアップチームに効果的で、リポジトリ全体のセキュリティ分析なしでは見逃しやすいファイル横断のリスクが容易に見つかります。",
+        "a1ScannerTypes": "種類のスキャナー",
+        "a1Across": "にわたる",
+        "a1Extensions": "のファイル拡張子",
+        "a2Covering": "主要なプログラミング言語とファイル形式を網羅しています。"
+      }
+    }
+  },
+  "andManyMore": "Et bien plus encore...",
+  "badRequest": {
+    "title": "不正なリクエスト",
+    "cta": "ホームに戻る",
+    "description": "The page you are looking for could not be found or the request was invalid."
+  },
+  "countrySelect": {
+    "title": "国を選択",
+    "subtitle": "続けるには場所を選択してください",
+    "searchPlaceholder": "国を検索...",
+    "noResults": "国が見つかりません",
+    "continue": "続ける",
+    "comingSoon": {
+      "title": "もうすぐ準備完了!",
+      "message": "サブスクリプション管理の管理パネルがあと以下の時間で準備できます",
+      "hours": "時間",
+      "notification": "利用可能になったらお知らせします!",
+      "back": "戻る",
+      "gotIt": "わかりました!"
+    }
+  },
+  "aiSocComparison": {
+    "sectionTitle": "競争優位性",
+    "common": {
+      "features": "機能"
+    },
+    "web": {
+      "title": "AI-CSD Web と従来型WAFソリューションの比較",
+      "columns": {
+        "aiSoc": "AI-CSD Web(従量課金)",
+        "cloudflare": "Cloudflare WAF + Anti-DDoS($20/月)",
+        "aws": "AWS WAF(従量課金)"
+      },
+      "rows": {
+        "complexWaf": {
+          "feature": "高度な攻撃を検知するWAF"
+        },
+        "ddos": {
+          "feature": "DDoS攻撃への保護",
+          "cloudflare": "この料金プランでは弱い"
+        },
+        "proactive": {
+          "feature": "24時間365日のプロアクティブ保護"
+        },
+        "monitoring": {
+          "feature": "国別のライブユーザー数・RPS・帯域幅を監視 — 完全な履歴追跡付き"
+        },
+        "setup": {
+          "feature": "セットアップ時間",
+          "aiSoc": "2分(サイバーセキュリティ知識不要)",
+          "cloudflare": "2分(サイバーセキュリティ知識不要)",
+          "aws": "1日(サイバーセキュリティ専門家が必要)"
+        }
+      }
+    },
+    "email": {
+      "title": "AI-CSD Email と従来型メールセキュリティの比較",
+      "columns": {
+        "aiSoc": "AI-CSD Email",
+        "outlook": "Outlook/Gmail",
+        "kaspersky": "Kaspersky(メールプロバイダー接続型)"
+      },
+      "rows": {
+        "viewAll": {
+          "feature": "ドメイン全体のメールを閲覧"
+        },
+        "delete": {
+          "feature": "メール削除機能"
+        },
+        "activeProtection": {
+          "feature": "あらゆるメール攻撃に対するアクティブ保護"
+        },
+        "aiManual": {
+          "feature": "メールを手動チェックするAI"
+        },
+        "setup": {
+          "feature": "安全なセットアップ完了時間",
+          "aiSoc": "2分 サイバーセキュリティ知識不要",
+          "outlook": "完全なセキュリティなし",
+          "kaspersky": "1〜3日(メールプロバイダー接続、サイバーセキュリティ専門家のみ実施可能)"
+        }
+      }
+    }
+  },
+  "aiSocValueSection": {
+    "title": "なぜAI-CSDなのか",
+    "subtitle": "AI-CSD は企業レベルのサイバーセキュリティを、あらゆる企業にとって利用しやすくします。数分で保護を導入し、Web とメールのセキュリティを単一プラットフォームで管理できます。",
+    "features": {
+      "deploy": {
+        "title": "数分で導入",
+        "description": "複雑な設定なしで、4分以内にWebとメール保護をセットアップできます。"
+      },
+      "ai": {
+        "title": "AIによる分析",
+        "description": "高度なAIがトラフィック、メール、脅威をリアルタイムで継続的に分析します。"
+      },
+      "visualization": {
+        "title": "高度な可視化",
+        "description": "先進的な可視化インターフェースでWebトラフィックとメールフローを監視します。"
+      },
+      "affordable": {
+        "title": "手頃なセキュリティ",
+        "description": "従来型サイバーセキュリティの高コストなしで、企業レベルの保護を提供します。"
+      }
+    }
+  },
+  "aiSocInsights": {
+    "title": "今日のサイバーセキュリティ課題",
+    "subtitle": "現代のサイバー脅威は、多くの企業の対応速度を上回るスピードで増加しています。",
+    "items": [
+      {
+        "stat": "39秒ごと",
+        "suffix": "ハッカー攻撃が発生",
+        "description": "世界的にサイバー攻撃は年々増加し、あらゆる規模の企業が標的になっています。"
+      },
+      {
+        "stat": "2,050万件",
+        "suffix": "2025年Q1のDDoS攻撃",
+        "description": "大規模なトラフィック攻撃は、数分でWebサイトやAPIを停止させる可能性があります。"
+      },
+      {
+        "stat": "30,000",
+        "suffix": "Webサイトが毎日ハッキングされる",
+        "description": "スタートアップから大企業まで、Webインフラは常に攻撃対象です。"
+      }
+    ]
+  },
+  "aiSocPricing": {
+    "intro": "AI-CSD は独立型サイバーセキュリティシステムのラインナップです",
+    "emailDescription": "Email Security は企業コミュニケーションを守る防護シールドとして機能します。受信・送信メールをフィルタリングし、フィッシング、なりすまし、悪意あるリンクをユーザーに届く前に無効化し、業務連絡の信頼性を維持します。",
+    "webDescription": "Web Security はリアルタイムのトラフィック分析によってデジタル基盤を保護します。一般的な脆弱性、DDoS攻撃、不正アクセスからWebサイトとAPIを守り、パフォーマンスに影響を与えずにネットワーク活動を高可視化します。"
+  },
+  "aiSocFaq": {
+    "title": "よくある質問",
+    "items": [
+      {
+        "question": "AI-CSDは単なるセキュリティエンジンですか、それとも完全なメールプラットフォームですか?",
+        "response": "AI-CSD は、組織のメール運用に応じて2つの使い方が可能です。\n\n1️⃣ 単体のセキュアメールプラットフォームとして\n\nAI-CSD は Gmail や Outlook のように、組織の主要メール基盤として運用できます。独自のメールサーバー基盤、安全なWebメール、企業アカウント管理用の管理コンソールを備えています。\n\n2️⃣ 既存メール環境向けのAIセキュリティレイヤーとして\n\n既存の Gmail / Outlook 環境に追加のセキュリティ層として導入できます。現在のメールプロバイダーを維持したまま、AI-CSD がメールトラフィックを解析し、フィッシング・なりすまし・悪意あるリンクなどの脅威から保護します。"
+      },
+      {
+        "question": "既存のGmailやOutlook環境と併用できますか?",
+        "response": "はい。Gmail や Outlook をメインに使いながら、追加のセキュリティレイヤーとして AI-CSD を導入できます。"
+      },
+      {
+        "question": "AI-CSDを主要メール基盤として使うとどうなりますか?",
+        "response": "AI-CSD を主要基盤として使う場合、安全なWebメール、ドメイン単位の管理機能、組み込み脅威防御を一体的に利用できます。"
+      },
+      {
+        "question": "管理者は企業メールアカウントを作成・管理できますか?",
+        "response": "はい。管理者はアカウント作成と管理、ドメイン全体のメール監視、必要時のメール削除を行えます。"
+      },
+      {
+        "question": "既存の企業メールアカウントをAI-CSDに接続できますか?",
+        "response": "はい。既存の Gmail / Outlook ベースの企業アカウントを AI-CSD に接続し、現在のプロバイダーを維持したまま保護を強化できます。"
+      },
+      {
+        "question": "セキュリティは事前設定済みですか?手動設定が必要ですか?",
+        "response": "AI-CSD は事前設定済みの AI 駆動システムです。案内ページに沿った最小限の設定で組み込み保護を利用できます。"
+      },
+      {
+        "question": "メール/Webフィルタリング以外に、どんな高度な脅威を検知できますか?",
+        "response": "AI-CSD はフィッシング文脈、なりすましパターン、悪性リンク、マルウェア添付、メール・Webトラフィック上の不審挙動を検知します。"
+      },
+      {
+        "question": "AI-CSDは攻撃を事前に防ぐために脅威インテリジェンスを使っていますか?",
+        "response": "はい。脅威インテリジェンスフィードを活用し、既知の悪性インフラを保護対象へ到達する前にブロックします。"
+      }
+    ]
+  }
+}

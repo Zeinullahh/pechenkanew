@@ -1,0 +1,34 @@
+[
+  {
+    "name": "BorderGlow.css",
+    "path": "src/content/Components/BorderGlow/BorderGlow.css",
+    "sha": "b4b9d93d3f9080c2779ea0aa4361f4bda31ef0d1",
+    "size": 5915,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Components/BorderGlow/BorderGlow.css?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/blob/main/src/content/Components/BorderGlow/BorderGlow.css",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/blobs/b4b9d93d3f9080c2779ea0aa4361f4bda31ef0d1",
+    "download_url": "https://raw.githubusercontent.com/DavidHDev/react-bits/main/src/content/Components/BorderGlow/BorderGlow.css",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Components/BorderGlow/BorderGlow.css?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/blobs/b4b9d93d3f9080c2779ea0aa4361f4bda31ef0d1",
+      "html": "https://github.com/DavidHDev/react-bits/blob/main/src/content/Components/BorderGlow/BorderGlow.css"
+    }
+  },
+  {
+    "name": "BorderGlow.jsx",
+    "path": "src/content/Components/BorderGlow/BorderGlow.jsx",
+    "sha": "cc47ec4ad73e62ba8741c78fb0d0b94bc7e4a4fa",
+    "size": 5399,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Components/BorderGlow/BorderGlow.jsx?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/blob/main/src/content/Components/BorderGlow/BorderGlow.jsx",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/blobs/cc47ec4ad73e62ba8741c78fb0d0b94bc7e4a4fa",
+    "download_url": "https://raw.githubusercontent.com/DavidHDev/react-bits/main/src/content/Components/BorderGlow/BorderGlow.jsx",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Components/BorderGlow/BorderGlow.jsx?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/blobs/cc47ec4ad73e62ba8741c78fb0d0b94bc7e4a4fa",
+      "html": "https://github.com/DavidHDev/react-bits/blob/main/src/content/Components/BorderGlow/BorderGlow.jsx"
+    }
+  }
+]

@@ -1,0 +1,66 @@
+silenceai.net, www.silenceai.net {
+    # internal path to the build output
+    root * /home/ubuntu/pechenka/out
+
+    # Enable Gzip and Zstd compression
+    encode gzip zstd
+
+    # Redirects (Legacy routes)
+    redir /developer-services /services/ 301
+    redir /developer-services/ /services/ 301
+    redir /slnc-code /slnc-env/ 301
+    redir /slnc-code/ /slnc-env/ 301
+
+    # Security Headers
+    header {
+        X-Frame-Options "SAMEORIGIN"
+        X-Content-Type-Options "nosniff"
+        X-XSS-Protection "1; mode=block"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    }
+
+    # Caching: Immutable Next.js Assets (1 year)
+    @static {
+        path /_next/static/*
+    }
+    header @static Cache-Control "public, max-age=31536000, immutable"
+
+    # Caching: Images and Fonts (30 days)
+    @assets {
+        path_regexp \.(ico|css|js|gif|jpeg|jpg|png|svg|webp|woff|woff2|ttf|eot)$
+    }
+    header @assets Cache-Control "public, max-age=2592000"
+
+    # Caching: HTML pages (No Cache - always revalidate)
+    @html {
+        path *.html
+        path /
+    }
+    header @html Cache-Control "public, max-age=0, must-revalidate"
+
+    # Serve static files
+    # Caddy will automatically look for index.html in directories (handling trailing slashes)
+    file_server {
+        # Custom 404 page handling
+        # Next.js 'trailingSlash: true' generates /404/index.html
+    }
+
+    # Handle 404 errors by serving the custom 404 page
+    handle_errors {
+        @404 {
+            expression {http.error.status_code} == 404
+        }
+        rewrite @404 /404/index.html
+        file_server
+    }
+    
+    # Handle 500 errors
+    handle_errors {
+        @500 {
+            expression {http.error.status_code} >= 500
+        }
+        rewrite @500 /500.html
+        file_server
+    }
+}

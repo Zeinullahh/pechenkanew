@@ -1,0 +1,514 @@
+[
+  {
+    "name": "ASCIIText",
+    "path": "src/content/TextAnimations/ASCIIText",
+    "sha": "ea0e7a9861a850048fa18ec79e2d52b1ea0ecb0b",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/ASCIIText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/ASCIIText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/ea0e7a9861a850048fa18ec79e2d52b1ea0ecb0b",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/ASCIIText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/ea0e7a9861a850048fa18ec79e2d52b1ea0ecb0b",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/ASCIIText"
+    }
+  },
+  {
+    "name": "BlurText",
+    "path": "src/content/TextAnimations/BlurText",
+    "sha": "867e04e116bdfe19b7335e31687d0a9167394e1f",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/BlurText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/BlurText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/867e04e116bdfe19b7335e31687d0a9167394e1f",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/BlurText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/867e04e116bdfe19b7335e31687d0a9167394e1f",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/BlurText"
+    }
+  },
+  {
+    "name": "CircularText",
+    "path": "src/content/TextAnimations/CircularText",
+    "sha": "f66a3976ba67e832d98649ce08686d190c613c14",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/CircularText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/CircularText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/f66a3976ba67e832d98649ce08686d190c613c14",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/CircularText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/f66a3976ba67e832d98649ce08686d190c613c14",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/CircularText"
+    }
+  },
+  {
+    "name": "CountUp",
+    "path": "src/content/TextAnimations/CountUp",
+    "sha": "905f7e9b6029818ffe4993a973bc4615d9deae6a",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/CountUp?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/CountUp",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/905f7e9b6029818ffe4993a973bc4615d9deae6a",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/CountUp?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/905f7e9b6029818ffe4993a973bc4615d9deae6a",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/CountUp"
+    }
+  },
+  {
+    "name": "CurvedLoop",
+    "path": "src/content/TextAnimations/CurvedLoop",
+    "sha": "8887843ec692ee6947822fb8e881e79568615301",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/CurvedLoop?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/CurvedLoop",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/8887843ec692ee6947822fb8e881e79568615301",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/CurvedLoop?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/8887843ec692ee6947822fb8e881e79568615301",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/CurvedLoop"
+    }
+  },
+  {
+    "name": "DecryptedText",
+    "path": "src/content/TextAnimations/DecryptedText",
+    "sha": "9589aa8dcda5f40cfb2d412c417de35a9a5252b0",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/DecryptedText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/DecryptedText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/9589aa8dcda5f40cfb2d412c417de35a9a5252b0",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/DecryptedText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/9589aa8dcda5f40cfb2d412c417de35a9a5252b0",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/DecryptedText"
+    }
+  },
+  {
+    "name": "DepthText",
+    "path": "src/content/TextAnimations/DepthText",
+    "sha": "b1046ef85c9e997781f15dcb45a62d8acab9fa53",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/DepthText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/DepthText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/b1046ef85c9e997781f15dcb45a62d8acab9fa53",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/DepthText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/b1046ef85c9e997781f15dcb45a62d8acab9fa53",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/DepthText"
+    }
+  },
+  {
+    "name": "EchoText",
+    "path": "src/content/TextAnimations/EchoText",
+    "sha": "3387a568cd4cb8609af54fe2eea8dcd15f06f04d",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/EchoText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/EchoText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/3387a568cd4cb8609af54fe2eea8dcd15f06f04d",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/EchoText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/3387a568cd4cb8609af54fe2eea8dcd15f06f04d",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/EchoText"
+    }
+  },
+  {
+    "name": "FallingText",
+    "path": "src/content/TextAnimations/FallingText",
+    "sha": "27de421946b3b79c4f784229690b440db242908c",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/FallingText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/FallingText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/27de421946b3b79c4f784229690b440db242908c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/FallingText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/27de421946b3b79c4f784229690b440db242908c",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/FallingText"
+    }
+  },
+  {
+    "name": "FoldText",
+    "path": "src/content/TextAnimations/FoldText",
+    "sha": "781b7b8706f9641bdc6531ba4abd5a4757a85fad",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/FoldText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/FoldText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/781b7b8706f9641bdc6531ba4abd5a4757a85fad",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/FoldText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/781b7b8706f9641bdc6531ba4abd5a4757a85fad",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/FoldText"
+    }
+  },
+  {
+    "name": "FuzzyText",
+    "path": "src/content/TextAnimations/FuzzyText",
+    "sha": "933b76004c6719a8b86c1070dd7d5c40460111b2",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/FuzzyText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/FuzzyText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/933b76004c6719a8b86c1070dd7d5c40460111b2",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/FuzzyText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/933b76004c6719a8b86c1070dd7d5c40460111b2",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/FuzzyText"
+    }
+  },
+  {
+    "name": "GlitchText",
+    "path": "src/content/TextAnimations/GlitchText",
+    "sha": "89727197ed5353e67b74d2c328366f9db4b04f78",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/GlitchText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/GlitchText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/89727197ed5353e67b74d2c328366f9db4b04f78",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/GlitchText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/89727197ed5353e67b74d2c328366f9db4b04f78",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/GlitchText"
+    }
+  },
+  {
+    "name": "GradientText",
+    "path": "src/content/TextAnimations/GradientText",
+    "sha": "462740527f1d6e4003765fe4ddd8c957a63a058c",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/GradientText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/GradientText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/462740527f1d6e4003765fe4ddd8c957a63a058c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/GradientText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/462740527f1d6e4003765fe4ddd8c957a63a058c",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/GradientText"
+    }
+  },
+  {
+    "name": "MaskedHeading",
+    "path": "src/content/TextAnimations/MaskedHeading",
+    "sha": "d5749c3f7fa2e646d2f7e6f2fabd3ee677940393",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/MaskedHeading?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/MaskedHeading",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d5749c3f7fa2e646d2f7e6f2fabd3ee677940393",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/MaskedHeading?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d5749c3f7fa2e646d2f7e6f2fabd3ee677940393",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/MaskedHeading"
+    }
+  },
+  {
+    "name": "ParticleText",
+    "path": "src/content/TextAnimations/ParticleText",
+    "sha": "8d1bde3af88a671a492454e0a26f77597bee0d37",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/ParticleText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/ParticleText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/8d1bde3af88a671a492454e0a26f77597bee0d37",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/ParticleText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/8d1bde3af88a671a492454e0a26f77597bee0d37",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/ParticleText"
+    }
+  },
+  {
+    "name": "RotatingText",
+    "path": "src/content/TextAnimations/RotatingText",
+    "sha": "8aac605a7426ca267c077824efa88f3cd783d828",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/RotatingText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/RotatingText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/8aac605a7426ca267c077824efa88f3cd783d828",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/RotatingText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/8aac605a7426ca267c077824efa88f3cd783d828",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/RotatingText"
+    }
+  },
+  {
+    "name": "ScrambledText",
+    "path": "src/content/TextAnimations/ScrambledText",
+    "sha": "de022c1f6bdd345ff3ae0aeef64e49e3abf1f5be",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/ScrambledText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/ScrambledText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/de022c1f6bdd345ff3ae0aeef64e49e3abf1f5be",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/ScrambledText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/de022c1f6bdd345ff3ae0aeef64e49e3abf1f5be",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/ScrambledText"
+    }
+  },
+  {
+    "name": "ScrollFloat",
+    "path": "src/content/TextAnimations/ScrollFloat",
+    "sha": "7ab7d9502c490f3ad146922cfb6c2c4408834ba9",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/ScrollFloat?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/ScrollFloat",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/7ab7d9502c490f3ad146922cfb6c2c4408834ba9",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/ScrollFloat?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/7ab7d9502c490f3ad146922cfb6c2c4408834ba9",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/ScrollFloat"
+    }
+  },
+  {
+    "name": "ScrollReveal",
+    "path": "src/content/TextAnimations/ScrollReveal",
+    "sha": "8a63ad2b886dd9418f4ce9fe08d39fd79eaa2547",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/ScrollReveal?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/ScrollReveal",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/8a63ad2b886dd9418f4ce9fe08d39fd79eaa2547",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/ScrollReveal?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/8a63ad2b886dd9418f4ce9fe08d39fd79eaa2547",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/ScrollReveal"
+    }
+  },
+  {
+    "name": "ScrollVelocity",
+    "path": "src/content/TextAnimations/ScrollVelocity",
+    "sha": "9bd51b7a7d5750722acd65f33bfcc896a7299dcb",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/ScrollVelocity?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/ScrollVelocity",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/9bd51b7a7d5750722acd65f33bfcc896a7299dcb",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/ScrollVelocity?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/9bd51b7a7d5750722acd65f33bfcc896a7299dcb",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/ScrollVelocity"
+    }
+  },
+  {
+    "name": "ShinyText",
+    "path": "src/content/TextAnimations/ShinyText",
+    "sha": "48e2cfb777177538fcc123e8676718cc55bf8205",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/ShinyText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/ShinyText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/48e2cfb777177538fcc123e8676718cc55bf8205",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/ShinyText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/48e2cfb777177538fcc123e8676718cc55bf8205",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/ShinyText"
+    }
+  },
+  {
+    "name": "Shuffle",
+    "path": "src/content/TextAnimations/Shuffle",
+    "sha": "4f104b503ab19d3089b84c7755c7c00268f3105b",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/Shuffle?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/Shuffle",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/4f104b503ab19d3089b84c7755c7c00268f3105b",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/Shuffle?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/4f104b503ab19d3089b84c7755c7c00268f3105b",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/Shuffle"
+    }
+  },
+  {
+    "name": "SplitFlapText",
+    "path": "src/content/TextAnimations/SplitFlapText",
+    "sha": "05c7d8c2954618651df5c3a2f63e7716886f7a89",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/SplitFlapText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/SplitFlapText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/05c7d8c2954618651df5c3a2f63e7716886f7a89",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/SplitFlapText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/05c7d8c2954618651df5c3a2f63e7716886f7a89",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/SplitFlapText"
+    }
+  },
+  {
+    "name": "SplitText",
+    "path": "src/content/TextAnimations/SplitText",
+    "sha": "e78263fbbda9059fc5bb5f282481377e40578d54",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/SplitText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/SplitText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/e78263fbbda9059fc5bb5f282481377e40578d54",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/SplitText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/e78263fbbda9059fc5bb5f282481377e40578d54",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/SplitText"
+    }
+  },
+  {
+    "name": "StrokeText",
+    "path": "src/content/TextAnimations/StrokeText",
+    "sha": "6eb0ce55fd79e7386ac6a1d0c37457282268ef54",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/StrokeText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/StrokeText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/6eb0ce55fd79e7386ac6a1d0c37457282268ef54",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/StrokeText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/6eb0ce55fd79e7386ac6a1d0c37457282268ef54",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/StrokeText"
+    }
+  },
+  {
+    "name": "TextCursor",
+    "path": "src/content/TextAnimations/TextCursor",
+    "sha": "c58d12e184557b7d1459009a158365566d850702",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/TextCursor?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/TextCursor",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c58d12e184557b7d1459009a158365566d850702",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/TextCursor?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c58d12e184557b7d1459009a158365566d850702",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/TextCursor"
+    }
+  },
+  {
+    "name": "TextLoop",
+    "path": "src/content/TextAnimations/TextLoop",
+    "sha": "9f5d151784355abd6ab82c4e089777276366ca2e",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/TextLoop?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/TextLoop",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/9f5d151784355abd6ab82c4e089777276366ca2e",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/TextLoop?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/9f5d151784355abd6ab82c4e089777276366ca2e",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/TextLoop"
+    }
+  },
+  {
+    "name": "TextPressure",
+    "path": "src/content/TextAnimations/TextPressure",
+    "sha": "d71ed402cba092294479cb7a1130af033603600a",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/TextPressure?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/TextPressure",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d71ed402cba092294479cb7a1130af033603600a",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/TextPressure?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d71ed402cba092294479cb7a1130af033603600a",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/TextPressure"
+    }
+  },
+  {
+    "name": "TextType",
+    "path": "src/content/TextAnimations/TextType",
+    "sha": "c40d8e8958cd61e5c1534306f1357b7bd9d5d491",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/TextType?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/TextType",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c40d8e8958cd61e5c1534306f1357b7bd9d5d491",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/TextType?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c40d8e8958cd61e5c1534306f1357b7bd9d5d491",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/TextType"
+    }
+  },
+  {
+    "name": "TrueFocus",
+    "path": "src/content/TextAnimations/TrueFocus",
+    "sha": "b4c5b7570e11abd8ad710b46f93632fe6e235962",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/TrueFocus?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/TrueFocus",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/b4c5b7570e11abd8ad710b46f93632fe6e235962",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/TrueFocus?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/b4c5b7570e11abd8ad710b46f93632fe6e235962",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/TrueFocus"
+    }
+  },
+  {
+    "name": "VariableProximity",
+    "path": "src/content/TextAnimations/VariableProximity",
+    "sha": "790810c6aaac5002c99eabc735101cf6a45e1f53",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/VariableProximity?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/VariableProximity",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/790810c6aaac5002c99eabc735101cf6a45e1f53",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/VariableProximity?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/790810c6aaac5002c99eabc735101cf6a45e1f53",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/VariableProximity"
+    }
+  },
+  {
+    "name": "WarpText",
+    "path": "src/content/TextAnimations/WarpText",
+    "sha": "ccb307f6a7529ca4ac924a70c0da6cd95a9acc81",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/WarpText?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/WarpText",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/ccb307f6a7529ca4ac924a70c0da6cd95a9acc81",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/TextAnimations/WarpText?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/ccb307f6a7529ca4ac924a70c0da6cd95a9acc81",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/TextAnimations/WarpText"
+    }
+  }
+]

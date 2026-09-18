@@ -1,0 +1,850 @@
+[
+  {
+    "name": "AcidSquares",
+    "path": "src/content/Backgrounds/AcidSquares",
+    "sha": "b8ab7cf9b5ab066de92a9d4b9afdd75e7059d745",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/AcidSquares?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/AcidSquares",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/b8ab7cf9b5ab066de92a9d4b9afdd75e7059d745",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/AcidSquares?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/b8ab7cf9b5ab066de92a9d4b9afdd75e7059d745",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/AcidSquares"
+    }
+  },
+  {
+    "name": "Aurora",
+    "path": "src/content/Backgrounds/Aurora",
+    "sha": "dfe610a118b808df21f8c54a9832f1c41353e8a4",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Aurora?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Aurora",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/dfe610a118b808df21f8c54a9832f1c41353e8a4",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Aurora?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/dfe610a118b808df21f8c54a9832f1c41353e8a4",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Aurora"
+    }
+  },
+  {
+    "name": "Balatro",
+    "path": "src/content/Backgrounds/Balatro",
+    "sha": "7cc07b1eb48f0e42aff5bb6c513b6d81c6df1219",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Balatro?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Balatro",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/7cc07b1eb48f0e42aff5bb6c513b6d81c6df1219",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Balatro?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/7cc07b1eb48f0e42aff5bb6c513b6d81c6df1219",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Balatro"
+    }
+  },
+  {
+    "name": "Ballpit",
+    "path": "src/content/Backgrounds/Ballpit",
+    "sha": "2cd3547c7ec8010d8d6228c1a2445cb506bd1cd4",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Ballpit?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Ballpit",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/2cd3547c7ec8010d8d6228c1a2445cb506bd1cd4",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Ballpit?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/2cd3547c7ec8010d8d6228c1a2445cb506bd1cd4",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Ballpit"
+    }
+  },
+  {
+    "name": "Beams",
+    "path": "src/content/Backgrounds/Beams",
+    "sha": "50a8540855e27a0b53843333a30067432d65cb39",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Beams?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Beams",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/50a8540855e27a0b53843333a30067432d65cb39",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Beams?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/50a8540855e27a0b53843333a30067432d65cb39",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Beams"
+    }
+  },
+  {
+    "name": "ColorBends",
+    "path": "src/content/Backgrounds/ColorBends",
+    "sha": "5f942568c45ea0d0549eedac88508952be953211",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/ColorBends?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/ColorBends",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/5f942568c45ea0d0549eedac88508952be953211",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/ColorBends?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/5f942568c45ea0d0549eedac88508952be953211",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/ColorBends"
+    }
+  },
+  {
+    "name": "DarkVeil",
+    "path": "src/content/Backgrounds/DarkVeil",
+    "sha": "fd3f628336403d2dbe92f80332ea1962c388f5a0",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/DarkVeil?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/DarkVeil",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/fd3f628336403d2dbe92f80332ea1962c388f5a0",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/DarkVeil?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/fd3f628336403d2dbe92f80332ea1962c388f5a0",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/DarkVeil"
+    }
+  },
+  {
+    "name": "Dither",
+    "path": "src/content/Backgrounds/Dither",
+    "sha": "26d000b332f0df32216e5b4dcd6d41fd80b9ebe3",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Dither?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Dither",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/26d000b332f0df32216e5b4dcd6d41fd80b9ebe3",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Dither?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/26d000b332f0df32216e5b4dcd6d41fd80b9ebe3",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Dither"
+    }
+  },
+  {
+    "name": "DotField",
+    "path": "src/content/Backgrounds/DotField",
+    "sha": "c502348fdb44b5bdaaf4ff2bfd69997c3f7c25be",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/DotField?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/DotField",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c502348fdb44b5bdaaf4ff2bfd69997c3f7c25be",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/DotField?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c502348fdb44b5bdaaf4ff2bfd69997c3f7c25be",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/DotField"
+    }
+  },
+  {
+    "name": "DotGrid",
+    "path": "src/content/Backgrounds/DotGrid",
+    "sha": "dee6392fa922ce5d807bd204ae8cb2010123c854",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/DotGrid?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/DotGrid",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/dee6392fa922ce5d807bd204ae8cb2010123c854",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/DotGrid?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/dee6392fa922ce5d807bd204ae8cb2010123c854",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/DotGrid"
+    }
+  },
+  {
+    "name": "EvilEye",
+    "path": "src/content/Backgrounds/EvilEye",
+    "sha": "07285bc903a5bd614bac17e6d21f2acbebb94118",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/EvilEye?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/EvilEye",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/07285bc903a5bd614bac17e6d21f2acbebb94118",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/EvilEye?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/07285bc903a5bd614bac17e6d21f2acbebb94118",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/EvilEye"
+    }
+  },
+  {
+    "name": "FaultyTerminal",
+    "path": "src/content/Backgrounds/FaultyTerminal",
+    "sha": "45e5ae3d33b9ba4b0eeae45eac7410cd07306654",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/FaultyTerminal?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/FaultyTerminal",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/45e5ae3d33b9ba4b0eeae45eac7410cd07306654",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/FaultyTerminal?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/45e5ae3d33b9ba4b0eeae45eac7410cd07306654",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/FaultyTerminal"
+    }
+  },
+  {
+    "name": "Ferrofluid",
+    "path": "src/content/Backgrounds/Ferrofluid",
+    "sha": "a7be7ba0e5f8199cfba53a75c547a468460978eb",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Ferrofluid?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Ferrofluid",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/a7be7ba0e5f8199cfba53a75c547a468460978eb",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Ferrofluid?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/a7be7ba0e5f8199cfba53a75c547a468460978eb",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Ferrofluid"
+    }
+  },
+  {
+    "name": "FloatingLines",
+    "path": "src/content/Backgrounds/FloatingLines",
+    "sha": "b23b593cac02097fabe1f3caf498c834b55cbf89",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/FloatingLines?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/FloatingLines",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/b23b593cac02097fabe1f3caf498c834b55cbf89",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/FloatingLines?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/b23b593cac02097fabe1f3caf498c834b55cbf89",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/FloatingLines"
+    }
+  },
+  {
+    "name": "Galaxy",
+    "path": "src/content/Backgrounds/Galaxy",
+    "sha": "c4a93ce7fcc9a8ad3e971f15794e26aeb5672561",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Galaxy?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Galaxy",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c4a93ce7fcc9a8ad3e971f15794e26aeb5672561",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Galaxy?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c4a93ce7fcc9a8ad3e971f15794e26aeb5672561",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Galaxy"
+    }
+  },
+  {
+    "name": "GradientBlinds",
+    "path": "src/content/Backgrounds/GradientBlinds",
+    "sha": "de34895220149e3aa195a1a352f929c31a3d9fac",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/GradientBlinds?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/GradientBlinds",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/de34895220149e3aa195a1a352f929c31a3d9fac",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/GradientBlinds?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/de34895220149e3aa195a1a352f929c31a3d9fac",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/GradientBlinds"
+    }
+  },
+  {
+    "name": "GradientWaves",
+    "path": "src/content/Backgrounds/GradientWaves",
+    "sha": "2f1f1a90ebc25c8c08f1cf42a08c33feea32ad42",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/GradientWaves?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/GradientWaves",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/2f1f1a90ebc25c8c08f1cf42a08c33feea32ad42",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/GradientWaves?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/2f1f1a90ebc25c8c08f1cf42a08c33feea32ad42",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/GradientWaves"
+    }
+  },
+  {
+    "name": "Grainient",
+    "path": "src/content/Backgrounds/Grainient",
+    "sha": "d854ef0e88b3cb2259fe18983ce98bc72e42775d",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Grainient?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Grainient",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d854ef0e88b3cb2259fe18983ce98bc72e42775d",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Grainient?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d854ef0e88b3cb2259fe18983ce98bc72e42775d",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Grainient"
+    }
+  },
+  {
+    "name": "GridDistortion",
+    "path": "src/content/Backgrounds/GridDistortion",
+    "sha": "4763aececa32b525899fb5288ae4406a60847f50",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/GridDistortion?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/GridDistortion",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/4763aececa32b525899fb5288ae4406a60847f50",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/GridDistortion?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/4763aececa32b525899fb5288ae4406a60847f50",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/GridDistortion"
+    }
+  },
+  {
+    "name": "GridMotion",
+    "path": "src/content/Backgrounds/GridMotion",
+    "sha": "c6804d7614ad2098569d67d6ecc979e8825caacd",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/GridMotion?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/GridMotion",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c6804d7614ad2098569d67d6ecc979e8825caacd",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/GridMotion?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c6804d7614ad2098569d67d6ecc979e8825caacd",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/GridMotion"
+    }
+  },
+  {
+    "name": "GridScan",
+    "path": "src/content/Backgrounds/GridScan",
+    "sha": "40167a7d22e43e0de75baa120e3ea038df8a2531",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/GridScan?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/GridScan",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/40167a7d22e43e0de75baa120e3ea038df8a2531",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/GridScan?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/40167a7d22e43e0de75baa120e3ea038df8a2531",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/GridScan"
+    }
+  },
+  {
+    "name": "Hyperspeed",
+    "path": "src/content/Backgrounds/Hyperspeed",
+    "sha": "1bb50ab8c9918a694ead069ce977f34ad495a8f2",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Hyperspeed?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Hyperspeed",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/1bb50ab8c9918a694ead069ce977f34ad495a8f2",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Hyperspeed?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/1bb50ab8c9918a694ead069ce977f34ad495a8f2",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Hyperspeed"
+    }
+  },
+  {
+    "name": "Iridescence",
+    "path": "src/content/Backgrounds/Iridescence",
+    "sha": "a969830b61646446452937b8515018a0d22b667f",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Iridescence?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Iridescence",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/a969830b61646446452937b8515018a0d22b667f",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Iridescence?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/a969830b61646446452937b8515018a0d22b667f",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Iridescence"
+    }
+  },
+  {
+    "name": "LetterGlitch",
+    "path": "src/content/Backgrounds/LetterGlitch",
+    "sha": "2953bd7d84fed2cd3a3ae90b98dbd7fbf171ee3b",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/LetterGlitch?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/LetterGlitch",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/2953bd7d84fed2cd3a3ae90b98dbd7fbf171ee3b",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/LetterGlitch?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/2953bd7d84fed2cd3a3ae90b98dbd7fbf171ee3b",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/LetterGlitch"
+    }
+  },
+  {
+    "name": "LightPillar",
+    "path": "src/content/Backgrounds/LightPillar",
+    "sha": "ee5ee943016962fef4d733a5cabe649b049dffc0",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/LightPillar?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/LightPillar",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/ee5ee943016962fef4d733a5cabe649b049dffc0",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/LightPillar?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/ee5ee943016962fef4d733a5cabe649b049dffc0",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/LightPillar"
+    }
+  },
+  {
+    "name": "LightRays",
+    "path": "src/content/Backgrounds/LightRays",
+    "sha": "2a94323fb50692e46ee220b74b3df29538878566",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/LightRays?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/LightRays",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/2a94323fb50692e46ee220b74b3df29538878566",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/LightRays?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/2a94323fb50692e46ee220b74b3df29538878566",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/LightRays"
+    }
+  },
+  {
+    "name": "LightTunnel",
+    "path": "src/content/Backgrounds/LightTunnel",
+    "sha": "8bb0b4cc7bc41c682f6dba59db352673d3a082eb",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/LightTunnel?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/LightTunnel",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/8bb0b4cc7bc41c682f6dba59db352673d3a082eb",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/LightTunnel?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/8bb0b4cc7bc41c682f6dba59db352673d3a082eb",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/LightTunnel"
+    }
+  },
+  {
+    "name": "Lightfall",
+    "path": "src/content/Backgrounds/Lightfall",
+    "sha": "93417cf2f1d2e82bf09c02b16b887dd08b5afd1c",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Lightfall?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Lightfall",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/93417cf2f1d2e82bf09c02b16b887dd08b5afd1c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Lightfall?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/93417cf2f1d2e82bf09c02b16b887dd08b5afd1c",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Lightfall"
+    }
+  },
+  {
+    "name": "Lightning",
+    "path": "src/content/Backgrounds/Lightning",
+    "sha": "a8a41f152d39bccba4a858311c162e89f7004283",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Lightning?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Lightning",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/a8a41f152d39bccba4a858311c162e89f7004283",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Lightning?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/a8a41f152d39bccba4a858311c162e89f7004283",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Lightning"
+    }
+  },
+  {
+    "name": "LineWaves",
+    "path": "src/content/Backgrounds/LineWaves",
+    "sha": "7aa6710c293f194305919d0defa202d10757f305",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/LineWaves?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/LineWaves",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/7aa6710c293f194305919d0defa202d10757f305",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/LineWaves?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/7aa6710c293f194305919d0defa202d10757f305",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/LineWaves"
+    }
+  },
+  {
+    "name": "LiquidChrome",
+    "path": "src/content/Backgrounds/LiquidChrome",
+    "sha": "9ec0bca420dd696c2c2323c953551b0b860aa5eb",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/LiquidChrome?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/LiquidChrome",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/9ec0bca420dd696c2c2323c953551b0b860aa5eb",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/LiquidChrome?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/9ec0bca420dd696c2c2323c953551b0b860aa5eb",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/LiquidChrome"
+    }
+  },
+  {
+    "name": "LiquidEther",
+    "path": "src/content/Backgrounds/LiquidEther",
+    "sha": "d9eda76ef606bb093cf15cb74f309d0cda30b631",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/LiquidEther?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/LiquidEther",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d9eda76ef606bb093cf15cb74f309d0cda30b631",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/LiquidEther?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d9eda76ef606bb093cf15cb74f309d0cda30b631",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/LiquidEther"
+    }
+  },
+  {
+    "name": "MoltenMetal",
+    "path": "src/content/Backgrounds/MoltenMetal",
+    "sha": "2fe79d4ef7649c0e3f82952852275d0d11148912",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/MoltenMetal?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/MoltenMetal",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/2fe79d4ef7649c0e3f82952852275d0d11148912",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/MoltenMetal?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/2fe79d4ef7649c0e3f82952852275d0d11148912",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/MoltenMetal"
+    }
+  },
+  {
+    "name": "Orb",
+    "path": "src/content/Backgrounds/Orb",
+    "sha": "bc08d4d6315992ffee1a5d89115ea625c394410d",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Orb?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Orb",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/bc08d4d6315992ffee1a5d89115ea625c394410d",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Orb?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/bc08d4d6315992ffee1a5d89115ea625c394410d",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Orb"
+    }
+  },
+  {
+    "name": "Particles",
+    "path": "src/content/Backgrounds/Particles",
+    "sha": "d8ee1c5385cd5e2d46914f40b8620a3f82e21937",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Particles?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Particles",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d8ee1c5385cd5e2d46914f40b8620a3f82e21937",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Particles?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d8ee1c5385cd5e2d46914f40b8620a3f82e21937",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Particles"
+    }
+  },
+  {
+    "name": "PixelBlast",
+    "path": "src/content/Backgrounds/PixelBlast",
+    "sha": "3612086295bfb12ab8d968899511c156685dbc7a",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/PixelBlast?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/PixelBlast",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/3612086295bfb12ab8d968899511c156685dbc7a",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/PixelBlast?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/3612086295bfb12ab8d968899511c156685dbc7a",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/PixelBlast"
+    }
+  },
+  {
+    "name": "PixelSnow",
+    "path": "src/content/Backgrounds/PixelSnow",
+    "sha": "24ae1f3d2aa5e1b09f1bf3e8547d710c4e5f733c",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/PixelSnow?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/PixelSnow",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/24ae1f3d2aa5e1b09f1bf3e8547d710c4e5f733c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/PixelSnow?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/24ae1f3d2aa5e1b09f1bf3e8547d710c4e5f733c",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/PixelSnow"
+    }
+  },
+  {
+    "name": "Plasma",
+    "path": "src/content/Backgrounds/Plasma",
+    "sha": "0c69b62f8e23d79296875023d23ec5bd6f783d7d",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Plasma?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Plasma",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/0c69b62f8e23d79296875023d23ec5bd6f783d7d",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Plasma?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/0c69b62f8e23d79296875023d23ec5bd6f783d7d",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Plasma"
+    }
+  },
+  {
+    "name": "PlasmaWave",
+    "path": "src/content/Backgrounds/PlasmaWave",
+    "sha": "3d29f6c7b829e1fe6d091e1da103182c1d4d79ab",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/PlasmaWave?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/PlasmaWave",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/3d29f6c7b829e1fe6d091e1da103182c1d4d79ab",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/PlasmaWave?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/3d29f6c7b829e1fe6d091e1da103182c1d4d79ab",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/PlasmaWave"
+    }
+  },
+  {
+    "name": "Prism",
+    "path": "src/content/Backgrounds/Prism",
+    "sha": "7d28f75a320b621ae3a54c4afed26ccc0cb352fc",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Prism?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Prism",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/7d28f75a320b621ae3a54c4afed26ccc0cb352fc",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Prism?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/7d28f75a320b621ae3a54c4afed26ccc0cb352fc",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Prism"
+    }
+  },
+  {
+    "name": "PrismaticBurst",
+    "path": "src/content/Backgrounds/PrismaticBurst",
+    "sha": "a1660bdbaa07e571c3abade7599fe025400e81d1",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/PrismaticBurst?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/PrismaticBurst",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/a1660bdbaa07e571c3abade7599fe025400e81d1",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/PrismaticBurst?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/a1660bdbaa07e571c3abade7599fe025400e81d1",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/PrismaticBurst"
+    }
+  },
+  {
+    "name": "Radar",
+    "path": "src/content/Backgrounds/Radar",
+    "sha": "dc94c158d8534dbc46b0e88ce79444297f495e17",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Radar?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Radar",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/dc94c158d8534dbc46b0e88ce79444297f495e17",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Radar?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/dc94c158d8534dbc46b0e88ce79444297f495e17",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Radar"
+    }
+  },
+  {
+    "name": "RippleGrid",
+    "path": "src/content/Backgrounds/RippleGrid",
+    "sha": "a3f3a1ad7d8ab02e47eee72e8dbc8f6f7fb66357",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/RippleGrid?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/RippleGrid",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/a3f3a1ad7d8ab02e47eee72e8dbc8f6f7fb66357",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/RippleGrid?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/a3f3a1ad7d8ab02e47eee72e8dbc8f6f7fb66357",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/RippleGrid"
+    }
+  },
+  {
+    "name": "Scanner",
+    "path": "src/content/Backgrounds/Scanner",
+    "sha": "ca7ad99ea8d9fd024e982777f58f0d4ea44f8493",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Scanner?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Scanner",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/ca7ad99ea8d9fd024e982777f58f0d4ea44f8493",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Scanner?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/ca7ad99ea8d9fd024e982777f58f0d4ea44f8493",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Scanner"
+    }
+  },
+  {
+    "name": "ShapeGrid",
+    "path": "src/content/Backgrounds/ShapeGrid",
+    "sha": "69059e1b83d4c1a55dc0ae72f2425255c150dc30",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/ShapeGrid?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/ShapeGrid",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/69059e1b83d4c1a55dc0ae72f2425255c150dc30",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/ShapeGrid?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/69059e1b83d4c1a55dc0ae72f2425255c150dc30",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/ShapeGrid"
+    }
+  },
+  {
+    "name": "SideRays",
+    "path": "src/content/Backgrounds/SideRays",
+    "sha": "c3b7a43ea3982fc01a9edc3d0021f96d842cd046",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/SideRays?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/SideRays",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c3b7a43ea3982fc01a9edc3d0021f96d842cd046",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/SideRays?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c3b7a43ea3982fc01a9edc3d0021f96d842cd046",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/SideRays"
+    }
+  },
+  {
+    "name": "Silk",
+    "path": "src/content/Backgrounds/Silk",
+    "sha": "20280febb93ea896b75ed1cfa402116ef7306e50",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Silk?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Silk",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/20280febb93ea896b75ed1cfa402116ef7306e50",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Silk?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/20280febb93ea896b75ed1cfa402116ef7306e50",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Silk"
+    }
+  },
+  {
+    "name": "SlicedWaves",
+    "path": "src/content/Backgrounds/SlicedWaves",
+    "sha": "af7a7f4c49e28bcca1f13ef2044758383e501d81",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/SlicedWaves?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/SlicedWaves",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/af7a7f4c49e28bcca1f13ef2044758383e501d81",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/SlicedWaves?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/af7a7f4c49e28bcca1f13ef2044758383e501d81",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/SlicedWaves"
+    }
+  },
+  {
+    "name": "SoftAurora",
+    "path": "src/content/Backgrounds/SoftAurora",
+    "sha": "5984f9abaae2725c60d7ac2c55606c03dbb96b69",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/SoftAurora?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/SoftAurora",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/5984f9abaae2725c60d7ac2c55606c03dbb96b69",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/SoftAurora?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/5984f9abaae2725c60d7ac2c55606c03dbb96b69",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/SoftAurora"
+    }
+  },
+  {
+    "name": "Threads",
+    "path": "src/content/Backgrounds/Threads",
+    "sha": "d599fbc0c1da2f784c85c9aedf0c2c1523e66c3a",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Threads?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Threads",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d599fbc0c1da2f784c85c9aedf0c2c1523e66c3a",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Threads?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d599fbc0c1da2f784c85c9aedf0c2c1523e66c3a",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Threads"
+    }
+  },
+  {
+    "name": "Topography",
+    "path": "src/content/Backgrounds/Topography",
+    "sha": "805103686710cdeae85ff4d68ac086195549f5e0",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Topography?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Topography",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/805103686710cdeae85ff4d68ac086195549f5e0",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Topography?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/805103686710cdeae85ff4d68ac086195549f5e0",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Topography"
+    }
+  },
+  {
+    "name": "Waves",
+    "path": "src/content/Backgrounds/Waves",
+    "sha": "1ba841b8a6be69e2024f061aa8afb1297187ad37",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Waves?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Waves",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/1ba841b8a6be69e2024f061aa8afb1297187ad37",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/Waves?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/1ba841b8a6be69e2024f061aa8afb1297187ad37",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/Waves"
+    }
+  },
+  {
+    "name": "WebThreads",
+    "path": "src/content/Backgrounds/WebThreads",
+    "sha": "9014487550496b14054cd7f9eced3f31f45ae29c",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/WebThreads?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/WebThreads",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/9014487550496b14054cd7f9eced3f31f45ae29c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Backgrounds/WebThreads?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/9014487550496b14054cd7f9eced3f31f45ae29c",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Backgrounds/WebThreads"
+    }
+  }
+]

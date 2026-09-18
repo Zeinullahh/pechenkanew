@@ -1,0 +1,578 @@
+[
+  {
+    "name": "AnimatedContent",
+    "path": "src/content/Animations/AnimatedContent",
+    "sha": "87d8b85d4042445cc82486f479d22a3ffb78982e",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/AnimatedContent?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/AnimatedContent",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/87d8b85d4042445cc82486f479d22a3ffb78982e",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/AnimatedContent?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/87d8b85d4042445cc82486f479d22a3ffb78982e",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/AnimatedContent"
+    }
+  },
+  {
+    "name": "Antigravity",
+    "path": "src/content/Animations/Antigravity",
+    "sha": "ea48eb14663df569d86dfca4590d49f828dfb944",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/Antigravity?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/Antigravity",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/ea48eb14663df569d86dfca4590d49f828dfb944",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/Antigravity?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/ea48eb14663df569d86dfca4590d49f828dfb944",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/Antigravity"
+    }
+  },
+  {
+    "name": "BlobCursor",
+    "path": "src/content/Animations/BlobCursor",
+    "sha": "1fff6ea93b99c80edf46b264d3ae10336fdda0f4",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/BlobCursor?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/BlobCursor",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/1fff6ea93b99c80edf46b264d3ae10336fdda0f4",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/BlobCursor?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/1fff6ea93b99c80edf46b264d3ae10336fdda0f4",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/BlobCursor"
+    }
+  },
+  {
+    "name": "ClickSpark",
+    "path": "src/content/Animations/ClickSpark",
+    "sha": "064f0e2b8d70a7c1b299e5d9cc992ff1923f66f1",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/ClickSpark?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/ClickSpark",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/064f0e2b8d70a7c1b299e5d9cc992ff1923f66f1",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/ClickSpark?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/064f0e2b8d70a7c1b299e5d9cc992ff1923f66f1",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/ClickSpark"
+    }
+  },
+  {
+    "name": "Crosshair",
+    "path": "src/content/Animations/Crosshair",
+    "sha": "712610062d6f94640dcd12affe3baf737f284667",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/Crosshair?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/Crosshair",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/712610062d6f94640dcd12affe3baf737f284667",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/Crosshair?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/712610062d6f94640dcd12affe3baf737f284667",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/Crosshair"
+    }
+  },
+  {
+    "name": "Cubes",
+    "path": "src/content/Animations/Cubes",
+    "sha": "d9871363832a949a62ef2e75050e2c62d6f2aabd",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/Cubes?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/Cubes",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d9871363832a949a62ef2e75050e2c62d6f2aabd",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/Cubes?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d9871363832a949a62ef2e75050e2c62d6f2aabd",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/Cubes"
+    }
+  },
+  {
+    "name": "CursorGrid",
+    "path": "src/content/Animations/CursorGrid",
+    "sha": "d6e5ac8f6612930216eacbd22c57d8005b616806",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/CursorGrid?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/CursorGrid",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d6e5ac8f6612930216eacbd22c57d8005b616806",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/CursorGrid?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d6e5ac8f6612930216eacbd22c57d8005b616806",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/CursorGrid"
+    }
+  },
+  {
+    "name": "ElasticMesh",
+    "path": "src/content/Animations/ElasticMesh",
+    "sha": "885c691c21444e359124f8b3129d9bbb48e3ccd0",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/ElasticMesh?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/ElasticMesh",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/885c691c21444e359124f8b3129d9bbb48e3ccd0",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/ElasticMesh?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/885c691c21444e359124f8b3129d9bbb48e3ccd0",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/ElasticMesh"
+    }
+  },
+  {
+    "name": "ElectricBorder",
+    "path": "src/content/Animations/ElectricBorder",
+    "sha": "50fccccc4c9a4051c9c50f0a8c718db3d68070eb",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/ElectricBorder?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/ElectricBorder",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/50fccccc4c9a4051c9c50f0a8c718db3d68070eb",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/ElectricBorder?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/50fccccc4c9a4051c9c50f0a8c718db3d68070eb",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/ElectricBorder"
+    }
+  },
+  {
+    "name": "FadeContent",
+    "path": "src/content/Animations/FadeContent",
+    "sha": "d948be99b92f18d2a4cc892163fd430381ecb2bb",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/FadeContent?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/FadeContent",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d948be99b92f18d2a4cc892163fd430381ecb2bb",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/FadeContent?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/d948be99b92f18d2a4cc892163fd430381ecb2bb",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/FadeContent"
+    }
+  },
+  {
+    "name": "GhostCursor",
+    "path": "src/content/Animations/GhostCursor",
+    "sha": "c47b4700cf4ee61ed686f6de134e5a08c941842f",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/GhostCursor?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/GhostCursor",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c47b4700cf4ee61ed686f6de134e5a08c941842f",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/GhostCursor?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c47b4700cf4ee61ed686f6de134e5a08c941842f",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/GhostCursor"
+    }
+  },
+  {
+    "name": "GlareHover",
+    "path": "src/content/Animations/GlareHover",
+    "sha": "7eab7b1fe22a5723897c8f569ecf8694bca6e186",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/GlareHover?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/GlareHover",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/7eab7b1fe22a5723897c8f569ecf8694bca6e186",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/GlareHover?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/7eab7b1fe22a5723897c8f569ecf8694bca6e186",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/GlareHover"
+    }
+  },
+  {
+    "name": "GradualBlur",
+    "path": "src/content/Animations/GradualBlur",
+    "sha": "bab954eaa0a7d2520b0cd0403b07499a2b61e5eb",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/GradualBlur?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/GradualBlur",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/bab954eaa0a7d2520b0cd0403b07499a2b61e5eb",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/GradualBlur?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/bab954eaa0a7d2520b0cd0403b07499a2b61e5eb",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/GradualBlur"
+    }
+  },
+  {
+    "name": "HalftoneReveal",
+    "path": "src/content/Animations/HalftoneReveal",
+    "sha": "aa836c10a8192f5cd21df9a872fb8678c435f831",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/HalftoneReveal?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/HalftoneReveal",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/aa836c10a8192f5cd21df9a872fb8678c435f831",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/HalftoneReveal?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/aa836c10a8192f5cd21df9a872fb8678c435f831",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/HalftoneReveal"
+    }
+  },
+  {
+    "name": "ImageTrail",
+    "path": "src/content/Animations/ImageTrail",
+    "sha": "999f47f6db6c1682edaf9d425e775270cba83753",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/ImageTrail?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/ImageTrail",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/999f47f6db6c1682edaf9d425e775270cba83753",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/ImageTrail?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/999f47f6db6c1682edaf9d425e775270cba83753",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/ImageTrail"
+    }
+  },
+  {
+    "name": "LaserFlow",
+    "path": "src/content/Animations/LaserFlow",
+    "sha": "461f67d106bbbb1d38f3bc9c4b2066b180bda000",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/LaserFlow?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/LaserFlow",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/461f67d106bbbb1d38f3bc9c4b2066b180bda000",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/LaserFlow?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/461f67d106bbbb1d38f3bc9c4b2066b180bda000",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/LaserFlow"
+    }
+  },
+  {
+    "name": "LogoLoop",
+    "path": "src/content/Animations/LogoLoop",
+    "sha": "1366b5b81f3c5bd4a17aa8dd5d0004d35785a25d",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/LogoLoop?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/LogoLoop",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/1366b5b81f3c5bd4a17aa8dd5d0004d35785a25d",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/LogoLoop?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/1366b5b81f3c5bd4a17aa8dd5d0004d35785a25d",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/LogoLoop"
+    }
+  },
+  {
+    "name": "MagicRings",
+    "path": "src/content/Animations/MagicRings",
+    "sha": "c5ff6298316a54ca600d94c33b9ba5e09227fbf8",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/MagicRings?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/MagicRings",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c5ff6298316a54ca600d94c33b9ba5e09227fbf8",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/MagicRings?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c5ff6298316a54ca600d94c33b9ba5e09227fbf8",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/MagicRings"
+    }
+  },
+  {
+    "name": "Magnet",
+    "path": "src/content/Animations/Magnet",
+    "sha": "e55b9a5450fc6451e5f2726ae8542a74303f7fb4",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/Magnet?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/Magnet",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/e55b9a5450fc6451e5f2726ae8542a74303f7fb4",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/Magnet?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/e55b9a5450fc6451e5f2726ae8542a74303f7fb4",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/Magnet"
+    }
+  },
+  {
+    "name": "MagnetLines",
+    "path": "src/content/Animations/MagnetLines",
+    "sha": "cbe7c77e828abd5c0982c238a4caf254993595ba",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/MagnetLines?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/MagnetLines",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/cbe7c77e828abd5c0982c238a4caf254993595ba",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/MagnetLines?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/cbe7c77e828abd5c0982c238a4caf254993595ba",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/MagnetLines"
+    }
+  },
+  {
+    "name": "MetaBalls",
+    "path": "src/content/Animations/MetaBalls",
+    "sha": "080e4a2d9bd8993ffd74da50332383d6bc95c7fe",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/MetaBalls?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/MetaBalls",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/080e4a2d9bd8993ffd74da50332383d6bc95c7fe",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/MetaBalls?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/080e4a2d9bd8993ffd74da50332383d6bc95c7fe",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/MetaBalls"
+    }
+  },
+  {
+    "name": "MetallicPaint",
+    "path": "src/content/Animations/MetallicPaint",
+    "sha": "8d117dac04bfc5cf92003abead3d05524a92c7c8",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/MetallicPaint?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/MetallicPaint",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/8d117dac04bfc5cf92003abead3d05524a92c7c8",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/MetallicPaint?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/8d117dac04bfc5cf92003abead3d05524a92c7c8",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/MetallicPaint"
+    }
+  },
+  {
+    "name": "Noise",
+    "path": "src/content/Animations/Noise",
+    "sha": "3e452b26a9d7dc0c06ad8010e3cca3546f01d4bd",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/Noise?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/Noise",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/3e452b26a9d7dc0c06ad8010e3cca3546f01d4bd",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/Noise?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/3e452b26a9d7dc0c06ad8010e3cca3546f01d4bd",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/Noise"
+    }
+  },
+  {
+    "name": "OrbitImages",
+    "path": "src/content/Animations/OrbitImages",
+    "sha": "754cfdfad2b5156899d06de1e83fceb1f2d135a9",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/OrbitImages?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/OrbitImages",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/754cfdfad2b5156899d06de1e83fceb1f2d135a9",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/OrbitImages?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/754cfdfad2b5156899d06de1e83fceb1f2d135a9",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/OrbitImages"
+    }
+  },
+  {
+    "name": "PixelTrail",
+    "path": "src/content/Animations/PixelTrail",
+    "sha": "fa9733b4fddd72179a06b7f026d3cd1b2c76d9fe",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/PixelTrail?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/PixelTrail",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/fa9733b4fddd72179a06b7f026d3cd1b2c76d9fe",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/PixelTrail?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/fa9733b4fddd72179a06b7f026d3cd1b2c76d9fe",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/PixelTrail"
+    }
+  },
+  {
+    "name": "PixelTransition",
+    "path": "src/content/Animations/PixelTransition",
+    "sha": "70c23d79acd7b881bb154c6796861dfc87078090",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/PixelTransition?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/PixelTransition",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/70c23d79acd7b881bb154c6796861dfc87078090",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/PixelTransition?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/70c23d79acd7b881bb154c6796861dfc87078090",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/PixelTransition"
+    }
+  },
+  {
+    "name": "Ribbons",
+    "path": "src/content/Animations/Ribbons",
+    "sha": "40cee9f62cae8d4a6dce75fe1c1cfae6da7fc3af",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/Ribbons?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/Ribbons",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/40cee9f62cae8d4a6dce75fe1c1cfae6da7fc3af",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/Ribbons?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/40cee9f62cae8d4a6dce75fe1c1cfae6da7fc3af",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/Ribbons"
+    }
+  },
+  {
+    "name": "RippleDistortion",
+    "path": "src/content/Animations/RippleDistortion",
+    "sha": "b08161419ffc64b1ec78432fdf04904bca25afbf",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/RippleDistortion?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/RippleDistortion",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/b08161419ffc64b1ec78432fdf04904bca25afbf",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/RippleDistortion?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/b08161419ffc64b1ec78432fdf04904bca25afbf",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/RippleDistortion"
+    }
+  },
+  {
+    "name": "ScrollExpand",
+    "path": "src/content/Animations/ScrollExpand",
+    "sha": "1080ee0829f86588f36fd85695445bda47e75f28",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/ScrollExpand?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/ScrollExpand",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/1080ee0829f86588f36fd85695445bda47e75f28",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/ScrollExpand?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/1080ee0829f86588f36fd85695445bda47e75f28",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/ScrollExpand"
+    }
+  },
+  {
+    "name": "ShapeBlur",
+    "path": "src/content/Animations/ShapeBlur",
+    "sha": "0ad140c14aed0765ce4f2450635a107541d6f1f4",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/ShapeBlur?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/ShapeBlur",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/0ad140c14aed0765ce4f2450635a107541d6f1f4",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/ShapeBlur?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/0ad140c14aed0765ce4f2450635a107541d6f1f4",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/ShapeBlur"
+    }
+  },
+  {
+    "name": "SplashCursor",
+    "path": "src/content/Animations/SplashCursor",
+    "sha": "f72c44bf975efdf495b2808f2ec0509471048b97",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/SplashCursor?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/SplashCursor",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/f72c44bf975efdf495b2808f2ec0509471048b97",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/SplashCursor?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/f72c44bf975efdf495b2808f2ec0509471048b97",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/SplashCursor"
+    }
+  },
+  {
+    "name": "StarBorder",
+    "path": "src/content/Animations/StarBorder",
+    "sha": "2466e12cc0ed2390937973ba5793d8d4f472ca34",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/StarBorder?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/StarBorder",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/2466e12cc0ed2390937973ba5793d8d4f472ca34",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/StarBorder?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/2466e12cc0ed2390937973ba5793d8d4f472ca34",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/StarBorder"
+    }
+  },
+  {
+    "name": "StickerPeel",
+    "path": "src/content/Animations/StickerPeel",
+    "sha": "68cb888272fb7101bc412cbb873c2e1f52ec5204",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/StickerPeel?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/StickerPeel",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/68cb888272fb7101bc412cbb873c2e1f52ec5204",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/StickerPeel?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/68cb888272fb7101bc412cbb873c2e1f52ec5204",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/StickerPeel"
+    }
+  },
+  {
+    "name": "Strands",
+    "path": "src/content/Animations/Strands",
+    "sha": "184192139c6b039424570fa0da6aab15a2749c52",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/Strands?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/Strands",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/184192139c6b039424570fa0da6aab15a2749c52",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/Strands?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/184192139c6b039424570fa0da6aab15a2749c52",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/Strands"
+    }
+  },
+  {
+    "name": "SwarmCursor",
+    "path": "src/content/Animations/SwarmCursor",
+    "sha": "c9f573f4d59a75ab3b051ae01572e16dc89af7a3",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/SwarmCursor?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/SwarmCursor",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c9f573f4d59a75ab3b051ae01572e16dc89af7a3",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/SwarmCursor?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c9f573f4d59a75ab3b051ae01572e16dc89af7a3",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/SwarmCursor"
+    }
+  },
+  {
+    "name": "TargetCursor",
+    "path": "src/content/Animations/TargetCursor",
+    "sha": "8492bd20610b2804cca343df637eec8d56b93e74",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/TargetCursor?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/TargetCursor",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/8492bd20610b2804cca343df637eec8d56b93e74",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/content/Animations/TargetCursor?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/8492bd20610b2804cca343df637eec8d56b93e74",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/content/Animations/TargetCursor"
+    }
+  }
+]

@@ -1,0 +1,2476 @@
+{
+  "aiSocModal": {
+    "title": "Yönetici Konsolu",
+    "emailSecurity": "E-posta güvenliğine Giriş Yap/Kaydol",
+    "webSecurity": "Web güvenliğine Giriş Yap/Kaydol",
+    "getOnlyOffice": "OnlyOffice Edin"
+  },
+  "emailSecurityModal": {
+    "title": "E-posta Güvenliği",
+    "subtitle": "Hesabınıza nasıl erişmek istediğinizi seçin",
+    "webmail": {
+      "title": "Webmail",
+      "desc": "Gelen kutunuza doÄŸrudan eriÅŸin"
+    },
+    "admin": {
+      "title": "Yönetici Konsolu",
+      "desc": "Güvenlik ayarlarını ve kullanıcıları yönetin"
+    }
+  },
+  "homeCompliance": {
+    "badge": "Düzenleyici Uyumluluk",
+    "title": "Küresel uyumluluk için tasarlandı",
+    "subtitle": "Sürekli canlı uyumluluk kapsamı",
+    "statusLabel": "Uyumlu",
+    "supremeOnly": "Yalnızca Supreme",
+    "cards": {
+      "gdpr": {
+        "desc": "Tüm AB sakinlerinin kişisel verilerini düzenleyen, dünyanın en katı gizlilik ve güvenlik yasası. Dünya genelinde veri koruma için küresel referans noktasını belirler."
+      },
+      "ukGdpr": {
+        "desc": "Brexit sonrası iç hukuka dahil edilen AB GDPR'ının İngiltere eşdeğeri. Kapsam ve yükümlülükler bakımından özünde aynıdır — AB GDPR uyumluluğu UK GDPR'a da uzanır."
+      },
+      "ccpa": {
+        "desc": "Kayıt, ad, e-posta ve Google Kimliği gibi profil verilerini sunucularımıza ileten Google OAuth kullanır — bunlar CCPA kapsamında kişisel veridir. Kullanıcılar hesap verilerini istedikleri zaman öğrenme, erişme ve silme hakkına sahiptir."
+      },
+      "pipeda": {
+        "desc": "Şirketin bulunduğu yerden bağımsız olarak Kanada'da ikamet edenlerin verilerini işleyen her ticari kuruluşa uygulanır. Küresel büyüme sürecimizde Kanadalı kullanıcıların verileri aynı minimum veri toplama standartlarına göre işlenmektedir."
+      },
+      "ksaPdpl": {
+        "desc": "SDAIA tarafından uygulanan Suudi Arabistan Kişisel Veri Koruma Kanunu. Kişisel verilerin toplanmasını, işlenmesini ve sınır ötesi aktarımını düzenler."
+      },
+      "uaePdpl": {
+        "desc": "DIFC ve ADGM dahil ana kara ve serbest bölgeler genelinde kişisel veri işlenmesini düzenleyen BAE Federal Kişisel Veri Koruma Kanunu."
+      },
+      "qatarPdpl": {
+        "desc": "Ulaştırma ve İletişim Bakanlığı tarafından yönetilen Katar Kişisel Veri Gizliliği Koruma Kanunu."
+      },
+      "bahrainPdpl": {
+        "desc": "PDPA tarafından düzenlenen ve uluslararası standartlarla uyumlu Bahreyn Kişisel Veri Koruma Kanunu."
+      },
+      "kuwaitDp": {
+        "desc": "Elektronik hizmet sağlayıcıları için veri koruma yükümlülükleri belirleyen Kuveyt Elektronik İletişim ve İşlemler Kanunu."
+      },
+      "omanPdpl": {
+        "desc": "Veri sahipleri için kapsamlı haklar ile veri sorumluları ve işleyicileri için yükümlülükler belirleyen Umman Kişisel Veri Koruma Kanunu."
+      },
+      "privacyByDesign": {
+        "desc": "Supreme'in kod taraması tamamen yerel makinenizde çalışır — hiçbir kaynak kod asla dışarıya iletilmez veya harici olarak işlenmez. Hesap verileri (Google OAuth profili) gizlilik politikamız kapsamında ayrıca yönetilmektedir."
+      }
+    }
+  },
+  "homePartners": {
+    "title": "Müşteriler ve İş Ortakları",
+    "subtitle": "Burada öne çıkanlar lider müşterilerimiz ve iş ortaklarımızdan bazılarıdır; bu tam liste değildir.",
+    "marketCap": "Piyasa DeÄŸeri",
+    "billion": "Milyar",
+    "million": "Milyon"
+  },
+  "supremeInstructions": {
+    "light": "Light",
+    "videoInstructions": "video talimatları",
+    "lightVideoTitle": "Supreme Light Video Talimatları",
+    "openYoutube": "Videoyu YouTube'da aç",
+    "maxPlaceholder": "Video yer tutucu — tam eğitim yakında eklenecek."
+  },
+  "languageSelector": {
+    "triggerLabel": "Dil seçin",
+    "menuLabel": "Lütfen dili seçiniz",
+    "searchLabel": "Dilleri ara",
+    "searchPlaceholder": "İsme veya yazıya göre ara",
+    "searchResults": "Arama sonuçları",
+    "noMatches": "Aramanıza uyan dil yok.",
+    "popular": "En popüler",
+    "allLanguages": "Tüm diller"
+  },
+  "header": {
+    "andManyMore": "Ve daha fazlası...",
+    "nav": {
+      "main": "Ana sayfa",
+      "mail": "E-posta",
+      "affiliate": "Ortaklık programı",
+      "instructions": "Talimatlar",
+      "product": "AI-CSD",
+      "secureDevelopment": "SLNC-env",
+      "developerServices": "GeliÅŸtirici Hizmetleri",
+      "home": "Ana sayfa",
+      "systems": "Sistemler",
+      "systemsAiSoc": "AI-CSD",
+      "systemsSlncEnv": "SLNC-env",
+      "services": "Hizmetler",
+      "systemsSithub": "Sithub",
+      "systemsSupreme": "Supreme",
+      "instructionsAiSoc": "AI-CSD",
+      "instructionsSupreme": "Supreme",
+      "instructionsSithub": "Sithub"
+    },
+    "login": "GiriÅŸ yap",
+    "cta": {
+      "contact": "İletişim",
+      "download": "İndir",
+      "requestDemo": "Demo iste",
+      "get": "Get"
+    }
+  },
+  "affiliate": {
+    "hero": {
+      "tagline": "Silence AI ortaklık programına katılın",
+      "title": "Daveti gelire dönüştürün.",
+      "subtitle": "Davet edilen müşterilerin tüm harcamalarından 6 ay boyunca %10 ödül sunuyoruz.",
+      "cta": "Ortaklık programına katıl",
+      "earnings": "$2,940.00",
+      "growth": "+18% geçen aya göre",
+      "snapshot": {
+        "label": "Canlı özet",
+        "caption": "Performans her 60 saniyede güncellenir ve onaylanan ödemeler anında senkronize edilir."
+      },
+      "graph": {
+        "label": "Gelir trendi",
+        "title": "Yönlendirme gelirindeki artış",
+        "window": "Son 30 gün",
+        "label0": "1. hafta",
+        "label1": "2. hafta",
+        "label2": "3. hafta",
+        "label3": "4. hafta",
+        "label4": "5. hafta",
+        "label5": "6. hafta",
+        "label6": "Bugün"
+      },
+      "metric": {
+        "conversion": "Aktivasyon",
+        "conversionChange": "Bu ay 24 yeni ekip",
+        "pending": "Bekleyen ödüller",
+        "pendingChange": "Ödemeler 2 iş günü içinde işlenir"
+      }
+    },
+    "howItWorks": {
+      "title": "Nasıl çalışır",
+      "create": {
+        "title": "Bağlantınızı oluşturun",
+        "description": "Silence AI panonuzda benzersiz bir yönlendirme bağlantısı veya promosyon kodu oluşturun."
+      },
+      "share": {
+        "title": "Paylaşın",
+        "description": "Ekipleri e-posta, LinkedIn ve topluluklar üzerinden davet edin. Performansı gerçek zamanlı izleyin."
+      },
+      "earn": {
+        "title": "Kazanın",
+        "description": "Yönlendirdiğiniz müşteriler Silence AI korumasını etkinleştirir etmez komisyon alın."
+      }
+    },
+    "commission": {
+      "heading": "Bakiye ödülleri",
+      "highlight": {
+        "label": "Ortakların neden sevdiği"
+      },
+      "reward": {
+        "title": "Her bakiye yüklemesine %10 ödül",
+        "description": "Davet ettiğiniz ekip Silence AI cüzdanını doldurduğunda net tutarın %10'u anında size aktarılır."
+      },
+      "settlement": {
+        "title": "Gerçek zamanlı muhasebe",
+        "description": "Ödüller işlem tamamlandıktan sonra bir dakika içinde ortak bakiyenize yansır—manuel onay kuyruğu yok."
+      },
+      "withdrawal": {
+        "title": "Ödemeler 2 iş gününde işlenir",
+        "description": "Çekim talepleri otomatik olarak incelenir ve iki iş günü içinde banka hesabınıza ulaşır."
+      },
+      "sample": {
+        "label": "Yükleme örnekleri",
+        "caption": "Her yükleme ile ortak gelirleri artar—seviye sıfırlaması veya ürün eşlemesi gerekmez.",
+        "topup": "$250 yükleme → $25 ödül",
+        "topupHigher": "$1,000 yükleme → $100 ödül"
+      },
+      "note": "Komisyon, ödeme işleme ücretleri düşüldükten sonra net tutar üzerinden hesaplanır."
+    },
+    "faq": {
+      "title": "Sıkça sorulan sorular",
+      "payments": {
+        "question": "Ödemeleri nasıl alırım?",
+        "answer": "Profilinize VISA veya Mastercard numaranızı ekleyin. Ödemeler doğrudan bu karta aktarılabilir."
+      },
+      "discounts": {
+        "question": "Yönlendirilen müşteriler indirim alır mı?",
+        "answer": "Hayır. Yönlendirilen müşteriler alışverişlerinde indirim almaz; yalnızca ortak, başarılı yönlendirmeler için komisyon kazanır."
+      },
+      "statistics": {
+        "question": "Yönlendirme istatistiklerimi ne zaman görürüm?",
+        "answer": "Bir kullanıcı promosyon kodunuzu veya bağlantınızı kullanarak kaydolduğunda, e-postası ve ilgili ödül panelinizde görünür."
+      }
+    },
+    "termsAff": {
+      "label": "Ortaklık Programı",
+      "title": "Ortaklık Hizmet Şartları",
+      "gitServer": {
+        "title": "Git depo sunucusu",
+        "tag": "Kendi barındırılan sürüm kontrolü"
+      },
+      "analyzer": {
+        "title": "Güvenlik analizörü",
+        "tag": "Yerel kod tarama motoru"
+      },
+      "vulnDb": {
+        "title": "Zafiyet veritabanı",
+        "tag": "İndirilen güvenlik yamaları"
+      },
+      "intro": "Bu şartlar, Silence AI ortaklık programına katılan iş ortaklarına ödüllerin nasıl verildiğini ve ödendiğini açıklar.",
+      "meta": {
+        "effective": "Yürürlük tarihi: 10 Kasım 2024",
+        "lastUpdated": "Son güncelleme: 10 Kasım 2024"
+      },
+      "sections": {
+        "overview": {
+          "title": "1. Program Özeti",
+          "body1": "1.1 Sözleşmenin Kapsamı: Bu Ortaklık Hizmet Şartları (\"Şartlar\"), Silence AI LLC tarafından yürütülen Silence AI ortaklık programına katılımınızı düzenler. Bu Şartlar, ortak olarak kaydolan gerçek veya tüzel kişiyi ve gerekiyorsa onun adına hareket ediyorsanız işvereninizi/organizasyonunuzu kapsar.",
+          "body2": "1.2 Program Özeti: Bu programda, yönlendirdiğiniz müşteriler AI-CSD 1 ürününü satın aldığında veya bakiyelerini doldurduğunda komisyon bazlı ödül kazanırsınız. Ortaklık programı katılımı, genel Silence AI Hizmet Şartlarına uyumu da gerektirir."
+        },
+        "eligibility": {
+          "title": "2. İş Ortağı Uygunluğu",
+          "item1": "Doğru iş ve ödeme bilgileriyle aktif bir Silence AI ortak hesabı tutmalısınız.",
+          "item2": "Yönlendirmeler, sizin linkiniz veya promosyon kodunuz üzerinden kayıtı tamamlamalıdır.",
+          "item3": "Sahte, kendi kendini yönlendiren veya yasalara aykırı hesaplar ödül alamaz."
+        },
+        "commission": {
+          "title": "3. Komisyon Yapısı",
+          "body1": "Davetinizle kayıtlı hesapların yaptığı her bakiye yüklemesinden %10 ödül kazanırsınız.",
+          "body2": "Komisyon, ödeme işlem ücretleri düşüldükten sonra net tutar üzerinden hesaplanır."
+        },
+        "rewardPosting": {
+          "title": "4. Ödül İşleme",
+          "body1": "İşlem başarılı olduktan sonraki bir dakika içinde ödüller ortak bakiyenize yansır; manuel onay kuyruğu yoktur.",
+          "body2": "Bildirimler, müşteri kimliği ve yükleme tutarıyla birlikte ortak panelinizde görünür."
+        },
+        "withdrawals": {
+          "title": "5. Ödemeler",
+          "body1": "Çekim talepleri iki iş günü içinde işlenir ve kayıtlı ödeme yöntemine yapılır.",
+          "body2": "Minimum çekim eşikleri ve desteklenen ağlar ortak panelinde yayımlanır."
+        },
+        "productScope": {
+          "title": "6. Ürün Kapsamı",
+          "body1": "Ödüller yalnızca AI-CSD 1 ürünü için verilir. Yazılı olarak belirtilmedikçe diğer Silence AI hizmetleri hariçtir.",
+          "body2": "Yeni ürünler eklendiğinde Silence AI bu Şartlarda güncel listeyi yayımlar."
+        },
+        "compliance": {
+          "title": "7. Davranış ve Uyumluluk",
+          "item1": "İş ortakları Silence AI'ı doğru yansıtmalı, özellikler veya fiyatlandırma hakkında yanıltıcı iddialardan kaçınmalıdır.",
+          "item2": "Pazarlama iletişimi ilgili anti-spam, gizlilik ve reklam mevzuatına uymalıdır.",
+          "item3": "Silence AI bu yükümlülükleri ihlal eden veya markaya zarar veren hesapları askıya alabilir/sonlandırabilir."
+        },
+        "changes": {
+          "title": "8. Değişiklikler ve İletişim",
+          "body1": "Silence AI, programdaki veya yürürlükteki hukuktaki değişiklikleri yansıtmak için bu şartları güncelleyebilir. Yayınlandığında yürürlüğe girer.",
+          "body2": "Ortaklık programı soruları için info@silenceai.net adresine yazabilirsiniz."
+        }
+      }
+    },
+    "balanceRewards": {
+      "lampTitle": "Nagrody salda"
+    }
+  },
+  "hero": {
+    "headline": "AI-CSD 1: siber güvenlik artık pahalı ve karmaşık değil",
+    "subheading": "Birleşik bir yapay zekâ siber güvenlik platformu şunları bir araya getirir:",
+    "playgroundHeading": "Yapay zekâ destekli Siber Güvenlik Departmanı",
+    "bullets": {
+      "web": "Gerçek zamanlı web saldırı koruması",
+      "email": "E-posta saldırı koruması",
+      "vulnerability": "Zafiyet bulucu"
+    },
+    "buttons": {
+      "connect": "4 dakikada bağlanın",
+      "tour": "90 saniyelik turu izle"
+    },
+    "tooltips": {
+      "web": {
+        "title": "Web saldırı koruması",
+        "content": "Sistem, iş mantığı zafiyetleri hariç DDoS, SQLi vb. tüm web saldırı türlerine karşı korur."
+      },
+      "email": {
+        "title": "E-posta saldırı koruması",
+        "content": "Sistem; kimlik avı, kötü amaçlı ekler, tehlikeli bağlantılar vb. tüm e-posta saldırı türlerine karşı korur."
+      },
+      "vulnerability": {
+        "title": "Zafiyet bulucu",
+        "content": "Sistem uygulama kodundaki zafiyetleri ve siteniz/API'niz ile dinamik etkileşim yoluyla açıkları tespit eder; ayrıca istihbarat motorundan yararlanır"
+      }
+    }
+  },
+  "playground": {
+    "options": {
+      "globeShield": "Web güvenliği ve trafik yönetimi",
+      "emailSecurity": "E-posta Güvenliği"
+    }
+  },
+  "cookie": {
+    "title": "Teknik çerez bildirimi",
+    "description": "Bu site, dil tercihinizi hatırlamak ve sonraki ziyaretinizde bu bildirimin yeniden görünmesini engellemek için yalnızca tarafımızca ayarlanan teknik çerezleri kullanır. Takip amaçlı veya üçüncü taraf çerezler kullanılmaz.",
+    "more": "Daha fazlası için",
+    "link": "Çerez Politikamız",
+    "ok": "Tamam"
+  },
+  "pricing": {
+    "title": "Fiyatlandırma",
+    "subtitle": "Ürününüzle birlikte ölçeklenen mobil uyumlu planlar.",
+    "tooltips": {
+      "cmcGlobal": {
+        "title": "Küresel Trafik İzleme ile CMC",
+        "content": "CMC (Merkezi Yönetim Konsolu), diğer güvenlik sistemleriyle sorunsuz bir şekilde bütünleşir ve Global Shield ve Security Tester ile aynı alan adı ve arayüz altında mevcuttur, bu da ağ güvenliğini ölçekli bir şekilde yönetmenizi sağlar. Buradan ülkeleri kara listeye alabilir, portları kapatabilir ve diğer işlemleri gerçekleştirebilirsiniz."
+      },
+      "countryBlacklisting": {
+        "title": "Ülke Kara Listeye Alma",
+        "content": "Belirli bir ülkeden gelen tüm trafiği engelleyin"
+      },
+      "portManagement": {
+        "title": "Port Yönetimi",
+        "content": "Saldırı yüzeyini azaltmak için kullanılmayan portları kapatın. Örneğin, SSH erişimi gerekmediğinde 22. portun devre dışı bırakılması. Sistemin tehlikeye girme riskini en aza indirmek için."
+      },
+      "cmcEmail": {
+        "title": "Gelişmiş E-posta Akışı Görselleştirici ile CMC",
+        "content": "CMC (Merkezi Yönetim Konsolu), diğer güvenlik sistemleriyle sorunsuz bir şekilde bütünleşir ve Global Shield ve Security Tester ile aynı alan adı ve arayüz altında mevcuttur. Bu konsol içinde, eklediğiniz tüm kurumsal kullanıcılar için e-posta akışlarını izleyebilir ve e-postaları inceleyebilirsiniz."
+      },
+      "dynamicVulnerability": {
+        "title": "Dinamik Güvenlik Açığı Bulucu",
+        "content": "İstihbarat sistemi aracılığıyla güvenlik açığı bulma yolu dahil olmak üzere, web sitenizle etkileşime girerek güvenlik açıklarını tespit eder."
+      },
+      "codeAnalyzer": {
+        "title": "Kod Analizcisi",
+        "content": "Bir VS Code eklentisi aracılığıyla güvenlik sorunlarını doğrudan kod tabanınızda tanımlar ve dağıtımdan önce sorunları düzeltmenize yardımcı olur."
+      },
+      "intelligenceReport": {
+        "title": "İstihbarat Raporu",
+        "content": "Açık portlar, çalışan hizmetler, alt alan adları ve eylem gerektirebilecek diğer hassas bilgiler dahil olmak üzere hedefiniz hakkında ayrıntılı bilgiler oluşturur."
+      },
+      "fullVulnerability": {
+        "title": "TAM Güvenlik Açığı Kontrolü",
+        "content": "Bir TAM güvenlik açığı kontrolü, hem dinamik bir güvenlik açığı taramasını hem de kod tabanı güvenlik açığı taramasını içerir."
+      }
+    },
+    "aiSoc": {
+      "tabs": {
+        "email": "E-posta Güvenliği",
+        "web": "Web Güvenliği"
+      },
+      "billing": {
+        "yearly": "Yıllık",
+        "monthly": "Aylık"
+      },
+      "cta": "Sistemi talep et",
+      "contactSupport": "Bizimle iletişime geçin",
+      "planTitles": {
+        "premium": "Business Premium 100",
+        "max": "Business MAX",
+        "standard": "Business Standard"
+      },
+      "features": {
+        "common": {
+          "customDomainEmail": "Kendi alan adınızda özel şirket e-postası (you@yourcompany.com)",
+          "officeSuite": "Belge, hesap tablosu, sunum ve e-posta araçlarını içeren masaüstü ve mobil ofis paketi",
+          "adminConsole": "Alan genelinde e-posta yönetimi ve toplu işlemler sunan yönetici konsolu",
+          "dnsSecuritySetup": "Yönetici konsolunda DNS üzerinden (SPF, DKIM, DMARC) e-posta güvenliği kurulumu",
+          "emailMigration": "E-posta taşıma",
+          "aiThreatProtection": "Secure, Spam, Dangerous Links, Phishing, Spoofed klasörlerine otomatik sınıflandırmalı beş katmanlı YZ destekli tehdit koruması",
+          "emailFlowVisualization": "Yönetici konsolunda tüm alan genelinde gelişmiş e-posta akışı görselleştirmesi",
+          "domainWideDeletion": "Yöneticinin alan içindeki tüm kullanıcıların e-postalarını silebilmesi"
+        },
+        "shared": {
+          "unlimitedSecurity": "Sınırsız dört katmanlı e-posta güvenliği"
+        },
+        "premium": {
+          "userLimit": "15-300 çalışanı olan işletmeler için",
+          "adminLimit": "En fazla 5 yönetici",
+          "storage": "Kullanıcı başına 50 GB depolama"
+        },
+        "max": {
+          "userLimit": "Sınırsız sayıda kullanıcı",
+          "adminLimit": "En fazla 10 yönetici",
+          "storage": "Kullanıcı başına 200 GB depolama"
+        },
+        "standard": {
+          "userLimit": "15 veya daha az çalışanı olan işletmeler için",
+          "adminLimit": "En fazla 1 yönetici",
+          "storage": "Kullanıcı başına 8 GB depolama"
+        }
+      }
+    },
+    "plans": {
+      "globalShield": {
+        "title": "Web Güvenliği ve Trafik Yönetimi",
+        "price": "$0.06/GB",
+        "description": "Limit yok\nEk ücret yok",
+        "button": "Web uygulamasını ve API'leri güvene al",
+        "features": {
+          "webProtection": "İş mantığı güvenlik açığı istismarı hariç, her türlü web saldırısına karşı koruma",
+          "ddosProtection": "Gerçek zamanlı DDoS koruması",
+          "cmc": "Küresel trafik izleme sistemli CMC",
+          "country": "Ülke kara listeye alma özelliği",
+          "port": "Port kapatma özelliği",
+          "aiManager": "AI yöneticisi: güvenlik raporlarını gösterir ve talimatlarınızı yerine getirir — bir IP adresi aralığını kara listeye almasını söyleyin, kendisi ekler",
+          "captcha": "reCAPTCHA'dan 200 kat daha optimize davranışsal CAPTCHA — AI kullanıcı davranışını izler ve yalnızca bot algılandığında Cloudflare Turnstile benzeri bir doğrulama gösterir"
+        }
+      },
+      "emailProtector": {
+        "title": "E-posta Güvenliği ve Görselleştirme",
+        "price": "$10/ay/hesap",
+        "description": "Günde 10 e-postaya kadar\nEk e-postalar: her e-posta için $0.035",
+        "button": "E-postayı Güvene Al",
+        "features": {
+          "cmcEmail": "En gelişmiş e-posta akışı görselleştiricisine sahip CMC",
+          "visibility": "CMC'de, otomatik tehdit sınıflandırması ile tüm e-posta hesaplarının gönderilen ve alınan e-postalarının tam görünürlüğü",
+          "webClient": "Güvenli WebMail istemcisi",
+          "phishing": "Kimlik avı koruması",
+          "malware": "Kötü amaçlı yazılım eki taraması",
+          "links": "Tehlikeli bağlantı tespiti",
+          "spam": "Spam filtreleme",
+          "fakeSender": "Sahte Gönderen Koruması"
+        }
+      },
+      "securityTester": {
+        "title": "Güvenlik Açığı Bulucu",
+        "price": "$25/ay",
+        "description": "Ayda 50 TAM güvenlik açığı kontrolüne kadar\nEk TAM kontroller: her biri $0.5",
+        "button": "Testi BaÅŸlat",
+        "features": {
+          "dynamic": "Dinamik güvenlik açığı bulucu",
+          "codeAnalyzer": "Kod analizcisi",
+          "reports": "Kolay anlaşılır güvenlik değerlendirme raporları",
+          "intelligence": "İstihbarat Raporu"
+        }
+      }
+    },
+    "percentMaintenance": "{percent}% yıllık bakım",
+    "planEstimate": "${value}",
+    "perYear": "yıllık (tahmini)",
+    "calculator": {
+      "subtitle": "Yıllık bakım maliyetini görmek için kaydırın"
+    }
+  },
+  "solution": {
+    "sectionTitle": "Çözümümüz",
+    "sectionSubtitle": "4 dakikada hazır ve herhangi bir BT uzmanı tarafından siber güvenlik bilgisi gerekmeksizin kullanılabilir. Gelişmiş görselleştirme ve ulaşılabilir maliyet sunuyoruz.",
+    "cards": {
+      "globalShield": {
+        "title": "Global Shield - CIA seviyesinde trafik izleme",
+        "description": "Etkileşimli 3D küremiz web trafiğinizi çarpıcı şekilde gösterir: saniyede istek sayısı, aktif kullanıcılar ve bayt cinsinden hacim.",
+        "bullets": {
+          "one": "Kolay kurulum: IP ve alan adınızı belirtin.",
+          "two": "DNS'e eklemek için temsilci IP alın.",
+          "three": "Maruziyeti sıfırlamak için portları kapatın."
+        }
+      },
+      "emailProtector": {
+        "title": "Email Protector - dünyanın ilk yapay zeka e-posta koruması",
+        "description": "AI tabanlı ilk ticari e-posta koruma sistemi. Vektör görünümü e-posta akışını zaman içinde izlemenizi ve tehditleri belirlemenizi kolaylaştırır.",
+        "bullets": {
+          "one": "Spoofing, spam, phishing ve malware'i tespit eder.",
+          "two": "Yönetici korunacak e-posta hesapları ekleyebilir.",
+          "three": "Piyasadaki en gelişmiş e-posta akışı görselleştirici."
+        }
+      },
+      "securityTester": {
+        "title": "Security Tester - yeni nesil zafiyet testi",
+        "description": "Sistem, tam kapsamlı güvenlik testleri için tek kullanımlık token (OTT) sağlar. Tarayıcı veya VS Code eklentisi üzerinden bağlanın.",
+        "bullets": {
+          "one": "CMC'de güvenlik kapsamı ve hedefi belirleyin.",
+          "two": "OTT'yi yapıştırıp kontrolü başlatın.",
+          "three": "İstihbarat destekli risk içgörüleri."
+        }
+      }
+    },
+    "cmc": {
+      "title": "Merkezi Yönetim Konsolu (CMC)",
+      "description": "Üç bileşen de tümleşik konsol üzerinden yönetilir; merkezi görselleştirme, kolay yapılandırma ve izleme ile kapsamlı güvenlik raporları sunar."
+    }
+  },
+  "insights": {
+    "items": [
+      {
+        "title": "39 saniye",
+        "description": "Her 39 saniyede bir hacker saldırısı gerçekleşiyor"
+      },
+      {
+        "title": "20 milyon DDoS saldırısı",
+        "description": "Yalnızca 2025'in ilk çeyreğinde 20,5 milyon DDoS saldırısı gerçekleşti"
+      },
+      {
+        "title": "Her gün",
+        "description": "Her gün 30.000 web sitesi hackleniyor"
+      }
+    ]
+  },
+  "floatingText": {
+    "headline": "Hacker'ların nasıl düşündüğünü keşfedin",
+    "description": "Gerçek saldırı yöntemleri ve siber tehditler üzerine günlük araştırmalarımızı takip edin"
+  },
+  "modal": {
+    "title": "Aktif geliştirme aşamasında",
+    "body": "Sistemin 10 Ekim'de başlatılması bekleniyor"
+  },
+  "lamp": {
+    "title": "Siber saldırıların gerçekliği"
+  },
+  "stickySolution": {
+    "webSecurity": {
+      "title": "Web güvenlik sistemi: Web sitesi/API 2 dakikada bağlanır",
+      "description": "DDoS, SQLi gibi web saldırılarına karşı koruma. Kullanılmadığında 22 numaralı portu kapatmak iyi bir uygulamadır."
+    },
+    "ciaMonitoring": {
+      "title": "CIA seviyesinde trafik izleme",
+      "description": "Etkileşimli 3D küre; istek, kullanıcı ve hacim bazında trafiği gösterir ve kullanıcı sayısındaki değişim geçmişini görmenizi sağlar."
+    },
+    "userGrowth": {
+      "title": "Kullanıcı büyümesine dair değerli içgörüler",
+      "description": "Kullanıcı sayısındaki değişim geçmişine göz atın"
+    },
+    "aiEmailProtection": {
+      "title": "İlk yapay zeka e-posta koruması: Ağ 2 dakikada hazır",
+      "description": "CMC, yöneticiye eklenen hesapların tüm giden/gelen e-postalarını tam olarak gösterir ve spoofing, spam, phishing, tehlikeli bağlantılar ve malware gibi tehditleri otomatik sınıflandırır."
+    },
+    "emailVisualization": {
+      "title": "Gönderilen ve alınan e-postaların görselleştirilmesi",
+      "description": "CMC, piyasadaki en gelişmiş e-posta akışı görselleştiricisine sahiptir"
+    },
+    "secureWebmail": {
+      "title": "Güvenli web posta istemcisi",
+      "description": "Yönetici tarafından eklenen hesaplar için, spoofing, spam, phishing ve malware'i tespit eden son derece güvenli bir web istemcisi bulunur."
+    }
+  },
+  "footer": {
+    "contactLabel": "İletişim:",
+    "contactValue": "info@silenceai.net",
+    "addressLabel": "Adres:",
+    "addressValue": "Dubai, Birleşik Arap Emirlikleri",
+    "links": {
+      "termsUse": "Kullanım şartları",
+      "termsService": "Hizmet şartları",
+      "privacy": "Gizlilik politikası",
+      "cookies": "Çerez politikası",
+      "affiliateTerms": "Ortaklık Hizmet Şartları"
+    },
+    "copyright": "© {year} Silence AI. Tüm hakları saklıdır."
+  },
+  "secureDevelopment": {
+    "hero": {
+      "badge": "SLNC-env · Güvenli Geliştirme Ortamı",
+      "title": "Güvenli ve özel kodla sistemler oluşturun",
+      "description": "Kodun kurumsal ağınızdan asla çıkmadığı, işletmeler için özel geliştirme ortamı. Aynı zamanda en son yapay zeka destekli teknolojiyi sunar",
+      "requestSystem": "Sistem Talep Et"
+    },
+    "components": {
+      "title": "Her şey içeride kalır",
+      "subtitle": "Üç bileşen, bir kapalı döngü",
+      "description": "Kod, prompt'lar ve derlemeler ağınızdan asla çıkmaz. SLNC-env, bulut sağlayıcıları, devlet ekipleri ve endüstriyel tesisler için yapay zeka yardımını, incelemeleri ve teslimatı özel tutar.",
+      "sithub": {
+        "title": "Sithub Sunucusu",
+        "tag": "Yerel sürüm kontrolü"
+      },
+      "llm": {
+        "title": "LLM Sunucusu (Qwen-Code)",
+        "tag": "Yerel zeka"
+      },
+      "ide": {
+        "title": "Yerel Copilot ile IDE",
+        "tag": "Cursor seviyesinde deneyim"
+      },
+      "staysOnPrem": "Yerelde kalır. Çıkış yok.",
+      "gitServer": {
+        "title": "Git Repository Server",
+        "tag": "Self-hosted"
+      },
+      "analyzer": {
+        "title": "Security Analyzer",
+        "tag": "Local scanning"
+      },
+      "vulnDb": {
+        "title": "Vulnerability Database",
+        "tag": "Synced daily"
+      },
+      "onPremNotice": "Stays on-prem. No egress."
+    },
+    "timeline": {
+      "title": "Neden izole ve kontrol edilmiş kod önemlidir",
+      "subtitle": "Son uyarılar",
+      "incident": {
+        "title": "Kritik olay — sızdırılan kod",
+        "heading": "DeepSeek sızıntısı kaynak kodu ve prompt'ları açık internete koydu",
+        "description": "Çıkarım ve taramayı yerelde tutun. Harici model çıkışı yok. Varsayılan denetim izleri.",
+        "seePlan": "Kontrol planını görüntüle"
+      },
+      "stuxnet": {
+        "year": "2010",
+        "attack": "Stuxnet",
+        "target": "Natanz zenginleÅŸtirme tesisi",
+        "impact": "~1.000 santrifüj imha edildi",
+        "severity": "Kritik"
+      },
+      "blackEnergy": {
+        "year": "2015",
+        "attack": "BlackEnergy",
+        "target": "Ukrayna enerji ÅŸebekesi",
+        "impact": "230 bin müşteri elektriksiz kaldı",
+        "severity": "Yüksek"
+      },
+      "triton": {
+        "year": "2017",
+        "attack": "TRITON",
+        "target": "Suudi petrokimya tesisi",
+        "impact": "Güvenlik sistemleri devre dışı",
+        "severity": "Kritik"
+      },
+      "colonialPipeline": {
+        "year": "2021",
+        "attack": "Colonial Pipeline",
+        "target": "ABD yakıt boru hattı",
+        "impact": "6 günlük yakıt paralizisi",
+        "severity": "Yüksek"
+      },
+      "pdvsa": {
+        "year": "2025",
+        "attack": "PDVSA",
+        "target": "Venezuela rafinajı",
+        "impact": "Rafineri operasyonları aksadı",
+        "severity": "Orta"
+      }
+    },
+    "analyzer": {
+      "title": "CodeQL'i geride bırakan analizör",
+      "subtitle": "Canlı güvence",
+      "features": {
+        "quality": {
+          "title": "Otomatik kod kalitesi",
+          "description": "Güvenlik kritik kod için yapı, stil ve en iyi uygulama kontrolleri"
+        },
+        "vulnerability": {
+          "title": "Zafiyet taramaları",
+          "description": "SQLi, XSS, kimlik doğrulama atlama ve güvensiz bağımlılıklar anında ortaya çıkar"
+        },
+        "secrets": {
+          "title": "Gizli anahtar koruması",
+          "description": "Anahtarlar, tokenlar ve kimlik bilgileri commit sırasında engellenir"
+        },
+        "config": {
+          "title": "Konfigürasyon güçlendirme",
+          "description": "Docker/K8s, IAM ve ağ politikaları ayrıcalık sızıntısı için taranır"
+        }
+      },
+      "beyondCodeQL": {
+        "title": "Statik sorguların kaçırdığını bulur",
+        "subtitle": "CodeQL Ötesinde",
+        "description": "Yanlış konfigürasyonları ve zafiyetli paketleri CodeQL'den hızlı bulur; sadece uyarmaz, düzeltme önerir.",
+        "points": {
+          "packages": "Paket grafini bilir ve riskli bağımlılıkları saniyeler içinde işaretler.",
+          "config": "Konfigürasyon kaymasını ve ayrıcalık artışını statik kuralların ötesinde fark eder.",
+          "patches": "Her bulgu önerilen yamayla ve sorumlusuyla gelir."
+        }
+      },
+      "visualizer": {
+        "title": "Kod analizörü iş başında",
+        "subtitle": "Görselleştirici",
+        "description": "Son taramalardan net ekran görüntüleri, yerel konsolda şık şekilde sunulur.",
+        "privateWorkspace": "Yalnızca özel çalışma alanı",
+        "andManyMore": "Ve daha fazlası...",
+        "shots": {
+          "scanOverview": {
+            "title": "Tarama özeti",
+            "description": "Kod ağınızdan çıkmadan önce sorunları önem derecesine göre görün."
+          },
+          "misconfigurations": {
+            "title": "Yanlış konfigürasyon tespiti",
+            "description": "Yapay zeka destekli analizör, kod içindeki konfigürasyon hatalarını dahi bulur."
+          },
+          "inlineDiffs": {
+            "title": "Satır içi karşılaştırmalar",
+            "description": "Önerilen yamaları güvenlik bağlamında satır içi inceleyin."
+          }
+        },
+        "frame": "SLNC-env Analyzer"
+      }
+    },
+    "industries": {
+      "title": "Düzenlenmiş, yüksek etkili sektörler için inşa edildi",
+      "subtitle": "Nereye konuşlandırıyoruz",
+      "oilGas": {
+        "title": "Petrol ve Gaz",
+        "description": "Sondaj, rafinaj, boru hattı kontrolü"
+      },
+      "energy": {
+        "title": "Enerji",
+        "description": "Şebeke, dağıtım ve EMS"
+      },
+      "nuclear": {
+        "title": "Nükleer",
+        "description": "Reaktör kontrolü ve güvenlik"
+      },
+      "manufacturing": {
+        "title": "Üretim",
+        "description": "ICS, OT ve robotik"
+      },
+      "government": {
+        "title": "Kamu",
+        "description": "Bakanlıklar, savunma, kritik kurumlar"
+      }
+    },
+    "pricing": {
+      "subtitle": "Basit ve şeffaf fiyatlandırma",
+      "title": "Bir plan seçin",
+      "limitedOffer": "Süreli teklif",
+      "priceIncreaseNotice": "Mevcut fiyatları şimdi sabitleyin! 6 ay sonra fiyatlar %30 artacak",
+      "monthlyPlan": "Aylık",
+      "monthlyDesc": "Esnek faturalama",
+      "yearlyPlan": "Yıllık",
+      "yearlyDesc": "En iyi deÄŸer",
+      "month": "ay",
+      "billedAnnually": "Yıllık faturalandırılır",
+      "doubleSavings": "2x TASARRUF",
+      "getStarted": "Başlayın",
+      "features": {
+        "fullAccess": "Platformun tamamına erişim",
+        "support": "Öncelikli destek",
+        "cancelAnytime": "İstediğiniz zaman iptal edin",
+        "priceLock": "Fiyat 12 ay boyunca sabitlenir"
+      }
+    },
+    "comingSoon": {
+      "title": "Coming Soon",
+      "message": "This feature is currently under development."
+    }
+  },
+  "pricingCta": {
+    "requestSystem": "Sistemi talep et"
+  },
+  "contactForm": {
+    "title": "Bize Ulaşın",
+    "success": "Teşekkürler! Mesajınız gönderildi. En kısa sürede iletişime geçeceğiz.",
+    "errorRequired": "Lütfen adınızı, e-postanızı ve kısa bir mesajı doldurun.",
+    "errorSend": "Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin.",
+    "placeholders": {
+      "name": "Adınız",
+      "email": "E-posta",
+      "type": "Proje Türü (isteğe bağlı)",
+      "budget": "Bütçe (isteğe bağlı)",
+      "message": "Projenizi anlatın..."
+    },
+    "submit": {
+      "idle": "Mesaj Gönder",
+      "loading": "Gönderiliyor…"
+    }
+  },
+  "consulting": {
+    "title": "Danışmanlık Anketi",
+    "searchPlaceholder": "Sorularda ara...",
+    "noResults": "Soru bulunamadı.",
+    "questions": [
+      {
+        "question": "Rekabetçi fiyatlandırma dışında şirketinizin temel değer önerisi nedir?",
+        "answer": "Güvenlik bizim temel farkımız. Geliştirme yaşam döngüsü boyunca kurumsal seviye güvenlik uygulamalarıyla yüksek güvenli sistemler kuruyoruz."
+      },
+      {
+        "question": "Şirketiniz ne zamandır faaliyet gösteriyor ve geçmişteki başarılarınız neler?",
+        "answer": "Başarılı projelerimiz arasında şunlar var: NAK (Nur Astana Kurylys) — yapay zeka destekli ekip yönetimi platformu ve Chic Flowers — büyük bir çiçek perakendecisi için uçtan uca dijital platform."
+      },
+      {
+        "question": "Teknik yetenekleriniz ve hizmet kaliteniz EPAM ve diğer rakiplerden nasıl ayrılıyor?",
+        "answer": "En büyük farkımız security-first yaklaşımımız. Güvenliği proje başlangıcından canlıya alım ve bakıma kadar entegre ediyoruz."
+      },
+      {
+        "question": "Rekabetçi fiyat sunarken kaliteyi nasıl koruyorsunuz?",
+        "answer": "Pazarın ~%15 altında fiyat sunarken, optimize operasyonlar, stratejik yetenek edinimi ve verimli proje yönetimiyle kaliteyi yüksek tutuyoruz."
+      },
+      {
+        "question": "Hangi yazılım geliştirme hizmetlerini sağlıyorsunuz?",
+        "answer": "Uçtan uca geliştirme: özel uygulamalar, yapay zeka çözümleri, siber güvenlik ürün geliştirme (Silence AI-CSD), sistem entegrasyonu, buluta geçiş ve DevOps. Ayrıca özel ürün geliştirme ve ekip genişletme sunuyoruz."
+      },
+      {
+        "question": "Hangi sektör ve alanlarda uzmanlaştınız?",
+        "answer": "İnşaat, perakende, fintech, siber güvenlik ve dijital platformlar — AI destekli ekip yönetimi, e-ticaret ve kurumsal güvenlik çözümleri dahil."
+      },
+      {
+        "question": "Hangi teknoloji yığınları ve platformlarda uzmansınız?",
+        "answer": "GO, Swift, Flutter, bulut (AWS/Azure/GCP), Docker/Kubernetes, FastAPI, JavaScript ve AI/ML çerçeveleri. Silence AI-CSD gibi kendi güvenlik araçlarımızı geliştiriyoruz."
+      },
+      {
+        "question": "Uçtan uca ürün geliştirme mi yoksa belirli hizmetler mi sunuyorsunuz?",
+        "answer": "Her ikisi de: MVP, tam döngü ürün teslimi, ekip genişletme ve siber güvenlik entegrasyonu."
+      },
+      {
+        "question": "Ekip genişletme ve özel ekip modellerini sunabiliyor musunuz?",
+        "answer": "Evet, esnek modeller sunuyoruz: ekip genişletme, özel ekipler ve proje bazlı outsourcing."
+      },
+      {
+        "question": "Geliştirme dışında danışmanlık, mimari ve tavsiye hizmetleri sağlıyor musunuz?",
+        "answer": "Evet: siber güvenlik danışmanlığı, sistem mimarisi tasarımı, teknoloji danışmanlığı ve Silence AI-CSD ile güvenlik uyumluluk değerlendirmeleri."
+      }
+    ]
+  },
+  "requestDemoModal": {
+    "title": "Demo Talep Et",
+    "name": "İsim",
+    "email": "Kurumsal E-posta",
+    "company": "Şirket Adı",
+    "placeholders": {
+      "name": "Ahmet Yılmaz",
+      "email": "ahmet@sirket.com",
+      "company": "Acme A.Åž."
+    },
+    "submit": "Talep Gönder",
+    "successTitle": "Teşekkürler!",
+    "successBody": "Demo için yakında sizinle iletişime geçeceğiz.",
+    "close": "Kapat"
+  },
+  "requestSystemModal": {
+    "title": "Sistem Talep Et",
+    "name": "İsim",
+    "email": "Kurumsal E-posta",
+    "company": "Şirket Adı",
+    "placeholders": {
+      "name": "John Doe",
+      "email": "john@company.com",
+      "company": "Acme Corp"
+    },
+    "submit": "İndir",
+    "successTitle": "Talep Gönderildi!",
+    "successBody": "Teşekkürler. Sistem indirme talimatları e-postanıza gönderilecek.",
+    "close": "Kapat"
+  },
+  "policySidebar": {
+    "tableOfContents": "İçindekiler",
+    "close": "Close",
+    "topics": "Topics"
+  },
+  "notFound": {
+    "title": "Sayfa bulunamadı",
+    "description": "Her yere baktık ama bu sayfayı bulamadık.",
+    "cta": "Ana sayfaya dön"
+  },
+  "heroSection": {
+    "badge": "Üretime Hazır Yapay Zeka ve Yazılım",
+    "title": "Özel Yapay Zeka ve Yazılım Geliştirme",
+    "description": "{country} ve {market} için üretime hazır yapay zeka ajanları ve özel yazılımlar geliştiriyoruz.",
+    "country": "Kazakistan",
+    "market": "küresel pazar",
+    "startProject": "Proje BaÅŸlat",
+    "liveDemo": "Canlı Demo — YZ Ajanı",
+    "live": "Canlı",
+    "aiAgent": "YZ Ajanı v2.1",
+    "processing": "İstekler işleniyor...",
+    "active": "Aktif",
+    "userMessage": "Müşteri veri trendlerini analiz et",
+    "aiResponse": "Analiz ediliyor",
+    "tasks": {
+      "dataCollection": "Veri Toplama",
+      "aiAnalysis": "YZ Analizi",
+      "reportGeneration": "Rapor OluÅŸturma"
+    },
+    "stats": {
+      "tasks": "Görevler",
+      "success": "Başarı",
+      "speed": "Hız"
+    }
+  },
+  "whyChooseUs": {
+    "badge": "Sonuç odaklı mühendislik",
+    "title": "Neden Biz",
+    "subtitle": "Güvenen ekipler:",
+    "subtitleHighlight": "milyar dolarlık kuruluşlar",
+    "subtitleTail": "— ve startup hızında teslimat.",
+    "learnMore": "Daha fazla bilgi",
+    "logos": {
+      "kmg": "KazMunayGas",
+      "nak": "Nur Astana Kurylys"
+    },
+    "features": {
+      "fast": {
+        "title": "Kurumsal Kalitede Hızlı Teslimat",
+        "description": "Kurumsal düzeyde güvenilirlik ve uyumluluğu karşılayan hızlı, yinelemeli teslimat döngüleri.",
+        "pill": "Hız + Kalite"
+      },
+      "ai": {
+        "title": "Önce Yapay Zeka Ürün Mühendisliği",
+        "description": "Prototip aşamasından üretim yapay zeka ajanlarına kadar — gerçek iş sorunlarını çözen modeller tasarlıyor, eğitiyor ve dağıtıyoruz.",
+        "pill": "YZ Mühendisliği"
+      },
+      "local": {
+        "title": "Yerel Uzmanlık, Küresel Erişim",
+        "description": "Kazakistan pazarı ve düzenlemeleri hakkında derin bilgi ile uluslararası en iyi uygulamaların birleşimi.",
+        "pill": "KZ + Küresel"
+      }
+    }
+  },
+  "servicesBlock": {
+    "badge": "Ne sunuyoruz",
+    "title": "Hizmetlerimiz",
+    "description": "Birinci sınıf arayüz, güçlü mühendislik ve hızlı teslimat — üst düzey bir marka gibi görünen ve performans gösteren bir ürünü piyasaya sürmek için ihtiyacınız olan her şey.",
+    "learnMore": "Daha fazla bilgi",
+    "learnMoreAria": "Bu hizmet hakkında daha fazla bilgi",
+    "services": {
+      "aiAgents": {
+        "title": "YZ Ajanları",
+        "description": "Destek, operasyon ve analiz için özel konuşma ve otonom ajanlar.",
+        "tag": "Otomasyon"
+      },
+      "customSoftware": {
+        "title": "Özel Yazılım",
+        "description": "İş akışlarınıza göre uyarlanmış uçtan uca web ve masaüstü uygulamaları.",
+        "tag": "İnşa"
+      },
+      "cybersecurity": {
+        "title": "Siber Güvenlik",
+        "description": "Denetimler, sızma testleri ve sürekli izleme.",
+        "tag": "Koruma"
+      },
+      "backend": {
+        "title": "Backend / DevOps",
+        "description": "Ölçeklenebilir API'ler, CI/CD süreçleri ve bulut altyapısı.",
+        "tag": "Ölçek"
+      },
+      "mobile": {
+        "title": "Mobil",
+        "description": "Yerel performans ve şık kullanıcı deneyimi sunan çapraz platform uygulamalar.",
+        "tag": "Yayınla"
+      }
+    }
+  },
+  "caseStudies": {
+    "badge": "Kanıtlanmış Etki",
+    "title": "Örnek Olaylar",
+    "subtitle": "Biz özellik teslim etmiyoruz. Biz sonuç teslim ediyoruz.",
+    "problem": "Sorun:",
+    "solution": "Çözüm:",
+    "liveImpact": "Canlı Etki",
+    "before": "Önce",
+    "after": "Sonra",
+    "buildCta": "Buna benzer bir şey oluştur →",
+    "caseStudy": "Örnek Olay",
+    "items": {
+      "nak": {
+        "title": "NAK — Ekip Yönetimi YZ",
+        "problem": "Manuel kaynak tahsisi",
+        "solution": "YZ destekli planlama ajanı",
+        "result": "+%32 üretkenlik",
+        "metricLabel": "Ekip Çıktı Endeksi"
+      },
+      "chic": {
+        "title": "Chic Flowers — E-ticaret",
+        "problem": "Düşük çevrimiçi dönüşüm",
+        "solution": "Kişiselleştirilmiş öneriler + UX yenileme",
+        "result": "+%45 çevrimiçi satış",
+        "metricLabel": "Dönüşüm Oranı Artışı"
+      },
+      "silence": {
+        "title": "Silence AI-CSD",
+        "problem": "Yüksek alarm gürültüsü",
+        "solution": "YZ tespiti ve otomatik yanıt",
+        "result": "−%68 yanlış pozitif",
+        "metricLabel": "Yanlış Alarm Hacmi"
+      }
+    }
+  },
+  "howWeWork": {
+    "title": "Çalışma Şeklimiz",
+    "subtitle": "Ultra hızlı teslimat süreci — hız için optimize edilmiştir.",
+    "steps": {
+      "discovery": {
+        "title": "KeÅŸif",
+        "desc": "Gereksinimler, paydaşlar, başarı ölçütleri."
+      },
+      "design": {
+        "title": "Tasarım",
+        "desc": "UX, mimari, prototip."
+      },
+      "poc": {
+        "title": "Kavram Kanıtı (PoC)",
+        "desc": "Ölçülebilir KPI'lar ile hızlı doğrulama."
+      },
+      "build": {
+        "title": "İnşa",
+        "desc": "Yinelemeli sprintler, otomatik testler."
+      },
+      "deploy": {
+        "title": "Dağıtım",
+        "desc": "CI/CD, izleme, güvenlik sıkılaştırma."
+      },
+      "support": {
+        "title": "Destek ve Ölçekleme",
+        "desc": "Bakım, yol haritası, sürekli iyileştirme."
+      }
+    }
+  },
+  "technologyStack": {
+    "title": "Teknoloji Yığını",
+    "subtitle": "Hız, ölçeklenebilirlik ve güzel kullanıcı deneyimleri için tasarlanmış özenle seçilmiş üretim sınıfı yığın."
+  },
+  "backToTop": {
+    "label": "Başa dön"
+  },
+  "pricingCustom": {
+    "title": "Şeffaf Fiyatlandırma",
+    "subtitle": "Ürününüzle ölçeklenen mobil öncelikli planlar.",
+    "percentMaintenance": "{percent}% yıllık bakım",
+    "planEstimate": "${value}",
+    "perYear": "yıllık (tahmini)",
+    "calculator": {
+      "title": "Proje Maliyet Hesaplayıcı",
+      "subtitle": "Yıllık bakım ücretini görmek için kaydırın",
+      "projectCost": "Proje Maliyeti:",
+      "projectValue": "${value}"
+    },
+    "plans": {
+      "basic": {
+        "name": "Temel",
+        "features": {
+          "fix": "Kritik Hata Düzeltmeleri (48s SLA)",
+          "updates": "Aylık Güncellemeler",
+          "audit": "Üç Aylık Güvenlik Denetimleri",
+          "manager": "Özel Yönetici"
+        }
+      },
+      "pro": {
+        "name": "Pro",
+        "badge": "En Popüler",
+        "features": {
+          "fix": "Kritik Hata Düzeltmeleri (24s SLA)",
+          "updates": "10 Saat Aylık Güncelleme",
+          "audit": "Aylık Güvenlik Denetimleri",
+          "manager": "Özel Yönetici"
+        }
+      },
+      "enterprise": {
+        "name": "Kurumsal",
+        "badge": "En İyi Değer",
+        "features": {
+          "fix": "Kritik Hata Düzeltmeleri (4s SLA)",
+          "updates": "Sınırsız Güncelleme + Yol Haritası",
+          "audit": "Haftalık Denetimler + Yedekleme",
+          "manager": "Özel Yönetici"
+        }
+      }
+    }
+  },
+  "home": {
+    "hero": {
+      "badge": "YZ güvenliği ve geliştirme",
+      "title": "Siber güvenlik artık",
+      "subtitle": "Güvenle inşa edin. Kendinizden emin şekilde dağıtın.",
+      "ctaPrimary": "Demo iste",
+      "ctaSecondary": "Sistemlere göz at",
+      "highlights": {
+        "coverage": "7/24 YZ destekli AI-CSD",
+        "onPrem": "On-prem, sıfır veri çıkışı",
+        "deploy": "4 dakikada güvenli dağıtım"
+      },
+      "metrics": {
+        "title": "Uyumlu ekipler için üretildi",
+        "soc": "YZ destekli AI-CSD kapsamı",
+        "egress": "Tamamı on-prem — kod, prompt, build",
+        "deployment": "ilk güvenli dağıtıma kadar",
+        "locales": "hazır dil desteği"
+      },
+      "titleHighlight": "karmaşık ya da pahalı değil"
+    },
+    "systems": {
+      "title": "Sistemler",
+      "subtitle": "Uygun aboneliği seçin: tespit için AI-CSD, kapalı geliştirme için SLNC-env.",
+      "cta": "Detayları gör",
+      "aiSoc": {
+        "title": "AI-CSD",
+        "desc": "YZ tarafından güçlendirilen ve işletilen yönetilen tespit ve müdahale sistemi. Web ve e-posta saldırılarını önlemek için kullanılır.",
+        "badge": "Abonelik"
+      },
+      "slncEnv": {
+        "title": "SLNC-env",
+        "desc": "Kodu, prompt'u ve build'i on-prem tutan kapalı geliştirme bulutu.",
+        "badge": "Abonelik"
+      },
+      "sithub": {
+        "title": "Sithub",
+        "desc": "Yerleşik güvenlik taraması olan kendi barındırılan GitHub alternatifi. Tüm depolar ve kod analizi ağınız içinde kalır.",
+        "badge": "Abonelik"
+      },
+      "supreme": {
+        "title": "Supreme",
+        "desc": "Lokalny skaner podatności kodu dla VSCode. Analizuj kod bez wysyłania go na zewnętrzne serwery.",
+        "badge": "Rozszerzenie"
+      }
+    },
+    "services": {
+      "title": "Özel geliştirme hizmetleri",
+      "subtitle": "YZ ajanları, entegrasyonlar ve ilk günden güvenlikle tam döngü yazılım teslimi.",
+      "cta": "Hizmetleri gör",
+      "cards": {
+        "agents": "Korumalar, RAG ve güvenli bağlayıcılarla üretim seviyesinde YZ ajanları.",
+        "integrations": "Yığınınız, IAM ve veri yönetişimiyle satıcıdan bağımsız entegrasyonlar.",
+        "delivery": "Güvenilirlik SLO'ları, gözlemlenebilirlik ve güvenlik incelemeleriyle tam döngü teslimat."
+      },
+      "cardsTitle": {
+        "agents": "Ajanlar",
+        "integrations": "Entegrasyonlar",
+        "delivery": "Teslimat"
+      }
+    },
+    "contact": {
+      "title": "AI-CSD ve SLNC-env'i birleştirmeye hazır mısınız?",
+      "subtitle": "Bize güvenlik ve teslimat hedeflerinizi söyleyin — doğru sistem ve hizmetleri hizalayalım.",
+      "cta": "Demo iste",
+      "ctaSecondary": "Hizmet ekibiyle konuÅŸ"
+    },
+    "resources": {
+      "title": "Öne çıkan yazılar",
+      "subtitle": "Silence AI, devlet düzeyi istihbarata sahip az sayıdaki özel şirketten biridir.",
+      "viewAll": "Tüm yazıları gör"
+    }
+  },
+  "documentation": {
+    "tabs": {
+      "web": "Web Güvenliği",
+      "email": "E-posta Güvenliği"
+    },
+    "system": {
+      "sections": "Bölümler",
+      "topics": "Konu başlıkları",
+      "tableOfContents": "İçindekiler",
+      "close": "Kapat"
+    },
+    "webSecurity": {
+      "placeholder": {
+        "badge": "Web Güvenliği",
+        "title": "Dokümantasyon yakında geliyor",
+        "description": "Web uygulamalarını yapılandırma ve koruma konusunda ayrıntılı bir rehber hazırlıyoruz. Yakında tekrar kontrol edin — materyaller kısa süre içinde yayınlanacak."
+      }
+    },
+    "emailSecurity": {
+      "title": "E-posta Güvenlik Sistemi",
+      "subtitle": "Dokümantasyon | Sürüm 1.0",
+      "description": "Kurumsal e-posta güvenlik platformunu nasıl yapılandırıp işleteceğinizi anlatır.",
+      "chapters": [
+        {
+          "id": "getting-started",
+          "title": "BaÅŸlarken",
+          "label": "BaÅŸlarken",
+          "description": "CMC Yönetici Paneli'nde ilk onboarding adımları ile etki alanı ve DNS yapılandırması.",
+          "sections": [
+            {
+              "id": "admin-setup",
+              "title": "Yöneticiler için",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Sistemi devreye almak için:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Google veya Microsoft OAuth kullanarak admin.silenceai.net adresindeki CMC Yönetici Paneli'ne giriş yapın.",
+                    "Şirket etki alanınızı kaydedin.",
+                    "DNS üzerinden etki alanı sahipliğini doğrulayın.",
+                    "Güvenlik kayıtlarını yapılandırın (SPF, DKIM, DMARC).",
+                    "Çalışanlar için e-posta hesapları oluşturun."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Yapılandırma tamamlandıktan sonra kullanıcılar webmail istemcisine erişebilir ve korumalı mesajlar gönderebilir."
+                }
+              ]
+            },
+            {
+              "id": "user-onboarding",
+              "title": "Son kullanıcılar için",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "E-postayla çalışmaya başlamak için:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Yönetici tarafından verilen kimlik bilgilerinizi alın.",
+                    "mail.silenceai.net adresine e-posta/şifre veya OAuth ile giriş yapın.",
+                    "\"Oluştur\" düğmesiyle ilk mesajınızı gönderin.",
+                    "Mesajları güvenlik seviyesine göre otomatik sınıflandıran sistem klasörlerini inceleyin."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Gelen e-postalar otomatik olarak tehditlere karşı taranır ve ilgili klasörlere yönlendirilir."
+                }
+              ]
+            },
+            {
+              "id": "add-domain",
+              "title": "Etki alanı ekleyin",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Etki alanı yönetimi CMC Yönetici Paneli'nde başlar."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "CMC Yönetici Paneli'ni açın.",
+                    "\"Etki Alanı Ekle\"ye tıklayın.",
+                    "Etki alanı adını www olmadan girin (örneğin, company.com).",
+                    "\"Ekle\"ye tıklayın."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Sistem, etki alanı sahipliğini doğrulamak için bir doğrulama belirteci üretir."
+                }
+              ]
+            },
+            {
+              "id": "verify-domain",
+              "title": "Etki alanı sahipliğini doğrulayın",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Etki alanını ekledikten sonra sahip olduğunuzu kanıtlayın."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "CMC'den TXT kaydını kopyalayın:"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "_cmc-verification.company.com TXT \"cmc-verify-abc123xyz\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Kaydı etki alanınızın DNS ayarlarına ekleyin.",
+                    "Otomatik kontrolün (5 dakikada bir) tamamlanmasını bekleyin veya \"Şimdi Kontrol Et\"e tıklayın."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Doğrulama 48 saate kadar sürebilir. Başarılı olduğunda etki alanı durumu doğrulandı olarak görünür."
+                }
+              ]
+            },
+            {
+              "id": "configure-spf",
+              "title": "SPF kaydını yapılandırın",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "SPF, etki alanınız adına e-posta göndermesine izin verilen sunucuları tanımlar."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "CMC'de \"DNS Yapılandırması\" → \"SPF\" bölümünü açın.",
+                    "Mevcut kayıtları görmek için \"Geçerli SPF'yi Kontrol Et\"e tıklayın.",
+                    "\"SPF Kaydı Oluştur\"a tıklayın.",
+                    "Önerilen kaydı kopyalayın:"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "company.com TXT \"v=spf1 include:_spf.silenceai.net -all\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Kaydı DNS'e ekleyin."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Zaten bir SPF kaydınız varsa (örneğin Gmail için), final -all ifadesinden önce bizim include değerimizi ekleyin."
+                }
+              ]
+            },
+            {
+              "id": "configure-dkim",
+              "title": "DKIM anahtarları oluşturun",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DKIM, e-postalarınıza kriptografik bir imza ekler."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "CMC'de \"DNS Yapılandırması\" → \"DKIM\" bölümünü açın.",
+                    "\"DKIM Anahtarları Oluştur\"a tıklayın.",
+                    "Sistem bir anahtar çifti oluşturur (özel anahtar sunucuda kalır, açık anahtar DNS içindir).",
+                    "DNS kaydını kopyalayın:"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "silenceai._domainkey.company.com TXT \"v=DKIM1; k=rsa; p=MIIBIjAN...\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Kaydı DNS'e ekleyin.",
+                    "Doğrulamak için \"DKIM'i Doğrula\"yı çalıştırın."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "configure-dmarc",
+              "title": "DMARC politikasını ayarlayın",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DMARC, SPF veya DKIM kontrollerinde başarısız olan iletiler için yapılacak işlemi belirler."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "CMC'de \"DNS Yapılandırması\" → \"DMARC\" bölümünü açın.",
+                    "Bir politika seçin:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "quarantine — spam klasörüne taşı (önerilir)",
+                    "reject — mesajı reddet"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "\"DMARC Kaydı Oluştur\"a tıklayın.",
+                    "Kaydı kopyalayın:"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "_dmarc.company.com TXT \"v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@silenceai.net\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Kaydı DNS'e ekleyin."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Önce quarantine ile başlayın, raporları 1-2 hafta izleyin, isterseniz ardından reject politikasına geçin."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "user-management",
+          "title": "Kullanıcı yönetimi",
+          "label": "Kullanıcı yönetimi",
+          "description": "E-posta hesaplarını oluşturma ve yönetme.",
+          "sections": [
+            {
+              "id": "create-account",
+              "title": "E-posta hesabı oluşturun",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "CMC'de \"E-posta Hesapları\" bölümünü açın.",
+                    "\"Hesap Oluştur\"a tıklayın.",
+                    "Alanları doldurun:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "E-posta: john.doe@company.com",
+                    "Ad ve soyad",
+                    "Parola (en az 8 karakter, büyük harf, küçük harf, rakam ve özel karakter)",
+                    "Depolama kotası: bir posta kutusu boyutu seçin"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "\"Oluştur\"a tıklayın."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Kullanıcı hemen webmail'e giriş yapabilir."
+                }
+              ]
+            },
+            {
+              "id": "suspend-activate",
+              "title": "Hesabı askıya alın veya yeniden etkinleştirin",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "\"E-posta Hesapları\" içinde kullanıcıyı bulun.",
+                    "Eylemler menüsünden şunlardan birini seçin:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Suspend — erişimi duraklatır (kullanıcı giriş yapamaz)",
+                    "Activate — erişimi geri yükler"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "İşlemi onaylayın."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "change-quota",
+              "title": "Depolama kotasını değiştirin",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Listede kullanıcıyı bulun.",
+                    "Eylemler menüsünden \"Kotayı Düzenle\"yi seçin.",
+                    "Yeni depolama boyutunu seçin.",
+                    "DeÄŸiÅŸiklikleri kaydedin."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Değişiklikler anında uygulanır."
+                }
+              ]
+            },
+            {
+              "id": "delete-account",
+              "title": "Hesabı silin",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Listede kullanıcıyı bulun.",
+                    "Eylemler menüsünden \"Sil\"i seçin.",
+                    "Silme işlemini onaylayın."
+                  ]
+                },
+                {
+                  "type": "callout",
+                  "intent": "warning",
+                  "content": "Uyarı: Tüm kullanıcı verileri kalıcı olarak silinir."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mail-operations",
+          "title": "E-posta iÅŸlemleri",
+          "label": "E-posta iÅŸlemleri",
+          "description": "Webmail istemcisindeki günlük işlemler.",
+          "sections": [
+            {
+              "id": "send-letter",
+              "title": "Mesaj gönderin",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Webmail'de \"Oluştur\"a tıklayın.",
+                    "Şunları doldurun:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Kime: alıcının adresi",
+                    "Konu: e-posta konusu",
+                    "Gövde: mesaj metni (zengin biçimlendirme kullanılabilir)"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Gerekirse dosya ekleyin (dosya başına en fazla 25 MB).",
+                    "\"Gönder\"e tıklayın."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Mesajlar otomatik olarak DKIM ile imzalanır ve teslim edilir."
+                }
+              ]
+            },
+            {
+              "id": "custom-folder",
+              "title": "Kurallarla özel klasör oluşturun",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Özel klasörler, tanımladığınız kurallara göre mesajları otomatik sıralar."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Kenar çubuğunda \"Klasör Oluştur\"a tıklayın.",
+                    "Bir klasör adı girin (örneğin, \"Müşteriler\").",
+                    "\"Kural Ekle\"ye tıklayın.",
+                    "Kuralı yapılandırın:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Filtre: Gönderen Etki Alanı",
+                    "Eşleştirme modu: İçerir",
+                    "DeÄŸer: client.com"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Mevcut mesajları yeniden işlemek istiyorsanız \"Mevcut e-postalara uygula\"yı etkinleştirin.",
+                    "\"Oluştur\"a tıklayın."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "*@client.com'dan gelen tüm yeni e-postalar otomatik olarak \"Müşteriler\" klasörüne taşınır."
+                }
+              ]
+            },
+            {
+              "id": "add-whitelist",
+              "title": "Göndereni beyaz listeye ekleyin",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Bir mesaj yanlışlıkla spam olarak işaretlendiyse:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "SPAM klasöründeki e-postayı açın.",
+                    "\"Spam Değil\" → \"Beyaz Listeye Ekle\"ye tıklayın.",
+                    "Şunlardan birini seçin:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Gönderen e-postasını beyaz listeye ekle",
+                    "Gönderen etki alanını beyaz listeye ekle"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "İşlemi onaylayın."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Bu gönderenin gelecekteki mesajları artık spam klasörüne gitmez."
+                }
+              ]
+            },
+            {
+              "id": "email-signature",
+              "title": "E-posta imzası ayarlayın",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Ayarlar → \"E-posta İmzası\"nı açın.",
+                    "\"İmzayı etkinleştir\"i açın.",
+                    "İmza metnini düzenleyiciye girin.",
+                    "\"Kaydet\"e tıklayın."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "İmza her giden mesaja otomatik olarak eklenir."
+                }
+              ]
+            },
+            {
+              "id": "vacation-responder",
+              "title": "Otomatik yanıt yapılandırın",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Ayarlar → \"Tatilde Otomatik Yanıt\"ı açın.",
+                    "\"Tatilde otomatik yanıtı etkinleştir\"i açın.",
+                    "Başlangıç ve bitiş tarihlerini ayarlayın.",
+                    "Otomatik yanıt metnini girin.",
+                    "Her gönderene bir kez yanıt vermek için \"Gönderene bir kez yanıtla\" seçeneğini işaretleyin.",
+                    "\"Kaydet\"e tıklayın."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Otomatik yanıtlayıcı seçilen tarihler boyunca çalışır ve süre sonunda kendiliğinden kapanır."
+                }
+              ]
+            },
+            {
+              "id": "forwarding",
+              "title": "Yönlendirmeyi yapılandırın",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Ayarlar → \"E-posta Yönlendirme\"yi açın.",
+                    "\"Yönlendirme Adresi Ekle\"ye tıklayın.",
+                    "Yönlendirilecek e-posta adresini girin.",
+                    "Bir kopya tutmak istiyorsanız \"Gelen kutusunda kopyasını sakla\"yı etkinleştirin.",
+                    "\"Kaydet\"e tıklayın."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Tüm gelen e-postalar seçilen adrese yönlendirilir."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "domain-administration",
+          "title": "Etki alanı yönetimi",
+          "label": "Etki alanı yönetimi",
+          "description": "Etki alanı için analitik ve toplu e-posta işlemleri.",
+          "sections": [
+            {
+              "id": "view-activity",
+              "title": "Etki alanı e-posta aktivitesini inceleyin",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Yöneticiler, etki alanındaki her kullanıcı için tüm mesajları görüntüleyebilir."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "CMC → \"E-posta Aktivitesi\"ni açın.",
+                    "Filtreleri kullanın:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Kullanıcıya göre",
+                    "Klasöre göre (Güvenli, Spam, Kimlik Avı)",
+                    "Tarihe göre",
+                    "Tehdit türüne göre"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Konu veya gönderen araması için arama çubuğunu kullanın."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "bulk-delete",
+              "title": "Tüm kullanıcılar için mesajları silin",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Kötü amaçlı bir mesaj tüm kullanıcılara gönderildiyse:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "\"E-posta Aktivitesi\"ni açın.",
+                    "Mesajı filtreler veya arama ile bulun.",
+                    "Silinecek mesajları seçin.",
+                    "\"Seçileni Sil\"e tıklayın.",
+                    "Toplu silmeyi onaylayın."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Mesaj, tüm kullanıcıların posta kutularından kaldırılır."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "concepts",
+          "title": "Kavramlar",
+          "label": "Kavramlar",
+          "description": "Temel platform kavramları ve güvenlik akışları.",
+          "sections": [
+            {
+              "id": "system-overview",
+              "title": "Sisteme genel bakış",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "E-posta Güvenlik Sistemi, kurumsal e-postayı siber tehditlerden koruyan bir platformdur."
+                },
+                {
+                  "type": "list",
+                  "title": "BileÅŸenler:",
+                  "items": [
+                    "CMC Yönetici Paneli — etki alanları, kullanıcılar ve DNS ayarları için yönetici konsolu.",
+                    "Webmail İstemcisi — otomatik tehdit korumasına sahip çalışan posta kutusu.",
+                    "Altyapı Hizmetleri — iletilerin işlenmesi için SMTP sunucusu ve güvenlik hattı."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "security-stack",
+              "title": "Güvenlik hattı",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Her gelen mesaj altı koruma katmanından geçer:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Katman 0: Kimlik Avı Etki Alanı Kontrolü — gönderen etki alanlarını bilinen kimlik avı veri tabanlarıyla karşılaştırır.",
+                    "Katman 1: Sahtecilik Tespiti — SPF, DKIM ve DMARC hizalamasını doğrular.",
+                    "Katman 2: Spam Tespiti — içeriği spam özellikleri için RSPAMD ile analiz eder.",
+                    "Katman 3: Bağlantı Tarayıcı — URLScan.io ile URL'leri kötü amaçlı bağlantılar için tarar.",
+                    "Katman 4: Antivirüs — ekleri Bitdefender ile inceler.",
+                    "Katman 5: YZ Kimlik Avı Tespiti — mesaj içeriğini kimlik avı sinyalleri için yapay zeka ile analiz eder."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Bir tehdit tespit edilirse işlem durur ve mesaj ilgili klasöre taşınır."
+                }
+              ]
+            },
+            {
+              "id": "system-folders",
+              "title": "Sistem klasörleri",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Mesajlar denetim sonuçlarına göre klasörlere yönlendirilir:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Filtrelenmemiş — işleme alınmadan önceki yeni e-posta (geçici).",
+                    "Güvenli — tüm kontrolleri geçen mesajlar.",
+                    "Olası Sahte — gönderen doğruluğu şüpheli.",
+                    "SPAM — spam mesajlar.",
+                    "Tehlikeli Bağlantılar — kötü amaçlı URL içeren mesajlar.",
+                    "Malware — zararlı ek içeren mesajlar.",
+                    "Olası Kimlik Avı — kimlik avı göstergeleri tespit edildi.",
+                    "Gönderilmiş — gönderilen e-postalar."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Tek bir mesaj birden fazla klasörde görünebilir (örneğin SPAM ve Olası Sahte)."
+                }
+              ]
+            },
+            {
+              "id": "custom-folders",
+              "title": "Özel klasörler",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Kullanıcılar otomatik filtreleme kurallarıyla özel klasörler oluşturabilir."
+                },
+                {
+                  "type": "list",
+                  "title": "Filtreleme kuralları:",
+                  "items": [
+                    "Gönderen etki alanına göre",
+                    "Gönderen e-posta adresine göre",
+                    "Konuya göre",
+                    "Gönderen adına göre"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "title": "Eşleşme modları:",
+                  "items": [
+                    "İçerir",
+                    "EÅŸittir",
+                    "İle başlar",
+                    "İle biter"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Kurallar mevcut postaya da uygulanabilir (geriye dönük filtreleme)."
+                }
+              ]
+            },
+            {
+              "id": "spf",
+              "title": "SPF (Sender Policy Framework)",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "SPF, etki alanı adına e-posta göndermeye yetkili sunucuları tanımlayan bir DNS kaydıdır."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Format:"
+                },
+                {
+                  "type": "code",
+                  "content": "v=spf1 include:_spf.silenceai.net -all"
+                },
+                {
+                  "type": "list",
+                  "title": "Mekanizmalar:",
+                  "items": [
+                    "include:domain — belirtilen etki alanındaki sunuculara izin verir",
+                    "ip4:x.x.x.x — belirli bir IP adresine izin verir",
+                    "-all — diğer tümünü reddeder",
+                    "~all — diğer tümünü şüpheli olarak işaretler"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "SPF kontrolü: Alıcı, gönderen IP'sinin etki alanının SPF kaydında yetkilendirildiğini doğrular. Kontrol başarısız olursa mesaj şüpheli olarak işaretlenir."
+                }
+              ]
+            },
+            {
+              "id": "dkim",
+              "title": "DKIM (DomainKeys Identified Mail)",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DKIM, mesajın etki alanı sahibi tarafından gönderildiğini ve iletim sırasında değişmediğini kanıtlayan kriptografik bir imza ekler."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Nasıl çalışır:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Gönderim sırasında sunucu mesajı özel anahtarla imzalar ve DKIM-Signature başlığını ekler.",
+                    "Alıcı, DNS'ten açık anahtarı indirir ve imzayı doğrular."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "DNS kaydı:"
+                },
+                {
+                  "type": "code",
+                  "content": "selector._domainkey.domain.com TXT \"v=DKIM1; k=rsa; p=public_key\""
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Özel anahtar sunucuda şifrelenmiş biçimde saklanır ve istemcilerle paylaşılmaz."
+                }
+              ]
+            },
+            {
+              "id": "dmarc",
+              "title": "DMARC (Domain-based Message Authentication)",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DMARC, SPF veya DKIM'den geçemeyen iletiler için uygulanacak politikayı tanımlar."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Format:"
+                },
+                {
+                  "type": "code",
+                  "content": "_dmarc.domain.com TXT \"v=DMARC1; p=quarantine; rua=mailto:reports@domain.com\""
+                },
+                {
+                  "type": "list",
+                  "title": "Parametreler:",
+                  "items": [
+                    "p=quarantine — spam klasörüne gönder",
+                    "p=reject — mesajı reddet",
+                    "p=none — yalnızca izleme",
+                    "rua= — toplu raporların gönderileceği adres"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "DMARC kontrolü: Alıcı, mesajın hizalanmış etki alanlarıyla SPF veya DKIM'den geçtiğini doğrular. Geçmezse yapılandırılan politika uygulanır."
+                }
+              ]
+            },
+            {
+              "id": "attachments",
+              "title": "Ekler ve antivirüs",
+              "body": [
+                {
+                  "type": "list",
+                  "title": "Kısıtlamalar:",
+                  "items": [
+                    "Azami dosya boyutu: 25 MB",
+                    "Tüm dosya türleri desteklenir"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Ek taraması: Her dosya Bitdefender tarafından taranır. Kötü amaçlı yazılım tespit edilirse mesaj Malware klasörüne taşınır ve ek engellenir."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Depolama: Ekler sunucuda mesaj bazında saklanır. Enfekte dosyalar karantinaya alınır."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "access-control",
+          "title": "Erişim kontrolü",
+          "label": "Erişim kontrolü",
+          "description": "Kullanıcı rolleri ve erişim koruması.",
+          "sections": [
+            {
+              "id": "user-roles",
+              "title": "Kullanıcı rolleri",
+              "body": [
+                {
+                  "type": "list",
+                  "title": "Yönetici",
+                  "items": [
+                    "CMC Yönetici Paneli'ne tam erişim",
+                    "Etki alanı ve DNS yönetimi",
+                    "Kullanıcı oluşturma ve yönetme",
+                    "Etki alanındaki tüm e-postaları görüntüleme",
+                    "Toplu e-posta iÅŸlemleri yapma"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "title": "Alt Yönetici",
+                  "items": [
+                    "Sınırlı CMC erişimi",
+                    "Kullanıcı listesini görüntüleme",
+                    "Yalnızca kendi e-postasına erişim"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "title": "Kullanıcı",
+                  "items": [
+                    "Webmail istemcisine eriÅŸim",
+                    "Kendi e-postasıyla çalışma",
+                    "Kişisel ayarları yapılandırma"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "role-assignment",
+              "title": "Rol ataması",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Otomatik yönetici: OAuth ile giriş yapan ilk kullanıcı otomatik olarak Yönetici olur."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Alt Yönetici hesapları oluşturma: Yöneticiler CMC'de \"Kullanıcı Yönetimi\" bölümünden alt hesaplar ekler."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Kullanıcı hesapları oluşturma: Yöneticiler \"E-posta Hesapları\"nda posta kutuları oluşturur; hesaplar Kullanıcı rolünü alır."
+                }
+              ]
+            },
+            {
+              "id": "authentication",
+              "title": "Kimlik doÄŸrulama",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "OAuth 2.0: Google veya Microsoft ile PKCE güvenliği kullanılarak giriş.",
+                    "E-posta/şifre: Yönetici tarafından CMC'de verilen kimlik bilgileri.",
+                    "JWT belirteçleri: erişim belirteçleri 7 gün geçerlidir ve httpOnly çerezlerde saklanır.",
+                    "Belirteç yenileme: erişim belirteçleri otomatik olarak yenilenir; yenileme belirteci süresi dolduğunda yeniden giriş gerekir."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "access-protection",
+              "title": "Erişim koruması",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "Hız sınırlaması: Tek bir IP'den 15 dakikada en fazla 5 giriş denemesi.",
+                    "Oturum yönetimi: Aktif oturumlar veritabanında saklanır ve her istekte doğrulanır.",
+                    "Denetim kaydı: Kritik yönetici ve kullanıcı eylemleri kaydedilir."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quotas-limits",
+          "title": "Kotalar ve limitler",
+          "label": "Kotalar ve limitler",
+          "description": "Depolama, gönderim ve kullanıcı kotaları.",
+          "sections": [
+            {
+              "id": "storage-quota",
+              "title": "Depolama kotası",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Her kullanıcıya bir posta kutusu kotası atanır. Kullanım %100'e ulaştığında kullanıcı e-posta gönderip alamaz."
+                }
+              ]
+            },
+            {
+              "id": "sending-limits",
+              "title": "Gönderim limitleri",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "Business Basic: kullanıcı başına günde 500 mesaj",
+                    "Business Standard: günde 1000 mesaj",
+                    "Business Premium: günde 2000 mesaj",
+                    "Enterprise: günde 10000 mesaj"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "user-limit",
+              "title": "Kullanıcı limiti",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "Business planları: 300 kullanıcıya kadar",
+                    "Enterprise planları: sınırsız kullanıcı"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pricingMicrosoft": {
+      "business": "İşletme",
+      "enterprise": "Kurumsal",
+      "withoutTeams": "Teams olmadan planlar",
+      "withTeams": "Teams'li planlar",
+      "yearly": "Yıllık",
+      "monthly": "Aylık",
+      "planHighlights": "Plan öne çıkanları",
+      "userMonth": "kullanıcı/ay",
+      "paidYearly": "yıllık ödenir",
+      "paidMonthly": "aylık ödenir",
+      "plans": {
+        "businessPremium": {
+          "title": "Silence 365 Business Max"
+        },
+        "businessStandard": {
+          "title": "Silence 365 Business Standard"
+        },
+        "businessBasic": {
+          "title": "Microsoft 365 Business Basic (no Teams)"
+        },
+        "enterpriseE3": {
+          "title": "Silence 365 Enterprise 300+"
+        },
+        "enterpriseE5": {
+          "title": "Silence 365 Enterprise 500+"
+        }
+      },
+      "features": {
+        "secureAccess300": "Sınırsız sayıda kullanıcı (kuruluş boyutuna bağlı olarak)",
+        "customDomainEmail": "Kendi alan adınızda özel şirket e-postası (you@yourcompany.com)",
+        "adminConsole": "Alan genelinde e-posta yönetimi ve toplu işlemler için yönetici konsolu",
+        "aiThreatDetection": "Otomatik e-posta sınıflandırmasıyla YZ destekli tehdit algılama",
+        "securityPipeline": "Çok katmanlı e-posta güvenlik hattı (SPF, DKIM, DMARC, spam, kötü amaçlı yazılım, phishing)",
+        "securityFolders": "E-postaların Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed klasörlerine ayrılması",
+        "linkScannerAv": "Ekler için gelişmiş bağlantı tarayıcı ve antivirüs koruması",
+        "emailFlowVisualization": "Alan/organizasyon genelinde kapsamlı filtrelerle e-posta akışı görselleştirmesi",
+        "bulkManageDelete": "Alan içindeki tüm kullanıcıların e-postalarını yönetme ve silme olanağı",
+        "customFoldersRules": "Gönderen, alan veya konuya göre otomatik filtreli özel klasörler",
+        "storage10gb": "Kullanıcı başına 10 GB güvenli posta kutusu depolaması",
+        "storage5tb": "Kullanıcı başına 5 TB güvenli posta depolaması",
+        "storage10tb": "Kullanıcı başına 10 TB güvenli posta depolaması",
+        "multiAccountSupport": "Birden fazla hesabı destekler (Gmail/Outlook entegrasyonu)",
+        "support247": "7/24 e-posta ve web desteÄŸi",
+        "fullTextSearch": "Tam metin yeteneklerine sahip e-posta araması",
+        "aiAssistedCategorization": "E-postaların güvenlik klasörlerine YZ destekli ayrılması",
+        "basicFiltering": "Temel otomatik filtre kurallı özel klasörler",
+        "prioritySupport": "Daha hızlı yanıt süreleriyle öncelikli destek",
+        "dedicatedAM": "Özel hesap yönetimi",
+        "unlimitedUsers": "Sınırsız kullanıcı desteği"
+      }
+    }
+  },
+  "supreme": {
+    "title": "Supreme",
+    "hero": {
+      "badge": "Supreme · VSCode Eklentisi",
+      "title": "Yerel Kod Güvenlik Açığı Tarayıcısı",
+      "description": "Kodu harici sunuculara göndermeden yerel olarak tarayın. Editörünüzde hızlı ve kapsamlı güvenlik açığı tespiti."
+    },
+    "video": {
+      "title": "Kurulum ve kullanım eğitimi (5 dakika)",
+      "cardTitle": "Supreme Nasıl Kullanılır",
+      "cardSubtitle": "Kurulum ve Yapılandırma Rehberi"
+    },
+    "pricing": {
+      "title": "Basit Fiyatlandırma",
+      "subtitle": "Size en uygun planı seçin",
+      "monthly": {
+        "title": "Aylık",
+        "description": "Esnek, istediÄŸiniz zaman iptal"
+      },
+      "month": "ay",
+      "subscribe": "Åžimdi abone ol",
+      "saveBadge": "%30 tasarruf",
+      "yearly": {
+        "title": "Yıllık",
+        "description": "En iyi deÄŸer"
+      },
+      "year": "yıl",
+      "perMonthApprox": "Ayda ~{value}"
+    },
+    "languages": {
+      "title": "Desteklenen Diller",
+      "subtitle": "Tüm başlıca programlama dilleri için kapsamlı güvenlik taraması"
+    },
+    "cicd": {
+      "title": "CI/CD & Container Scanning",
+      "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
+    },
+    "features": {
+      "title": "Güçlü Özellikler",
+      "subtitle": "Güvenli kod geliştirme için ihtiyacınız olan her şey",
+      "items": [
+        "Kod analizörü yerel olarak çalışır, kod harici sunuculara gönderilmez",
+        "Projede savunmasız paketleri bulur",
+        "Yanlış yapılandırmaları ve gizli anahtarları bulur",
+        "CI/CD yanlış yapılandırmalarını ve güvenlik açıklarını tarayabilir"
+      ]
+    },
+    "screenshots": [
+      {
+        "title": "Çok anlaşılır arayüz"
+      },
+      {
+        "title": "İyi yapılandırılmış güvenlik raporları"
+      },
+      {
+        "title": "Tarama geçmişi"
+      }
+    ],
+    "lightbox": {
+      "close": "Kapat",
+      "alt": "Ekran görüntüsü"
+    },
+    "landing": {
+      "hero": {
+        "headline": "Hızlı Geliştirin. Güvenli Gönderin.",
+        "subheadline": "Yapay Zeka kodu yazar. Supreme 2 onu güvence altına alır.",
+        "tagline": "74+ akıllı tarayıcı. Derin mimari düzey analiz. Dünyanın ilk MCP tabanlı kod tarayıcısı.",
+        "ctaMax": "Supreme 2 MAX'e Yükselt",
+        "ctaFree": "Supreme 2 Light ile Ücretsiz Başla"
+      },
+      "pricingLight": {
+        "name": "Supreme 2 Light",
+        "price": "Ücretsiz",
+        "subprice": "Sonsuza kadar · Kredi kartı gerekmez",
+        "features": [
+          "VSCode eklentisi",
+          "Tam proje taraması",
+          "74+ tarayıcı",
+          "Kapsamlı rapor",
+          "Yalnızca rapor iş akışı (otomatik düzeltme yok)"
+        ],
+        "cta": "Supreme 2 Light'ı Edinin"
+      },
+      "pricingMax": {
+        "name": "Supreme 2 MAX",
+        "price": "$18/ay",
+        "subprice": "$150/yıl · En İyi Değer",
+        "badge": "En İyi Değer",
+        "features": [
+          "MCP sunucu tabanlı tarayıcı",
+          "Tam proje taraması",
+          "74+ tarayıcı",
+          "Kapsamlı rapor",
+          "Otomatik düzeltme için LLM dostu rapor",
+          "Özerk güvenlik açığı düzeltme",
+          "Tehdit istihbaratı ile geliştirilmiş algılama"
+        ],
+        "cta": "Supreme 2 MAX'e Yükselt",
+        "videoLabel": "Eğitim Videosu Yer Tutucusu – Supreme 2 MAX Kurulumu"
+      },
+      "hiddenRisk": {
+        "title": "Yapay Zeka Tarafından Oluşturulan Kodun Gizli Riski",
+        "llmTitle": "LLM = kısmi görünürlük",
+        "llmItems": [
+          "Yalnızca yapıştırılan parçacıkları görür",
+          "Gizli dosyaları kaçırır",
+          "Bağımlılık zincirlerini görmezden gelir",
+          "Mimariyi taramaz",
+          "Konfigürasyonları sistematik olarak denetlemez"
+        ],
+        "supremeTitle": "Supreme 2 = tam depo taraması",
+        "diagramRepo": "Depo",
+        "diagramScanner": "Derin Tarayıcı",
+        "diagramFindings": "Tam Bulgular"
+      },
+      "meet": {
+        "title": "SUPREME 2 ile Tanışın",
+        "features": [
+          "74+ tarayıcı",
+          "Derin çok dil desteği",
+          "Mimari-farkındalıklı analiz",
+          "Paralel tarama motoru",
+          "Akıllı güvenlik açığı tespiti"
+        ]
+      },
+      "mcp": {
+        "title": "Dünyanın İlk MCP Tabanlı Kod Tarayıcısı",
+        "subtitle": "Supreme 2 MAX, LLM'nizin tam taramalar tetikleyebilmesi, yapılandırılmış JSON tüketebilmesi, kategorize edilmiş güvenlik açıklarını anlayabilmesi, güvenli şekilde yeniden yapılandırabilmesi ve düzeltmeleri yeniden doğrulayabilmesi için MCP sunucusu olarak çalışır."
+      },
+      "comparison": {
+        "title": "Supreme 2 Light ile Supreme 2 MAX Karşılaştırması",
+        "maxAdvantage": "MAX Avantajı: Ayrıntılı Tehdit İstihbaratı içerir ve LLM'lerin kullanımı için MCP Sunucusu olarak çalışır."
+      },
+      "whyLeads": {
+        "title": "Neden Supreme Pazara Öncülük Eder"
+      },
+      "llmVsSupreme": {
+        "title": "LLM'lerle güvenlik açığı/yanlış yapılandırma arama VS Supreme 2",
+        "llmTitle": "Yalnızca LLM incelemesi",
+        "llmItems": [
+          "Parçacıkları analiz eder",
+          "Konfigürasyonları kaçırır",
+          "Gizli modülleri atlar",
+          "Bağımlılık grafiklerini görmezden gelir"
+        ],
+        "supremeTitle": "Supreme 2",
+        "supremeItems": [
+          "Tüm depoyu tarar",
+          "Konfigürasyonları ayrıştırır",
+          "Bağımlılık ağaçlarını kontrol eder",
+          "Dosyalar arası desenleri algılar",
+          "Mimari analiz gerçekleştirir"
+        ]
+      },
+      "faq": {
+        "title": "Sık Sorulan Sorular",
+        "q1": "Supreme 2 hangi programlama dillerini destekler?",
+        "a1": "Supreme 2, arka uç, ön uç, bulut, betik ve dokümantasyon iş akışlarını kapsayan tüm büyük modern dilleri, yapılandırma formatlarını ve altyapı dosyalarını destekler.",
+        "a1Coverage": "41 farklı tarayıcı türü ile 100'den fazla dosya uzantısını kapsar.",
+        "q2": "Hangi tarayıcı türleri ve dosya formatları ayrıntılı olarak karşılanmaktadır?",
+        "a2Intro": "Supreme 2, tüm büyük programlama dilleri ve dosya formatlarını kapsayan 41 tarayıcı türünü destekler.",
+        "a2Total": "Toplam: 100'den fazla dosya uzantısını kapsayan 41 tarayıcı türü.",
+        "q3": "MCP nedir ve neden önemlidir?",
+        "a3": "MCP, Supreme 2 MAX'in yapılandırılmış bir güvenlik sunucusu olarak çalışmasına olanak tanır. Ham metin yerine otomatik düzeltme, yapay zeka güdümlü düzeltme, programatik yorumlama ve sürekli iyileştirme iş akışları için kategorize edilmiş JSON güvenlik açığı raporları döndürür.",
+        "q4": "Supreme 2 kodumu depoluyor mu?",
+        "a4": "Supreme 2, ortamınızda yerel olarak tarama yapar. Kodunuz hiçbir zaman tarayıcının çalıştığı bilgisayarı terk etmez. Supreme 2 Light'ın kaynak kodunu GitHub'da inceleyebilir ve kod taranırken ağ etkinliğini izleyebilirsiniz.",
+        "q5": "Ön kurulum gereksinimleri nelerdir?",
+        "a5Prefix": "Supreme 2'yi çalıştırmak için makinenizde",
+        "a5Python": "Python 3.0 veya üzeri",
+        "a5Suffix": "kurulu olmalıdır. Ayrıca Supreme'in kurulumundan önce",
+        "a5Pip": "pip",
+        "a5End": "kurulu olduÄŸundan emin olmak gerekir.",
+        "q6": "Supreme 2 başlangıç şirketleri için uygun mudur?",
+        "a6": "Evet. LLM tarafından üretilen kodla hızlı teslimat yapan yapay zeka öncelikli başlangıç ekipleri için özellikle etkilidir; depo genelinde güvenlik analizi olmadan dosyalar arası saklı riskler kolayca gözden kaçabilir.",
+        "a1ScannerTypes": "farklı tarayıcı türü",
+        "a1Across": "üzerinde",
+        "a1Extensions": "dosya uzantısı",
+        "a2Covering": "tüm önemli programlama dillerini ve dosya formatlarını kapsamaktadır."
+      }
+    }
+  },
+  "andManyMore": "Et bien plus encore...",
+  "badRequest": {
+    "title": "Geçersiz İstek",
+    "cta": "Ana Sayfaya Dön",
+    "description": "The page you are looking for could not be found or the request was invalid."
+  },
+  "countrySelect": {
+    "title": "Ülke Seç",
+    "subtitle": "Devam etmek için konumunuzu seçin",
+    "searchPlaceholder": "Ülke ara...",
+    "noResults": "Ülke bulunamadı",
+    "continue": "Devam",
+    "comingSoon": {
+      "title": "Neredeyse Hazır!",
+      "message": "Abonelik yönetimi için yönetici paneli hazır olacak",
+      "hours": "saat",
+      "notification": "Kullanılabilir olduğunda sizi bilgilendireceğiz!",
+      "back": "Geri",
+      "gotIt": "Anladım!"
+    }
+  },
+  "aiSocComparison": {
+    "sectionTitle": "Rekabet Avantajları",
+    "common": {
+      "features": "Özellikler"
+    },
+    "web": {
+      "title": "AI-CSD Web vs Geleneksel WAF Çözümleri",
+      "columns": {
+        "aiSoc": "AI-CSD Web (kullandıkça öde)",
+        "cloudflare": "Cloudflare WAF + Anti-DDoS ($20/ay)",
+        "aws": "AWS WAF (kullandıkça öde)"
+      },
+      "rows": {
+        "complexWaf": {
+          "feature": "Karmaşık saldırıları tespit eden WAF"
+        },
+        "ddos": {
+          "feature": "DDoS saldırılarına karşı koruma",
+          "cloudflare": "Bu fiyat planında zayıf"
+        },
+        "proactive": {
+          "feature": "Proaktif 7/24 koruma"
+        },
+        "monitoring": {
+          "feature": "Canlı kullanıcı, RPS ve ülkeye göre bant genişliği izleme — tam geçmiş takibiyle"
+        },
+        "setup": {
+          "feature": "Kurulum süresi",
+          "aiSoc": "2 dk (siber güvenlik bilgisi gerekmez)",
+          "cloudflare": "2 dk (siber güvenlik bilgisi gerekmez)",
+          "aws": "1 gün (siber güvenlik uzmanı gerekir)"
+        }
+      }
+    },
+    "email": {
+      "title": "AI-CSD Email vs Geleneksel E-posta Güvenliği",
+      "columns": {
+        "aiSoc": "AI-CSD Email",
+        "outlook": "Outlook/Gmail",
+        "kaspersky": "Kaspersky (bir e-posta sağlayıcısına bağlı)"
+      },
+      "rows": {
+        "viewAll": {
+          "feature": "Alan adındaki tüm e-postaları görüntüleme"
+        },
+        "delete": {
+          "feature": "Yönetici çalışanların e-postalarını silebilir"
+        },
+        "activeProtection": {
+          "feature": "Tüm e-posta saldırı türlerine karşı aktif koruma"
+        },
+        "aiManual": {
+          "feature": "E-postaları manuel olarak kontrol eden yapay zeka"
+        },
+        "setup": {
+          "feature": "Güvenli kurulum tamamlama süresi",
+          "aiSoc": "2 dk, siber güvenlik bilgisi gerekmez",
+          "outlook": "Tam güvenlik yok",
+          "kaspersky": "1-3 gün (e-posta sağlayıcısına bağlama, yalnızca siber güvenlik uzmanı yapabilir)"
+        }
+      }
+    }
+  },
+  "aiSocValueSection": {
+    "title": "Neden AI-CSD",
+    "subtitle": "AI-CSD, kurumsal düzey siber güvenliği her şirket için erişilebilir hale getirir. Korumanızı dakikalar içinde devreye alın ve web ile e-posta güvenliğini tek bir platformdan yönetin.",
+    "features": {
+      "deploy": {
+        "title": "Dakikalar içinde kurulum",
+        "description": "Karmaşık yapılandırma olmadan web ve e-posta korumasını 4 dakikadan kısa sürede kurun."
+      },
+      "ai": {
+        "title": "Yapay zeka destekli analiz",
+        "description": "Gelişmiş yapay zeka, trafiği, e-postaları ve tehditleri gerçek zamanlı olarak sürekli analiz eder."
+      },
+      "visualization": {
+        "title": "Gelişmiş görselleştirme",
+        "description": "Web trafiğini ve e-posta akışlarını gelişmiş bir görsel arayüzle izleyin."
+      },
+      "affordable": {
+        "title": "Uygun maliyetli güvenlik",
+        "description": "Geleneksel siber güvenlik sistemlerinin maliyeti olmadan kurumsal düzeyde koruma."
+      }
+    }
+  },
+  "aiSocInsights": {
+    "title": "GÜNÜMÜZDE SİBER GÜVENLİK SORUNU",
+    "subtitle": "Modern siber tehditler, çoğu şirketin yanıt verebileceğinden daha hızlı büyüyor.",
+    "items": [
+      {
+        "stat": "Her 39 saniyede",
+        "suffix": "bir hacker saldırısı gerçekleşiyor",
+        "description": "Küresel siber saldırılar her yıl artıyor ve her ölçekteki işletmeyi hedef alıyor."
+      },
+      {
+        "stat": "20,5 milyon",
+        "suffix": "Q1 2025'te DDoS saldırısı",
+        "description": "Büyük trafik seli, web sitelerini ve API'leri dakikalar içinde çevrimdışı bırakabilir."
+      },
+      {
+        "stat": "30.000",
+        "suffix": "web sitesi her gün hackleniyor",
+        "description": "Startup'lardan büyük işletmelere kadar web altyapısı sürekli bir hedef olmaya devam ediyor."
+      }
+    ]
+  },
+  "aiSocPricing": {
+    "intro": "AI-CSD, bağımsız siber güvenlik sistemlerinden oluşan bir seridir",
+    "emailDescription": "Email Security, kurumsal iletişiminiz için koruyucu bir kalkan görevi görür. Gelen ve giden mesajları filtreleyerek phishing girişimlerini, spoofing saldırılarını ve kötü amaçlı bağlantıları kullanıcılarınıza ulaşmadan etkisiz hale getirir; böylece iş yazışmalarınızın bütünlüğünü korur.",
+    "webDescription": "Web Security, trafik desenlerini gerçek zamanlı analiz ederek dijital altyapınızı korur. Web sitelerini ve API'leri yaygın güvenlik açıklarına, DDoS saldırılarına ve yetkisiz erişime karşı savunur; performansı etkilemeden ağ etkinliğine derin görünürlük sağlar."
+  },
+  "aiSocFaq": {
+    "title": "Sık Sorulan Sorular",
+    "items": [
+      {
+        "question": "AI-CSD yalnızca bir güvenlik motoru mu, yoksa tam bir e-posta platformu mu?",
+        "response": "AI-CSD, kuruluşunuzun e-posta yönetimine bağlı olarak iki şekilde kullanılabilir.\n\n1️⃣ Bağımsız güvenli e-posta platformu olarak\n\nAI-CSD, Gmail veya Outlook benzeri birincil e-posta sistemi olarak çalışabilir; kendi posta sunucusu altyapısı, güvenli webmail arayüzü ve yönetim konsolunu içerir.\n\n2️⃣ Mevcut e-posta sistemleri için AI güvenlik katmanı olarak\n\nAI-CSD, mevcut Gmail/Outlook ortamlarının yanında ek güvenlik katmanı olarak da çalışır. Mevcut sağlayıcı korunurken AI-CSD trafik analiz ederek phishing, spoofing, kötü amaçlı bağlantılar ve diğer tehditlere karşı korur."
+      },
+      {
+        "question": "Mevcut Gmail veya Outlook ortamlarıyla birlikte kullanılabilir mi?",
+        "response": "Evet. Gmail veya Outlook'u ana sağlayıcı olarak kullanmaya devam ederken AI-CSD'u ek güvenlik katmanı olarak çalıştırabilirsiniz."
+      },
+      {
+        "question": "AI-CSD birincil e-posta altyapısı olarak çalıştığında ne olur?",
+        "response": "Bu modda AI-CSD, güvenli webmail, alan adı düzeyinde yönetim kontrolleri ve tam e-posta akışına gömülü tehdit koruması sunar."
+      },
+      {
+        "question": "Yöneticiler kurumsal e-posta hesaplarını oluşturup yönetebilir mi?",
+        "response": "Evet. Yöneticiler hesap oluşturup yönetebilir, alan adı genelinde e-posta etkinliğini izleyebilir ve gerektiğinde e-postaları silebilir."
+      },
+      {
+        "question": "Mevcut kurumsal e-posta hesapları AI-CSD'a bağlanabilir mi?",
+        "response": "Evet. Mevcut Gmail/Outlook kurumsal hesapları AI-CSD'a bağlanabilir; böylece sağlayıcıyı değiştirmeden koruma katmanı eklenir."
+      },
+      {
+        "question": "Güvenlik önceden yapılandırılmış mı, yoksa manuel kurulum gerekir mi?",
+        "response": "AI-CSD önceden yapılandırılmış, AI destekli bir sistemdir. Talimatlar sayfasına göre minimum kurulumla yerleşik koruma sağlar."
+      },
+      {
+        "question": "E-posta ve web filtrelemenin ötesinde hangi gelişmiş tehditler tespit edilir?",
+        "response": "AI-CSD, phishing bağlamı, spoofing desenleri, kötü amaçlı bağlantılar, zararlı ekler ve e-posta/web trafiğindeki şüpheli davranışları tespit eder."
+      },
+      {
+        "question": "AI-CSD saldırıları önceden engellemek için tehdit istihbaratı kullanıyor mu?",
+        "response": "Evet. AI-CSD, bilinen kötü amaçlı altyapıyı korunan sistemlere ulaşmadan engellemek için tehdit istihbaratı akışlarını kullanır."
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+# Silence AI - System Information
+
+This is the presentational website of Silence AI, a cybersecurity company. 
+Please note that this website has no backend on it and serves static content supported in multiple different languages.
+
+## Core Products
+
+### AI-SOC (AI-Powered Security Operations Center)
+AI-SOC makes enterprise-level cybersecurity accessible to any company. **Importantly, AI-SOC can completely replace the cybersecurity department in Small and Medium size businesses. To be exact, it is the perfect solution for those companies who only have the website and the email network, and nothing else.**
+
+**Web Protection Features**
+* AI-SOC Web protects against complex web attacks and DDoS attacks.
+* Offers proactive 24/7 protection and advanced visualization of live monitoring (RPS, bandwidth, users by country).
+* Can be securely set up and deployed in under 2 minutes without complex configuration or any cybersecurity knowledge needed.
+
+**Email Protection Features**
+* Provides active protection against all types of email attacks.
+* Administrators have the ability to view all emails across the domain and the ability to delete employees' emails.
+* Built-in AI that manually checks the emails for threat detection.
+* Secure setup completion time is just 2 minutes, with no cybersecurity knowledge needed.
+
+### Supreme 2
+Supreme 2 is the world's first MCP-based code security scanner. It enables LLMs to trigger full scans, consume structured JSON reports, understand categorized vulnerabilities, securely refactor, and re-validate fixes. 
+
+**Key Highlights**
+* **Supreme 2 Light (Free):** VSCode extension with full project repository scanning, 74+ intelligent scanners, and a comprehensive report-only workflow.
+* **Supreme 2 MAX ($18/mo):** MCP server-based scanner that provides an LLM-friendly report for auto-remediation, autonomous vulnerability fixing, and enhanced detection via threat intelligence.
+* Scanning is entirely local; your code never leaves your computer.
+* Supports over 100+ file extensions globally covering Python, JavaScript, TypeScript, Go, Java, C#, Rust, and more across Backend, JVM, Mobile, and Infrastructure as Code workflows.

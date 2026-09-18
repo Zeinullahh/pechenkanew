@@ -1,0 +1,2445 @@
+{
+  "aiSocModal": {
+    "title": "管理控制台",
+    "emailSecurity": "登录/注册电子邮件安全",
+    "webSecurity": "登录/注册网络安全",
+    "getOnlyOffice": "获取 OnlyOffice"
+  },
+  "emailSecurityModal": {
+    "title": "电子邮件安全",
+    "subtitle": "选择您想要访问账户的方式",
+    "webmail": {
+      "title": "Webmail",
+      "desc": "直接访问您的收件箱"
+    },
+    "admin": {
+      "title": "管理控制台",
+      "desc": "管理安全设置和用户"
+    }
+  },
+  "homeCompliance": {
+    "badge": "监管合规",
+    "title": "面向全球合规而构建",
+    "subtitle": "持续实时合规覆盖",
+    "statusLabel": "已合规",
+    "supremeOnly": "仅限 Supreme",
+    "cards": {
+      "gdpr": {
+        "desc": "世界上最严格的隐私和安全法律,规范所有欧盟居民的个人数据。为全球数据保护设立了国际标杆。"
+      },
+      "ukGdpr": {
+        "desc": "英国脱欧后保留于国内法的EU GDPR对等法规,在范围和义务上实质相同——EU GDPR合规同样适用于UK GDPR。"
+      },
+      "ccpa": {
+        "desc": "注册使用Google OAuth,会将个人资料(姓名、电子邮件、Google ID)传输至我们的服务器——这属于CCPA下的个人数据。用户随时享有查询、访问和删除账户数据的完整权利。"
+      },
+      "pipeda": {
+        "desc": "无论公司注册地在哪里,凡处理加拿大居民数据的商业组织均须遵守。随着我们全球扩张,加拿大用户的个人数据均按照最小化收集标准处理。"
+      },
+      "ksaPdpl": {
+        "desc": "由SDAIA执行的沙特个人数据保护法,规范个人数据的收集、处理及跨境传输。"
+      },
+      "uaePdpl": {
+        "desc": "规范阿联酋本土及自由区(包括DIFC和ADGM)个人数据处理的联邦数据保护法。"
+      },
+      "qatarPdpl": {
+        "desc": "由卡塔尔交通通信部管理的个人数据隐私保护法。"
+      },
+      "bahrainPdpl": {
+        "desc": "由PDPA监管、符合国际标准的巴林个人数据保护法。"
+      },
+      "kuwaitDp": {
+        "desc": "科威特电子通信与交易法,为电子服务提供商确立数据保护义务。"
+      },
+      "omanPdpl": {
+        "desc": "阿曼个人数据保护法,为数据主体确立全面权利,并为控制者和处理者规定相应义务。"
+      },
+      "privacyByDesign": {
+        "desc": "Supreme的代码扫描完全在本地机器上运行——源代码不会被发送或在外部处理。账户数据(Google OAuth资料)依据我们的隐私政策单独处理。"
+      }
+    }
+  },
+  "homePartners": {
+    "title": "客户与合作伙伴",
+    "subtitle": "这里展示的是我们部分领先客户与合作伙伴,并非完整名单。",
+    "marketCap": "市值",
+    "billion": "十亿",
+    "million": "百万"
+  },
+  "supremeInstructions": {
+    "light": "轻量版",
+    "videoInstructions": "视频说明",
+    "lightVideoTitle": "Supreme Light 视频说明",
+    "openYoutube": "在 YouTube 上打开视频",
+    "maxPlaceholder": "视频占位符——完整教程即将上线。"
+  },
+  "home": {
+    "hero": {
+      "title": "网络安全不再",
+      "titleHighlight": "复杂或昂贵",
+      "subtitle": "安全构建。自信部署。"
+    },
+    "systems": {
+      "title": "系统",
+      "cta": "查看详情",
+      "aiSoc": {
+        "title": "AI-CSD",
+        "desc": "由 AI 驱动并运营的托管式检测与响应系统,用于防止 Web 和邮件攻击。",
+        "badge": "订阅"
+      },
+      "sithub": {
+        "title": "Sithub",
+        "desc": "带内置安全扫描的自托管 GitHub 替代方案。所有仓库与代码分析都保留在你的网络内。",
+        "badge": "订阅"
+      },
+      "supreme": {
+        "title": "Supreme",
+        "desc": "Lokalny skaner podatności kodu dla VSCode. Analizuj kod bez wysyłania go na zewnętrzne serwery.",
+        "badge": "Rozszerzenie"
+      }
+    },
+    "services": {
+      "title": "定制开发服务",
+      "subtitle": "AI 代理、集成与全生命周期软件交付,自第一天起就内置安全。",
+      "cta": "查看服务",
+      "cardsTitle": {
+        "agents": "代理",
+        "integrations": "集成",
+        "delivery": "交付"
+      },
+      "cards": {
+        "agents": "具备护栏、RAG 与安全连接器的生产级 AI 代理。",
+        "integrations": "与您的技术栈、IAM 与数据治理无关厂商的中立集成。",
+        "delivery": "全生命周期交付,具备可靠性 SLO、可观测性与安全评审。"
+      }
+    },
+    "resources": {
+      "title": "精选文章",
+      "subtitle": "Silence AI 是少数拥有政府级情报能力的私营公司之一。",
+      "viewAll": "查看所有文章"
+    }
+  },
+  "header": {
+    "nav": {
+      "home": "主页",
+      "services": "服务",
+      "affiliate": "联盟计划",
+      "systems": "系统",
+      "instructions": "使用指南",
+      "systemsAiSoc": "AI-CSD",
+      "systemsSithub": "Sithub",
+      "systemsSupreme": "Supreme",
+      "instructionsAiSoc": "AI-CSD",
+      "instructionsSupreme": "Supreme",
+      "main": "首页",
+      "mail": "邮件",
+      "product": "AI-CSD",
+      "secureDevelopment": "SLNC-env",
+      "developerServices": "开发者服务",
+      "systemsSlncEnv": "SLNC-env",
+      "instructionsSithub": "Sithub"
+    },
+    "cta": {
+      "contact": "联系我们",
+      "requestDemo": "预约演示",
+      "get": "获取",
+      "download": "下载"
+    },
+    "andManyMore": "还有更多...",
+    "login": "登录"
+  },
+  "footer": {
+    "copyright": "© {year} Silence AI。保留所有权利。",
+    "contactLabel": "联系方式:",
+    "contactValue": "info@silenceai.net",
+    "addressLabel": "地址:",
+    "addressValue": "迪拜，阿拉伯联合酋长国",
+    "links": {
+      "cookies": "Cookie 政策",
+      "termsUse": "使用条款",
+      "termsService": "服务条款",
+      "privacy": "隐私政策",
+      "affiliateTerms": "Affiliate Terms of Service"
+    }
+  },
+  "cookie": {
+    "title": "技术性 Cookie 提示",
+    "description": "本网站仅使用我们自己设置的第一方技术 Cookie,用于记住您的语言偏好,并确保下次访问时不再显示此提示。不使用任何跟踪或第三方 Cookie。",
+    "more": "详情请参阅我们的",
+    "link": "Cookie 政策",
+    "ok": "好的"
+  },
+  "hero": {
+    "headline": "AI-CSD 1:网络安全不再昂贵也不再复杂",
+    "playgroundHeading": "AI 驱动的网络安全部门",
+    "tooltips": {
+      "web": {
+        "title": "Web 攻击防护",
+        "content": "系统可防护所有类型的 Web 攻击(如 DDoS、SQLi 等),但不包含业务逻辑漏洞。"
+      },
+      "email": {
+        "title": "电子邮件攻击防护",
+        "content": "系统可防护所有类型的邮件攻击:钓鱼、恶意附件、危险链接等。"
+      },
+      "vulnerability": {
+        "title": "漏洞侦测",
+        "content": "系统通过分析应用代码及与网站/API 的动态交互来发现漏洞,并结合情报引擎提供更深入的发现"
+      }
+    },
+    "subheading": "一个统一的 AI 网络安全平台,集成:",
+    "bullets": {
+      "web": "实时 Web 攻击防护",
+      "email": "电子邮件攻击防护",
+      "vulnerability": "漏洞侦测"
+    },
+    "buttons": {
+      "connect": "4 分钟内完成接入",
+      "tour": "观看 90 秒演示"
+    }
+  },
+  "solution": {
+    "sectionTitle": "我们的解决方案",
+    "sectionSubtitle": "4 分钟即可上线,任何 IT 人员都能轻松使用——无需网络安全专长。我们提供高级可视化能力与可负担的价格。",
+    "cards": {
+      "globalShield": {
+        "title": "Global Shield - CIA 级别流量监控",
+        "description": "交互式 3D 地球仪以惊艳的视觉展示您的 Web 流量,包括每秒请求数、活跃用户与流量大小。",
+        "bullets": {
+          "one": "部署简单:只需填写 IP 和域名。",
+          "two": "获取代理 IP 并添加至 DNS。",
+          "three": "关闭端口,杜绝暴露面。"
+        }
+      },
+      "emailProtector": {
+        "title": "Email Protector - 全球首个 AI 邮件防护",
+        "description": "全球首个基于 AI 的商业化邮件防护系统。矢量化视图让您轻松跟踪邮件流并识别威胁。",
+        "bullets": {
+          "one": "识别伪造、垃圾、钓鱼与恶意邮件。",
+          "two": "管理员可添加需要保护的邮箱账号。",
+          "three": "业内最先进的商业邮件流可视化。"
+        }
+      },
+      "securityTester": {
+        "title": "Security Tester - 下一代漏洞测试",
+        "description": "系统提供一次性令牌(OTT)执行全覆盖安全测试,可通过浏览器或 VS Code 插件进行连接。",
+        "bullets": {
+          "one": "在 CMC 中定义测试范围与目标。",
+          "two": "粘贴 OTT 并启动安全检查。",
+          "three": "获取情报驱动的风险洞察。"
+        }
+      }
+    },
+    "cmc": {
+      "title": "集中管理控制台(CMC)",
+      "description": "三个核心组件均通过统一控制台管理,提供集中化可视化、便捷配置监控以及全面的安全报告。"
+    }
+  },
+  "stickySolution": {
+    "webSecurity": {
+      "title": "Web 安全系统:网站/API 2 分钟接入",
+      "description": "防护 DDoS、SQLi 等网络攻击。支持关闭 22 号端口等未使用端口,确保更安全的实践。"
+    },
+    "ciaMonitoring": {
+      "title": "CIA 级别流量监控",
+      "description": "交互式 3D 地球仪按请求、用户与流量展示,并可回溯用户数量变化。"
+    },
+    "userGrowth": {
+      "title": "用户增长洞察",
+      "description": "可查看用户数量变化的历史趋势"
+    },
+    "aiEmailProtection": {
+      "title": "全球首个 AI 邮件防护:邮件网络 2 分钟接入",
+      "description": "CMC 为管理员提供添加账号后所有收发邮件的全可见性,并自动分类伪造、垃圾、钓鱼、危险链接与恶意软件等威胁。"
+    },
+    "emailVisualization": {
+      "title": "邮件流可视化",
+      "description": "CMC 配备业界最先进的商业化邮件流可视化能力"
+    },
+    "secureWebmail": {
+      "title": "安全 Web 邮件客户端",
+      "description": "为管理员添加的邮箱提供最安全的 Web 客户端,可检测并分类伪造、垃圾、钓鱼与恶意邮件。"
+    }
+  },
+  "insights": {
+    "items": {
+      "0": {
+        "title": "39 ç§'",
+        "description": "平均每 39 秒就发生一次黑客攻击"
+      },
+      "1": {
+        "title": "2000 万次 DDoS 攻击",
+        "description": "仅 2025 年第一季度就发生 2050 万次 DDoS 攻击"
+      },
+      "2": {
+        "title": "每天",
+        "description": "每天有 30,000 个网站被入侵"
+      }
+    }
+  },
+  "floatingText": {
+    "headline": "洞察黑客的思维方式",
+    "description": "关注我们,每日获取真实攻击手法与网络威胁研究"
+  },
+  "lamp": {
+    "title": "网络攻击的真实面貌"
+  },
+  "pricing": {
+    "title": "定价",
+    "subtitle": "移动优先的计划,随您的产品扩展。",
+    "percentMaintenance": "{percent}% 年度维护费用",
+    "calculator": {
+      "subtitle": "拖动滑块以查看年度维护成本"
+    },
+    "tooltips": {
+      "cmcGlobal": {
+        "title": "带有全球流量监控的CMC",
+        "content": "CMC(集中管理控制台)与其他安全系统无缝集成,并且与Global Shield和Security Tester共享相同的域名和界面,允许您大规模管理网络安全。从这里,您可以将国家列入黑名单,关闭端口并执行其他操作。"
+      },
+      "countryBlacklisting": {
+        "title": "国家黑名单",
+        "content": "阻止来自特定国家的所有流量"
+      },
+      "portManagement": {
+        "title": "端口管理",
+        "content": "关闭未使用的端口以减少攻击面。例如,在不需要SSH访问时禁用端口22。以最大程度地降低系统受损的风险。"
+      },
+      "cmcEmail": {
+        "title": "带有高级邮件流可视化工具的CMC",
+        "content": "CMC(集中管理控制台)与其他安全系统无缝集成,并且与Global Shield和Security Tester共享相同的域名和界面。在此控制台内,您可以监控电子邮件流并查看您添加的所有企业用户的电子邮件。"
+      },
+      "dynamicVulnerability": {
+        "title": "动态漏洞查找器",
+        "content": "通过与您的网站交互来检测漏洞,包括通过智能系统查找漏洞的方式。"
+      },
+      "codeAnalyzer": {
+        "title": "代码分析器",
+        "content": "通过VS Code插件直接在您的代码库中识别安全问题,帮助您在部署前修复问题。"
+      },
+      "intelligenceReport": {
+        "title": "情报报告",
+        "content": "生成关于您的目标的详细见解,包括开放端口、正在运行的服务、子域名以及其他可能需要采取行动的敏感信息。"
+      },
+      "fullVulnerability": {
+        "title": "全面漏洞检查",
+        "content": "全面漏洞检查包括动态漏洞扫描和代码库漏洞扫描。"
+      }
+    },
+    "aiSoc": {
+      "tabs": {
+        "email": "电子邮件防护",
+        "web": "Web 安全"
+      },
+      "billing": {
+        "yearly": "按年",
+        "monthly": "按月"
+      },
+      "cta": "申请系统",
+      "contactSupport": "联系我们",
+      "planTitles": {
+        "premium": "Business Premium 100",
+        "max": "Business MAX",
+        "standard": "Business Standard"
+      },
+      "features": {
+        "common": {
+          "customDomainEmail": "使用自有域名的企业邮箱 (you@yourcompany.com)",
+          "officeSuite": "桌面和移动办公套件:文档、表格、演示和邮件",
+          "adminConsole": "管理员控制台,可对整个域的邮箱进行管理并执行批量操作",
+          "dnsSecuritySetup": "通过 DNS(SPF、DKIM、DMARC)在管理员控制台中配置邮箱安全",
+          "emailMigration": "邮件迁移",
+          "aiThreatProtection": "五层 AI 防护并自动将邮件分类为(安全、垃圾、危险链接、钓鱼、伪造)",
+          "emailFlowVisualization": "在管理员控制台中对整个域的邮件流进行高级可视化并支持筛选",
+          "domainWideDeletion": "管理员可以删除整个域内所有用户的邮件"
+        },
+        "shared": {
+          "unlimitedSecurity": "无限四层邮箱安全防护"
+        },
+        "premium": {
+          "userLimit": "适用于 15-300 名员工的企业",
+          "adminLimit": "最多 5 名管理员",
+          "storage": "每位用户最多 50 GB 存储空间"
+        },
+        "max": {
+          "userLimit": "用户数量不限",
+          "adminLimit": "最多 10 名管理员",
+          "storage": "每位用户最多 200 GB 存储空间"
+        },
+        "standard": {
+          "userLimit": "适用于 15 名或更少员工的企业",
+          "adminLimit": "最多 1 名管理员",
+          "storage": "每位用户最多 8 GB 存储空间"
+        }
+      }
+    },
+    "planEstimate": "${value}",
+    "plans": {
+      "globalShield": {
+        "title": "Web安全与流量管理",
+        "price": "$0.06/GB",
+        "description": "无限制\n无额外费用",
+        "button": "保护Web应用和API",
+        "features": {
+          "webProtection": "防御所有类型的Web攻击,业务逻辑漏洞利用除外",
+          "ddosProtection": "实时DDoS保护",
+          "cmc": "带有全球流量监控系统的CMC",
+          "country": "国家黑名单功能",
+          "port": "关闭端口功能",
+          "aiManager": "AI管理器:显示安全报告并执行您的指令——告诉它将某个IP地址段加入黑名单,它会自行完成添加",
+          "captcha": "行为验证码,比reCAPTCHA优化200倍以上——AI跟踪用户行为,仅在检测到机器人时显示类似Cloudflare Turnstile的验证"
+        }
+      },
+      "emailProtector": {
+        "title": "电子邮件安全与可视化",
+        "price": "$10/月/账户",
+        "description": "每天最多10封电子邮件\n额外电子邮件:每封$0.035",
+        "button": "保护电子邮件",
+        "features": {
+          "cmcEmail": "带有最先进电子邮件流可视化工具的CMC",
+          "visibility": "在CMC中完全可见所有电子邮件账户的发送和接收邮件,并具有自动威胁分类",
+          "webClient": "安全WebMail客户端",
+          "phishing": "网络钓鱼保护",
+          "malware": "恶意软件附件扫描",
+          "links": "危险链接检测",
+          "spam": "垃圾邮件过滤",
+          "fakeSender": "伪造发件人保护"
+        }
+      },
+      "securityTester": {
+        "title": "漏洞查找器",
+        "price": "$25/月",
+        "description": "每月最多50次全面漏洞检查\n额外全面检查:每次$0.5",
+        "button": "开始测试",
+        "features": {
+          "dynamic": "动态漏洞查找器",
+          "codeAnalyzer": "代码分析器",
+          "reports": "易于理解的安全评估报告",
+          "intelligence": "情报报告"
+        }
+      }
+    },
+    "perYear": "每年 (估算)"
+  },
+  "pricingCustom": {
+    "title": "透明定价",
+    "perYear": "每年 (估算)",
+    "plans": {
+      "basic": {
+        "name": "基础版",
+        "features": {
+          "fix": "关键漏洞修复 (48小时 SLA)",
+          "updates": "每月更新",
+          "audit": "季度安全审计",
+          "manager": "专属经理"
+        }
+      },
+      "pro": {
+        "name": "专业版",
+        "badge": "最受欢迎",
+        "features": {
+          "fix": "关键漏洞修复 (24小时 SLA)",
+          "updates": "每月10小时更新",
+          "audit": "每月安全审计",
+          "manager": "专属经理"
+        }
+      },
+      "enterprise": {
+        "name": "企业版",
+        "badge": "最佳价值",
+        "features": {
+          "fix": "关键漏洞修复 (4小时 SLA)",
+          "updates": "无限更新 + 路线图",
+          "audit": "每周审计 + 备份",
+          "manager": "专属经理"
+        }
+      }
+    },
+    "calculator": {
+      "title": "项目成本计算器",
+      "projectCost": "项目成本:",
+      "subtitle": "滑动查看您的年度维护费用",
+      "projectValue": "${value}"
+    },
+    "subtitle": "移动优先的计划,随您的产品扩展。",
+    "percentMaintenance": "{percent}% 年度维护费用",
+    "planEstimate": "${value}"
+  },
+  "requestDemoModal": {
+    "successTitle": "谢谢!",
+    "successBody": "我们会尽快联系您安排演示。",
+    "close": "关闭",
+    "title": "申请演示",
+    "name": "姓名",
+    "email": "公司邮箱",
+    "company": "公司名称",
+    "submit": "提交申请",
+    "placeholders": {
+      "name": "王伟",
+      "email": "wang@company.com",
+      "company": "Acme 公司"
+    }
+  },
+  "affiliate": {
+    "hero": {
+      "tagline": "加入 Silence AI 联盟计划",
+      "title": "让邀请转化为收入。",
+      "subtitle": "我们在6个月内为受邀客户的所有支出提供10%的奖励。",
+      "cta": "加入合作伙伴计划",
+      "snapshot": {
+        "label": "实时快照",
+        "caption": "每 60 秒更新一次表现,确认的付款会立即同步。"
+      },
+      "earnings": "$2,940.00",
+      "growth": "+18% 相比上月",
+      "metric": {
+        "conversion": "激活数",
+        "conversionChange": "本月新增 24 个团队",
+        "pending": "待发放奖励",
+        "pendingChange": "提现将在 2 个工作日内处理"
+      },
+      "graph": {
+        "label": "收益趋势",
+        "title": "推广收入增长",
+        "window": "最近 30 天",
+        "label0": "第 1 周",
+        "label1": "第 2 周",
+        "label2": "第 3 周",
+        "label3": "第 4 周",
+        "label4": "第 5 周",
+        "label5": "第 6 周",
+        "label6": "今天"
+      }
+    },
+    "howItWorks": {
+      "title": "运作方式",
+      "create": {
+        "title": "创建专属链接",
+        "description": "在 Silence AI 控制台生成专属推广链接或优惠码。"
+      },
+      "share": {
+        "title": "分享",
+        "description": "通过邮件、LinkedIn 与社区邀请团队,并实时跟踪表现。"
+      },
+      "earn": {
+        "title": "赚取佣金",
+        "description": "当被推荐客户激活 Silence AI 保护后立即获得佣金。"
+      }
+    },
+    "balanceRewards": {
+      "lampTitle": "Nagrody salda"
+    },
+    "commission": {
+      "highlight": {
+        "label": "合作伙伴喜爱的理由"
+      },
+      "reward": {
+        "title": "每笔余额充值奖励 10%",
+        "description": "受邀团队为 Silence AI 钱包充值时,净额的 10% 会即时返还给你。"
+      },
+      "settlement": {
+        "title": "实时账本结算",
+        "description": "交易完成后一分钟内奖励会计入你的合作余额——无需手动审核。"
+      },
+      "withdrawal": {
+        "title": "提现将在 2 个工作日内处理",
+        "description": "提现申请将自动审核,并在两个工作日内到账你的银行账户。"
+      },
+      "sample": {
+        "label": "示例充值",
+        "caption": "每次充值都会提升合作伙伴收益——无需重置等级,也无需映射产品。",
+        "topup": "$250 充值 → $25 奖励",
+        "topupHigher": "$1,000 充值 → $100 奖励"
+      },
+      "note": "佣金按扣除支付手续费后的净充值金额计算。",
+      "heading": "余额奖励"
+    },
+    "faq": {
+      "title": "常见问题",
+      "payments": {
+        "question": "如何收款?",
+        "answer": "你可以在个人资料中添加 VISA 或 Mastercard 卡号,款项会直接打到指定的卡片。"
+      },
+      "discounts": {
+        "question": "被推荐的客户会获得折扣吗?",
+        "answer": "不会。被推荐客户不会享受折扣,只有合作伙伴能从成功推荐中获得佣金。"
+      },
+      "statistics": {
+        "question": "推荐数据何时可见?",
+        "answer": "一旦用户使用你的推广码或链接注册,他们的邮箱和相应奖励会显示在你的控制台中。"
+      }
+    },
+    "termsAff": {
+      "label": "联盟计划",
+      "title": "联盟服务条款",
+      "gitServer": {
+        "title": "Git 仓库服务器",
+        "tag": "自托管版本控制"
+      },
+      "analyzer": {
+        "title": "安全分析器",
+        "tag": "本地代码扫描引擎"
+      },
+      "vulnDb": {
+        "title": "漏洞数据库",
+        "tag": "已下载的安全补丁"
+      },
+      "intro": "以下条款说明 Silence AI 联盟计划中合作伙伴的奖励发放与支付方式。",
+      "meta": {
+        "effective": "生效日期:2024 年 11 月 10 日",
+        "lastUpdated": "最后更新:2024 年 11 月 10 日"
+      },
+      "sections": {
+        "overview": {
+          "title": "1. 计划概述",
+          "body1": "1.1 协议范围:本《联盟服务条款》(\"条款\")规范您参与由 Silence AI LLC(\"Silence AI\"\"我们\")运营的 Silence AI 联盟计划。条款适用于报名成为联盟伙伴的个人或机构(\"您\"),若您代表雇主或组织行事,同样适用。",
+          "body2": "1.2 计划摘要:在本计划中,符合条件的伙伴在推荐客户购买或充值 AI-CSD 1 产品时可获得基于佣金的奖励。参与联盟计划还须遵守 Silence AI 通用服务条款。"
+        },
+        "eligibility": {
+          "title": "2. 伙伴资格",
+          "item1": "您需保持有效的 Silence AI 联盟账户,并提供准确的业务与付款信息。",
+          "item2": "被推荐客户必须通过您提供的链接或优惠码完成注册。",
+          "item3": "被认定为欺诈、自我推荐或违反适用法律的账户无权获得奖励。"
+        },
+        "commission": {
+          "title": "3. 佣金结构",
+          "body1": "通过您邀请注册的账户每次充值,您可获得 10% 的奖励。",
+          "body2": "佣金按扣除支付手续费后的净充值金额计算。"
+        },
+        "rewardPosting": {
+          "title": "4. 奖励入账",
+          "body1": "交易成功后 1 分钟内,奖励会计入您的合作伙伴余额,无需人工审核。",
+          "body2": "通知将在联盟控制台显示客户标识与充值金额。"
+        },
+        "withdrawals": {
+          "title": "5. 提现",
+          "body1": "提现申请将在两个工作日内处理,并按备案的结算方式付款。",
+          "body2": "最低提现门槛与支持的付款网络会在联盟控制台公布。"
+        },
+        "productScope": {
+          "title": "6. 产品范围",
+          "body1": "奖励仅适用于 AI-CSD 1 产品。除非另有书面说明,其他 Silence AI 服务不在联盟计划范围内。",
+          "body2": "若有其他产品纳入范围,Silence AI 将在本条款中发布更新列表。"
+        },
+        "compliance": {
+          "title": "7. 合规与行为",
+          "item1": "伙伴必须准确展示 Silence AI,不得对功能或定价作出误导性陈述。",
+          "item2": "营销沟通需遵守相关反垃圾邮件、隐私与广告法规。",
+          "item3": "Silence AI 可暂停或终止违反义务或损害品牌的账户。"
+        },
+        "changes": {
+          "title": "8. 变更与联系",
+          "body1": "Silence AI 可能因计划或法律变化更新本联盟条款,更新内容在本页发布后立即生效。",
+          "body2": "关于联盟计划的问题可发送至 info@silenceai.net。"
+        }
+      }
+    }
+  },
+  "heroSection": {
+    "badge": "生产就绪的 AI 与软件",
+    "title": "定制 AI 与软件开发",
+    "description": "我们为{country}和{market}构建生产就绪的 AI 代理和定制软件。",
+    "country": "哈萨克斯坦",
+    "market": "全球市场",
+    "startProject": "开始项目",
+    "liveDemo": "实时演示 — AI 代理",
+    "live": "实时",
+    "aiAgent": "AI 代理 v2.1",
+    "processing": "正在处理请求...",
+    "active": "活跃",
+    "userMessage": "分析客户数据趋势",
+    "aiResponse": "正在分析",
+    "tasks": {
+      "dataCollection": "数据收集",
+      "aiAnalysis": "AI 分析",
+      "reportGeneration": "报告生成"
+    },
+    "stats": {
+      "tasks": "任务",
+      "success": "成功率",
+      "speed": "速度"
+    }
+  },
+  "whyChooseUs": {
+    "badge": "结果导向的工程",
+    "title": "为什么选择我们",
+    "subtitle": "受来自",
+    "subtitleHighlight": "数十亿美元规模企业",
+    "subtitleTail": "的团队信任 — 并以创业公司的速度交付。",
+    "learnMore": "了解更多",
+    "features": {
+      "fast": {
+        "title": "企业级质量的快速交付",
+        "description": "满足企业级可靠性和合规性的快速迭代交付周期。",
+        "pill": "速度 + 质量"
+      },
+      "ai": {
+        "title": "AI 优先的产品工程",
+        "description": "从原型到生产级 AI 代理 — 我们设计、训练并部署解决实际业务问题的模型。",
+        "pill": "AI 工程"
+      },
+      "local": {
+        "title": "本地专长,全球覆盖",
+        "description": "对哈萨克斯坦市场和法规的深刻理解,结合国际最佳实践。",
+        "pill": "KZ + 全球"
+      }
+    },
+    "logos": {
+      "kmg": "KazMunayGas",
+      "nak": "Nur Astana Kurylys"
+    }
+  },
+  "servicesBlock": {
+    "badge": "我们提供什么",
+    "title": "我们的服务",
+    "description": "优质的用户界面、强大的工程能力和快速的交付 — 您发布外观和性能均属顶级品牌所需的一切。",
+    "learnMore": "了解更多",
+    "learnMoreAria": "了解有关此服务的更多信息",
+    "services": {
+      "aiAgents": {
+        "title": "AI 代理",
+        "description": "用于支持、运营和分析的定制对话与自主代理。",
+        "tag": "自动化"
+      },
+      "customSoftware": {
+        "title": "定制软件",
+        "description": "为您工作流程量身定制的端到端 Web 和桌面应用程序。",
+        "tag": "构建"
+      },
+      "cybersecurity": {
+        "title": "网络安全",
+        "description": "审计、渗透测试和持续监控。",
+        "tag": "保护"
+      },
+      "backend": {
+        "title": "后端 / DevOps",
+        "description": "可扩展的 API、CI/CD 管道和云基础设施。",
+        "tag": "扩展"
+      },
+      "mobile": {
+        "title": "移动端",
+        "description": "具有原生性能和精致体验的跨平台应用。",
+        "tag": "发布"
+      }
+    }
+  },
+  "caseStudies": {
+    "badge": "经过验证的影响",
+    "title": "案例研究",
+    "subtitle": "我们不只是交付功能。我们交付成果。",
+    "caseStudy": "案例研究",
+    "problem": "问题:",
+    "solution": "解决方案:",
+    "liveImpact": "实际影响",
+    "before": "之前",
+    "after": "之后",
+    "buildCta": "构建类似的产品 →",
+    "items": {
+      "nak": {
+        "title": "NAK — 团队管理 AI",
+        "problem": "人工资源分配",
+        "solution": "AI 驱动的调度代理",
+        "result": "+32% 生产力",
+        "metricLabel": "团队产出指数"
+      },
+      "chic": {
+        "title": "Chic Flowers — 电子商务",
+        "problem": "在线转化率低",
+        "solution": "个性化推荐 + 用户体验重构",
+        "result": "+45% 在线销售",
+        "metricLabel": "转化率增长"
+      },
+      "silence": {
+        "title": "Silence AI-CSD",
+        "problem": "高警报噪音",
+        "solution": "AI 检测与自动响应",
+        "result": "−68% 误报",
+        "metricLabel": "错误警报量"
+      }
+    }
+  },
+  "howWeWork": {
+    "title": "我们的工作方式",
+    "steps": {
+      "discovery": {
+        "title": "发现",
+        "desc": "需求、利益相关者、成功指标。"
+      },
+      "design": {
+        "title": "设计",
+        "desc": "用户体验、架构、原型。"
+      },
+      "poc": {
+        "title": "概念验证",
+        "desc": "具有可衡量 KPI 的快速验证。"
+      },
+      "build": {
+        "title": "构建",
+        "desc": "迭代冲刺,自动化测试。"
+      },
+      "deploy": {
+        "title": "部署",
+        "desc": "CI/CD、监控、安全加固。"
+      },
+      "support": {
+        "title": "支持与扩展",
+        "desc": "维护、路线图、持续改进。"
+      }
+    },
+    "subtitle": "超快交付流程 — 为速度而优化。"
+  },
+  "technologyStack": {
+    "title": "技术栈",
+    "subtitle": "精心挑选的生产级技术栈,专为速度、可扩展性和绝佳用户体验而设计。"
+  },
+  "secureDevelopment": {
+    "hero": {
+      "badge": "SLNC-env · 安全开发环境",
+      "title": "使用安全私密的代码构建系统",
+      "description": "企业私有开发环境,代码永不离开您的企业网络。同时提供最新的人工智能技术",
+      "requestSystem": "请求系统"
+    },
+    "pricing": {
+      "subtitle": "简单、透明的定价",
+      "title": "选择计划",
+      "limitedOffer": "限时优惠",
+      "priceIncreaseNotice": "锁定当前价格!6个月后,价格将上涨30%",
+      "monthlyPlan": "月度",
+      "monthlyDesc": "灵活计费",
+      "month": "月",
+      "yearlyPlan": "年度",
+      "yearlyDesc": "最佳性价比",
+      "billedAnnually": "按年计费,共",
+      "doubleSavings": "2倍节省",
+      "getStarted": "立即开始",
+      "features": {
+        "fullAccess": "完整平台访问权限",
+        "support": "优先支持",
+        "cancelAnytime": "随时取消",
+        "priceLock": "价格锁定12个月"
+      }
+    },
+    "components": {
+      "subtitle": "三个组件,一个封闭循环",
+      "title": "一切都在内部",
+      "description": "代码、提示和构建永不离开您的网络。SLNC-env 为云提供商、政府团队和工业工厂保持人工智能帮助、审查和交付的私密性。",
+      "gitServer": {
+        "title": "Git Repository Server",
+        "tag": "Self-hosted"
+      },
+      "analyzer": {
+        "title": "Security Analyzer",
+        "tag": "Local scanning"
+      },
+      "vulnDb": {
+        "title": "Vulnerability Database",
+        "tag": "Synced daily"
+      },
+      "onPremNotice": "Stays on-prem. No egress.",
+      "sithub": {
+        "title": "Sithub 服务器",
+        "tag": "本地版本控制"
+      },
+      "llm": {
+        "title": "LLM 服务器 (Qwen-Code)",
+        "tag": "本地智能"
+      },
+      "ide": {
+        "title": "带本地 Copilot 的 IDE",
+        "tag": "Cursor 级体验"
+      },
+      "staysOnPrem": "保持本地。无外流。"
+    },
+    "timeline": {
+      "subtitle": "最近的警钟",
+      "title": "为什么隔离和检查的代码很重要",
+      "incident": {
+        "title": "关键事件 — 代码泄露",
+        "heading": "DeepSeek 泄露将源代码和提示放在开放互联网上",
+        "description": "保持推理和扫描本地。无外部模型外流。默认审计跟踪。",
+        "seePlan": "查看遏制计划"
+      },
+      "stuxnet": {
+        "attack": "Stuxnet",
+        "target": "纳坦兹浓缩设施",
+        "impact": "摧毁约 1,000 台离心机",
+        "severity": "关键",
+        "year": "2010"
+      },
+      "blackEnergy": {
+        "attack": "BlackEnergy",
+        "target": "乌克兰电网",
+        "impact": "23 万用户停电",
+        "severity": "高",
+        "year": "2015"
+      },
+      "triton": {
+        "attack": "TRITON",
+        "target": "沙特石化工厂",
+        "impact": "安全系统被禁用",
+        "severity": "关键",
+        "year": "2017"
+      },
+      "colonialPipeline": {
+        "attack": "Colonial Pipeline",
+        "target": "美国燃油管道",
+        "impact": "6 天燃料供应停摆",
+        "severity": "高",
+        "year": "2021"
+      },
+      "pdvsa": {
+        "attack": "PDVSA",
+        "target": "委内瑞拉炼油",
+        "impact": "炼油运营受阻",
+        "severity": "中",
+        "year": "2025"
+      }
+    },
+    "analyzer": {
+      "subtitle": "实时保证",
+      "title": "超越 CodeQL 的分析器",
+      "features": {
+        "quality": {
+          "title": "自动化代码质量",
+          "description": "为安全关键代码调优的结构、风格与最佳实践检查"
+        },
+        "vulnerability": {
+          "title": "漏洞扫描",
+          "description": "即时呈现 SQLi、XSS、认证绕过与不安全依赖"
+        },
+        "secrets": {
+          "title": "密钥守卫",
+          "description": "在提交时阻断密钥、令牌与凭据泄露"
+        },
+        "config": {
+          "title": "配置加固",
+          "description": "扫描 Docker/K8s、IAM 与网络策略,防止权限蔓延"
+        }
+      },
+      "beyondCodeQL": {
+        "subtitle": "è¶…è¶Š CodeQL",
+        "title": "发现静态查询遗漏的问题",
+        "description": "比 CodeQL 更快发现错误配置和存在风险的包,提供修复方案而不仅是告警。",
+        "points": {
+          "packages": "理解包依赖关系,数秒内标记高风险依赖。",
+          "config": "识别配置漂移与权限膨胀,突破静态规则限制。",
+          "patches": "每条发现都附带推荐修复与责任人。"
+        }
+      },
+      "visualizer": {
+        "subtitle": "可视化",
+        "title": "代码分析器实景",
+        "description": "近期扫描的清晰快照,在本地控制台中精美呈现。",
+        "privateWorkspace": "仅限私有工作区",
+        "frame": "SLNC-env Analyzer",
+        "shots": {
+          "scanOverview": {
+            "title": "扫描总览",
+            "description": "在代码离开网络前按严重程度查看问题。"
+          },
+          "misconfigurations": {
+            "title": "配置错误检测",
+            "description": "AI 驱动的代码分析器甚至能在代码中发现配置失误。"
+          },
+          "inlineDiffs": {
+            "title": "行内差异",
+            "description": "在安全上下文中行内查看并审阅建议补丁。"
+          }
+        },
+        "andManyMore": "还有更多..."
+      }
+    },
+    "industries": {
+      "subtitle": "我们部署的地方",
+      "title": "为受监管、高影响力的行业构建",
+      "oilGas": {
+        "title": "石油与天然气",
+        "description": "钻探、炼化、管道控制"
+      },
+      "energy": {
+        "title": "能源",
+        "description": "电网、配电与 EMS"
+      },
+      "nuclear": {
+        "title": "核能",
+        "description": "反应堆控制与安全"
+      },
+      "manufacturing": {
+        "title": "制造业",
+        "description": "ICS、OT 与机器人"
+      },
+      "government": {
+        "title": "政府",
+        "description": "政府部门、国防与关键机构"
+      }
+    },
+    "comingSoon": {
+      "title": "Coming Soon",
+      "message": "This feature is currently under development."
+    }
+  },
+  "supreme": {
+    "hero": {
+      "badge": "Supreme · VSCode 扩展",
+      "title": "本地代码漏洞扫描器",
+      "description": "在本地扫描代码,无需发送到外部服务器。在你的编辑器中快速、全面地检测漏洞。"
+    },
+    "video": {
+      "title": "安装与使用教程(5 分钟)",
+      "cardTitle": "Supreme 使用指南",
+      "cardSubtitle": "安装与配置指南"
+    },
+    "pricing": {
+      "title": "简洁定价",
+      "subtitle": "选择最适合你的方案",
+      "monthly": {
+        "title": "月付",
+        "description": "灵活,随时取消"
+      },
+      "yearly": {
+        "title": "年付",
+        "description": "性价比最高"
+      },
+      "month": "月",
+      "year": "å¹´",
+      "saveBadge": "立省 30%",
+      "subscribe": "立即订阅",
+      "perMonthApprox": "约 {value}/月"
+    },
+    "languages": {
+      "title": "支持的语言",
+      "subtitle": "覆盖主流编程语言的全面安全扫描"
+    },
+    "features": {
+      "title": "强大功能",
+      "subtitle": "安全代码开发所需的一切",
+      "items": {
+        "0": "代码分析器在本地运行,代码不会暴露给外部服务器",
+        "1": "检测项目中的易受攻击依赖包",
+        "2": "发现配置错误与密钥",
+        "3": "可扫描 CI/CD 配置错误与漏洞"
+      }
+    },
+    "screenshots": {
+      "0": {
+        "title": "非常直观的界面"
+      },
+      "1": {
+        "title": "结构清晰的安全报告"
+      },
+      "2": {
+        "title": "扫描历史"
+      }
+    },
+    "lightbox": {
+      "close": "关闭",
+      "alt": "截图"
+    },
+    "title": "Supreme",
+    "landing": {
+      "hero": {
+        "headline": "快速构建,安全交付。",
+        "subheadline": "AI 编写代码,Supreme 2 守护安全。",
+        "tagline": "74 款智能扫描器。深层架构级分析。全球首款基于 MCP 的代码扫描器。",
+        "ctaMax": "升级到 Supreme 2 MAX",
+        "ctaFree": "免费开始使用 Supreme 2 Light"
+      },
+      "pricingLight": {
+        "name": "Supreme 2 Light",
+        "price": "免费",
+        "subprice": "永久免费 · 无需信用卡",
+        "features": [
+          "VSCode 扩展",
+          "完整项目扫描",
+          "74+ 扫描器",
+          "全面报告",
+          "仅报告工作流(无自动修复)"
+        ],
+        "cta": "获取 Supreme 2 Light"
+      },
+      "pricingMax": {
+        "name": "Supreme 2 MAX",
+        "price": "$18/月",
+        "subprice": "$150/年 · 最佳性价比",
+        "badge": "最佳性价比",
+        "features": [
+          "基于 MCP 服务器的扫描器",
+          "完整项目扫描",
+          "74+ 扫描器",
+          "全面报告",
+          "LLM 友好的自动修复报告",
+          "自主漏洞修复",
+          "通过威胁情报增强检测"
+        ],
+        "cta": "升级到 Supreme 2 MAX",
+        "videoLabel": "演示视频占位符 – Supreme 2 MAX 设置"
+      },
+      "hiddenRisk": {
+        "title": "AI 生成代码的潜在风险",
+        "llmTitle": "LLM = 部分可见性",
+        "llmItems": [
+          "只能看到粘贴的代码片段",
+          "遗漏隐藏文件",
+          "忽略依赖链",
+          "不扫描架构",
+          "不系统审计配置"
+        ],
+        "supremeTitle": "Supreme 2 = 全仓库扫描",
+        "diagramRepo": "代码库",
+        "diagramScanner": "深度扫描器",
+        "diagramFindings": "完整发现"
+      },
+      "meet": {
+        "title": "认识 SUPREME 2",
+        "features": [
+          "74+ 扫描器",
+          "深度多语言支持",
+          "架构感知分析",
+          "并行扫描引擎",
+          "智能漏洞检测"
+        ]
+      },
+      "mcp": {
+        "title": "全球首款基于 MCP 的代码扫描器",
+        "subtitle": "Supreme 2 MAX 作为 MCP 服务器运行,让您的 LLM 触发完整扫描、消费结构化 JSON、理解分类漏洞、安全重构并重新验证修复。"
+      },
+      "comparison": {
+        "title": "Supreme 2 Light vs Supreme 2 MAX",
+        "maxAdvantage": "MAX 优势:包含详细威胁情报,并作为 LLM 使用的 MCP 服务器运行。"
+      },
+      "whyLeads": {
+        "title": "Supreme 为何领跑市场"
+      },
+      "llmVsSupreme": {
+        "title": "使用 LLM 搜索漏洞/配置错误 VS Supreme 2",
+        "llmTitle": "仅用 LLM 审查",
+        "llmItems": [
+          "仅分析代码片段",
+          "遗漏配置文件",
+          "跳过隐藏模块",
+          "忽略依赖图谱"
+        ],
+        "supremeTitle": "Supreme 2",
+        "supremeItems": [
+          "扫描整个代码库",
+          "解析配置文件",
+          "检查依赖树",
+          "检测跨文件模式",
+          "执行架构分析"
+        ]
+      },
+      "faq": {
+        "title": "常见问题",
+        "q1": "Supreme 2 支持哪些编程语言?",
+        "a1": "Supreme 2 支持覆盖后端、前端、云、脚本和文档工作流的所有主流现代语言、配置格式和基础设施文件。",
+        "a1Coverage": "涵盖 41 种不同扫描器类型,支持 100 多种文件扩展名。",
+        "q2": "详细支持哪些扫描器类型和文件格式?",
+        "a2Intro": "Supreme 2 支持 41 种扫描器类型,覆盖所有主流编程语言和文件格式。",
+        "a2Total": "共计:41 种扫描器类型,涵盖 100 多种文件扩展名。",
+        "q3": "MCP 是什么?为什么重要?",
+        "a3": "MCP 允许 Supreme 2 MAX 作为结构化安全服务器运行。它返回分类的 JSON 漏洞报告,而非纯文本,用于自动修复、AI 驱动修复、程序化解读和持续改进工作流。",
+        "q4": "Supreme 2 会存储我的代码吗?",
+        "a4": "Supreme 2 在您的环境中本地扫描。您的代码永远不会离开运行扫描器的计算机。您可以在 GitHub 上查看 Supreme 2 Light 的源代码,也可以在代码扫描期间监控网络活动。",
+        "q5": "安装前有哪些预置要求?",
+        "a5Prefix": "要运行 Supreme 2,您的机器上必须安装",
+        "a5Python": "Python 3.0 或更高版本",
+        "a5Suffix": "。此外,必须确保在安装 Supreme 本体之前已安装",
+        "a5Pip": "pip",
+        "a5End": "。",
+        "q6": "Supreme 2 适合初创公司吗?",
+        "a6": "是的。对于使用 LLM 生成代码快速发布的 AI 优先初创团队尤其有效,在没有全仓库安全分析的情况下,跨文件的隐藏风险极易被遗漏。",
+        "a1ScannerTypes": "种扫描器类型",
+        "a1Across": "覆盖",
+        "a1Extensions": "种文件扩展名",
+        "a2Covering": "覆盖所有主要编程语言和文件格式。"
+      }
+    }
+  },
+  "languageSelector": {
+    "triggerLabel": "选择语言",
+    "menuLabel": "请选择语言",
+    "searchLabel": "搜索语言",
+    "searchPlaceholder": "按名称或本地文字搜索",
+    "searchResults": "搜索结果",
+    "noMatches": "没有与搜索匹配的语言。",
+    "popular": "最受欢迎",
+    "allLanguages": "所有语言"
+  },
+  "documentation": {
+    "tabs": {
+      "web": "网络安全",
+      "email": "电子邮件安全"
+    },
+    "system": {
+      "sections": "章节",
+      "topics": "主题",
+      "tableOfContents": "目录",
+      "close": "关闭"
+    },
+    "webSecurity": {
+      "placeholder": {
+        "badge": "网络安全",
+        "title": "文档即将推出",
+        "description": "我们正在准备详细指南。"
+      }
+    },
+    "pricingMicrosoft": {
+      "business": "Business",
+      "enterprise": "Enterprise",
+      "withoutTeams": "Plans without Teams",
+      "withTeams": "With Teams",
+      "yearly": "Yearly",
+      "monthly": "Monthly",
+      "planHighlights": "Plan highlights",
+      "userMonth": "user/month",
+      "paidYearly": "paid yearly",
+      "paidMonthly": "paid monthly",
+      "plans": {
+        "businessPremium": {
+          "title": "Silence 365 Business Max"
+        },
+        "businessStandard": {
+          "title": "Silence 365 Business Standard"
+        },
+        "businessBasic": {
+          "title": "Microsoft 365 Business Basic (no Teams)"
+        },
+        "enterpriseE3": {
+          "title": "Silence 365 Enterprise 300+"
+        },
+        "enterpriseE5": {
+          "title": "Silence 365 Enterprise 500+"
+        }
+      },
+      "features": {
+        "secureAccess300": "用户数量不限（根据公司规模而定）",
+        "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
+        "adminConsole": "Admin console with domain-wide email management and bulk operations",
+        "aiThreatDetection": "AI-powered threat detection with automatic email categorization",
+        "securityPipeline": "Multi-layered email security pipeline (SPF, DKIM, DMARC, spam, malware, phishing)",
+        "securityFolders": "Email sorting into security folders (Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed)",
+        "linkScannerAv": "Advanced link scanner and antivirus protection for attachments",
+        "emailFlowVisualization": "Email flow visualization across the domain/organization with comprehensive filters",
+        "bulkManageDelete": "Ability to manage and delete emails across all users in the domain",
+        "customFoldersRules": "Custom folders with auto-filtering rules (sender, domain, subject)",
+        "storage10gb": "10 GB secure mailbox storage per user",
+        "storage5tb": "5 TB secure mailbox storage per user",
+        "storage10tb": "10 TB secure mailbox storage per user",
+        "multiAccountSupport": "Multi-account support (Gmail/Outlook integration)",
+        "support247": "24/7 email and web support",
+        "fullTextSearch": "Email search with full-text capabilities",
+        "aiAssistedCategorization": "AI-assisted email categorization into security folders",
+        "basicFiltering": "Custom folders with basic filtering rules",
+        "prioritySupport": "Priority support with faster response times",
+        "dedicatedAM": "Dedicated account management",
+        "unlimitedUsers": "Supports unlimited users"
+      }
+    },
+    "emailSecurity": {
+      "title": "电子邮件安全系统",
+      "subtitle": "文档 | 版本 1.0",
+      "description": "如何配置和运行企业电子邮件安全平台。",
+      "chapters": [
+        {
+          "id": "getting-started",
+          "title": "入门指南",
+          "label": "入门指南",
+          "description": "在 CMC 管理面板中完成初始接入步骤以及域名和 DNS 配置。",
+          "sections": [
+            {
+              "id": "admin-setup",
+              "title": "面向管理员",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "要接入并启用系统:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "使用 Google 或 Microsoft OAuth 登录 admin.silenceai.net 上的 CMC 管理面板。",
+                    "注册贵公司的主域名。",
+                    "通过 DNS 验证明域名所有权。",
+                    "配置安全 DNS 记录(SPF、DKIM、DMARC)。",
+                    "为员工创建邮箱帐户。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "完成配置后,用户即可访问 Web 邮件客户端并发送受保护的邮件。"
+                }
+              ]
+            },
+            {
+              "id": "user-onboarding",
+              "title": "面向终端用户",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "终端用户开始使用邮箱:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "从管理员处获取登录凭据。",
+                    "使用邮箱/密码或 OAuth 登录 mail.silenceai.net。",
+                    "通过\"撰写\"按钮发送第一封邮件。",
+                    "查看系统文件夹,它们会按安全级别自动分类邮件。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "所有收到的邮件都会自动进行威胁扫描,并被路由到相应文件夹。"
+                }
+              ]
+            },
+            {
+              "id": "add-domain",
+              "title": "添加域名",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "域名管理在 CMC 管理面板中完成。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "打开 CMC 管理面板。",
+                    "点击\"添加域名\"。",
+                    "输入不带 www 的域名(例如 company.com)。",
+                    "点击\"添加\"。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "系统会生成一个验证令牌,用于确认域名所有权。"
+                }
+              ]
+            },
+            {
+              "id": "verify-domain",
+              "title": "验证域名所有权",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "添加域名后,需要证明该域名确实归您所有。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "从 CMC 中复制 TXT 记录:"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "_cmc-verification.company.com TXT \"cmc-verify-abc123xyz\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "将该记录添加到域名的 DNS 设置中。",
+                    "等待系统自动检查(每 5 分钟一次),或点击\"立即检查\"。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "验证可能需要最长 48 小时。成功后,域名状态会变为\"已验证\"。"
+                }
+              ]
+            },
+            {
+              "id": "configure-spf",
+              "title": "配置 SPF 记录",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "SPF 用于声明哪些服务器可以代表您的域发送邮件。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "在 CMC 中打开\"DNS 配置\"→\"SPF\"。",
+                    "点击\"检查当前 SPF\",查看现有记录。",
+                    "点击\"生成 SPF 记录\"。",
+                    "复制推荐的记录:"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "company.com TXT \"v=spf1 include:_spf.silenceai.net -all\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "将该记录添加到 DNS 中。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "如果已经存在 SPF 记录(例如用于 Gmail),请在最后的 -all 之前加入我们的 include 项。"
+                }
+              ]
+            },
+            {
+              "id": "configure-dkim",
+              "title": "生成 DKIM 密钥",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DKIM 会为您的邮件添加加密签名。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "在 CMC 中打开\"DNS 配置\"→\"DKIM\"。",
+                    "点击\"生成 DKIM 密钥\"。",
+                    "系统会生成一对密钥(私钥保留在服务器上,公钥用于 DNS)。",
+                    "复制生成的 DNS 记录:"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "silenceai._domainkey.company.com TXT \"v=DKIM1; k=rsa; p=MIIBIjAN...\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "将该记录添加到 DNS 中。",
+                    "运行\"验证 DKIM\"以确认配置生效。"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "configure-dmarc",
+              "title": "设置 DMARC 策略",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DMARC 用于定义当邮件未通过 SPF 或 DKIM 校验时应如何处理。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "在 CMC 中打开\"DNS 配置\"→\"DMARC\"。",
+                    "选择一条策略:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "quarantine — 移动到垃圾邮件(推荐)",
+                    "reject — 拒收该邮件"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "点击\"生成 DMARC 记录\"。",
+                    "复制生成的记录:"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "_dmarc.company.com TXT \"v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@silenceai.net\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "将该记录添加到 DNS 中。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "建议先使用 quarantine,监控 1–2 周的报告后,如有需要再切换为 reject。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "user-management",
+          "title": "用户管理",
+          "label": "用户管理",
+          "description": "创建与维护邮箱帐户。",
+          "sections": [
+            {
+              "id": "create-account",
+              "title": "创建邮箱帐户",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "在 CMC 中打开\"邮箱帐户\"版块。",
+                    "点击\"创建帐户\"。",
+                    "按要求填写各个字段:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "邮箱:john.doe@company.com",
+                    "名字与姓氏",
+                    "密码(至少 8 个字符,包含大小写字母、数字和特殊字符)",
+                    "存储配额:选择邮箱容量大小"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "点击\"创建\"。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "用户创建完成后即可立即登录 Web 邮箱。"
+                }
+              ]
+            },
+            {
+              "id": "suspend-activate",
+              "title": "暂停或重新启用帐户",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "在\"邮箱帐户\"列表中找到目标用户。",
+                    "在\"操作\"菜单中选择:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Suspend — 暂停访问(用户无法登录)",
+                    "Activate — 恢复访问权限"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "确认操作。"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "change-quota",
+              "title": "修改存储配额",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "在列表中找到目标用户。",
+                    "在\"操作\"菜单中选择\"编辑配额\"。",
+                    "选择新的存储容量大小。",
+                    "保存更改。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "更改会立即生效。"
+                }
+              ]
+            },
+            {
+              "id": "delete-account",
+              "title": "删除帐户",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "在列表中找到目标用户。",
+                    "在\"操作\"菜单中选择\"删除\"。",
+                    "确认删除操作。"
+                  ]
+                },
+                {
+                  "type": "callout",
+                  "intent": "warning",
+                  "content": "警告:该用户的所有数据将被永久删除,无法恢复。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mail-operations",
+          "title": "邮件操作",
+          "label": "邮件操作",
+          "description": "在 Web 邮件客户端中的日常操作。",
+          "sections": [
+            {
+              "id": "send-letter",
+              "title": "发送邮件",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "在 Web 邮件界面点击\"撰写\"。",
+                    "填写以下内容:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "收件人(To):收件地址",
+                    "主题(Subject):邮件标题",
+                    "正文(Body):邮件内容(支持富文本格式)"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "如有需要,添加附件(单个文件最大 25 MB)。",
+                    "点击\"发送\"。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "系统会自动为邮件添加 DKIM 签名并完成投递。"
+                }
+              ]
+            },
+            {
+              "id": "custom-folder",
+              "title": "创建带规则的自定义文件夹",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "通过自定义文件夹,您可以按规则自动整理邮件。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "在侧边栏点击\"创建文件夹\"。",
+                    "输入文件夹名称(例如\"客户\")。",
+                    "点击\"添加规则\"。",
+                    "配置筛选规则:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "筛选字段:发件人域名",
+                    "匹配模式:包含",
+                    "值:client.com"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "如果希望对现有邮件也生效,请勾选\"应用于现有邮件\"。",
+                    "点击\"创建\"。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "此后,来自 *@client.com 的新邮件会自动进入\"客户\"文件夹。"
+                }
+              ]
+            },
+            {
+              "id": "add-whitelist",
+              "title": "将发件人添加到白名单",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "如果某封邮件被错误地标记为垃圾邮件:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "在\"垃圾邮件\"文件夹中打开该邮件。",
+                    "点击\"非垃圾邮件\"→\"添加到白名单\"。",
+                    "选择以下范围:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "将发件人邮箱地址加入白名单",
+                    "将发件人域名加入白名单"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "确认操作。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "之后,来自该发件人的邮件将不再被投递到垃圾邮件文件夹。"
+                }
+              ]
+            },
+            {
+              "id": "email-signature",
+              "title": "设置邮件签名",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "打开\"设置\"→\"邮件签名\"。",
+                    "开启\"启用签名\"。",
+                    "在编辑器中输入签名内容。",
+                    "点击\"保存\"。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "签名会自动附加到每一封外发邮件中。"
+                }
+              ]
+            },
+            {
+              "id": "vacation-responder",
+              "title": "配置自动回复",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "打开\"设置\"→\"假期自动回复\"。",
+                    "开启\"启用假期自动回复\"。",
+                    "设置开始和结束日期。",
+                    "输入自动回复内容。",
+                    "勾选\"对每个发件人只回复一次\",避免重复回复同一发件人。",
+                    "点击\"保存\"。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "自动回复将在所选日期范围内生效,并在结束日期后自动关闭。"
+                }
+              ]
+            },
+            {
+              "id": "forwarding",
+              "title": "配置邮件转发",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "打开\"设置\"→\"邮件转发\"。",
+                    "点击\"添加转发地址\"。",
+                    "输入转发邮箱地址。",
+                    "如需在当前邮箱中保留副本,请勾选\"在收件箱中保留副本\"。",
+                    "点击\"保存\"。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "之后,所有收到的邮件都会被转发到所填写的目标地址。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "domain-administration",
+          "title": "域管理",
+          "label": "域管理",
+          "description": "针对整个域的统计分析与批量邮件操作。",
+          "sections": [
+            {
+              "id": "view-activity",
+              "title": "查看域邮件活动",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "管理员可以查看域内每位用户的每一封邮件。"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "在 CMC 中打开\"邮件活动\"。",
+                    "使用以下筛选条件:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "按用户筛选",
+                    "按文件夹筛选(安全、垃圾邮件、钓鱼)",
+                    "按日期筛选",
+                    "按威胁类型筛选"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "使用搜索栏按主题或发件人进行精确查找。"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "bulk-delete",
+              "title": "为所有用户删除邮件",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "如果有一封恶意邮件被群发给所有用户:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "打开\"邮件活动\"。",
+                    "通过筛选或搜索找到这封邮件。",
+                    "勾选所有需要删除的相关邮件。",
+                    "点击\"删除所选\"。",
+                    "确认对所有选中邮件执行批量删除。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "该邮件会从所有用户的邮箱中被删除。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "concepts",
+          "title": "核心概念",
+          "label": "核心概念",
+          "description": "平台的关键概念与安全处理流程。",
+          "sections": [
+            {
+              "id": "system-overview",
+              "title": "系统概览",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Email Security System 是一个保护企业邮件免受网络威胁的平台。"
+                },
+                {
+                  "type": "list",
+                  "title": "组成部分:",
+                  "items": [
+                    "CMC 管理面板——用于管理域名、用户和 DNS 配置的管理员控制台。",
+                    "Web 邮件客户端——面向员工的邮箱界面,内置自动威胁防护。",
+                    "基础设施服务——用于邮件处理的 SMTP 服务器与安全处理流水线。"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "security-stack",
+              "title": "安全处理流程",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "每一封收到的邮件都会经过六层安全防护:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "第 0 层:钓鱼域名检查——根据已知钓鱼数据库评估发件人域名。",
+                    "第 1 层:伪造检测——验证 SPF、DKIM 与 DMARC 是否一致对齐。",
+                    "第 2 层:垃圾邮件检测——使用 RSPAMD 分析内容中的垃圾特征。",
+                    "第 3 层:链接扫描——通过 URLScan.io 扫描 URL 是否存在恶意链接。",
+                    "第 4 层:防病毒——使用 Bitdefender 扫描所有附件。",
+                    "第 5 层:AI 钓鱼检测——利用 AI 分析邮件内容中的钓鱼信号。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "一旦检测到威胁,处理流程会立即中止,并将邮件放入对应的系统文件夹中。"
+                }
+              ]
+            },
+            {
+              "id": "system-folders",
+              "title": "系统文件夹",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "系统会根据安全检查结果将邮件路由到不同文件夹:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Unfiltered——未过滤:处理前的临时收件箱。",
+                    "Secure——安全:通过所有检查的邮件。",
+                    "Possibly Spoofed——可能伪造:发件人真实性存在可疑。",
+                    "SPAM——垃圾邮件:被判定为垃圾邮件的内容。",
+                    "Dangerous Links——危险链接:包含恶意 URL 的邮件。",
+                    "Malware——恶意软件:附件被检测出恶意软件的邮件。",
+                    "Possibly Phishing——可能钓鱼:检测到钓鱼指标的邮件。",
+                    "Sent——已发送:所有外发邮件。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "单封邮件有时可能出现在多个文件夹中(例如同时位于\"垃圾邮件\"和\"可能伪造\")。"
+                }
+              ]
+            },
+            {
+              "id": "custom-folders",
+              "title": "自定义文件夹",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "用户可以创建自定义文件夹,并配置自动筛选规则。"
+                },
+                {
+                  "type": "list",
+                  "title": "筛选规则:",
+                  "items": [
+                    "按发件人域名筛选",
+                    "按发件人邮箱地址筛选",
+                    "按主题筛选",
+                    "按发件人名称筛选"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "title": "匹配模式:",
+                  "items": [
+                    "包含 (Contains)",
+                    "等于 (Equals)",
+                    "以…开头 (Starts with)",
+                    "以…结尾 (Ends with)"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "规则既可应用于新的来信,也可选中对现有邮件进行追溯性过滤。"
+                }
+              ]
+            },
+            {
+              "id": "spf",
+              "title": "SPF (Sender Policy Framework)",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "SPF 是一种 DNS 记录,用于声明哪些服务器可以为该域发送邮件。"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "格式示例:"
+                },
+                {
+                  "type": "code",
+                  "content": "v=spf1 include:_spf.silenceai.net -all"
+                },
+                {
+                  "type": "list",
+                  "title": "机制说明:",
+                  "items": [
+                    "include:domain —— 允许来自指定域的服务器",
+                    "ip4:x.x.x.x —— 允许指定 IPv4 地址",
+                    "-all —— 拒绝其他所有来源",
+                    "~all —— 将其他来源标记为可疑"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "SPF 校验:收件方会检查发件 IP 是否包含在该域的 SPF 记录中,若校验失败,邮件会被标记为可疑。"
+                }
+              ]
+            },
+            {
+              "id": "dkim",
+              "title": "DKIM (DomainKeys Identified Mail)",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DKIM 会为邮件添加加密签名,用于确认邮件由域名所有者发出且在传输过程中未被篡改。"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "工作原理:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "发送端服务器使用私钥对邮件进行签名,并添加 DKIM-Signature 头。",
+                    "收件方从 DNS 中获取公钥,对签名进行验证。"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "DNS 记录示例:"
+                },
+                {
+                  "type": "code",
+                  "content": "selector._domainkey.domain.com TXT \"v=DKIM1; k=rsa; p=public_key\""
+                },
+                {
+                  "type": "paragraph",
+                  "content": "私钥以加密形式保存在服务器上,从不向任何客户端暴露。"
+                }
+              ]
+            },
+            {
+              "id": "dmarc",
+              "title": "DMARC (Domain-based Message Authentication)",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DMARC 用于定义对未通过 SPF 或 DKIM 校验的邮件应采取的策略。"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "格式示例:"
+                },
+                {
+                  "type": "code",
+                  "content": "_dmarc.domain.com TXT \"v=DMARC1; p=quarantine; rua=mailto:reports@domain.com\""
+                },
+                {
+                  "type": "list",
+                  "title": "参数说明:",
+                  "items": [
+                    "p=quarantine —— 投递到垃圾邮件夹",
+                    "p=reject —— 拒收该邮件",
+                    "p=none —— 仅监控,不修改投递行为",
+                    "rua= —— 接收聚合报告的邮箱地址"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "DMARC 校验:收件方会确认邮件是否通过 SPF 或 DKIM 且域名一致,否则按照策略中的设置(如 quarantine 或 reject)进行处理。"
+                }
+              ]
+            },
+            {
+              "id": "attachments",
+              "title": "附件与杀毒",
+              "body": [
+                {
+                  "type": "list",
+                  "title": "限制条件:",
+                  "items": [
+                    "单个附件最大体积:25 MB",
+                    "支持所有常见文件类型"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "附件扫描:所有附件都会由 Bitdefender 扫描,如检测到恶意软件,该邮件会被移动到\"恶意软件\"文件夹,并阻止附件下载。"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "存储:附件会作为邮件的一部分保存在服务器上,被判定为恶意的文件会被转移到隔离区。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "access-control",
+          "title": "访问控制",
+          "label": "访问控制",
+          "description": "用户角色划分与访问保护。",
+          "sections": [
+            {
+              "id": "user-roles",
+              "title": "用户角色",
+              "body": [
+                {
+                  "type": "list",
+                  "title": "Admin",
+                  "items": [
+                    "对 CMC 管理面板拥有完全访问权限",
+                    "管理域名与 DNS 配置",
+                    "创建和管理用户帐户",
+                    "查看整个域的所有邮件",
+                    "执行批量邮件操作"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "title": "Subordinate",
+                  "items": [
+                    "对 CMC 具有受限访问权限",
+                    "可以查看用户列表",
+                    "只能访问自己的邮箱"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "title": "User",
+                  "items": [
+                    "访问 Web 邮件客户端",
+                    "处理自己的邮件",
+                    "配置个人偏好与设置"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "role-assignment",
+              "title": "角色分配",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "自动管理员:第一个通过 OAuth 登录系统的用户将自动获得管理员角色。"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "创建 Subordinate 用户:管理员可在 CMC 的\"用户管理\"中添加下属帐户。"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "创建 User 帐户:管理员在\"邮箱帐户\"中创建邮箱时,新帐户默认获得 User 角色。"
+                }
+              ]
+            },
+            {
+              "id": "authentication",
+              "title": "身份验证",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "OAuth 2.0:使用 Google 或 Microsoft 账号登录,并结合 PKCE 提升安全性。",
+                    "邮箱/密码:由管理员在 CMC 中发放的本地账号凭据。",
+                    "JWT 令牌:访问令牌有效期为 7 天,存储在 httpOnly Cookie 中。",
+                    "令牌刷新:访问令牌会通过刷新令牌自动续期;刷新令牌过期后则需要重新登录。"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "access-protection",
+              "title": "访问保护",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "登录速率限制:同一 IP 在 15 分钟内最多允许 5 次登录尝试。",
+                    "会话管理:活动会话存储在数据库中,并在每次请求时进行校验。",
+                    "审计日志:会记录关键的管理员与用户操作行为。"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quotas-limits",
+          "title": "配额与限制",
+          "label": "配额与限制",
+          "description": "存储、发送以及用户数量方面的配额限制。",
+          "sections": [
+            {
+              "id": "storage-quota",
+              "title": "存储配额",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "每个用户都会分配一个邮箱存储配额,当使用率达到 100% 时,该用户将无法再发送或接收邮件。"
+                }
+              ]
+            },
+            {
+              "id": "sending-limits",
+              "title": "发送限制",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "Business Basic:每位用户每天最多发送 500 封邮件",
+                    "Business Standard:每天最多 1000 封",
+                    "Business Premium:每天最多 2000 封",
+                    "Enterprise:每天最多 10000 封"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "user-limit",
+              "title": "用户上限",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "Business 方案:支持最多 300 名用户",
+                    "Enterprise 方案:用户数量不限"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "policySidebar": {
+    "tableOfContents": "目录",
+    "close": "Close",
+    "topics": "Topics"
+  },
+  "andManyMore": "Et bien plus encore...",
+  "playground": {
+    "options": {
+      "globeShield": "网络安全与流量管控",
+      "emailSecurity": "邮件安全"
+    }
+  },
+  "modal": {
+    "title": "正在积极开发",
+    "body": "系统预计将于10月10日上线"
+  },
+  "notFound": {
+    "title": "页面未找到",
+    "description": "我们找遍了所有地方,但找不到这个页面。",
+    "cta": "返回首页"
+  },
+  "pricingCta": {
+    "requestSystem": "请求系统"
+  },
+  "contactForm": {
+    "title": "联系我们",
+    "success": "感谢!您的消息已发送,我们将尽快与您联系。",
+    "errorRequired": "请填写姓名、邮箱和简短留言。",
+    "errorSend": "消息发送失败,请稍后再试。",
+    "placeholders": {
+      "name": "您的姓名",
+      "email": "邮箱",
+      "type": "项目类型(可选)",
+      "budget": "预算(可选)",
+      "message": "请介绍您的项目..."
+    },
+    "submit": {
+      "idle": "发送消息",
+      "loading": "发送中…"
+    }
+  },
+  "consulting": {
+    "title": "咨询问卷",
+    "searchPlaceholder": "搜索问题...",
+    "noResults": "未找到问题。",
+    "questions": [
+      {
+        "question": "除了有竞争力的定价,贵公司的核心价值主张是什么?",
+        "answer": "安全是我们的首要差异化优势。我们以高安全性系统建设者为定位,将企业级安全实践贯穿整个开发生命周期。"
+      },
+      {
+        "question": "公司运营了多长时间?有哪些成功案例?",
+        "answer": "我们已成功交付大型项目,包括:NAK(Nur Astana Kurylys)— AI 驱动的团队管理平台,以及 Chic Flowers — 面向大型花卉零售企业的全数字化平台。"
+      },
+      {
+        "question": "与 EPAM 等竞争对手相比,你们的技术与服务质量优势是什么?",
+        "answer": "我们的关键优势是安全优先的开发方式。从项目启动到部署与运维,我们都嵌入安全实践。"
+      },
+      {
+        "question": "在提供有竞争力价格的同时如何保持质量?",
+        "answer": "我们以低于市场约 15% 的价格提供服务,同时通过优化运营、战略性人才配置和高效项目管理确保卓越质量。"
+      },
+      {
+        "question": "你们提供哪些具体的软件开发服务?",
+        "answer": "端到端软件开发:定制应用、AI 解决方案、网络安全产品开发(Silence AI-CSD)、系统集成、上云和 DevOps。也提供专属产品开发与团队扩充。"
+      },
+      {
+        "question": "你们擅长哪些行业和领域?",
+        "answer": "建筑、零售、金融科技、网络安全与数字平台——涵盖 AI 驱动的团队管理、电商与企业安全解决方案。"
+      },
+      {
+        "question": "团队擅长哪些技术栈和平台?",
+        "answer": "GO、Swift、Flutter,云平台(AWS/Azure/GCP)、Docker/Kubernetes、FastAPI、JavaScript 以及 AI/ML 框架。我们也自研安全工具,如 Silence AI-CSD。"
+      },
+      {
+        "question": "你们提供端到端产品开发还是仅提供部分服务?",
+        "answer": "两者都提供:MVP、全生命周期交付、团队扩充以及网络安全集成。"
+      },
+      {
+        "question": "是否能提供人员扩充和专属团队模式?",
+        "answer": "可以。我们提供灵活合作模式:人员扩充、专属团队以及项目制外包。"
+      },
+      {
+        "question": "除开发外,是否提供咨询、架构与顾问服务?",
+        "answer": "是的:提供网络安全咨询、系统架构设计、技术顾问以及基于 Silence AI-CSD 的合规评估。"
+      }
+    ]
+  },
+  "requestSystemModal": {
+    "title": "请求系统",
+    "name": "姓名",
+    "email": "公司邮箱",
+    "company": "公司名称",
+    "placeholders": {
+      "name": "John Doe",
+      "email": "john@company.com",
+      "company": "Acme Corp"
+    },
+    "submit": "下载",
+    "successTitle": "请求已发送!",
+    "successBody": "感谢,我们会将系统下载说明发送至您的邮箱。",
+    "close": "关闭"
+  },
+  "backToTop": {
+    "label": "回到顶部"
+  },
+  "badRequest": {
+    "title": "错误请求",
+    "cta": "返回主页",
+    "description": "The page you are looking for could not be found or the request was invalid."
+  },
+  "countrySelect": {
+    "title": "选择国家",
+    "subtitle": "选择您的位置以继续",
+    "searchPlaceholder": "搜索国家...",
+    "noResults": "未找到国家",
+    "continue": "ç»§ç»­",
+    "comingSoon": {
+      "title": "即将准备好!",
+      "message": "订阅管理后台面板将在以下时间内准备好",
+      "hours": "小时",
+      "notification": "当它可用时我们会通知您!",
+      "back": "返回",
+      "gotIt": "我知道了!"
+    }
+  },
+  "aiSocComparison": {
+    "sectionTitle": "竞争优势",
+    "common": {
+      "features": "功能"
+    },
+    "web": {
+      "title": "AI-CSD Web 与传统 WAF 方案对比",
+      "columns": {
+        "aiSoc": "AI-CSD Web(按量付费)",
+        "cloudflare": "Cloudflare WAF + Anti-DDoS($20/月)",
+        "aws": "AWS WAF(按量付费)"
+      },
+      "rows": {
+        "complexWaf": {
+          "feature": "可检测复杂攻击的 WAF"
+        },
+        "ddos": {
+          "feature": "防护 DDoS 攻击",
+          "cloudflare": "在该价格方案下较弱"
+        },
+        "proactive": {
+          "feature": "7x24 主动防护"
+        },
+        "monitoring": {
+          "feature": "按国家监控实时用户、RPS 与带宽 — 并提供完整历史追踪"
+        },
+        "setup": {
+          "feature": "部署时间",
+          "aiSoc": "2 分钟(无需网络安全知识)",
+          "cloudflare": "2 分钟(无需网络安全知识)",
+          "aws": "1 天(需要网络安全专家)"
+        }
+      }
+    },
+    "email": {
+      "title": "AI-CSD Email 与传统邮件安全对比",
+      "columns": {
+        "aiSoc": "AI-CSD Email",
+        "outlook": "Outlook/Gmail",
+        "kaspersky": "Kaspersky(连接到邮件服务提供商)"
+      },
+      "rows": {
+        "viewAll": {
+          "feature": "查看整个域名下的所有邮件"
+        },
+        "delete": {
+          "feature": "管理员可以删除员工的邮件"
+        },
+        "activeProtection": {
+          "feature": "针对所有类型邮件攻击的主动防护"
+        },
+        "aiManual": {
+          "feature": "AI 人工检查邮件"
+        },
+        "setup": {
+          "feature": "安全部署完成时间",
+          "aiSoc": "2 分钟,无需网络安全知识",
+          "outlook": "非完整安全",
+          "kaspersky": "1-3 天(需连接邮件服务提供商,只能由网络安全专家完成)"
+        }
+      }
+    }
+  },
+  "aiSocValueSection": {
+    "title": "为什么选择 AI-CSD",
+    "subtitle": "AI-CSD 让企业级网络安全对任何公司都可用。几分钟即可部署防护,并在统一平台中管理 Web 与邮件安全。",
+    "features": {
+      "deploy": {
+        "title": "分钟级部署",
+        "description": "无需复杂配置,4 分钟内即可完成 Web 与邮件防护部署。"
+      },
+      "ai": {
+        "title": "AI 驱动分析",
+        "description": "高级 AI 持续实时分析流量、邮件与威胁。"
+      },
+      "visualization": {
+        "title": "高级可视化",
+        "description": "通过高级可视化界面监控 Web 流量与邮件流。"
+      },
+      "affordable": {
+        "title": "高性价比安全",
+        "description": "无需传统网络安全系统的高成本,也能获得企业级防护。"
+      }
+    }
+  },
+  "aiSocInsights": {
+    "title": "当今网络安全问题",
+    "subtitle": "现代网络威胁增长速度,已超过多数企业的响应能力。",
+    "items": [
+      {
+        "stat": "每 39 秒",
+        "suffix": "就会发生一次黑客攻击",
+        "description": "全球网络攻击每年持续增长,目标覆盖各类规模企业。"
+      },
+      {
+        "stat": "2050 万",
+        "suffix": "2025 年 Q1 的 DDoS 攻击",
+        "description": "大规模流量洪泛可在几分钟内让网站和 API 离线。"
+      },
+      {
+        "stat": "30,000",
+        "suffix": "个网站每天被攻击",
+        "description": "从初创公司到大型平台,Web 基础设施始终是攻击目标。"
+      }
+    ]
+  },
+  "aiSocPricing": {
+    "intro": "AI-CSD 是一套独立的网络安全系统组合",
+    "emailDescription": "Email Security 是企业通信的防护盾。它会过滤收发邮件,在威胁到达用户前中和钓鱼尝试、伪造攻击和恶意链接,从而保障企业通信的完整性。",
+    "webDescription": "Web Security 通过实时分析流量模式来保护您的数字基础设施。它可防御常见漏洞、DDoS 攻击和未授权访问,并在不影响性能的前提下提供深度网络可视化。"
+  },
+  "aiSocFaq": {
+    "title": "常见问题",
+    "items": [
+      {
+        "question": "AI-CSD 只是安全引擎,还是完整的邮件平台?",
+        "response": "AI-CSD 可根据企业邮件管理方式以两种模式使用。\n\n1️⃣ 作为独立安全邮件平台\n\nAI-CSD 可作为企业主邮件系统运行,具备自有邮件服务器基础设施、安全 Webmail 和管理控制台。\n\n2️⃣ 作为现有邮件系统的 AI 安全层\n\nAI-CSD 也可叠加在 Gmail/Outlook 之上使用。您可保留现有服务商,同时由 AI-CSD 分析邮件流量并防护钓鱼、伪造、恶意链接等威胁。"
+      },
+      {
+        "question": "AI-CSD 可以与现有 Gmail 或 Outlook 环境一起使用吗?",
+        "response": "可以。AI-CSD 可作为额外安全层部署,同时保留 Gmail 或 Outlook 作为主要服务商。"
+      },
+      {
+        "question": "当 AI-CSD 作为主邮件基础设施运行时会怎样?",
+        "response": "在该模式下,AI-CSD 提供安全 Webmail、域级管理控制,以及贯穿完整邮件流程的内置威胁防护。"
+      },
+      {
+        "question": "管理员可以创建并控制企业邮件账号吗?",
+        "response": "可以。管理员可创建和管理账号、监控全域邮件活动,并在必要时删除用户邮件。"
+      },
+      {
+        "question": "现有企业邮箱账号可以连接到 AI-CSD 吗?",
+        "response": "可以。现有 Gmail/Outlook 企业账号可接入 AI-CSD,在不替换服务商的前提下增加结构化防护。"
+      },
+      {
+        "question": "安全能力是预配置的吗?还是需要手动配置?",
+        "response": "AI-CSD 是预配置的 AI 系统。按照说明页完成最少步骤即可启用内置防护。"
+      },
+      {
+        "question": "除了邮件和 Web 过滤外,还能检测哪些高级威胁?",
+        "response": "AI-CSD 可检测钓鱼上下文、伪造模式、恶意链接、恶意附件,以及邮件与 Web 流量中的可疑行为。"
+      },
+      {
+        "question": "AI-CSD 会使用威胁情报提前阻止攻击吗?",
+        "response": "会。AI-CSD 使用威胁情报数据流,在已知恶意基础设施到达受保护系统前进行阻断。"
+      }
+    ]
+  }
+}

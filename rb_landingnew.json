@@ -1,0 +1,178 @@
+[
+  {
+    "name": "CTA",
+    "path": "src/components/landingnew/CTA",
+    "sha": "2ffa6ce61ac85182cf54c7120fd3669777654508",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/CTA?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/CTA",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/2ffa6ce61ac85182cf54c7120fd3669777654508",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/CTA?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/2ffa6ce61ac85182cf54c7120fd3669777654508",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/CTA"
+    }
+  },
+  {
+    "name": "Features",
+    "path": "src/components/landingnew/Features",
+    "sha": "fff76e08c89950fc1393b93836352aae9011e254",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/Features?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/Features",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/fff76e08c89950fc1393b93836352aae9011e254",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/Features?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/fff76e08c89950fc1393b93836352aae9011e254",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/Features"
+    }
+  },
+  {
+    "name": "Footer",
+    "path": "src/components/landingnew/Footer",
+    "sha": "c82c79df65a2a9073d5c58d46fcc11d24845424a",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/Footer?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/Footer",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c82c79df65a2a9073d5c58d46fcc11d24845424a",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/Footer?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/c82c79df65a2a9073d5c58d46fcc11d24845424a",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/Footer"
+    }
+  },
+  {
+    "name": "Hero",
+    "path": "src/components/landingnew/Hero",
+    "sha": "23402e8c13f4387994c5cd389f129e199ac7a615",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/Hero?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/Hero",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/23402e8c13f4387994c5cd389f129e199ac7a615",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/Hero?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/23402e8c13f4387994c5cd389f129e199ac7a615",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/Hero"
+    }
+  },
+  {
+    "name": "LandingLoader",
+    "path": "src/components/landingnew/LandingLoader",
+    "sha": "622346c89d9ecbff266d97d304c91170e4f964ee",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/LandingLoader?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/LandingLoader",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/622346c89d9ecbff266d97d304c91170e4f964ee",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/LandingLoader?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/622346c89d9ecbff266d97d304c91170e4f964ee",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/LandingLoader"
+    }
+  },
+  {
+    "name": "LiveDemo",
+    "path": "src/components/landingnew/LiveDemo",
+    "sha": "938ac9cbd0464638d5fc587d92c84c674a33f1fe",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/LiveDemo?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/LiveDemo",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/938ac9cbd0464638d5fc587d92c84c674a33f1fe",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/LiveDemo?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/938ac9cbd0464638d5fc587d92c84c674a33f1fe",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/LiveDemo"
+    }
+  },
+  {
+    "name": "Navbar",
+    "path": "src/components/landingnew/Navbar",
+    "sha": "5e8c7ec5024f185f4180c90bd27be9895a80b170",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/Navbar?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/Navbar",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/5e8c7ec5024f185f4180c90bd27be9895a80b170",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/Navbar?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/5e8c7ec5024f185f4180c90bd27be9895a80b170",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/Navbar"
+    }
+  },
+  {
+    "name": "Ownership",
+    "path": "src/components/landingnew/Ownership",
+    "sha": "3587e88bf0deb2dc7ddfcea6b82435b5e805c064",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/Ownership?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/Ownership",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/3587e88bf0deb2dc7ddfcea6b82435b5e805c064",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/Ownership?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/3587e88bf0deb2dc7ddfcea6b82435b5e805c064",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/Ownership"
+    }
+  },
+  {
+    "name": "QuickStart",
+    "path": "src/components/landingnew/QuickStart",
+    "sha": "de771eae63f06d7fa03c29bd59f52619d93e80e4",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/QuickStart?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/QuickStart",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/de771eae63f06d7fa03c29bd59f52619d93e80e4",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/QuickStart?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/de771eae63f06d7fa03c29bd59f52619d93e80e4",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/QuickStart"
+    }
+  },
+  {
+    "name": "Sponsors",
+    "path": "src/components/landingnew/Sponsors",
+    "sha": "f672907a4066db61996aef55d5df51f1a9fad61b",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/Sponsors?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/Sponsors",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/f672907a4066db61996aef55d5df51f1a9fad61b",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/Sponsors?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/f672907a4066db61996aef55d5df51f1a9fad61b",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/Sponsors"
+    }
+  },
+  {
+    "name": "Testimonials",
+    "path": "src/components/landingnew/Testimonials",
+    "sha": "846cdcaa6c513b137872f4fc47d3d1695a031d87",
+    "size": 0,
+    "url": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/Testimonials?ref=main",
+    "html_url": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/Testimonials",
+    "git_url": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/846cdcaa6c513b137872f4fc47d3d1695a031d87",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/DavidHDev/react-bits/contents/src/components/landingnew/Testimonials?ref=main",
+      "git": "https://api.github.com/repos/DavidHDev/react-bits/git/trees/846cdcaa6c513b137872f4fc47d3d1695a031d87",
+      "html": "https://github.com/DavidHDev/react-bits/tree/main/src/components/landingnew/Testimonials"
+    }
+  }
+]

@@ -1,0 +1,1062 @@
+================================================================================
+SILENCE AI — PITCH DECK TEXT v5.0 (23 Slides)
+POSITIONING: AI-CSD — One System. Human-in-the-Loop Intelligence. AI Chatbot-Powered. Every Attack Vector Covered.
+================================================================================
+
+--- SLIDE 1: TITLE / HOOK ---
+/SLnc
+
+HEADLINE: One AI-Powered Cybersecurity Department. Human Judgment Included. Setup by Chatbot.
+SUBHEADLINE: AI-CSD: The Only Security Platform Where Your IT Team Talks to AI — And AI Does the Work
+
+Silence AI
+
+[Design note: Bold, dark background. "AI-CSD" in electric blue. Dashboard showing AI chatbot sidebar + human approval buttons. "AI CHATBOT SETUP" + "HUMAN-IN-THE-LOOP" badges.]
+
+--- SLIDE 2: THE PROBLEM — CYBERSECURITY IS A FRAGMENTED MESS ---
+/SLNC
+
+HEADLINE: Companies Buy 10 Security Tools. Pay for 10 Integrations. Hire 10 Specialists. And Still Get Hacked.
+
+THE REALITY:
+The average SME uses 8–12 separate security tools. Email scanner. Web firewall. Code analyzer. DDoS protection. Bot detection. Each from a different vendor. Each with its own dashboard. Each requiring its own specialist.
+
+THE NUMBERS:
+• 19% of startups go bankrupt after a single cyberattack
+• $500,000 — average damage from ONE DDoS attack
+• $400 billion — global economic damage from downtime every year
+• 20.5 million DDoS attacks in Q1 2025 alone
+
+THE INVISIBLE BARRIER:
+Enterprise-grade cybersecurity costs $50K–$500K/year.
+SMEs — 99% of the global economy — are priced out and left defenseless.
+
+BUT HERE'S THE THING:
+They already HAVE IT professionals. Smart, capable, technical people.
+They just don't have cybersecurity specialists.
+And they definitely don't have the budget for 10 separate tools.
+
+What if ONE system did everything?
+What if their IT guy could set it up by simply chatting with AI?
+What if the AI never acted alone — always asking for human approval on critical decisions?
+
+[Design note: Left: chaotic visual of 10 disconnected security tools, 10 invoices, 10 specialists, 500-page documentation. Right: clean single AI-CSD dashboard with AI chatbot sidebar. "ONE SYSTEM" + "AI CHATBOT SETUP" + "HUMAN IN CONTROL" arrows.]
+
+--- SLIDE 3: THE PROBLEM — "DENIAL OF WALLET" ATTACKS ---
+
+HEADLINE: The Attack That Doesn't Steal — It Bankrupts You Through Your Cloud Bill
+
+A single cyberattack triggered an unbounded autoscaling loop on a Kubernetes cluster.
+Result: $120,000 cloud bill in 72 hours.
+
+Real case study data:
+• July–October 2025 total cost: ₹6,267,201.83 (↑ 362,839% spike)
+• Forecasted damage: ₹7,622,572.41 (↑ 441,330%)
+• Resource breakdown: Cloud functions, GAE apps, GCE instances — all exploited
+
+This isn't a DDoS. This is a "Denial of Wallet" attack.
+And your autoscaling is the weapon turned against you.
+
+THE TRAGEDY:
+Your IT professional saw this coming. They just didn't have ONE unified system to stop it.
+
+[Design note: Show the cost spike graph. Red arrow pointing up. "72 HOURS" in massive font.]
+
+--- SLIDE 4: THE SOLUTION — AI-CSD: ONE SYSTEM, AI CHATBOT, HUMAN CONTROL ---
+
+HEADLINE: AI-CSD: One Platform. One AI Chatbot. Your IT Team Talks to It. And It's Fully Set Up in 4 Minutes.
+
+B2B SaaS designed for the IT professionals who already run your infrastructure.
+Set up in 4 minutes by chatting with AI. No cybersecurity knowledge. No certifications. No consultants.
+No buying 10 tools. No integrating 10 APIs. No managing 10 invoices. No reading documentation.
+
+AI-CSD IS ONE SYSTEM WITH FOUR MODULES + ONE AI CHATBOT:
+
+🔵 MODULE 1: AI-CSD Email
+→ Most advanced email flow visualizer. See every threat before it lands.
+→ Phishing detection, spoofing alerts, malware scanning, spam filtering.
+→ Your IT professional monitors it from the same dashboard.
+
+🟢 MODULE 2: AI-CSD Web
+→ Most advanced web traffic visualizer. Real-time globe view, IP tracking, bandwidth & RPS by country.
+→ WAF, DDoS protection, country blocking, live monitoring.
+→ Human-in-the-loop blocking: AI recommends, your IT professional approves.
+→ Your IT professional configures it from the same dashboard.
+
+🟡 MODULE 3: AI-CSD Code (Supreme)
+→ AI code security analyzer. Finds vulnerabilities before hackers do.
+→ Local scans, auto-fix PRs, security scoring.
+→ Your IT professional runs it from the same dashboard.
+
+🟣 MODULE 4: AI-CSD Agent SDK
+→ Development SDK for coding agents and applications.
+→ SMTP-as-a-Service: Connect to your registration page, password reset, confirmation emails.
+→ Bot Protection API: Alternative to Cloudflare Turnstile. Drop into submission forms, upload forms, chat support.
+→ Your developer integrates it with ONE SDK. ONE API key. ONE documentation.
+
+🤖 AI SETUP CHATBOT — YOUR IT PROFESSIONAL'S PERSONAL SECURITY ASSISTANT
+→ "How do I connect my domain?" — Chatbot guides step by step.
+→ "Why do I need a dedicated folder for dangerous links?" — Chatbot explains the security reason.
+→ "Whitelist this IP for admin panel access." — Chatbot does it instantly.
+→ "Block all IPs from this organization." — Chatbot blacklists the entire range.
+→ "Why is this step required?" — Chatbot answers every "how" and "why."
+→ No documentation. No tutorials. Just conversation.
+
+ONE PLATFORM. ONE DASHBOARD. ONE AI BRAIN. ONE CHATBOT. ONE BILL.
+YOUR IT PROFESSIONAL IS ALWAYS IN CONTROL.
+
+[Design note: Single unified dashboard showing all four modules as tabs + AI chatbot sidebar. 
+Chat bubble showing: "How do I whitelist 192.168.1.1 for admin access?" → AI response: "Done. 192.168.1.1 is now whitelisted for admin panel." 
+"ONE SYSTEM" prominently displayed. "4 MIN CHATBOT SETUP" badge. "ONE BILL" badge.]
+
+--- SLIDE 5: SOLUTION — EMAIL SECURITY THAT OUTPERFORMS GMAIL & OUTLOOK ---
+/SLNC
+
+HEADLINE: We Sent a Spoofed Phishing Email. Gmail & Outlook Missed It. AI-CSD Caught It.
+
+THE TEST:
+• Spoofed sender: kiryenko@rosatom.ru
+• Subject: "IMPORTANT: Your participation in fault tolerance testing"
+• Attachment: test1123.xlsm (malicious macro)
+
+THE RESULT:
+❌ Gmail: Delivered to inbox
+❌ Outlook: Delivered to inbox
+✅ AI-CSD Email Module: Flagged — Possibly spoofed, Malware in attachments, Possibly phishing
+
+AND HERE'S THE KICKER:
+The IT professional who set this up? Zero cybersecurity background.
+They asked the AI chatbot: "How do I connect my domain?"
+Four minutes later: full protection. ONE system. ONE chatbot.
+
+CLIENTS ALREADY PROTECTED:
+NAK (Kazakhstan) | Connect Digital (Portugal)
+Companies with zero cybersecurity employees. Now fully protected by their IT teams using ONE system.
+
+[Design note: Side-by-side screenshots. Outlook inbox vs. AI-CSD Email module. 
+Green checkmark vs. red X. "ONE SYSTEM" badge. "4 MIN CHATBOT SETUP" badge.]
+
+--- SLIDE 6: SOLUTION — AI-CSD WEB vs. THE COMPETITION ---
+/SLnc
+
+HEADLINE: $20/Month vs. $500+/Month. Same Protection. Your IT Guy Sets It Up by Chatting with AI.
+
+| Feature | AI-CSD Web Module ($20/mo) | AWS WAF (comparable plan) |
+|---------|---------------------|---------------------------|
+| WAF with complex attack detection | ✅ | ❌ |
+| DDoS protection | ✅ | Weak at this tier |
+| Proactive 24/7 AI monitoring | ✅ | ❌ |
+| Live users, RPS, bandwidth by country + full history | ✅ | ❌ |
+| Country-level blocking | ✅ | ❌ |
+| Human-in-the-loop blocking (AI recommends, human approves) | ✅ | ❌ |
+| AI chatbot for setup and management | ✅ | ❌ |
+| Part of unified system with email, code, SDK | ✅ | ❌ |
+| Setup time | 4 minutes chatting with AI | 1 day + cybersecurity specialist |
+
+THE DIFFERENCE:
+AWS WAF requires a specialist reading 200-page documentation. 
+AI-CSD requires an IT professional asking an AI chatbot: "How do I protect my website?"
+Same price. 10x the coverage. 1/100th the complexity.
+
+[Design note: Clean comparison table. AI-CSD column highlighted in green. 
+"ONE SYSTEM" badge. "AI CHATBOT" badge. "HUMAN IN CONTROL" badge. "IT PRO READY" badge.]
+
+--- SLIDE 7: SOLUTION — AI-CSD EMAIL vs. OUTLOOK/GMAIL/KASPERSKY ---
+/SLnC
+
+HEADLINE: Email Security at the Price of Gmail. Part of ONE Unified System. Managed by AI Chatbot.
+
+| Feature | AI-CSD Email Module | Outlook/Gmail | Kaspersky (connected) |
+|---------|--------------|---------------|----------------------|
+| Domain-wide email visibility | ✅ | ❌ | ✅ |
+| Admin can delete malicious emails | ✅ | ❌ | ❌ |
+| Active protection against ALL email attack types | ✅ | ❌ | ❌ |
+| AI that manually reviews suspicious emails | ✅ | ❌ | ❌ |
+| AI chatbot for setup and management | ✅ | ❌ | ❌ |
+| Part of unified system (web, code, SDK) | ✅ | ❌ | ❌ |
+| Setup time | 4 minutes chatting with AI | No full security | 1–3 days + cybersecurity specialist |
+
+PRICING: Same as your current email provider. Security included, not extra.
+SETUP: Your IT professional asks the AI chatbot. The chatbot guides them.
+No consultants. No training. No switching between 10 tools. No reading documentation.
+
+[Design note: Three-column comparison. AI-CSD column with green accent. 
+"ONE SYSTEM" badge. "AI CHATBOT SETUP" badge. "IT PRO SETUP" badge.]
+
+--- SLIDE 8: WHY NO ONE ELSE BUILT THIS ---
+/SLNC
+
+HEADLINE: Legacy Cybersecurity Vendors Will NEVER Build AI-CSD. Here's Why.
+
+Building AI-CSD would destroy their business model:
+
+1. FRAGMENTED PRODUCT REVENUE — They sell 10 tools = 10 invoices = 10 specialists.
+   AI-CSD is ONE system = ONE invoice = ONE IT professional.
+   Consolidation kills their revenue.
+
+2. CONSULTANT BILLING — $200/hour for setup and integration of each tool.
+   AI-CSD sets up in 4 minutes via AI chatbot. Your IT professional does it. No consultants.
+
+3. MSSP CONTRACTS — Managed security services worth $50K–$500K/year.
+   AI-CSD eliminates the need for external security teams.
+
+4. BLACK-BOX AI — They sell AI that acts without human oversight.
+   AI-CSD asks your IT professional before every critical action.
+   Trust through transparency. Control through collaboration.
+
+5. DOCUMENTATION LOCK-IN — They profit from complexity that requires 500-page manuals.
+   AI-CSD replaces documentation with an AI chatbot that answers every question.
+   "How do I do this?" → Chatbot answers. "Why do I need this?" → Chatbot explains.
+
+THEIR MOTTO: Fragmentation + complexity + documentation = revenue from specialists & integration
+OUR MOTTO: AI-CSD = ONE system, ONE brain, ONE chatbot, ONE IT professional — with human approval on every critical decision
+
+They sell complexity that requires 10 tools, 10 specialists, and 500-page manuals.
+We sell simplicity: ONE system that covers everything — managed by conversation, not documentation.
+
+[Design note: Split visual. Left: messy enterprise stack with 10 tools, 10 invoices, "NEEDS 10 SPECIALISTS" labels, black-box AI, 500-page manual. Right: clean single AI-CSD dashboard with AI chatbot sidebar, "ONE SYSTEM" + "AI CHATBOT" + "HUMAN APPROVAL" labels.]
+
+--- SLIDE 9: SOLUTION — AI-CSD CODE (SUPREME) ---
+
+HEADLINE: Supreme: Your IT Team Can Now Find & Fix Vulnerabilities — Without Being Security Engineers.
+
+Supreme is NOT a separate product. It is the CODE MODULE of AI-CSD.
+Same dashboard. Same login. Same AI brain. Same chatbot. Just a different tab.
+
+| Feature | Supreme MAX | Supreme Light | Snyk | GitHub CodeQL | Claude Code |
+|---------|-------------|---------------|------|---------------|-------------|
+| Local scans (no code leaves your machine) | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Auto-vulnerability fix | ✅ | ❌ | ✅ | ❌ | ✅ |
+| Part of unified security platform | ✅ | ✅ | ❌ | ❌ | ❌ |
+| AI chatbot for setup and questions | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Price | $18/mo | FREE | $285/mo | $4/mo | Limited access |
+
+THE DIFFERENCE:
+Snyk requires a security engineer to interpret results.
+Supreme — inside AI-CSD — tells your IT professional: "Here's the bug. Here's the fix. Here's the PR."
+And if they don't understand why? They ask the chatbot: "Why is this a vulnerability?"
+Same dashboard where they monitor email threats and web traffic.
+
+[Design note: Product screenshot showing Supreme as a tab/module within the AI-CSD dashboard + chatbot sidebar. 
+"ONE SYSTEM" badge. "AI CHATBOT" badge. "IT PRO READY" badge.]
+
+--- SLIDE 10: SUPREME — THE NUMBERS DON'T LIE ---
+/SLnC
+
+HEADLINE: We Scanned OWASP Juice Shop (Intentionally Vulnerable). Here's What Each Tool Found.
+
+THE BENCHMARK: OWASP Juice Shop — a website built to be hacked.
+
+| Tool | Vulnerabilities Detected |
+|------|-------------------------|
+| Supreme Light (AI-CSD Code Module) | 1,759 |
+| Claude Code | 92 |
+| GitHub CodeQL | 123 |
+| Snyk | 7 |
+
+Supreme Light found 19x more vulnerabilities than the nearest competitor.
+And it's FREE — as part of the AI-CSD platform.
+
+AND YOUR IT PROFESSIONAL CAN USE IT.
+No security engineering background. No complex configurations. No separate tool to learn.
+Just open the Code tab in AI-CSD, click "Scan," and ask the chatbot: "What does this vulnerability mean?"
+
+[Design note: Bar chart visualization. Supreme Light bar towering over others. 
+"1,759" in massive font. "ONE SYSTEM" badge. "AI CHATBOT" badge. "IT PRO READY" badge.]
+
+--- SLIDE 11: AI-CSD AGENT SDK — SECURITY BUILT INTO YOUR CODE ---
+/SLnc
+
+HEADLINE: AI-CSD Agent SDK: Security Features Your Developers Can Drop Into Any App in Minutes.
+
+AI-CSD ISN'T JUST A DASHBOARD. IT'S A PLATFORM.
+
+We provide a development SDK that lets coding agents and applications tap directly into AI-CSD's security infrastructure. ONE SDK. ONE API key. ONE system.
+
+🔵 SMTP-AS-A-SERVICE
+→ Connect AI-CSD's secure SMTP to your registration page
+→ Send confirmation emails, password resets, notifications
+→ Built-in spam filtering, spoofing detection, delivery monitoring
+→ No need for SendGrid, Mailgun, or AWS SES
+
+🟢 BOT PROTECTION API
+→ Alternative to Cloudflare Turnstile
+→ Drop into submission forms, upload forms, chat support widgets
+→ AI-powered bot detection without CAPTCHA friction
+→ Real-time threat scoring, behavioral analysis
+
+WHY THIS MATTERS:
+Your developers don't need to integrate 5 separate services.
+They integrate ONE SDK and get email, bot protection, and security monitoring — all powered by the same AI brain.
+
+EXAMPLE USE CASE:
+A developer builds a SaaS app. They add AI-CSD SDK for:
+→ User registration emails (SMTP service)
+→ Contact form bot protection (Bot Protection API)
+→ Web traffic monitoring (AI-CSD Web module)
+→ Code vulnerability scanning (AI-CSD Code module)
+→ Email threat detection (AI-CSD Email module)
+
+ONE integration. FIVE security layers. ONE bill.
+
+[Design note: Code snippet showing SDK initialization. 
+"npm install @silence-ai/sdk" or similar. 
+Visual: SDK connects to SMTP, Bot Protection, Web, Code, Email — all flowing into ONE AI-CSD brain.]
+
+--- SLIDE 12: HUMAN-IN-THE-LOOP — THE AI ASKS. YOUR IT TEAM DECIDES. ---
+/SLnc
+
+HEADLINE: AI-CSD Never Acts Alone. It Recommends. Your IT Professional Approves.
+
+Most security platforms are black boxes. AI makes decisions. You hope it's right.
+AI-CSD is different. The AI analyzes. The AI recommends. But YOUR IT professional has the final say.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🛡️ PROGRESSIVE IP BLOCKING — HUMAN-APPROVED EVERY STEP
+
+ATTEMPT #1: First Attack Detected
+→ AI-CSD automatically blocks the IP for 1 minute
+→ No human action needed — initial response is instant
+
+ATTEMPT #2: Same IP Attacks Again (after 1-minute block expires)
+→ AI-CSD sends your IT professional a message:
+   "This IP attacked once, was blocked for 1 minute, and is attacking again.
+    I recommend blocking it for 24 hours. How long should I block it?"
+→ Your IT professional replies: "5 days" or "24 hours" or any timeframe
+→ AI-CSD applies the block and logs the decision
+
+ATTEMPT #3: Same IP Attacks Again (after extended block expires)
+→ AI-CSD sends your IT professional a message with full context:
+   "This IP attacked once → blocked 1 min → attacked again → you blocked 24h →
+    now attacking a third time. I recommend blocking for 1 month.
+    What timeframe do you want?"
+→ Your IT professional can accept the recommendation or specify any duration
+→ The IP remains blocked until your IT professional responds
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🤖 MALICIOUS BEHAVIOR DETECTION — BEYOND SIMPLE ATTACKS
+
+AI-CSD doesn't just block brute-force attacks. It detects suspicious patterns:
+
+SCENARIO: Mass User Account Creation
+→ AI-CSD detects: "IP 203.0.113.45 created 47 user accounts in 3 minutes"
+→ AI-CSD asks your IT professional:
+   "This IP address used the registration function 47 times in 3 minutes.
+    Is this malicious behavior, or is this how your application is configured?
+    Should we block this IP address?
+    My suggestion: block for 24 hours."
+→ Your IT professional decides: "Yes, block 24h" or "No, it's a marketing campaign"
+→ AI-CSD learns the pattern for next time
+
+═══════════════════════════════════════════════════════════════════════════════
+
+WHY THIS MATTERS:
+
+✅ NO FALSE POSITIVES RUINING LEGITIMATE USERS
+   The AI doesn't permanently block customers by mistake.
+   Your IT professional reviews every escalation.
+
+✅ CONTEXT-AWARE DECISIONS
+   "Is this malicious or normal behavior?" The AI asks before acting.
+   Your IT professional knows their business. The AI knows the threats.
+   Together, they make the right call.
+
+✅ TRANSPARENCY = TRUST
+   Your team knows WHY every block happened. Full audit trail.
+   Not a black box. A collaborative defense.
+
+✅ LEARNING BY DOING
+   Your IT professional learns cybersecurity by making real decisions.
+   AI-CSD teaches while it protects.
+
+✅ COMPLIANCE & LIABILITY
+   Critical security decisions have human oversight.
+   Regulatory frameworks love this. Insurance providers love this.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+THE COMPETITION:
+Cloudflare: Blocks automatically. No human oversight. False positives kill conversions.
+AWS WAF: Rules-based. Requires a specialist to configure. Black box.
+AI-CSD: AI recommends. Human approves. Transparent. Teachable. Controllable.
+
+[Design note: Timeline visualization showing the 3-attempt escalation flow + malicious behavior detection.
+Attempt 1: Auto-block 1 min (AI acts).
+Attempt 2: AI asks, human replies "24h" (collaboration).
+Attempt 3: AI asks with context, human replies "1 month" (intelligent escalation).
+Mass accounts: AI asks "Is this malicious?" human replies (context-aware).
+"HUMAN APPROVAL" badge on escalations. "NO BLACK BOX" badge.]
+
+--- SLIDE 13: AI SETUP CHATBOT — YOUR IT PROFESSIONAL'S PERSONAL SECURITY ASSISTANT ---
+/SLnc
+
+HEADLINE: No Documentation. No Tutorials. Just Ask the AI Chatbot. Your IT Professional Sets Up AI-CSD by Conversation.
+
+THE PROBLEM WITH EVERY OTHER SECURITY PLATFORM:
+Your IT professional opens the dashboard. They see 50 buttons, 30 menus, and a 500-page PDF manual.
+They close it. They call a consultant. They pay $200/hour.
+
+THE AI-CSD WAY:
+Your IT professional opens the dashboard. They see a chatbot.
+They ask questions. The chatbot answers. The chatbot does.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+💬 SETUP QUESTIONS — THE CHATBOT GUIDES EVERY STEP
+
+"How do I connect my domain to AI-CSD?"
+→ Chatbot: "Go to Settings → Domain. Enter your domain. I'll verify the DNS records. Done."
+
+"Why do I need a dedicated folder for dangerous links?"
+→ Chatbot: "Dangerous links are quarantined to prevent accidental clicks by your team. 
+    This folder acts as a sandbox — your users can't access it, but you can review 
+    threats safely. It's standard security practice."
+
+"How do I enable DDoS protection?"
+→ Chatbot: "Click the Web Module tab → Toggle 'DDoS Shield' to ON. 
+    I'll monitor your traffic patterns and alert you if an attack starts."
+
+"Why is this step required to connect the system?"
+→ Chatbot: "This step verifies domain ownership. Without it, anyone could claim 
+    your domain and intercept your security data. It's a one-time 30-second process."
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔒 ACCESS CONTROL — MANAGE WHITELISTS & BLACKLISTS BY CHAT
+
+"Whitelist 192.168.1.100 for admin panel access."
+→ Chatbot: "Done. 192.168.1.100 is now whitelisted for admin panel. 
+    This IP bypasses all bot protection and rate limiting for /admin routes."
+
+"Blacklist all IPs from this organization."
+→ Chatbot: "I see this IP belongs to AS12345 (ExampleCorp Ltd). 
+    Their IP range is 203.0.113.0/24. Should I blacklist the entire range?"
+→ User: "Yes."
+→ Chatbot: "Done. 256 IPs from ExampleCorp Ltd are now blacklisted. 
+    They cannot access any of your services."
+
+"Show me all whitelisted IPs."
+→ Chatbot: "Here are your current whitelists:
+    • 192.168.1.100 — Admin panel (added 2 days ago)
+    • 10.0.0.50 — API access (added 1 week ago)
+    Would you like to modify any of these?"
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📊 CMC ACCESS — THE CHATBOT CONTROLS EVERYTHING
+
+The AI chatbot has full access to the Centralized Management Console (CMC).
+Your IT professional doesn't need to navigate menus. They just ask:
+
+"How many IPs were blocked today?"
+→ Chatbot: "47 IPs blocked today. 12 for SQL injection, 18 for bot traffic, 
+    9 for geo-anomalies, 8 for known malicious signatures."
+
+"Show me phishing emails from this week."
+→ Chatbot: "23 phishing emails detected this week. 8 from spoofed domains, 
+    5 with malware attachments, 10 with credential-harvesting links."
+
+"Generate a security report for my manager."
+→ Chatbot: "Here's your weekly security summary: [auto-generated report]"
+
+═══════════════════════════════════════════════════════════════════════════════
+
+WHY THIS CHANGES EVERYTHING:
+
+✅ ZERO LEARNING CURVE
+   Your IT professional doesn't need to study cybersecurity.
+   They ask questions. The chatbot teaches them. They learn by doing.
+
+✅ ZERO DOCUMENTATION
+   No 500-page manuals. No YouTube tutorials. No Stack Overflow searches.
+   Just conversation. Natural. Intuitive. Fast.
+
+✅ ZERO FRICTION
+   "Whitelist this IP" takes 5 seconds in chat.
+   In traditional platforms, it takes 5 minutes of menu navigation.
+   Your IT professional actually uses the security features.
+
+✅ FULL AUDIT TRAIL
+   Every chatbot command is logged. Every decision is tracked.
+   "Who whitelisted this IP?" → "Admin Zeinullah, 2 days ago, via chatbot."
+
+THIS ISN'T A SECURITY TOOL. IT'S A SECURITY CONVERSATION.
+
+[Design note: Chat interface mockup showing conversation flow.
+User: "How do I whitelist 192.168.1.1?" 
+AI: "Go to Access Control → Whitelist. Enter 192.168.1.1. Or I can do it for you now. Should I?"
+User: "Yes, do it."
+AI: "Done. 192.168.1.1 is whitelisted. Would you like to set expiration?"
+"AI CHATBOT" badge. "NO DOCUMENTATION NEEDED" badge. "5-SECOND SETUP" badge.]
+
+--- SLIDE 14: CMC — COMMAND & CONTROL CENTER ---
+/SLnc
+
+HEADLINE: CMC: Your IT Professional's Daily Security Briefing — Written by AI, Approved by Humans.
+
+Your IT professional opens AI-CSD every morning. They don't read logs. They read summaries.
+Or better — they ask the chatbot: "What's my security status today?"
+
+THE CMC DASHBOARD DELIVERS:
+
+📊 EXECUTIVE SUMMARY (Auto-generated by AI)
+→ "Today, AI-CSD blocked 47 IP addresses. 3 were repeat attackers escalated to human approval.
+    12 phishing emails were flagged. 1 contained a dangerous link to a known malware domain.
+    Your web traffic is normal. No DDoS patterns detected."
+
+📧 EMAIL SECURITY REPORT
+→ "23 emails flagged as Possibly Phishing:
+    • 8 from spoofed domains mimicking your partners
+    • 5 with malicious attachments (3 .xlsm macros, 2 .zip executables)
+    • 10 with dangerous links to credential-harvesting sites
+   7 emails flagged as Spam. 156 emails confirmed Secure."
+
+🌐 WEB TRAFFIC REPORT
+→ "15,420 requests processed. 47 IPs blocked:
+    • 12 IPs — repeated SQL injection attempts (blocked at attempt #2, approved for 24h)
+    • 18 IPs — bot traffic exceeding rate limits (blocked at attempt #1, 1 min)
+    • 9 IPs — geographic anomalies (blocked at attempt #2, approved for 5 days)
+    • 8 IPs — known malicious signatures (blocked at attempt #1, 1 min)"
+
+🤖 BEHAVIORAL ANOMALIES
+→ "1 IP flagged for suspicious behavior:
+    • 203.0.113.45 — created 47 user accounts in 3 minutes
+    • Escalated to human approval: 'Is this malicious or normal?'
+    • Your IT professional responded: 'Block 24h — suspected bot farm'"
+
+🛡️ THREAT INTELLIGENCE
+→ "2 new CVEs published today affecting software versions in your stack.
+    AI-CSD Code Module scanned your repos — no exposure detected.
+    Recommended action: None. System is secure."
+
+═══════════════════════════════════════════════════════════════════════════════
+
+WHY THIS MATTERS:
+
+YOUR IT PROFESSIONAL SPENDS 5 MINUTES, NOT 5 HOURS.
+No reading raw logs. No parsing JSON. No SQL queries.
+The AI summarizes. The human decides. The system executes.
+
+AND IF THEY HAVE QUESTIONS?
+They ask the chatbot. "Why was this IP blocked?" "What does this CVE mean?"
+"Should I worry about this phishing email?"
+The chatbot answers. Instantly. Accurately. In plain English.
+
+THIS ISN'T A SECURITY TOOL. IT'S A SECURITY ASSISTANT.
+
+[Design note: CMC dashboard mockup showing summary cards + chatbot sidebar.
+Clean, minimal UI. "5-MINUTE BRIEFING" badge. "WRITTEN BY AI" badge. 
+"APPROVED BY HUMANS" badge. "AI CHATBOT" badge.]
+
+--- SLIDE 15: INTERNATIONAL EXPANSION — $1.2M IN CLOUD CREDITS ---
+/SLnC
+
+HEADLINE: Global Presence = Instant Trust. $1.2M in Cloud Credits Already Secured.
+
+WHY REGIONAL MATTERS:
+• Local infrastructure — regional servers + payment gateways
+• Local legal entity — resolves jurisdictional trust instantly
+• Regional compliance alignment — e.g., Malaysia = ASEAN-wide sales & faster audits
+
+CLOUD CREDITS SECURED (in $ thousands):
+🇹🇷 Turkey: Alibaba Cloud ($120K) + IBM ($120K) + Akamai ($120K)
+🇭🇰 Hong Kong: Huawei Cloud ($150K)
+🇦🇪 UAE: GCP ($350K)
+🇳🇱 Netherlands: OVHCloud ($116K)
+🇲🇾 Malaysia: Microsoft Azure ($150K)
+🇺🇸 USA: AWS ($100K)
+🇰🇿 Kazakhstan: VK Cloud + Yandex ✅ $21,000 ALREADY OBTAINED
+
+[Design note: World map with highlighted countries. Credit amounts as badges.]
+
+--- SLIDE 16: MARKET SIZE ---
+/SLnc
+
+HEADLINE: We're Not Just Playing in Cybersecurity. We're Redefining Who Can Do It.
+
+🌍 TAM (Total Addressable Market)
+Global cybersecurity market: $520+ billion by 2026
+
+🎯 SAM (Serviceable Addressable Market)
+$80 billion — the segment of the cybersecurity market addressable by AI-powered, IT-professional-operated platforms
+By expanding beyond traditional cybersecurity into AI-powered infrastructure protection
+
+🚀 SOM (Serviceable Obtainable Market)
+$500 million — our realistic annual revenue target at scale
+
+THE MULTIPLIER EFFECT:
+There are 50 million IT professionals worldwide.
+There are 3 million cybersecurity professionals.
+We just turned 50 million IT professionals into cybersecurity professionals — with ONE system and ONE chatbot.
+
+[Design note: Three concentric circles. TAM largest, SOM smallest. Numbers in bold. "50M IT PROS" badge. "ONE SYSTEM" badge. "AI CHATBOT" badge.]
+
+--- SLIDE 17: ROADMAP — ONE SYSTEM, MORE MODULES ---
+/SLnc
+
+HEADLINE: Every New Module Is a New Attack Vector Covered by AI-CSD. Same System. Same Dashboard. Same Chatbot.
+
+We are not building random products. We are expanding AI-CSD — 
+one AI-powered cybersecurity department that any IT professional can operate.
+
+2026 — Q1-Q2: FOUNDATION
+→ AI-CSD v1.0: Email Module + Web Module + Code Module (Supreme) + Agent SDK + CMC + Human-in-the-Loop + AI Setup Chatbot
+→ Moonshot AI partnership: AI-CSD powered by Kimi K2.6 API
+→ International entity registrations: Kazakhstan, UAE, Turkey
+
+2026 — Q3-Q4: EXPANSION
+→ AI-CSD v2.0: Secure OS Module — hardened OS for AI-powered development environments
+→ AI-CSD v3.0: Secure Router Module — network-level threat detection at the edge
+→ B2G contracts: Central Asia government sector
+
+2027 — Q1-Q2: SCALE
+→ AI-CSD v4.0: Mobile EDR Module — endpoint detection & response for mobile devices
+→ B2G expansion: Turkey government sector
+→ Series A: HQ registration in Qatar
+
+2027 — Q3-Q4: GLOBAL
+→ AI-CSD v5.0: Full-stack coverage — email, web, code, SDK, OS, network, mobile
+→ Qatar HQ operational with Invest Qatar support
+→ Expansion to MENA, ASEAN, and European markets
+
+WHY THIS ISN'T LACK OF FOCUS:
+Each module isn't a new product. It's a new tab in the same dashboard.
+Hackers don't attack one vector. They attack everything.
+AI-CSD defends everything — as ONE unified system — operated by your IT team.
+
+[Design note: Single dashboard with sidebar showing modules as expandable items:
+Email → Web → Code → SDK → CMC → Chatbot → OS → Router → Mobile. All connected to ONE AI core at center.]
+
+--- SLIDE 18: TEAM — GOVERNMENT-GRADE EXPERTISE ---
+/SLnc
+
+HEADLINE: We Built the Cybersecurity Infrastructure of an Entire Country. Now We Built ONE System Any IT Pro Can Use.
+
+CO-FOUNDERS:
+
+Zeinullah Iman — CEO
+• Google & Cisco certified
+• Member of Kazakhstan's #1 CTF team (FR13NDS)
+
+Nurislam Nurdullayev — CISO
+• Deep expertise in government security operations
+
+THE BACKBONE:
+JSC National Informational Technologies (CyberSecurity Department)
+→ Built 80% of Kazakhstan's governmental IT infrastructure
+
+JSC State Technical Service
+→ Monitors security of ALL governmental IT assets — 24/7/365
+
+WE BUILT THE HARD STUFF SO YOUR IT PROFESSIONAL DOESN'T HAVE TO.
+ONE SYSTEM. ONE LOGIN. ONE BRAIN. ONE CHATBOT.
+
+[Design note: Team photos. Government logos. CTF certificates. "GOVERNMENT GRADE" badge. "ONE SYSTEM" badge.]
+
+--- SLIDE 19: TEAM — WORLD-CLASS ENGINEERS ---
+/SLnC
+
+HEADLINE: Kazakhstan's Best Engineers. Building ONE System for Every IT Professional on Earth.
+
+THE TEAM: 14 elite engineers
+
+Zeinullah Iman (CEO):
+• Google Cybersecurity Certificate
+• Cisco CCNA: Switching, Routing & Wireless Essentials
+• CTFTime FR13NDS TEAM — country's best CTF team
+
+THE SQUAD:
+• NASA Space Apps Challenge winners
+• TUMAR ONE award recipients
+• ICPC Certificate of Achievement holders
+• International math competition winners
+• Top-ranked ethical hackers
+
+WE'RE NOT JUST SECURITY EXPERTS. WE'RE EXPERTS AT MAKING SECURITY SIMPLE.
+ONE SYSTEM. ONE EXPERIENCE. ONE CHATBOT. ZERO COMPLEXITY.
+
+[Design note: Grid of certificates and awards. Team photo. "14" in large font. "ONE SYSTEM" badge. "AI CHATBOT" badge.]
+
+--- SLIDE 20: STRATEGIC PARTNERSHIP — MOONSHOT AI ---
+/SLnc
+
+HEADLINE: A $20 Billion AI Giant Chose Us First. Because We Built ONE System That Does Everything.
+
+THE INBOUND:
+Moonshot AI — one of China's "AI Tigers," valued at $20+ billion, creators of Kimi K2.6 — reached out to us.
+Their Partnership Lead contacted our CEO Zeinullah Iman directly.
+They didn't just express interest. They proposed collaboration.
+
+WHY MOONSHOT AI CARES:
+They have the best AI model on the planet. But they need a cybersecurity layer that ANY developer can use.
+Not 10 tools. Not 10 integrations. Not 500-page manuals. 
+ONE system with ONE chatbot that covers email, web, code, and SDK.
+
+THE PARTNERSHIP: AI-CSD — AI-Powered Cybersecurity Department
+
+What We're Building Together:
+
+1. ALL-IN-ONE SECURITY PLATFORM
+   → Scans your application code for vulnerabilities
+   → Performs live penetration testing on deployed applications
+   → Delivers actionable security recommendations in plain English:
+     "Hey — no DDoS protection detected. Enable AI-CSD Web Module now."
+
+2. AI-POWERED CODE REMEDIATION
+   → Automatically sends Pull Requests to your GitHub repo
+   → Fixes vulnerabilities with production-ready code
+   → Example: AI tech support chatbot gets rate-limiting:
+     "Limit inquiries per user to prevent abuse"
+
+3. LLM-AGENT FRAMEWORK + SDK
+   → Built as a framework providing LLMs with external CLI-based tools
+   → Equips AI agents with cybersecurity skills
+   → AI-CSD Agent SDK: SMTP service, bot protection, security APIs — all in ONE package
+   → Powered by Moonshot AI's Kimi API — we pay, they scale
+
+4. HUMAN-IN-THE-LOOP INTELLIGENCE
+   → Kimi-powered AI analyzes threats
+   → Recommends actions to IT professionals
+   → Human approval on every critical decision
+   → Transparent, auditable, compliant
+
+5. AI SETUP CHATBOT
+   → Kimi-powered conversational interface for setup and management
+   → Answers "how" and "why" questions in natural language
+   → Controls all CMC functions via chat
+   → No documentation. No tutorials. Just conversation.
+
+THE MUTUAL WIN:
+• Silence AI: Access to trillion-parameter Kimi K2.6, API infrastructure, global reach
+• Moonshot AI: AI-CSD becomes their flagship cybersecurity offering — ONE system bundled with Kimi ecosystem
+• The Market: First AI-native security platform backed by a $20B AI leader — usable by ANY IT professional
+
+WHY THIS MATTERS:
+Moonshot AI doesn't partner with startups. They build.
+They chose us because we built what they couldn't — and shouldn't — build themselves:
+ONE cybersecurity system that covers every attack vector — with human judgment at the center — managed by conversation.
+
+[Design note: Moonshot AI logo + Silence AI logo. "$20B VALUATION" badge. 
+Visual: Single AI-CSD system with all modules radiating from Kimi-powered brain + chatbot interface. 
+"HUMAN APPROVAL" + "AI CHATBOT" badges at center.]
+
+--- SLIDE 21: CLIENT PIPELINE — REVENUE ALREADY IN MOTION ---
+/SLnc
+
+HEADLINE: Two Enterprise Pilots. $195K ARR in Testing. 2,050 Users Protected by ONE System.
+
+These aren't prospects. These are signed pilots entering active testing.
+And the IT professionals running them? Zero cybersecurity background. ONE system. ONE chatbot.
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  🏛️ AKIMAT OF ASTANA (City Administration)                                 │
+│                                                                             │
+│  • Users: 1,500 government employees                                        │
+│  • Price: $3.50/user/month                                                  │
+│  • Monthly Revenue: $5,250                                                  │
+│  • Annual Revenue: $63,000                                                  │
+│  • Profit Margin: 75–90%                                                    │
+│  • Infrastructure: Everything runs locally except SMTP server               │
+│  • IT Team: 3 IT professionals, 0 cybersecurity specialists                │
+│  • System: AI-CSD (ONE system, all modules, AI chatbot)                    │
+│                                                                             │
+│  WHY THIS MATTERS:                                                          │
+│  Government clients don't churn. 3-year contracts are standard.            │
+│  Local deployment = zero data sovereignty concerns = faster approvals.       │
+│  One city administration = template for all 17 regions of Kazakhstan.        │
+│  THEIR IT TEAM RUNS ONE SYSTEM. NOT 10 TOOLS. ONE CHATBOT. NO MANUALS.    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  🎓 QAZAQ AI RESEARCH UNIVERSITY (Kazakhstan's Newest University)           │
+│                                                                             │
+│  • Users: 550 students, faculty & researchers                               │
+│  • Price: $20/user/month                                                    │
+│  • Monthly Revenue: $11,000                                                 │
+│  • Annual Revenue: $132,000                                                 │
+│  • Profit Margin: 50–60%                                                    │
+│  • Infrastructure: Fully cloud-hosted by Silence AI                        │
+│  • IT Team: 2 IT professionals, 0 cybersecurity specialists                   │
+│  • System: AI-CSD (ONE system, all modules, AI chatbot)                    │
+│                                                                             │
+│  WHY THIS MATTERS:                                                          │
+│  AI-focused university = early adopters who become evangelists.               │
+│  $20/user proves premium pricing works in emerging markets.                │
+│  University networks = gateway to 150+ Kazakh universities.                  │
+│  THEIR IT TEAM RUNS ONE SYSTEM. NOT 10 TOOLS. ONE CHATBOT. NO MANUALS.    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+
+THE COMBINED PICTURE:
+
+  Total Users:        2,050
+  Monthly Revenue:    $16,250
+  Annual Revenue:     $195,000
+  Monthly Profit:     $9,438 – $11,325
+  Annual Profit:      $113,250 – $135,900
+  Blended ARPU:       $7.93/month
+  IT Professionals Running Security: 5
+  Cybersecurity Specialists Hired: 0
+  Security Tools Purchased: 1 (AI-CSD)
+  Documentation Pages Read: 0
+
+═══════════════════════════════════════════════════════════════════════════════
+
+THE MULTIPLIER EFFECT:
+
+  Akimat of Astana → 17 regional akimats in Kazakhstan
+  Potential: 17 × $63,000 = $1,071,000 ARR
+  Each akimat has an IT team. None have cybersecurity specialists.
+  Each akimat needs ONE system. Not 10. One chatbot. No manuals.
+
+  Qazaq AI University → 150+ universities in Kazakhstan
+  Potential: 150 × $132,000 = $19,800,000 ARR
+  Each university has an IT department. None have cybersecurity specialists.
+  Each university needs ONE system. Not 10. One chatbot. No manuals.
+
+  And that's just ONE country.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+WHAT THIS PROVES:
+
+  ✅ Product-market fit at $3.50 (government, price-sensitive, IT-team-operated)
+  ✅ Product-market fit at $20.00 (tech-forward, premium buyers, IT-team-operated)
+  ✅ Local deployment model works for compliance-heavy clients
+  ✅ Cloud-hosted model works for convenience-focused clients
+  ✅ ONE system replaces 10 tools = massive cost savings for clients
+  ✅ AI chatbot eliminates documentation barrier = faster adoption
+  ✅ ONE UNIFIED TRUTH: IT professionals can do cybersecurity with ONE system and ONE chatbot. Without being cybersecurity specialists. Without reading manuals.
+
+[Design note: Two client cards side by side. Akimat in government blue. 
+University in tech purple. Combined totals in bold center. 
+"$195K ARR" in massive font. "ONE SYSTEM" + "AI CHATBOT" badges on each card.]
+
+--- SLIDE 22: THE CHALLENGES — WHY WE NEED THIS ROUND NOW ---
+/SLnc
+
+HEADLINE: We Have Product-Market Fit. We Have Revenue. We Have Two Blockers That $500K Solves.
+
+THE TRUTH:
+We've signed pilots. We've built ONE working system. We've secured a $20B partner.
+But two operational gaps are killing deals before they start.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🚫 BLOCKER #1: NO ENTERPRISE-GRADE CERTIFICATIONS
+
+THE PROBLEM:
+Mid-market and enterprise clients ask one question before anything else:
+"Do you have SOC 2? ISO 27001? PCI-DSS?"
+
+We say: "Not yet."
+They say: "Call us when you do."
+
+THE DAMAGE:
+• 8 qualified enterprise leads in Kazakhstan alone — dead on arrival
+• Akimat of Astana pilot is running, but full rollout blocked pending compliance
+• Qazaq AI University is testing, but procurement requires ISO certification
+• Average enterprise deal size: $50K–$200K/year. All on hold.
+
+THE FIX (funded by this round):
+→ SOC 2 Type II audit & certification: $45K–$60K
+→ ISO 27001 certification: $25K–$35K
+→ PCI-DSS compliance (for payment data handling): $20K–$30K
+→ Timeline: 3–4 months from funding
+→ Result: Every "no" becomes a "yes"
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🚫 BLOCKER #2: NO LOCAL ENTITY IN CLIENT JURISDICTIONS
+
+THE PROBLEM:
+Mid-level enterprises in Kazakhstan, Turkey, Portugal, and Malaysia ask:
+"Are you registered here? Can we sue you locally if something goes wrong?"
+
+Right now, Silence AI operates under an Emirati entity.
+Clients don't want to fly to the UAE to resolve jurisdictional disputes.
+They don't want to sign contracts governed by foreign law.
+They want local presence. Local accountability. Local trust.
+
+THE DAMAGE:
+• 5 enterprise deals in Kazakhstan — paused until local entity registration
+• 3 deals in Turkey — procurement requires Turkish legal counterparty
+• 2 deals in Portugal — EU clients demand EU-registered vendor
+• 1 deal in Malaysia — government contract requires local incorporation
+
+THE FIX (funded by this round):
+→ Kazakhstan: Local LLC registration + legal compliance: $15K
+→ Turkey: Local entity setup + tax registration: $20K
+→ Portugal: EU subsidiary (via Estonia e-Residency or local): $12K
+→ Malaysia: Local Sdn Bhd registration: $18K
+→ Total legal & registration costs: $65K
+→ Timeline: 2–3 months per jurisdiction
+→ Result: "Where are you registered?" → "Right here."
+
+═══════════════════════════════════════════════════════════════════════════════
+
+THE COMBINED IMPACT:
+
+WITHOUT these two blockers solved:
+  • Current pipeline value: $195K ARR (2 pilots)
+  • Lost pipeline value: $400K+ ARR (15+ stalled deals)
+  • Growth rate: Linear, slow, frustrating
+
+WITH these two blockers solved:
+  • Unlocked pipeline: $600K+ ARR immediate
+  • Enterprise sales cycle: 6 months → 2 months
+  • Geographic expansion: 1 country → 5 countries simultaneously
+  • Growth rate: Exponential
+
+═══════════════════════════════════════════════════════════════════════════════
+
+WHY THIS IS THE PERFECT TIME TO INVEST:
+
+We didn't build a product and then discover we need certifications.
+We discovered certifications are the only thing standing between us and $600K ARR.
+
+We didn't build a product and then realize we need local entities.
+We realized local entities are the only thing standing between us and 5 new markets.
+
+This isn't a startup that needs money to find product-market fit.
+This is a startup that found product-market fit — and needs money to remove the operational barriers that are physically blocking revenue.
+
+$500K doesn't fund exploration. It funds execution.
+
+[Design note: Two red "BLOCKER" cards with X marks. Below each: the fix in green with checkmark. 
+Bottom: "$195K → $600K+ ARR" arrow. Timeline: "3–4 months to unlock." 
+Tone: honest, confident, not defensive.]
+
+--- SLIDE 23: QATAR HQ — THE SERIES A STRATEGIC ANCHOR ---
+/SLnc
+
+HEADLINE: Series A HQ in Qatar: $5.5M in Government Funding + 80% R&D Subsidies
+
+WHY QATAR:
+Qatar is building the MENA region's premier AI and cybersecurity hub.
+They want us there. And they're willing to pay for it.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🏛️ INVEST QATAR — STARTUP QATAR INVESTMENT PROGRAM
+
+• GROW Stream: Up to $5.5 million for established startups expanding to Qatar
+  (Note: Funding is trenched based on mutually agreed milestones)
+• START Stream: Up to $1.1 million for seed-stage startups
+• Additional benefits:
+  → Free office space in leading incubators
+  → Subsidized co-working spaces
+  → Entrepreneur visas & flexible work permits
+  → Registration & licensing cost waivers
+  → Subsidized housing support
+  → Talents & internship support programs
+
+CYBERSECURITY IS A PRIORITY SECTOR for Invest Qatar.
+We qualify. We apply. We win.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔬 QRDI COUNCIL — TECHNOLOGY DEVELOPMENT GRANT (TDG)
+
+• Up to QAR 10 million (~$2.75M) per project
+• Co-funding for R&D projects (1–3 years duration)
+• Covers:
+  → Manpower (salaries, allowances for project staff)
+  → Capital expenditure (equipment, hardware, infrastructure)
+  → Other operating expenses (materials, technical services, travel)
+
+• Support levels vary by cost category and company type
+• Open to all companies incorporated in Qatar
+• International companies can apply with commitment to establish local entity
+
+═══════════════════════════════════════════════════════════════════════════════
+
+💡 WHAT THIS MEANS FOR SILENCE AI:
+
+SCENARIO: We register HQ in Qatar at Series A.
+
+R&D COSTS COVERED:
+• AI model training infrastructure
+• Chip manufacturing systems (e.g., ASML-class equipment for secure hardware)
+• Engineering salaries for AI-CSD development
+• Security research lab setup
+
+THE MATH:
+• $5.5M from Invest Qatar (GROW stream) → growth capital
+• TDG co-funding → covers 50%+ of R&D spend (up to $2.75M per project)
+• Combined: $8M+ in non-dilutive + co-funding capital
+• Result: We build faster, hire faster, scale faster — with less equity dilution.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+THE STRATEGIC ADVANTAGE:
+
+Qatar isn't just funding. It's a launchpad.
+• MENA hub = access to UAE, Saudi Arabia, Kuwait, Bahrain
+• Government-backed = instant credibility in B2G sales
+• Free zone benefits = 100% foreign ownership, profit repatriation, zero tax
+• English common law judicial system (QFC)
+
+We don't just get an office. We get a fortress.
+
+[Design note: Qatar flag + map. "$5.5M" and "80% R&D" as hero badges. 
+Split layout: left = Invest Qatar benefits, right = QRDI TDG details. 
+"Series A" timeline marker.]
+
+--- SLIDE 24: INVESTMENT ASK ---
+/SLnC
+
+HEADLINE: $500K to Turn 50 Million IT Professionals Into Cybersecurity Departments — With ONE System and ONE Chatbot.
+
+USE OF FUNDS:
+• Product Development & Compliance: 54.2% ($271K)
+  → AI-CSD v2.0 (new modules), compliance certifications (SOC 2, ISO 27001, PCI-DSS)
+• Marketing: 30.6% ($153K)
+  → SMB acquisition, international expansion, "ONE SYSTEM + AI CHATBOT" brand campaign
+• Lawyers: 9.1% ($45.5K)
+  → International entity setup (Kazakhstan, Turkey, Portugal, Malaysia), B2G contracts
+• Enhanced Threat Intelligence: 6.1% ($30.5K)
+  → Real-time threat feeds, AI model training
+
+ALREADY SECURED: $200,000
+FROM: DOMiNO | ENTORE
+
+TRACTION TO DATE:
+• $195K ARR in active pilots (Akimat + Qazaq AI University)
+• $1.2M in cloud credits secured across 7 countries
+• $20B Moonshot AI partnership confirmed
+• 80% of Kazakhstan government IT built by our parent company
+• Series A Qatar HQ: $5.5M + TDG co-funding pipeline ready
+• 15+ stalled enterprise deals waiting on certifications & local entities
+• 5 IT professionals already running AI-CSD via AI chatbot. 0 cybersecurity specialists hired.
+• 1 system. Not 10. Not 5. ONE. One chatbot. No manuals.
+
+THE $500K UNLOCKS:
+• $600K+ ARR from stalled pipeline (certifications + local entities)
+• 5 new markets operational in 3 months
+• Enterprise sales cycle: 6 months → 2 months
+• Path to Series A Qatar: $8M+ non-dilutive capital
+• 50 million IT professionals who can now do cybersecurity with ONE system and ONE chatbot
+
+THE VISION:
+There are 50 million IT professionals on Earth.
+There are 3 million cybersecurity professionals.
+That gap is why 99% of companies are defenseless.
+
+AI-CSD closes that gap.
+Not with 10 tools. Not with 5 integrations. Not with 500-page manuals.
+With ONE system. ONE chatbot. And human judgment at the center.
+
+silenceai.net
+
+[Design note: Pie chart for fund breakdown. "$200K SECURED" badge. 
+"$195K ARR" and "$20B PARTNER" and "$5.5M QATAR" and "$600K+ PIPELINE" 
+as validation badges. "50M IT PROS" hero badge. "ONE SYSTEM" + "AI CHATBOT" central badges.
+Clean CTA. "3 MONTHS TO UNLOCK" timeline.]
+
+================================================================================
+END OF PITCH DECK — 24 SLIDES
+================================================================================

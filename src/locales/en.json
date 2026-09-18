@@ -1,0 +1,2466 @@
+{
+  "homeCompliance": {
+    "badge": "Regulatory Compliance",
+    "title": "Built for Global Compliance",
+    "subtitle": "Continuous live compliance coverage",
+    "statusLabel": "Compliant",
+    "supremeOnly": "Supreme only",
+    "cards": {
+      "gdpr": {
+        "desc": "The world's most stringent privacy and security law, governing personal data of all EU residents. Sets the global benchmark for data protection worldwide."
+      },
+      "ukGdpr": {
+        "desc": "Post-Brexit UK equivalent of EU GDPR, retained in domestic law. Substantively identical in scope and obligations — EU GDPR compliance extends to UK GDPR."
+      },
+      "ccpa": {
+        "desc": "Registration uses Google OAuth, which transmits profile data (name, email, Google ID) to our servers — this is personal data under CCPA. Users retain full rights to know, access, and delete their account data at any time."
+      },
+      "pipeda": {
+        "desc": "Applies to any commercial organization handling Canadian residents' data regardless of where the company is based. As we scale globally, personal data from Canadian users is handled with the same minimal-collection standards."
+      },
+      "ksaPdpl": {
+        "desc": "Saudi Personal Data Protection Law enforced by SDAIA. Governs collection, processing, and cross-border transfer of personal data."
+      },
+      "uaePdpl": {
+        "desc": "UAE Personal Data Protection Law regulating personal data processing across the mainland and free zones, including DIFC and ADGM."
+      },
+      "qatarPdpl": {
+        "desc": "Qatar's Personal Data Privacy Protection Law administered by the Ministry of Transport and Communications."
+      },
+      "bahrainPdpl": {
+        "desc": "Bahrain Personal Data Protection Law regulated by the Personal Data Protection Authority (PDPA), aligned with international standards."
+      },
+      "kuwaitDp": {
+        "desc": "Kuwait's Electronic Communications and Transactions Law establishing data protection obligations for electronic service providers."
+      },
+      "omanPdpl": {
+        "desc": "Oman Personal Data Protection Law establishing comprehensive rights for data subjects and obligations for controllers and processors."
+      },
+      "privacyByDesign": {
+        "desc": "Supreme's code scanning runs entirely on your local machine — no source code is ever transmitted or processed externally. Account data (Google OAuth profile) is handled separately under our privacy policy."
+      }
+    }
+  },
+  "homePartners": {
+    "title": "Clients and Partners",
+    "subtitle": "Featured here are some of our leading clients and partners; this is not a complete list.",
+    "marketCap": "Market Cap",
+    "billion": "Billion",
+    "million": "Million"
+  },
+  "supremeInstructions": {
+    "light": "Light",
+    "videoInstructions": "video instructions",
+    "lightVideoTitle": "Supreme Light Video Instructions",
+    "openYoutube": "Open video on YouTube",
+    "maxPlaceholder": "Video placeholder — full tutorial will be added soon."
+  },
+  "aiSocModal": {
+    "title": "Admin Console",
+    "emailSecurity": "Login/Register to Email security",
+    "webSecurity": "Login/Register to Web security",
+    "getOnlyOffice": "Get OnlyOffice"
+  },
+  "emailSecurityModal": {
+    "title": "Email Security",
+    "subtitle": "Select how you would like to access your account",
+    "webmail": {
+      "title": "Webmail",
+      "desc": "Access your inbox directly"
+    },
+    "admin": {
+      "title": "Admin Console",
+      "desc": "Manage security settings and users"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Cybersecurity is no longer",
+      "titleHighlight": "complicated or expensive anymore",
+      "subtitle": "Build securely. Deploy confidently."
+    },
+    "systems": {
+      "title": "Systems",
+      "cta": "View details",
+      "aiSoc": {
+        "title": "AI-CSD",
+        "desc": "Managed detection & response system powered and operated by AI. Used to prevent web and email attacks",
+        "badge": "Subscription"
+      },
+      "sithub": {
+        "title": "Sithub",
+        "desc": "Self-hosted GitHub alternative with built-in security scanning. All repositories and code analysis stay within your network.",
+        "badge": "Subscription"
+      },
+      "supreme": {
+        "title": "Supreme",
+        "desc": "Local code vulnerability scanner for VSCode. Analyze code without sending it to external servers.",
+        "badge": "Extension"
+      }
+    },
+    "services": {
+      "title": "Custom development services",
+      "subtitle": "AI agents, integrations, and full-cycle software delivery with security baked in from day one.",
+      "cta": "View services",
+      "cardsTitle": {
+        "agents": "Agents",
+        "integrations": "Integrations",
+        "delivery": "Delivery"
+      },
+      "cards": {
+        "agents": "Production-grade AI agents with guardrails, RAG, and secure connectors.",
+        "integrations": "Vendor-neutral integrations with your stack, IAM, and data governance.",
+        "delivery": "Full-cycle delivery with reliability SLOs, observability, and security reviews."
+      }
+    },
+    "resources": {
+      "title": "Featured articles",
+      "subtitle": "Silence AI is one of few private companies that have government level intelligence.",
+      "viewAll": "View all articles"
+    },
+    "compliance": {
+      "title": "Built for Global Compliance"
+    }
+  },
+  "documentation": {
+    "tabs": {
+      "web": "Web Security",
+      "email": "Email Security"
+    },
+    "system": {
+      "sections": "Sections",
+      "topics": "Topics",
+      "tableOfContents": "Table of contents",
+      "close": "Close"
+    },
+    "webSecurity": {
+      "placeholder": {
+        "badge": "Web Security",
+        "title": "Documentation is coming soon",
+        "description": "We are preparing a detailed guide for configuring and protecting web applications. Check back soon — the materials will appear shortly."
+      }
+    },
+    "pricingMicrosoft": {
+      "business": "Business",
+      "enterprise": "Enterprise",
+      "withoutTeams": "Plans without Teams",
+      "withTeams": "With Teams",
+      "yearly": "Yearly",
+      "monthly": "Monthly",
+      "planHighlights": "Plan highlights",
+      "userMonth": "user/month",
+      "paidYearly": "paid yearly",
+      "paidMonthly": "paid monthly",
+      "plans": {
+        "businessPremium": {
+          "title": "Silence 365 Business Max"
+        },
+        "businessStandard": {
+          "title": "Silence 365 Business Standard"
+        },
+        "businessBasic": {
+          "title": "Microsoft 365 Business Basic (no Teams)"
+        },
+        "enterpriseE3": {
+          "title": "Silence 365 Enterprise 300+"
+        },
+        "enterpriseE5": {
+          "title": "Silence 365 Enterprise 500+"
+        }
+      },
+      "features": {
+        "secureAccess300": "Unlimited number of users (based on organization size)",
+        "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
+        "adminConsole": "Admin console with domain-wide email management and bulk operations",
+        "aiThreatDetection": "AI-powered threat detection with automatic email categorization",
+        "securityPipeline": "Multi-layered email security pipeline (SPF, DKIM, DMARC, spam, malware, phishing)",
+        "securityFolders": "Email sorting into security folders (Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed)",
+        "linkScannerAv": "Advanced link scanner and antivirus protection for attachments",
+        "emailFlowVisualization": "Email flow visualization across the domain/organization with comprehensive filters",
+        "bulkManageDelete": "Ability to manage and delete emails across all users in the domain",
+        "customFoldersRules": "Custom folders with auto-filtering rules (sender, domain, subject)",
+        "storage10gb": "10 GB secure mailbox storage per user",
+        "storage5tb": "5 TB secure mailbox storage per user",
+        "storage10tb": "10 TB secure mailbox storage per user",
+        "multiAccountSupport": "Multi-account support (Gmail/Outlook integration)",
+        "support247": "24/7 email and web support",
+        "fullTextSearch": "Email search with full-text capabilities",
+        "aiAssistedCategorization": "AI-assisted email categorization into security folders",
+        "basicFiltering": "Custom folders with basic filtering rules",
+        "prioritySupport": "Priority support with faster response times",
+        "dedicatedAM": "Dedicated account management",
+        "unlimitedUsers": "Supports unlimited users"
+      }
+    },
+    "emailSecurity": {
+      "title": "Email Security System",
+      "subtitle": "Documentation | Version 1.0",
+      "description": "How to configure and operate the corporate email security platform.",
+      "chapters": [
+        {
+          "id": "getting-started",
+          "title": "Getting started",
+          "label": "Getting started",
+          "description": "Initial onboarding steps plus domain and DNS configuration in the CMC Admin Panel.",
+          "sections": [
+            {
+              "id": "admin-setup",
+              "title": "For administrators",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "To onboard the system:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Sign in to the CMC Admin Panel at admin.silenceai.net using Google or Microsoft OAuth.",
+                    "Register your company domain.",
+                    "Verify domain ownership through DNS.",
+                    "Configure security records (SPF, DKIM, DMARC).",
+                    "Create email accounts for employees."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "After configuration, users can access the webmail client and send protected messages."
+                }
+              ]
+            },
+            {
+              "id": "user-onboarding",
+              "title": "For end users",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "To start working with email:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Get your credentials from the administrator.",
+                    "Sign in to mail.silenceai.net with email/password or OAuth.",
+                    "Send your first message using the \"Compose\" button.",
+                    "Review the system folders that automatically categorize messages by security level."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Incoming mail is automatically scanned for threats and routed into folders."
+                }
+              ]
+            },
+            {
+              "id": "add-domain",
+              "title": "Add a domain",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Domain management starts in the CMC Admin Panel."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Open the CMC Admin Panel.",
+                    "Click \"Add Domain\".",
+                    "Enter the domain name without www (for example, company.com).",
+                    "Click \"Add\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "The system issues a verification token to confirm domain ownership."
+                }
+              ]
+            },
+            {
+              "id": "verify-domain",
+              "title": "Verify domain ownership",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "After adding a domain, prove that you own it."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Copy the TXT record from the CMC:"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "_cmc-verification.company.com TXT \"cmc-verify-abc123xyz\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Add the record to your domain's DNS settings.",
+                    "Wait for the automatic check (every 5 minutes) or click \"Check Now\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Verification can take up to 48 hours. After success, the domain status becomes verified."
+                }
+              ]
+            },
+            {
+              "id": "configure-spf",
+              "title": "Configure the SPF record",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "SPF defines which servers may send email on behalf of your domain."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "In the CMC open \"DNS Configuration\" → \"SPF\".",
+                    "Click \"Check Current SPF\" to review existing records.",
+                    "Click \"Generate SPF Record\".",
+                    "Copy the suggested record:"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "company.com TXT \"v=spf1 include:_spf.silenceai.net -all\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Add the record to DNS."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "If an SPF record already exists (for example, for Gmail), place our include before the final -all qualifier."
+                }
+              ]
+            },
+            {
+              "id": "configure-dkim",
+              "title": "Generate DKIM keys",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DKIM adds a cryptographic signature to your mail."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "In the CMC open \"DNS Configuration\" → \"DKIM\".",
+                    "Click \"Generate DKIM Keys\".",
+                    "The system creates a key pair (the private key stays on the server, the public key is for DNS).",
+                    "Copy the DNS record:"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "silenceai._domainkey.company.com TXT \"v=DKIM1; k=rsa; p=MIIBIjAN...\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Add the record to DNS.",
+                    "Run \"Verify DKIM\" to confirm."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "configure-dmarc",
+              "title": "Set up DMARC policy",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DMARC defines what to do with messages that fail SPF or DKIM checks."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "In the CMC open \"DNS Configuration\" → \"DMARC\".",
+                    "Select a policy:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "quarantine — move to spam (recommended)",
+                    "reject — drop the message"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Click \"Generate DMARC Record\".",
+                    "Copy the record:"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "_dmarc.company.com TXT \"v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@silenceai.net\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Add the record to DNS."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Start with quarantine, monitor reports for 1-2 weeks, then switch to reject if desired."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "user-management",
+          "title": "User management",
+          "label": "User management",
+          "description": "Creating and maintaining mail accounts.",
+          "sections": [
+            {
+              "id": "create-account",
+              "title": "Create an email account",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Open the \"Email Accounts\" section in the CMC.",
+                    "Click \"Create Account\".",
+                    "Fill out the fields:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Email: john.doe@company.com",
+                    "First and last name",
+                    "Password (minimum 8 characters, uppercase, lowercase, digit, special character)",
+                    "Storage quota: pick a mailbox size"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Click \"Create\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "The user can sign in to webmail immediately."
+                }
+              ]
+            },
+            {
+              "id": "suspend-activate",
+              "title": "Suspend or reactivate an account",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Find the user in \"Email Accounts\".",
+                    "In the Actions menu choose:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Suspend — pause access (the user cannot sign in)",
+                    "Activate — restore access"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Confirm the action."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "change-quota",
+              "title": "Change storage quota",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Find the user in the list.",
+                    "Choose \"Edit Quota\" in the Actions menu.",
+                    "Select a new storage size.",
+                    "Save changes."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Changes take effect immediately."
+                }
+              ]
+            },
+            {
+              "id": "delete-account",
+              "title": "Delete an account",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Find the user in the list.",
+                    "Choose \"Delete\" in the Actions menu.",
+                    "Confirm the deletion."
+                  ]
+                },
+                {
+                  "type": "callout",
+                  "intent": "warning",
+                  "content": "Warning: All user data will be removed permanently."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mail-operations",
+          "title": "Mail operations",
+          "label": "Mail operations",
+          "description": "Everyday actions in the webmail client.",
+          "sections": [
+            {
+              "id": "send-letter",
+              "title": "Send a message",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "In webmail click \"Compose\".",
+                    "Fill in:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "To: recipient address",
+                    "Subject: email subject",
+                    "Body: message text (rich formatting available)"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Attach files if needed (up to 25 MB per file).",
+                    "Click \"Send\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Messages are automatically signed with DKIM and delivered."
+                }
+              ]
+            },
+            {
+              "id": "custom-folder",
+              "title": "Create a custom folder with rules",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Custom folders automatically sort messages by the rules you define."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "In the sidebar click \"Create Folder\".",
+                    "Enter a folder name (for example, \"Clients\").",
+                    "Click \"Add Rules\".",
+                    "Configure the rule:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Filter by: Sender Domain",
+                    "Match mode: Contains",
+                    "Value: client.com"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Enable \"Apply to existing emails\" if you want to reprocess current messages.",
+                    "Click \"Create\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "All new mail from *@client.com will go to the \"Clients\" folder automatically."
+                }
+              ]
+            },
+            {
+              "id": "add-whitelist",
+              "title": "Add a sender to the whitelist",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "If a message was flagged as spam by mistake:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Open the email in the SPAM folder.",
+                    "Click \"Not Spam\" → \"Add to Whitelist\".",
+                    "Choose:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Whitelist sender email",
+                    "Whitelist sender domain"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Confirm the action."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Future messages from this sender will no longer be sent to spam."
+                }
+              ]
+            },
+            {
+              "id": "email-signature",
+              "title": "Set up an email signature",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Open Settings → \"Email Signature\".",
+                    "Enable \"Enable signature\".",
+                    "Enter the signature text in the editor.",
+                    "Click \"Save\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "The signature is added to every outgoing message automatically."
+                }
+              ]
+            },
+            {
+              "id": "vacation-responder",
+              "title": "Configure an auto-reply",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Open Settings → \"Vacation Responder\".",
+                    "Enable \"Enable vacation responder\".",
+                    "Set the start and end dates.",
+                    "Enter the auto-reply text.",
+                    "Check \"Reply once per sender\" to send a single response to each sender.",
+                    "Click \"Save\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "The auto-responder runs during the selected dates and shuts off automatically."
+                }
+              ]
+            },
+            {
+              "id": "forwarding",
+              "title": "Configure forwarding",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Open Settings → \"Email Forwarding\".",
+                    "Click \"Add Forwarding Address\".",
+                    "Enter the forwarding email.",
+                    "Enable \"Keep copy in inbox\" if you want to retain a copy.",
+                    "Click \"Save\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "All incoming email will be forwarded to the selected address."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "domain-administration",
+          "title": "Domain administration",
+          "label": "Domain administration",
+          "description": "Analytics and bulk mail operations for the domain.",
+          "sections": [
+            {
+              "id": "view-activity",
+              "title": "Review domain mail activity",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Administrators can view every message for every user in the domain."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Open CMC → \"Email Activity\".",
+                    "Use the filters:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "By user",
+                    "By folder (Secure, Spam, Phishing)",
+                    "By date",
+                    "By threat type"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Use the search bar for subject or sender lookups."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "bulk-delete",
+              "title": "Delete messages for all users",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "If a malicious message was sent to everyone:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Open \"Email Activity\".",
+                    "Locate the message via filters or search.",
+                    "Select the messages to remove.",
+                    "Click \"Delete Selected\".",
+                    "Confirm the bulk deletion."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "The message is removed from every user mailbox."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "concepts",
+          "title": "Concepts",
+          "label": "Concepts",
+          "description": "Key platform concepts and security flows.",
+          "sections": [
+            {
+              "id": "system-overview",
+              "title": "System overview",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Email Security System is a platform that protects corporate email from cyber threats."
+                },
+                {
+                  "type": "list",
+                  "title": "Components:",
+                  "items": [
+                    "CMC Admin Panel — administrator console for domains, users, and DNS settings.",
+                    "Webmail Client — employee mailbox with automatic threat protection.",
+                    "Infrastructure Services — SMTP server and security pipeline for message processing."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "security-stack",
+              "title": "Security pipeline",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Every inbound message passes through six layers of protection:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Layer 0: Phishing Domain Check — evaluate sender domains against known phishing databases.",
+                    "Layer 1: Spoof Detection — validate SPF, DKIM, and DMARC alignment.",
+                    "Layer 2: Spam Detection — analyse content with RSPAMD for spam traits.",
+                    "Layer 3: Link Scanner — scan URLs with URLScan.io for malicious links.",
+                    "Layer 4: Antivirus — inspect attachments with Bitdefender.",
+                    "Layer 5: AI Phishing Detection — analyse message content with AI for phishing signals."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "If a threat is detected, processing stops and the message is placed in the corresponding folder."
+                }
+              ]
+            },
+            {
+              "id": "system-folders",
+              "title": "System folders",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Messages are routed to folders based on the inspection results:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Unfiltered — new mail before processing (temporary).",
+                    "Secure — messages that passed all checks.",
+                    "Possibly Spoofed — sender authenticity is suspicious.",
+                    "SPAM — spam messages.",
+                    "Dangerous Links — messages containing malicious URLs.",
+                    "Malware — messages with infected attachments.",
+                    "Possibly Phishing — phishing indicators detected.",
+                    "Sent — sent mail."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "A single message may appear in multiple folders (for example, SPAM and Possibly Spoofed)."
+                }
+              ]
+            },
+            {
+              "id": "custom-folders",
+              "title": "Custom folders",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Users can create custom folders with automatic filtering rules."
+                },
+                {
+                  "type": "list",
+                  "title": "Filtering rules:",
+                  "items": [
+                    "By sender domain",
+                    "By sender email",
+                    "By subject",
+                    "By sender name"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "title": "Match modes:",
+                  "items": [
+                    "Contains",
+                    "Equals",
+                    "Starts with",
+                    "Ends with"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Rules can be applied to existing mail (retroactive filtering)."
+                }
+              ]
+            },
+            {
+              "id": "spf",
+              "title": "SPF (Sender Policy Framework)",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "SPF is a DNS record that defines servers allowed to send mail for the domain."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Format:"
+                },
+                {
+                  "type": "code",
+                  "content": "v=spf1 include:_spf.silenceai.net -all"
+                },
+                {
+                  "type": "list",
+                  "title": "Mechanisms:",
+                  "items": [
+                    "include:domain — allow servers from the referenced domain",
+                    "ip4:x.x.x.x — allow a specific IP address",
+                    "-all — reject everything else",
+                    "~all — mark everything else as suspicious"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "SPF check: the recipient verifies that the sender IP is authorised in the domain's SPF record. If the check fails, the message is flagged as suspicious."
+                }
+              ]
+            },
+            {
+              "id": "dkim",
+              "title": "DKIM (DomainKeys Identified Mail)",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DKIM adds a cryptographic signature to confirm the message was sent by the domain owner and was not altered in transit."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "How it works:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "When sending, the server signs the message with a private key and adds a DKIM-Signature header.",
+                    "The recipient fetches the public key from DNS and verifies the signature."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "DNS record:"
+                },
+                {
+                  "type": "code",
+                  "content": "selector._domainkey.domain.com TXT \"v=DKIM1; k=rsa; p=public_key\""
+                },
+                {
+                  "type": "paragraph",
+                  "content": "The private key is stored on the server in encrypted form and never shared with clients."
+                }
+              ]
+            },
+            {
+              "id": "dmarc",
+              "title": "DMARC (Domain-based Message Authentication)",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DMARC defines the policy for messages that fail SPF or DKIM."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Format:"
+                },
+                {
+                  "type": "code",
+                  "content": "_dmarc.domain.com TXT \"v=DMARC1; p=quarantine; rua=mailto:reports@domain.com\""
+                },
+                {
+                  "type": "list",
+                  "title": "Parameters:",
+                  "items": [
+                    "p=quarantine — deliver to spam",
+                    "p=reject — reject the message",
+                    "p=none — monitor only",
+                    "rua= — address for aggregate reports"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "DMARC check: the recipient confirms the message passes SPF or DKIM with aligned domains. If not, the configured policy applies."
+                }
+              ]
+            },
+            {
+              "id": "attachments",
+              "title": "Attachments and antivirus",
+              "body": [
+                {
+                  "type": "list",
+                  "title": "Restrictions:",
+                  "items": [
+                    "Maximum file size: 25 MB",
+                    "All file types are supported"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Attachment scanning: every file is scanned by Bitdefender. If malware is detected, the message moves to the Malware folder and the attachment is blocked."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Storage: attachments are kept per message on the server. Infected files are moved to quarantine."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "access-control",
+          "title": "Access control",
+          "label": "Access control",
+          "description": "User roles and access protection.",
+          "sections": [
+            {
+              "id": "user-roles",
+              "title": "User roles",
+              "body": [
+                {
+                  "type": "list",
+                  "title": "Admin",
+                  "items": [
+                    "Full access to the CMC Admin Panel",
+                    "Domain and DNS management",
+                    "Create and manage users",
+                    "View all domain mail",
+                    "Perform bulk mail operations"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "title": "Subordinate",
+                  "items": [
+                    "Limited CMC access",
+                    "View the user list",
+                    "Access only their own mail"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "title": "User",
+                  "items": [
+                    "Access to the webmail client",
+                    "Work with their own mail",
+                    "Configure personal settings"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "role-assignment",
+              "title": "Role assignment",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Auto-admin: the first user who signs in via OAuth automatically becomes an Admin."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Creating Subordinate users: Admins add subordinate accounts in the CMC under \"User Management\"."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Creating User accounts: Admins create mailboxes under \"Email Accounts\"; the accounts receive the User role."
+                }
+              ]
+            },
+            {
+              "id": "authentication",
+              "title": "Authentication",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "OAuth 2.0: Google or Microsoft sign-in with PKCE for security.",
+                    "Email/password: credentials issued by the administrator in the CMC.",
+                    "JWT tokens: access tokens last 7 days and are stored in httpOnly cookies.",
+                    "Token refresh: access tokens renew automatically via refresh tokens; once the refresh token expires, sign-in is required again."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "access-protection",
+              "title": "Access protection",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "Rate limiting: maximum 5 sign-in attempts per 15 minutes from a single IP.",
+                    "Session management: active sessions stored in the database and validated on each request.",
+                    "Audit logging: critical administrator and user actions are recorded."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quotas-limits",
+          "title": "Quotas and limits",
+          "label": "Quotas and limits",
+          "description": "Storage, sending, and user quotas.",
+          "sections": [
+            {
+              "id": "storage-quota",
+              "title": "Storage quota",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Each user gets a mailbox quota. At 100% usage the user cannot send or receive mail."
+                }
+              ]
+            },
+            {
+              "id": "sending-limits",
+              "title": "Sending limits",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "Business Basic: 500 messages per user per day",
+                    "Business Standard: 1000 messages per day",
+                    "Business Premium: 2000 messages per day",
+                    "Enterprise: 10000 messages per day"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "user-limit",
+              "title": "User limit",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "Business plans: based on organization size",
+                    "Enterprise plans: unlimited users"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "supreme": {
+    "title": "Supreme",
+    "hero": {
+      "badge": "Supreme · VSCode Extension",
+      "title": "Local Code Vulnerability Scanner",
+      "description": "Scan your code locally without exposing it to external servers. Fast, comprehensive vulnerability detection right in your editor."
+    },
+    "video": {
+      "title": "Installation & Usage tutorial (5 minutes)",
+      "cardTitle": "How to Use Supreme",
+      "cardSubtitle": "Installation & Setup Guide"
+    },
+    "pricing": {
+      "title": "Simple Pricing",
+      "subtitle": "Choose the plan that works best for you",
+      "monthly": {
+        "title": "Monthly",
+        "description": "Flexible, cancel anytime"
+      },
+      "month": "month",
+      "subscribe": "Subscribe Now",
+      "saveBadge": "Save 30%",
+      "yearly": {
+        "title": "Yearly",
+        "description": "Best value"
+      },
+      "year": "year",
+      "perMonthApprox": "~{value} per month"
+    },
+    "languages": {
+      "title": "Supported Languages",
+      "subtitle": "Comprehensive security scanning for all major programming languages"
+    },
+    "cicd": {
+      "title": "CI/CD & Container Scanning",
+      "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
+    },
+    "features": {
+      "title": "Powerful Features",
+      "subtitle": "Everything you need for secure code development",
+      "items": [
+        "Code analyzer runs locally, the code is not being exposed to external servers",
+        "Finds vulnerable packages vulnerabilities within the project",
+        "Finds Misconfigurations, and Secrets",
+        "Can scan for CI/CD misconfigurations and vulnerabilities"
+      ]
+    },
+    "screenshots": [
+      {
+        "title": "Very straightforward interface"
+      },
+      {
+        "title": "Well structured security reports"
+      },
+      {
+        "title": "History of scans"
+      }
+    ],
+    "lightbox": {
+      "close": "Close",
+      "alt": "Screenshot"
+    },
+    "landing": {
+      "hero": {
+        "headline": "Build Fast. Ship Safe.",
+        "subheadline": "Your AI writes the code. Supreme 2 secures it.",
+        "tagline": "74+ intelligent scanners. Deep architecture-level analysis. The world's first MCP-based code scanner.",
+        "ctaMax": "Upgrade to Supreme 2 MAX",
+        "ctaFree": "Start Free with Supreme 2 Light"
+      },
+      "pricingLight": {
+        "name": "Supreme 2 Light",
+        "price": "Free",
+        "subprice": "Forever · No credit card required",
+        "features": [
+          "VSCode extension",
+          "Full project scanning",
+          "74+ scanners",
+          "Comprehensive report",
+          "Report-only workflow (no auto-fix)"
+        ],
+        "cta": "Get Supreme 2 Light"
+      },
+      "pricingMax": {
+        "name": "Supreme 2 MAX",
+        "price": "$18/month",
+        "subprice": "$150/year · Best Value",
+        "badge": "Best Value",
+        "features": [
+          "MCP server-based scanner",
+          "Full project scanning",
+          "74+ scanners",
+          "Comprehensive report",
+          "LLM-friendly report for auto-remediation",
+          "Autonomous vulnerability fixing",
+          "Enhanced detection via threat intelligence"
+        ],
+        "cta": "Upgrade to Supreme 2 MAX",
+        "videoLabel": "Instructional Video Placeholder – Supreme 2 MAX Setup"
+      },
+      "hiddenRisk": {
+        "title": "The Hidden Risk of AI-Generated Code",
+        "llmTitle": "LLM = partial visibility",
+        "llmItems": [
+          "Only see pasted snippets",
+          "Miss hidden files",
+          "Ignore dependency chains",
+          "Don't scan architecture",
+          "Don't systematically audit configs"
+        ],
+        "supremeTitle": "Supreme 2 = full repository scan",
+        "diagramRepo": "Repo",
+        "diagramScanner": "Deep Scanner",
+        "diagramFindings": "Full findings"
+      },
+      "meet": {
+        "title": "Meet SUPREME 2",
+        "features": [
+          "74+ scanners",
+          "Deep multi-language support",
+          "Architecture-aware analysis",
+          "Parallel scanning engine",
+          "Intelligent vulnerability detection"
+        ]
+      },
+      "mcp": {
+        "title": "The World's First MCP-Based Code Scanner",
+        "subtitle": "Supreme 2 MAX runs as an MCP server so your LLM can trigger full scans, consume structured JSON, understand categorized vulnerabilities, securely refactor, and re-validate fixes."
+      },
+      "comparison": {
+        "title": "Supreme 2 Light vs Supreme 2 MAX",
+        "maxAdvantage": "MAX Advantage: Includes detailed Threat Intelligence and runs as an MCP Server meant to be used by LLMs."
+      },
+      "whyLeads": {
+        "title": "Why Supreme Leads the Market"
+      },
+      "llmVsSupreme": {
+        "title": "Searching for vulns/misconfigs with LLMs VS Supreme 2",
+        "llmTitle": "LLM-only review",
+        "llmItems": [
+          "Analyzes fragments",
+          "Misses configs",
+          "Skips hidden modules",
+          "Ignores dependency graphs"
+        ],
+        "supremeTitle": "Supreme 2",
+        "supremeItems": [
+          "Scans entire repository",
+          "Parses configs",
+          "Checks dependency trees",
+          "Detects cross-file patterns",
+          "Performs architecture analysis"
+        ]
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "What programming languages does Supreme 2 support?",
+        "a1": "Supreme 2 supports major modern languages, configuration formats, and infrastructure files across backend, frontend, cloud, scripting, and documentation workflows.",
+        "a1Coverage": "Coverage includes 41 different scanner types across 100+ file extensions.",
+        "q2": "What scanner types and file formats are covered in detail?",
+        "a2Intro": "Supreme 2 supports 41 scanner types covering all major programming languages and file formats.",
+        "a2Total": "Total: 41 scanner types covering 100+ file extensions.",
+        "q3": "What is MCP and why does it matter?",
+        "a3": "MCP allows Supreme 2 MAX to run as a structured security server. Instead of raw text, it returns categorized JSON vulnerability reports for automated remediation, AI-driven fixing, programmatic interpretation, and continuous improvement workflows.",
+        "q4": "Does Supreme 2 store my code?",
+        "a4": "Supreme 2 scans locally in your environment. Your code never leaves your computer. You can check the source code of Supreme 2 Light on GitHub, and also monitor network activity while code is being scanned.",
+        "q5": "What are the pre-installation requirements?",
+        "a5Prefix": "To run Supreme 2, you must have",
+        "a5Python": "Python 3.0 or higher",
+        "a5Suffix": "installed on your machine. Additionally, you must ensure that",
+        "a5Pip": "pip",
+        "a5End": "is installed prior to the installation of Supreme itself.",
+        "q6": "Is Supreme 2 suitable for startups?",
+        "a6": "Yes. It is especially effective for AI-first startup teams shipping fast with LLM-generated code, where hidden cross-file risks are easy to miss without repository-wide security analysis.",
+        "a1ScannerTypes": "different scanner types",
+        "a1Across": "across",
+        "a1Extensions": "file extensions",
+        "a2Covering": "covering all major programming languages and file formats."
+      }
+    }
+  },
+  "languageSelector": {
+    "triggerLabel": "Select language",
+    "menuLabel": "Choose language",
+    "searchLabel": "Search languages",
+    "searchPlaceholder": "Search by name or native script",
+    "searchResults": "Search results",
+    "noMatches": "No languages match your search.",
+    "popular": "Most popular",
+    "allLanguages": "All languages"
+  },
+  "header": {
+    "andManyMore": "And many more...",
+    "nav": {
+      "main": "Main",
+      "mail": "Mail",
+      "affiliate": "Affiliate program",
+      "instructions": "Instructions",
+      "product": "AI-CSD",
+      "secureDevelopment": "SLNC-env",
+      "developerServices": "Developer Services",
+      "home": "Home",
+      "systems": "Systems",
+      "systemsAiSoc": "AI-CSD",
+      "systemsSithub": "Sithub",
+      "systemsSupreme": "Supreme",
+      "systemsSlncEnv": "SLNC-env",
+      "services": "Services",
+      "instructionsAiSoc": "AI-CSD",
+      "instructionsSupreme": "Supreme",
+      "instructionsSithub": "Sithub"
+    },
+    "login": "Login",
+    "cta": {
+      "contact": "Contact",
+      "download": "Download",
+      "requestDemo": "Request Demo",
+      "get": "Get Started"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Silence AI. All rights reserved.",
+    "contactLabel": "Contact",
+    "contactValue": "support@silenceai.net",
+    "addressLabel": "Address",
+    "addressValue": "Astana, Kazakhstan",
+    "links": {
+      "cookies": "Cookie Policy",
+      "termsUse": "Terms of Use",
+      "termsService": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "affiliateTerms": "Affiliate Terms of Service"
+    }
+  },
+  "policySidebar": {
+    "tableOfContents": "Table of Contents",
+    "close": "Close",
+    "topics": "Topics"
+  },
+  "andManyMore": "Et bien plus encore...",
+  "affiliate": {
+    "hero": {
+      "tagline": "Join the Silence AI Partner Program",
+      "title": "Turn your invitations into revenue.",
+      "subtitle": "We offer 10% reward for all the spendings of the invited clients for 6 months.",
+      "cta": "Join the partner program",
+      "earnings": "$2,940.00",
+      "growth": "+18% compared to last month",
+      "snapshot": {
+        "label": "Live snapshot",
+        "caption": "Performance updates every 60 seconds and confirmed payments sync instantly."
+      },
+      "graph": {
+        "label": "Revenue trend",
+        "title": "Referral revenue growth",
+        "window": "Last 30 days",
+        "label0": "Week 1",
+        "label1": "Week 2",
+        "label2": "Week 3",
+        "label3": "Week 4",
+        "label4": "Week 5",
+        "label5": "Week 6",
+        "label6": "Today"
+      },
+      "metric": {
+        "conversion": "Activations",
+        "conversionChange": "24 new teams this month",
+        "pending": "Pending rewards",
+        "pendingChange": "Withdrawals processed within 2 business days"
+      }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "create": {
+        "title": "Create your link",
+        "description": "Generate a unique referral link or promo code in your Silence AI dashboard."
+      },
+      "share": {
+        "title": "Share",
+        "description": "Invite teams via email, LinkedIn, or your communities. Track performance in real time."
+      },
+      "earn": {
+        "title": "Earn",
+        "description": "Receive your commission as soon as referred customers activate Silence AI protection."
+      }
+    },
+    "commission": {
+      "heading": "Balance rewards",
+      "highlight": {
+        "label": "Why partners love it"
+      },
+      "reward": {
+        "title": "10% reward on every balance top-up",
+        "description": "When an invited team tops up their Silence AI wallet, 10% of the net amount is paid to you instantly."
+      },
+      "settlement": {
+        "title": "Real-time ledger settlement",
+        "description": "Rewards are credited to your partner balance within one minute after the transaction, with no manual approval queue."
+      },
+      "withdrawal": {
+        "title": "Withdrawals processed within 2 business days",
+        "description": "Withdrawal requests are automatically verified and arrive in your bank account within two business days."
+      },
+      "sample": {
+        "label": "Top-up examples",
+        "caption": "Partner earnings grow with each top-up — no tier resets or product association required.",
+        "topup": "$250 top-up → $25 reward",
+        "topupHigher": "$1,000 top-up → $100 reward"
+      },
+      "note": "Commission is calculated on the net amount after processing fees are deducted."
+    },
+    "faq": {
+      "title": "Questions & answers",
+      "payments": {
+        "question": "How do I receive my payments?",
+        "answer": "Add your VISA or Mastercard number in your profile. Payments can be withdrawn directly to the card on file."
+      },
+      "discounts": {
+        "question": "Do referred customers get discounts?",
+        "answer": "No. Referred customers do not receive any discount on their purchases; only the partner earns a commission on successful referrals."
+      },
+      "statistics": {
+        "question": "When will I see my referral statistics?",
+        "answer": "As soon as a user signs up with your promo code or referral link, their email address and associated reward appear in your dashboard."
+      }
+    },
+    "termsAff": {
+      "label": "Affiliate Program",
+      "title": "Affiliate Terms of Service",
+      "gitServer": {
+        "title": "Git Repository Server",
+        "tag": "Self-hosted version control"
+      },
+      "analyzer": {
+        "title": "Security Analyzer",
+        "tag": "Local code scanning engine"
+      },
+      "vulnDb": {
+        "title": "Vulnerability Database",
+        "tag": "Security patches downloaded"
+      },
+      "intro": "These terms describe how rewards are issued and paid to partners participating in the Silence AI affiliate program.",
+      "meta": {
+        "effective": "Effective date: 10 November 2024",
+        "lastUpdated": "Last updated: 10 November 2024"
+      },
+      "sections": {
+        "overview": {
+          "title": "1. Program Overview",
+          "body1": "1.1 Agreement Scope: These Affiliate Terms of Service (\"Terms\") govern your participation in the Silence AI affiliate program operated by Silence AI LLC (\"Silence AI,\" \"we,\" \"us,\" or \"our\"). These Terms apply to you, the individual or entity enrolling as an affiliate partner (\"you\" or \"your\"), and, where applicable, your employer, principal, or organization if you act on their behalf.",
+          "body2": "1.2 Program Summary: Under this program, qualified partners earn commission-based rewards when referred customers purchase or top up the AI-CSD 1 product. Participation in the affiliate program also requires compliance with the general Silence AI Terms of Service."
+        },
+        "eligibility": {
+          "title": "2. Partner Eligibility",
+          "item1": "You must maintain an active Silence AI affiliate account with accurate business and payment details.",
+          "item2": "Referrals must complete registration through your issued link or promo code.",
+          "item3": "Accounts found to be fraudulent, self-referred, or in breach of applicable law are not eligible for rewards."
+        },
+        "commission": {
+          "title": "3. Commission Structure",
+          "body1": "You earn a 10% reward on every balance top-up completed by an account registered through your invitation.",
+          "body2": "Commission is calculated from the net top-up amount after payment processing fees are deducted."
+        },
+        "rewardPosting": {
+          "title": "4. Reward Posting",
+          "body1": "Rewards post to your partner balance within one minute after the transaction successfully clears. There is no manual approval queue.",
+          "body2": "Notifications appear in your affiliate dashboard alongside the customer identifier and top-up amount."
+        },
+        "withdrawals": {
+          "title": "5. Withdrawals",
+          "body1": "Withdrawal requests are processed within two business days and paid out using the settlement method on file.",
+          "body2": "Minimum withdrawal thresholds and supported payout networks are published inside the affiliate dashboard."
+        },
+        "productScope": {
+          "title": "6. Product Scope",
+          "body1": "Rewards are only provided for the AI-CSD 1 product. Other Silence AI services are excluded from the affiliate program unless explicitly stated otherwise in writing.",
+          "body2": "If additional products become eligible, Silence AI will publish an updated list inside these terms."
+        },
+        "compliance": {
+          "title": "7. Partner Conduct & Compliance",
+          "item1": "Partners must represent Silence AI accurately and avoid misleading claims about features or pricing.",
+          "item2": "Marketing communications must comply with applicable anti-spam, privacy, and advertising regulations.",
+          "item3": "Silence AI may suspend or terminate accounts that violate these obligations or harm the brand."
+        },
+        "changes": {
+          "title": "8. Changes & Contact",
+          "body1": "Silence AI may update these affiliate terms to reflect changes in the program or applicable law. Updated versions take effect upon publication on this page.",
+          "body2": "Questions about the affiliate program can be sent to support@silenceai.net."
+        }
+      }
+    },
+    "balanceRewards": {
+      "lampTitle": "Balance rewards"
+    }
+  },
+  "hero": {
+    "headline": "AI-CSD — AI-Powered Cybersecurity Department",
+    "subheading": "A unified AI cybersecurity platform that combines Web Security and Email Security in a single control center.",
+    "playgroundHeading": "AI-Powered Cybersecurity Department",
+    "bullets": {
+      "web": "Real-time protection for web infrastructure and APIs",
+      "email": "Advanced protection against phishing, spoofing, and malicious email threats",
+      "vulnerability": "Vulnerability detection",
+      "unified": "Unified security monitoring and threat detection"
+    },
+    "buttons": {
+      "connect": "Connect in 4 minutes",
+      "tour": "Watch the 90-second demo"
+    },
+    "tooltips": {
+      "web": {
+        "title": "Web attack protection",
+        "content": "Protection against major web attacks including DDoS, SQL injection, and other network threats. Business logic vulnerabilities are not included."
+      },
+      "email": {
+        "title": "Email attack protection",
+        "content": "AI analyzes incoming and outgoing emails to detect phishing, spoofing attempts, malicious links, and other email-based attacks."
+      },
+      "unified": {
+        "title": "Unified security monitoring and threat detection",
+        "content": "AI-CSD provides centralized monitoring of web infrastructure and email communications within a single security platform."
+      },
+      "vulnerability": {
+        "title": "Vulnerability detection",
+        "content": "The system identifies flaws in application code and via dynamic interaction with your website/API, including through the intelligence engine."
+      }
+    }
+  },
+  "playground": {
+    "options": {
+      "globeShield": "Web security and traffic management",
+      "emailSecurity": "Email security and visualization"
+    }
+  },
+  "cookie": {
+    "title": "Technical cookie notice",
+    "description": "This site uses only first-party technical cookies to remember your language preferences and avoid showing this notice repeatedly. No third-party or tracking cookies are used.",
+    "more": "Learn more in our",
+    "link": "Cookie Policy",
+    "ok": "OK"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Mobile-friendly plans designed to scale with your product.",
+    "percentMaintenance": "{percent}% annual maintenance",
+    "planEstimate": "${value}",
+    "tooltips": {
+      "cmcGlobal": {
+        "title": "CMC with global traffic monitoring",
+        "content": "The Centralized Management Console (CMC) seamlessly integrates with other security systems and uses the same domain and interface as Global Shield and Security Tester. Here you can block countries, close ports, and manage security at scale."
+      },
+      "countryBlacklisting": {
+        "title": "Country blocking",
+        "content": "Block all traffic originating from a selected country"
+      },
+      "portManagement": {
+        "title": "Port closing",
+        "content": "Close unused ports to reduce the attack surface (e.g., disable port 22 if SSH is not needed)"
+      },
+      "cmcEmail": {
+        "title": "CMC with Advanced Email Flow Visualizer",
+        "content": "The Central Management Console (CMC) integrates seamlessly with other security systems and is available under the same domain and interface as Global Shield and Security Tester. In this console, you can monitor email flows and review emails from all corporate users you have added."
+      },
+      "dynamicVulnerability": {
+        "title": "Dynamic Vulnerability Search",
+        "content": "Detects vulnerabilities by interacting with your website, including the vulnerability search method via the intelligence system."
+      },
+      "codeAnalyzer": {
+        "title": "Code Analyzer",
+        "content": "Identifies security issues directly in your codebase via a VS Code plugin, helping you fix problems before deployment."
+      },
+      "intelligenceReport": {
+        "title": "Intelligence Report",
+        "content": "Generates detailed information about your target, including open ports, running services, subdomains, and other sensitive information that may require action."
+      },
+      "fullVulnerability": {
+        "title": "FULL Vulnerability Check",
+        "content": "A FULL vulnerability check includes both dynamic vulnerability analysis and source code vulnerability analysis."
+      }
+    },
+    "aiSoc": {
+      "tabs": {
+        "email": "Email Security",
+        "web": "Web Security"
+      },
+      "billing": {
+        "yearly": "Yearly",
+        "monthly": "Monthly"
+      },
+      "cta": "Request the system",
+      "contactSupport": "Contact us",
+      "planTitles": {
+        "premium": "Business Premium 100",
+        "max": "Business MAX",
+        "standard": "Business Standard"
+      },
+      "features": {
+        "common": {
+          "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
+          "officeSuite": "Desktop and mobile office suite including document, spreadsheet, presentation, and email tools",
+          "adminConsole": "Admin console with domain-wide email management and bulk operations",
+          "dnsSecuritySetup": "Email security setup through DNS (SPF, DKIM, DMARC) on the admin console",
+          "emailMigration": "Email migration",
+          "aiThreatProtection": "5 layered, AI-powered threat protection with automatic email categorization (Secure, Spam, Dangerous Links, Phishing, Spoofed)",
+          "emailFlowVisualization": "Advanced email flow visualization across entire domain with comprehensive filters on the Admin Console",
+          "domainWideDeletion": "Ability for admin to delete emails across all users in domain"
+        },
+        "shared": {
+          "unlimitedSecurity": "Unlimited 4-layer email security"
+        },
+        "premium": {
+          "userLimit": "For enterprises with 15-300 employees",
+          "adminLimit": "Up to 5 administrators",
+          "storage": "Up to 50GB storage per user"
+        },
+        "max": {
+          "userLimit": "Unlimited number of users",
+          "adminLimit": "Up to 10 administrators",
+          "storage": "Up to 200GB storage per user"
+        },
+        "standard": {
+          "userLimit": "For enterprises with 15 or less employees",
+          "adminLimit": "Up to 1 administrator",
+          "storage": "Up to 8GB storage per user"
+        }
+      }
+    },
+    "plans": {
+      "globalShield": {
+        "title": "Web Security and Traffic Management",
+        "price": "$0.06/GB",
+        "description": "No limits\nNo additional fees",
+        "button": "Secure web app and APIs",
+        "features": {
+          "webProtection": "Protection against all types of web attacks except business logic exploitation",
+          "ddosProtection": "Real-time DDoS protection",
+          "cmc": "CMC with global traffic monitoring:",
+          "country": "Country blocking:",
+          "port": "Port closing:",
+          "aiManager": "AI manager: shows security reports and executes your orders — tell it to blacklist a range of IP addresses and it adds them by itself",
+          "captcha": "Behavioral CAPTCHA 200× more optimized than reCAPTCHA — AI tracks user behavior and shows a Cloudflare Turnstile-style check only when a bot is detected"
+        }
+      },
+      "emailProtector": {
+        "title": "Email Security and Visualization",
+        "price": "$10/month/account",
+        "description": "Up to 10 emails per day\nAdditional emails: $0.035 each",
+        "button": "Secure Email",
+        "features": {
+          "cmcEmail": "CMC with the most advanced email flow visualizer",
+          "visibility": "Full visibility of sent and received emails from all email accounts, in the CMC, with automatic threat categorization",
+          "webClient": "Secure WebMail client",
+          "phishing": "Phishing protection",
+          "malware": "Malicious attachment scanning",
+          "links": "Dangerous link detection",
+          "spam": "Anti-spam filtering",
+          "fakeSender": "Spoofed sender protection"
+        }
+      },
+      "securityTester": {
+        "title": "Vulnerability Search",
+        "price": "$25/month",
+        "description": "Up to 50 FULL vulnerability checks per month\nAdditional FULL checks: $0.5 each",
+        "button": "Start testing",
+        "features": {
+          "dynamic": "Dynamic vulnerability search",
+          "codeAnalyzer": "Code Analyzer",
+          "reports": "Easy-to-understand security assessment reports",
+          "intelligence": "Intelligence Report"
+        }
+      }
+    },
+    "perYear": "per year (est.)",
+    "calculator": {
+      "subtitle": "Slide to see annual maintenance cost"
+    }
+  },
+  "solution": {
+    "sectionTitle": "AI-CSD Platform Overview",
+    "sectionSubtitle": "AI-CSD provides a unified interface for monitoring and protecting web infrastructure and corporate email in real time.",
+    "cards": {
+      "globalShield": {
+        "title": "Global Shield - CIA-level traffic monitoring",
+        "description": "Our interactive 3D globe provides impressive traffic visualization: requests per second, active users, and byte volume.",
+        "bullets": {
+          "one": "Simple setup: provide your IP and domain.",
+          "two": "Receive an agent IP to add to your DNS.",
+          "three": "Port closing for zero exposure surface."
+        }
+      },
+      "emailProtector": {
+        "title": "Email Protector - world's first AI email protection",
+        "description": "The first commercial AI-based email protection system. Our vector view makes it easy to track flows over time and detect threats.",
+        "bullets": {
+          "one": "Detects spoofing, spam, phishing, and malware.",
+          "two": "Admin can add email accounts to protect.",
+          "three": "Most advanced commercial email flow visualizer."
+        }
+      },
+      "securityTester": {
+        "title": "Security Tester - next-gen vulnerability testing",
+        "description": "Our system provides a One-Time-Token (OTT) for comprehensive audits. Connect via our browser or the VS Code extension.",
+        "bullets": {
+          "one": "Define the scope and target in the CMC.",
+          "two": "Paste the OTT and start the check.",
+          "three": "Intelligence-driven risk insights."
+        }
+      }
+    },
+    "cmc": {
+      "title": "Central Management Console (CMC)",
+      "description": "All three components are controlled through a unified console offering centralized visualization, easy configuration and monitoring, and comprehensive security reports."
+    }
+  },
+  "valueSection": {
+    "title": "Why AI-CSD",
+    "subtitle": "AI-CSD makes enterprise-level cybersecurity accessible to any company. Deploy protection in minutes and manage web and email security from one unified platform.",
+    "features": {
+      "deploy": {
+        "title": "Deploy in minutes",
+        "description": "Set up web and email protection in under 4 minutes without complex configuration."
+      },
+      "ai": {
+        "title": "AI-powered analysis",
+        "description": "Advanced AI continuously analyzes traffic, emails, and threats in real time."
+      },
+      "visualization": {
+        "title": "Advanced visualization",
+        "description": "Monitor web traffic and email flows through an advanced visual interface."
+      },
+      "affordable": {
+        "title": "Affordable security",
+        "description": "Enterprise-level protection without the cost of traditional cybersecurity systems."
+      }
+    }
+  },
+  "insights": {
+    "items": [
+      {
+        "title": "39 seconds",
+        "description": "A hacker attack occurs every 39 seconds"
+      },
+      {
+        "title": "20M DDoS attacks",
+        "description": "20.5 million DDoS attacks in Q1 2025 alone"
+      },
+      {
+        "title": "Every day",
+        "description": "30,000 websites are hacked every day"
+      }
+    ]
+  },
+  "floatingText": {
+    "headline": "Understand how hackers think",
+    "description": "Follow us for daily analysis of attack techniques and real threats"
+  },
+  "modal": {
+    "title": "Under development",
+    "body": "The system is expected to launch on October 10"
+  },
+  "lamp": {
+    "title": "The reality of cyberattacks"
+  },
+  "stickySolution": {
+    "webSecurity": {
+      "title": "Step 1 · Connect your infrastructure",
+      "description": "Add your website domain and server IP address to connect AI-CSD protection."
+    },
+    "ciaMonitoring": {
+      "title": "Step 2 · Real-time traffic monitoring",
+      "description": "Monitor traffic activity across countries, users, bandwidth, and requests per second."
+    },
+    "userGrowth": {
+      "title": "Step 3 · Interactive global traffic visualization",
+      "description": "The 3D globe displays traffic patterns and geographic activity in real time."
+    },
+    "aiEmailProtection": {
+      "title": "Step 4 · Email security monitoring",
+      "description": "Administrators can monitor and manage corporate email flows and detect threats."
+    },
+    "emailVisualization": {
+      "title": "Step 4 · Email security monitoring",
+      "description": "Administrators can monitor and manage corporate email flows and detect threats."
+    },
+    "secureWebmail": {
+      "title": "Step 4 · Email security monitoring",
+      "description": "Administrators can monitor and manage corporate email flows and detect threats."
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "We searched everywhere but could not find this page.",
+    "cta": "Back to home"
+  },
+  "heroSection": {
+    "badge": "Production-ready AI & Software",
+    "title": "Custom AI and Software Development",
+    "description": "We build production-ready AI agents and custom software.",
+    "country": "Kazakhstan",
+    "market": "global market",
+    "startProject": "Start a project",
+    "liveDemo": "Live Demo — AI Agent",
+    "live": "Live",
+    "aiAgent": "AI Agent v2.1",
+    "processing": "Processing requests...",
+    "active": "Active",
+    "userMessage": "Analyze customer data trends",
+    "aiResponse": "Analysis in progress",
+    "tasks": {
+      "dataCollection": "Data collection",
+      "aiAnalysis": "AI analysis",
+      "reportGeneration": "Report generation"
+    },
+    "stats": {
+      "tasks": "Tasks",
+      "success": "Success",
+      "speed": "Speed"
+    }
+  },
+  "secureDevelopment": {
+    "hero": {
+      "badge": "SLNC-env · Secure Development Environment",
+      "title": "Build systems with secure and private code",
+      "description": "Private development environment for enterprises, where code never leaves your corporate network. While providing the latest AI-powered technology",
+      "requestSystem": "Request system"
+    },
+    "components": {
+      "title": "Everything stays inside",
+      "subtitle": "Three components, one sealed loop",
+      "description": "Code, prompts, and builds never leave your network. SLNC-env keeps AI assistance, reviews, and delivery private for cloud providers, government teams, and industrial facilities.",
+      "sithub": {
+        "title": "Sithub Server",
+        "tag": "Local version control"
+      },
+      "llm": {
+        "title": "LLM Server (Qwen-Code)",
+        "tag": "On-site intelligence"
+      },
+      "ide": {
+        "title": "IDE with local Copilot",
+        "tag": "Cursor-level experience"
+      },
+      "staysOnPrem": "Stays on-prem. No egress.",
+      "gitServer": {
+        "title": "Git Repository Server",
+        "tag": "Self-hosted"
+      },
+      "analyzer": {
+        "title": "Security Analyzer",
+        "tag": "Local scanning"
+      },
+      "vulnDb": {
+        "title": "Vulnerability Database",
+        "tag": "Synced daily"
+      },
+      "onPremNotice": "Stays on-prem. No egress."
+    },
+    "timeline": {
+      "title": "Why isolated and verified code matters",
+      "subtitle": "Recent wake-up calls",
+      "incident": {
+        "title": "Critical incident — code leaked",
+        "heading": "DeepSeek leak exposed source code and prompts to the open internet",
+        "description": "Keep inference and analysis on-site. No external model egress. Audit trails by default.",
+        "seePlan": "See containment plan"
+      },
+      "stuxnet": {
+        "attack": "Stuxnet",
+        "target": "Natanz enrichment facility",
+        "impact": "Destroyed ~1,000 centrifuges",
+        "severity": "Critical",
+        "year": "2010"
+      },
+      "blackEnergy": {
+        "attack": "BlackEnergy",
+        "target": "Ukrainian power grid",
+        "impact": "230,000 customers without power",
+        "severity": "High",
+        "year": "2015"
+      },
+      "triton": {
+        "attack": "TRITON",
+        "target": "Saudi petrochemical plant",
+        "impact": "Safety systems disabled",
+        "severity": "Critical",
+        "year": "2017"
+      },
+      "colonialPipeline": {
+        "attack": "Colonial Pipeline",
+        "target": "US fuel pipeline",
+        "impact": "Fuel paralysis for 6 days",
+        "severity": "High",
+        "year": "2021"
+      },
+      "pdvsa": {
+        "attack": "PDVSA",
+        "target": "Venezuelan refining",
+        "impact": "Refinery operations disrupted",
+        "severity": "Medium",
+        "year": "2025"
+      }
+    },
+    "analyzer": {
+      "title": "Analyzer that outperforms CodeQL",
+      "subtitle": "Live assurance",
+      "features": {
+        "quality": {
+          "title": "Automatic code quality",
+          "description": "Structure, style, and best practice checks tailored for security-critical code"
+        },
+        "vulnerability": {
+          "title": "Vulnerability scans",
+          "description": "SQLi, XSS, authentication bypass, and insecure dependencies detected instantly"
+        },
+        "secrets": {
+          "title": "Secrets guard",
+          "description": "Keys, tokens, and credentials blocked at commit time"
+        },
+        "config": {
+          "title": "Configuration hardening",
+          "description": "Docker/K8s, IAM, and network policies analyzed for privilege escalation"
+        }
+      },
+      "beyondCodeQL": {
+        "title": "Detects what static queries miss",
+        "subtitle": "Beyond CodeQL",
+        "description": "Finds misconfigurations and vulnerable packages faster than CodeQL and offers fixes, not just alerts.",
+        "points": {
+          "packages": "Knows package graphs and flags risky dependencies in seconds.",
+          "config": "Detects configuration drift and privilege escalation — beyond static rules.",
+          "patches": "Every finding comes with a suggested patch and an assignee."
+        }
+      },
+      "visualizer": {
+        "title": "Code analyzer in action",
+        "subtitle": "Visualizer",
+        "description": "Clean screenshots of recent scans, beautifully rendered in the on-site console.",
+        "privateWorkspace": "Private workspace only",
+        "andManyMore": "And many more...",
+        "shots": {
+          "scanOverview": {
+            "title": "Scan overview",
+            "description": "See issues grouped by severity before code leaves your network."
+          },
+          "misconfigurations": {
+            "title": "Misconfiguration detection",
+            "description": "Our AI-powered code analyzer detects even misconfigurations in code."
+          },
+          "inlineDiffs": {
+            "title": "Inline diffs",
+            "description": "Review suggested fixes inline with security context."
+          }
+        },
+        "frame": "SLNC-env Analyzer"
+      }
+    },
+    "industries": {
+      "title": "Built for regulated and high-impact industries",
+      "subtitle": "Where we deploy",
+      "oilGas": {
+        "title": "Oil and Gas",
+        "description": "Drilling, refining, pipeline control"
+      },
+      "energy": {
+        "title": "Energy",
+        "description": "Grid, distribution, and EMS"
+      },
+      "nuclear": {
+        "title": "Nuclear",
+        "description": "Reactor controls and safety"
+      },
+      "manufacturing": {
+        "title": "Manufacturing",
+        "description": "ICS, OT, and robotics"
+      },
+      "government": {
+        "title": "Government",
+        "description": "Ministries, defense, critical agencies"
+      }
+    },
+    "pricing": {
+      "subtitle": "Simple, transparent pricing",
+      "title": "Choose a plan",
+      "limitedOffer": "Limited time offer",
+      "priceIncreaseNotice": "Lock in current prices! After 6 months, prices will increase by 30%",
+      "monthlyPlan": "Monthly",
+      "monthlyDesc": "Flexible billing",
+      "yearlyPlan": "Annual",
+      "yearlyDesc": "Best value",
+      "month": "month",
+      "billedAnnually": "Billed annually for",
+      "doubleSavings": "2x SAVINGS",
+      "getStarted": "Get started",
+      "features": {
+        "fullAccess": "Full platform access",
+        "support": "Priority support",
+        "cancelAnytime": "Cancel anytime",
+        "priceLock": "Price locked for 12 months"
+      }
+    },
+    "comingSoon": {
+      "title": "Coming Soon",
+      "message": "This feature is currently under development."
+    },
+    "requestSystem": "Request system"
+  },
+  "pricingCta": {
+    "requestSystem": "Request system"
+  },
+  "contactForm": {
+    "title": "Contact Us",
+    "success": "Thanks! Your message has been sent. We will contact you shortly.",
+    "errorRequired": "Please fill in your name, email and a short message.",
+    "errorSend": "Unable to send message. Please try again later.",
+    "placeholders": {
+      "name": "Your name",
+      "email": "Email",
+      "type": "Project Type (optional)",
+      "budget": "Budget (optional)",
+      "message": "Tell us about your project..."
+    },
+    "submit": {
+      "idle": "Send Message",
+      "loading": "Sending…"
+    }
+  },
+  "consulting": {
+    "title": "Consulting Questionnaire",
+    "searchPlaceholder": "Search questions...",
+    "noResults": "No questions found.",
+    "questions": [
+      {
+        "question": "What is your company's core value proposition beyond competitive pricing?",
+        "answer": "Security is our primary differentiator. We position ourselves as a company that builds highly secure systems with enterprise-grade security practices embedded throughout the development lifecycle."
+      },
+      {
+        "question": "How long has your company been in business, and what is your track record?",
+        "answer": "We have successfully delivered major projects including: NAK (Nur Astana Kurylys) - AI-powered team management platform, and Chic Flowers - Complete digital platform for a major flower retail company."
+      },
+      {
+        "question": "What differentiates your technical capabilities and service quality from EPAM and other competitors?",
+        "answer": "Our key differentiator is our security-first development approach. We integrate security practices from project inception through deployment and maintenance."
+      },
+      {
+        "question": "How do you maintain quality while offering competitive pricing?",
+        "answer": "We offer services at 15% below market rates while maintaining exceptional quality through optimized operations, strategic talent sourcing, and efficient project management methodologies."
+      },
+      {
+        "question": "What specific software development services do you provide?",
+        "answer": "End-to-end software development: custom applications, AI-powered solutions, cybersecurity product development (Silence AI-CSD), system integration, cloud migration, and DevOps. We also offer dedicated product development and staff augmentation."
+      },
+      {
+        "question": "Which industries and domains do you specialize in?",
+        "answer": "Construction, retail, fintech, cybersecurity, and digital platforms — including AI-driven team management, e-commerce, and enterprise security solutions."
+      },
+      {
+        "question": "What technology stacks and platforms does your team have expertise in?",
+        "answer": "GO, Swift, Flutter, cloud platforms (AWS/Azure/GCP), Docker/Kubernetes, FastAPI, JavaScript, and AI/ML frameworks. We build proprietary security tools like Silence AI-CSD."
+      },
+      {
+        "question": "Do you offer end-to-end product development or specific services only?",
+        "answer": "We offer both: MVPs, full-cycle product delivery, staff augmentation, and cybersecurity integration."
+      },
+      {
+        "question": "Can you provide both staff augmentation and dedicated team models?",
+        "answer": "Yes, we provide flexible engagement models: staff augmentation, dedicated teams, and project-based outsourcing."
+      },
+      {
+        "question": "Do you offer consulting, architecture, and advisory services beyond development?",
+        "answer": "Yes: cybersecurity consulting, system architecture design, technology advisory, and security compliance assessments using Silence AI-CSD."
+      }
+    ]
+  },
+  "requestDemoModal": {
+    "title": "Contact Us",
+    "contactInfo": "You can contact us through this email",
+    "contactSuffix": "to reach us out",
+    "close": "Close",
+    "successTitle": "Request Sent!",
+    "successBody": "We will contact you shortly to schedule the demo."
+  },
+  "requestSystemModal": {
+    "title": "Request the System",
+    "fields": {},
+    "submit": "Download",
+    "successTitle": "Request Sent!",
+    "successBody": "Thank you. System download instructions will be sent to your email."
+  },
+  "whyChooseUs": {
+    "badge": "Results-driven Engineering",
+    "title": "Why Choose Us",
+    "subtitle": "Trusted by teams from",
+    "subtitleHighlight": "billion-dollar organizations",
+    "subtitleTail": "— and delivered at startup speed.",
+    "learnMore": "Learn More",
+    "features": {
+      "fast": {
+        "title": "Fast Delivery with Enterprise Quality",
+        "description": "Fast, iterative delivery cycles meeting enterprise reliability and compliance standards.",
+        "pill": "Speed + Quality"
+      },
+      "ai": {
+        "title": "AI-focused Product Engineering",
+        "description": "From prototypes to production AI agents — we design, train, and deploy models that solve real business problems.",
+        "pill": "AI Engineering"
+      },
+      "local": {
+        "title": "Local Expertise, Global Reach",
+        "description": "Deep knowledge of the Kazakhstan market and regulations combined with international best practices.",
+        "pill": "Local + Global"
+      }
+    },
+    "logos": {
+      "kmg": "KazMunayGas",
+      "nak": "Nur Astana Kurylis"
+    }
+  },
+  "servicesBlock": {
+    "badge": "What We Offer",
+    "title": "Our Services",
+    "description": "Premium UI, solid engineering, and fast delivery — everything you need to launch a product that looks and works like a major brand.",
+    "learnMore": "Learn More",
+    "learnMoreAria": "Learn more about the service",
+    "services": {
+      "aiAgents": {
+        "title": "AI Agents",
+        "description": "Custom conversational and autonomous agents for support, operations, and analytics.",
+        "tag": "Automation"
+      },
+      "customSoftware": {
+        "title": "Custom Software",
+        "description": "End-to-end web and desktop applications tailored to your workflows.",
+        "tag": "Development"
+      },
+      "cybersecurity": {
+        "title": "Cybersecurity",
+        "description": "Audits, pentests, and continuous monitoring.",
+        "tag": "Protection"
+      },
+      "backend": {
+        "title": "Backend / DevOps",
+        "description": "Scalable APIs, CI/CD pipelines, and cloud infrastructure.",
+        "tag": "Scale"
+      },
+      "mobile": {
+        "title": "Mobile Apps",
+        "description": "Cross-platform applications with native performance and polished UX.",
+        "tag": "Shipping"
+      }
+    }
+  },
+  "caseStudies": {
+    "badge": "Proven Impact",
+    "title": "Case Studies",
+    "subtitle": "We do not deliver features. We deliver results.",
+    "caseStudy": "Case Study",
+    "problem": "Problem:",
+    "solution": "Solution:",
+    "liveImpact": "Live Impact",
+    "before": "Before",
+    "after": "After",
+    "buildCta": "Build something like this →",
+    "items": {
+      "nak": {
+        "title": "NAK — AI-Powered Team Management",
+        "problem": "Manual resource allocation",
+        "solution": "AI planning agent",
+        "result": "+32% productivity",
+        "metricLabel": "Team performance index"
+      },
+      "chic": {
+        "title": "Chic Flowers — eCommerce",
+        "problem": "Low online conversions",
+        "solution": "Personalized recommendation engine + UX refresh",
+        "result": "+45% online sales",
+        "metricLabel": "Conversion growth"
+      },
+      "silence": {
+        "title": "Silence AI-CSD",
+        "problem": "High false alarm rate",
+        "solution": "AI detection and automated response",
+        "result": "-68% false positives",
+        "metricLabel": "False alarm volume"
+      }
+    }
+  },
+  "howWeWork": {
+    "title": "How We Work",
+    "subtitle": "Ultra-fast delivery pipeline — optimized for velocity.",
+    "steps": {
+      "discovery": {
+        "title": "Discovery",
+        "desc": "Requirements, stakeholders, success metrics."
+      },
+      "design": {
+        "title": "Design",
+        "desc": "UX, architecture, prototype."
+      },
+      "poc": {
+        "title": "Proof of Concept",
+        "desc": "Quick validation with measurable KPIs."
+      },
+      "build": {
+        "title": "Development",
+        "desc": "Iterative sprints, automated testing."
+      },
+      "deploy": {
+        "title": "Deployment",
+        "desc": "CI/CD, monitoring, security hardening."
+      },
+      "support": {
+        "title": "Support & Scaling",
+        "desc": "Maintenance, roadmap, continuous improvement."
+      }
+    }
+  },
+  "technologyStack": {
+    "title": "Stack technologique",
+    "subtitle": "A carefully selected production stack, built for speed, scalability, and beautiful user experiences.",
+    "categories": []
+  },
+  "backToTop": {
+    "label": "Haut de page"
+  },
+  "pricingCustom": {
+    "title": "Transparent Pricing",
+    "subtitle": "Mobile-friendly plans designed to scale with your product.",
+    "perYear": "per year (estimated)",
+    "percentMaintenance": "{percent}% annual maintenance",
+    "planEstimate": "${value}",
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "features": {
+          "fix": "Critical fixes (48h SLA)",
+          "updates": "Monthly updates",
+          "audit": "Quarterly security audits",
+          "manager": "Dedicated manager"
+        }
+      },
+      "pro": {
+        "name": "Pro",
+        "badge": "Most Popular",
+        "features": {
+          "fix": "Critical fixes (24h SLA)",
+          "updates": "10h monthly updates",
+          "audit": "Monthly security audits",
+          "manager": "Dedicated manager"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "badge": "Best Value",
+        "features": {
+          "fix": "Critical fixes (4h SLA)",
+          "updates": "Unlimited updates + roadmap",
+          "audit": "Weekly audits + backups",
+          "manager": "Dedicated manager"
+        }
+      }
+    },
+    "calculator": {
+      "title": "Project Cost Calculator",
+      "subtitle": "Drag to see your annual maintenance",
+      "projectCost": "Project Cost:",
+      "projectValue": "${value}"
+    }
+  },
+  "badRequest": {
+    "title": "Bad Request",
+    "cta": "Return to Homepage",
+    "description": "The page you are looking for could not be found or the request was invalid."
+  },
+  "countrySelect": {
+    "title": "Select Country",
+    "subtitle": "Choose your location to continue",
+    "searchPlaceholder": "Search country...",
+    "noResults": "No countries found",
+    "continue": "Continue",
+    "comingSoon": {
+      "title": "Almost Ready!",
+      "message": "The admin panel for subscription management will be ready in",
+      "hours": "hours",
+      "notification": "We will notify you when it is available!",
+      "back": "Back",
+      "gotIt": "Got it!"
+    }
+  },
+  "aiSocComparison": {
+    "sectionTitle": "Competitive Advantages",
+    "common": {
+      "features": "Features"
+    },
+    "web": {
+      "title": "AI-CSD Web vs Traditional WAF Solutions",
+      "columns": {
+        "aiSoc": "AI-CSD Web (pay-as-you-go)",
+        "cloudflare": "Cloudflare WAF + Anti-DDoS ($20/mo)",
+        "aws": "AWS WAF (pay-as-you-go)"
+      },
+      "rows": {
+        "complexWaf": {
+          "feature": "WAF with detection of complex attacks"
+        },
+        "ddos": {
+          "feature": "Protection against DDoS attacks",
+          "cloudflare": "Weak at this pricing plan"
+        },
+        "proactive": {
+          "feature": "Proactive 24/7 protection"
+        },
+        "monitoring": {
+          "feature": "Monitor live users, RPS, and bandwidth by country — with full historical tracking"
+        },
+        "setup": {
+          "feature": "Setup time",
+          "aiSoc": "2 mins (no cybersec knowledge needed)",
+          "cloudflare": "2 mins (no cybersec knowledge needed)",
+          "aws": "1 day (cybersec specialist needed)"
+        }
+      }
+    },
+    "email": {
+      "title": "AI-CSD Email vs Traditional Email Security",
+      "columns": {
+        "aiSoc": "AI-CSD Email",
+        "outlook": "Outlook/Gmail",
+        "kaspersky": "Kaspersky (connected to an email provider)"
+      },
+      "rows": {
+        "viewAll": {
+          "feature": "View on all emails across the domain"
+        },
+        "delete": {
+          "feature": "Admin can delete employee's emails"
+        },
+        "activeProtection": {
+          "feature": "Active Protection against all types of email attacks"
+        },
+        "aiManual": {
+          "feature": "AI that manually checks the emails"
+        },
+        "setup": {
+          "feature": "Secure setup completion time",
+          "aiSoc": "2 mins No cybersec. knowledge needed",
+          "outlook": "No-full security",
+          "kaspersky": "1-3 days (connecting to an email provider, can only be done by a cybersec. specialist)"
+        }
+      }
+    }
+  },
+  "aiSocValueSection": {
+    "title": "Why AI-CSD",
+    "subtitle": "AI-CSD makes enterprise-level cybersecurity accessible to any company. Deploy protection in minutes and manage web and email security from one unified platform.",
+    "features": {
+      "deploy": {
+        "title": "Deploy in minutes",
+        "description": "Set up web and email protection in under 4 minutes without complex configuration."
+      },
+      "ai": {
+        "title": "AI-powered analysis",
+        "description": "Advanced AI continuously analyzes traffic, emails, and threats in real time."
+      },
+      "visualization": {
+        "title": "Advanced visualization",
+        "description": "Monitor web traffic and email flows through an advanced visual interface."
+      },
+      "affordable": {
+        "title": "Affordable security",
+        "description": "Enterprise-level protection without the cost of traditional cybersecurity systems."
+      }
+    }
+  },
+  "aiSocInsights": {
+    "title": "THE CYBERSECURITY PROBLEM TODAY",
+    "subtitle": "Modern cyber threats are growing faster than most companies can respond.",
+    "items": [
+      {
+        "stat": "Every 39 seconds",
+        "suffix": "a hacker attack occurs",
+        "description": "Global cyberattacks are increasing every year, targeting businesses of all sizes."
+      },
+      {
+        "stat": "20.5 million",
+        "suffix": "DDoS attacks in Q1 2025",
+        "description": "Massive traffic floods can take websites and APIs offline within minutes."
+      },
+      {
+        "stat": "30,000",
+        "suffix": "websites are hacked every day",
+        "description": "From startups to enterprise platforms, web infrastructure remains a constant target."
+      }
+    ]
+  },
+  "aiSocPricing": {
+    "intro": "AI-CSD is a lineup of standalone cybersecurity systems",
+    "emailDescription": "Email Security acts as a protective shield for your corporate communications. It filters incoming and outgoing messages to neutralize phishing attempts, spoofing attacks, and malicious links before they reach your users, ensuring the integrity of your business correspondence.",
+    "webDescription": "Web Security safeguards your digital infrastructure by analyzing traffic patterns in real-time. It defends websites and APIs against common vulnerabilities, DDoS attacks, and unauthorized access, providing deep visibility into network activity without impacting performance."
+  },
+  "aiSocFaq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "Is AI-CSD just a security engine or a full email platform?",
+        "response": "AI-CSD can be used in two different ways, depending on how your organization manages email.\n\n1️⃣ As a standalone secure email platform\n\nAI-CSD can operate as your organization's primary email system, similar to Gmail or Outlook. It includes its own mail server infrastructure, secure webmail interface, and administrative console for managing corporate accounts. In this mode, organizations use AI-CSD as their main email platform while benefiting from built-in AI-driven security protection.\n\n2️⃣ As an AI security layer for existing email systems\n\nAI-CSD can also work alongside existing Gmail or Outlook environments as an additional security layer. In this setup, users keep their current email provider while AI-CSD analyzes email traffic and protects against phishing, spoofing, malicious links, and other threats without requiring migration."
+      },
+      {
+        "question": "Can AI-CSD be used alongside existing Gmail or Outlook environments?",
+        "response": "Yes. AI-CSD can run as an additional security layer while you keep Gmail or Outlook as your primary provider."
+      },
+      {
+        "question": "What happens when AI-CSD operates as the primary email infrastructure?",
+        "response": "When AI-CSD is your main platform, it provides secure webmail, domain-level admin controls, and built-in threat protection inside the full email workflow."
+      },
+      {
+        "question": "Can administrators create and control corporate email accounts?",
+        "response": "Yes. Administrators can create and manage accounts, monitor domain-wide email activity, and delete messages from user accounts when necessary."
+      },
+      {
+        "question": "Can existing corporate email accounts be connected to AI-CSD?",
+        "response": "Yes. Existing Gmail or Outlook-based corporate accounts can be connected to AI-CSD, adding structured protection without replacing your current provider."
+      },
+      {
+        "question": "Is security pre-configured or does it require manual setup?",
+        "response": "AI-CSD is pre-configured and AI-powered. It provides built-in protection with minimal setup based on the instructions page."
+      },
+      {
+        "question": "Beyond email and web filtering, what advanced threats are detected?",
+        "response": "AI-CSD detects phishing context, spoofing patterns, malicious links, malware attachments, and suspicious behaviors across email and web traffic."
+      },
+      {
+        "question": "Does AI-CSD use threat intelligence to prevent attacks in advance?",
+        "response": "Yes. AI-CSD uses threat intelligence feeds to block known malicious infrastructure before attacks reach protected systems."
+      }
+    ]
+  }
+}

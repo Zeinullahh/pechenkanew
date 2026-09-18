@@ -33,7 +33,7 @@ export const competitiveComparisons = {
       ["Admin can delete employees' emails", [true, false, false]],
       ["Active protection against all types of email attacks", [true, false, true]],
       ["AI that manually checks the emails for phishing", [true, false, true]],
-      ["Guided anti-impersonation", [true, false, false]],
+      ["Guided anti-impersonation setup", [true, false, false]],
       ["AI forwards emails, sends them to specific folder, replies/makes response-draft to emails", [true, false, false]],
       ["Secure setup completion time", ["5 min", "5 min", "1–3 days"]],
     ],

@@ -29,10 +29,13 @@ export const competitiveComparisons = {
     title: "AI-CSD Email vs. alternatives",
     columns: ["Feature", "AI-CSD Email", "Microsoft 365 / Outlook", "Gmail", "FortiMail"],
     rows: [
-      ["View all emails across the domain from an Admin Console", [true, false, false, true]],
+      [
+        "View all emails across the domain from an Admin Console",
+        [true, "Additional paid system required", "Additional paid system required", true],
+      ],
       ["Admin can delete employees' emails", [true, false, false, false]],
       ["Active protection against all types of email attacks", [true, false, false, true]],
-      ["AI that manually checks the emails for phishing", [true, false, false, true]],
+      ["AI-powered zero day phishing email detection", [true, "Weak", "Weak", true]],
       ["Guided anti-impersonation setup", [true, false, false, false]],
       ["AI forwards emails, sends them to specific folder, replies/makes response-draft to emails", [true, false, false, false]],
       [

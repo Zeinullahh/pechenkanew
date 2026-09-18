@@ -8,7 +8,6 @@ import clsx from "clsx";
 import GlowButton from "./GlowButton";
 import LanguageSelector from "./LanguageSelector";
 import CountrySelectModal from "./CountrySelectModal";
-import EmailSecurityModal from "./EmailSecurityModal";
 import GlassSurface from "./GlassSurface";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -23,53 +22,18 @@ const Header = ({ onOpenModal, hideCta = false }) => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [countrySelectOpen, setCountrySelectOpen] = useState(false);
-  const [emailSecurityOpen, setEmailSecurityOpen] = useState(false);
   const [openDesktopDropdown, setOpenDesktopDropdown] = useState(null);
   const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
   const [activeSectionId, setActiveSectionId] = useState("pricing");
   const { t } = useLanguage();
 
   const sectionItems = useMemo(() => [
-    { key: "pricing", label: t("header.sections.pricing", "Pricing") },
-    { key: "compliance", label: t("header.sections.compliance", "Compliance") },
-    { key: "resources", label: t("header.sections.resources", "Resources") },
-    { key: "faq", label: t("header.sections.faq", "FAQ") },
+    { key: "pricing", label: t("header.nav.pricing", "Pricing") },
+    { key: "compliance", label: t("header.nav.compliance", "Compliance") },
+    { key: "resources", label: t("header.nav.partners", "Clients/Partners") },
   ], [t]);
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact-form");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
-  const handleContactClick = () => {
-    if (pathname === "/") {
-      // On home page, open the modal
-      if (onOpenModal) {
-        onOpenModal();
-      }
-    } else {
-      // On other pages, try to scroll to contact form
-      scrollToContact();
-    }
-  };
-
-  const handleContactLink = (e) => {
-    <Link
-      href="/#contact-form"
-      onClick={handleContactLink}
-      className="text-sm font-semibold text-white/80 transition hover:text-white"
-    >
-      {t("header.cta.contact", "Contact")}
-    </Link>
-    if (pathname === "/") {
-      e.preventDefault();
-      if (onOpenModal) {
-        onOpenModal();
-      }
-    }
-  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -158,17 +122,32 @@ const Header = ({ onOpenModal, hideCta = false }) => {
   ];
 
   const navItems = [
-    { key: "mail", label: t("header.nav.mail", "Mail"), onClick: () => setEmailSecurityOpen(true) },
-    ...(isMainPage ? [{
-      key: "sections",
-      label: t("header.nav.sections", "Sections"),
-      children: sectionItems.map((item) => ({
-        ...item,
-        onClick: () => scrollToSection(item.key),
-        isActive: item.key === activeSectionId,
-      })),
-    }] : []),
-    { key: "instructions", label: t("header.nav.instructions", "Instructions"), children: instructionsItems },
+    {
+      key: "pricing",
+      label: t("header.nav.pricing", "Pricing"),
+      onClick: isMainPage ? () => scrollToSection("pricing") : undefined,
+      href: !isMainPage ? "/#pricing" : undefined,
+      isActive: isMainPage && activeSectionId === "pricing",
+    },
+    {
+      key: "compliance",
+      label: t("header.nav.compliance", "Compliance"),
+      onClick: isMainPage ? () => scrollToSection("compliance") : undefined,
+      href: !isMainPage ? "/#compliance" : undefined,
+      isActive: isMainPage && activeSectionId === "compliance",
+    },
+    {
+      key: "resources",
+      label: t("header.nav.partners", "Clients/Partners"),
+      onClick: isMainPage ? () => scrollToSection("resources") : undefined,
+      href: !isMainPage ? "/#resources" : undefined,
+      isActive: isMainPage && activeSectionId === "resources",
+    },
+    {
+      key: "instructions",
+      label: t("header.nav.instructions", "Instructions"),
+      children: instructionsItems,
+    },
   ];
 
   return (
@@ -301,26 +280,14 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                 })}
                 <div className="pt-4 flex flex-col gap-4 w-full items-center">
                   <LanguageSelector align="left" allowedLocales={isPolicyPage ? ["en", "ru"] : undefined} />
-                  {!hideCta && isMainPage && (
+                  {!hideCta && !isPolicyPage && (
                     <GlowButton
                       onClick={() => {
                         onOpenModal?.();
                         setIsMobileMenuOpen(false);
                       }}
                     >
-                      {t("header.cta.contact", "Contact")}
-                    </GlowButton>
-                  )}
-                  {!hideCta && !isMainPage && !isPolicyPage && (
-                    <GlowButton
-                      onClick={() => {
-                        onOpenModal?.();
-                        setIsMobileMenuOpen(false);
-                      }}
-                    >
-                      {pathname === "/ai-soc" || pathname === "/ai-soc/"
-                        ? t("header.cta.get", "Get")
-                        : t("header.cta.contact", "Contact")}
+                      {t("header.cta.loginRegister", "Login/Register")}
                     </GlowButton>
                   )}
                 </div>
@@ -512,16 +479,9 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                 >
                   <LanguageSelector align={isDesktop ? "right" : "center"} allowedLocales={isPolicyPage ? ["en", "ru"] : undefined} />
                 </div>
-                {isDesktop && isMainPage && !hideCta && (
-                  <GlowButton onClick={handleContactClick}>
-                    {t("header.cta.contact", "Contact")}
-                  </GlowButton>
-                )}
-                {isDesktop && !isMainPage && !isPolicyPage && !hideCta && (
+                {isDesktop && !hideCta && !isPolicyPage && (
                   <GlowButton onClick={onOpenModal}>
-                    {pathname === "/ai-soc" || pathname === "/ai-soc/"
-                      ? t("header.cta.get", "Get")
-                      : t("header.cta.contact", "Contact")}
+                    {t("header.cta.loginRegister", "Login/Register")}
                   </GlowButton>
                 )}
               </motion.div>
@@ -552,7 +512,6 @@ const Header = ({ onOpenModal, hideCta = false }) => {
         </motion.div>
       </motion.header>
       <CountrySelectModal isOpen={countrySelectOpen} onClose={() => setCountrySelectOpen(false)} />
-      <EmailSecurityModal isOpen={emailSecurityOpen} onClose={() => setEmailSecurityOpen(false)} />
     </>
   );
 };

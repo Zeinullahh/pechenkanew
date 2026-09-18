@@ -27,15 +27,24 @@ export const competitiveComparisons = {
   },
   email: {
     title: "AI-CSD Email vs. alternatives",
-    columns: ["Feature", "AI-CSD Email", "Outlook / Gmail", "FortiMail"],
+    columns: ["Feature", "AI-CSD Email", "Microsoft 365 / Outlook", "Gmail", "FortiMail"],
     rows: [
-      ["View all emails across the domain from an Admin Console", [true, false, true]],
-      ["Admin can delete employees' emails", [true, false, false]],
-      ["Active protection against all types of email attacks", [true, false, true]],
-      ["AI that manually checks the emails for phishing", [true, false, true]],
-      ["Guided anti-impersonation setup", [true, false, false]],
-      ["AI forwards emails, sends them to specific folder, replies/makes response-draft to emails", [true, false, false]],
-      ["Secure setup completion time", ["5 min", "5 min", "1–3 days"]],
+      ["View all emails across the domain from an Admin Console", [true, false, false, true]],
+      ["Admin can delete employees' emails", [true, false, false, false]],
+      ["Active protection against all types of email attacks", [true, false, false, true]],
+      ["AI that manually checks the emails for phishing", [true, false, false, true]],
+      ["Guided anti-impersonation setup", [true, false, false, false]],
+      ["AI forwards emails, sends them to specific folder, replies/makes response-draft to emails", [true, false, false, false]],
+      [
+        "Ability to run local mail server",
+        [
+          true,
+          { type: "check", comment: "Available, but in much higher pricing option" },
+          false,
+          true,
+        ],
+      ],
+      ["Secure setup completion time", ["5 min", "5 min", "5 min", "1–3 days"]],
     ],
   },
   pentester: {

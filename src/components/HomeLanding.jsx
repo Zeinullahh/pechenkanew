@@ -296,7 +296,7 @@ export default function HomeLanding() {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-clip">
       <Preloader />
-      <Header onOpenModal={openModal} />
+      <Header onOpenModal={openGetModal} />
 
       <main className="relative mx-auto flex flex-col gap-0 pb-16 z-10">
         <ScrollytellingSequence>
@@ -488,6 +488,7 @@ export default function HomeLanding() {
 
           return (
             <section id="resources" className="py-12 w-full scroll-mt-24">
+              <span id="partners" className="-mt-24 block" />
               <div className="mb-10 text-center px-4">
                 <h2 className="text-3xl font-bold sm:text-4xl text-white">
                   {t("homePartners.title", "Clients and Partners")}
@@ -531,6 +532,10 @@ export default function HomeLanding() {
             </section>
           );
         })()}
+
+        <div className="w-full max-w-7xl mx-auto pt-20 px-4 sm:px-6 lg:px-8">
+          <FloatingText />
+        </div>
 
         {/* Featured Resources */}
         <section className="space-y-8 pt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -717,10 +722,6 @@ export default function HomeLanding() {
         </>}
 
         <FaqSection />
-
-        <div className="w-full max-w-7xl mx-auto mt-24">
-          <FloatingText />
-        </div>
       </main>
 
       <BackToTopButton />

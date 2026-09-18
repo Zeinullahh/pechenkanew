@@ -1322,7 +1322,9 @@
     "andManyMore": "And many more...",
     "nav": {
       "main": "Main",
-      "mail": "Mail",
+      "pricing": "Pricing",
+      "compliance": "Compliance",
+      "partners": "Clients/Partners",
       "affiliate": "Affiliate program",
       "instructions": "Instructions",
       "product": "AI-CSD",
@@ -1341,6 +1343,7 @@
     },
     "login": "Login",
     "cta": {
+      "loginRegister": "Login/Register",
       "contact": "Contact",
       "download": "Download",
       "requestDemo": "Request Demo",

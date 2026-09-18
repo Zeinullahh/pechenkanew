@@ -694,7 +694,6 @@ const EmailSecurityPricing = ({
 };
 
 const WebSecurityPricing = ({
-  plan,
   billing,
   setBilling,
   billingLabels,
@@ -706,20 +705,8 @@ const WebSecurityPricing = ({
   const monthlyPrice = isAnnual ? 350 : 420;
   const annualCharge = 4200;
 
-  const webFeatures = plan?.features || [
-    "Full WAF protection",
-    "Dedicated Web IPS layer",
-    "Real-time DDoS protection",
-    "Behavioral CAPTCHA and bot protection",
-    "Integrated Web Threat SIEM",
-    "Security analytics and global traffic monitoring",
-    "Country blocking",
-    "IP and subnet blocking",
-    "AI security manager that can execute security actions",
-  ];
-
   return (
-    <div className="mx-auto max-w-6xl">
+    <div className="mx-auto max-w-5xl">
       <div className="mb-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-2xl">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-blue-300">Web Security</p>
@@ -742,9 +729,9 @@ const WebSecurityPricing = ({
         displace={0.35}
         className="pricing-glass-panel pricing-glass-card overflow-hidden rounded-[28px]"
       >
-        <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1fr_1.15fr] lg:p-10">
-          {/* Left Column: Pricing & Usage */}
-          <div className="flex flex-col justify-between space-y-6">
+        <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1fr_1.25fr] lg:p-8 items-center">
+          {/* Left Column: Pricing & CTA */}
+          <div className="flex flex-col justify-between space-y-6 h-full">
             <div>
               <div className="flex items-center justify-between">
                 <span className="rounded-full border border-blue-400/25 bg-blue-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-blue-200">
@@ -774,113 +761,65 @@ const WebSecurityPricing = ({
                   <p className="mt-2 text-xs text-white/45">Billed monthly · Cancel anytime</p>
                 )}
               </div>
-
-              <button
-                type="button"
-                onClick={onOpenModal}
-                className="pricing-button-invert mt-6 w-full rounded-full bg-blue-500 py-3.5 px-6 font-medium text-white shadow-[0_4px_24px_rgba(59,130,246,0.35)] transition-all hover:bg-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
-              >
-                Start protecting your website
-              </button>
             </div>
 
-            {/* Usage Breakdown */}
-            <div className="space-y-4">
-              <div className="rounded-2xl border border-blue-300/20 bg-blue-500/[0.07] p-5">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">Included every month</p>
-                    <div className="mt-3 grid grid-cols-2 gap-3">
-                      <div>
-                        <p className="text-xl font-semibold text-white">10M</p>
-                        <p className="mt-0.5 text-xs text-white/45">legitimate requests</p>
-                      </div>
-                      <div>
-                        <p className="text-xl font-semibold text-white">25 GB</p>
-                        <p className="mt-0.5 text-xs text-white/45">SIEM log storage</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">Pay as you go</p>
-                    <div className="mt-3 grid grid-cols-2 gap-3">
-                      <div>
-                        <p className="text-xl font-semibold text-white">{formatPrice(convertPrice(1, currency), currency)}</p>
-                        <p className="mt-0.5 text-xs text-white/45">per extra 1M requests</p>
-                      </div>
-                      <div>
-                        <p className="text-xl font-semibold text-white">{formatPrice(convertPrice(0.5, currency), currency)}</p>
-                        <p className="mt-0.5 text-xs text-white/45">per extra GB / month</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-4 rounded-xl border border-emerald-300/25 bg-emerald-400/[0.08] px-4 py-2.5">
-                  <p className="text-xs sm:text-sm font-semibold text-emerald-200">✓ BLOCKED MALICIOUS TRAFFIC — $0.00</p>
-                  <p className="mt-0.5 text-[11px] text-white/55">You pay for your legitimate users. Never your attackers.</p>
-                </div>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-4 flex items-center justify-between">
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">SIEM log retention</p>
-                  <p className="mt-1 text-xs text-white/50">Control storage with flexible retention periods</p>
-                </div>
-                <div className="flex items-center gap-1.5 text-xs font-medium text-white/80 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
-                  <span>7d</span>
-                  <span className="text-white/30">·</span>
-                  <span>30d</span>
-                  <span className="text-white/30">·</span>
-                  <span>90d</span>
-                </div>
-              </div>
-            </div>
+            <button
+              type="button"
+              onClick={onOpenModal}
+              className="pricing-button-invert w-full rounded-full bg-blue-500 py-3.5 px-6 font-medium text-white shadow-[0_4px_24px_rgba(59,130,246,0.35)] transition-all hover:bg-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+            >
+              Start protecting your website
+            </button>
           </div>
 
-          {/* Right Column: Platform Capabilities */}
-          <div className="flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.025] p-6 sm:p-7">
-            <div>
-              <div className="mb-6 flex items-baseline justify-between border-b border-white/10 pb-4">
+          {/* Right Column: Usage Breakdown */}
+          <div className="space-y-4">
+            <div className="rounded-2xl border border-blue-300/20 bg-blue-500/[0.07] p-5">
+              <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <h4 className="text-lg font-semibold text-white">Full Enterprise Feature Stack</h4>
-                  <p className="mt-1 text-xs text-white/55">Every capability is active out of the box — zero tiers or hidden add-ons.</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">Included every month</p>
+                  <div className="mt-3 grid grid-cols-2 gap-3">
+                    <div>
+                      <p className="text-xl font-semibold text-white">10M</p>
+                      <p className="mt-0.5 text-xs text-white/45">legitimate requests</p>
+                    </div>
+                    <div>
+                      <p className="text-xl font-semibold text-white">25 GB</p>
+                      <p className="mt-0.5 text-xs text-white/45">SIEM log storage</p>
+                    </div>
+                  </div>
                 </div>
-                <span className="hidden sm:inline-flex rounded-full bg-blue-500/20 px-2.5 py-1 text-[11px] font-medium text-blue-300 border border-blue-400/20">
-                  Unified
-                </span>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">Pay as you go</p>
+                  <div className="mt-3 grid grid-cols-2 gap-3">
+                    <div>
+                      <p className="text-xl font-semibold text-white">{formatPrice(convertPrice(1, currency), currency)}</p>
+                      <p className="mt-0.5 text-xs text-white/45">per extra 1M requests</p>
+                    </div>
+                    <div>
+                      <p className="text-xl font-semibold text-white">{formatPrice(convertPrice(0.5, currency), currency)}</p>
+                      <p className="mt-0.5 text-xs text-white/45">per extra GB / month</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <ul className="grid gap-3 sm:grid-cols-1">
-                {webFeatures.map((feature, idx) => (
-                  <li
-                    key={typeof feature === "string" ? feature : idx}
-                    className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/[0.02] p-3 transition-colors hover:border-blue-400/20 hover:bg-blue-500/[0.04]"
-                  >
-                    <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 text-xs font-bold">
-                      ✓
-                    </div>
-                    <div className="text-xs sm:text-sm font-medium text-white/85 leading-tight">
-                      {typeof feature === "string" ? feature : feature.label}
-                    </div>
-                  </li>
-                ))}
-              </ul>
+              <div className="mt-4 rounded-xl border border-emerald-300/25 bg-emerald-400/[0.08] px-4 py-2.5">
+                <p className="text-xs sm:text-sm font-semibold text-emerald-200">✓ BLOCKED MALICIOUS TRAFFIC — $0.00</p>
+                <p className="mt-0.5 text-[11px] text-white/55">You pay for your legitimate users. Never your attackers.</p>
+              </div>
             </div>
 
-            <div className="mt-6 rounded-xl border border-white/10 bg-black/30 p-4">
-              <div className="grid grid-cols-3 gap-2 text-center text-xs text-white/70">
-                <div className="border-r border-white/10 pr-2">
-                  <p className="font-semibold text-white">~5 min</p>
-                  <p className="text-[10px] text-white/40">DNS setup</p>
-                </div>
-                <div className="border-r border-white/10 px-2">
-                  <p className="font-semibold text-white">99.99%</p>
-                  <p className="text-[10px] text-white/40">Global uptime</p>
-                </div>
-                <div className="pl-2">
-                  <p className="font-semibold text-white">24 / 7</p>
-                  <p className="text-[10px] text-white/40">AI Monitoring</p>
-                </div>
+            <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-4 flex items-center justify-between">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">SIEM log retention</p>
+                <p className="mt-1 text-xs text-white/50">Control storage with flexible retention periods</p>
+              </div>
+              <div className="flex items-center gap-1.5 text-xs font-medium text-white/80 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
+                <span>7d</span>
+                <span className="text-white/30">·</span>
+                <span>30d</span>
+                <span className="text-white/30">·</span>
+                <span>90d</span>
               </div>
             </div>
           </div>

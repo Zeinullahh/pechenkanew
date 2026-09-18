@@ -135,7 +135,9 @@
       "instructionsAiSoc": "AI-CSD",
       "instructionsSupreme": "Supreme",
       "main": "Главная",
-      "mail": "Почта",
+      "pricing": "Цены",
+      "compliance": "Комплаенс",
+      "partners": "Клиенты/Партнеры",
       "product": "AI-CSD",
       "secureDevelopment": "SLNC-env",
       "developerServices": "Сервисы для разработчиков",
@@ -143,6 +145,7 @@
       "instructionsSithub": "Sithub"
     },
     "cta": {
+      "loginRegister": "Вход / Регистрация",
       "contact": "Контакты",
       "requestDemo": "Запросить демо",
       "get": "Получить",

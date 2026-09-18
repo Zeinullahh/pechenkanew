@@ -33,8 +33,53 @@ export const competitiveComparisons = {
       ["Admin can delete employees' emails", [true, false, false]],
       ["Active protection against all types of email attacks", [true, false, true]],
       ["AI that manually checks the emails for phishing", [true, false, true]],
+      ["Guided anti-impersonation setup", [true, false, false]],
       ["AI forwards emails, sends them to specific folder, replies/makes response-draft to emails", [true, false, false]],
       ["Secure setup completion time", ["5 min", "5 min", "1–3 days"]],
     ],
   },
+  pentester: {
+    eyebrow: "COMPARE THE MODEL",
+    title: "A different approach to penetration testing.",
+    description:
+      "Compare how Silence AI combines source-code analysis, live application testing and business-logic pentesting in one autonomous workflow.",
+    columns: [
+      { label: "Feature" },
+      { label: "Silence AI", sublabel: "Autonomous Pentester" },
+      { label: "Snyk" },
+      { label: "NodeZero" },
+      { label: "Detectify" },
+      { label: "Intruder AI Pentest" },
+    ],
+    rows: [
+      ["Source-code security testing (SAST)", [true, true, false, false, true]],
+      ["Live website testing (DAST)", [true, true, true, true, true]],
+      ["API security testing", [true, true, true, true, true]],
+      ["Business-logic testing", [true, true, true, false, true]],
+      ["Persistent source-code security graph", [true, false, false, false, false]],
+      ["Authenticated testing", [true, true, true, true, true]],
+      ["Multi-step attack paths", [true, true, true, false, true]],
+      ["Source code + live app in one assessment", [true, "Separate modules", false, false, true]],
+      ["Automatic PR with fixed code", [true, true, false, false, false]],
+      ["Setup by general IT specialist", ["~5 min", "~30 min", "~15 min", "~10 min", "~10 min"]],
+      [
+        {
+          label: "Full security assessment",
+          sublabel: "Notion-class app · ~2M LOC",
+          icon: "/notion-logo.png",
+          isPricingRow: true,
+        },
+        [
+          { value: "≈ $2.7K–$3.2K", highlight: true, note: "Full assessment" },
+          { value: "≈ $22K–$41K / yr", comment: "EST." },
+          { value: "From ≈ $15K/yr", comment: "EST." },
+          { value: "≈ $20K–$35K", comment: "Native ≈ $5.35K/yr · EST." },
+          { value: "≈ $3.5K/test", comment: "EST." },
+        ],
+      ],
+    ],
+    footnote:
+      "*Example pricing uses a hypothetical Notion-class SaaS application with approximately 2M lines of first-party code. It does not represent Notion's actual private codebase. Competitor pricing may vary by contract, scope, targets and product configuration. Estimated figures are based on publicly available pricing and researched market assumptions.*",
+  },
 };
+

@@ -381,12 +381,6 @@ const SERVER_SECURITY_COMPARISON = [
   },
 ];
 
-const PENTEST_COMPARISON = [
-  ["Pricing", "$9,900/year + prepaid compute at $5 per 1M tokens. You approve the maximum before testing starts.", "From $25/developer/month; enterprise quote for broader coverage.", "Core: $25,000/year for 500 assets.", "Enterprise from €15,000/year plus target fees.", "$3,500/test for subscribers; $4,000 one-off."],
-  ["Functionality & setup", "All-in-one, source-aware penetration testing. Any IT professional can set it up in about 5 minutes; AI runs the testing autonomously.", "Developer-first AppSec platform; teams select and configure the relevant security products and workflows.", "Autonomous infrastructure penetration testing; application testing requires additional tooling.", "Application/API scanning and attack-surface management; scope and targets require configuration.", "AI white-box web-app pentesting; engagement is focused on the selected web application."],
-  ["Testing scope", "One workflow combines source-code intelligence, SAST, DAST, runtime testing, exploit validation and remediation guidance.", "Broad AppSec capabilities, with coverage varying by selected product and plan.", "Infrastructure-focused testing rather than a unified source-to-runtime application workflow.", "Application scanning focus; coverage varies by product, target and engagement scope.", "Web-application-focused AI pentesting rather than a unified multi-surface workflow."],
-];
-
 const trackPricingEvent = (eventName) => {
   if (typeof window !== "undefined" && Array.isArray(window.dataLayer)) {
     window.dataLayer.push({ event: eventName });
@@ -401,9 +395,20 @@ const ProductComparison = ({ productType }) => {
   return (
     <section className="mt-12 sm:mt-16" aria-labelledby={`${productType}-security-comparison-title`}>
       <div className="mb-6 text-center">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300">Competitive advantages</p>
-        <h3 id={`${productType}-security-comparison-title`} className="mt-3 text-2xl font-semibold text-white sm:text-3xl">{comparison.title}</h3>
-        <p className="mt-3 text-xs font-medium text-sky-200/70 sm:hidden">Swipe or drag horizontally to compare every option <span aria-hidden="true">→</span></p>
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300">
+          {comparison.eyebrow || "Competitive advantages"}
+        </p>
+        <h3 id={`${productType}-security-comparison-title`} className="mt-3 text-2xl font-semibold text-white sm:text-3xl">
+          {comparison.title}
+        </h3>
+        {comparison.description && (
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-white/60">
+            {comparison.description}
+          </p>
+        )}
+        <p className="mt-3 text-xs font-medium text-sky-200/70 sm:hidden">
+          Swipe or drag horizontally to compare every option <span aria-hidden="true">→</span>
+        </p>
       </div>
       <GlassSurface
         width="100%"
@@ -416,37 +421,139 @@ const ProductComparison = ({ productType }) => {
         className="pricing-comparison-surface mx-auto w-[90vw] max-w-none overflow-hidden rounded-3xl"
       >
         <div
-          className="pricing-table-scroll"
+          className="pricing-table-scroll w-full overflow-x-auto"
           tabIndex="0"
           role="region"
           aria-label={`${comparison.title}. Scroll horizontally to view all providers.`}
         >
-          <table className="w-full table-fixed border-collapse text-left text-[11px] sm:text-sm">
+          <table className="w-full min-w-[980px] lg:min-w-[1100px] table-fixed border-collapse text-left text-[11px] sm:text-sm">
             <thead className="text-slate-200">
               <tr>
                 {comparison.columns.map((column, index) => (
-                  <th key={column.label || column} className={`border-b border-sky-300/25 px-3 py-4 text-center font-semibold sm:px-5 ${index === 0 ? "sticky left-0 z-20 w-[240px] min-w-[240px] bg-slate-950/95 text-left" : "min-w-[188px]"} ${index === 1 ? "bg-emerald-500/10 text-white" : ""}`}>
-                    <span className="block">{column.label || column}</span>
-                    {column.sublabel && <span className="mt-1 block text-[10px] font-normal text-white/45">{column.sublabel}</span>}
+                  <th
+                    key={column.label || column}
+                    className={`border-b border-sky-300/25 px-2 py-4 text-center font-semibold sm:px-4 ${
+                      index === 0
+                        ? "sticky left-0 z-20 w-[210px] min-w-[190px] sm:w-[240px] sm:min-w-[220px] bg-slate-950/95 text-left"
+                        : "w-[150px] min-w-[140px] sm:w-[175px] sm:min-w-[160px]"
+                    } ${index === 1 ? "bg-emerald-500/10 text-white" : ""}`}
+                  >
+                    <span className="block px-1 leading-tight break-words">{column.label || column}</span>
+                    {column.sublabel && (
+                      <span className="mt-1 block text-[10px] font-normal text-white/45">
+                        {column.sublabel}
+                      </span>
+                    )}
                   </th>
                 ))}
               </tr>
             </thead>
             <tbody>
-              {comparison.rows.map(([feature, values]) => (
-                <tr key={feature} className="border-b border-sky-300/20 last:border-0">
-                  <th className="sticky left-0 z-10 border-r border-sky-300/25 bg-slate-950/95 px-3 py-4 text-left font-medium text-slate-200 sm:px-5">{feature}</th>
-                  {values.map((value, index) => (
-                    <td key={`${feature}-${index}`} className={`border-r border-sky-300/25 px-3 py-4 text-center last:border-r-0 ${index === 0 ? "bg-emerald-500/10 text-emerald-300" : "text-slate-200"}`}>
-                      {typeof value === "boolean" ? <span className={`text-2xl font-semibold ${value ? "text-emerald-400" : "text-rose-400"}`}>{value ? "✓" : "✗"}</span> : value?.type === "check" ? <span className="flex flex-col items-center gap-1"><span className="text-2xl font-semibold text-emerald-400">✓</span><span className="max-w-[155px] text-[11px] leading-4 text-white/50">{value.comment}</span></span> : value?.value ? <span className="flex flex-col items-center gap-1"><span>{value.value}</span><span className="text-[11px] leading-4 text-white/50">{value.comment}</span></span> : value}
-                    </td>
-                  ))}
-                </tr>
-              ))}
+              {comparison.rows.map(([feature, values]) => {
+                const isPricingRow = feature?.isPricingRow;
+                const featureKey = typeof feature === "string" ? feature : feature.label;
+                return (
+                  <tr
+                    key={featureKey}
+                    className={`border-b border-sky-300/20 last:border-0 ${
+                      isPricingRow ? "bg-white/[0.035]" : ""
+                    }`}
+                  >
+                    <th
+                      className={`sticky left-0 z-10 border-r border-sky-300/25 bg-slate-950/95 px-3 py-4 text-left font-medium text-slate-200 sm:px-5 ${
+                        isPricingRow ? "bg-slate-900/95 py-5 text-white" : ""
+                      }`}
+                    >
+                      {typeof feature === "string" ? (
+                        feature
+                      ) : (
+                        <div>
+                          <span className="block font-semibold text-white text-xs sm:text-sm">
+                            {feature.label}
+                          </span>
+                          <span className="mt-1 flex items-center gap-1.5 text-[11px] text-white/70">
+                            {feature.icon && (
+                              <img
+                                src={feature.icon}
+                                alt="Notion"
+                                width={16}
+                                height={16}
+                                className="h-4 w-4 shrink-0 object-contain aspect-square inline-block"
+                                loading="lazy"
+                              />
+                            )}
+                            <span className="font-normal">{feature.sublabel}</span>
+                          </span>
+                        </div>
+                      )}
+                    </th>
+                    {values.map((value, index) => (
+                      <td
+                        key={`${featureKey}-${index}`}
+                        className={`border-r border-sky-300/25 px-3 py-4 text-center align-middle last:border-r-0 ${
+                          index === 0
+                            ? isPricingRow
+                              ? "bg-emerald-500/[0.18] text-emerald-300 shadow-[inset_0_0_32px_rgba(16,185,129,0.08)]"
+                              : "bg-emerald-500/10 text-emerald-300"
+                            : isPricingRow
+                            ? "bg-white/[0.02] text-slate-200"
+                            : "text-slate-200"
+                        }`}
+                      >
+                        {typeof value === "boolean" ? (
+                          <span className={`text-2xl font-semibold ${value ? "text-emerald-400" : "text-rose-400"}`}>
+                            {value ? "✓" : "✕"}
+                          </span>
+                        ) : value?.type === "check" ? (
+                          <span className="flex flex-col items-center gap-1">
+                            <span className="text-2xl font-semibold text-emerald-400">✓</span>
+                            <span className="max-w-[155px] text-[11px] leading-4 text-white/50">{value.comment}</span>
+                          </span>
+                        ) : value?.value ? (
+                          <span className="flex flex-col items-center justify-center gap-0.5">
+                            <span
+                              className={`text-sm tracking-tight whitespace-nowrap ${
+                                value.highlight || index === 0
+                                  ? "text-emerald-300 font-bold sm:text-base"
+                                  : "text-white font-semibold sm:text-sm"
+                              }`}
+                            >
+                              {value.value}
+                            </span>
+                            {value.comment && (
+                              <span className="text-[10px] uppercase font-medium tracking-wider text-white/45 whitespace-nowrap">
+                                {value.comment}
+                              </span>
+                            )}
+                            {value.note && (
+                              <span className="text-[10px] font-medium text-emerald-400/90 whitespace-nowrap">
+                                {value.note}
+                              </span>
+                            )}
+                          </span>
+                        ) : (
+                          <span
+                            className={`inline-block ${
+                              typeof value === "string" && value.length > 25 ? "text-left" : "text-center whitespace-nowrap"
+                            } text-xs leading-5 sm:text-[13px] text-slate-200`}
+                          >
+                            {value}
+                          </span>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
       </GlassSurface>
+      {comparison.footnote && (
+        <p className="mx-auto mt-4 max-w-5xl text-center text-[11px] leading-5 text-white/35 sm:text-left">
+          {comparison.footnote}
+        </p>
+      )}
     </section>
   );
 };
@@ -514,27 +621,46 @@ const EmailSecurityPricing = ({
           const highlighted = plan.id === "premium";
 
           return (
-            <div key={plan.id} className={`relative flex h-full flex-col rounded-[26px] border p-6 sm:p-7 ${highlighted ? "border-blue-300/40 bg-blue-500/[0.09] shadow-[0_18px_70px_rgba(37,99,235,0.14)]" : "border-white/10 bg-white/[0.035]"}`}>
-              {highlighted && <span className="absolute right-5 top-5 rounded-full border border-blue-300/25 bg-blue-400/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-blue-100">Most popular</span>}
-              <p className="pr-24 text-lg font-semibold text-white">{plan.title}</p>
-              <div className="mt-6 flex items-end gap-2">
-                <span className="text-4xl font-semibold tracking-tight text-white">{formatPrice(displayPrice, currency)}</span>
-                <span className="pb-1 text-xs leading-4 text-white/45">/ user<br />/ month</span>
-              </div>
-              <p className="mt-2 text-xs text-white/45">{billing === "yearly" ? "Annual commitment" : "Billed monthly"}</p>
+            <GlassSurface
+              key={plan.id}
+              width="100%"
+              height="100%"
+              borderRadius={26}
+              backgroundOpacity={highlighted ? 0.12 : 0.08}
+              saturation={1.55}
+              blur={14}
+              displace={0.35}
+              className={`pricing-glass-panel pricing-glass-card overflow-hidden rounded-[26px] flex flex-col h-full ${
+                highlighted ? "border border-blue-300/40 shadow-[0_18px_70px_rgba(37,99,235,0.2)]" : ""
+              }`}
+            >
+              <div className={`relative flex h-full flex-col p-6 sm:p-7 ${highlighted ? "bg-blue-500/[0.08]" : ""}`}>
+                {highlighted && <span className="absolute right-5 top-5 rounded-full border border-blue-300/25 bg-blue-400/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-blue-100">Most popular</span>}
+                <p className="pr-24 text-lg font-semibold text-white">{plan.title}</p>
+                <div className="mt-6 flex items-end gap-2">
+                  <span className="text-4xl font-semibold tracking-tight text-white">{formatPrice(displayPrice, currency)}</span>
+                  <span className="pb-1 text-xs leading-4 text-white/45">/ user<br />/ month</span>
+                </div>
+                <p className="mt-2 text-xs text-white/45">{billing === "yearly" ? "Annual commitment" : "Billed monthly"}</p>
 
-              <div className="my-6 h-px bg-white/10" />
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-200">Plan capacity</p>
-              <ul className="space-y-3">
-                {differentiators.map((feature) => {
-                  const label = typeof feature === "string" ? feature : feature.label;
-                  return <FeatureItem key={label}>{label}</FeatureItem>;
-                })}
-              </ul>
-              <button type="button" onClick={onOpenModal} className={`pricing-button-invert mt-8 w-full rounded-full px-6 py-3 text-sm font-medium text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 ${highlighted ? "bg-blue-500" : "border border-white/20 bg-white/[0.04]"}`}>
-                Choose {plan.title}
-              </button>
-            </div>
+                <div className="my-6 h-px bg-white/10" />
+                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-200">Plan capacity</p>
+                <ul className="space-y-3">
+                  {differentiators.map((feature) => {
+                    const label = typeof feature === "string" ? feature : feature.label;
+                    return <FeatureItem key={label}>{label}</FeatureItem>;
+                  })}
+                </ul>
+                <button
+                  type="button"
+                  onClick={onOpenModal}
+                  className={`pricing-button-invert mt-auto w-full rounded-full px-6 py-3 text-sm font-medium text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 ${highlighted ? "bg-blue-500" : "border border-white/20 bg-white/[0.04]"}`}
+                  style={{ marginTop: "2rem" }}
+                >
+                  Choose {plan.title}
+                </button>
+              </div>
+            </GlassSurface>
           );
         })}
       </div>
@@ -580,8 +706,20 @@ const WebSecurityPricing = ({
   const monthlyPrice = isAnnual ? 350 : 420;
   const annualCharge = 4200;
 
+  const webFeatures = plan?.features || [
+    "Full WAF protection",
+    "Dedicated Web IPS layer",
+    "Real-time DDoS protection",
+    "Behavioral CAPTCHA and bot protection",
+    "Integrated Web Threat SIEM",
+    "Security analytics and global traffic monitoring",
+    "Country blocking",
+    "IP and subnet blocking",
+    "AI security manager that can execute security actions",
+  ];
+
   return (
-    <div className="mx-auto w-[90vw] max-w-none">
+    <div className="mx-auto max-w-6xl">
       <div className="mb-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-2xl">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-blue-300">Web Security</p>
@@ -594,56 +732,165 @@ const WebSecurityPricing = ({
         </div>
       </div>
 
-      <GlassSurface width="100%" height="auto" borderRadius={28} backgroundOpacity={0.08} saturation={1.55} blur={14} displace={0.35} className="pricing-glass-panel overflow-hidden rounded-[28px]">
-        <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[0.82fr_1.18fr] lg:p-10">
-          <div className="flex flex-col">
-            <p className="text-sm font-semibold text-white">{plan.title}</p>
-            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">Full security platform</p>
-            <div className="mt-2 flex items-end gap-2">
-              <span className="text-6xl font-semibold tracking-tight text-white">{formatPrice(convertPrice(monthlyPrice, currency), currency)}</span>
-              <span className="pb-2 text-sm text-white/50">/ month</span>
-            </div>
-            {isAnnual && (
-              <>
-                <span className="mt-3 w-fit rounded-full border border-emerald-300/30 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-200">2 months free · Save $840 / year</span>
-                <p className="mt-2 text-xs text-white/45">Billed annually at {formatPrice(convertPrice(annualCharge, currency), currency)}</p>
-              </>
-            )}
-            {!isAnnual && (
-              <p className="mt-2 text-xs text-white/45">Billed monthly · Cancel anytime</p>
-            )}
+      <GlassSurface
+        width="100%"
+        height="auto"
+        borderRadius={28}
+        backgroundOpacity={0.08}
+        saturation={1.55}
+        blur={14}
+        displace={0.35}
+        className="pricing-glass-panel pricing-glass-card overflow-hidden rounded-[28px]"
+      >
+        <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1fr_1.15fr] lg:p-10">
+          {/* Left Column: Pricing & Usage */}
+          <div className="flex flex-col justify-between space-y-6">
+            <div>
+              <div className="flex items-center justify-between">
+                <span className="rounded-full border border-blue-400/25 bg-blue-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-blue-200">
+                  All-in-one Web Defense
+                </span>
+                <span className="text-xs text-white/45">Instant deployment</span>
+              </div>
 
-            <div className="mt-7 rounded-2xl border border-blue-300/20 bg-blue-500/[0.07] p-5">
-              <div className="grid gap-5 sm:grid-cols-2">
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">Included every month</p>
-                  <div className="mt-4 grid grid-cols-2 gap-4">
-                    <div><p className="text-xl font-semibold text-white">10M</p><p className="mt-1 text-xs text-white/45">legitimate requests</p></div>
-                    <div><p className="text-xl font-semibold text-white">25 GB</p><p className="mt-1 text-xs text-white/45">SIEM log storage</p></div>
+              <div className="mt-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">Full security platform</p>
+                <div className="mt-2 flex items-baseline gap-2">
+                  <span className="text-5xl sm:text-6xl font-semibold tracking-tight text-white">
+                    {formatPrice(convertPrice(monthlyPrice, currency), currency)}
+                  </span>
+                  <span className="text-sm text-white/50">/ month</span>
+                </div>
+                {isAnnual ? (
+                  <div className="mt-3 flex flex-wrap items-center gap-2">
+                    <span className="rounded-full border border-emerald-300/30 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-200">
+                      2 months free · Save $840 / year
+                    </span>
+                    <p className="text-xs text-white/45">
+                      Billed annually at {formatPrice(convertPrice(annualCharge, currency), currency)}
+                    </p>
+                  </div>
+                ) : (
+                  <p className="mt-2 text-xs text-white/45">Billed monthly · Cancel anytime</p>
+                )}
+              </div>
+
+              <button
+                type="button"
+                onClick={onOpenModal}
+                className="pricing-button-invert mt-6 w-full rounded-full bg-blue-500 py-3.5 px-6 font-medium text-white shadow-[0_4px_24px_rgba(59,130,246,0.35)] transition-all hover:bg-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+              >
+                Start protecting your website
+              </button>
+            </div>
+
+            {/* Usage Breakdown */}
+            <div className="space-y-4">
+              <div className="rounded-2xl border border-blue-300/20 bg-blue-500/[0.07] p-5">
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">Included every month</p>
+                    <div className="mt-3 grid grid-cols-2 gap-3">
+                      <div>
+                        <p className="text-xl font-semibold text-white">10M</p>
+                        <p className="mt-0.5 text-xs text-white/45">legitimate requests</p>
+                      </div>
+                      <div>
+                        <p className="text-xl font-semibold text-white">25 GB</p>
+                        <p className="mt-0.5 text-xs text-white/45">SIEM log storage</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">Pay as you go</p>
+                    <div className="mt-3 grid grid-cols-2 gap-3">
+                      <div>
+                        <p className="text-xl font-semibold text-white">{formatPrice(convertPrice(1, currency), currency)}</p>
+                        <p className="mt-0.5 text-xs text-white/45">per extra 1M requests</p>
+                      </div>
+                      <div>
+                        <p className="text-xl font-semibold text-white">{formatPrice(convertPrice(0.5, currency), currency)}</p>
+                        <p className="mt-0.5 text-xs text-white/45">per extra GB / month</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">Pay as you go</p>
-                  <div className="mt-4 grid grid-cols-2 gap-4">
-                    <div><p className="text-xl font-semibold text-white">{formatPrice(convertPrice(1, currency), currency)}</p><p className="mt-1 text-xs text-white/45">per additional 1M legitimate requests</p></div>
-                    <div><p className="text-xl font-semibold text-white">{formatPrice(convertPrice(0.5, currency), currency)}</p><p className="mt-1 text-xs text-white/45">per additional GB / month</p></div>
-                  </div>
+                <div className="mt-4 rounded-xl border border-emerald-300/25 bg-emerald-400/[0.08] px-4 py-2.5">
+                  <p className="text-xs sm:text-sm font-semibold text-emerald-200">✓ BLOCKED MALICIOUS TRAFFIC — $0.00</p>
+                  <p className="mt-0.5 text-[11px] text-white/55">You pay for your legitimate users. Never your attackers.</p>
                 </div>
               </div>
-              <div className="mt-5 rounded-xl border border-emerald-300/25 bg-emerald-400/[0.08] px-4 py-3">
-                <p className="text-sm font-semibold text-emerald-200">✓ BLOCKED MALICIOUS TRAFFIC — $0.00</p>
-                <p className="mt-1 text-xs text-white/55">You pay for your users. Not your attackers.</p>
+
+              <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-4 flex items-center justify-between">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">SIEM log retention</p>
+                  <p className="mt-1 text-xs text-white/50">Control storage with flexible retention periods</p>
+                </div>
+                <div className="flex items-center gap-1.5 text-xs font-medium text-white/80 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
+                  <span>7d</span>
+                  <span className="text-white/30">·</span>
+                  <span>30d</span>
+                  <span className="text-white/30">·</span>
+                  <span>90d</span>
+                </div>
               </div>
             </div>
-
-            <div className="mt-5 rounded-2xl border border-white/10 bg-white/[0.035] p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">SIEM log retention</p>
-              <p className="mt-3 text-sm font-semibold text-white">7 days <span className="text-white/35">·</span> 30 days <span className="text-white/35">·</span> 90 days</p>
-              <p className="mt-2 text-xs leading-5 text-white/45">Choose how long security logs are retained and control your storage usage.</p>
-            </div>
-            <button type="button" onClick={onOpenModal} className="pricing-button-invert mt-7 rounded-full bg-blue-500 px-6 py-3 font-medium text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60">Start protecting your website</button>
           </div>
-`n        </div>
+
+          {/* Right Column: Platform Capabilities */}
+          <div className="flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.025] p-6 sm:p-7">
+            <div>
+              <div className="mb-6 flex items-baseline justify-between border-b border-white/10 pb-4">
+                <div>
+                  <h4 className="text-lg font-semibold text-white">Full Enterprise Feature Stack</h4>
+                  <p className="mt-1 text-xs text-white/55">Every capability is active out of the box — zero tiers or hidden add-ons.</p>
+                </div>
+                <span className="hidden sm:inline-flex rounded-full bg-blue-500/20 px-2.5 py-1 text-[11px] font-medium text-blue-300 border border-blue-400/20">
+                  Unified
+                </span>
+              </div>
+
+              <ul className="grid gap-3 sm:grid-cols-1">
+                {webFeatures.map((feature, idx) => (
+                  <li
+                    key={typeof feature === "string" ? feature : idx}
+                    className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/[0.02] p-3 transition-colors hover:border-blue-400/20 hover:bg-blue-500/[0.04]"
+                  >
+                    <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-400/10 text-emerald-300 border border-emerald-400/20 text-xs font-bold">
+                      ✓
+                    </div>
+                    <div className="text-xs sm:text-sm font-medium text-white/85 leading-tight">
+                      {typeof feature === "string" ? feature : feature.label}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mt-6 rounded-xl border border-white/10 bg-black/30 p-4">
+              <div className="grid grid-cols-3 gap-2 text-center text-xs text-white/70">
+                <div className="border-r border-white/10 pr-2">
+                  <p className="font-semibold text-white">~5 min</p>
+                  <p className="text-[10px] text-white/40">DNS setup</p>
+                </div>
+                <div className="border-r border-white/10 px-2">
+                  <p className="font-semibold text-white">99.99%</p>
+                  <p className="text-[10px] text-white/40">Global uptime</p>
+                </div>
+                <div className="pl-2">
+                  <p className="font-semibold text-white">24 / 7</p>
+                  <p className="text-[10px] text-white/40">AI Monitoring</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-white/10 bg-blue-500/[0.07] px-6 py-4 text-center sm:px-10">
+          <p className="text-xs sm:text-sm font-semibold text-white">
+            Single predictable price · Zero request fees on blocked traffic · Full WAF, IPS, DDoS & SIEM included
+          </p>
+        </div>
       </GlassSurface>
     </div>
   );
@@ -842,7 +1089,15 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
 
         {productType === "server" && <ServerSecurityComparison />}
 
-        {(productType === "web" || productType === "email") && <ProductComparison productType={productType} />}
+        {(productType === "web" || productType === "email" || productType === "pentester") && <ProductComparison productType={productType} />}
+
+        {productType === "pentester" && (
+          <div className="mx-auto mt-12 max-w-6xl rounded-[28px] border border-white/10 bg-white/[0.035] p-6 text-center sm:mt-16 sm:p-8">
+            <h4 className="text-2xl font-semibold text-white">Testing a very large or mission-critical system?</h4>
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-white/55">For large enterprise, government and critical-infrastructure environments, Silence AI supports high-compute assessments, dedicated deployment requirements and custom security workflows.</p>
+            <button type="button" onClick={() => { trackPricingEvent("penetration_testing_contact_sales_clicked"); onOpenModal?.(); }} className="mt-6 rounded-full border border-white/20 px-6 py-3 font-medium text-white transition hover:border-blue-300 hover:text-blue-200">Contact Sales</button>
+          </div>
+        )}
 
         {productType === "web" && (
           <div className="mt-10 sm:mt-12 px-2 sm:px-0">
@@ -985,20 +1240,35 @@ const PenetrationTestingPricing = ({ onOpenModal }) => {
           {[['1', 'Upload Project', 'Submit the application source code as a .zip project.'], ['2', 'Build Security Graph', 'Create a Graphify-powered code and security graph.'], ['3', 'Estimate Pentest', 'Use source tokens, graph complexity, services, endpoints and expected investigation workload.'], ['4', 'Approve Maximum Cost', 'Review estimated compute, included balance, additional tokens and maximum cost.'], ['5', 'Run Autonomous Pentest', 'K2.7 / K3 inference starts only after sufficient balance is reserved.']].map(([step, title, copy]) => <div key={step} className="relative rounded-2xl border border-white/10 bg-white/[0.035] p-4"><span className="text-xs font-semibold text-blue-300">{step}</span><h5 className="mt-3 text-sm font-semibold text-white">{title}</h5><p className="mt-2 text-xs leading-5 text-white/50">{copy}</p></div>)}
         </div>
         <div className="mt-5 rounded-2xl border border-blue-300/20 bg-blue-500/[0.07] p-5"><p className="text-sm font-semibold text-white">Your pentest can never exceed the approved compute budget without your authorization.</p><p className="mt-2 text-xs leading-5 text-white/50">No negative balances. No surprise overage invoices. Unused purchased compute remains available for future assessments; included monthly compute refreshes each billing cycle.</p></div>
-        <div className="mt-6 rounded-2xl border border-white/10 bg-black/20 p-5 sm:p-6"><div className="flex flex-wrap items-end justify-between gap-5"><div><p className="text-sm font-semibold text-white">Example enterprise application</p><p className="mt-3 text-xs text-white/50">Source code: <strong className="text-white/80">8.4M source tokens</strong></p><p className="mt-1 text-xs text-white/50">Security graph: <strong className="text-white/80">High complexity</strong></p></div><div><p className="text-xs text-white/50">Estimated Pentest Compute</p><p className="mt-1 text-2xl font-semibold text-blue-200">140M–190M tokens</p></div><div><p className="text-xs text-white/50">Included / maximum additional</p><p className="mt-1 text-sm font-semibold text-white">100M / 90M tokens · <span className="text-blue-200">$450 maximum</span></p></div></div><p className="mt-5 text-[11px] leading-5 text-white/35">Illustrative example. Actual compute requirements are calculated from your project before testing begins.</p></div>
-      </section>
-
-      <section aria-labelledby="pentest-comparison-title">
-        <div className="mb-8 max-w-3xl"><p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300">Compare the model</p><h4 id="pentest-comparison-title" className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">A different approach to application security.</h4><p className="mt-4 text-sm leading-6 text-white/60">Compare how Silence AI combines source-code intelligence, autonomous runtime testing and predictable compute pricing in one system.</p><p className="mt-3 text-xs font-medium text-sky-200/70 sm:hidden">Swipe or drag horizontally to compare every option <span aria-hidden="true">→</span></p></div>
-        <GlassSurface width="100%" height="auto" borderRadius={16} backgroundOpacity={0.08} saturation={1.55} blur={14} displace={0.35} className="pricing-comparison-surface rounded-2xl">
-          <div className="pricing-table-scroll" tabIndex="0" role="region" aria-label="Penetration testing competitor comparison. Scroll horizontally to view all vendors.">
-            <table className="w-full table-fixed border-collapse text-left text-[11px] sm:text-xs"><thead><tr className="border-b border-white/10 text-white/50"><th className="w-[22%] bg-slate-950 px-2 py-4 font-medium md:sticky md:left-0 md:z-20">Capability</th>{['Silence AI', 'Snyk', 'NodeZero', 'Detectify', 'Intruder AI Pentest'].map((name, index) => <th key={name} className={`px-2 py-4 font-semibold ${index === 0 ? 'bg-blue-500/10 text-blue-200' : 'text-white/50'}`}>{name}{index === 0 && <span className="ml-1 rounded-full bg-blue-400/15 px-2 py-1 text-[10px]">All-in-one</span>}</th>)}</tr></thead><tbody>{PENTEST_COMPARISON.map(([capability, ...values]) => <tr key={capability} className="border-b border-white/[0.07] last:border-0"><th className="bg-slate-950 px-4 py-4 font-medium leading-5 text-white/80 md:sticky md:left-0 md:z-10">{capability}</th>{values.map((value, index) => <td key={`${capability}-${index}`} className={`px-4 py-4 leading-5 ${index === 0 ? 'bg-blue-500/[0.07] font-medium text-blue-100' : 'text-white/55'}`}>{value}</td>)}</tr>)}</tbody></table>
+        <div className="mt-6 rounded-2xl border border-white/10 bg-black/20 p-5 sm:p-6">
+          <div className="flex flex-wrap items-end justify-between gap-5">
+            <div>
+              <div className="flex items-center gap-2.5">
+                <img
+                  src="/notion-logo.png"
+                  alt="Notion"
+                  width={22}
+                  height={22}
+                  className="h-5.5 w-5.5 shrink-0 object-contain aspect-square"
+                  loading="lazy"
+                />
+                <p className="text-sm font-semibold text-white">Example enterprise application (Notion-class)</p>
+              </div>
+              <p className="mt-3 text-xs text-white/50">Source code: <strong className="text-white/80">~2M lines of code · 8.4M source tokens</strong></p>
+              <p className="mt-1 text-xs text-white/50">Security graph: <strong className="text-white/80">High complexity</strong></p>
+            </div>
+            <div>
+              <p className="text-xs text-white/50">Estimated Pentest Compute</p>
+              <p className="mt-1 text-2xl font-semibold text-blue-200">140M–190M tokens</p>
+            </div>
+            <div>
+              <p className="text-xs text-white/50">Included / maximum additional</p>
+              <p className="mt-1 text-sm font-semibold text-white">100M / 90M tokens · <span className="text-blue-200">$450 maximum</span></p>
+            </div>
           </div>
-        </GlassSurface>
-        <p className="mt-4 text-[11px] leading-5 text-white/35">Competitor pricing reflects publicly available pricing and may vary by contract, scope, region and configuration.</p>
+          <p className="mt-5 text-[11px] leading-5 text-white/35">Illustrative example. Actual compute requirements are calculated from your project before testing begins.</p>
+        </div>
       </section>
-
-      <div className="rounded-[28px] border border-white/10 bg-white/[0.035] p-6 text-center sm:p-8"><h4 className="text-2xl font-semibold text-white">Testing a very large or mission-critical system?</h4><p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-white/55">For large enterprise, government and critical-infrastructure environments, Silence AI supports high-compute assessments, dedicated deployment requirements and custom security workflows.</p><button type="button" onClick={() => { trackPricingEvent("penetration_testing_contact_sales_clicked"); onOpenModal?.(); }} className="mt-6 rounded-full border border-white/20 px-6 py-3 font-medium text-white transition hover:border-blue-300 hover:text-blue-200">Contact Sales</button></div>
     </div>
   );
 };

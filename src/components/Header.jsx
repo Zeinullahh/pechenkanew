@@ -33,7 +33,6 @@ const Header = ({ onOpenModal, hideCta = false }) => {
     { key: "pricing", label: t("header.sections.pricing", "Pricing") },
     { key: "compliance", label: t("header.sections.compliance", "Compliance") },
     { key: "resources", label: t("header.sections.resources", "Resources") },
-    { key: "platform-overview", label: t("header.sections.platform", "Platform") },
     { key: "faq", label: t("header.sections.faq", "FAQ") },
   ], [t]);
 

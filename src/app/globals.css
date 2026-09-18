@@ -326,6 +326,7 @@
 
 .pricing-table-scroll {
   max-width: 100%;
+  overflow-x: auto;
   padding-bottom: 8px;
   overscroll-behavior-inline: contain;
   scrollbar-color: rgba(96, 165, 250, 0.85) rgba(255, 255, 255, 0.08);

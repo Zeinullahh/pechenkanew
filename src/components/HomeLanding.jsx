@@ -9,14 +9,12 @@ import AiSocGetModal from "@/components/AiSocGetModal";
 import { FloatingText } from "@/components/FloatingText";
 import { useLanguage } from "@/contexts/LanguageContext";
 import EdgeGlowCard from "@/components/EdgeGlowCard";
-import { StickyScrollSolution } from "@/components/StickyScrollSolution";
 import MediumArticleCard from "@/components/MediumArticleCard";
 import Pricing from "@/components/Pricing";
 import Insights from "@/components/Insights";
 import FaqSection from "@/components/FaqSection";
 import ScrollytellingSequence from "@/components/ScrollytellingSequence";
 import Preloader from "@/components/Preloader";
-import { solutionContent } from "@/lib/solutionContent";
 import { DEFAULT_CURRENCY } from "@/lib/currency";
 import { Rocket, BrainCircuit, Radar, ShieldCheck } from "lucide-react";
 
@@ -274,13 +272,6 @@ export default function HomeLanding() {
   const closeModal = () => setIsModalOpen(false);
   const openGetModal = () => setIsGetModalOpen(true);
   const closeGetModal = () => setIsGetModalOpen(false);
-
-  useEffect(() => {
-    solutionContent.forEach(({ imagePath }) => {
-      const img = new window.Image();
-      img.src = imagePath;
-    });
-  }, []);
 
   useEffect(() => {
     if (!comparisonRef.current) {
@@ -724,19 +715,6 @@ export default function HomeLanding() {
         </section>
 
         </>}
-
-        {/* Platform Overview */}
-        <div id="platform-overview" className="w-full mt-24 px-4 sm:px-0 scroll-mt-24">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">
-              {t("solution.sectionTitle", "AI-CSD Platform Overview")}
-            </h2>
-            <p className="mt-4 text-lg text-slate-300">
-              {t("solution.sectionSubtitle", "AI-CSD provides a unified interface for monitoring and protecting web infrastructure and corporate email in real time.")}
-            </p>
-          </div>
-          <StickyScrollSolution />
-        </div>
 
         <FaqSection />
 

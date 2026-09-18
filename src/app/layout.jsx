@@ -158,7 +158,7 @@ export default async function RootLayout(props) {
   const messages = transformBranding(localeMessages);
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
         style={{ backgroundColor: "#000000" }}

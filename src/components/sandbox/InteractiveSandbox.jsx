@@ -1,12 +1,10 @@
 "use client";
 
 import { useEffect, useReducer, useRef, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
-  ArrowLeft,
-  ArrowRight,
   CheckCircle2,
   Info,
-  LockKeyhole,
   Maximize2,
   Minimize2,
   RotateCcw,
@@ -19,7 +17,11 @@ import WebmailView from "./WebmailView";
 import { createInitialState, sandboxReducer } from "./sandboxState";
 import "./webmail-reference.css";
 import "./sandbox.css";
-import { SLNC_LOGO } from "./brandAsset";
+
+const TABS = [
+  { id: "cmc", label: "Email CMC", endpointX: 135 },
+  { id: "webmail", label: "Email Web Security", endpointX: 365 },
+];
 
 export default function InteractiveSandbox() {
   const [state, dispatch] = useReducer(
@@ -29,19 +31,35 @@ export default function InteractiveSandbox() {
   );
   const [expanded, setExpanded] = useState(false);
   const [scale, setScale] = useState(1);
+  const [hoveredTab, setHoveredTab] = useState(null);
   const viewport = useRef(null);
+
   useEffect(() => {
-    const observer = new ResizeObserver(([entry]) =>
-      setScale(Math.max(1000, entry.contentRect.width) / 1384),
-    );
-    observer.observe(viewport.current);
+    const el = viewport.current;
+    if (!el) return;
+    const update = () => {
+      const w = el.clientWidth;
+      if (w > 0) {
+        setScale(w / 1384);
+      }
+    };
+    update();
+    const observer = new ResizeObserver(([entry]) => {
+      const w = entry.contentRect.width;
+      if (w > 0) {
+        setScale(w / 1384);
+      }
+    });
+    observer.observe(el);
     return () => observer.disconnect();
   }, []);
+
   useEffect(() => {
     if (!state.toast) return;
     const timer = setTimeout(() => dispatch({ type: "DISMISS_TOAST" }), 5500);
     return () => clearTimeout(timer);
   }, [state.toast]);
+
   useEffect(() => {
     if (!expanded) return;
     const onKey = (e) => {
@@ -52,6 +70,7 @@ export default function InteractiveSandbox() {
   }, [expanded]);
 
   const mode = state.mode;
+
   return (
     <section
       className={`silence-sandbox ${expanded ? "sb-expanded" : ""}`}
@@ -64,61 +83,99 @@ export default function InteractiveSandbox() {
         </span>
         <h3>Two perspectives. One line of defense.</h3>
         <p>
-          Explore Email Visualizer and Email Protector. Simulate an attack,
+          Explore Email CMC and Email Web Security. Simulate an attack,
           inspect the evidence, and remove it across your organization.
         </p>
       </div>
-      <div className="sb-browser">
-        <div className="sb-browser-top">
-          <div className="sb-window-dots" aria-hidden="true">
-            <i />
-            <i />
-            <i />
-          </div>
+
+      {/* Architecture / Product Selector (Exact Pricing block style) */}
+      <div className="relative z-10 mb-8 flex flex-col items-center justify-center sm:mb-10">
+        <div className="w-full max-w-[500px]">
+          <svg
+            viewBox="0 0 500 75"
+            className="h-auto w-full"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            {TABS.map((tab) => (
+              <path
+                key={tab.id}
+                d={`M250 3 L${tab.endpointX} 70`}
+                stroke="#3B82F6"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                className={`transition-all duration-500 ease-out ${
+                  mode === tab.id ? "opacity-100 stroke-[2px]" : "opacity-35"
+                }`}
+              />
+            ))}
+          </svg>
+
           <div
-            className="sb-tabs"
+            className="grid grid-cols-2 items-start"
             role="tablist"
             aria-label="Silence AI products"
           >
-            {[
-              ["cmc", "Email Visualizer"],
-              ["webmail", "Email Protector"],
-            ].map(([id, label]) => (
-              <button
-                type="button"
-                key={id}
-                id={`sb-tab-${id}`}
-                role="tab"
-                aria-selected={mode === id}
-                aria-controls={`sb-panel-${id}`}
-                tabIndex={mode === id ? 0 : -1}
-                onKeyDown={(e) => {
-                  if (
-                    ["ArrowLeft", "ArrowRight", "Home", "End"].includes(e.key)
-                  ) {
-                    e.preventDefault();
-                    const next =
-                      e.key === "Home"
-                        ? "cmc"
-                        : e.key === "End"
-                          ? "webmail"
-                          : mode === "cmc"
-                            ? "webmail"
-                            : "cmc";
-                    dispatch({ type: "MODE", mode: next });
-                    document.getElementById(`sb-tab-${next}`)?.focus();
-                  }
-                }}
-                onClick={() => dispatch({ type: "MODE", mode: id })}
-              >
-                {/* The supplied bitmap is the product's original branding. */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={SLNC_LOGO} alt="./SLNC" width="35" height="20" />
-                <span>{label}</span>
-              </button>
-            ))}
+            {TABS.map((tab) => {
+              const isActive = mode === tab.id;
+              const isHighlighted = (hoveredTab ?? mode) === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  id={`sb-tab-${tab.id}`}
+                  onClick={() => dispatch({ type: "MODE", mode: tab.id })}
+                  onMouseEnter={() => setHoveredTab(tab.id)}
+                  onMouseLeave={() => setHoveredTab(null)}
+                  onFocus={() => setHoveredTab(tab.id)}
+                  onBlur={() => setHoveredTab(null)}
+                  role="tab"
+                  aria-selected={isActive}
+                  aria-controls={`sb-panel-${tab.id}`}
+                  tabIndex={isActive ? 0 : -1}
+                  className="flex min-w-0 justify-center bg-transparent px-2 py-3 text-center focus:outline-none sm:px-4"
+                >
+                  <div className="flex min-w-0 flex-col items-center">
+                    <span
+                      className="text-sm font-semibold leading-tight text-white drop-shadow-[0_1px_8px_rgba(255,255,255,0.2)] transition-colors duration-300 sm:text-base md:text-lg"
+                    >
+                      {tab.label}
+                    </span>
+                    {isHighlighted && (
+                      <motion.div
+                        layoutId="sandbox-pricing-type-underline"
+                        className="mt-2 h-[2px] w-full min-w-16 bg-[#3B82F6]"
+                        transition={{
+                          type: "spring",
+                          stiffness: 360,
+                          damping: 32,
+                        }}
+                      />
+                    )}
+                  </div>
+                </button>
+              );
+            })}
           </div>
-          <div className="sb-browser-actions">
+        </div>
+      </div>
+
+      {/* Interactive Application Container */}
+      <div className="sb-browser">
+        {/* Sleek App Strip Header */}
+        <div className="sb-toolbar-strip">
+          <div className="sb-toolbar-left">
+            <span className="sb-live-indicator">
+              <span className="sb-live-pulse" /> LIVE SANDBOX
+            </span>
+            <span className="sb-active-label">
+              {mode === "cmc"
+                ? "Email CMC · silenceai.net"
+                : "Email Web Security · Elena Rostova"}
+            </span>
+          </div>
+
+          <div className="sb-toolbar-actions">
             <button
               type="button"
               className="sb-attack"
@@ -126,7 +183,11 @@ export default function InteractiveSandbox() {
             >
               <Zap size={14} /> <span>Simulate Attack</span>
             </button>
-            <button type="button" onClick={() => dispatch({ type: "RESET" })}>
+            <button
+              type="button"
+              className="sb-reset"
+              onClick={() => dispatch({ type: "RESET" })}
+            >
               <RotateCcw size={13} /> <span>Reset Demo</span>
             </button>
             <button
@@ -139,25 +200,16 @@ export default function InteractiveSandbox() {
             </button>
           </div>
         </div>
-        <div className="sb-address-row">
-          <ArrowLeft size={14} aria-hidden="true" />
-          <ArrowRight size={14} aria-hidden="true" />
-          <div className="sb-address">
-            <LockKeyhole size={13} />
-            <span>
-              http://localhost:3000/{mode === "cmc" ? "visualization" : "inbox"}
-            </span>
-          </div>
-          <span className="sb-local-indicator">Interactive demo</span>
-        </div>
+
+        {/* Viewport with scaled stage */}
         <div className="sb-viewport" ref={viewport}>
           <div
             className="sb-scaled-space"
-            style={{ width: 1384 * scale, height: 950 * scale }}
+            style={{ width: "100%", height: 950 * scale }}
           >
             <div
               className="sb-stage"
-              style={{ transform: `scale(${scale})` }}
+              style={{ transform: `scale(${scale})`, transformOrigin: "0 0" }}
               key={state.resetVersion}
             >
               <div
@@ -179,6 +231,8 @@ export default function InteractiveSandbox() {
             </div>
           </div>
         </div>
+
+        {/* Footer scenario bar */}
         <footer className="sb-scenario-bar">
           <Info size={15} />
           <span>
@@ -188,6 +242,8 @@ export default function InteractiveSandbox() {
           </span>
           <span className="sb-scenario-end">Local demo · resets on reload</span>
         </footer>
+
+        {/* Live Toasts */}
         {state.toast && (
           <div
             className={`sb-toast ${state.toast.type}`}

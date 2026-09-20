@@ -6,7 +6,6 @@ import {
   ExternalLink,
   Filter,
   Menu,
-  RotateCcw,
   ShieldCheck,
   Trash2,
   X,
@@ -14,6 +13,7 @@ import {
 import { COMPANY_USERS, DOMAIN_COLUMNS } from "./mockData";
 import { filterTraffic, THREAT_CATEGORIES } from "./sandboxState";
 import SandboxModal from "./SandboxModal";
+import AnalyticsCards from "./AnalyticsCards";
 
 const X_POSITIONS = [105, 279.5, 454, 930, 1105, 1279.5];
 const TIMEFRAMES = [
@@ -41,10 +41,6 @@ export default function CmcView({ state, dispatch }) {
   });
   const [rangeError, setRangeError] = useState("");
   const [labels, setLabels] = useState(true);
-  const [transform, setTransform] = useState({ x: 0, y: 0, k: 1 });
-  const svgRef = useRef(null);
-  const drag = useRef(null);
-  const moved = useRef(false);
   const glowId = useId().replaceAll(":", "");
   const traffic = filterTraffic(state.emails, {
     ...filters,
@@ -54,55 +50,48 @@ export default function CmcView({ state, dispatch }) {
   });
   const selectedEmail = state.emails.find((e) => e.id === emailId);
   const selectedMessages = selection
-    ? traffic.filter((e) =>
-        selection.email
-          ? e.senderEmail === selection.email || e.recipient === selection.email
-          : [e.senderEmail, e.recipient].some(
-              (address) => address.split("@")[1] === selection.domain,
-            ),
-      )
+    ? traffic.filter((e) => {
+        if (selection.department === "Finance & Audit") {
+          return (
+            /finance|elena\.r|audit/i.test(e.senderEmail) ||
+            /finance|elena\.r|audit/i.test(e.recipient) ||
+            /invoice|wire|remittance|sla|audit|budget/i.test(`${e.subject} ${e.body}`)
+          );
+        }
+        if (selection.department === "Security Ops") {
+          return (
+            /soc|jmqst011|security/i.test(e.senderEmail) ||
+            /soc|jmqst011|security/i.test(e.recipient) ||
+            e.threatType !== "secure"
+          );
+        }
+        if (selection.department === "Executive Board") {
+          return (
+            /ceo|director|executive/i.test(e.senderEmail) ||
+            /ceo|director|executive/i.test(e.recipient) ||
+            e.isImportant
+          );
+        }
+        if (selection.email) {
+          return e.senderEmail === selection.email || e.recipient === selection.email;
+        }
+        return [e.senderEmail, e.recipient].some(
+          (address) => address.split("@")[1] === selection.domain,
+        );
+      })
     : [];
   const activeFilters = Boolean(
     filters.from || filters.subject || timeframe.hours || timeframe.start,
   );
   const incidentCount = traffic.filter((e) => e.threatType !== "secure").length;
 
-  function svgPoint(event) {
-    const point = svgRef.current.createSVGPoint();
-    point.x = event.clientX;
-    point.y = event.clientY;
-    return point.matrixTransform(svgRef.current.getScreenCTM().inverse());
-  }
-  useEffect(() => {
-    const svg = svgRef.current;
-    const zoom = (event) => {
-      event.preventDefault();
-      const point = svgPoint(event);
-      setTransform((old) => {
-        const k = Math.max(
-          0.3,
-          Math.min(4, old.k * Math.exp(-event.deltaY * 0.0015)),
-        );
-        return {
-          k,
-          x: point.x - ((point.x - old.x) * k) / old.k,
-          y: point.y - ((point.y - old.y) * k) / old.k,
-        };
-      });
-    };
-    svg.addEventListener("wheel", zoom, { passive: false });
-    return () => svg.removeEventListener("wheel", zoom);
-  }, []);
   const openSelection = (next) => {
-    if (!moved.current) {
-      setSelection(next);
-      setModal("selection");
-    }
+    setSelection(next);
+    setModal("selection");
   };
   const keyOpen = (e, next) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
-      moved.current = false;
       openSelection(next);
     }
   };
@@ -150,6 +139,15 @@ export default function CmcView({ state, dispatch }) {
         </button>
       </header>
       <div className="cmc-subbar">
+        <div className="cmc-branding-badge" title="silenceai.net · Active Company Domain">
+          <div className="cmc-branding-logo">
+            <span>EV</span>
+          </div>
+          <div className="cmc-branding-info">
+            <span className="cmc-branding-name">silenceai.net</span>
+            <span className="cmc-branding-sub">Company Hub</span>
+          </div>
+        </div>
         <div className="cmc-filter-buttons">
           <button
             type="button"
@@ -206,41 +204,15 @@ export default function CmcView({ state, dispatch }) {
         )}
       </div>
       <div className="cmc-canvas">
+        <AnalyticsCards
+          traffic={traffic}
+          onSelectDepartment={(dept) => openSelection({ department: dept })}
+          onSelectDomain={(domain) => openSelection({ domain })}
+        />
         <svg
-          ref={svgRef}
           viewBox="0 0 1384 826"
           className="cmc-topology"
           aria-label="Email traffic topology"
-          onDoubleClick={() => setTransform({ x: 0, y: 0, k: 1 })}
-          onPointerDown={(e) => {
-            if (e.button !== 0) return;
-            moved.current = false;
-            drag.current = { point: svgPoint(e), transform };
-          }}
-          onPointerMove={(e) => {
-            if (!drag.current) return;
-            const point = svgPoint(e);
-            const dx = point.x - drag.current.point.x;
-            const dy = point.y - drag.current.point.y;
-            if (Math.abs(dx) + Math.abs(dy) > 4) {
-              moved.current = true;
-              e.currentTarget.setPointerCapture(e.pointerId);
-            }
-            if (moved.current)
-              setTransform({
-                ...drag.current.transform,
-                x: drag.current.transform.x + dx,
-                y: drag.current.transform.y + dy,
-              });
-          }}
-          onPointerUp={(e) => {
-            drag.current = null;
-            if (e.currentTarget.hasPointerCapture(e.pointerId))
-              e.currentTarget.releasePointerCapture(e.pointerId);
-          }}
-          onPointerCancel={() => {
-            drag.current = null;
-          }}
         >
           <defs>
             <filter id={glowId} x="-30%" y="-30%" width="160%" height="160%">
@@ -250,11 +222,15 @@ export default function CmcView({ state, dispatch }) {
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
+            <filter id={`${glowId}-dept`} x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="3.5" result="coloredBlur" />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
           </defs>
-          <g
-            className="cmc-graph-content"
-            transform={`translate(${transform.x} ${transform.y}) scale(${transform.k})`}
-          >
+          <g className="cmc-graph-content">
             {DOMAIN_COLUMNS.map((column, c) =>
               column.map(({ domain, users }, row) => {
                 const x = X_POSITIONS[c];
@@ -330,6 +306,94 @@ export default function CmcView({ state, dispatch }) {
                 );
               }),
             )}
+            {/* Department Clusters above Company Cluster matching cmc-v2 */}
+            <g className="cmc-departments">
+              {/* Department 1: Finance & Audit */}
+              <g
+                transform="translate(585 175)"
+                className="cmc-department-cluster"
+                role="button"
+                tabIndex={0}
+                aria-label="Open department Finance & Audit"
+                onClick={() => openSelection({ department: "Finance & Audit" })}
+                onKeyDown={(e) => keyOpen(e, { department: "Finance & Audit" })}
+              >
+                <title>Finance & Audit Department · 14 emails</title>
+                <text y="-58" className="cmc-dept-eyebrow">DEPARTMENT</text>
+                <text y="-44" className="cmc-dept-label">Finance & Audit</text>
+                <circle
+                  r="45"
+                  className="cmc-cluster cmc-dept-circle"
+                  filter={`url(#${glowId}-dept)`}
+                />
+                {/* Users inside department */}
+                <g
+                  transform="translate(-16 -6)"
+                  className="cmc-user-node"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    openSelection({ department: "Finance & Audit", email: "elena.r@silenceai.net" });
+                  }}
+                >
+                  <circle r="12" fill="#e9d5ff" stroke="#34d399" strokeWidth="1.5" />
+                  {labels && <text y="-15" className="cmc-user-label">elena.r</text>}
+                </g>
+                <g
+                  transform="translate(16 10)"
+                  className="cmc-user-node"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    openSelection({ department: "Finance & Audit", email: "audit@silenceai.net" });
+                  }}
+                >
+                  <circle r="12" fill="#ffffff" stroke="rgba(255,255,255,0.6)" strokeWidth="1" />
+                  {labels && <text y="-15" className="cmc-user-label">audit</text>}
+                </g>
+              </g>
+
+              {/* Department 2: Security Ops */}
+              <g
+                transform="translate(800 175)"
+                className="cmc-department-cluster"
+                role="button"
+                tabIndex={0}
+                aria-label="Open department Security Ops"
+                onClick={() => openSelection({ department: "Security Ops" })}
+                onKeyDown={(e) => keyOpen(e, { department: "Security Ops" })}
+              >
+                <title>Security Ops Department · 18 emails</title>
+                <text y="-58" className="cmc-dept-eyebrow">DEPARTMENT</text>
+                <text y="-44" className="cmc-dept-label">Security Ops</text>
+                <circle
+                  r="45"
+                  className="cmc-cluster cmc-dept-circle cmc-dept-security"
+                  filter={`url(#${glowId}-dept)`}
+                />
+                {/* Users inside department */}
+                <g
+                  transform="translate(-16 10)"
+                  className="cmc-user-node"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    openSelection({ department: "Security Ops", email: "jmqst011@silenceai.net" });
+                  }}
+                >
+                  <circle r="12" fill="#4c1d95" stroke="#34d399" strokeWidth="1.5" />
+                  {labels && <text y="-15" className="cmc-user-label">jmqst011</text>}
+                </g>
+                <g
+                  transform="translate(16 -6)"
+                  className="cmc-user-node"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    openSelection({ department: "Security Ops", email: "soc@silenceai.net" });
+                  }}
+                >
+                  <circle r="12" fill="#ffffff" stroke="rgba(255,255,255,0.6)" strokeWidth="1" />
+                  {labels && <text y="-15" className="cmc-user-label">soc</text>}
+                </g>
+              </g>
+            </g>
             <g transform="translate(692 414)" className="cmc-company">
               <g
                 role="button"
@@ -401,20 +465,7 @@ export default function CmcView({ state, dispatch }) {
               })}
             </g>
           </g>
-          <text x="1375" y="18" className="cmc-zoom-hint">
-            Scroll to zoom, drag to pan
-          </text>
         </svg>
-        {(transform.k !== 1 || transform.x !== 0 || transform.y !== 0) && (
-          <button
-            type="button"
-            className="cmc-reset-view"
-            onClick={() => setTransform({ x: 0, y: 0, k: 1 })}
-          >
-            <RotateCcw size={13} /> Reset view · {Math.round(transform.k * 100)}
-            %
-          </button>
-        )}
         <button
           type="button"
           className="cmc-floating-btn"
@@ -626,7 +677,7 @@ export default function CmcView({ state, dispatch }) {
       )}
       {modal === "selection" && (
         <SandboxModal
-          title={selection.email || selection.domain}
+          title={selection.department || selection.email || selection.domain}
           onClose={closeModal}
           wide
         >

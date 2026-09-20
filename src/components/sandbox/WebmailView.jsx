@@ -90,11 +90,14 @@ export default function WebmailView({ state, dispatch }) {
   const [folderName, setFolderName] = useState("");
   const [moveFolder, setMoveFolder] = useState("finance");
   const t = (text) => (locale === "ru" ? RU[text] || text : text);
-  const customFolders = [
-    ["finance", "Finance & Audit", Folder],
-    ["executive", "Executive Board", Folder],
-    ...state.customFolders.map((f) => [f.id, f.name, Folder]),
-  ];
+  const customFolderMap = new Map([
+    ["finance", ["finance", "Finance & Audit", Folder]],
+    ["executive", ["executive", "Executive Board", Folder]],
+  ]);
+  state.customFolders.forEach((f) => {
+    customFolderMap.set(f.id, [f.id, f.name, Folder]);
+  });
+  const customFolders = Array.from(customFolderMap.values());
   const folders = [...SYSTEM_FOLDERS, ...QUARANTINE_FOLDERS, ...customFolders];
   const filtered = state.emails.filter(
     (e) => matchesFolder(e, state.folder) && matchesSearch(e, state.search),
@@ -695,7 +698,7 @@ export default function WebmailView({ state, dispatch }) {
           </section>
         </div>
       </div>
-      <FloatingAIChat state={state} email={selected} />
+      <FloatingAIChat state={state} dispatch={dispatch} email={selected} />
       {compose && (
         <EmailComposer
           initial={compose.id ? compose : null}

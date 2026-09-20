@@ -252,6 +252,48 @@ export function sandboxReducer(state, action) {
           e.id === action.id ? { ...e, customFolder: action.folder } : e,
         ),
       };
+    case "AI_CREATE_AND_MOVE_FOLDER": {
+      const folderName = action.folderName || "Finance & Audit";
+      const folderId = action.folderId || "finance";
+      const existing = state.customFolders.find(
+        (f) => f.id === folderId || f.name.toLowerCase() === folderName.toLowerCase(),
+      );
+      const customFolders = existing
+        ? state.customFolders
+        : [...state.customFolders, { id: folderId, name: folderName }];
+
+      let movedCount = 0;
+      const emails = state.emails.map((e) => {
+        const isMatch =
+          action.emailIds
+            ? action.emailIds.includes(e.id)
+            : /invoice|wire|remittance|sla|audit|financial|budget|tax|payment|finance/i.test(
+                `${e.subject} ${e.body} ${e.senderEmail}`,
+              );
+        if (isMatch) {
+          movedCount++;
+          return { ...e, customFolder: folderId };
+        }
+        return e;
+      });
+
+      const detail = `Фолдер «${folderName}» создан: ${movedCount} писем перенаправлено.`;
+      return {
+        ...state,
+        sequence: state.sequence + 1,
+        customFolders,
+        emails,
+        logs: [
+          eventLog(state, "AI Mail Organization", detail, "Folder Created & Routed"),
+          ...state.logs,
+        ],
+        toast: {
+          title: `Фолдер «${folderName}» создан`,
+          detail: `${movedCount} писем перенаправлено в новую папку`,
+          type: "success",
+        },
+      };
+    }
     case "TOAST":
       return { ...state, toast: action.toast };
     case "DISMISS_TOAST":
@@ -356,6 +398,13 @@ export function answerSecurityQuestion(question, email, emails, logs) {
   const threats = emails.filter(
     (e) => isIncoming(e) && e.threatType !== "secure",
   );
+  if (/переведи|перенаправ|папк|фолдер|folder|move.*to/.test(q)) {
+    let folder = "Finance & Audit";
+    if (/audit|аудит/i.test(q) && !/finance|финанс/i.test(q)) folder = "Audit";
+    else if (/finance|финанс/i.test(q) && !/audit|аудит/i.test(q)) folder = "Finance";
+    else if (/executive|руковод/i.test(q)) folder = "Executive Board";
+    return `Фолдер «${folder}» был создан (кастомный фолдер добавлен в систему), и соответствующие письма были перенаправлены туда. Вы можете открыть его в боковом меню.`;
+  }
   if (/purge|delet|удал|очист/.test(q))
     return `Use ADMIN: Domain-Wide Purge or Delete across entire domain to remove every delivery of the selected campaign from both products. ${logs.filter((l) => l.category === "Admin Domain Purge").length} purge operations are recorded in the CMC audit log.`;
   if (/how many|summary|overview|count|сколько|сводк/.test(q))

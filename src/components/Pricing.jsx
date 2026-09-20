@@ -9,6 +9,7 @@ import CurrencySelector from "./CurrencySelector";
 import { motion } from "framer-motion";
 import { competitiveComparisons } from "@/lib/competitiveComparison";
 import GlassSurface from "@/components/GlassSurface";
+import InteractiveSandbox from "@/components/sandbox/InteractiveSandbox";
 
 
 // Microsoft 365 Pricing Data
@@ -1057,6 +1058,7 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
         )}
         {productType === "email" && (
           <>
+            <InteractiveSandbox />
             <div className="w-full flex justify-center px-4 py-12">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
                 <div className="pricing-glass-media w-full rounded-2xl overflow-hidden bg-black">

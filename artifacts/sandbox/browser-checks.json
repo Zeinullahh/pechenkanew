@@ -1,0 +1,22 @@
+{
+  "checks": [
+    "42 domains, six employees, preserved canvas aspect ratio, and clean hydration",
+    "expanded browser frame and keyboard return",
+    "offline SVG zoom, drag, and reset",
+    "domain drilldown opens exactly the selected message in Webmail",
+    "sender filter, empty drilldown, timeframe, and custom range validation",
+    "CEO attack synchronizes both views; Webmail purge removes all copies and produces audit",
+    "macro attack appears in Threat Grid; CMC purge updates Webmail malware counts",
+    "attachment hash and VirusTotal verdict, blocked download, preview, and arbitrary chat input",
+    "star, read, trash, restore, theme, and language controls change their respective states",
+    "AI response can be edited and sent, then appears in Sent and Auto-responded",
+    "compose, save and reopen draft, scheduled send, and ordinary send",
+    "custom folder creation and moving an email",
+    "reset restores data, filters, UI, theme, drafts, and CMC default state",
+    "mobile frame contains horizontal scrolling without page overflow",
+    "mobile dialogs stay inside the visible frame"
+  ],
+  "apiRequests": [],
+  "errors": [],
+  "passed": true
+}

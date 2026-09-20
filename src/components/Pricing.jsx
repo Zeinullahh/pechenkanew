@@ -972,14 +972,11 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
                   onFocus={() => setHoveredProductType(option.id)}
                   onBlur={() => setHoveredProductType(null)}
                   aria-pressed={productType === option.id}
-                  className="flex min-w-0 justify-center bg-transparent px-1 py-3 text-center focus:outline-none sm:px-3"
+                  className="flex min-w-0 justify-center bg-transparent px-1 py-4 text-center focus:outline-none sm:px-3"
                 >
                   <div className="flex min-w-0 flex-col items-center">
                     <span
-                      className={`text-[10px] font-semibold leading-tight transition-colors duration-300 sm:text-sm md:text-base lg:text-lg ${productType === option.id
-                        ? "text-white"
-                        : "text-white/40"
-                        }`}
+                      className="text-xs font-semibold leading-tight text-white drop-shadow-[0_1px_8px_rgba(255,255,255,0.2)] transition-colors duration-300 sm:text-base md:text-lg lg:text-xl"
                     >
                       {t(option.labelKey, option.labelFallback)}
                     </span>

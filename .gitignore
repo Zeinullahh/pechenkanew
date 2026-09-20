@@ -21,6 +21,10 @@
 /coverage
 /.playwright-check/
 /.playwright-mcp/
+/test-results/
+/playwright-report/
+/blob-report/
+/filter-test-*.png
 
 # next.js
 /.next/
@@ -32,6 +36,15 @@
 # misc
 .DS_Store
 *.pem
+*.key
+*.p12
+*.pfx
+
+# local analysis and temporary artifacts
+/.supreme2l/
+/graphify-out/
+/frames/
+/tmp/
 
 # debug
 npm-debug.log*

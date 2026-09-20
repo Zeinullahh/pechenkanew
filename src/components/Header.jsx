@@ -117,8 +117,10 @@ const Header = ({ onOpenModal, hideCta = false }) => {
   const condensedShift = isCondensed && isDesktop ? 24 : 0;
 
   const instructionsItems = [
-    { key: "instructions-ai-soc", label: t("header.nav.instructionsAiSoc", "AI-CSD"), href: "/instructions/ai-soc" },
-    { key: "instructions-supreme", label: t("header.nav.instructionsSupreme", "Supreme"), href: "/instructions/supreme" },
+    { key: "instructions-email-security", label: t("header.nav.instructionsEmailSecurity", "Email Security") },
+    { key: "instructions-web-security", label: t("header.nav.instructionsWebSecurity", "Web Security") },
+    { key: "instructions-pentester", label: t("header.nav.instructionsPentester", "Pentester") },
+    { key: "instructions-server-security", label: t("header.nav.instructionsServerSecurity", "Server Security") },
   ];
 
   const navItems = [

@@ -56,9 +56,9 @@
     "maxPlaceholder": "Video placeholder — full tutorial will be added soon."
   },
   "aiSocModal": {
-    "title": "Admin Console",
+    "title": "Choose a system to log in to",
     "emailSecurity": "Login/Register to Email security",
-    "webSecurity": "Login/Register to Web security",
+    "webSecurity": "Web Security",
     "getOnlyOffice": "Get OnlyOffice"
   },
   "emailSecurityModal": {

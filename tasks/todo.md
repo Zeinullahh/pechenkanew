@@ -1,51 +1,52 @@
-# Interactive Sandbox Enhancement Plan
+# WebSOC Integration – Pixel-Perfect Audit & Gap Closure
 
-## Objective
-Implement 4 specific enhancements requested by the user:
-1. Redesign product switcher between CMC and Web Mail Client to match the pill toggle in the instructions block (`AiSocDocumentationTabs.jsx`).
-2. Add "Department flow" and Department clusters in CMC sandbox, matching `cmc-v2` (`AnalyticsCards.js` and `useD3Visualization.js`).
-3. Add automated AI Assistant animation in Webmail workspace where the AI tab opens, demonstrates the prompt "Переведи все письма в папку Finance & Audit", executes folder creation & moving emails, and allows interactive typing.
-4. Reduce the overall size/scale of the sandbox for a cleaner, more proportional fit on the page.
+## Status: ✅ All Acceptance Criteria Passed
 
----
+| Criterion | Status | Result |
+|---|---|---|
+| `node --test tests/sandbox-state.test.mjs` | ✅ Passed | 8/8 tests pass (0 failures) |
+| `npm run lint` | ✅ Passed | 0 ESLint errors |
+| `npm run build` | ✅ Passed | Static compilation exit code 0 |
 
-## Phases & Checklist
+## Architecture & Integration (1:1 with websoc/CMC/src/)
 
-### Phase 1: Pill Switcher (Instructions Block Style)
-- [x] 1.1 Remove fake browser topbar and address row from `InteractiveSandbox.jsx`
-- [x] 1.2 Implement the floating pill toggle using Framer Motion (`motion.span layoutId="sandbox-tab-indicator"`, `rounded-full border border-purple-400/25 bg-[#050b1a]/85 p-1`, active text gradient)
-- [x] 1.3 Maintain clean placement for header action buttons (`Simulate Attack`, `Reset Demo`, `Expand/Collapse`)
-- [x] 1.4 Verify smooth tab transitions and keyboard accessibility
+- [x] `InteractiveSandbox.jsx`: 3 tabs («Email CMC», «Email Web Security», «Web Security CMC»). SVG laser beams (`M250 3`) split to 3 endpoints (`x = 83, 250, 417`).
+- [x] `WebSocView.jsx`: Root view reproducing `websoc/CMC/src/app/page.js` layout.
+- [x] `WebsocAnomalyBanner.jsx`: `absolute top-0 w-full z-50 bg-red-700 text-white text-center py-4` with paragraph and `mt-2 bg-white text-red-700 px-4 py-1 rounded` button.
+- [x] `WebsocHeader.jsx`:
+  - `Menu size={32} color="white"` opening Dialog on 2/3 of screen (`w-2/3 h-[80%]`).
+  - `Palette` -> ThemeSelector (`Select` rounded-full, options: Primary, Aurora, Blue, Emerald).
+  - `Languages` -> LanguageSwitcher (`Select` rounded-full with SVG flags from `/flags/`).
+  - `Settings2` -> TimeZoneSelector with dynamic time and GMT offset.
+  - `DollarSign` -> PaymentHistory table dialog (Status, Description, Date, Amount, Transaction ID).
+  - PromocodeSettings form (locked state, code input, apply button).
+  - Center: `Navbar` (NavigationMenu: Instructions, Web Security, Email Security).
+  - Right: `UserProfileMenu` (Avatar, username, Balance in green `$1,250.00`, PaymentForm for Paddle top-up, change password, `AlertDialog` delete account, logout).
+- [x] `WebsocLeftPanel.jsx`:
+  - Position: `absolute top-20 left-6 text-white backdrop-blur-lg z-30 rounded-l-lg flex flex-col h-[80%] justify-between gap-y-2`.
+  - `DomainSelector`: `GlowButton` with mouse-following neon bloom `#FF00B7` (`.card-glow`), `PopoverContent` (`w-[450px] max-h-80 bg-zinc-100 text-black`), `Table` with checkboxes, favicons, IPs, Status badges (`XCircle`, `AlertCircle`, `CheckCircle`), `AgentSetupBox` (meta tag, ACME CNAME, DNS A record), `AgentConfigBox` (`Pencil` icon, ports 22/80/443, 2FA toggle), `RefreshCw` verify, `Trash` delete with `AlertDialog` confirmation, `AgentAddBox` at bottom.
+  - `CountryTooltip`: `bg-zinc-900 p-4 rounded shadow text-white max-h-96 overflow-y-auto` with per-domain RPS, Bandwidth (KB/30s), Active Users.
+  - `BlackListMenu`: `GlowButton` with `Ban` icon, `Dialog` on `w-2/3 h-[80%]`, `Tabs` ("Blacklisted" and "Non-blacklisted"), search inputs, SVG flags (`width={28} height={20} rounded-full`), floating popup context menu (`Add`/`Remove`).
+- [x] `WebsocRightPanel.jsx`:
+  - Position: `absolute top-20 right-12 text-white backdrop-blur-lg z-30 rounded-l-lg flex flex-col gap-y-4 p-4`.
+  - `Select` for metric (RPS, Bandwidth, Active Users) with `bg-zinc-100 text-black font-bold border px-8 rounded-full`.
+  - `MetricIndicator`: exactly `h-[460px] w-12 rounded-full` vertical gradient bar (stops at 0%, 50%, 65%, 100%) with dynamic ranges: High, Medium, Low, None (`toFixed(2)`).
+- [x] `WebsocGlobe.jsx`:
+  - Three.js globe with country polygons from `/data/countries.geojson`.
+  - Raycaster hover detection (`setHoveredCountry`).
+  - Lighting: ambient (0.3), pointLight (0.5), directionalLight1 (0.8), directionalLight2 (1.0).
+  - Atmosphere altitude: 0.2, rotateSpeed: 0.8, minPolarAngle: Math.PI / 3.5, maxPolarAngle: Math.PI - Math.PI / 3.
+  - Theme-aware palette from `@/lib/colors.js`.
+- [x] `WebsocStatsDrawer.jsx`:
+  - Centered trigger button at bottom: `ChevronUpIcon className="w-12 h-12"`.
+  - Fullscreen scrollable Dialog: `bg-black/60 border-none h-full gap-y-4 p-8 overflow-y-scroll scroll-container` with top close button `ChevronDownIcon className="w-12 h-12"`.
+  - `ServerLoadChart`: Recharts AreaChart (`h-[200px]`, white area stroke/gradient, right Y-axis, CartesianGrid), time range buttons (`1 day` to `3 months`), drag selection with `SelectionEdgeMarker` (Start: cyan-300, End: fuchsia-300), `ReferenceDot`, `ReferenceLine`, `ReferenceArea`, floating cursor-following HUD panel.
+  - 3x `TopCountriesBox`: grid cols-3, `<Card>`, `<Table>`, country flag SVGs, search filter.
+- [x] `sandboxState.js`:
+  - Local client state with deterministic data and all `WEBSOC_*` actions.
+  - `ATTACK` mode triggers simulated DDoS spike to 4,850 RPS, displays `AnomalyBanner`, and logs incident.
+  - `RESET` restores initial baseline state.
 
-### Phase 2: CMC Company & Department Flow (from `cmc-v2`)
-- [x] 2.1 Add `AnalyticsCards` component to CMC view showing "Department flow" (departments, emails, in/out, threats) and "Domain volume"
-- [x] 2.2 Add Department clusters (e.g. Finance & Audit, Security Ops) above the company circle in SVG topology matching `cmc-v2`
-- [x] 2.3 Connect department nodes and analytics cards to selection modal so clicking any department filters its emails
-- [x] 2.4 Add company branding badge in CMC subbar (`silenceai.net` + logo) matching `TopBar.js` from `cmc-v2`
+## Review
 
-### Phase 3: Webmail AI Tab Animation & Interactive Folder Routing
-- [x] 3.1 Enhance `FloatingAIChat.jsx` to support auto-open animation upon switching to Webmail
-- [x] 3.2 Add simulated automated typing / demonstration prompt: *"Переведи все письма в папку Finance & Audit"*
-- [x] 3.3 Add AI response: *"Фолдер «Finance & Audit» был создан, и туда письма были перенаправлены."*
-- [x] 3.4 Wire up state mutation: create custom folder, assign target emails, and update folder list live in `sandboxState.js`
-- [x] 3.5 Allow user to also interactively type and trigger custom folder moves (supporting Russian & English prompts)
-
-### Phase 4: Reduce Sandbox Dimensions & Proportions
-- [x] 4.1 Reduce container max-width and vertical scale in `sandbox.css` and `InteractiveSandbox.jsx` (max-width: 1240px, scaled space base height 830px, 0.88 default scale)
-- [x] 4.2 Adjust padding and margins so the sandbox sits naturally without overwhelming the screen
-- [x] 4.3 Ensure responsive containment on desktop, tablet, and mobile
-
-### Phase 5: Verification & Testing
-- [x] 5.1 Run tests (`node --test tests/sandbox-state.test.mjs` - 7/7 passing)
-- [x] 5.2 Verify Next.js build: `npm run build` (Turbopack, 275/275 static routes compiled successfully)
-- [x] 5.3 Test live interactions (pill switching, department flow, AI chat typewriter animation, sandbox sizing)
-- [x] 5.4 Document results and review in `tasks/todo.md`
-
----
-
-- **Product Switcher (Updated)**: Styled identically to the Pricing block architecture selector with blue laser rays (`#3B82F6`), clean typography with drop shadows, and active spring underline (`layoutId="sandbox-pricing-type-underline"`). Tabs renamed to **Email CMC** and **Email Web Security**.
-- **CMC Zoom / Wheel Removal**: Completely removed wheel event listener, pointer drag-to-pan, zoom hint text, and reset-view button. The SVG topology canvas is now completely stable, does not hijack mouse wheel scrolling on the page, and has `cursor: default`.
-- **CMC Company & Department Flow**: Added `AnalyticsCards.jsx` with collapsible "Department flow" and "Domain volume" cards matching `cmc-v2`. Added SVG department clusters for *Finance & Audit* and *Security Ops* with green/purple glowing perimeter, member nodes, and click-to-filter drilldown. Added company branding badge (`silenceai.net` + EV logo) to the CMC subbar.
-- **Webmail AI Animation**: Automated typewriter demonstration automatically opens the AI panel when switching to Webmail, types *"Переведи все письма в папку Finance & Audit"*, receives AI response, creates the custom folder, and moves matching emails into it. Replay demo button and full interactive chat support custom prompts (e.g. creating "Executive Board" folder or threat inquiries).
-- **Scale & Proportions**: Reduced sandbox container max-width to 1240px with 40px margin and 0.88 canvas scale for a balanced, sleek desktop presence.
-- **Test Results**: All 7 state unit tests pass; `next build` static export succeeded with 0 errors across 275 pages; local dev server running at `http://localhost:3000`.
+All components from `unified-email-platform-v2/websoc/CMC/src/` have been integrated 1:1 pixel-perfect into `pechenkanew`. All tests pass (8/8), linter reports 0 errors, and Next.js static build succeeds.

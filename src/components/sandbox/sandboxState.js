@@ -5,6 +5,13 @@ import {
   createAttack,
   makeOutgoing,
 } from "./mockData.js";
+import {
+  INITIAL_WEBSOC_AGENTS,
+  INITIAL_WEBSOC_METRICS,
+  INITIAL_WEBSOC_TOP_COUNTRIES,
+  INITIAL_WEBSOC_PAYMENTS,
+  generateHistoricalStats,
+} from "./websocMockData.js";
 
 export function createInitialState() {
   return {
@@ -19,6 +26,22 @@ export function createInitialState() {
     resetVersion: 0,
     toast: null,
     customFolders: [],
+    websoc: {
+      agents: structuredClone(INITIAL_WEBSOC_AGENTS),
+      selectedDomains: [],
+      selectedParam: "Bandwidth",
+      selectedRange: "1 day",
+      selectedChartWindow: null,
+      theme: "primary",
+      blacklist: ["KP", "IR"],
+      underAttack: false,
+      anomalyMsg: null,
+      liveMetrics: structuredClone(INITIAL_WEBSOC_METRICS),
+      topCountries: structuredClone(INITIAL_WEBSOC_TOP_COUNTRIES),
+      statsHistory: generateHistoricalStats("1 day", false),
+      userBalance: 1250.0,
+      paymentHistory: structuredClone(INITIAL_WEBSOC_PAYMENTS),
+    },
   };
 }
 const eventLog = (state, category, detail, action = category) => ({
@@ -117,12 +140,43 @@ export function sandboxReducer(state, action) {
       const now = state.now + 60000;
       const attacks = createAttack((state.attackCount || 0) + 1, now);
       const detail = `${attacks[0].securityAnalysis.verdict}. ${attacks.length} deliveries quarantined.`;
+
+      const attackMetrics = structuredClone(state.websoc?.liveMetrics || INITIAL_WEBSOC_METRICS);
+      if (!attackMetrics["silenceai.net"]) attackMetrics["silenceai.net"] = {};
+      attackMetrics["silenceai.net"]["RU"] = {
+        "Requests per second (RPS)": 4850.0,
+        "Bandwidth usage": 1468006400,
+        "Number of IP addresses with active connection(s)": 12450,
+        "Processed requests": 145500,
+      };
+
+      const attackTopCountries = [
+        {
+          countryCode: "Russian Federation (RU)",
+          country: "Russian Federation",
+          code: "RU",
+          activeIps: 12450,
+          bandwidthUsage: 1468006400,
+          requestsPerSecond: 4850.0,
+        },
+        ...(state.websoc?.topCountries || INITIAL_WEBSOC_TOP_COUNTRIES).filter((c) => c.code !== "RU"),
+      ];
+
       return {
         ...state,
         sequence,
         now,
         attackCount: (state.attackCount || 0) + 1,
         emails: [...attacks, ...state.emails],
+        websoc: {
+          ...state.websoc,
+          underAttack: true,
+          anomalyMsg:
+            "CRITICAL: 4,850 RPS L7 DDoS flood detected targeting silenceai.net origin from RU/CN botnet. Silence WAF auto-mitigation active.",
+          liveMetrics: attackMetrics,
+          topCountries: attackTopCountries,
+          statsHistory: generateHistoricalStats(state.websoc?.selectedRange || "1 day", true),
+        },
         logs: [
           eventLog(
             { ...state, now },
@@ -298,6 +352,145 @@ export function sandboxReducer(state, action) {
       return { ...state, toast: action.toast };
     case "DISMISS_TOAST":
       return { ...state, toast: null };
+    case "WEBSOC_PARAM":
+      return {
+        ...state,
+        websoc: { ...state.websoc, selectedParam: action.param },
+      };
+    case "WEBSOC_THEME":
+      return {
+        ...state,
+        websoc: { ...state.websoc, theme: action.theme },
+      };
+    case "WEBSOC_RANGE":
+      return {
+        ...state,
+        websoc: {
+          ...state.websoc,
+          selectedRange: action.range,
+          selectedChartWindow: null,
+          statsHistory: generateHistoricalStats(
+            action.range,
+            state.websoc.underAttack,
+          ),
+        },
+      };
+    case "WEBSOC_SELECT_CHART_WINDOW":
+      return {
+        ...state,
+        websoc: { ...state.websoc, selectedChartWindow: action.window },
+      };
+    case "WEBSOC_DOMAIN_TOGGLE": {
+      const exists = state.websoc.selectedDomains.includes(action.domain);
+      const selectedDomains = exists
+        ? state.websoc.selectedDomains.filter((d) => d !== action.domain)
+        : [...state.websoc.selectedDomains, action.domain];
+      return {
+        ...state,
+        websoc: { ...state.websoc, selectedDomains },
+      };
+    }
+    case "WEBSOC_BLACKLIST_ADD": {
+      if (state.websoc.blacklist.includes(action.code)) return state;
+      return {
+        ...state,
+        websoc: {
+          ...state.websoc,
+          blacklist: [...state.websoc.blacklist, action.code],
+        },
+      };
+    }
+    case "WEBSOC_BLACKLIST_REMOVE":
+      return {
+        ...state,
+        websoc: {
+          ...state.websoc,
+          blacklist: state.websoc.blacklist.filter((c) => c !== action.code),
+        },
+      };
+    case "WEBSOC_ADD_AGENT": {
+      const newAgent = {
+        id: `agent-${state.websoc.agents.length + 1}`,
+        domain: action.domain,
+        ipAddress: action.ipAddress || "185.199.110.153",
+        verified: true,
+        dnsRouted: true,
+        verificationKey: `ws-verif-${Math.random().toString(36).slice(2, 8)}`,
+        ports: [80, 443],
+        enable2FA: false,
+      };
+      return {
+        ...state,
+        websoc: {
+          ...state.websoc,
+          agents: [...state.websoc.agents, newAgent],
+        },
+      };
+    }
+    case "WEBSOC_DELETE_AGENT":
+      return {
+        ...state,
+        websoc: {
+          ...state.websoc,
+          agents: state.websoc.agents.filter((a) => a.id !== action.id),
+          selectedDomains: state.websoc.selectedDomains.filter(
+            (d) => d !== action.domain,
+          ),
+        },
+      };
+    case "WEBSOC_VERIFY_AGENT":
+      return {
+        ...state,
+        websoc: {
+          ...state.websoc,
+          agents: state.websoc.agents.map((a) =>
+            a.id === action.id ? { ...a, verified: true, dnsRouted: true } : a,
+          ),
+        },
+      };
+    case "WEBSOC_UPDATE_AGENT_CONFIG":
+      return {
+        ...state,
+        websoc: {
+          ...state.websoc,
+          agents: state.websoc.agents.map((a) =>
+            a.id === action.id
+              ? {
+                  ...a,
+                  ipAddress: action.ipAddress || a.ipAddress,
+                  ports: action.ports || a.ports,
+                  enable2FA:
+                    action.enable2FA !== undefined
+                      ? action.enable2FA
+                      : a.enable2FA,
+                }
+              : a,
+          ),
+        },
+      };
+    case "WEBSOC_DISMISS_ANOMALY":
+      return {
+        ...state,
+        websoc: { ...state.websoc, anomalyMsg: null },
+      };
+    case "WEBSOC_TOPUP": {
+      const amount = Number(action.amount) || 100;
+      const newPayment = {
+        id: `txn_${Math.random().toString(36).slice(2, 10)}`,
+        date: new Date().toISOString().replace("T", " ").slice(0, 16),
+        amount: `$${amount.toFixed(2)}`,
+        status: "Completed",
+        currency: "USD",
+      };
+      return {
+        ...state,
+        websoc: {
+          ...state.websoc,
+          userBalance: state.websoc.userBalance + amount,
+          paymentHistory: [newPayment, ...state.websoc.paymentHistory],
+        },
+      };
+    }
     case "RESET":
       return { ...createInitialState(), resetVersion: state.resetVersion + 1 };
     default:

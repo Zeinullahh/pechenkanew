@@ -12,6 +12,45 @@
 .silence-sandbox *::after {
   box-sizing: border-box;
 }
+
+.card-glow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    800px circle at var(--x, 50%) var(--y, 50%),
+    var(--glow-color, #FF00B7),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.card-glow:hover::before {
+  opacity: 0.7;
+}
+
+.scroll-container {
+  overflow-y: auto;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #19212d;
+}
 .silence-sandbox button,
 .silence-sandbox input,
 .silence-sandbox textarea,
@@ -1998,3 +2037,33 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* WebSOC Product Stage Containment */
+#sb-panel-websoc {
+  position: absolute;
+  inset: 0;
+  width: 1384px;
+  height: 950px;
+  overflow: hidden;
+  background: #01091C;
+}
+
+#sb-panel-websoc *::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+#sb-panel-websoc *::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+#sb-panel-websoc *::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+#sb-panel-websoc *::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+

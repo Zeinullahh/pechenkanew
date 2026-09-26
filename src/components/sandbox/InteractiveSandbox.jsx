@@ -14,13 +14,15 @@ import {
 } from "lucide-react";
 import CmcView from "./CmcView";
 import WebmailView from "./WebmailView";
+import WebSocView from "./WebSocView";
 import { createInitialState, sandboxReducer } from "./sandboxState";
 import "./webmail-reference.css";
 import "./sandbox.css";
 
 const TABS = [
-  { id: "cmc", label: "Email CMC", endpointX: 135 },
-  { id: "webmail", label: "Email Web Security", endpointX: 365 },
+  { id: "cmc", label: "Email CMC", endpointX: 83 },
+  { id: "webmail", label: "Email Web Security", endpointX: 250 },
+  { id: "websoc", label: "Web Security CMC", endpointX: 417 },
 ];
 
 export default function InteractiveSandbox() {
@@ -81,16 +83,16 @@ export default function InteractiveSandbox() {
         <span className="sb-eyebrow">
           <Sparkles size={14} /> LIVE INTERACTIVE SANDBOX
         </span>
-        <h3>Two perspectives. One line of defense.</h3>
+        <h3>Three perspectives. One unified line of defense.</h3>
         <p>
-          Explore Email CMC and Email Web Security. Simulate an attack,
-          inspect the evidence, and remove it across your organization.
+          Explore Email CMC, Email Web Security, and Web Security CMC (WAF & Traffic SOC).
+          Simulate attacks, inspect evidence, and protect your organization.
         </p>
       </div>
 
       {/* Architecture / Product Selector (Exact Pricing block style) */}
       <div className="relative z-10 mb-8 flex flex-col items-center justify-center sm:mb-10">
-        <div className="w-full max-w-[500px]">
+        <div className="w-full max-w-[640px]">
           <svg
             viewBox="0 0 500 75"
             className="h-auto w-full"
@@ -113,7 +115,7 @@ export default function InteractiveSandbox() {
           </svg>
 
           <div
-            className="grid grid-cols-2 items-start"
+            className="grid grid-cols-3 items-start"
             role="tablist"
             aria-label="Silence AI products"
           >
@@ -137,7 +139,7 @@ export default function InteractiveSandbox() {
                 >
                   <div className="flex min-w-0 flex-col items-center">
                     <span
-                      className="text-sm font-semibold leading-tight text-white drop-shadow-[0_1px_8px_rgba(255,255,255,0.2)] transition-colors duration-300 sm:text-base md:text-lg"
+                      className="text-xs font-semibold leading-tight text-white drop-shadow-[0_1px_8px_rgba(255,255,255,0.2)] transition-colors duration-300 sm:text-sm md:text-base whitespace-nowrap"
                     >
                       {tab.label}
                     </span>
@@ -171,7 +173,9 @@ export default function InteractiveSandbox() {
             <span className="sb-active-label">
               {mode === "cmc"
                 ? "Email CMC · silenceai.net"
-                : "Email Web Security · Elena Rostova"}
+                : mode === "webmail"
+                ? "Email Web Security · Elena Rostova"
+                : "Web Security CMC · web-soc.silenceai.net"}
             </span>
           </div>
 
@@ -228,6 +232,14 @@ export default function InteractiveSandbox() {
               >
                 <WebmailView state={state} dispatch={dispatch} />
               </div>
+              <div
+                id="sb-panel-websoc"
+                role="tabpanel"
+                aria-labelledby="sb-tab-websoc"
+                hidden={mode !== "websoc"}
+              >
+                <WebSocView state={state} dispatch={dispatch} />
+              </div>
             </div>
           </div>
         </div>
@@ -236,9 +248,9 @@ export default function InteractiveSandbox() {
         <footer className="sb-scenario-bar">
           <Info size={15} />
           <span>
-            <strong>Try it:</strong> Simulate an attack → open Quarantine or the
-            pink Threat Grid button → inspect the email → purge it → check both
-            products.
+            <strong>Try it:</strong> Switch between Email CMC, Webmail, and Web Security CMC →
+            Simulate an attack to see threats quarantined and WAF edge rate limiting engage →
+            Inspect the 3D globe and telemetry.
           </span>
           <span className="sb-scenario-end">Local demo · resets on reload</span>
         </footer>

@@ -202,3 +202,66 @@ test("reset restores a pristine fixture and all shared UI state after arbitrary 
   assert.deepEqual(state, { ...createInitialState(), resetVersion: 1 });
   assert.deepEqual(initial, createInitialState());
 });
+
+test("WebSOC state actions support parameter change, themes, blacklist, agents, and attack simulation", () => {
+  let state = createInitialState();
+  assert.ok(state.websoc);
+  assert.equal(state.websoc.agents.length, 4);
+  assert.equal(state.websoc.selectedParam, "Bandwidth");
+  assert.equal(state.websoc.theme, "primary");
+  assert.ok(state.websoc.blacklist.includes("KP"));
+
+  // Change parameter & theme
+  state = reduce(state, "WEBSOC_PARAM", { param: "RPS" });
+  assert.equal(state.websoc.selectedParam, "RPS");
+
+  state = reduce(state, "WEBSOC_THEME", { theme: "emerald" });
+  assert.equal(state.websoc.theme, "emerald");
+
+  // Blacklist addition & removal
+  state = reduce(state, "WEBSOC_BLACKLIST_ADD", { code: "FR" });
+  assert.ok(state.websoc.blacklist.includes("FR"));
+
+  state = reduce(state, "WEBSOC_BLACKLIST_REMOVE", { code: "FR" });
+  assert.ok(!state.websoc.blacklist.includes("FR"));
+
+  // Agent registration, verification, config update, deletion
+  state = reduce(state, "WEBSOC_ADD_AGENT", {
+    domain: "test.silenceai.net",
+    ipAddress: "10.0.0.1",
+  });
+  const newAgent = state.websoc.agents.find((a) => a.domain === "test.silenceai.net");
+  assert.ok(newAgent);
+
+  state = reduce(state, "WEBSOC_UPDATE_AGENT_CONFIG", {
+    id: newAgent.id,
+    ports: [80, 443, 8080],
+    enable2FA: true,
+  });
+  const updatedAgent = state.websoc.agents.find((a) => a.id === newAgent.id);
+  assert.deepEqual(updatedAgent.ports, [80, 443, 8080]);
+  assert.equal(updatedAgent.enable2FA, true);
+
+  state = reduce(state, "WEBSOC_DELETE_AGENT", {
+    id: newAgent.id,
+    domain: newAgent.domain,
+  });
+  assert.ok(!state.websoc.agents.some((a) => a.id === newAgent.id));
+
+  // Attack simulation in WebSOC
+  state = reduce(state, "ATTACK");
+  assert.equal(state.websoc.underAttack, true);
+  assert.ok(state.websoc.anomalyMsg.includes("4,850 RPS"));
+  assert.equal(state.websoc.topCountries[0].code, "RU");
+  assert.equal(state.websoc.topCountries[0].requestsPerSecond, 4850);
+
+  // Top up balance
+  state = reduce(state, "WEBSOC_TOPUP", { amount: 50 });
+  assert.equal(state.websoc.userBalance, 1300);
+  assert.equal(state.websoc.paymentHistory[0].amount, "$50.00");
+
+  // Dismiss anomaly
+  state = reduce(state, "WEBSOC_DISMISS_ANOMALY");
+  assert.equal(state.websoc.anomalyMsg, null);
+});
+

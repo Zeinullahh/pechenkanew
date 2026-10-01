@@ -1037,21 +1037,24 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
         )}
 
         {productType === "web" && (
-          <div className="mt-10 sm:mt-12 px-2 sm:px-0">
-            <div className="pricing-glass-media mx-auto max-w-5xl overflow-hidden rounded-3xl bg-slate-950/70 backdrop-blur-xl">
-              <div className="aspect-video w-full">
-                <iframe
-                  className="h-full w-full"
-                  src="https://www.youtube.com/embed/BXWdaovJCjw"
-                  title="Web Security Instructions Video"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                />
+          <>
+            <InteractiveSandbox product="web" />
+            <div className="mt-10 sm:mt-12 px-2 sm:px-0">
+              <div className="pricing-glass-media mx-auto max-w-5xl overflow-hidden rounded-3xl bg-slate-950/70 backdrop-blur-xl">
+                <div className="aspect-video w-full">
+                  <iframe
+                    className="h-full w-full"
+                    src="https://www.youtube.com/embed/BXWdaovJCjw"
+                    title="Web Security Instructions Video"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          </>
         )}
         {productType === "email" && (
           <>

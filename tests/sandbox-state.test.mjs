@@ -3,16 +3,43 @@ import assert from "node:assert/strict";
 import { DOMAIN_COLUMNS } from "../src/components/sandbox/mockData.js";
 import {
   answerSecurityQuestion,
+  createInitialEmailState,
   createInitialState,
+  createInitialWebState,
+  emailSandboxReducer,
   filterTraffic,
   isIncoming,
   matchesFolder,
   matchesSearch,
   sandboxReducer,
   THREAT_CATEGORIES,
+  webSandboxReducer,
 } from "../src/components/sandbox/sandboxState.js";
 const reduce = (state, type, args = {}) =>
   sandboxReducer(state, { type, ...args });
+
+test("Pricing email and web sandboxes keep their state and attacks separate", () => {
+  let email = createInitialEmailState();
+  let web = createInitialWebState();
+  assert.ok(!("websoc" in email));
+  assert.ok(!("emails" in web));
+  assert.equal(emailSandboxReducer(email, { type: "MODE", mode: "websoc" }), email);
+
+  email = emailSandboxReducer(email, { type: "MODE", mode: "webmail" });
+  email = emailSandboxReducer(email, { type: "ATTACK" });
+  assert.equal(email.mode, "webmail");
+  assert.equal(email.emails.length, createInitialEmailState().emails.length + 2);
+  assert.ok(!("websoc" in email));
+  assert.equal(web.websoc.underAttack, false);
+
+  web = webSandboxReducer(web, { type: "ATTACK" });
+  assert.equal(web.websoc.underAttack, true);
+  assert.ok(!("emails" in web));
+  assert.equal(webSandboxReducer(web, { type: "MODE", mode: "cmc" }), web);
+  web = webSandboxReducer(web, { type: "RESET" });
+  assert.equal(web.websoc.underAttack, false);
+  assert.equal(email.mode, "webmail");
+});
 
 test("every reference domain and sender has real local drilldown data in both directions", () => {
   const state = createInitialState();
@@ -264,4 +291,3 @@ test("WebSOC state actions support parameter change, themes, blacklist, agents, 
   state = reduce(state, "WEBSOC_DISMISS_ANOMALY");
   assert.equal(state.websoc.anomalyMsg, null);
 });
-

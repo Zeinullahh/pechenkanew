@@ -14,6 +14,10 @@ import {
 } from "./websocMockData.js";
 
 export function createInitialState() {
+  return { ...createInitialEmailState(), websoc: createInitialWebState().websoc };
+}
+
+export function createInitialEmailState() {
   return {
     emails: structuredClone(INITIAL_EMAILS),
     logs: structuredClone(INITIAL_ACTIVITY_LOGS),
@@ -26,6 +30,13 @@ export function createInitialState() {
     resetVersion: 0,
     toast: null,
     customFolders: [],
+  };
+}
+
+export function createInitialWebState() {
+  return {
+    resetVersion: 0,
+    toast: null,
     websoc: {
       agents: structuredClone(INITIAL_WEBSOC_AGENTS),
       selectedDomains: [],
@@ -43,6 +54,64 @@ export function createInitialState() {
       paymentHistory: structuredClone(INITIAL_WEBSOC_PAYMENTS),
     },
   };
+}
+
+export function emailSandboxReducer(state, action) {
+  if (action.type.startsWith("WEBSOC_")) return state;
+  if (action.type === "MODE" && !["cmc", "webmail"].includes(action.mode)) {
+    return state;
+  }
+  if (action.type === "RESET") {
+    return { ...createInitialEmailState(), resetVersion: state.resetVersion + 1 };
+  }
+  const { websoc: _websoc, ...emailState } = sandboxReducer(state, action);
+  return emailState;
+}
+
+export function webSandboxReducer(state, action) {
+  if (action.type === "RESET") {
+    return { ...createInitialWebState(), resetVersion: state.resetVersion + 1 };
+  }
+  if (action.type === "ATTACK") {
+    const attackMetrics = structuredClone(state.websoc.liveMetrics);
+    if (!attackMetrics["silenceai.net"]) attackMetrics["silenceai.net"] = {};
+    attackMetrics["silenceai.net"].RU = {
+      "Requests per second (RPS)": 4850,
+      "Bandwidth usage": 1468006400,
+      "Number of IP addresses with active connection(s)": 12450,
+      "Processed requests": 145500,
+    };
+    return {
+      ...state,
+      websoc: {
+        ...state.websoc,
+        underAttack: true,
+        anomalyMsg: "CRITICAL: 4,850 RPS L7 DDoS flood detected targeting silenceai.net origin from RU/CN botnet. Silence WAF auto-mitigation active.",
+        liveMetrics: attackMetrics,
+        topCountries: [
+          {
+            countryCode: "Russian Federation (RU)",
+            country: "Russian Federation",
+            code: "RU",
+            activeIps: 12450,
+            bandwidthUsage: 1468006400,
+            requestsPerSecond: 4850,
+          },
+          ...state.websoc.topCountries.filter((country) => country.code !== "RU"),
+        ],
+        statsHistory: generateHistoricalStats(state.websoc.selectedRange, true),
+      },
+      toast: {
+        title: "Simulated web attack intercepted",
+        detail: "WAF rate limiting is active for the detected L7 DDoS flood.",
+        type: "critical",
+      },
+    };
+  }
+  if (action.type.startsWith("WEBSOC_") || action.type === "DISMISS_TOAST") {
+    return sandboxReducer(state, action);
+  }
+  return state;
 }
 const eventLog = (state, category, detail, action = category) => ({
   id: `audit-${state.sequence + 1}`,

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useReducer, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   CheckCircle2,
   Info,
@@ -15,25 +14,24 @@ import {
 import CmcView from "./CmcView";
 import WebmailView from "./WebmailView";
 import WebSocView from "./WebSocView";
-import { createInitialState, sandboxReducer } from "./sandboxState";
+import { createInitialEmailState, createInitialWebState, emailSandboxReducer, webSandboxReducer } from "./sandboxState";
 import "./webmail-reference.css";
 import "./sandbox.css";
 
-const TABS = [
-  { id: "cmc", label: "Email CMC", endpointX: 83 },
-  { id: "webmail", label: "Email Web Security", endpointX: 250 },
-  { id: "websoc", label: "Web Security CMC", endpointX: 417 },
+const EMAIL_MODES = [
+  { id: "cmc", label: "Email CMC" },
+  { id: "webmail", label: "Email Workspace" },
 ];
 
-export default function InteractiveSandbox() {
+export default function InteractiveSandbox({ product = "email" }) {
+  const isWeb = product === "web";
   const [state, dispatch] = useReducer(
-    sandboxReducer,
+    isWeb ? webSandboxReducer : emailSandboxReducer,
     undefined,
-    createInitialState,
+    isWeb ? createInitialWebState : createInitialEmailState,
   );
   const [expanded, setExpanded] = useState(false);
   const [scale, setScale] = useState(1);
-  const [hoveredTab, setHoveredTab] = useState(null);
   const viewport = useRef(null);
 
   useEffect(() => {
@@ -71,96 +69,35 @@ export default function InteractiveSandbox() {
     return () => document.removeEventListener("keydown", onKey);
   }, [expanded]);
 
-  const mode = state.mode;
+  const mode = isWeb ? "websoc" : state.mode;
 
   return (
     <section
       className={`silence-sandbox ${expanded ? "sb-expanded" : ""}`}
-      aria-label="Interactive Sandbox Demo"
-      id="interactive-sandbox"
+      aria-label={isWeb ? "Web Security Sandbox Demo" : "Email System Sandbox Demo"}
+      id={isWeb ? "web-security-sandbox" : "email-system-sandbox"}
     >
       <div className="sb-introduction">
         <span className="sb-eyebrow">
           <Sparkles size={14} /> LIVE INTERACTIVE SANDBOX
         </span>
-        <h3>Three perspectives. One unified line of defense.</h3>
-        <p>
-          Explore Email CMC, Email Web Security, and Web Security CMC (WAF & Traffic SOC).
-          Simulate attacks, inspect evidence, and protect your organization.
-        </p>
+        <h3>{isWeb ? "Web Security Sandbox" : "Email System Sandbox"}</h3>
+        <p>{isWeb
+          ? "Explore the Web Security CMC, simulate attacks, and inspect WAF traffic telemetry."
+          : "Explore Email CMC and Email Workspace. Simulate attacks and inspect email security evidence."}</p>
       </div>
 
-      {/* Architecture / Product Selector (Exact Pricing block style) */}
-      <div className="relative z-10 mb-8 flex flex-col items-center justify-center sm:mb-10">
-        <div className="w-full max-w-[640px]">
-          <svg
-            viewBox="0 0 500 75"
-            className="h-auto w-full"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            {TABS.map((tab) => (
-              <path
-                key={tab.id}
-                d={`M250 3 L${tab.endpointX} 70`}
-                stroke="#3B82F6"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                className={`transition-all duration-500 ease-out ${
-                  mode === tab.id ? "opacity-100 stroke-[2px]" : "opacity-35"
-                }`}
-              />
-            ))}
-          </svg>
-
-          <div
-            className="grid grid-cols-3 items-start"
-            role="tablist"
-            aria-label="Silence AI products"
-          >
-            {TABS.map((tab) => {
-              const isActive = mode === tab.id;
-              const isHighlighted = (hoveredTab ?? mode) === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  id={`sb-tab-${tab.id}`}
-                  onClick={() => dispatch({ type: "MODE", mode: tab.id })}
-                  onMouseEnter={() => setHoveredTab(tab.id)}
-                  onMouseLeave={() => setHoveredTab(null)}
-                  onFocus={() => setHoveredTab(tab.id)}
-                  onBlur={() => setHoveredTab(null)}
-                  role="tab"
-                  aria-selected={isActive}
-                  aria-controls={`sb-panel-${tab.id}`}
-                  tabIndex={isActive ? 0 : -1}
-                  className="flex min-w-0 justify-center bg-transparent px-2 py-3 text-center focus:outline-none sm:px-4"
-                >
-                  <div className="flex min-w-0 flex-col items-center">
-                    <span
-                      className="text-xs font-semibold leading-tight text-white drop-shadow-[0_1px_8px_rgba(255,255,255,0.2)] transition-colors duration-300 sm:text-sm md:text-base whitespace-nowrap"
-                    >
-                      {tab.label}
-                    </span>
-                    {isHighlighted && (
-                      <motion.div
-                        layoutId="sandbox-pricing-type-underline"
-                        className="mt-2 h-[2px] w-full min-w-16 bg-[#3B82F6]"
-                        transition={{
-                          type: "spring",
-                          stiffness: 360,
-                          damping: 32,
-                        }}
-                      />
-                    )}
-                  </div>
-                </button>
-              );
-            })}
-          </div>
+      {!isWeb && (
+        <div className="sb-product-switch" role="group" aria-label="Email sandbox view">
+          <span className="sb-product-slider" style={{ transform: mode === "cmc" ? "translateX(0)" : "translateX(100%)" }} aria-hidden="true" />
+          {EMAIL_MODES.map(({ id, label }) => (
+            <button key={id} type="button" aria-pressed={mode === id}
+              onClick={() => dispatch({ type: "MODE", mode: id })}>
+              {label}
+            </button>
+          ))}
         </div>
-      </div>
+      )}
 
       {/* Interactive Application Container */}
       <div className="sb-browser">
@@ -174,7 +111,7 @@ export default function InteractiveSandbox() {
               {mode === "cmc"
                 ? "Email CMC · silenceai.net"
                 : mode === "webmail"
-                ? "Email Web Security · Elena Rostova"
+                ? "Email Workspace · Elena Rostova"
                 : "Web Security CMC · web-soc.silenceai.net"}
             </span>
           </div>
@@ -216,30 +153,23 @@ export default function InteractiveSandbox() {
               style={{ transform: `scale(${scale})`, transformOrigin: "0 0" }}
               key={state.resetVersion}
             >
-              <div
+              {!isWeb && <div
                 id="sb-panel-cmc"
-                role="tabpanel"
-                aria-labelledby="sb-tab-cmc"
                 hidden={mode !== "cmc"}
               >
                 <CmcView state={state} dispatch={dispatch} />
-              </div>
-              <div
+              </div>}
+              {!isWeb && <div
                 id="sb-panel-webmail"
-                role="tabpanel"
-                aria-labelledby="sb-tab-webmail"
                 hidden={mode !== "webmail"}
               >
                 <WebmailView state={state} dispatch={dispatch} />
-              </div>
-              <div
+              </div>}
+              {isWeb && <div
                 id="sb-panel-websoc"
-                role="tabpanel"
-                aria-labelledby="sb-tab-websoc"
-                hidden={mode !== "websoc"}
               >
                 <WebSocView state={state} dispatch={dispatch} />
-              </div>
+              </div>}
             </div>
           </div>
         </div>
@@ -248,9 +178,9 @@ export default function InteractiveSandbox() {
         <footer className="sb-scenario-bar">
           <Info size={15} />
           <span>
-            <strong>Try it:</strong> Switch between Email CMC, Webmail, and Web Security CMC →
-            Simulate an attack to see threats quarantined and WAF edge rate limiting engage →
-            Inspect the 3D globe and telemetry.
+            <strong>Try it:</strong> {isWeb
+              ? "Simulate an attack to see WAF rate limiting engage, then inspect the globe and telemetry."
+              : "Switch between Email CMC and Email Workspace, then simulate an attack and inspect quarantined messages."}
           </span>
           <span className="sb-scenario-end">Local demo · resets on reload</span>
         </footer>

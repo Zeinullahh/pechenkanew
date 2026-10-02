@@ -407,31 +407,43 @@ export default function HomeLanding() {
                 </p>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 14 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.35 }}
-                transition={{ duration: 0.5, ease: "easeOut", delay: 0.08 }}
-                className="mx-auto mb-2 flex w-full max-w-5xl flex-col gap-5 border border-emerald-300/30 bg-emerald-400/10 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7"
+              <EdgeGlowCard
+                mode="follow"
+                outerClassName="mx-auto mb-2 w-full max-w-5xl rounded-[26px] p-[1.5px]"
+                innerClassName="overflow-hidden rounded-[24px] bg-gradient-to-br from-emerald-950/80 via-[#07130f] to-black"
+                glass={false}
+                glowRadius={52}
+                glowIntensity={1.15}
+                borderGlowColors={["#34d399", "#10b981", "#6ee7b7"]}
+                borderGlowColor="155 72 50"
               >
-                <div className="flex items-center gap-4">
-                  <div className="flex h-16 w-16 shrink-0 flex-col items-center justify-center border border-emerald-200/45 bg-emerald-300/15 text-emerald-100">
-                    <ShieldCheck className="h-7 w-7" aria-hidden="true" />
-                    <span className="mt-0.5 text-[11px] font-bold leading-none">SOC 2</span>
+                <motion.div
+                  initial={{ opacity: 0, y: 14 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.35 }}
+                  transition={{ duration: 0.5, ease: "easeOut", delay: 0.08 }}
+                  className="flex flex-col gap-5 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7"
+                >
+                  <div className="flex items-center gap-4">
+                    <img
+                      src="/soc2.png"
+                      alt="AICPA SOC 2 compliance mark"
+                      className="h-16 w-16 shrink-0 object-contain drop-shadow-[0_0_16px_rgba(167,243,208,0.22)]"
+                    />
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-200">
+                        {t("homeCompliance.soc2.badge", "SOC 2")}
+                      </p>
+                      <h3 className="mt-1 text-xl font-bold text-white sm:text-2xl">
+                        {t("homeCompliance.soc2.title", "SOC 2 Audit Report & Readiness Report Available")}
+                      </h3>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-200">
-                      {t("homeCompliance.soc2.badge", "SOC 2")}
-                    </p>
-                    <h3 className="mt-1 text-xl font-bold text-white sm:text-2xl">
-                      {t("homeCompliance.soc2.title", "SOC 2 Audit Report & Readiness Report Available")}
-                    </h3>
-                  </div>
-                </div>
-                <p className="max-w-sm text-sm leading-relaxed text-emerald-50/75 sm:text-right">
-                  {t("homeCompliance.soc2.description", "Independent assurance and readiness documentation are available for review.")}
-                </p>
-              </motion.div>
+                  <p className="max-w-sm text-sm leading-relaxed text-emerald-50/75 sm:text-right">
+                    {t("homeCompliance.soc2.description", "Independent assurance and readiness documentation are available for review.")}
+                  </p>
+                </motion.div>
+              </EdgeGlowCard>
 
               <div className="relative w-full">
                 <AutoScrollSection speed={0.5} className="py-5 gap-0">
@@ -487,7 +499,7 @@ export default function HomeLanding() {
           const allPartners = [...partners, ...partners, ...partners, ...partners];
 
           return (
-            <section id="resources" className="py-12 w-full scroll-mt-24">
+            <section id="resources" className="pt-32 pb-12 w-full scroll-mt-24">
               <span id="partners" className="-mt-24 block" />
               <div className="mb-10 text-center px-4">
                 <h2 className="text-3xl font-bold sm:text-4xl text-white">

@@ -1,18 +1,7 @@
 import { NextIntlClientProvider } from "next-intl";
-import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import enMessages from "../../locales/en.json";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Silence AI - Policies",
@@ -34,7 +23,7 @@ export default function PoliciesLayout({ children }) {
   return (
     <NextIntlClientProvider locale={locale} messages={enMessages}>
       <LayoutWrapper initialLanguage={locale}>
-        <div className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}>
+        <div className="antialiased bg-black text-white">
           {children}
         </div>
       </LayoutWrapper>

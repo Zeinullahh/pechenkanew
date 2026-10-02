@@ -241,23 +241,18 @@ function init_protocol() {
                 </pre>
               </div>
 
-              {/* Moonrise background */}
+              {/* Decorative background: kept CSS-only so the certificate never requests a missing asset. */}
               <div
                 className="absolute bottom-[-30%] w-full h-[600px] pointer-events-none opacity-80 mix-blend-screen overflow-hidden flex items-end z-0"
                 style={{
+                  background:
+                    "radial-gradient(ellipse at 50% 100%, rgba(56, 189, 248, 0.55), transparent 55%), linear-gradient(to top, rgba(30, 64, 175, 0.35), transparent)",
                   WebkitMaskImage:
                     "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 100%)",
                   maskImage:
                     "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 100%)",
                 }}
               >
-                <Image
-                  src="/moonrise.webp"
-                  alt="Moonrise Background"
-                  fill
-                  className="object-cover object-bottom"
-                  priority
-                />
               </div>
 
               {/* Inner Content */}

@@ -1028,63 +1028,14 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
 
         {(productType === "web" || productType === "email" || productType === "pentester") && <ProductComparison productType={productType} />}
 
-        {productType === "pentester" && (
-          <div className="mx-auto mt-12 max-w-6xl rounded-[28px] border border-white/10 bg-white/[0.035] p-6 text-center sm:mt-16 sm:p-8">
-            <h4 className="text-2xl font-semibold text-white">Testing a very large or mission-critical system?</h4>
-            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-white/55">For large enterprise, government and critical-infrastructure environments, Silence AI supports high-compute assessments, dedicated deployment requirements and custom security workflows.</p>
-            <button type="button" onClick={() => { trackPricingEvent("penetration_testing_contact_sales_clicked"); onOpenModal?.(); }} className="mt-6 rounded-full border border-white/20 px-6 py-3 font-medium text-white transition hover:border-blue-300 hover:text-blue-200">Contact Sales</button>
-          </div>
-        )}
-
         {productType === "web" && (
           <>
             <InteractiveSandbox product="web" />
-            <div className="mt-10 sm:mt-12 px-2 sm:px-0">
-              <div className="pricing-glass-media mx-auto max-w-5xl overflow-hidden rounded-3xl bg-slate-950/70 backdrop-blur-xl">
-                <div className="aspect-video w-full">
-                  <iframe
-                    className="h-full w-full"
-                    src="https://www.youtube.com/embed/BXWdaovJCjw"
-                    title="Web Security Instructions Video"
-                    loading="lazy"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
-            </div>
           </>
         )}
         {productType === "email" && (
           <>
             <InteractiveSandbox />
-            <div className="w-full flex justify-center px-4 py-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
-                <div className="pricing-glass-media w-full rounded-2xl overflow-hidden bg-black">
-                  <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-                    <iframe
-                      src="https://www.youtube.com/embed/3lW9az21aDk"
-                      title="AI-SOC Email Security"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                      className="absolute inset-0 w-full h-full"
-                    />
-                  </div>
-                </div>
-                <div className="pricing-glass-media w-full rounded-2xl overflow-hidden bg-black">
-                  <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-                    <iframe
-                      src="https://www.youtube.com/embed/HGhDQ3bhk6o"
-                      title="AI-SOC Email Security Additional Info"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                      className="absolute inset-0 w-full h-full"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
             {showLamp && (
               <div className="relative left-1/2 -translate-x-1/2 w-[100vw] h-[220px] max-w-none overflow-visible z-10">
                 <CybersecurityLamp
@@ -1219,7 +1170,7 @@ const ServerSecurityPricing = ({ billing, setBilling, onOpenModal }) => {
   const price = isAnnual ? SERVER_SECURITY_PRICING.annual : SERVER_SECURITY_PRICING.monthly;
 
   return (
-    <div className="mx-auto w-[90vw] max-w-none">
+    <div className="mx-auto w-full max-w-6xl">
       <div className="mb-8 text-center">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-blue-300">Server Security</p>
         <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Complete Protection</h3>
@@ -1326,7 +1277,7 @@ const ServerComparisonValue = ({ value, highlighted = false }) => {
 };
 
 const ServerSecurityComparison = () => (
-  <section className="mx-auto mt-16 w-[90vw] max-w-none" aria-labelledby="server-security-comparison-title">
+  <section className="mx-auto mt-16 w-full max-w-6xl" aria-labelledby="server-security-comparison-title">
     <div className="mb-8 text-center">
       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300">Competitive advantages</p>
       <h3 id="server-security-comparison-title" className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Silence AI vs Traditional Server Security</h3>
@@ -1334,14 +1285,14 @@ const ServerSecurityComparison = () => (
       <p className="mt-3 text-xs font-medium text-sky-200/70 sm:hidden">Swipe or drag horizontally to compare every option <span aria-hidden="true">→</span></p>
     </div>
     <GlassSurface width="100%" height="auto" borderRadius={24} backgroundOpacity={0.08} saturation={1.55} blur={14} displace={0.35} className="pricing-comparison-surface overflow-hidden rounded-3xl">
-      <div className="pricing-table-scroll" tabIndex="0" role="region" aria-label="Server security competitor comparison. Scroll horizontally to view all vendors.">
-        <table className="server-security-comparison-table w-full table-fixed border-collapse text-left text-[11px] sm:text-xs">
+      <div className="pricing-table-scroll w-full overflow-x-auto" tabIndex="0" role="region" aria-label="Server security competitor comparison. Scroll horizontally to view all vendors.">
+        <table className="server-security-comparison-table w-full min-w-[980px] table-fixed border-collapse text-left text-[11px] sm:text-xs">
         <thead>
           <tr className="border-b border-emerald-100/10 text-white/55">
-            <th scope="col" className="w-[24%] bg-slate-950/95 px-2 py-5 font-semibold text-white/80 md:sticky md:left-0 md:z-20">Features</th>
+            <th scope="col" className="sticky left-0 z-20 w-[240px] min-w-[220px] bg-slate-950/95 px-3 py-5 text-left font-semibold text-white/80 sm:px-5">Features</th>
             {SERVER_SECURITY_COLUMNS.map((column, index) => (
-              <th key={column.key} scope="col" className={`border-l border-white/[0.07] px-2 py-5 text-center font-semibold ${index === 0 ? "bg-emerald-500/[0.16] text-emerald-100 shadow-[inset_0_0_36px_rgba(16,185,129,0.08)]" : "text-white/60"}`}>
-                <span>{column.label}</span>
+              <th key={column.key} scope="col" className={`w-[148px] min-w-[140px] border-l border-white/[0.07] px-2 py-5 text-center font-semibold ${index === 0 ? "bg-emerald-500/[0.16] text-emerald-100 shadow-[inset_0_0_36px_rgba(16,185,129,0.08)]" : "text-white/60"}`}>
+                <span className="block break-words">{column.label}</span>
                 {index === 0 && <span className="mx-auto mt-2 block w-fit rounded-full border border-emerald-300/20 bg-emerald-400/10 px-2 py-1 text-[9px] uppercase tracking-[0.14em] text-emerald-200">All-in-one</span>}
               </th>
             ))}
@@ -1350,7 +1301,7 @@ const ServerSecurityComparison = () => (
         <tbody>
           {SERVER_SECURITY_COMPARISON.map((row) => (
             <tr key={row.capability} className={`border-b border-white/[0.07] last:border-0 ${row.pricing ? "bg-white/[0.025]" : ""}`}>
-              <th scope="row" className={`bg-slate-950/95 px-5 py-5 font-medium leading-5 text-white/85 md:sticky md:left-0 md:z-10 ${row.pricing ? "text-emerald-100" : ""}`}>{row.capability}</th>
+              <th scope="row" className={`sticky left-0 z-10 bg-slate-950/95 px-3 py-5 text-left font-medium leading-5 text-white/85 sm:px-5 ${row.pricing ? "text-emerald-100" : ""}`}>{row.capability}</th>
               {SERVER_SECURITY_COLUMNS.map((column, index) => (
                 <td key={`${row.capability}-${column.key}`} className={`border-l border-white/[0.07] px-4 py-4 text-center align-middle ${index === 0 ? "bg-emerald-500/[0.12] shadow-[inset_0_0_34px_rgba(16,185,129,0.06)]" : "bg-white/[0.015]"}`}>
                   <ServerComparisonValue value={row[column.key]} highlighted={index === 0} />

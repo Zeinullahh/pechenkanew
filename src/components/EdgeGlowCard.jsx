@@ -26,6 +26,8 @@ const EdgeGlowCard = ({
   glowRadius = 52,
   glowIntensity = 1.2,
   coneSpread = 38,
+  borderGlowColors = ['#c084fc', '#f472b6', '#38bdf8'],
+  borderGlowColor = '290 85 72',
   ...rest
 }) => {
   const wrapperRef = useRef(null);
@@ -93,8 +95,8 @@ const EdgeGlowCard = ({
         <BorderGlow
           borderRadius={borderRadius}
           backgroundColor="transparent"
-          colors={['#c084fc', '#f472b6', '#38bdf8']}
-          glowColor="290 85 72"
+          colors={borderGlowColors}
+          glowColor={borderGlowColor}
           edgeSensitivity={edgeSensitivity}
           glowRadius={glowRadius}
           glowIntensity={glowIntensity}

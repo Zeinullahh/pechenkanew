@@ -16,6 +16,7 @@ import {
 } from "country-flag-icons/react/3x2";
 import { useRouter, usePathname } from "@/i18n/navigation";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { saveLocalePreference } from "@/i18n/browserLocale";
 
 const FLAG_COMPONENTS = {
   US,
@@ -96,6 +97,7 @@ export default function LanguageSelector({ align = "right", allowedLocales }) {
     setIsOpen(false);
     setSearchTerm("");
     if (code === language) return;
+    saveLocalePreference(window.localStorage, code);
     router.replace(pathname, { locale: code });
   };
 

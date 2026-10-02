@@ -1,18 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
-import { Geist, Geist_Mono } from "next/font/google";
-import { supportedLocales } from "@/i18n/locales.mjs";
 import "./globals.css";
-import { setRequestLocale } from 'next-intl/server';
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const BRAND_REPLACEMENTS = [
   [/\bSilence AI LLC\b/g, "Silence"],
@@ -137,10 +124,6 @@ export const viewport = {
   userScalable: true,
 };
 
-export function generateStaticParams() {
-  return supportedLocales.map((locale) => ({ locale }));
-}
-
 const organizationStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -160,7 +143,7 @@ export default async function RootLayout(props) {
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
+        className="antialiased relative"
         style={{ backgroundColor: "#000000" }}
       >
         {/* Runs before any body markup parses, so returning visitors never see the preloader flash. */}

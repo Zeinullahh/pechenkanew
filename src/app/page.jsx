@@ -1,7 +1,5 @@
-import { redirect } from "next/navigation";
-import { defaultLocale } from "@/i18n/locales.mjs";
+import BrowserLocaleRedirect from "@/components/BrowserLocaleRedirect";
 
-// This page redirects to the default locale
 export default function RootPage() {
-  redirect(`/${defaultLocale}`);
+  return <BrowserLocaleRedirect />;
 }

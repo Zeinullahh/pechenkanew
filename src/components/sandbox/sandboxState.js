@@ -1,3 +1,5 @@
+import { SERVER_DEMO_NOW, INITIAL_SERVERS, INITIAL_SENSORS, INITIAL_INCIDENTS, INITIAL_RESPONSES, INITIAL_EVENTS, INITIAL_PACKAGES, INITIAL_POSTURE_CHECKS, INITIAL_POLICY, INITIAL_PROVISIONING } from './serverMockData.js';
+import { normalizeIPOrCIDR, validateServerSecurityPolicy } from './server/server-security-policy.mjs';
 import {
   DEMO_NOW,
   INITIAL_EMAILS,
@@ -701,4 +703,112 @@ export function answerSecurityQuestion(question, email, emails, logs) {
         .join("\n") || "The selected message contains no detected links."
     );
   return `For “${match.subject}”: ${analysis?.verdict || "Awaiting analysis"}. ${analysis?.summary || ""} ${analysis?.aiSuggestedAction || analysis?.aiActionTaken || ""} This local assistant can explain sender authentication, links, attachment hashes, quarantine counts, and purge history from the demo data.`;
+}
+
+// Server Security has its own reducer and per-server fixtures; it never enters the
+// legacy combined email/WebSOC reducer.
+export function createInitialServerState(now = SERVER_DEMO_NOW) {
+  const rebase = value => {
+    if (Array.isArray(value)) return value.map(rebase);
+    if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([key, entry]) => [key, rebase(entry)]));
+    if (typeof value === 'string' && /^\d{4}-\d{2}-\d{2}T/.test(value)) return new Date(Date.parse(value) + now - SERVER_DEMO_NOW).toISOString();
+    return value;
+  };
+  const servers = rebase(INITIAL_SERVERS);
+  const profile = () => rebase({ sensors: INITIAL_SENSORS, incidents: INITIAL_INCIDENTS, responses: INITIAL_RESPONSES, events: INITIAL_EVENTS, inventory: INITIAL_PACKAGES, postureChecks: INITIAL_POSTURE_CHECKS, policy: INITIAL_POLICY, provisioning: INITIAL_PROVISIONING });
+  const byAgent = Object.fromEntries(servers.map(agent => [agent.id, profile()]));
+  byAgent['srv-db'].provisioning = null;
+  return { resetVersion: 0, toast: null, server: { servers, activeServerId: servers[0].id, view: 'console', tab: 'overview', sequence: 0, baselineNow: now, now, enrollmentLocators: {}, byAgent, ...byAgent[servers[0].id] } };
+}
+
+export function serverSandboxReducer(state, action) {
+  const server = state.server;
+  const save = patch => {
+    const updated = { ...server, ...patch };
+    const profile = Object.fromEntries(['sensors', 'incidents', 'responses', 'events', 'inventory', 'postureChecks', 'policy', 'provisioning'].map(key => [key, updated[key]]));
+    return { ...state, server: { ...updated, byAgent: { ...updated.byAgent, [updated.activeServerId]: profile } } };
+  };
+  const notify = (next, title, type = 'success', detail = '') => ({ ...next, toast: { title, detail, type } });
+  switch (action.type) {
+    case 'DISMISS_TOAST': return { ...state, toast: null };
+    case 'SERVER_TOAST': return notify(state, action.title, action.tone || 'success');
+    case 'RESET': return { ...createInitialServerState(server.now), resetVersion: state.resetVersion + 1 };
+    case 'SERVER_SET_VIEW': return ['console', 'fleet'].includes(action.view) ? save({ view: action.view }) : state;
+    case 'SERVER_SELECT_AGENT':
+      if (!server.byAgent[action.id]) return state;
+      return { ...state, server: { ...server, ...server.byAgent[action.id], activeServerId: action.id, view: 'console', tab: 'overview' } };
+    case 'SERVER_SET_TAB': return ['overview', 'incidents', 'responses', 'sensors', 'posture', 'inventory', 'events', 'policy'].includes(action.tab) ? save({ tab: action.tab }) : state;
+    case 'SERVER_INCIDENT_STATUS':
+      if (!['INVESTIGATING', 'RESOLVED', 'DISMISSED'].includes(action.status) || !server.incidents.some(row => row.id === action.id)) return state;
+      return notify(save({ incidents: server.incidents.map(row => row.id === action.id ? { ...row, status: action.status } : row) }), `Incident marked ${action.status.toLowerCase()}`);
+    case 'SERVER_HEARTBEAT': {
+      const now = action.now ?? server.now;
+      const byAgent = Object.fromEntries(Object.entries(server.byAgent).map(([id, profile]) => [id, {
+        ...profile,
+        sensors: profile.sensors.map(row => ({ ...row, observedAt: new Date(now - 1000).toISOString(), details: { ...row.details, functional_evidence_at: new Date(now - 1000).toISOString() } })),
+        responses: profile.responses.map(row => row.status === 'APPLIED' && Date.parse(row.expiresAt) <= now ? { ...row, status: 'COMPLETE' } : row),
+      }]));
+      return { ...state, server: { ...server, ...byAgent[server.activeServerId], now, byAgent } };
+    }
+    case 'SERVER_GENERATE_TOKEN': {
+      const id = action.id || server.activeServerId;
+      if (!server.byAgent[id] || !['INITIAL', 'REENROLL'].includes(action.purpose || 'INITIAL')) return state;
+      if (action.purpose !== 'REENROLL' && server.servers.find(row => row.id === id)?.machineCredentialIssuedAt) return state;
+      const sequence = server.sequence + 1;
+      const locator = { locator: action.token || `demo-enrollment-${id}-${sequence}`, purpose: action.purpose || 'INITIAL', expires_at: new Date((action.now ?? server.now) + 600000).toISOString(), single_use: true };
+      return notify(save({ sequence, enrollmentLocators: { ...server.enrollmentLocators, [id]: locator } }), locator.purpose === 'REENROLL' ? 'Recovery code generated' : 'Enrollment code generated');
+    }
+    case 'SERVER_POLICY_MUTATE': {
+      const mutation = action.mutation || action.payload || {};
+      const data = structuredClone(server.policy);
+      const policy = data.policy;
+      try {
+        const cidr = mutation.cidr ? normalizeIPOrCIDR(mutation.cidr) : null;
+        switch (mutation.action) {
+          case 'set_mode': policy.response.mode = mutation.mode; break;
+          case 'add_trusted':
+            if (data.trusted_ips.some(row => row.cidr === cidr)) throw new Error('Trusted source already exists');
+            data.trusted_ips.push({ cidr, description: mutation.description || '' }); break;
+          case 'remove_trusted': data.trusted_ips = data.trusted_ips.filter(row => row.cidr !== cidr); break;
+          case 'move_trusted_to_block':
+            if (!data.trusted_ips.some(row => row.cidr === cidr)) throw new Error('Trusted source not found');
+            data.trusted_ips = data.trusted_ips.filter(row => row.cidr !== cidr);
+            // Fall through to the same validated explicit-block insertion.
+          case 'add_block':
+            if (!mutation.reason?.trim()) throw new Error('An explicit block requires a reason');
+            if (mutation.expires_at && !Number.isFinite(Date.parse(mutation.expires_at))) throw new Error('Invalid expiry');
+            data.explicit_blocks.push({ cidr, reason: mutation.reason.trim(), expiresAt: mutation.expires_at || null }); break;
+          case 'remove_block': data.explicit_blocks = data.explicit_blocks.filter(row => row.cidr !== cidr); break;
+          case 'set_sensor':
+            if (!INITIAL_SENSORS.some(row => row.sensor === mutation.sensor)) throw new Error('Unknown sensor');
+            policy.components[mutation.sensor] = Boolean(mutation.enabled); break;
+          case 'set_suricata_interface':
+            if (!/^[\w.:-]{1,15}$/.test(mutation.interface)) throw new Error('Invalid interface name');
+            policy.suricata = { interface: mutation.interface }; break;
+          default: return state;
+        }
+        policy.policy_revision += 1;
+        policy.trusted_ips = data.trusted_ips;
+        policy.explicit_blocks = data.explicit_blocks.map(row => ({ ...row, expires_at: row.expiresAt || null }));
+        validateServerSecurityPolicy(policy);
+        data.revision = { revision: policy.policy_revision, createdAt: new Date(server.now).toISOString() };
+        data.activation_state = 'applied';
+        const sensors = server.sensors.map(row => ({ ...row, state: policy.components[row.sensor] ? 'HEALTHY' : 'DISABLED', details: { ...row.details, detecting: policy.components[row.sensor], policy_revision: String(policy.policy_revision), response_mode: policy.response.mode, ...(row.sensor === 'suricata' ? { interface: policy.suricata.interface } : {}) } }));
+        const provisioning = server.provisioning ? { ...server.provisioning, policyActivation: { revision: String(policy.policy_revision), activatedAt: new Date(server.now).toISOString(), components: policy.components } } : null;
+        const sequence = server.sequence + 1;
+        const event = { eventId: `policy-${sequence}`, source: 'policy', eventType: 'policy.activation', severity: 'info', occurredAt: new Date(server.now).toISOString(), payload: { title: 'Signed security policy activated', revision: policy.policy_revision, action: mutation.action } };
+        return notify(save({ policy: data, sensors, provisioning, sequence, events: [event, ...server.events] }), 'Security policy saved and activated');
+      } catch (error) { return notify(state, error.message, 'critical'); }
+    }
+    case 'ATTACK': {
+      const sequence = server.sequence + 1;
+      const now = action.now ?? server.now;
+      const time = new Date(now).toISOString();
+      const event = { eventId: `attack-event-${sequence}`, source: 'crowdsec', eventType: 'security.detection', severity: 'high', occurredAt: time, incidentId: `attack-inc-${sequence}`, payload: { scenario: 'crowdsecurity/ssh-bf', source_ip: '198.51.100.42', attempts: 62, destination_port: 22, title: 'Repeated SSH login attempts', subject: { scenario: 'crowdsecurity/ssh-bf' } } };
+      const incident = { id: event.incidentId, summary: 'crowdsecurity/ssh-bf', severity: 'high', status: 'CONTAINED', sourceIP: '198.51.100.42', detectionSources: ['crowdsec'], firstSeenAt: time, lastSeenAt: time, eventCount: 62, events: [event], evidence: event.payload };
+      const response = { ...structuredClone(INITIAL_RESPONSES[0]), id: `attack-response-${sequence}`, startsAt: time, expiresAt: new Date(now + 900000).toISOString(), policyRevision: server.policy.policy.policy_revision };
+      return notify(save({ sequence, incidents: [incident, ...server.incidents], responses: [response, ...server.responses], events: [event, ...server.events] }), 'Simulated server attack intercepted: CrowdSec auto-blocked 198.51.100.42 on SSH port 22', 'critical', 'Temporary protection applied on ports 22 / 6443.');
+    }
+    default: return state;
+  }
 }

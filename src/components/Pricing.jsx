@@ -1024,7 +1024,7 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
           </div>
         )}
 
-        {productType === "server" && <ServerSecurityComparison />}
+        {productType === "server" && <><ServerSecurityComparison /><InteractiveSandbox product="server" /></>}
 
         {(productType === "web" || productType === "email" || productType === "pentester") && <ProductComparison productType={productType} />}
 

@@ -13,8 +13,9 @@ import {
 } from "lucide-react";
 import CmcView from "./CmcView";
 import WebmailView from "./WebmailView";
+import ServerSecurityView from "./ServerSecurityView";
 import WebSocView from "./WebSocView";
-import { createInitialEmailState, createInitialWebState, emailSandboxReducer, webSandboxReducer } from "./sandboxState";
+import { createInitialServerState, serverSandboxReducer, createInitialEmailState, createInitialWebState, emailSandboxReducer, webSandboxReducer } from "./sandboxState";
 import "./webmail-reference.css";
 import "./sandbox.css";
 
@@ -24,11 +25,12 @@ const EMAIL_MODES = [
 ];
 
 export default function InteractiveSandbox({ product = "email" }) {
+  const isServer = product === "server";
   const isWeb = product === "web";
   const [state, dispatch] = useReducer(
-    isWeb ? webSandboxReducer : emailSandboxReducer,
+    isServer ? serverSandboxReducer : isWeb ? webSandboxReducer : emailSandboxReducer,
     undefined,
-    isWeb ? createInitialWebState : createInitialEmailState,
+    isServer ? () => createInitialServerState(Date.now()) : isWeb ? createInitialWebState : createInitialEmailState,
   );
   const [expanded, setExpanded] = useState(false);
   const [scale, setScale] = useState(1);
@@ -63,31 +65,31 @@ export default function InteractiveSandbox({ product = "email" }) {
   useEffect(() => {
     if (!expanded) return;
     const onKey = (e) => {
-      if (e.key === "Escape") setExpanded(false);
+      if (e.key === "Escape" && !e.defaultPrevented && !viewport.current?.querySelector('[role="dialog"], [role="alertdialog"]')) setExpanded(false);
     };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
   }, [expanded]);
 
-  const mode = isWeb ? "websoc" : state.mode;
+  const mode = isServer ? state.server.view : isWeb ? "websoc" : state.mode;
 
   return (
     <section
       className={`silence-sandbox ${expanded ? "sb-expanded" : ""}`}
-      aria-label={isWeb ? "Web Security Sandbox Demo" : "Email System Sandbox Demo"}
-      id={isWeb ? "web-security-sandbox" : "email-system-sandbox"}
+      aria-label={isServer ? "Server Security Sandbox Demo" : isWeb ? "Web Security Sandbox Demo" : "Email System Sandbox Demo"}
+      id={isServer ? "server-security-sandbox" : isWeb ? "web-security-sandbox" : "email-system-sandbox"}
     >
       <div className="sb-introduction">
         <span className="sb-eyebrow">
           <Sparkles size={14} /> LIVE INTERACTIVE SANDBOX
         </span>
-        <h3>{isWeb ? "Web Security Sandbox" : "Email System Sandbox"}</h3>
-        <p>{isWeb
+        <h3>{isServer ? "Server Security Sandbox" : isWeb ? "Web Security Sandbox" : "Email System Sandbox"}</h3>
+        <p>{isServer ? "Explore Server Security Console, inspect engine telemetry, test policy rules, and simulate native server enrollment and attacks." : isWeb
           ? "Explore the Web Security CMC, simulate attacks, and inspect WAF traffic telemetry."
           : "Explore Email CMC and Email Workspace. Simulate attacks and inspect email security evidence."}</p>
       </div>
 
-      {!isWeb && (
+      {!isWeb && !isServer && (
         <div className="sb-product-switch" role="group" aria-label="Email sandbox view">
           <span className="sb-product-slider" style={{ transform: mode === "cmc" ? "translateX(0)" : "translateX(100%)" }} aria-hidden="true" />
           {EMAIL_MODES.map(({ id, label }) => (
@@ -108,13 +110,18 @@ export default function InteractiveSandbox({ product = "email" }) {
               <span className="sb-live-pulse" /> LIVE SANDBOX
             </span>
             <span className="sb-active-label">
-              {mode === "cmc"
+              {isServer ? "Server Security Console · prod-app-01.silenceai.net" : mode === "cmc"
                 ? "Email CMC · silenceai.net"
                 : mode === "webmail"
                 ? "Email Workspace · Elena Rostova"
                 : "Web Security CMC · web-soc.silenceai.net"}
             </span>
           </div>
+
+          {isServer && <div className="sb-product-switch sb-server-view-switch" role="group" aria-label="Server sandbox view">
+            <span className="sb-product-slider" style={{ transform: mode === "console" ? "translateX(0)" : "translateX(100%)" }} aria-hidden="true" />
+            {[{ id: "console", label: "Security Console" }, { id: "fleet", label: "Servers & Onboarding" }].map(({ id, label }) => <button key={id} type="button" aria-pressed={mode === id} onClick={() => dispatch({ type: "SERVER_SET_VIEW", view: id })}>{label}</button>)}
+          </div>}
 
           <div className="sb-toolbar-actions">
             <button
@@ -153,18 +160,19 @@ export default function InteractiveSandbox({ product = "email" }) {
               style={{ transform: `scale(${scale})`, transformOrigin: "0 0" }}
               key={state.resetVersion}
             >
-              {!isWeb && <div
+              {!isWeb && !isServer && <div
                 id="sb-panel-cmc"
                 hidden={mode !== "cmc"}
               >
                 <CmcView state={state} dispatch={dispatch} />
               </div>}
-              {!isWeb && <div
+              {!isWeb && !isServer && <div
                 id="sb-panel-webmail"
                 hidden={mode !== "webmail"}
               >
                 <WebmailView state={state} dispatch={dispatch} />
               </div>}
+              {isServer && <div id="sb-panel-server"><ServerSecurityView state={state} dispatch={dispatch} /></div>}
               {isWeb && <div
                 id="sb-panel-websoc"
               >
@@ -178,7 +186,7 @@ export default function InteractiveSandbox({ product = "email" }) {
         <footer className="sb-scenario-bar">
           <Info size={15} />
           <span>
-            <strong>Try it:</strong> {isWeb
+            <strong>Try it:</strong> {isServer ? "Switch between Security Console and Servers Fleet, simulate an attack to see CrowdSec auto-block rogue IPs, or customize signed policy." : isWeb
               ? "Simulate an attack to see WAF rate limiting engage, then inspect the globe and telemetry."
               : "Switch between Email CMC and Email Workspace, then simulate an attack and inspect quarantined messages."}
           </span>

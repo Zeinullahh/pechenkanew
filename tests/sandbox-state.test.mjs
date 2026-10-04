@@ -291,3 +291,119 @@ test("WebSOC state actions support parameter change, themes, blacklist, agents, 
   state = reduce(state, "WEBSOC_DISMISS_ANOMALY");
   assert.equal(state.websoc.anomalyMsg, null);
 });
+
+import { createInitialServerState, serverSandboxReducer } from '../src/components/sandbox/sandboxState.js';
+import { deriveProtectionState } from '../src/components/sandbox/server/core-protection-state.mjs';
+const serverReduce = (state, type, args = {}) => serverSandboxReducer(state, { type, ...args });
+const policyMutation = (state, mutation) => serverReduce(state, 'SERVER_POLICY_MUTATE', { mutation });
+
+test('Server baseline has three servers, nine functional engines, incidents, responses, and active protection', () => {
+  const state = createInitialServerState();
+  assert.equal(state.server.servers.length, 3);
+  assert.deepEqual(state.server.sensors.map(row => row.sensor), ['guard', 'hostsensor', 'inventory', 'fim', 'sca', 'yarax', 'crowdsec', 'falco', 'suricata']);
+  assert.ok(state.server.sensors.every(row => row.state === 'HEALTHY' && row.details.functional_state === 'FUNCTIONAL'));
+  assert.equal(state.server.incidents.length, 3);
+  assert.equal(state.server.responses[0].status, 'APPLIED');
+  assert.deepEqual(state.server.responses[0].ports, [22, 6443]);
+  assert.equal(deriveProtectionState(state.server.sensors, state.server.provisioning, state.server.now).protection, 'ACTIVE');
+  assert.equal(state.server.inventory.length, 6);
+  assert.ok(state.server.postureChecks.some(row => row.status === 'failed'));
+});
+
+test('Server attack adds a correlated incident, protected-port response, telemetry, and toast without mutating fixtures', () => {
+  const initial = createInitialServerState();
+  const state = serverReduce(initial, 'ATTACK');
+  assert.equal(state.server.incidents.length, initial.server.incidents.length + 1);
+  assert.equal(state.server.responses.length, initial.server.responses.length + 1);
+  assert.equal(state.server.events.length, initial.server.events.length + 1);
+  assert.equal(state.server.incidents[0].summary, 'crowdsecurity/ssh-bf');
+  assert.equal(state.server.incidents[0].sourceIP, '198.51.100.42');
+  assert.equal(state.server.responses[0].action, 'deny_source_ip_protected_ports');
+  assert.equal(state.server.responses[0].status, 'APPLIED');
+  assert.equal(Date.parse(state.server.responses[0].expiresAt) - state.server.now, 900000);
+  assert.equal(state.server.events[0].incidentId, state.server.incidents[0].id);
+  assert.match(state.toast.title, /CrowdSec auto-blocked 198\.51\.100\.42/);
+  assert.deepEqual(initial, createInitialServerState());
+});
+
+test('Server policy validates modes and CIDR conflicts, and moves trusted sources atomically', () => {
+  const initial = createInitialServerState();
+  let state = policyMutation(initial, { action: 'set_mode', mode: 'shadow' });
+  assert.equal(state.server.policy.policy.response.mode, 'shadow');
+  state = policyMutation(state, { action: 'add_trusted', cidr: '172.16.0.0/16', description: 'Operations' });
+  assert.ok(state.server.policy.trusted_ips.some(row => row.cidr === '172.16.0.0/16'));
+  state = policyMutation(state, { action: 'move_trusted_to_block', cidr: '172.16.0.0/16', reason: 'Compromised network' });
+  assert.ok(!state.server.policy.trusted_ips.some(row => row.cidr === '172.16.0.0/16'));
+  assert.ok(state.server.policy.explicit_blocks.some(row => row.cidr === '172.16.0.0/16'));
+  for (const mutation of [
+    { action: 'add_block', cidr: '10.12.0.0/16', reason: 'Conflicting' },
+    { action: 'add_trusted', cidr: '999.1.2.3' },
+    { action: 'set_mode', mode: 'invalid' },
+    { action: 'move_trusted_to_block', cidr: '10.0.0.0/8', reason: '' },
+  ]) {
+    const invalid = policyMutation(state, mutation);
+    assert.deepEqual(invalid.server, state.server);
+    assert.equal(invalid.toast.type, 'critical');
+  }
+  assert.deepEqual(initial, createInitialServerState());
+});
+
+test('Incident actions, all policy controls, server switching, and token expiry persist locally', () => {
+  let state = serverReduce(createInitialServerState(), 'SERVER_INCIDENT_STATUS', { id: 'inc-01', status: 'RESOLVED' });
+  assert.equal(state.server.incidents[0].status, 'RESOLVED');
+  state = policyMutation(state, { action: 'set_sensor', sensor: 'falco', enabled: false });
+  assert.equal(state.server.sensors.find(row => row.sensor === 'falco').state, 'DISABLED');
+  state = policyMutation(state, { action: 'set_suricata_interface', interface: 'ens4' });
+  assert.equal(state.server.policy.policy.suricata.interface, 'ens4');
+  state = policyMutation(state, { action: 'add_block', cidr: '198.51.100.99/32', reason: 'Manual' });
+  state = policyMutation(state, { action: 'remove_block', cidr: '198.51.100.99/32' });
+  assert.ok(!state.server.policy.explicit_blocks.some(row => row.cidr === '198.51.100.99/32'));
+  state = policyMutation(state, { action: 'remove_trusted', cidr: '192.168.1.0/24' });
+  assert.equal(state.server.policy.trusted_ips.length, 1);
+  state = serverReduce(state, 'SERVER_SELECT_AGENT', { id: 'srv-worker' });
+  assert.equal(state.server.incidents[0].status, 'OPEN');
+  assert.equal(state.server.policy.trusted_ips.length, 2);
+  state = serverReduce(state, 'SERVER_SELECT_AGENT', { id: 'srv-api' });
+  assert.equal(state.server.incidents[0].status, 'RESOLVED');
+  assert.equal(state.server.policy.trusted_ips.length, 1);
+  assert.equal(state.server.sensors.find(row => row.sensor === 'falco').state, 'DISABLED');
+  state = serverReduce(state, 'SERVER_GENERATE_TOKEN', { id: 'srv-db', purpose: 'INITIAL', token: 'demo-secret' });
+  const first = state.server.enrollmentLocators['srv-db'];
+  assert.equal(Date.parse(first.expires_at) - state.server.now, 600000);
+  assert.equal(first.single_use, true);
+  state = serverReduce(state, 'SERVER_GENERATE_TOKEN', { id: 'srv-db', purpose: 'INITIAL', token: 'replacement-secret' });
+  assert.notEqual(state.server.enrollmentLocators['srv-db'].locator, first.locator);
+  state = serverReduce(state, 'SERVER_GENERATE_TOKEN', { id: 'srv-api', purpose: 'REENROLL' });
+  assert.equal(state.server.enrollmentLocators['srv-api'].purpose, 'REENROLL');
+  state = serverReduce(state, 'SERVER_HEARTBEAT', { now: state.server.now + 1000000 });
+  assert.ok(state.server.responses.every(row => row.status === 'COMPLETE'));
+});
+
+test('Server reset restores pristine state and sequence while incrementing the stage remount version', () => {
+  let state = createInitialServerState();
+  state = serverReduce(state, 'ATTACK');
+  state = policyMutation(state, { action: 'set_mode', mode: 'observe' });
+  state = serverReduce(state, 'SERVER_SET_VIEW', { view: 'fleet' });
+  state = serverReduce(state, 'SERVER_GENERATE_TOKEN', { id: 'srv-db', purpose: 'INITIAL' });
+  state = serverReduce(state, 'RESET');
+  assert.deepEqual(state, { ...createInitialServerState(), resetVersion: 1 });
+  assert.equal(state.server.sequence, 0);
+});
+
+test('Server state and mutations remain isolated from Email and WebSOC state', () => {
+  const email = createInitialEmailState();
+  const web = createInitialWebState();
+  let server = createInitialServerState();
+  assert.ok(!('emails' in server) && !('websoc' in server));
+  assert.ok(!('server' in email) && !('server' in web));
+  for (const action of [ { type: 'SERVER_SET_TAB', tab: 'policy' }, { type: 'SERVER_POLICY_MUTATE', mutation: { action: 'set_mode', mode: 'observe' } } ]) {
+    assert.deepEqual(emailSandboxReducer(email, action), email);
+    assert.equal(webSandboxReducer(web, action), web);
+  }
+  assert.equal(serverSandboxReducer(server, { type: 'WEBSOC_TOPUP', amount: 10 }), server);
+  assert.equal(serverSandboxReducer(server, { type: 'MODE', mode: 'webmail' }), server);
+  server = serverReduce(server, 'ATTACK');
+  assert.deepEqual(email, createInitialEmailState());
+  assert.deepEqual(web, createInitialWebState());
+  assert.equal(server.server.incidents.length, 4);
+});

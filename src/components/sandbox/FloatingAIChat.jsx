@@ -1,20 +1,17 @@
 "use client";
+import HomepageText, { useHomepageText } from "@/components/HomepageText";
 
 import { useEffect, useRef, useState } from "react";
 import { Bot, Send, Sparkles, X, RotateCcw } from "lucide-react";
 import { answerSecurityQuestion } from "./sandboxState";
 
 export default function FloatingAIChat({ state, dispatch, email }) {
+  const localize = useHomepageText();
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [demoTriggered, setDemoTriggered] = useState(false);
-  const [messages, setMessages] = useState([
-    {
-      role: "assistant",
-      text: "Здравствуйте! Я ваш AI-ассистент Silence AI. Я могу анализировать угрозы, ссылки, вложения или автоматически организовывать переписку по папкам.",
-    },
-  ]);
+  const [messages, setMessages] = useState([{ role: "assistant", text: "Hello! I can analyze threats, links, and attachments or organize your messages into folders." }]);
   const bottom = useRef(null);
   const inputRef = useRef(null);
   const typingTimer = useRef(null);
@@ -36,7 +33,7 @@ export default function FloatingAIChat({ state, dispatch, email }) {
       setDemoTriggered(true);
 
       // Start typing simulation after opening
-      const textToType = "Переведи все письма в папку Finance & Audit";
+      const textToType = localize("Move all messages to Finance & Audit");
       let charIndex = 0;
 
       const typingInterval = setInterval(() => {
@@ -61,7 +58,7 @@ export default function FloatingAIChat({ state, dispatch, email }) {
                 ...prev,
                 {
                   role: "assistant",
-                  text: "Фолдер «Finance & Audit» был создан (кастомный фолдер добавлен в систему), и туда письма были перенаправлены. Вы можете просмотреть их в левом меню в разделе МОИ ПАПКИ.",
+                  text: localize("Created {folder} and moved matching messages there. Find them under My Folders.", { folder: "Finance & Audit" }),
                 },
               ]);
 
@@ -87,7 +84,7 @@ export default function FloatingAIChat({ state, dispatch, email }) {
   }, [demoTriggered, dispatch]);
 
   function triggerFolderRouting(folderName = "Finance & Audit", userText = null) {
-    const text = userText || `Переведи все письма в папку ${folderName}`;
+    const text = userText || localize("Move all messages to {folder}", { folder: folderName });
     setMessages((prev) => [...prev, { role: "user", text }]);
     setInput("");
     setIsTyping(true);
@@ -98,7 +95,7 @@ export default function FloatingAIChat({ state, dispatch, email }) {
         ...prev,
         {
           role: "assistant",
-          text: `Фолдер «${folderName}» был создан (кастомный фолдер добавлен в систему), и туда письма были перенаправлены.`,
+          text: localize("Created {folder} and moved matching messages there. Find them under My Folders.", { folder: folderName }),
         },
       ]);
 
@@ -117,10 +114,10 @@ export default function FloatingAIChat({ state, dispatch, email }) {
   }
 
   function handleReplayDemo() {
-    triggerFolderRouting("Finance & Audit", "Переведи все письма в папку Finance & Audit");
+    triggerFolderRouting("Finance & Audit", localize("Move all messages to Finance & Audit"));
   }
 
-  function ask(question) {
+  function ask(question, intent = null) {
     if (!question.trim()) return;
     const trimmed = question.trim();
 
@@ -149,7 +146,7 @@ export default function FloatingAIChat({ state, dispatch, email }) {
         ...previous,
         {
           role: "assistant",
-          text: answerSecurityQuestion(trimmed, email, state.emails, state.logs),
+          text: answerSecurityQuestion(intent || trimmed, email, state.emails, state.logs, localize),
         },
       ]);
     }, 450);
@@ -160,7 +157,7 @@ export default function FloatingAIChat({ state, dispatch, email }) {
       <button
         type="button"
         className="sb-ai-fab"
-        aria-label="Open AI Assistant"
+        aria-label={localize("Open AI Assistant")}
         aria-expanded={open}
         onClick={() => setOpen(!open)}
       >
@@ -171,7 +168,7 @@ export default function FloatingAIChat({ state, dispatch, email }) {
       {open && (
         <section
           className="sb-ai-panel"
-          aria-label="Ask SAI Security and Mail Assistant chat"
+          aria-label={localize("Ask SAI Security and Mail Assistant chat")}
           onKeyDown={(e) => {
             if (e.key === "Escape") {
               e.stopPropagation();
@@ -186,12 +183,12 @@ export default function FloatingAIChat({ state, dispatch, email }) {
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <strong className="text-sm font-semibold text-white">Silence AI Assistant</strong>
+                  <strong className="text-sm font-semibold text-white"><HomepageText fallback="Silence AI Assistant" /></strong>
                   <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-400/30">
-                    Live
+                    <HomepageText fallback="Live" />
                   </span>
                 </div>
-                <span className="text-xs text-purple-200/60">Automated Mail Organization & Security</span>
+                <span className="text-xs text-purple-200/60"><HomepageText fallback="Automated Mail Organization & Security" /></span>
               </div>
             </div>
 
@@ -200,7 +197,7 @@ export default function FloatingAIChat({ state, dispatch, email }) {
                 type="button"
                 className="sb-icon"
                 aria-label="Replay AI folder demo"
-                title="Повторить команду создания папки"
+                title={localize("Replay folder demo")}
                 onClick={handleReplayDemo}
               >
                 <RotateCcw size={15} />
@@ -218,20 +215,20 @@ export default function FloatingAIChat({ state, dispatch, email }) {
 
           {email && (
             <p className="sb-ai-context">
-              Контекст письма: <strong>{email.subject}</strong>
+              {localize("Email context:")} <strong>{localize(email.subject)}</strong>
             </p>
           )}
 
           <div className="sb-ai-messages" role="log" aria-live="polite">
             {messages.map((message, i) => (
               <div key={i} className={`sb-ai-message ${message.role}`}>
-                <span>{message.role === "assistant" ? "Silence AI" : "Вы"}</span>
-                <p>{message.text}</p>
+                <span>{message.role === "assistant" ? "Silence AI" : localize("You")}</span>
+                <p>{localize(message.text)}</p>
               </div>
             ))}
             {isTyping && (
               <div className="sb-ai-message assistant sb-ai-typing">
-                <span>Silence AI</span>
+                <span><HomepageText fallback="Silence AI" /></span>
                 <div className="sb-typing-indicator">
                   <span />
                   <span />
@@ -244,20 +241,20 @@ export default function FloatingAIChat({ state, dispatch, email }) {
 
           <div className="sb-ai-suggestions">
             {[
-              "✨ Переведи письма в Finance & Audit",
-              "📁 Создать папку Executive",
-              "🛡️ Сводка по угрозам",
-            ].map((text) => (
+              { id: "finance", text: localize("Move messages to Finance & Audit") },
+              { id: "executive", text: localize("Create an Executive folder") },
+              { id: "summary", text: localize("Summarize threats") },
+            ].map(({ id, text }) => (
               <button
                 type="button"
                 key={text}
                 onClick={() => {
-                  if (text.includes("Finance & Audit")) {
+                  if (id === "finance") {
                     triggerFolderRouting("Finance & Audit");
-                  } else if (text.includes("Executive")) {
+                  } else if (id === "executive") {
                     triggerFolderRouting("Executive Board");
                   } else {
-                    ask(text);
+                    ask(text, "summary");
                   }
                 }}
               >
@@ -274,15 +271,15 @@ export default function FloatingAIChat({ state, dispatch, email }) {
           >
             <input
               ref={inputRef}
-              aria-label="Ask AI assistant or request folder routing"
-              placeholder='Например: "Переведи все письма в папку Finance & Audit"…'
+              aria-label={localize("Ask AI assistant or request folder routing")}
+              placeholder={localize("For example: Move all messages to Finance & Audit")}
               value={input}
               onChange={(e) => setInput(e.target.value)}
               maxLength={1500}
             />
             <button
               type="submit"
-              aria-label="Send message"
+              aria-label={localize("Send message")}
               disabled={!input.trim()}
             >
               <Send size={16} />

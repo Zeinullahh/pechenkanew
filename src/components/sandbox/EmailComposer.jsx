@@ -1,4 +1,5 @@
 "use client";
+import HomepageText from "@/components/HomepageText";
 
 import { useState } from "react";
 import { CalendarClock, FileEdit, Send } from "lucide-react";
@@ -65,7 +66,7 @@ export default function EmailComposer({ initial, state, dispatch, onClose }) {
           />
         </label>
         <label>
-          Subject
+          <HomepageText fallback="Subject" />
           <input
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
@@ -73,7 +74,7 @@ export default function EmailComposer({ initial, state, dispatch, onClose }) {
           />
         </label>
         <label>
-          Message
+          <HomepageText fallback="Message" />
           <textarea
             aria-label="Message"
             rows={9}
@@ -84,7 +85,7 @@ export default function EmailComposer({ initial, state, dispatch, onClose }) {
         </label>
         {schedule && (
           <label>
-            Send at (UTC)
+            <HomepageText fallback="Send at (UTC)" />
             <input
               aria-label="Send at (UTC)"
               type="datetime-local"
@@ -92,9 +93,9 @@ export default function EmailComposer({ initial, state, dispatch, onClose }) {
               onChange={(e) => setScheduledAt(e.target.value)}
             />
             <small>
-              Demo clock:{" "}
+              <HomepageText fallback="Demo clock:" />{" "}
               {new Date(state.now).toISOString().slice(0, 16).replace("T", " ")}{" "}
-              UTC
+              <HomepageText fallback="UTC" />
             </small>
           </label>
         )}
@@ -110,7 +111,7 @@ export default function EmailComposer({ initial, state, dispatch, onClose }) {
             onClick={() => submit("drafts")}
           >
             <FileEdit size={15} />
-            Save draft
+            <HomepageText fallback="Save draft" />
           </button>
           <button
             type="button"
@@ -119,7 +120,7 @@ export default function EmailComposer({ initial, state, dispatch, onClose }) {
             onClick={() => setSchedule(!schedule)}
           >
             <CalendarClock size={15} />
-            Schedule
+            <HomepageText fallback="Schedule" />
           </button>
           <button type="submit" className="sb-primary">
             <Send size={15} />

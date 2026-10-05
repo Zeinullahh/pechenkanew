@@ -1,4 +1,5 @@
 "use client";
+import HomepageText, { useHomepageText } from "@/components/HomepageText";
 
 import { useEffect, useReducer, useRef, useState } from "react";
 import {
@@ -25,6 +26,7 @@ const EMAIL_MODES = [
 ];
 
 export default function InteractiveSandbox({ product = "email" }) {
+  const localize = useHomepageText();
   const isServer = product === "server";
   const isWeb = product === "web";
   const [state, dispatch] = useReducer(
@@ -76,26 +78,26 @@ export default function InteractiveSandbox({ product = "email" }) {
   return (
     <section
       className={`silence-sandbox ${expanded ? "sb-expanded" : ""}`}
-      aria-label={isServer ? "Server Security Sandbox Demo" : isWeb ? "Web Security Sandbox Demo" : "Email System Sandbox Demo"}
+      aria-label={isServer ? localize("Server Security Sandbox Demo") : isWeb ? localize("Web Security Sandbox Demo") : localize("Email System Sandbox Demo")}
       id={isServer ? "server-security-sandbox" : isWeb ? "web-security-sandbox" : "email-system-sandbox"}
     >
       <div className="sb-introduction">
         <span className="sb-eyebrow">
-          <Sparkles size={14} /> LIVE INTERACTIVE SANDBOX
+          <Sparkles size={14} /> <HomepageText fallback="LIVE INTERACTIVE SANDBOX" />
         </span>
-        <h3>{isServer ? "Server Security Sandbox" : isWeb ? "Web Security Sandbox" : "Email System Sandbox"}</h3>
-        <p>{isServer ? "Explore Server Security Console, inspect engine telemetry, test policy rules, and simulate native server enrollment and attacks." : isWeb
-          ? "Explore the Web Security CMC, simulate attacks, and inspect WAF traffic telemetry."
-          : "Explore Email CMC and Email Workspace. Simulate attacks and inspect email security evidence."}</p>
+        <h3>{isServer ? localize("Server Security Sandbox") : isWeb ? localize("Web Security Sandbox") : localize("Email System Sandbox")}</h3>
+        <p>{isServer ? localize("Explore Server Security Console, inspect engine telemetry, test policy rules, and simulate native server enrollment and attacks.") : isWeb
+          ? localize("Explore the Web Security CMC, simulate attacks, and inspect WAF traffic telemetry.")
+          : localize("Explore Email CMC and Email Workspace. Simulate attacks and inspect email security evidence.")}</p>
       </div>
 
       {!isWeb && !isServer && (
-        <div className="sb-product-switch" role="group" aria-label="Email sandbox view">
+        <div className="sb-product-switch" role="group" aria-label={localize("Email sandbox view")}>
           <span className="sb-product-slider" style={{ transform: mode === "cmc" ? "translateX(0)" : "translateX(100%)" }} aria-hidden="true" />
           {EMAIL_MODES.map(({ id, label }) => (
             <button key={id} type="button" aria-pressed={mode === id}
               onClick={() => dispatch({ type: "MODE", mode: id })}>
-              {label}
+              {localize(label)}
             </button>
           ))}
         </div>
@@ -107,20 +109,20 @@ export default function InteractiveSandbox({ product = "email" }) {
         <div className="sb-toolbar-strip">
           <div className="sb-toolbar-left">
             <span className="sb-live-indicator">
-              <span className="sb-live-pulse" /> LIVE SANDBOX
+              <span className="sb-live-pulse" /> <HomepageText fallback="LIVE SANDBOX" />
             </span>
             <span className="sb-active-label">
-              {isServer ? "Server Security Console · prod-app-01.silenceai.net" : mode === "cmc"
-                ? "Email CMC · silenceai.net"
+              {isServer ? <>{localize("Server Security Console")} · prod-app-01.silenceai.net</> : mode === "cmc"
+                ? <>{localize("Email CMC")} · silenceai.net</>
                 : mode === "webmail"
-                ? "Email Workspace · Elena Rostova"
-                : "Web Security CMC · web-soc.silenceai.net"}
+                ? <>{localize("Email Workspace")} · Elena Rostova</>
+                : <>{localize("Web Security CMC")} · web-soc.silenceai.net</>}
             </span>
           </div>
 
-          {isServer && <div className="sb-product-switch sb-server-view-switch" role="group" aria-label="Server sandbox view">
+          {isServer && <div className="sb-product-switch sb-server-view-switch" role="group" aria-label={localize("Server sandbox view")}>
             <span className="sb-product-slider" style={{ transform: mode === "console" ? "translateX(0)" : "translateX(100%)" }} aria-hidden="true" />
-            {[{ id: "console", label: "Security Console" }, { id: "fleet", label: "Servers & Onboarding" }].map(({ id, label }) => <button key={id} type="button" aria-pressed={mode === id} onClick={() => dispatch({ type: "SERVER_SET_VIEW", view: id })}>{label}</button>)}
+            {[{ id: "console", label: localize("Security Console") }, { id: "fleet", label: localize("Servers & Onboarding") }].map(({ id, label }) => <button key={id} type="button" aria-pressed={mode === id} onClick={() => dispatch({ type: "SERVER_SET_VIEW", view: id })}>{label}</button>)}
           </div>}
 
           <div className="sb-toolbar-actions">
@@ -129,19 +131,19 @@ export default function InteractiveSandbox({ product = "email" }) {
               className="sb-attack"
               onClick={() => dispatch({ type: "ATTACK" })}
             >
-              <Zap size={14} /> <span>Simulate Attack</span>
+              <Zap size={14} /> <span><HomepageText fallback="Simulate Attack" /></span>
             </button>
             <button
               type="button"
               className="sb-reset"
               onClick={() => dispatch({ type: "RESET" })}
             >
-              <RotateCcw size={13} /> <span>Reset Demo</span>
+              <RotateCcw size={13} /> <span><HomepageText fallback="Reset Demo" /></span>
             </button>
             <button
               type="button"
               className="sb-icon"
-              aria-label={expanded ? "Exit expanded demo" : "Expand demo"}
+              aria-label={expanded ? localize("Exit expanded demo") : localize("Expand demo")}
               onClick={() => setExpanded(!expanded)}
             >
               {expanded ? <Minimize2 size={15} /> : <Maximize2 size={15} />}
@@ -186,11 +188,11 @@ export default function InteractiveSandbox({ product = "email" }) {
         <footer className="sb-scenario-bar">
           <Info size={15} />
           <span>
-            <strong>Try it:</strong> {isServer ? "Switch between Security Console and Servers Fleet, simulate an attack to see CrowdSec auto-block rogue IPs, or customize signed policy." : isWeb
-              ? "Simulate an attack to see WAF rate limiting engage, then inspect the globe and telemetry."
-              : "Switch between Email CMC and Email Workspace, then simulate an attack and inspect quarantined messages."}
+            <strong><HomepageText fallback="Try it:" /></strong> {isServer ? localize("Switch between Security Console and Servers Fleet, simulate an attack to see CrowdSec auto-block rogue IPs, or customize signed policy.") : isWeb
+              ? localize("Simulate an attack to see WAF rate limiting engage, then inspect the globe and telemetry.")
+              : localize("Switch between Email CMC and Email Workspace, then simulate an attack and inspect quarantined messages.")}
           </span>
-          <span className="sb-scenario-end">Local demo · resets on reload</span>
+          <span className="sb-scenario-end"><HomepageText fallback="Local demo · resets on reload" /></span>
         </footer>
 
         {/* Live Toasts */}
@@ -206,13 +208,13 @@ export default function InteractiveSandbox({ product = "email" }) {
               <CheckCircle2 size={21} />
             )}
             <div>
-              <strong>{state.toast.title}</strong>
-              <p>{state.toast.detail}</p>
+              <strong>{localize(state.toast.title, state.toast.values)}</strong>
+              <p>{localize(state.toast.detail, state.toast.values)}</p>
             </div>
             <button
               type="button"
               className="sb-icon"
-              aria-label="Dismiss notification"
+              aria-label={localize("Dismiss notification")}
               onClick={() => dispatch({ type: "DISMISS_TOAST" })}
             >
               <X size={15} />

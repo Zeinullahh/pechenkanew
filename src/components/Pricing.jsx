@@ -1,4 +1,5 @@
 "use client";
+import HomepageText, { useHomepageText } from "@/components/HomepageText";
 
 
 import React, { useState, useMemo } from "react";
@@ -390,6 +391,7 @@ const trackPricingEvent = (eventName) => {
 };
 
 const ProductComparison = ({ productType }) => {
+  const localize = useHomepageText();
   const comparison = competitiveComparisons[productType];
 
   if (!comparison) return null;
@@ -398,18 +400,18 @@ const ProductComparison = ({ productType }) => {
     <section className="mt-12 sm:mt-16" aria-labelledby={`${productType}-security-comparison-title`}>
       <div className="mb-6 text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300">
-          {comparison.eyebrow || "Competitive advantages"}
+          {localize(comparison.eyebrow || "Competitive advantages")}
         </p>
         <h3 id={`${productType}-security-comparison-title`} className="mt-3 text-2xl font-semibold text-white sm:text-3xl">
-          {comparison.title}
+          {localize(comparison.title)}
         </h3>
         {comparison.description && (
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-white/60">
-            {comparison.description}
+            {localize(comparison.description)}
           </p>
         )}
         <p className="mt-3 text-xs font-medium text-sky-200/70 sm:hidden">
-          Swipe or drag horizontally to compare every option <span aria-hidden="true">→</span>
+          <HomepageText fallback="Swipe or drag horizontally to compare every option" /> <span aria-hidden="true">→</span>
         </p>
       </div>
       <GlassSurface
@@ -426,24 +428,24 @@ const ProductComparison = ({ productType }) => {
           className="pricing-table-scroll w-full overflow-x-auto"
           tabIndex="0"
           role="region"
-          aria-label={`${comparison.title}. Scroll horizontally to view all providers.`}
+          aria-label={`${localize(comparison.title)}. ${localize("Scroll horizontally to view all providers.")}`}
         >
           <table className="w-full min-w-[980px] lg:min-w-[1100px] table-fixed border-collapse text-left text-[11px] sm:text-sm">
             <thead className="text-slate-200">
               <tr>
                 {comparison.columns.map((column, index) => (
                   <th
-                    key={column.label || column}
+                    key={localize(column.label || column)}
                     className={`border-b border-sky-300/25 px-2 py-4 text-center font-semibold sm:px-4 ${
                       index === 0
                         ? "sticky left-0 z-20 w-[210px] min-w-[190px] sm:w-[240px] sm:min-w-[220px] bg-slate-950/95 text-left"
                         : "w-[150px] min-w-[140px] sm:w-[175px] sm:min-w-[160px]"
                     } ${index === 1 ? "bg-emerald-500/10 text-white" : ""}`}
                   >
-                    <span className="block px-1 leading-tight break-words">{column.label || column}</span>
+                    <span className="block px-1 leading-tight break-words">{localize(column.label || column)}</span>
                     {column.sublabel && (
                       <span className="mt-1 block text-[10px] font-normal text-white/45">
-                        {column.sublabel}
+                        {localize(column.sublabel)}
                       </span>
                     )}
                   </th>
@@ -467,11 +469,11 @@ const ProductComparison = ({ productType }) => {
                       }`}
                     >
                       {typeof feature === "string" ? (
-                        feature
+                        localize(feature)
                       ) : (
                         <div>
                           <span className="block font-semibold text-white text-xs sm:text-sm">
-                            {feature.label}
+                            {localize(feature.label)}
                           </span>
                           <span className="mt-1 flex items-center gap-1.5 text-[11px] text-white/70">
                             {feature.icon && (
@@ -484,7 +486,7 @@ const ProductComparison = ({ productType }) => {
                                 loading="lazy"
                               />
                             )}
-                            <span className="font-normal">{feature.sublabel}</span>
+                            <span className="font-normal">{localize(feature.sublabel)}</span>
                           </span>
                         </div>
                       )}
@@ -509,7 +511,7 @@ const ProductComparison = ({ productType }) => {
                         ) : value?.type === "check" ? (
                           <span className="flex flex-col items-center gap-1">
                             <span className="text-2xl font-semibold text-emerald-400">✓</span>
-                            <span className="max-w-[155px] text-[11px] leading-4 text-white/50">{value.comment}</span>
+                            <span className="max-w-[155px] text-[11px] leading-4 text-white/50">{localize(value.comment)}</span>
                           </span>
                         ) : value?.value ? (
                           <span className="flex flex-col items-center justify-center gap-0.5">
@@ -520,16 +522,16 @@ const ProductComparison = ({ productType }) => {
                                   : "text-white font-semibold sm:text-sm"
                               }`}
                             >
-                              {value.value}
+                              {localize(value.value)}
                             </span>
                             {value.comment && (
                               <span className="text-[10px] uppercase font-medium tracking-wider text-white/45 whitespace-nowrap">
-                                {value.comment}
+                                {localize(value.comment)}
                               </span>
                             )}
                             {value.note && (
                               <span className="text-[10px] font-medium text-emerald-400/90 whitespace-nowrap">
-                                {value.note}
+                                {localize(value.note)}
                               </span>
                             )}
                           </span>
@@ -539,7 +541,7 @@ const ProductComparison = ({ productType }) => {
                               typeof value === "string" && value.length > 25 ? "text-left" : "text-center whitespace-nowrap"
                             } text-xs leading-5 sm:text-[13px] text-slate-200`}
                           >
-                            {value}
+                            {localize(value)}
                           </span>
                         )}
                       </td>
@@ -553,7 +555,7 @@ const ProductComparison = ({ productType }) => {
       </GlassSurface>
       {comparison.footnote && (
         <p className="mx-auto mt-4 max-w-5xl text-center text-[11px] leading-5 text-white/35 sm:text-left">
-          {comparison.footnote}
+          {localize(comparison.footnote)}
         </p>
       )}
     </section>
@@ -660,7 +662,7 @@ const EmailSecurityPricing = ({
                   className={`pricing-button-invert mt-auto w-full rounded-full px-6 py-3 text-sm font-medium text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 ${highlighted ? "bg-blue-500" : "border border-white/20 bg-white/[0.04]"}`}
                   style={{ marginTop: "2rem" }}
                 >
-                  Choose {plan.title}
+                  <HomepageText fallback="Choose" /> {plan.title}
                 </button>
               </div>
             </GlassSurface>
@@ -672,10 +674,10 @@ const EmailSecurityPricing = ({
         <div className="p-6 sm:p-8">
           <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-300">Included in every plan</p>
-              <h4 className="mt-2 text-xl font-semibold text-white">Complete protection, without security add-ons.</h4>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-300"><HomepageText fallback="Included in every plan" /></p>
+              <h4 className="mt-2 text-xl font-semibold text-white"><HomepageText fallback="Complete protection, without security add-ons." /></h4>
             </div>
-            <p className="text-xs text-white/45">Only capacity changes between plans.</p>
+            <p className="text-xs text-white/45"><HomepageText fallback="Only capacity changes between plans." /></p>
           </div>
           <ul className="grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
             {sharedFeatures.map((feature) => {
@@ -712,9 +714,9 @@ const WebSecurityPricing = ({
     <div className="mx-auto max-w-5xl">
       <div className="mb-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-2xl">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-blue-300">Web Security</p>
-          <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">One product. Full protection.</h3>
-          <p className="mt-4 text-sm leading-6 text-white/60">Your price changes with usage — not with how well we protect you.</p>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-blue-300"><HomepageText fallback="Web Security" /></p>
+          <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl"><HomepageText fallback="One product. Full protection." /></h3>
+          <p className="mt-4 text-sm leading-6 text-white/60"><HomepageText fallback="Your price changes with usage — not with how well we protect you." /></p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <BillingPill billing={billing} setBilling={setBilling} labels={billingLabels} ariaLabel="Web security billing period" />
@@ -738,30 +740,30 @@ const WebSecurityPricing = ({
             <div>
               <div className="flex items-center justify-between">
                 <span className="rounded-full border border-blue-400/25 bg-blue-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-blue-200">
-                  All-in-one Web Defense
+                  <HomepageText fallback="All-in-one Web Defense" />
                 </span>
-                <span className="text-xs text-white/45">Instant deployment</span>
+                <span className="text-xs text-white/45"><HomepageText fallback="Instant deployment" /></span>
               </div>
 
               <div className="mt-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">Full security platform</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200"><HomepageText fallback="Full security platform" /></p>
                 <div className="mt-2 flex items-baseline gap-2">
                   <span className="text-5xl sm:text-6xl font-semibold tracking-tight text-white">
                     {formatPrice(convertPrice(monthlyPrice, currency), currency)}
                   </span>
-                  <span className="text-sm text-white/50">/ month</span>
+                  <span className="text-sm text-white/50"><HomepageText fallback="/ month" /></span>
                 </div>
                 {isAnnual ? (
                   <div className="mt-3 flex flex-wrap items-center gap-2">
                     <span className="rounded-full border border-emerald-300/30 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-200">
-                      2 months free · Save $840 / year
+                      <HomepageText fallback="2 months free · Save $840 / year" />
                     </span>
                     <p className="text-xs text-white/45">
-                      Billed annually at {formatPrice(convertPrice(annualCharge, currency), currency)}
+                      <HomepageText fallback="Billed annually at" /> {formatPrice(convertPrice(annualCharge, currency), currency)}
                     </p>
                   </div>
                 ) : (
-                  <p className="mt-2 text-xs text-white/45">Billed monthly · Cancel anytime</p>
+                  <p className="mt-2 text-xs text-white/45"><HomepageText fallback="Billed monthly · Cancel anytime" /></p>
                 )}
               </div>
             </div>
@@ -771,7 +773,7 @@ const WebSecurityPricing = ({
               onClick={onOpenModal}
               className="pricing-button-invert w-full rounded-full bg-blue-500 py-3.5 px-6 font-medium text-white shadow-[0_4px_24px_rgba(59,130,246,0.35)] transition-all hover:bg-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
             >
-              Start protecting your website
+              <HomepageText fallback="Start protecting your website" />
             </button>
           </div>
 
@@ -780,42 +782,42 @@ const WebSecurityPricing = ({
             <div className="rounded-2xl border border-blue-300/20 bg-blue-500/[0.07] p-5">
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">Included every month</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200"><HomepageText fallback="Included every month" /></p>
                   <div className="mt-3 grid grid-cols-2 gap-3">
                     <div>
                       <p className="text-xl font-semibold text-white">10M</p>
-                      <p className="mt-0.5 text-xs text-white/45">legitimate requests</p>
+                      <p className="mt-0.5 text-xs text-white/45"><HomepageText fallback="legitimate requests" /></p>
                     </div>
                     <div>
                       <p className="text-xl font-semibold text-white">25 GB</p>
-                      <p className="mt-0.5 text-xs text-white/45">SIEM log storage</p>
+                      <p className="mt-0.5 text-xs text-white/45"><HomepageText fallback="SIEM log storage" /></p>
                     </div>
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">Pay as you go</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200"><HomepageText fallback="Pay as you go" /></p>
                   <div className="mt-3 grid grid-cols-2 gap-3">
                     <div>
                       <p className="text-xl font-semibold text-white">{formatPrice(convertPrice(1, currency), currency)}</p>
-                      <p className="mt-0.5 text-xs text-white/45">per extra 1M requests</p>
+                      <p className="mt-0.5 text-xs text-white/45"><HomepageText fallback="per extra 1M requests" /></p>
                     </div>
                     <div>
                       <p className="text-xl font-semibold text-white">{formatPrice(convertPrice(0.5, currency), currency)}</p>
-                      <p className="mt-0.5 text-xs text-white/45">per extra GB / month</p>
+                      <p className="mt-0.5 text-xs text-white/45"><HomepageText fallback="per extra GB / month" /></p>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="mt-4 rounded-xl border border-emerald-300/25 bg-emerald-400/[0.08] px-4 py-2.5">
-                <p className="text-xs sm:text-sm font-semibold text-emerald-200">✓ BLOCKED MALICIOUS TRAFFIC — $0.00</p>
-                <p className="mt-0.5 text-[11px] text-white/55">You pay for your legitimate users. Never your attackers.</p>
+                <p className="text-xs sm:text-sm font-semibold text-emerald-200"><HomepageText fallback="✓ BLOCKED MALICIOUS TRAFFIC — $0.00" /></p>
+                <p className="mt-0.5 text-[11px] text-white/55"><HomepageText fallback="You pay for your legitimate users. Never your attackers." /></p>
               </div>
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-4 flex items-center justify-between">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200">SIEM log retention</p>
-                <p className="mt-1 text-xs text-white/50">Control storage with flexible retention periods</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200"><HomepageText fallback="SIEM log retention" /></p>
+                <p className="mt-1 text-xs text-white/50"><HomepageText fallback="Control storage with flexible retention periods" /></p>
               </div>
               <div className="flex items-center gap-1.5 text-xs font-medium text-white/80 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
                 <span>7d</span>
@@ -830,7 +832,7 @@ const WebSecurityPricing = ({
 
         <div className="border-t border-white/10 bg-blue-500/[0.07] px-6 py-4 text-center sm:px-10">
           <p className="text-xs sm:text-sm font-semibold text-white">
-            Single predictable price · Zero request fees on blocked traffic · Full WAF, IPS, DDoS & SIEM included
+            <HomepageText fallback="Single predictable price · Zero request fees on blocked traffic · Full WAF, IPS, DDoS & SIEM included" />
           </p>
         </div>
       </GlassSurface>
@@ -849,7 +851,7 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
 
   const billingLabels = useMemo(
     () => ({
-      yearly: "Annual",
+      yearly: t("pricing.aiSoc.billing.yearly", "Annual"),
       monthly: t("pricing.aiSoc.billing.monthly", "Monthly"),
     }),
     [t]
@@ -1059,6 +1061,7 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
 
 
 const PenetrationTestingPricing = ({ onOpenModal }) => {
+  const localize = useHomepageText();
   const [billing, setBilling] = useState("monthly");
   const isAnnual = billing === "annual";
 
@@ -1070,12 +1073,12 @@ const PenetrationTestingPricing = ({ onOpenModal }) => {
   return (
     <div className="mx-auto max-w-6xl space-y-16">
       <div className="max-w-3xl">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-blue-300">Silence AI Autonomous Penetration Tester</p>
-        <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">One autonomous pentester. Everything included.</h3>
-        <p className="mt-5 max-w-2xl text-sm leading-6 text-white/60">Deep source-code analysis, SAST, DAST, API testing and business-logic security testing powered by a persistent security graph and autonomous AI agents.</p>
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-blue-300"><HomepageText fallback="Silence AI Autonomous Penetration Tester" /></p>
+        <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl"><HomepageText fallback="One autonomous pentester. Everything included." /></h3>
+        <p className="mt-5 max-w-2xl text-sm leading-6 text-white/60"><HomepageText fallback="Deep source-code analysis, SAST, DAST, API testing and business-logic security testing powered by a persistent security graph and autonomous AI agents." /></p>
         <div className="mt-5 flex flex-wrap gap-2 text-xs font-medium text-blue-100">
-          <span className="rounded-full border border-blue-300/25 bg-blue-400/10 px-3 py-1.5">No surprise AI bills</span>
-          <span className="rounded-full border border-blue-300/25 bg-blue-400/10 px-3 py-1.5">Prepaid compute</span>
+          <span className="rounded-full border border-blue-300/25 bg-blue-400/10 px-3 py-1.5"><HomepageText fallback="No surprise AI bills" /></span>
+          <span className="rounded-full border border-blue-300/25 bg-blue-400/10 px-3 py-1.5"><HomepageText fallback="Prepaid compute" /></span>
         </div>
       </div>
 
@@ -1091,51 +1094,51 @@ const PenetrationTestingPricing = ({ onOpenModal }) => {
       >
         <div className="grid gap-10 p-6 sm:p-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <div className="mb-8 flex max-w-xs items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1" role="group" aria-label="Penetration testing billing period">
+            <div className="mb-8 flex max-w-xs items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1" role="group" aria-label={localize("Penetration testing billing period")}>
               {[['monthly', 'Monthly'], ['annual', 'Annual']].map(([value, label]) => (
                 <button key={value} type="button" onClick={() => selectBilling(value)} aria-pressed={billing === value} className={`flex-1 rounded-full px-4 py-2 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 ${billing === value ? 'bg-blue-500 text-white' : 'text-white/50 hover:text-white'}`}>
-                  {label}
+                  {localize(label)}
                 </button>
               ))}
             </div>
             <div className="flex items-baseline gap-2">
               <span className="text-6xl font-semibold tracking-tight text-white">{isAnnual ? "$9,900" : "$990"}</span>
-              <span className="text-sm text-white/50">/ {isAnnual ? "year" : "month"}</span>
+              <span className="text-sm text-white/50">/ {localize(isAnnual ? "year" : "month")}</span>
             </div>
             {isAnnual ? (
               <>
-                <p className="mt-3 text-sm font-medium text-blue-200">$825/month — billed annually</p>
-                <span className="mt-3 inline-flex rounded-full border border-blue-300/30 bg-blue-400/10 px-3 py-1 text-xs font-semibold text-blue-200">Save $1,980</span>
-                <p className="mt-4 text-sm text-white/60">1.2B Pentest Compute Tokens per year, provisioned as 100M included tokens every month.</p>
+                <p className="mt-3 text-sm font-medium text-blue-200"><HomepageText fallback="$825/month — billed annually" /></p>
+                <span className="mt-3 inline-flex rounded-full border border-blue-300/30 bg-blue-400/10 px-3 py-1 text-xs font-semibold text-blue-200"><HomepageText fallback="Save $1,980" /></span>
+                <p className="mt-4 text-sm text-white/60"><HomepageText fallback="1.2B Pentest Compute Tokens per year, provisioned as 100M included tokens every month." /></p>
               </>
             ) : (
-              <p className="mt-4 text-sm text-white/60">100M Pentest Compute Tokens included every month.</p>
+              <p className="mt-4 text-sm text-white/60"><HomepageText fallback="100M Pentest Compute Tokens included every month." /></p>
             )}
             <div className="mt-6 border-t border-white/10 pt-5">
-              <p className="text-lg font-semibold text-white">$5 / 1M Pentest Compute Tokens</p>
-              <p className="mt-2 text-xs leading-5 text-white/45">AI compute included. Additional compute is prepaid — you always know the maximum cost before a pentest starts.</p>
+              <p className="text-lg font-semibold text-white"><HomepageText fallback="$5 / 1M Pentest Compute Tokens" /></p>
+              <p className="mt-2 text-xs leading-5 text-white/45"><HomepageText fallback="AI compute included. Additional compute is prepaid — you always know the maximum cost before a pentest starts." /></p>
             </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-              <button type="button" onClick={() => { trackPricingEvent("penetration_testing_start_clicked"); onOpenModal?.(); }} className="pricing-button-invert rounded-full bg-[#3B82F6] px-6 py-3 font-medium text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60">Start Penetration Testing</button>
-              <button type="button" onClick={() => { trackPricingEvent("penetration_testing_contact_sales_clicked"); onOpenModal?.(); }} className="rounded-full border border-white/20 px-6 py-3 font-medium text-white/80 transition hover:border-white/50 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">Contact Sales</button>
+              <button type="button" onClick={() => { trackPricingEvent("penetration_testing_start_clicked"); onOpenModal?.(); }} className="pricing-button-invert rounded-full bg-[#3B82F6] px-6 py-3 font-medium text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"><HomepageText fallback="Start Penetration Testing" /></button>
+              <button type="button" onClick={() => { trackPricingEvent("penetration_testing_contact_sales_clicked"); onOpenModal?.(); }} className="rounded-full border border-white/20 px-6 py-3 font-medium text-white/80 transition hover:border-white/50 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"><HomepageText fallback="Contact Sales" /></button>
             </div>
           </div>
           <div>
-            <h4 className="mb-5 text-lg font-semibold text-white">Everything included with one complete product</h4>
+            <h4 className="mb-5 text-lg font-semibold text-white"><HomepageText fallback="Everything included with one complete product" /></h4>
             <ul className="grid gap-x-6 gap-y-3 sm:grid-cols-2">
-              {PENTEST_FEATURES.map((feature) => <li key={feature} className="flex gap-2 text-sm leading-5 text-white/70"><span className="text-blue-300" aria-hidden="true">✓</span><span>{feature}</span></li>)}
+              {PENTEST_FEATURES.map((feature) => <li key={feature} className="flex gap-2 text-sm leading-5 text-white/70"><span className="text-blue-300" aria-hidden="true">✓</span><span><HomepageText fallback={feature} /></span></li>)}
             </ul>
           </div>
         </div>
-        <div className="border-t border-white/10 bg-blue-500/[0.07] px-6 py-5 text-center sm:px-10"><p className="text-sm font-semibold text-white">No feature tiers. No paid testing add-ons. Only AI compute scales with usage.</p></div>
+        <div className="border-t border-white/10 bg-blue-500/[0.07] px-6 py-5 text-center sm:px-10"><p className="text-sm font-semibold text-white"><HomepageText fallback="No feature tiers. No paid testing add-ons. Only AI compute scales with usage." /></p></div>
       </GlassSurface>
 
       <section aria-labelledby="pentest-compute-title">
-        <div className="mb-8 max-w-2xl"><p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300">How compute billing works</p><h4 id="pentest-compute-title" className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Pay only for the compute you use.</h4><p className="mt-4 text-sm leading-6 text-white/60">Large autonomous penetration tests require different amounts of reasoning. Your project is graphed and estimated before expensive AI testing begins.</p></div>
+        <div className="mb-8 max-w-2xl"><p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue-300"><HomepageText fallback="How compute billing works" /></p><h4 id="pentest-compute-title" className="text-3xl font-semibold tracking-tight text-white sm:text-4xl"><HomepageText fallback="Pay only for the compute you use." /></h4><p className="mt-4 text-sm leading-6 text-white/60"><HomepageText fallback="Large autonomous penetration tests require different amounts of reasoning. Your project is graphed and estimated before expensive AI testing begins." /></p></div>
         <div className="grid gap-3 md:grid-cols-5">
           {[['1', 'Upload Project', 'Submit the application source code as a .zip project.'], ['2', 'Build Security Graph', 'Create a Graphify-powered code and security graph.'], ['3', 'Estimate Pentest', 'Use source tokens, graph complexity, services, endpoints and expected investigation workload.'], ['4', 'Approve Maximum Cost', 'Review estimated compute, included balance, additional tokens and maximum cost.'], ['5', 'Run Autonomous Pentest', 'K2.7 / K3 inference starts only after sufficient balance is reserved.']].map(([step, title, copy]) => <div key={step} className="relative rounded-2xl border border-white/10 bg-white/[0.035] p-4"><span className="text-xs font-semibold text-blue-300">{step}</span><h5 className="mt-3 text-sm font-semibold text-white">{title}</h5><p className="mt-2 text-xs leading-5 text-white/50">{copy}</p></div>)}
         </div>
-        <div className="mt-5 rounded-2xl border border-blue-300/20 bg-blue-500/[0.07] p-5"><p className="text-sm font-semibold text-white">Your pentest can never exceed the approved compute budget without your authorization.</p><p className="mt-2 text-xs leading-5 text-white/50">No negative balances. No surprise overage invoices. Unused purchased compute remains available for future assessments; included monthly compute refreshes each billing cycle.</p></div>
+        <div className="mt-5 rounded-2xl border border-blue-300/20 bg-blue-500/[0.07] p-5"><p className="text-sm font-semibold text-white"><HomepageText fallback="Your pentest can never exceed the approved compute budget without your authorization." /></p><p className="mt-2 text-xs leading-5 text-white/50"><HomepageText fallback="No negative balances. No surprise overage invoices. Unused purchased compute remains available for future assessments; included monthly compute refreshes each billing cycle." /></p></div>
         <div className="mt-6 rounded-2xl border border-white/10 bg-black/20 p-5 sm:p-6">
           <div className="flex flex-wrap items-end justify-between gap-5">
             <div>
@@ -1148,21 +1151,21 @@ const PenetrationTestingPricing = ({ onOpenModal }) => {
                   className="h-5.5 w-5.5 shrink-0 object-contain aspect-square"
                   loading="lazy"
                 />
-                <p className="text-sm font-semibold text-white">Example enterprise application (Notion-class)</p>
+                <p className="text-sm font-semibold text-white"><HomepageText fallback="Example enterprise application (Notion-class)" /></p>
               </div>
-              <p className="mt-3 text-xs text-white/50">Source code: <strong className="text-white/80">~2M lines of code · 8.4M source tokens</strong></p>
-              <p className="mt-1 text-xs text-white/50">Security graph: <strong className="text-white/80">High complexity</strong></p>
+              <p className="mt-3 text-xs text-white/50"><HomepageText fallback="Source code:" /> <strong className="text-white/80"><HomepageText fallback="~2M lines of code · 8.4M source tokens" /></strong></p>
+              <p className="mt-1 text-xs text-white/50"><HomepageText fallback="Security graph:" /> <strong className="text-white/80"><HomepageText fallback="High complexity" /></strong></p>
             </div>
             <div>
-              <p className="text-xs text-white/50">Estimated Pentest Compute</p>
-              <p className="mt-1 text-2xl font-semibold text-blue-200">140M–190M tokens</p>
+              <p className="text-xs text-white/50"><HomepageText fallback="Estimated Pentest Compute" /></p>
+              <p className="mt-1 text-2xl font-semibold text-blue-200"><HomepageText fallback="140M–190M tokens" /></p>
             </div>
             <div>
-              <p className="text-xs text-white/50">Included / maximum additional</p>
-              <p className="mt-1 text-sm font-semibold text-white">100M / 90M tokens · <span className="text-blue-200">$450 maximum</span></p>
+              <p className="text-xs text-white/50"><HomepageText fallback="Included / maximum additional" /></p>
+              <p className="mt-1 text-sm font-semibold text-white"><HomepageText fallback="100M / 90M tokens ·" /> <span className="text-blue-200"><HomepageText fallback="$450 maximum" /></span></p>
             </div>
           </div>
-          <p className="mt-5 text-[11px] leading-5 text-white/35">Illustrative example. Actual compute requirements are calculated from your project before testing begins.</p>
+          <p className="mt-5 text-[11px] leading-5 text-white/35"><HomepageText fallback="Illustrative example. Actual compute requirements are calculated from your project before testing begins." /></p>
         </div>
       </section>
     </div>
@@ -1170,15 +1173,16 @@ const PenetrationTestingPricing = ({ onOpenModal }) => {
 };
 
 const ServerSecurityPricing = ({ billing, setBilling, onOpenModal }) => {
+  const localize = useHomepageText();
   const isAnnual = billing === "yearly";
   const price = isAnnual ? SERVER_SECURITY_PRICING.annual : SERVER_SECURITY_PRICING.monthly;
 
   return (
     <div className="mx-auto w-full max-w-6xl">
       <div className="mb-8 text-center">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-blue-300">Server Security</p>
-        <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Complete Protection</h3>
-        <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-white/60">Maximum available protection. No security feature gates.</p>
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-blue-300"><HomepageText fallback="Server Security" /></p>
+        <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl"><HomepageText fallback="Complete Protection" /></h3>
+        <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-white/60"><HomepageText fallback="Maximum available protection. No security feature gates." /></p>
       </div>
 
       <GlassSurface
@@ -1193,7 +1197,7 @@ const ServerSecurityPricing = ({ billing, setBilling, onOpenModal }) => {
       >
         <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[minmax(230px,0.72fr)_1.28fr] lg:p-10">
           <div className="flex flex-col">
-            <div className="mb-6 flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] p-1" role="group" aria-label="Billing period">
+            <div className="mb-6 flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] p-1" role="group" aria-label={localize("Billing period")}>
               {[['yearly', 'Annual'], ['monthly', 'Monthly']].map(([value, label]) => (
                 <button
                   key={value}
@@ -1202,18 +1206,18 @@ const ServerSecurityPricing = ({ billing, setBilling, onOpenModal }) => {
                   aria-pressed={billing === value}
                   className={`flex-1 rounded-full px-3 py-2 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 ${billing === value ? 'bg-blue-500 text-white' : 'text-white/50 hover:text-white'}`}
                 >
-                  {label}
+                  {localize(label)}
                 </button>
               ))}
             </div>
             <div className="flex items-end gap-2">
               <span className="text-6xl font-semibold tracking-tight text-white">${price}</span>
-              <span className="pb-2 text-sm text-white/50">/ protected server / {isAnnual ? 'year' : 'month'}</span>
+              <span className="pb-2 text-sm text-white/50"><HomepageText fallback="/ protected server /" /> {localize(isAnnual ? "year" : "month")}</span>
             </div>
             {isAnnual && (
               <>
-                <span className="mt-3 w-fit rounded-full border border-blue-300/30 bg-blue-400/10 px-3 py-1 text-xs font-semibold text-blue-200">{SERVER_SECURITY_PRICING.annualBadge}</span>
-                <p className="mt-2 text-xs text-white/45">$290 billed annually · equivalent to less than $25/server/month</p>
+                <span className="mt-3 w-fit rounded-full border border-blue-300/30 bg-blue-400/10 px-3 py-1 text-xs font-semibold text-blue-200"><HomepageText fallback={SERVER_SECURITY_PRICING.annualBadge} /></span>
+                <p className="mt-2 text-xs text-white/45"><HomepageText fallback="$290 billed annually · equivalent to less than $25/server/month" /></p>
               </>
             )}
             <button
@@ -1221,21 +1225,21 @@ const ServerSecurityPricing = ({ billing, setBilling, onOpenModal }) => {
               onClick={onOpenModal}
               className="pricing-button-invert mt-8 rounded-full bg-[#3B82F6] px-6 py-3 font-medium text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
             >
-              Start protecting servers
+              <HomepageText fallback="Start protecting servers" />
             </button>
-            <p className="mt-5 text-xs leading-5 text-white/45"><strong className="font-medium text-white/70">Protected server:</strong> a physical server, virtual machine, cloud instance, or Kubernetes worker node running Silence AI Guard. Containers running on a protected node are included.</p>
-            <p className="mt-2 text-xs font-medium text-blue-200/80">Unlimited administrators. No per-user pricing.</p>
+            <p className="mt-5 text-xs leading-5 text-white/45"><strong className="font-medium text-white/70"><HomepageText fallback="Protected server:" /></strong> <HomepageText fallback="a physical server, virtual machine, cloud instance, or Kubernetes worker node running Silence AI Guard. Containers running on a protected node are included." /></p>
+            <p className="mt-2 text-xs font-medium text-blue-200/80"><HomepageText fallback="Unlimited administrators. No per-user pricing." /></p>
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2">
             {SERVER_SECURITY_GROUPS.map((group) => (
               <div key={group.title} className="rounded-2xl border border-white/10 bg-white/[0.035] p-5">
-                <h4 className="mb-4 text-sm font-semibold text-white">{group.title}</h4>
+                <h4 className="mb-4 text-sm font-semibold text-white"><HomepageText fallback={group.title} /></h4>
                 <ul className="space-y-2.5">
                   {group.features.map((feature) => (
                     <li key={feature} className="flex gap-2 text-xs leading-5 text-white/70">
                       <span className="mt-0.5 text-blue-300" aria-hidden="true">✓</span>
-                      <span>{feature}</span>
+                      <span><HomepageText fallback={feature} /></span>
                     </li>
                   ))}
                 </ul>
@@ -1244,8 +1248,8 @@ const ServerSecurityPricing = ({ billing, setBilling, onOpenModal }) => {
           </div>
         </div>
         <div className="border-t border-white/10 bg-blue-500/[0.07] px-6 py-5 text-center sm:px-8">
-          <p className="text-lg font-semibold text-white">Everything above is included.</p>
-          <p className="mx-auto mt-1 max-w-3xl text-xs leading-5 text-white/50">No paid security add-ons. No per-admin charges. No artificial limits on detections, blocked attacks, security rules, or remediations.</p>
+          <p className="text-lg font-semibold text-white"><HomepageText fallback="Everything above is included." /></p>
+          <p className="mx-auto mt-1 max-w-3xl text-xs leading-5 text-white/50"><HomepageText fallback="No paid security add-ons. No per-admin charges. No artificial limits on detections, blocked attacks, security rules, or remediations." /></p>
         </div>
       </GlassSurface>
     </div>
@@ -1259,10 +1263,11 @@ const SERVER_COMPARISON_STATUS = {
 };
 
 const ServerComparisonValue = ({ value, highlighted = false }) => {
+  const localize = useHomepageText();
   if (Array.isArray(value)) {
     return (
       <span className={`flex flex-col gap-1 text-[11px] leading-4 sm:text-xs ${highlighted ? "font-semibold text-emerald-100" : "text-white/65"}`}>
-        {value.map((line) => <span key={line}>{line}</span>)}
+        {value.map((line) => <span key={line}><HomepageText fallback={line} /></span>)}
       </span>
     );
   }
@@ -1271,8 +1276,8 @@ const ServerComparisonValue = ({ value, highlighted = false }) => {
   return (
     <span
       className={`inline-flex min-h-10 min-w-10 items-center justify-center rounded-full text-3xl font-semibold leading-none ${display.className} ${value.tooltip ? "cursor-help focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/70" : ""}`}
-      aria-label={value.tooltip ? `${display.label}. ${value.tooltip}` : display.label}
-      title={value.tooltip}
+      aria-label={value.tooltip ? `${localize(display.label)}. ${localize(value.tooltip)}` : localize(display.label)}
+      title={value.tooltip ? localize(value.tooltip) : undefined}
       tabIndex={value.tooltip ? 0 : undefined}
     >
       <span aria-hidden="true">{display.symbol}</span>
@@ -1280,24 +1285,26 @@ const ServerComparisonValue = ({ value, highlighted = false }) => {
   );
 };
 
-const ServerSecurityComparison = () => (
+const ServerSecurityComparison = () => {
+  const localize = useHomepageText();
+  return (
   <section className="mx-auto mt-16 w-full max-w-6xl" aria-labelledby="server-security-comparison-title">
     <div className="mb-8 text-center">
-      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300">Competitive advantages</p>
-      <h3 id="server-security-comparison-title" className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Silence AI vs Traditional Server Security</h3>
-      <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-white/60">Access control, threat detection and automated response — in one server security platform.</p>
-      <p className="mt-3 text-xs font-medium text-sky-200/70 sm:hidden">Swipe or drag horizontally to compare every option <span aria-hidden="true">→</span></p>
+      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300"><HomepageText fallback="Competitive advantages" /></p>
+      <h3 id="server-security-comparison-title" className="text-3xl font-semibold tracking-tight text-white sm:text-4xl"><HomepageText fallback="Silence AI vs Traditional Server Security" /></h3>
+      <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-white/60"><HomepageText fallback="Access control, threat detection and automated response — in one server security platform." /></p>
+      <p className="mt-3 text-xs font-medium text-sky-200/70 sm:hidden"><HomepageText fallback="Swipe or drag horizontally to compare every option" /> <span aria-hidden="true">→</span></p>
     </div>
     <GlassSurface width="100%" height="auto" borderRadius={24} backgroundOpacity={0.08} saturation={1.55} blur={14} displace={0.35} className="pricing-comparison-surface overflow-hidden rounded-3xl">
-      <div className="pricing-table-scroll w-full overflow-x-auto" tabIndex="0" role="region" aria-label="Server security competitor comparison. Scroll horizontally to view all vendors.">
+      <div className="pricing-table-scroll w-full overflow-x-auto" tabIndex="0" role="region" aria-label={localize("Server security competitor comparison. Scroll horizontally to view all vendors.")}>
         <table className="server-security-comparison-table w-full min-w-[980px] table-fixed border-collapse text-left text-[11px] sm:text-xs">
         <thead>
           <tr className="border-b border-emerald-100/10 text-white/55">
-            <th scope="col" className="sticky left-0 z-20 w-[240px] min-w-[220px] bg-slate-950/95 px-3 py-5 text-left font-semibold text-white/80 sm:px-5">Features</th>
+            <th scope="col" className="sticky left-0 z-20 w-[240px] min-w-[220px] bg-slate-950/95 px-3 py-5 text-left font-semibold text-white/80 sm:px-5"><HomepageText fallback="Features" /></th>
             {SERVER_SECURITY_COLUMNS.map((column, index) => (
               <th key={column.key} scope="col" className={`w-[148px] min-w-[140px] border-l border-white/[0.07] px-2 py-5 text-center font-semibold ${index === 0 ? "bg-emerald-500/[0.16] text-emerald-100 shadow-[inset_0_0_36px_rgba(16,185,129,0.08)]" : "text-white/60"}`}>
                 <span className="block break-words">{column.label}</span>
-                {index === 0 && <span className="mx-auto mt-2 block w-fit rounded-full border border-emerald-300/20 bg-emerald-400/10 px-2 py-1 text-[9px] uppercase tracking-[0.14em] text-emerald-200">All-in-one</span>}
+                {index === 0 && <span className="mx-auto mt-2 block w-fit rounded-full border border-emerald-300/20 bg-emerald-400/10 px-2 py-1 text-[9px] uppercase tracking-[0.14em] text-emerald-200"><HomepageText fallback="All-in-one" /></span>}
               </th>
             ))}
           </tr>
@@ -1305,7 +1312,7 @@ const ServerSecurityComparison = () => (
         <tbody>
           {SERVER_SECURITY_COMPARISON.map((row) => (
             <tr key={row.capability} className={`border-b border-white/[0.07] last:border-0 ${row.pricing ? "bg-white/[0.025]" : ""}`}>
-              <th scope="row" className={`sticky left-0 z-10 bg-slate-950/95 px-3 py-5 text-left font-medium leading-5 text-white/85 sm:px-5 ${row.pricing ? "text-emerald-100" : ""}`}>{row.capability}</th>
+              <th scope="row" className={`sticky left-0 z-10 bg-slate-950/95 px-3 py-5 text-left font-medium leading-5 text-white/85 sm:px-5 ${row.pricing ? "text-emerald-100" : ""}`}><HomepageText fallback={row.capability} /></th>
               {SERVER_SECURITY_COLUMNS.map((column, index) => (
                 <td key={`${row.capability}-${column.key}`} className={`border-l border-white/[0.07] px-4 py-4 text-center align-middle ${index === 0 ? "bg-emerald-500/[0.12] shadow-[inset_0_0_34px_rgba(16,185,129,0.06)]" : "bg-white/[0.015]"}`}>
                   <ServerComparisonValue value={row[column.key]} highlighted={index === 0} />
@@ -1317,14 +1324,15 @@ const ServerSecurityComparison = () => (
         </table>
       </div>
     </GlassSurface>
-    <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] text-white/45" aria-label="Comparison legend">
-      <span><strong className="mr-1 text-base font-semibold text-emerald-400">+</strong> Built in</span>
-      <span><strong className="mr-1 text-base font-semibold text-amber-300">◐</strong> Partial / additional configuration</span>
-      <span><strong className="mr-1 text-base font-semibold text-rose-400">–</strong> Not a primary native capability</span>
+    <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] text-white/45" aria-label={localize("Comparison legend")}>
+      <span><strong className="mr-1 text-base font-semibold text-emerald-400">+</strong> <HomepageText fallback="Built in" /></span>
+      <span><strong className="mr-1 text-base font-semibold text-amber-300">◐</strong> <HomepageText fallback="Partial / additional configuration" /></span>
+      <span><strong className="mr-1 text-base font-semibold text-rose-400">–</strong> <HomepageText fallback="Not a primary native capability" /></span>
     </div>
-    <p className="mt-3 text-center text-[11px] leading-5 text-white/35">Published pricing models differ by server, host, cloud plan, agent capacity, or user. Pricing may change; competitor pricing checked September 2026.</p>
+    <p className="mt-3 text-center text-[11px] leading-5 text-white/35"><HomepageText fallback="Published pricing models differ by server, host, cloud plan, agent capacity, or user. Pricing may change; competitor pricing checked September 2026." /></p>
   </section>
-);
+  );
+};
 
 
 export default Pricing;

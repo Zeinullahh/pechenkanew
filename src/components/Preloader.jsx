@@ -1,6 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+
+const loadingLabels = {
+  en: "Loading experience…",
+  ar: "جارٍ تحميل الموقع…",
+  de: "Website wird geladen…",
+  fr: "Chargement du site…",
+  ja: "サイトを読み込み中…",
+  ko: "사이트를 불러오는 중…",
+  ru: "Загрузка сайта…",
+  tr: "Site yükleniyor…",
+  zh: "正在加载网站…",
+};
 
 const MIN_DISPLAY_MS = 3400;
 const HARD_TIMEOUT_MS = 20000;
@@ -23,6 +36,7 @@ const preloaderStyles = `
 `;
 
 export default function Preloader() {
+  const locale = usePathname()?.split("/")[1];
   const [phase, setPhase] = useState("visible");
   const [progress, setProgress] = useState(0);
   const [isActive, setIsActive] = useState(false);
@@ -142,7 +156,7 @@ export default function Preloader() {
         <p className="mt-3 font-mono text-[11px] tracking-[0.3em] text-white/40">
           {progress}%
         </p>
-        <span className="sr-only">Loading experience…</span>
+        <span className="sr-only">{loadingLabels[locale] || loadingLabels.en}</span>
       </div>
     </div>
   );

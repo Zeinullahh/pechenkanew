@@ -1,4 +1,5 @@
 "use client";
+import HomepageText from "@/components/HomepageText";
 
 import React, { useState, useMemo, useRef, useEffect } from "react";
 import {
@@ -351,9 +352,9 @@ export function ServerLoadChart({
               <SelectValue placeholder="Select type" />
             </SelectTrigger>
             <SelectContent className="border-zinc-800 bg-zinc-900 text-white">
-              <SelectItem value="bandwidth">Bandwidth</SelectItem>
-              <SelectItem value="ips">Number of IPs</SelectItem>
-              <SelectItem value="rps">RPS</SelectItem>
+              <SelectItem value="bandwidth"><HomepageText fallback="Bandwidth" /></SelectItem>
+              <SelectItem value="ips"><HomepageText fallback="Number of IPs" /></SelectItem>
+              <SelectItem value="rps"><HomepageText fallback="RPS" /></SelectItem>
             </SelectContent>
           </Select>
           <CardDescription className="text-zinc-300">
@@ -364,7 +365,7 @@ export function ServerLoadChart({
               : "Requests per second (RPS)"}
           </CardDescription>
           <span className="rounded-full border border-white/40 bg-white/10 px-3 py-1 text-xs font-medium text-white">
-            Selected: {activeRange}
+            <HomepageText fallback="Selected:" /> {activeRange}
           </span>
         </div>
         <div className="flex flex-wrap gap-2 pt-2">
@@ -527,23 +528,23 @@ export function ServerLoadChart({
                 {selectedMetrics.startTime} - {selectedMetrics.endTime}
               </div>
               <div className="grid grid-cols-2 gap-x-3 gap-y-1">
-                <div className="text-zinc-400">Points</div>
+                <div className="text-zinc-400"><HomepageText fallback="Points" /></div>
                 <div className="font-semibold text-right">{selectedMetrics.points}</div>
-                <div className="text-zinc-400">Total</div>
+                <div className="text-zinc-400"><HomepageText fallback="Total" /></div>
                 <div className="font-semibold text-right">
                   {selectedMetrics.total.toFixed(2)} {currentUnit}
                 </div>
-                <div className="text-zinc-400">Average</div>
+                <div className="text-zinc-400"><HomepageText fallback="Average" /></div>
                 <div className="font-semibold text-right">
                   {selectedMetrics.average.toFixed(2)} {currentUnit}
                 </div>
-                <div className="text-zinc-400">Range share</div>
+                <div className="text-zinc-400"><HomepageText fallback="Range share" /></div>
                 <div className="font-semibold text-right">
                   {selectedMetrics.sharePercent.toFixed(2)}%
                 </div>
               </div>
               <div className="mt-2 flex items-center justify-between">
-                <span className="text-zinc-400">Peak move</span>
+                <span className="text-zinc-400"><HomepageText fallback="Peak move" /></span>
                 <div
                   className={`flex items-center gap-1 font-semibold ${
                     selectedMetrics.isGrowth ? "text-teal-500" : "text-red-500"
@@ -572,7 +573,7 @@ export function ServerLoadChart({
                 setSelectedAnchorIndices(null);
               }}
             >
-              Reset selection
+              <HomepageText fallback="Reset selection" />
             </Button>
           </div>
         )}
@@ -658,7 +659,7 @@ export function TopCountriesBox({ allCountriesData = [], metric, title }) {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead className="text-white/60">Country</TableHead>
+                <TableHead className="text-white/60"><HomepageText fallback="Country" /></TableHead>
                 <TableHead className="text-white/60">{metricLabelMap[metric] || metric}</TableHead>
               </TableRow>
             </TableHeader>
@@ -691,7 +692,7 @@ export function TopCountriesBox({ allCountriesData = [], metric, title }) {
                 })
               ) : (
                 <TableRow>
-                  <TableCell>No data</TableCell>
+                  <TableCell><HomepageText fallback="No data" /></TableCell>
                 </TableRow>
               )}
             </TableBody>

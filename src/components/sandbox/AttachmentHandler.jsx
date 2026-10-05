@@ -1,4 +1,5 @@
 "use client";
+import HomepageText, { useHomepageText } from "@/components/HomepageText";
 
 import { useState } from "react";
 import {
@@ -50,6 +51,7 @@ function download(attachment) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 export default function AttachmentHandler({ attachments = [] }) {
+  const localize = useHomepageText();
   const [expanded, setExpanded] = useState(true);
   const [details, setDetails] = useState({});
   const [preview, setPreview] = useState(null);
@@ -65,7 +67,7 @@ export default function AttachmentHandler({ attachments = [] }) {
         <span className="attachments-title">
           {expanded ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
           <Paperclip size={16} />
-          Attachments ({attachments.length})
+          <HomepageText fallback="Attachments (" />{attachments.length})
         </span>
       </button>
       {expanded && (
@@ -83,11 +85,11 @@ export default function AttachmentHandler({ attachments = [] }) {
                 </div>
                 <div className="attachment-info">
                   <div className="attachment-name">
-                    {att?.name || "Unnamed attachment"}
+                    {att?.name || localize("Unnamed attachment")}
                   </div>
                   <div className="attachment-details">
                     <span className="attachment-size">
-                      {att?.size || "Size unavailable"}
+                      {att?.size || localize("Size unavailable")}
                     </span>
                     <span
                       className={`security-badge ${malicious ? "blocked" : "safe"}`}
@@ -97,7 +99,7 @@ export default function AttachmentHandler({ attachments = [] }) {
                       ) : (
                         <ShieldCheck size={12} />
                       )}
-                      {malicious ? "Download blocked" : "Clean"}
+                      {localize(malicious ? "Download blocked" : "Clean")}
                     </span>
                     <button
                       type="button"
@@ -107,19 +109,19 @@ export default function AttachmentHandler({ attachments = [] }) {
                         setDetails({ ...details, [i]: !details[i] })
                       }
                     >
-                      {details[i] ? "Hide details" : "Show details"}
+                      {localize(details[i] ? "Hide details" : "Show details")}
                     </button>
                   </div>
                   {details[i] && (
                     <div className="attachment-scan-details">
                       <p>
-                        VirusTotal:{" "}
-                        {att?.virusTotalVerdict || "No scan result available"}
+                        <HomepageText fallback="VirusTotal:" />{" "}
+                        {localize(att?.virusTotalVerdict || "No scan result available")}
                       </p>
                       <div className="attachment-hash">
-                        <span className="attachment-hash-label">SHA-256</span>
+                        <span className="attachment-hash-label"><HomepageText fallback="SHA-256" /></span>
                         <span className="attachment-hash-value" title={hash}>
-                          {hash || "Not available"}
+                          {hash || localize("Not available")}
                         </span>
                       </div>
                     </div>
@@ -132,8 +134,8 @@ export default function AttachmentHandler({ attachments = [] }) {
                     disabled={malicious}
                     aria-label={
                       malicious
-                        ? "Download blocked: malware detected"
-                        : `Download ${att?.name}`
+                        ? localize("Download blocked: malware detected")
+                        : `${localize("Download")} ${att?.name}`
                     }
                     onClick={() => download(att)}
                   >
@@ -142,7 +144,7 @@ export default function AttachmentHandler({ attachments = [] }) {
                   <button
                     type="button"
                     className="sb-icon"
-                    aria-label={`Preview ${att?.name}`}
+                    aria-label={`${localize("Preview")} ${att?.name}`}
                     onClick={() => setPreview(att)}
                   >
                     <Eye size={18} />
@@ -155,39 +157,37 @@ export default function AttachmentHandler({ attachments = [] }) {
       )}
       {preview && (
         <SandboxModal
-          title={preview?.name || "Attachment preview"}
+          title={preview?.name || localize("Attachment preview")}
           onClose={() => setPreview(null)}
           wide
         >
           {preview?.isMalicious ? (
             <div className="sb-form">
-              <h4>Attachment isolated</h4>
-              <p>{preview?.virusTotalVerdict}</p>
+              <h4><HomepageText fallback="Attachment isolated" /></h4>
+              <p>{localize(preview?.virusTotalVerdict)}</p>
               <p>
-                The macro payload is blocked. Only its scan report is available.
+                <HomepageText fallback="The macro payload is blocked. Only its scan report is available." />
               </p>
             </div>
           ) : (
             <div className="sb-document-preview">
-              <span>SILENCE AI / ENTERPRISE</span>
-              <h2>Service Level Agreement</h2>
-              <p>Q4 2026 · FinTech Partners International</p>
+              <span><HomepageText fallback="SILENCE AI / ENTERPRISE" /></span>
+              <h2><HomepageText fallback="Service Level Agreement" /></h2>
+              <p><HomepageText fallback="Q4 2026 · FinTech Partners International" /></p>
               <hr />
-              <h4>Dedicated enterprise node</h4>
+              <h4><HomepageText fallback="Dedicated enterprise node" /></h4>
               <p>
-                This demonstration agreement covers the dedicated staging node,
-                email security integration, and technical handoff described in
-                Sarah Jenkins’s message.
+                <HomepageText fallback="This demonstration agreement covers the dedicated staging node, email security integration, and technical handoff described in Sarah Jenkins’s message." />
               </p>
-              <h4>Deployment schedule</h4>
-              <p>Staging handoff: Tuesday. Review contact: Sarah Jenkins.</p>
+              <h4><HomepageText fallback="Deployment schedule" /></h4>
+              <p><HomepageText fallback="Staging handoff: Tuesday. Review contact: Sarah Jenkins." /></p>
               <button
                 type="button"
                 className="sb-primary"
                 onClick={() => download(preview)}
               >
                 <Download size={16} />
-                Download PDF
+                <HomepageText fallback="Download PDF" />
               </button>
             </div>
           )}

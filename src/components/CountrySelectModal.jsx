@@ -48,10 +48,14 @@ const CountrySelectModal = ({ isOpen, onClose }) => {
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [showComingSoon, setShowComingSoon] = useState(false);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const countryNames = new Intl.DisplayNames([language], { type: "region" });
+  const countryLabel = (country) => country.code === "OTHER"
+    ? t("homepageControls.otherCountry", "Other")
+    : countryNames.of(country.code);
 
   const filteredCountries = countries.filter((country) =>
-    country.name.toLowerCase().includes(searchQuery.toLowerCase())
+    countryLabel(country).toLocaleLowerCase(language).includes(searchQuery.toLocaleLowerCase(language))
   );
 
   const handleContinue = () => {
@@ -101,7 +105,7 @@ const CountrySelectModal = ({ isOpen, onClose }) => {
             <button
               onClick={handleClose}
               className="absolute right-4 top-4 p-1 text-gray-400 hover:text-white transition-colors"
-              aria-label="Close"
+              aria-label={t("homepageControls.close", "Close")}
             >
               <svg
                 className="h-5 w-5"
@@ -236,7 +240,7 @@ const CountrySelectModal = ({ isOpen, onClose }) => {
                           }`}
                         >
                           <FlagIcon code={country.code} className="w-6 h-4" />
-                          <span className="text-sm font-medium">{country.name}</span>
+                          <span className="text-sm font-medium">{countryLabel(country)}</span>
                           {selectedCountry === country.code && (
                             <svg
                               className="ml-auto h-4 w-4"

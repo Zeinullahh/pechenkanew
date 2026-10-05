@@ -1,4 +1,6 @@
 "use client";
+import HomepageText, { useHomepageText } from "@/components/HomepageText";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 import { useEffect, useId, useRef, useState } from "react";
 import {
@@ -27,6 +29,8 @@ const TIMEFRAMES = [
 const shortName = (name) => (name.length > 8 ? `${name.slice(0, 6)}...` : name);
 
 export default function CmcView({ state, dispatch }) {
+  const localize = useHomepageText();
+  const { t: translate } = useLanguage();
   const [direction, setDirection] = useState("incoming");
   const [modal, setModal] = useState(null);
   const [showThreats, setShowThreats] = useState(false);
@@ -102,22 +106,22 @@ export default function CmcView({ state, dispatch }) {
   const closeModal = () => setModal(null);
 
   return (
-    <div className="cmc-shell" role="region" aria-label="AI-CSD Admin Console">
+    <div className="cmc-shell" role="region" aria-label={localize("AI-CSD Admin Console")}>
       <header className="cmc-header">
         <button
           type="button"
           className="cmc-menu"
-          aria-label="Settings Menu"
+          aria-label={localize("Settings Menu")}
           onClick={() => setModal("settings")}
         >
           <Menu size={30} strokeWidth={2} />
         </button>
-        <nav aria-label="CMC navigation">
+        <nav aria-label={localize("CMC navigation")}>
           <button type="button" onClick={() => setModal("instructions")}>
-            Instructions
+            <HomepageText fallback="Instructions" />
           </button>
           <button type="button" onClick={() => setModal("web")}>
-            Web Security
+            <HomepageText fallback="Web Security" />
           </button>
           <button
             type="button"
@@ -127,7 +131,7 @@ export default function CmcView({ state, dispatch }) {
               setModal(null);
             }}
           >
-            Email Security
+            <HomepageText fallback="Email Security" />
           </button>
         </nav>
         <button
@@ -135,17 +139,17 @@ export default function CmcView({ state, dispatch }) {
           className="cmc-profile"
           onClick={() => setModal("profile")}
         >
-          <span>J</span> jmqst011
+          <span>J</span> <HomepageText fallback="jmqst011" />
         </button>
       </header>
       <div className="cmc-subbar">
-        <div className="cmc-branding-badge" title="silenceai.net · Active Company Domain">
+        <div className="cmc-branding-badge" title={localize("silenceai.net · Active Company Domain")}>
           <div className="cmc-branding-logo">
             <span>EV</span>
           </div>
           <div className="cmc-branding-info">
-            <span className="cmc-branding-name">silenceai.net</span>
-            <span className="cmc-branding-sub">Company Hub</span>
+            <span className="cmc-branding-name"><HomepageText fallback="silenceai.net" /></span>
+            <span className="cmc-branding-sub"><HomepageText fallback="Company Hub" /></span>
           </div>
         </div>
         <div className="cmc-filter-buttons">
@@ -154,7 +158,7 @@ export default function CmcView({ state, dispatch }) {
             className="cmc-white-pill"
             onClick={() => setModal("time")}
           >
-            TimeFrame: {timeframe.label}
+            <HomepageText fallback="TimeFrame:" /> {localize(timeframe.label)}
           </button>
           <button
             type="button"
@@ -165,13 +169,13 @@ export default function CmcView({ state, dispatch }) {
             }}
           >
             <Filter size={15} />
-            Filter
+            <HomepageText fallback="Filter" />
             {(filters.from || filters.subject) && (
               <i className="cmc-filter-dot" />
             )}
           </button>
         </div>
-        <div className="cmc-mode-capsule" aria-label="Traffic direction">
+        <div className="cmc-mode-capsule" aria-label={localize("Traffic direction")}>
           <span
             className="cmc-mode-slider"
             style={{
@@ -186,7 +190,7 @@ export default function CmcView({ state, dispatch }) {
               aria-pressed={direction === value}
               onClick={() => setDirection(value)}
             >
-              {value === "incoming" ? "Incoming" : "Outgoing"}
+              {localize(value === "incoming" ? "Incoming" : "Outgoing")}
             </button>
           ))}
         </div>
@@ -199,7 +203,7 @@ export default function CmcView({ state, dispatch }) {
               setTimeframe({ label: "All time", hours: 0 });
             }}
           >
-            Clear filters · {traffic.length} emails
+            <HomepageText fallback="Clear filters ·" /> {translate("homeSandbox.emailCount", `${traffic.length} emails`, { count: traffic.length })}
           </button>
         )}
       </div>
@@ -212,7 +216,7 @@ export default function CmcView({ state, dispatch }) {
         <svg
           viewBox="0 0 1384 826"
           className="cmc-topology"
-          aria-label="Email traffic topology"
+          aria-label={localize("Email traffic topology")}
         >
           <defs>
             <filter id={glowId} x="-30%" y="-30%" width="160%" height="160%">
@@ -253,11 +257,11 @@ export default function CmcView({ state, dispatch }) {
                     <g
                       role="button"
                       tabIndex={0}
-                      aria-label={`Open domain ${domain}`}
+                      aria-label={`${localize("Open domain")} ${domain}`}
                       onClick={() => openSelection({ domain })}
                       onKeyDown={(e) => keyOpen(e, { domain })}
                     >
-                      <title>{`${domain} — ${messages.length} emails`}</title>
+                      <title>{`${domain} — ${translate("homeSandbox.emailCount", `${messages.length} emails`, { count: messages.length })}`}</title>
                       <circle r="49.5" className="cmc-cluster" />
                       <text y="-56" className="cmc-domain-label">
                         {domain}
@@ -279,7 +283,7 @@ export default function CmcView({ state, dispatch }) {
                           className="cmc-user-node"
                           role="button"
                           tabIndex={0}
-                          aria-label={`Open sender ${email}`}
+                          aria-label={`${localize("Open sender")} ${email}`}
                           onClick={(e) => {
                             e.stopPropagation();
                             openSelection({ domain, email });
@@ -287,7 +291,7 @@ export default function CmcView({ state, dispatch }) {
                           onKeyDown={(e) => keyOpen(e, { domain, email })}
                           opacity={count ? 1 : 0.35}
                         >
-                          <title>{`${email} — ${count} emails`}</title>
+                          <title>{`${email} — ${translate("homeSandbox.emailCount", `${count} emails`, { count })}`}</title>
                           <circle
                             r="12.4"
                             fill="#fff"
@@ -314,13 +318,13 @@ export default function CmcView({ state, dispatch }) {
                 className="cmc-department-cluster"
                 role="button"
                 tabIndex={0}
-                aria-label="Open department Finance & Audit"
+                aria-label={localize("Open department Finance & Audit")}
                 onClick={() => openSelection({ department: "Finance & Audit" })}
                 onKeyDown={(e) => keyOpen(e, { department: "Finance & Audit" })}
               >
-                <title>Finance & Audit Department · 14 emails</title>
-                <text y="-58" className="cmc-dept-eyebrow">DEPARTMENT</text>
-                <text y="-44" className="cmc-dept-label">Finance & Audit</text>
+                <title>{localize("Finance & Audit")}</title>
+                <text y="-58" className="cmc-dept-eyebrow"><HomepageText fallback="DEPARTMENT" /></text>
+                <text y="-44" className="cmc-dept-label"><HomepageText fallback="Finance & Audit" /></text>
                 <circle
                   r="45"
                   className="cmc-cluster cmc-dept-circle"
@@ -336,7 +340,7 @@ export default function CmcView({ state, dispatch }) {
                   }}
                 >
                   <circle r="12" fill="#e9d5ff" stroke="#34d399" strokeWidth="1.5" />
-                  {labels && <text y="-15" className="cmc-user-label">elena.r</text>}
+                  {labels && <text y="-15" className="cmc-user-label"><HomepageText fallback="elena.r" /></text>}
                 </g>
                 <g
                   transform="translate(16 10)"
@@ -347,7 +351,7 @@ export default function CmcView({ state, dispatch }) {
                   }}
                 >
                   <circle r="12" fill="#ffffff" stroke="rgba(255,255,255,0.6)" strokeWidth="1" />
-                  {labels && <text y="-15" className="cmc-user-label">audit</text>}
+                  {labels && <text y="-15" className="cmc-user-label"><HomepageText fallback="audit" /></text>}
                 </g>
               </g>
 
@@ -357,13 +361,13 @@ export default function CmcView({ state, dispatch }) {
                 className="cmc-department-cluster"
                 role="button"
                 tabIndex={0}
-                aria-label="Open department Security Ops"
+                aria-label={localize("Open department Security Ops")}
                 onClick={() => openSelection({ department: "Security Ops" })}
                 onKeyDown={(e) => keyOpen(e, { department: "Security Ops" })}
               >
-                <title>Security Ops Department · 18 emails</title>
-                <text y="-58" className="cmc-dept-eyebrow">DEPARTMENT</text>
-                <text y="-44" className="cmc-dept-label">Security Ops</text>
+                <title>{localize("Security Ops")}</title>
+                <text y="-58" className="cmc-dept-eyebrow"><HomepageText fallback="DEPARTMENT" /></text>
+                <text y="-44" className="cmc-dept-label"><HomepageText fallback="Security Ops" /></text>
                 <circle
                   r="45"
                   className="cmc-cluster cmc-dept-circle cmc-dept-security"
@@ -379,7 +383,7 @@ export default function CmcView({ state, dispatch }) {
                   }}
                 >
                   <circle r="12" fill="#4c1d95" stroke="#34d399" strokeWidth="1.5" />
-                  {labels && <text y="-15" className="cmc-user-label">jmqst011</text>}
+                  {labels && <text y="-15" className="cmc-user-label"><HomepageText fallback="jmqst011" /></text>}
                 </g>
                 <g
                   transform="translate(16 -6)"
@@ -390,7 +394,7 @@ export default function CmcView({ state, dispatch }) {
                   }}
                 >
                   <circle r="12" fill="#ffffff" stroke="rgba(255,255,255,0.6)" strokeWidth="1" />
-                  {labels && <text y="-15" className="cmc-user-label">soc</text>}
+                  {labels && <text y="-15" className="cmc-user-label"><HomepageText fallback="soc" /></text>}
                 </g>
               </g>
             </g>
@@ -398,15 +402,15 @@ export default function CmcView({ state, dispatch }) {
               <g
                 role="button"
                 tabIndex={0}
-                aria-label="Open company silenceai.net"
+                aria-label={localize("Open company silenceai.net")}
                 onClick={() => openSelection({ domain: "silenceai.net" })}
                 onKeyDown={(e) => keyOpen(e, { domain: "silenceai.net" })}
               >
                 <text y="-150" className="cmc-company-eyebrow">
-                  YOUR COMPANY
+                  <HomepageText fallback="YOUR COMPANY" />
                 </text>
                 <text y="-136" className="cmc-domain-label">
-                  silenceai.net
+                  <HomepageText fallback="silenceai.net" />
                 </text>
                 <circle
                   r="124"
@@ -425,7 +429,7 @@ export default function CmcView({ state, dispatch }) {
                     className="cmc-user-node cmc-employee"
                     role="button"
                     tabIndex={0}
-                    aria-label={`Open employee ${user.email}${i === 1 ? " received" : ""}`}
+                    aria-label={`${localize("Open employee")} ${user.email}${i === 1 ? " received" : ""}`}
                     onClick={() =>
                       openSelection({
                         domain: "silenceai.net",
@@ -469,22 +473,22 @@ export default function CmcView({ state, dispatch }) {
         <button
           type="button"
           className="cmc-floating-btn"
-          aria-label="Open Threat Grid"
+          aria-label={localize("Open Threat Grid")}
           aria-expanded={showThreats}
           onClick={() => setShowThreats(true)}
         >
           <ChevronUp size={27} />
         </button>
         {showThreats && (
-          <section className="cmc-threat-panel" aria-label="Threat Grid">
+          <section className="cmc-threat-panel" aria-label={localize("Threat Grid")}>
             <header className="cmc-threat-header">
               <h3>
-                Threat Grid <span>{incidentCount} intercepted threats</span>
+                <HomepageText fallback="Threat Grid" /> <span>{incidentCount} <HomepageText fallback="intercepted threats" /></span>
               </h3>
               <button
                 type="button"
                 className="sb-icon"
-                aria-label="Close Threat Grid"
+                aria-label={localize("Close Threat Grid")}
                 onClick={() => setShowThreats(false)}
               >
                 <X size={23} />
@@ -517,17 +521,17 @@ export default function CmcView({ state, dispatch }) {
                               className="cmc-threat-email"
                               onClick={() => openEmail(email.id)}
                             >
-                              <strong>{email.subject}</strong>
-                              <span>From: {email.senderEmail}</span>
-                              <span>To: {email.recipient}</span>
+                              <strong><HomepageText fallback={email.subject} /></strong>
+                              <span><HomepageText fallback="From:" /> {email.senderEmail}</span>
+                              <span><HomepageText fallback="To:" /> {email.recipient}</span>
                               {email.threatType === "malware" && (
-                                <em>Malware in attachment</em>
+                                <em><HomepageText fallback="Malware in attachment" /></em>
                               )}
                             </button>
                           ))
                         ) : (
                           <p className="sb-empty">
-                            No emails in this category.
+                            <HomepageText fallback="No emails in this category." />
                           </p>
                         )}
                       </div>
@@ -540,7 +544,7 @@ export default function CmcView({ state, dispatch }) {
                 className="sb-secondary"
                 onClick={() => setModal("audit")}
               >
-                Audit log · {state.logs.length} events
+                <HomepageText fallback="Audit log ·" /> {state.logs.length} <HomepageText fallback="events" />
               </button>
             </div>
           </section>
@@ -548,7 +552,7 @@ export default function CmcView({ state, dispatch }) {
       </div>
 
       {modal === "time" && (
-        <SandboxModal title="Select TimeFrame" onClose={closeModal}>
+        <SandboxModal title={localize("Select TimeFrame")} onClose={closeModal}>
           <div className="cmc-time-options">
             {TIMEFRAMES.map(([label, hours]) => (
               <button
@@ -570,13 +574,13 @@ export default function CmcView({ state, dispatch }) {
                 setModal("custom");
               }}
             >
-              Custom Range
+              <HomepageText fallback="Custom Range" />
             </button>
           </div>
         </SandboxModal>
       )}
       {modal === "custom" && (
-        <SandboxModal title="Custom Range" onClose={closeModal}>
+        <SandboxModal title={localize("Custom Range")} onClose={closeModal}>
           <form
             className="sb-form"
             onSubmit={(e) => {
@@ -596,12 +600,12 @@ export default function CmcView({ state, dispatch }) {
             }}
           >
             <p className="sb-muted">
-              Demo clock:{" "}
+              <HomepageText fallback="Demo clock:" />{" "}
               {new Date(state.now).toISOString().replace("T", " ").slice(0, 16)}{" "}
-              UTC
+              <HomepageText fallback="UTC" />
             </p>
             <label>
-              From (UTC)
+              <HomepageText fallback="From (UTC)" />
               <input
                 type="datetime-local"
                 required
@@ -612,7 +616,7 @@ export default function CmcView({ state, dispatch }) {
               />
             </label>
             <label>
-              To (UTC)
+              <HomepageText fallback="To (UTC)" />
               <input
                 type="datetime-local"
                 required
@@ -625,12 +629,12 @@ export default function CmcView({ state, dispatch }) {
                 {rangeError}
               </p>
             )}
-            <button className="sb-primary">Apply range</button>
+            <button className="sb-primary"><HomepageText fallback="Apply range" /></button>
           </form>
         </SandboxModal>
       )}
       {modal === "filter" && (
-        <SandboxModal title="Filter Email Traffic" onClose={closeModal}>
+        <SandboxModal title={localize("Filter Email Traffic")} onClose={closeModal}>
           <form
             className="sb-form"
             onSubmit={(e) => {
@@ -640,23 +644,23 @@ export default function CmcView({ state, dispatch }) {
             }}
           >
             <label>
-              From (Sender)
+              <HomepageText fallback="From (Sender)" />
               <input
                 value={draftFilters.from}
                 onChange={(e) =>
                   setDraftFilters({ ...draftFilters, from: e.target.value })
                 }
-                placeholder="e.g. team@ or apple.com"
+                placeholder={localize("e.g. team@ or apple.com")}
               />
             </label>
             <label>
-              Subject
+              <HomepageText fallback="Subject" />
               <input
                 value={draftFilters.subject}
                 onChange={(e) =>
                   setDraftFilters({ ...draftFilters, subject: e.target.value })
                 }
-                placeholder="e.g. Invoice or Security"
+                placeholder={localize("e.g. Invoice or Security")}
               />
             </label>
             <div className="sb-actions">
@@ -668,28 +672,27 @@ export default function CmcView({ state, dispatch }) {
                   closeModal();
                 }}
               >
-                Clear filters
+                <HomepageText fallback="Clear filters" />
               </button>
-              <button className="sb-primary">Apply Filters</button>
+              <button className="sb-primary"><HomepageText fallback="Apply Filters" /></button>
             </div>
           </form>
         </SandboxModal>
       )}
       {modal === "selection" && (
         <SandboxModal
-          title={selection.department || selection.email || selection.domain}
+          title={localize(selection.department || selection.email || selection.domain)}
           onClose={closeModal}
           wide
         >
           <p className="sb-muted">
-            {selectedMessages.length} {direction} emails · current timeframe and
-            filters
+            {selectedMessages.length} {direction} <HomepageText fallback="emails · current timeframe and filters" />
           </p>
           <div className="cmc-domain-messages">
             {selectedMessages.map((email) => (
               <div key={email.id}>
                 <div>
-                  <strong>{email.subject}</strong>
+                  <strong><HomepageText fallback={email.subject} /></strong>
                   <p>
                     {email.senderEmail} → {email.recipient}
                   </p>
@@ -699,7 +702,7 @@ export default function CmcView({ state, dispatch }) {
                   className="sb-secondary"
                   onClick={() => openEmail(email.id)}
                 >
-                  View
+                  <HomepageText fallback="View" />
                 </button>
                 <button
                   type="button"
@@ -709,35 +712,34 @@ export default function CmcView({ state, dispatch }) {
                     dispatch({ type: "OPEN", id: email.id, fromCmc: true });
                   }}
                 >
-                  View in Mail
+                  <HomepageText fallback="View in Mail" />
                 </button>
               </div>
             ))}
             {!selectedMessages.length && (
               <p className="sb-empty">
-                No matching emails. Adjust the timeframe or filters to see more
-                traffic.
+                <HomepageText fallback="No matching emails. Adjust the timeframe or filters to see more traffic." />
               </p>
             )}
           </div>
         </SandboxModal>
       )}
       {modal === "email" && selectedEmail && (
-        <SandboxModal title={selectedEmail.subject} onClose={closeModal} wide>
+        <SandboxModal title={localize(selectedEmail.subject)} onClose={closeModal} wide>
           <div className="cmc-message-meta">
-            From: {selectedEmail.senderEmail}
+            <HomepageText fallback="From:" /> {selectedEmail.senderEmail}
             <br />
-            To: {selectedEmail.recipient}
+            <HomepageText fallback="To:" /> {selectedEmail.recipient}
           </div>
           <div className="cmc-analysis">
             <ShieldCheck size={20} />
             <p>
-              <strong>{selectedEmail.securityAnalysis?.verdict}</strong>
+              <strong><HomepageText fallback={selectedEmail.securityAnalysis?.verdict} /></strong>
               <br />
-              {selectedEmail.securityAnalysis?.summary}
+              <HomepageText fallback={selectedEmail.securityAnalysis?.summary} />
             </p>
           </div>
-          <div className="cmc-message-body">{selectedEmail.body}</div>
+          <div className="cmc-message-body"><HomepageText fallback={selectedEmail.body} /></div>
           <div className="sb-actions">
             <button
               type="button"
@@ -748,7 +750,7 @@ export default function CmcView({ state, dispatch }) {
               }}
             >
               <ExternalLink size={15} />
-              Open in Webmail
+              <HomepageText fallback="Open in Webmail" />
             </button>
             <button
               type="button"
@@ -759,22 +761,22 @@ export default function CmcView({ state, dispatch }) {
               }}
             >
               <Trash2 size={15} />
-              Delete across entire domain
+              <HomepageText fallback="Delete across entire domain" />
             </button>
           </div>
         </SandboxModal>
       )}
       {modal === "settings" && (
-        <SandboxModal title="Settings Menu" onClose={closeModal}>
+        <SandboxModal title={localize("Settings Menu")} onClose={closeModal}>
           <div className="sb-form">
-            <p className="sb-muted">Email Visualizer · silenceai.net</p>
+            <p className="sb-muted"><HomepageText fallback="Email Visualizer · silenceai.net" /></p>
             <label className="sb-checkbox">
               <input
                 type="checkbox"
                 checked={labels}
                 onChange={(e) => setLabels(e.target.checked)}
               />
-              Show sender labels
+              <HomepageText fallback="Show sender labels" />
             </label>
             <button
               type="button"
@@ -784,14 +786,14 @@ export default function CmcView({ state, dispatch }) {
                 closeModal();
               }}
             >
-              Reset canvas position
+              <HomepageText fallback="Reset canvas position" />
             </button>
             <button
               type="button"
               className="sb-secondary"
               onClick={() => setModal("audit")}
             >
-              Audit log · {state.logs.length} events
+              <HomepageText fallback="Audit log ·" /> {state.logs.length} <HomepageText fallback="events" />
             </button>
             <button
               type="button"
@@ -801,21 +803,21 @@ export default function CmcView({ state, dispatch }) {
                 dispatch({ type: "MODE", mode: "webmail" });
               }}
             >
-              Open Email Protector
+              <HomepageText fallback="Open Email Protector" />
             </button>
           </div>
         </SandboxModal>
       )}
       {modal === "audit" && (
-        <SandboxModal title="CMC Audit Log" onClose={closeModal} wide>
+        <SandboxModal title={localize("CMC Audit Log")} onClose={closeModal} wide>
           <div className="cmc-audit">
             {state.logs.map((log) => (
               <article key={log.id}>
                 <time>{log.time}</time>
                 <div>
-                  <strong>{log.category}</strong>
-                  <p>{log.detail}</p>
-                  <span>{log.action}</span>
+                  <strong>{localize(log.category)}</strong>
+                  <p>{log.detailKey ? translate(log.detailKey, log.detail, { ...log.values, subject: localize(log.values?.subject), verdict: localize(log.values?.verdict) }) : localize(log.detail)}</p>
+                  <span>{localize(log.action)}</span>
                 </div>
               </article>
             ))}
@@ -825,49 +827,45 @@ export default function CmcView({ state, dispatch }) {
       {modal === "profile" && (
         <SandboxModal title="jmqst011" onClose={closeModal}>
           <div className="sb-form">
-            <p>Administrator · silenceai.net</p>
+            <p><HomepageText fallback="Administrator · silenceai.net" /></p>
             <p className="sb-muted">
-              Domain visibility: all demo mailboxes
+              <HomepageText fallback="Domain visibility: all demo mailboxes" />
               <br />
-              Permissions: inspect incidents, review audit events, purge
-              campaigns.
+              <HomepageText fallback="Permissions: inspect incidents, review audit events, purge campaigns." />
             </p>
             <button
               type="button"
               className="sb-primary"
               onClick={() => setModal("audit")}
             >
-              View account activity
+              <HomepageText fallback="View account activity" />
             </button>
           </div>
         </SandboxModal>
       )}
       {modal === "instructions" && (
         <SandboxModal
-          title="Email Visualizer Instructions"
+          title={localize("Email Visualizer Instructions")}
           onClose={closeModal}
         >
           <ol className="cmc-instructions">
-            <li>Click a domain or sender to inspect its emails.</li>
+            <li><HomepageText fallback="Click a domain or sender to inspect its emails." /></li>
             <li>
-              Use TimeFrame and Filter to narrow traffic. Switch to Outgoing for
-              sent messages.
+              <HomepageText fallback="Use TimeFrame and Filter to narrow traffic. Switch to Outgoing for sent messages." />
             </li>
             <li>
-              Scroll to zoom, drag to pan, or double-click to reset the canvas.
+              <HomepageText fallback="Scroll to zoom, drag to pan, or double-click to reset the canvas." />
             </li>
-            <li>Open the pink arrow to review five threat categories.</li>
+            <li><HomepageText fallback="Open the pink arrow to review five threat categories." /></li>
             <li>
-              Simulate an attack, open its message, and delete the campaign
-              across the domain. Review the result in Email Protector and the
-              audit log.
+              <HomepageText fallback="Simulate an attack, open its message, and delete the campaign across the domain. Review the result in Email Protector and the audit log." />
             </li>
           </ol>
         </SandboxModal>
       )}
       {modal === "web" && (
         <SandboxModal
-          title="Web Security · Email links"
+          title={localize("Web Security · Email links")}
           onClose={closeModal}
           wide
         >
@@ -877,10 +875,10 @@ export default function CmcView({ state, dispatch }) {
               .map((email) => (
                 <div key={email.id}>
                   <div>
-                    <strong>{email.subject}</strong>
+                    <strong><HomepageText fallback={email.subject} /></strong>
                     {email.securityAnalysis.detectedLinks.map((link) => (
                       <p key={link.url}>
-                        {link.targetHost} · {link.status} · {link.action}
+                        {link.targetHost} · {localize(link.status)} · {localize(link.action)}
                       </p>
                     ))}
                   </div>
@@ -889,7 +887,7 @@ export default function CmcView({ state, dispatch }) {
                     className="sb-secondary"
                     onClick={() => openEmail(email.id)}
                   >
-                    Inspect
+                    <HomepageText fallback="Inspect" />
                   </button>
                 </div>
               ))}
@@ -897,7 +895,7 @@ export default function CmcView({ state, dispatch }) {
               (e) => e.securityAnalysis?.detectedLinks?.length,
             ) && (
               <p className="sb-empty">
-                No detected links in this traffic selection.
+                <HomepageText fallback="No detected links in this traffic selection." />
               </p>
             )}
           </div>

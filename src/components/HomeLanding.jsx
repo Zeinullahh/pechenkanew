@@ -22,6 +22,7 @@ import { articles, featuredResourcesConfig } from "@/constants/mediumArticles";
 
 const valueFeatures = [
   {
+    key: "deploy",
     title: "Deploy in minutes",
     description:
       "Set up web and email protection in under 4 minutes without complex configuration.",
@@ -30,6 +31,7 @@ const valueFeatures = [
     glowColor: "rgba(168,85,247,0.8)",
   },
   {
+    key: "ai",
     title: "AI-powered analysis",
     description:
       "Advanced AI continuously analyzes traffic, emails, and threats in real time.",
@@ -38,6 +40,7 @@ const valueFeatures = [
     glowColor: "rgba(34,211,238,0.8)",
   },
   {
+    key: "visualization",
     title: "Advanced visualization",
     description:
       "Monitor web traffic and email flows through an advanced visual interface.",
@@ -46,6 +49,7 @@ const valueFeatures = [
     glowColor: "rgba(99,102,241,0.8)",
   },
   {
+    key: "affordable",
     title: "Affordable security",
     description:
       "Enterprise-level protection without the cost of traditional cybersecurity systems.",
@@ -654,7 +658,7 @@ export default function HomeLanding() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {valueFeatures.map((feature) => (
-              <div key={feature.title} className="relative group flex">
+              <div key={feature.key} className="relative group flex">
                 <EdgeGlowCard
                   mode="follow"
                   outerClassName="rounded-[26px] p-[1.5px] w-full"
@@ -669,10 +673,10 @@ export default function HomeLanding() {
                     </div>
                     <div className="space-y-3 text-center flex flex-col flex-grow">
                       <h3 className="text-xl sm:text-2xl font-semibold text-white">
-                        {feature.title}
+                        {t(`aiSocValueSection.features.${feature.key}.title`, feature.title)}
                       </h3>
                       <p className="text-sm sm:text-base text-slate-200 leading-relaxed flex-grow">
-                        {feature.description}
+                        {t(`aiSocValueSection.features.${feature.key}.description`, feature.description)}
                       </p>
                     </div>
                   </div>

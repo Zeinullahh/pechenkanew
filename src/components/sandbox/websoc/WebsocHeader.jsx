@@ -1,4 +1,5 @@
 "use client";
+import HomepageText from "@/components/HomepageText";
 
 import React, { useState, useEffect } from "react";
 import {
@@ -81,10 +82,10 @@ function ThemeSelector({ themeName, setThemeName }) {
         <SelectValue placeholder="Select theme" />
       </SelectTrigger>
       <SelectContent className="border-zinc-800 bg-zinc-900 text-white">
-        <SelectItem value="primary">Primary</SelectItem>
-        <SelectItem value="aurora">Aurora</SelectItem>
-        <SelectItem value="blue">Blue</SelectItem>
-        <SelectItem value="emerald">Emerald</SelectItem>
+        <SelectItem value="primary"><HomepageText fallback="Primary" /></SelectItem>
+        <SelectItem value="aurora"><HomepageText fallback="Aurora" /></SelectItem>
+        <SelectItem value="blue"><HomepageText fallback="Blue" /></SelectItem>
+        <SelectItem value="emerald"><HomepageText fallback="Emerald" /></SelectItem>
       </SelectContent>
     </Select>
   );
@@ -205,12 +206,12 @@ function PaymentHistory({ payments = [] }) {
     <Dialog>
       <DialogTrigger asChild>
         <Button className="w-48 text-center bg-zinc-100 text-black font-bold border px-8 rounded-full">
-          Payment History
+          <HomepageText fallback="Payment History" />
         </Button>
       </DialogTrigger>
       <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto bg-zinc-900 border-zinc-800 text-white">
         <DialogHeader>
-          <DialogTitle>Payment History</DialogTitle>
+          <DialogTitle><HomepageText fallback="Payment History" /></DialogTitle>
         </DialogHeader>
 
         <div className="space-y-4">
@@ -218,11 +219,11 @@ function PaymentHistory({ payments = [] }) {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className="text-zinc-300">Status</TableHead>
-                  <TableHead className="text-zinc-300">Description</TableHead>
-                  <TableHead className="text-zinc-300">Date</TableHead>
-                  <TableHead className="text-zinc-300 text-right">Amount</TableHead>
-                  <TableHead className="text-zinc-300 text-right">Transaction ID</TableHead>
+                  <TableHead className="text-zinc-300"><HomepageText fallback="Status" /></TableHead>
+                  <TableHead className="text-zinc-300"><HomepageText fallback="Description" /></TableHead>
+                  <TableHead className="text-zinc-300"><HomepageText fallback="Date" /></TableHead>
+                  <TableHead className="text-zinc-300 text-right"><HomepageText fallback="Amount" /></TableHead>
+                  <TableHead className="text-zinc-300 text-right"><HomepageText fallback="Transaction ID" /></TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -286,8 +287,8 @@ function PromocodeSettings() {
       <div className="flex gap-x-2 pt-2">
         <Tag />
         <div>
-          <h4>Promocode</h4>
-          <p className="text-xs text-white/60">Enter an affiliate promo code to receive a discount</p>
+          <h4><HomepageText fallback="Promocode" /></h4>
+          <p className="text-xs text-white/60"><HomepageText fallback="Enter an affiliate promo code to receive a discount" /></p>
         </div>
       </div>
 
@@ -309,7 +310,7 @@ function PromocodeSettings() {
             {saving ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Loading...
+                <HomepageText fallback="Loading..." />
               </>
             ) : lockedPromocode ? (
               "Promocode applied"
@@ -366,17 +367,17 @@ function PaymentForm({ dispatch }) {
       <DialogTrigger asChild>
         <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
           <CreditCard className="mr-2 h-4 w-4" />
-          Top Up Balance
+          <HomepageText fallback="Top Up Balance" />
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] bg-zinc-900 border-zinc-800 text-white">
         <DialogHeader>
-          <DialogTitle>Top Up Balance</DialogTitle>
+          <DialogTitle><HomepageText fallback="Top Up Balance" /></DialogTitle>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-6 pt-4">
           <div className="space-y-2">
-            <Label>Select amount ($ USD)</Label>
+            <Label><HomepageText fallback="Select amount ($ USD)" /></Label>
             <div className="grid grid-cols-4 gap-2">
               {predefinedAmounts.map((val) => (
                 <Button
@@ -397,7 +398,7 @@ function PaymentForm({ dispatch }) {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="custom-amount">Or enter custom amount</Label>
+            <Label htmlFor="custom-amount"><HomepageText fallback="Or enter custom amount" /></Label>
             <div className="relative">
               <span className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400">$</span>
               <Input
@@ -416,11 +417,11 @@ function PaymentForm({ dispatch }) {
 
           <div className="p-3 bg-zinc-800/50 rounded-lg text-xs text-zinc-400 space-y-1">
             <div className="flex justify-between">
-              <span>Payment Gateway:</span>
-              <span className="text-zinc-200 font-medium">Paddle Checkout</span>
+              <span><HomepageText fallback="Payment Gateway:" /></span>
+              <span className="text-zinc-200 font-medium"><HomepageText fallback="Paddle Checkout" /></span>
             </div>
             <div className="flex justify-between">
-              <span>Deposit Amount:</span>
+              <span><HomepageText fallback="Deposit Amount:" /></span>
               <span className="text-green-400 font-bold">${amount.toFixed(2)}</span>
             </div>
           </div>
@@ -432,10 +433,10 @@ function PaymentForm({ dispatch }) {
               onClick={() => setOpen(false)}
               className="border-zinc-700 text-white hover:bg-zinc-800"
             >
-              Cancel
+              <HomepageText fallback="Cancel" />
             </Button>
             <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white">
-              Proceed to Checkout
+              <HomepageText fallback="Proceed to Checkout" />
             </Button>
           </DialogFooter>
         </form>
@@ -458,7 +459,7 @@ function Navbar() {
               className={`${navigationMenuTriggerStyle()} bg-transparent text-white hover:bg-white/10`}
             >
               <a href="https://silence.codes/en/instructions/ai-soc/" target="_blank" rel="noopener noreferrer">
-                Instructions
+                <HomepageText fallback="Instructions" />
               </a>
             </NavigationMenuLink>
           </NavigationMenuItem>
@@ -468,7 +469,7 @@ function Navbar() {
               className={`${navigationMenuTriggerStyle()} bg-transparent text-white hover:bg-white/10`}
             >
               <a href="https://web-soc.silenceai.net/" target="_blank" rel="noopener noreferrer">
-                Web Security
+                <HomepageText fallback="Web Security" />
               </a>
             </NavigationMenuLink>
           </NavigationMenuItem>
@@ -478,7 +479,7 @@ function Navbar() {
               className={`${navigationMenuTriggerStyle()} bg-transparent text-white hover:bg-white/10`}
             >
               <a href="https://email-soc.silenceai.net/" target="_blank" rel="noopener noreferrer">
-                Email Security
+                <HomepageText fallback="Email Security" />
               </a>
             </NavigationMenuLink>
           </NavigationMenuItem>
@@ -510,7 +511,7 @@ function UserProfileMenu({ state, dispatch }) {
           </Avatar>
           <div className="text-start">
             <h3 className="text-md font-medium text-zinc-100">
-              admin@silenceai.net
+              <HomepageText fallback="admin@silenceai.net" />
             </h3>
           </div>
         </Button>
@@ -522,7 +523,7 @@ function UserProfileMenu({ state, dispatch }) {
       >
         {/* Balance Display */}
         <div className="px-3 py-2 border-b border-zinc-700">
-          <p className="text-sm text-zinc-400">Balance</p>
+          <p className="text-sm text-zinc-400"><HomepageText fallback="Balance" /></p>
           <p className="text-lg font-semibold text-green-400">
             ${balance.toFixed(2)}
           </p>
@@ -537,10 +538,10 @@ function UserProfileMenu({ state, dispatch }) {
 
         <DropdownMenuSeparator className="bg-zinc-700" />
 
-        <DropdownMenuLabel className="text-white">Account</DropdownMenuLabel>
+        <DropdownMenuLabel className="text-white"><HomepageText fallback="Account" /></DropdownMenuLabel>
         <DropdownMenuSeparator className="bg-zinc-700" />
         <DropdownMenuItem className="hover:bg-zinc-800 cursor-pointer">
-          Change password
+          <HomepageText fallback="Change password" />
         </DropdownMenuItem>
 
         {/* Delete Account with Alert Dialog */}
@@ -551,19 +552,19 @@ function UserProfileMenu({ state, dispatch }) {
               onSelect={(e) => e.preventDefault()}
             >
               <Trash2 className="h-4 w-4 mr-2" />
-              Delete Account
+              <HomepageText fallback="Delete Account" />
             </DropdownMenuItem>
           </AlertDialogTrigger>
           <AlertDialogContent className="bg-zinc-900 border-zinc-700 text-white">
             <AlertDialogHeader>
-              <AlertDialogTitle>Delete Account?</AlertDialogTitle>
+              <AlertDialogTitle><HomepageText fallback="Delete Account?" /></AlertDialogTitle>
               <AlertDialogDescription className="text-zinc-400">
-                This action cannot be undone. This will permanently delete your account and remove all your data from our servers.
+                <HomepageText fallback="This action cannot be undone. This will permanently delete your account and remove all your data from our servers." />
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
               <AlertDialogCancel className="bg-zinc-800 border-zinc-700 text-white hover:bg-zinc-700">
-                Cancel
+                <HomepageText fallback="Cancel" />
               </AlertDialogCancel>
               <AlertDialogAction
                 className="bg-red-600 text-white hover:bg-red-700"
@@ -578,7 +579,7 @@ function UserProfileMenu({ state, dispatch }) {
                   });
                 }}
               >
-                Delete Account
+                <HomepageText fallback="Delete Account" />
               </AlertDialogAction>
             </AlertDialogFooter>
           </AlertDialogContent>
@@ -597,7 +598,7 @@ function UserProfileMenu({ state, dispatch }) {
             });
           }}
         >
-          Logout
+          <HomepageText fallback="Logout" />
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
@@ -632,11 +633,11 @@ export default function WebsocHeader({ state, dispatch }) {
                 align="start"
                 className="w-2/3 h-[80%] p-0 m-0 g-0 border-zinc-600 bg-transparent text-white backdrop-blur-sm justify-normal top-10 translate-y-0 flex flex-col overflow-y-auto"
               >
-                <DialogTitle className="sr-only">Console Preferences</DialogTitle>
+                <DialogTitle className="sr-only"><HomepageText fallback="Console Preferences" /></DialogTitle>
                 <div className="p-6 grid grid-cols-4 items-center">
                   <div className="flex gap-x-2 items-center">
                     <Palette />
-                    <h4>Globe style</h4>
+                    <h4><HomepageText fallback="Globe style" /></h4>
                   </div>
                   <ThemeSelector
                     themeName={currentTheme}
@@ -647,7 +648,7 @@ export default function WebsocHeader({ state, dispatch }) {
                 <div className="p-6 grid grid-cols-4 items-center">
                   <div className="flex gap-x-2 items-center">
                     <Languages />
-                    <h4>Select language</h4>
+                    <h4><HomepageText fallback="Select language" /></h4>
                   </div>
                   <LanguageSwitcher />
                 </div>
@@ -655,7 +656,7 @@ export default function WebsocHeader({ state, dispatch }) {
                 <div className="p-6 grid grid-cols-4 items-center">
                   <div className="flex gap-x-2 items-center">
                     <Settings2 />
-                    <h4>Time zone</h4>
+                    <h4><HomepageText fallback="Time zone" /></h4>
                   </div>
                   <TimeZoneSelector />
                 </div>
@@ -663,7 +664,7 @@ export default function WebsocHeader({ state, dispatch }) {
                 <div className="p-6 grid grid-cols-4 items-center">
                   <div className="flex gap-x-2 items-center">
                     <DollarSign />
-                    <h4>Payment History</h4>
+                    <h4><HomepageText fallback="Payment History" /></h4>
                   </div>
                   <PaymentHistory payments={websoc?.paymentHistory || []} />
                 </div>

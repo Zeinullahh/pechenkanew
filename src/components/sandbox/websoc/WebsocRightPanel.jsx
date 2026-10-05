@@ -1,4 +1,5 @@
 "use client";
+import HomepageText from "@/components/HomepageText";
 
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
@@ -75,25 +76,25 @@ export default function WebsocRightPanel({
         {/* Level Legend — exact match: h-[460px] ml-2 justify-between */}
         <div className="flex flex-col justify-between h-[460px] ml-2">
           <div className="text-sm">
-            <div className="font-bold">High</div>
+            <div className="font-bold"><HomepageText fallback="High" /></div>
             <div>
               {((2 * maxValue) / 3).toFixed(2)} - {maxValue.toFixed(2)}
             </div>
           </div>
           <div className="text-sm">
-            <div className="font-bold">Medium</div>
+            <div className="font-bold"><HomepageText fallback="Medium" /></div>
             <div>
               {(maxValue / 3).toFixed(2)} - {((2 * maxValue) / 3).toFixed(2)}
             </div>
           </div>
           <div className="text-sm">
-            <div className="font-bold">Low</div>
+            <div className="font-bold"><HomepageText fallback="Low" /></div>
             <div>
               {"0.01"} - {(maxValue / 3).toFixed(2)}
             </div>
           </div>
           <div className="text-sm">
-            <div className="font-bold">None</div>
+            <div className="font-bold"><HomepageText fallback="None" /></div>
             <div>0</div>
           </div>
         </div>

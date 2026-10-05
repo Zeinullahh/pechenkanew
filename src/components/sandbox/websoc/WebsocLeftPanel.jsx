@@ -1,4 +1,5 @@
 "use client";
+import HomepageText from "@/components/HomepageText";
 
 import React, { useState, useRef, useEffect, useMemo } from "react";
 import {
@@ -115,7 +116,7 @@ function AgentSetupBox({ agent }) {
       </DialogTrigger>
       <DialogContent className="bg-zinc-950 text-white border-zinc-800 max-w-2xl">
         <DialogHeader>
-          <DialogTitle>Domain setup details</DialogTitle>
+          <DialogTitle><HomepageText fallback="Domain setup details" /></DialogTitle>
         </DialogHeader>
 
         <div className="space-y-4 mt-2">
@@ -125,16 +126,16 @@ function AgentSetupBox({ agent }) {
               <span className="font-medium">{agent?.domain}</span>
             </div>
             <p className="text-zinc-300 mt-2">
-              DNS delegation: {agent?.verified ? "verified" : "not verified"}
+              <HomepageText fallback="DNS delegation:" /> {agent?.verified ? "verified" : "not verified"}
             </p>
             <p className="text-zinc-300">
-              DNS routing: {agent?.dnsRouted ? "points to WebSOC edge (active)" : "not pointed to WebSOC edge yet"}
+              <HomepageText fallback="DNS routing:" /> {agent?.dnsRouted ? "points to WebSOC edge (active)" : "not pointed to WebSOC edge yet"}
             </p>
           </div>
 
           <div className="rounded border border-cyan-900 bg-zinc-900 p-3">
             <div className="flex items-center justify-between mb-2">
-              <p className="text-sm text-cyan-300">Step 1. Ownership meta tag</p>
+              <p className="text-sm text-cyan-300"><HomepageText fallback="Step 1. Ownership meta tag" /></p>
               <div className="flex items-center gap-2 flex-wrap">
                 <Button
                   type="button"
@@ -142,7 +143,7 @@ function AgentSetupBox({ agent }) {
                   onClick={() => copyToClipboard(metaVerification?.content || "")}
                 >
                   <Copy className="mr-1 h-3 w-3" />
-                  Copy key
+                  <HomepageText fallback="Copy key" />
                 </Button>
                 <Button
                   type="button"
@@ -150,20 +151,20 @@ function AgentSetupBox({ agent }) {
                   onClick={() => copyToClipboard(metaVerification?.html || "")}
                 >
                   <Copy className="mr-1 h-3 w-3" />
-                  Copy tag
+                  <HomepageText fallback="Copy tag" />
                 </Button>
               </div>
             </div>
             <div className="bg-black/40 p-3 rounded text-xs space-y-1">
-              <p><span className="text-zinc-400">Name:</span> {metaVerification.tagName}</p>
-              <p><span className="text-zinc-400">Content:</span> <span className="break-all">{metaVerification.content}</span></p>
+              <p><span className="text-zinc-400"><HomepageText fallback="Name:" /></span> {metaVerification.tagName}</p>
+              <p><span className="text-zinc-400"><HomepageText fallback="Content:" /></span> <span className="break-all">{metaVerification.content}</span></p>
               <pre className="bg-black/60 mt-2 p-2 rounded whitespace-pre-wrap break-all">{metaVerification.html}</pre>
             </div>
           </div>
 
           <div className="rounded border border-cyan-900 bg-zinc-900 p-3">
             <div className="flex items-center justify-between mb-2">
-              <p className="text-sm text-cyan-300">Step 2. ACME delegation CNAME</p>
+              <p className="text-sm text-cyan-300"><HomepageText fallback="Step 2. ACME delegation CNAME" /></p>
               <div className="flex items-center gap-2 flex-wrap">
                 <Button
                   type="button"
@@ -171,7 +172,7 @@ function AgentSetupBox({ agent }) {
                   onClick={() => copyToClipboard(acmeDelegation?.name || "")}
                 >
                   <Copy className="mr-1 h-3 w-3" />
-                  Copy name
+                  <HomepageText fallback="Copy name" />
                 </Button>
                 <Button
                   type="button"
@@ -179,21 +180,21 @@ function AgentSetupBox({ agent }) {
                   onClick={() => copyToClipboard(asAbsoluteHostname(acmeDelegation?.value || ""))}
                 >
                   <Copy className="mr-1 h-3 w-3" />
-                  Copy hostname
+                  <HomepageText fallback="Copy hostname" />
                 </Button>
               </div>
             </div>
             <div className="bg-black/40 p-3 rounded text-xs space-y-1">
-              <p><span className="text-zinc-400">Type:</span> {acmeDelegation.type}</p>
-              <p><span className="text-zinc-400">Name:</span> <span className="break-all">{acmeDelegation.name}</span></p>
-              <p><span className="text-zinc-400">Hostname (target):</span> <span className="break-all">{asAbsoluteHostname(acmeDelegation.value)}</span></p>
-              <p><span className="text-zinc-400">TTL:</span> {acmeDelegation.ttl}</p>
+              <p><span className="text-zinc-400"><HomepageText fallback="Type:" /></span> {acmeDelegation.type}</p>
+              <p><span className="text-zinc-400"><HomepageText fallback="Name:" /></span> <span className="break-all">{acmeDelegation.name}</span></p>
+              <p><span className="text-zinc-400"><HomepageText fallback="Hostname (target):" /></span> <span className="break-all">{asAbsoluteHostname(acmeDelegation.value)}</span></p>
+              <p><span className="text-zinc-400"><HomepageText fallback="TTL:" /></span> {acmeDelegation.ttl}</p>
             </div>
           </div>
 
           <div className="rounded border border-green-900 bg-zinc-900 p-3">
             <div className="flex items-center justify-between mb-2">
-              <p className="text-sm text-green-300">Step 3. DNS A record to route traffic via WebSOC</p>
+              <p className="text-sm text-green-300"><HomepageText fallback="Step 3. DNS A record to route traffic via WebSOC" /></p>
               <div className="flex items-center gap-2 flex-wrap">
                 <Button
                   type="button"
@@ -201,7 +202,7 @@ function AgentSetupBox({ agent }) {
                   onClick={() => copyToClipboard(dnsRouting?.name || "")}
                 >
                   <Copy className="mr-1 h-3 w-3" />
-                  Copy name
+                  <HomepageText fallback="Copy name" />
                 </Button>
                 <Button
                   type="button"
@@ -209,15 +210,15 @@ function AgentSetupBox({ agent }) {
                   onClick={() => copyToClipboard(dnsRouting?.value || "")}
                 >
                   <Copy className="mr-1 h-3 w-3" />
-                  Copy IP
+                  <HomepageText fallback="Copy IP" />
                 </Button>
               </div>
             </div>
             <div className="bg-black/40 p-3 rounded text-xs space-y-1">
-              <p><span className="text-zinc-400">Type:</span> {dnsRouting.type}</p>
-              <p><span className="text-zinc-400">Name:</span> <span className="break-all">{dnsRouting.name}</span></p>
-              <p><span className="text-zinc-400">IP address:</span> {dnsRouting.value}</p>
-              <p><span className="text-zinc-400">TTL:</span> {dnsRouting.ttl}</p>
+              <p><span className="text-zinc-400"><HomepageText fallback="Type:" /></span> {dnsRouting.type}</p>
+              <p><span className="text-zinc-400"><HomepageText fallback="Name:" /></span> <span className="break-all">{dnsRouting.name}</span></p>
+              <p><span className="text-zinc-400"><HomepageText fallback="IP address:" /></span> {dnsRouting.value}</p>
+              <p><span className="text-zinc-400"><HomepageText fallback="TTL:" /></span> {dnsRouting.ttl}</p>
             </div>
           </div>
         </div>
@@ -259,12 +260,12 @@ function AgentConfigBox({ agent, dispatch }) {
       </DialogTrigger>
       <DialogContent className="bg-transparent p-4 text-white backdrop-blur-md border-white/10 max-w-xl">
         <DialogHeader>
-          <DialogTitle>Agent Configuration</DialogTitle>
+          <DialogTitle><HomepageText fallback="Agent Configuration" /></DialogTitle>
         </DialogHeader>
 
         <div className="space-y-4 mt-2">
           <div className="flex flex-col gap-1">
-            <Label htmlFor={`ip-address-${agent.id}`}>IP Address</Label>
+            <Label htmlFor={`ip-address-${agent.id}`}><HomepageText fallback="IP Address" /></Label>
             <Input
               id={`ip-address-${agent.id}`}
               value={ipAddress}
@@ -275,7 +276,7 @@ function AgentConfigBox({ agent, dispatch }) {
           </div>
 
           <div>
-            <p className="mb-2 text-sm">Allowed Ports</p>
+            <p className="mb-2 text-sm"><HomepageText fallback="Allowed Ports" /></p>
             {[22, 80, 443].map((port) => (
               <div key={port} className="flex items-center gap-2">
                 <Checkbox
@@ -283,13 +284,13 @@ function AgentConfigBox({ agent, dispatch }) {
                   checked={ports.includes(port)}
                   onCheckedChange={() => togglePort(port)}
                 />
-                <label htmlFor={`port-${agent.id}-${port}`} className="text-sm">Port {port}</label>
+                <label htmlFor={`port-${agent.id}-${port}`} className="text-sm"><HomepageText fallback="Port" /> {port}</label>
               </div>
             ))}
           </div>
 
           <div className="flex items-center justify-between">
-            <p className="text-sm">Enable 2FA</p>
+            <p className="text-sm"><HomepageText fallback="Enable 2FA" /></p>
             <Switch checked={twoFA} onCheckedChange={setTwoFA} />
           </div>
         </div>
@@ -299,7 +300,7 @@ function AgentConfigBox({ agent, dispatch }) {
             className="bg-transparent hover:bg-transparent hover:text-blue-300 text-blue-500 border border-zinc-700 w-full py-5"
             onClick={saveConfig}
           >
-            Save
+            <HomepageText fallback="Save" />
           </Button>
         </DialogFooter>
       </DialogContent>
@@ -383,12 +384,12 @@ function AgentAddBox({ dispatch }) {
       <DialogTrigger asChild>
         <Button className="bg-transparent hover:bg-transparent hover:text-blue-900 text-black border border-zinc-700 w-full py-2 rounded-full">
           <Plus className="text-blue-600" />
-          Register new agent
+          <HomepageText fallback="Register new agent" />
         </Button>
       </DialogTrigger>
       <DialogContent className="bg-transparent p-4 text-white backdrop-blur-sm border-white/10 max-w-xl">
         <DialogHeader>
-          <DialogTitle className="text-lg text-white">Agent registration</DialogTitle>
+          <DialogTitle className="text-lg text-white"><HomepageText fallback="Agent registration" /></DialogTitle>
         </DialogHeader>
 
         {verificationInfo ? (
@@ -396,7 +397,7 @@ function AgentAddBox({ dispatch }) {
             <div className="bg-gray-800/50 p-4 rounded-lg border border-violet-600/30">
               <div className="flex items-center justify-between gap-3 mb-3">
                 <p className="text-sm text-violet-300 break-words">
-                  Step 1. Add ownership meta tag on your origin website
+                  <HomepageText fallback="Step 1. Add ownership meta tag on your origin website" />
                 </p>
                 <div className="flex items-center gap-2 flex-wrap">
                   <Button
@@ -405,7 +406,7 @@ function AgentAddBox({ dispatch }) {
                     className="h-8 px-3 bg-blue-600 hover:bg-blue-700 text-white"
                   >
                     <Copy className="mr-1 h-3 w-3" />
-                    Copy key
+                    <HomepageText fallback="Copy key" />
                   </Button>
                   <Button
                     type="button"
@@ -413,14 +414,14 @@ function AgentAddBox({ dispatch }) {
                     className="h-8 px-3 bg-blue-600 hover:bg-blue-700 text-white"
                   >
                     <Copy className="mr-1 h-3 w-3" />
-                    Copy tag
+                    <HomepageText fallback="Copy tag" />
                   </Button>
                 </div>
               </div>
               {metaVerification && (
                 <div className="bg-black/50 p-3 rounded text-sm space-y-1 overflow-x-auto">
-                  <p><span className="text-gray-400">Name:</span> {metaVerification.tagName}</p>
-                  <p><span className="text-gray-400">Content:</span> <span className="break-all">{metaVerification.content}</span></p>
+                  <p><span className="text-gray-400"><HomepageText fallback="Name:" /></span> {metaVerification.tagName}</p>
+                  <p><span className="text-gray-400"><HomepageText fallback="Content:" /></span> <span className="break-all">{metaVerification.content}</span></p>
                   <pre className="bg-black/60 mt-2 p-2 rounded text-xs whitespace-pre-wrap break-all">{metaVerification.html}</pre>
                 </div>
               )}
@@ -429,7 +430,7 @@ function AgentAddBox({ dispatch }) {
             <div className="bg-gray-800/50 p-4 rounded-lg border border-cyan-600/30">
               <div className="flex items-center justify-between gap-3 mb-3">
                 <p className="text-sm text-cyan-300 break-words">
-                  Step 2. Add ACME delegation CNAME
+                  <HomepageText fallback="Step 2. Add ACME delegation CNAME" />
                 </p>
                 <div className="flex items-center gap-2 flex-wrap">
                   <Button
@@ -438,7 +439,7 @@ function AgentAddBox({ dispatch }) {
                     className="h-8 px-3 bg-blue-600 hover:bg-blue-700 text-white"
                   >
                     <Copy className="mr-1 h-3 w-3" />
-                    Copy name
+                    <HomepageText fallback="Copy name" />
                   </Button>
                   <Button
                     type="button"
@@ -446,16 +447,16 @@ function AgentAddBox({ dispatch }) {
                     className="h-8 px-3 bg-blue-600 hover:bg-blue-700 text-white"
                   >
                     <Copy className="mr-1 h-3 w-3" />
-                    Copy hostname
+                    <HomepageText fallback="Copy hostname" />
                   </Button>
                 </div>
               </div>
               {acmeDelegation && (
                 <div className="bg-black/50 p-3 rounded text-sm space-y-1 overflow-x-auto">
-                  <p><span className="text-gray-400">Type:</span> {acmeDelegation.type}</p>
-                  <p><span className="text-gray-400">Name:</span> <span className="break-all">{acmeDelegation.name}</span></p>
-                  <p><span className="text-gray-400">Hostname (target):</span> <span className="break-all">{acmeDelegation.value}</span></p>
-                  <p><span className="text-gray-400">TTL:</span> {acmeDelegation.ttl}</p>
+                  <p><span className="text-gray-400"><HomepageText fallback="Type:" /></span> {acmeDelegation.type}</p>
+                  <p><span className="text-gray-400"><HomepageText fallback="Name:" /></span> <span className="break-all">{acmeDelegation.name}</span></p>
+                  <p><span className="text-gray-400"><HomepageText fallback="Hostname (target):" /></span> <span className="break-all">{acmeDelegation.value}</span></p>
+                  <p><span className="text-gray-400"><HomepageText fallback="TTL:" /></span> {acmeDelegation.ttl}</p>
                 </div>
               )}
             </div>
@@ -464,7 +465,7 @@ function AgentAddBox({ dispatch }) {
               <div className="bg-gray-800/50 p-4 rounded-lg border border-green-600/40">
                 <div className="flex items-center justify-between gap-3 mb-3">
                   <p className="text-sm text-green-300 break-words">
-                    Step 3. DNS A record to add (switch traffic through WebSOC)
+                    <HomepageText fallback="Step 3. DNS A record to add (switch traffic through WebSOC)" />
                   </p>
                   <div className="flex items-center gap-2 flex-wrap">
                     <Button
@@ -473,7 +474,7 @@ function AgentAddBox({ dispatch }) {
                       className="h-8 px-3 bg-blue-600 hover:bg-blue-700 text-white"
                     >
                       <Copy className="mr-1 h-3 w-3" />
-                      Copy name
+                      <HomepageText fallback="Copy name" />
                     </Button>
                     <Button
                       type="button"
@@ -481,16 +482,16 @@ function AgentAddBox({ dispatch }) {
                       className="h-8 px-3 bg-blue-600 hover:bg-blue-700 text-white"
                     >
                       <Copy className="mr-1 h-3 w-3" />
-                      Copy IP
+                      <HomepageText fallback="Copy IP" />
                     </Button>
                   </div>
                 </div>
                 {dnsRouting && (
                   <div className="bg-black/50 p-3 rounded text-sm space-y-1 overflow-x-auto">
-                    <p><span className="text-gray-400">Type:</span> {dnsRouting.type}</p>
-                    <p><span className="text-gray-400">Name:</span> <span className="break-all">{dnsRouting.name}</span></p>
-                    <p><span className="text-gray-400">IP address:</span> {dnsRouting.value}</p>
-                    <p><span className="text-gray-400">TTL:</span> {dnsRouting.ttl}</p>
+                    <p><span className="text-gray-400"><HomepageText fallback="Type:" /></span> {dnsRouting.type}</p>
+                    <p><span className="text-gray-400"><HomepageText fallback="Name:" /></span> <span className="break-all">{dnsRouting.name}</span></p>
+                    <p><span className="text-gray-400"><HomepageText fallback="IP address:" /></span> {dnsRouting.value}</p>
+                    <p><span className="text-gray-400"><HomepageText fallback="TTL:" /></span> {dnsRouting.ttl}</p>
                   </div>
                 )}
               </div>
@@ -506,17 +507,17 @@ function AgentAddBox({ dispatch }) {
                 {verificationStatus === "pending" ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
-                    Verifying...
+                    <HomepageText fallback="Verifying..." />
                   </>
                 ) : verificationStatus === "success" ? (
                   <>
                     <CheckCircle className="mr-2 h-4 w-4" />
-                    Ownership and DNS verified
+                    <HomepageText fallback="Ownership and DNS verified" />
                   </>
                 ) : (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4" />
-                    Verify ownership and DNS
+                    <HomepageText fallback="Verify ownership and DNS" />
                   </>
                 )}
               </Button>
@@ -534,7 +535,7 @@ function AgentAddBox({ dispatch }) {
         ) : (
           <form onSubmit={registerAgent} className="flex flex-col gap-4 mt-4">
             <div className="flex flex-col gap-1">
-              <Label htmlFor="domain-input">Domain</Label>
+              <Label htmlFor="domain-input"><HomepageText fallback="Domain" /></Label>
               <Input
                 id="domain-input"
                 value={domain}
@@ -545,7 +546,7 @@ function AgentAddBox({ dispatch }) {
               />
             </div>
             <div className="flex flex-col gap-1">
-              <Label htmlFor="ip-input">Origin IP Address</Label>
+              <Label htmlFor="ip-input"><HomepageText fallback="Origin IP Address" /></Label>
               <Input
                 id="ip-input"
                 value={ipAddress}
@@ -556,8 +557,7 @@ function AgentAddBox({ dispatch }) {
               />
             </div>
             <p className="text-xs text-gray-400">
-              Enter your current origin host or IP (the server WebSOC should proxy to),
-              for example: <span className="break-all">origin.your-domain.com</span> or{" "}
+              <HomepageText fallback="Enter your current origin host or IP (the server WebSOC should proxy to), for example:" /> <span className="break-all"><HomepageText fallback="origin.your-domain.com" /></span> or{" "}
               <span className="break-all">203.0.113.10</span>.
             </p>
             <DialogFooter>
@@ -565,7 +565,7 @@ function AgentAddBox({ dispatch }) {
                 className="bg-transparent hover:bg-transparent hover:text-blue-300 text-blue-500 border border-zinc-700 w-full py-5"
                 type="submit"
               >
-                Register
+                <HomepageText fallback="Register" />
               </Button>
             </DialogFooter>
           </form>
@@ -682,19 +682,19 @@ function DomainSelector({ state, dispatch }) {
                       {!agent.verified && (
                         <div className="flex items-center gap-1 text-red-600" title="ACME DNS delegation is not verified">
                           <XCircle size={16} />
-                          <span className="text-xs">Delegation not verified</span>
+                          <span className="text-xs"><HomepageText fallback="Delegation not verified" /></span>
                         </div>
                       )}
                       {agent.verified && !agent.dnsRouted && (
                         <div className="flex items-center gap-1 text-orange-600" title="Delegation verified, traffic routing pending">
                           <AlertCircle size={16} />
-                          <span className="text-xs">Delegation verified / DNS pending</span>
+                          <span className="text-xs"><HomepageText fallback="Delegation verified / DNS pending" /></span>
                         </div>
                       )}
                       {agent.verified && agent.dnsRouted && (
                         <div className="flex items-center gap-1 text-green-600" title="Delegation verified and DNS routed">
                           <CheckCircle size={16} />
-                          <span className="text-xs">Active</span>
+                          <span className="text-xs"><HomepageText fallback="Active" /></span>
                         </div>
                       )}
                     </div>
@@ -739,9 +739,9 @@ function DomainSelector({ state, dispatch }) {
       >
         <AlertDialogContent className="bg-transparent backdrop-blur-sm border-white/10 text-white">
           <AlertDialogHeader>
-            <AlertDialogTitle>Confirm deletion</AlertDialogTitle>
+            <AlertDialogTitle><HomepageText fallback="Confirm deletion" /></AlertDialogTitle>
             <AlertDialogDescription className="text-zinc-400">
-              Are you sure you want to delete this agent? Traffic routing through WebSOC will be stopped.
+              <HomepageText fallback="Are you sure you want to delete this agent? Traffic routing through WebSOC will be stopped." />
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
@@ -749,13 +749,13 @@ function DomainSelector({ state, dispatch }) {
               onClick={cancelDelete}
               className="bg-zinc-800/10 border-white/10 text-white hover:bg-zinc-900/50"
             >
-              Cancel
+              <HomepageText fallback="Cancel" />
             </AlertDialogCancel>
             <AlertDialogAction
               onClick={confirmDelete}
               className="bg-red-600/10 text-white hover:bg-red-700/50 hover:text-white"
             >
-              Delete
+              <HomepageText fallback="Delete" />
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
@@ -843,14 +843,14 @@ function BlackListMenu({ blacklist, addToBlacklist, removeFromBlacklist, allCoun
           style={{ minWidth: "fit-content" }}
         >
           <Ban className="text-red-600" />
-          Blacklist countries
+          <HomepageText fallback="Blacklist countries" />
         </GlowButton>
       </DialogTrigger>
       <DialogContent
         align="start"
         className="w-2/3 h-[80%] p-0 m-0 g-0 border-zinc-600 bg-transparent text-white backdrop-blur-sm justify-normal top-10 translate-y-0 flex flex-col"
       >
-        <DialogTitle className="sr-only">Blacklist Countries</DialogTitle>
+        <DialogTitle className="sr-only"><HomepageText fallback="Blacklist Countries" /></DialogTitle>
         <Tabs
           ref={containerRef}
           defaultValue="blacklisted"
@@ -861,13 +861,13 @@ function BlackListMenu({ blacklist, addToBlacklist, removeFromBlacklist, allCoun
               className="text-zinc-400 data-[state=active]:text-white data-[state=active]:bg-zinc-800 flex-1"
               value="blacklisted"
             >
-              Blacklisted ({blacklist.length})
+              <HomepageText fallback="Blacklisted (" />{blacklist.length})
             </TabsTrigger>
             <TabsTrigger
               className="text-zinc-400 data-[state=active]:text-white data-[state=active]:bg-zinc-800 flex-1"
               value="nonblacklisted"
             >
-              Non-blacklisted ({nonBlacklisted.length})
+              <HomepageText fallback="Non-blacklisted (" />{nonBlacklisted.length})
             </TabsTrigger>
           </TabsList>
 
@@ -909,7 +909,7 @@ function BlackListMenu({ blacklist, addToBlacklist, removeFromBlacklist, allCoun
                   </ul>
                 ) : (
                   <p className="p-4 text-center text-sm text-zinc-500">
-                    No matching countries found
+                    <HomepageText fallback="No matching countries found" />
                   </p>
                 )}
               </div>
@@ -943,7 +943,7 @@ function BlackListMenu({ blacklist, addToBlacklist, removeFromBlacklist, allCoun
               })}
               {blacklist.length === 0 && (
                 <li className="text-sm text-gray-500 mt-2 px-2">
-                  No countries blacklisted
+                  <HomepageText fallback="No countries blacklisted" />
                 </li>
               )}
             </ul>
@@ -984,7 +984,7 @@ function BlackListMenu({ blacklist, addToBlacklist, removeFromBlacklist, allCoun
               ))}
               {filteredNonBlacklisted.length === 0 && (
                 <li className="text-sm text-gray-500">
-                  No countries available
+                  <HomepageText fallback="No countries available" />
                 </li>
               )}
             </ul>
@@ -1009,7 +1009,7 @@ function BlackListMenu({ blacklist, addToBlacklist, removeFromBlacklist, allCoun
                   onClick={() => handleRemove(selectedCountry.code)}
                 >
                   <p className="text-red-500 bg-transparent hover:bg-transparent hover:text-red-400 py-2 px-6 font-semibold">
-                    Remove
+                    <HomepageText fallback="Remove" />
                   </p>
                 </Button>
               ) : (
@@ -1018,7 +1018,7 @@ function BlackListMenu({ blacklist, addToBlacklist, removeFromBlacklist, allCoun
                   className="text-zinc-100 bg-transparent hover:bg-transparent hover:text-zinc-400 py-2 px-6 font-semibold"
                   onClick={() => handleAddAndClear(selectedCountry.code)}
                 >
-                  Add
+                  <HomepageText fallback="Add" />
                 </Button>
               )}
             </div>

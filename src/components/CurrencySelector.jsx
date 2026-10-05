@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import * as Flags from "country-flag-icons/react/3x2";
 import { CURRENCIES } from "@/lib/currency";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const CurrencySelector = ({
   currency,
@@ -11,6 +12,7 @@ const CurrencySelector = ({
   align = "right",
   pricingStyle = false,
 }) => {
+  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
 
@@ -56,7 +58,7 @@ const CurrencySelector = ({
         )}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
-        aria-label="Select currency"
+        aria-label={t("homepageControls.selectCurrency", "Select currency")}
       >
         <span className="h-4 w-6 overflow-hidden rounded-[4px] border border-white/20">
           {ActiveFlag ? (
@@ -89,7 +91,7 @@ const CurrencySelector = ({
             align === "left" ? "left-0" : "right-0"
           )}
           role="listbox"
-          aria-label="Choose currency"
+          aria-label={t("homepageControls.chooseCurrency", "Choose currency")}
         >
           <div className="space-y-1">
             {CURRENCIES.map((curr) => {

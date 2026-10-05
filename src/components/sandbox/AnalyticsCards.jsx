@@ -1,4 +1,5 @@
 "use client";
+import HomepageText, { useHomepageText } from "@/components/HomepageText";
 
 import { useState } from "react";
 import { Building2, Globe, ChevronDown, ChevronUp, Layers } from "lucide-react";
@@ -10,7 +11,7 @@ function Card({ title, icon: Icon, children }) {
         <div className="cmc-analytics-icon-wrap">
           <Icon className="w-3.5 h-3.5 text-[rgba(216,180,254,0.9)]" />
         </div>
-        <h3 className="cmc-analytics-card-title">{title}</h3>
+        <h3 className="cmc-analytics-card-title"><HomepageText fallback={title} /></h3>
       </div>
       {children}
     </div>
@@ -20,13 +21,14 @@ function Card({ title, icon: Icon, children }) {
 function Metric({ label, value }) {
   return (
     <div className="cmc-analytics-metric">
-      <span className="cmc-analytics-metric-label">{label}</span>
+      <span className="cmc-analytics-metric-label"><HomepageText fallback={label} /></span>
       <span className="cmc-analytics-metric-value">{value}</span>
     </div>
   );
 }
 
 export default function AnalyticsCards({ traffic = [], onSelectDepartment, onSelectDomain }) {
+  const localize = useHomepageText();
   const [collapsed, setCollapsed] = useState(false);
 
   // Compute dynamic department flow metrics from current traffic
@@ -113,18 +115,18 @@ export default function AnalyticsCards({ traffic = [], onSelectDepartment, onSel
   ];
 
   return (
-    <aside className="cmc-analytics-widget" aria-label="Department flow and Domain volume analytics">
+    <aside className="cmc-analytics-widget" aria-label={localize("Department flow and Domain volume analytics")}>
       <header className="cmc-analytics-widget-bar">
         <div className="cmc-analytics-widget-title">
           <Layers className="w-3.5 h-3.5 text-purple-400" />
-          <span>Analytics & Company Flow</span>
+          <span><HomepageText fallback="Analytics & Company Flow" /></span>
         </div>
         <button
           type="button"
           onClick={() => setCollapsed(!collapsed)}
           className="cmc-analytics-toggle"
-          aria-label={collapsed ? "Expand analytics cards" : "Collapse analytics cards"}
-          title={collapsed ? "Expand analytics" : "Collapse analytics"}
+          aria-label={localize(collapsed ? "Expand analytics cards" : "Collapse analytics cards")}
+          title={localize(collapsed ? "Expand analytics" : "Collapse analytics")}
         >
           {collapsed ? <ChevronDown size={14} /> : <ChevronUp size={14} />}
         </button>
@@ -149,7 +151,7 @@ export default function AnalyticsCards({ traffic = [], onSelectDepartment, onSel
                   }}
                   title={`Filter emails for ${d.name}`}
                 >
-                  <div className="cmc-analytics-item-name">{d.name}</div>
+                  <div className="cmc-analytics-item-name"><HomepageText fallback={d.name} /></div>
                   <Metric label="Emails" value={d.total} />
                   <Metric label="In / Out" value={d.inOut} />
                   <Metric

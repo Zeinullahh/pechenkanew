@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { AlertTriangle, List, Menu, Server, X } from "lucide-react";
 
 const slugify = (value) => value

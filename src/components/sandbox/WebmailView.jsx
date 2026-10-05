@@ -1,4 +1,6 @@
 "use client";
+import HomepageText, { useHomepageText } from "@/components/HomepageText";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 import { useState } from "react";
 import {
@@ -52,44 +54,24 @@ const QUARANTINE_FOLDERS = [
   ["dangerous_links", "Dangerous links", ShieldAlert],
   ["malware", "Malware in attachments", ShieldAlert],
 ];
-const RU = {
-  Compose: "Написать",
-  Scheduled: "Отложенные",
-  SYSTEM: "СИСТЕМА",
-  QUARANTINE: "КАРАНТИН",
-  "MY FOLDERS": "МОИ ПАПКИ",
-  Unfiltered: "Все входящие",
-  Secure: "Безопасные",
-  Important: "Важные",
-  "Auto-responded": "Автоответы",
-  Sent: "Отправленные",
-  Drafts: "Черновики",
-  Trash: "Корзина",
-  SPAM: "СПАМ",
-  "Possibly Phishing": "Возможный фишинг",
-  "Dangerous links": "Опасные ссылки",
-  "Malware in attachments": "Вредоносные вложения",
-  "Finance & Audit": "Финансы и аудит",
-  "Executive Board": "Руководство",
-  "Switch to CMC": "Открыть CMC",
-};
-const emailDate = (email) =>
-  new Intl.DateTimeFormat("en-US", {
+const emailDate = (email, language) =>
+  new Intl.DateTimeFormat(language, {
     month: "short",
     day: "numeric",
     timeZone: "UTC",
   }).format(new Date(email.timestamp));
 
 export default function WebmailView({ state, dispatch }) {
+  const localize = useHomepageText();
+  const { language, t: translate } = useLanguage();
   const [theme, setTheme] = useState("dark");
-  const [locale, setLocale] = useState("en");
   const [quarantineOpen, setQuarantineOpen] = useState(true);
   const [fullView, setFullView] = useState(false);
   const [modal, setModal] = useState(null);
   const [compose, setCompose] = useState(null);
   const [folderName, setFolderName] = useState("");
   const [moveFolder, setMoveFolder] = useState("finance");
-  const t = (text) => (locale === "ru" ? RU[text] || text : text);
+  const t = localize;
   const customFolderMap = new Map([
     ["finance", ["finance", "Finance & Audit", Folder]],
     ["executive", ["executive", "Executive Board", Folder]],
@@ -173,7 +155,7 @@ export default function WebmailView({ state, dispatch }) {
       className="sandbox-webmail"
       data-theme={theme}
       role="region"
-      aria-label="AI-CSD Webmail Client"
+      aria-label={localize("AI-CSD Webmail Client")}
     >
       <div className="dashboard-shell">
         <header className="dashboard-topbar glass glass-toolbar">
@@ -188,7 +170,7 @@ export default function WebmailView({ state, dispatch }) {
                 height="40"
               />
               <span className="brand-slash">/</span>
-              <span className="brand-text">Email Protector</span>
+              <span className="brand-text"><HomepageText fallback="Email Protector" /></span>
             </div>
           </div>
           <div className="search-bar topbar-search">
@@ -196,12 +178,8 @@ export default function WebmailView({ state, dispatch }) {
             <input
               type="search"
               className="search-input"
-              aria-label="Search emails, headers, hashes"
-              placeholder={
-                locale === "ru"
-                  ? "Поиск писем, заголовков, хешей…"
-                  : "Search emails, headers, hashes…"
-              }
+              aria-label={localize("Search emails, headers, hashes")}
+              placeholder={localize("Search emails, headers, hashes?")}
               value={state.search}
               onChange={(e) =>
                 dispatch({ type: "SEARCH", query: e.target.value })
@@ -211,7 +189,7 @@ export default function WebmailView({ state, dispatch }) {
               <button
                 type="button"
                 className="clear-search"
-                aria-label="Clear search"
+                aria-label={localize("Clear search")}
                 onClick={() => dispatch({ type: "SEARCH", query: "" })}
               >
                 <X size={16} />
@@ -222,7 +200,7 @@ export default function WebmailView({ state, dispatch }) {
             <button
               type="button"
               className="topbar-icon-button icon-only"
-              aria-label="Toggle theme"
+              aria-label={localize("Toggle theme")}
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
               {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
@@ -230,10 +208,10 @@ export default function WebmailView({ state, dispatch }) {
             <button
               type="button"
               className="topbar-icon-button"
-              aria-label="Switch language"
-              onClick={() => setLocale(locale === "en" ? "ru" : "en")}
+              aria-label={localize("Current language")}
+              disabled
             >
-              {locale.toUpperCase()}
+              {language.toUpperCase()}
             </button>
             <button
               type="button"
@@ -258,7 +236,7 @@ export default function WebmailView({ state, dispatch }) {
         >
           <aside
             className="sidebar glass glass-sidebar"
-            aria-label="Mailbox folders"
+            aria-label={localize("Mailbox folders")}
           >
             <div className="sidebar-compose">
               <button
@@ -318,7 +296,7 @@ export default function WebmailView({ state, dispatch }) {
                   <button
                     type="button"
                     className="sidebar-section-action"
-                    aria-label="Create folder"
+                    aria-label={localize("Create folder")}
                     onClick={() => {
                       setFolderName("");
                       setModal("folder");
@@ -335,7 +313,7 @@ export default function WebmailView({ state, dispatch }) {
           </aside>
           <section
             className="email-list-container glass glass-card"
-            aria-label="Email list"
+            aria-label={localize("Email list")}
           >
             <header className="sb-mail-list-heading">
               <h3>
@@ -344,7 +322,7 @@ export default function WebmailView({ state, dispatch }) {
                     "Unfiltered",
                 )}
               </h3>
-              <span>{filtered.length} emails</span>
+              <span>{translate("homeSandbox.emailCount", `${filtered.length} emails`, { count: filtered.length })}</span>
             </header>
             <div className="email-list-scroll-wrapper">
               <div className="email-list appear">
@@ -372,7 +350,7 @@ export default function WebmailView({ state, dispatch }) {
                       <button
                         type="button"
                         className="sb-email-open"
-                        aria-label={`Open email ${email.subject} to ${email.recipient}`}
+                        aria-label={`${localize("Open email")} ${localize(email.subject)} ${localize("to")} ${email.recipient}`}
                         onClick={() => openEmail(email)}
                       >
                         <span className="email-card-top">
@@ -387,7 +365,7 @@ export default function WebmailView({ state, dispatch }) {
                                 <span className="email-sender">
                                   {email.direction === "outgoing"
                                     ? email.recipient
-                                    : email.senderName}
+                                    : localize(email.senderName)}
                                 </span>
                                 {!email.isRead && (
                                   <span className="unread-dot" />
@@ -395,11 +373,11 @@ export default function WebmailView({ state, dispatch }) {
                               </span>
                               <span className="email-subject-line">
                                 <span className="email-subject-text">
-                                  {email.subject}
+                                  <HomepageText fallback={email.subject} />
                                 </span>
                               </span>
                               <span className="email-preview">
-                                {email.preview}
+                                {email.direction === "outgoing" ? localize(email.body).slice(0, 160) : <HomepageText fallback={email.preview} />}
                               </span>
                             </span>
                           </span>
@@ -409,7 +387,7 @@ export default function WebmailView({ state, dispatch }) {
                         <button
                           type="button"
                           className={`email-important-toggle ${email.isImportant ? "sb-starred" : ""}`}
-                          aria-label={`${email.isImportant ? "Unstar" : "Star"} ${email.subject}`}
+                          aria-label={`${localize(email.isImportant ? "Unstar" : "Star")} ${localize(email.subject)}`}
                           aria-pressed={email.isImportant}
                           onClick={() =>
                             dispatch({ type: "STAR", id: email.id })
@@ -422,7 +400,7 @@ export default function WebmailView({ state, dispatch }) {
                           />
                         </button>
                         <span className="email-date">
-                          {email.simulated ? "Now" : emailDate(email)}
+                          {email.simulated ? "Now" : emailDate(email, language)}
                         </span>
                       </div>
                     </div>
@@ -431,7 +409,7 @@ export default function WebmailView({ state, dispatch }) {
                 {!filtered.length && (
                   <div className="sb-mail-empty">
                     <Inbox size={38} />
-                    <h4>No emails here</h4>
+                    <h4><HomepageText fallback="No emails here" /></h4>
                     <p>
                       {state.search
                         ? "Try another sender, subject, or attachment hash."
@@ -444,13 +422,13 @@ export default function WebmailView({ state, dispatch }) {
           </section>
           <section
             className="email-view-container glass glass-card"
-            aria-label="Email view"
+            aria-label={localize("Email view")}
           >
             {selected ? (
               <article className="email-view" key={selected.id}>
                 <header className="email-view-header">
                   <div className="email-view-header-top">
-                    <h2 className="email-view-subject">{selected.subject}</h2>
+                    <h2 className="email-view-subject"><HomepageText fallback={selected.subject} /></h2>
                     <div className="email-view-header-actions">
                       <button
                         type="button"
@@ -485,7 +463,7 @@ export default function WebmailView({ state, dispatch }) {
                       <button
                         type="button"
                         className="email-header-icon-btn"
-                        aria-label="Move to folder"
+                        aria-label={localize("Move to folder")}
                         onClick={() => setModal("move")}
                       >
                         <Folder size={18} />
@@ -514,12 +492,12 @@ export default function WebmailView({ state, dispatch }) {
                       </button>
                     </div>
                   </div>
-                  <EmailHeader email={selected} locale={locale} />
+                  <EmailHeader email={selected} locale={language} />
                 </header>
                 <div className="email-content-scroll">
                   <section
                     className={`sb-threat-inspector ${safe ? "safe" : "danger"}`}
-                    aria-label="Threat Inspector"
+                    aria-label={localize("Threat Inspector")}
                   >
                     <header>
                       {safe ? (
@@ -528,30 +506,30 @@ export default function WebmailView({ state, dispatch }) {
                         <ShieldAlert size={20} />
                       )}
                       <div>
-                        <span>THREAT INSPECTOR / AI-CSD</span>
-                        <h3>{analysis?.verdict}</h3>
+                        <span><HomepageText fallback="THREAT INSPECTOR / AI-CSD" /></span>
+                        <h3><HomepageText fallback={analysis?.verdict} /></h3>
                       </div>
                     </header>
                     <dl>
                       <div>
-                        <dt>DKIM / SPF</dt>
-                        <dd>{analysis?.dkimSpf || "Not available"}</dd>
+                        <dt><HomepageText fallback="DKIM / SPF" /></dt>
+                        <dd>{localize(analysis?.dkimSpf || "Not available")}</dd>
                       </div>
                       <div>
-                        <dt>Spoof Score</dt>
+                        <dt><HomepageText fallback="Spoof Score" /></dt>
                         <dd>{analysis?.spoofScore ?? "—"} / 100</dd>
                       </div>
                       <div>
-                        <dt>Links / Attachments</dt>
+                        <dt><HomepageText fallback="Links / Attachments" /></dt>
                         <dd>
-                          {analysis?.detectedLinks?.length || 0} links ·{" "}
-                          {analysis?.attachments?.length || 0} attachments
+                          {analysis?.detectedLinks?.length || 0} <HomepageText fallback="links ·" />{" "}
+                          {analysis?.attachments?.length || 0} <HomepageText fallback="attachments" />
                         </dd>
                       </div>
                     </dl>
-                    <p>{analysis?.summary}</p>
+                    <p><HomepageText fallback={analysis?.summary} /></p>
                     <span className="sb-analysis-action">
-                      {analysis?.aiActionTaken}
+                      <HomepageText fallback={analysis?.aiActionTaken} />
                     </span>
                     <button
                       type="button"
@@ -561,19 +539,19 @@ export default function WebmailView({ state, dispatch }) {
                       }
                     >
                       <Trash2 size={14} />
-                      ADMIN: Domain-Wide Purge
+                      <HomepageText fallback="ADMIN: Domain-Wide Purge" />
                     </button>
                   </section>
                   <div className="email-body-container">
                     <div className="email-body">
-                      {selected.body.split("\n\n").map((paragraph, i) => (
+                      {localize(selected.body).split("\n\n").map((paragraph, i) => (
                         <p key={i}>{paragraph}</p>
                       ))}
                     </div>
                   </div>
                   {Boolean(analysis?.detectedLinks?.length) && (
                     <section className="sb-detected-links">
-                      <h4>Link inspection</h4>
+                      <h4><HomepageText fallback="Link inspection" /></h4>
                       {analysis.detectedLinks.map((link) => (
                         <div key={link.url}>
                           <span
@@ -583,10 +561,10 @@ export default function WebmailView({ state, dispatch }) {
                                 : "sb-danger-text"
                             }
                           >
-                            {link.status.toUpperCase()}
+                            {localize(link.status).toLocaleUpperCase(language)}
                           </span>
                           <code>{link.url}</code>
-                          <p>{link.action}</p>
+                          <p><HomepageText fallback={link.action} /></p>
                         </div>
                       ))}
                     </section>
@@ -598,27 +576,26 @@ export default function WebmailView({ state, dispatch }) {
                     <section className="sb-smart-responder">
                       <header>
                         <Sparkles size={18} />
-                        <h3>AI Smart Responder</h3>
+                        <h3><HomepageText fallback="AI Smart Responder" /></h3>
                       </header>
                       {!safe && (
                         <p>
-                          Security incidents are forwarded to
-                          security@silenceai.net.
+                          <HomepageText fallback="Security incidents are forwarded to security@silenceai.net." />
                         </p>
                       )}
                       {selected.replySent && (
                         <p className="sb-safe-text">
-                          Reply sent · available in Sent and Auto-responded.
+                          <HomepageText fallback="Reply sent · available in Sent and Auto-responded." />
                         </p>
                       )}
                       {selected.replyDraft ? (
                         <>
                           <label htmlFor={`reply-${selected.id}`}>
-                            Review your draft
+                            <HomepageText fallback="Review your draft" />
                           </label>
                           <textarea
                             id={`reply-${selected.id}`}
-                            value={selected.replyDraft}
+                            value={localize(selected.replyDraft)}
                             onChange={(e) =>
                               dispatch({
                                 type: "EDIT_REPLY",
@@ -640,7 +617,7 @@ export default function WebmailView({ state, dispatch }) {
                               }
                             >
                               <RotateCcw size={14} />
-                              Regenerate
+                              <HomepageText fallback="Regenerate" />
                             </button>
                             <button
                               type="button"
@@ -654,7 +631,7 @@ export default function WebmailView({ state, dispatch }) {
                               }
                             >
                               <Send size={14} />
-                              Send reply
+                              <HomepageText fallback="Send reply" />
                             </button>
                           </div>
                         </>
@@ -670,7 +647,7 @@ export default function WebmailView({ state, dispatch }) {
                           }
                         >
                           <Sparkles size={15} />
-                          Generate reply
+                          <HomepageText fallback="Generate reply" />
                         </button>
                       )}
                     </section>
@@ -680,9 +657,9 @@ export default function WebmailView({ state, dispatch }) {
             ) : (
               <div className="sb-mail-empty">
                 <Mail size={46} />
-                <h3>Your inbox, protected.</h3>
+                <h3><HomepageText fallback="Your inbox, protected." /></h3>
                 <p>
-                  Select a message to review its contents and security analysis.
+                  <HomepageText fallback="Select a message to review its contents and security analysis." />
                 </p>
                 {fullView && (
                   <button
@@ -690,7 +667,7 @@ export default function WebmailView({ state, dispatch }) {
                     className="sb-secondary"
                     onClick={() => setFullView(false)}
                   >
-                    Back to email list
+                    <HomepageText fallback="Back to email list" />
                   </button>
                 )}
               </div>
@@ -708,16 +685,16 @@ export default function WebmailView({ state, dispatch }) {
         />
       )}
       {modal === "account" && (
-        <SandboxModal title="Account" onClose={() => setModal(null)}>
+        <SandboxModal title={localize("Account")} onClose={() => setModal(null)}>
           <div className="sb-form">
-            <h4>Elena Rostova</h4>
+            <h4><HomepageText fallback="Elena Rostova" /></h4>
             <p>{ACCOUNT}</p>
             <p className="sb-muted">
-              Organization: silenceai.net
+              <HomepageText fallback="Organization: silenceai.net" />
               <br />
-              Demo access: all protected mailboxes
+              <HomepageText fallback="Demo access: all protected mailboxes" />
               <br />
-              Role: Security administrator
+              <HomepageText fallback="Role: Security administrator" />
             </p>
             <button
               type="button"
@@ -727,13 +704,13 @@ export default function WebmailView({ state, dispatch }) {
                 dispatch({ type: "MODE", mode: "cmc" });
               }}
             >
-              Open management console
+              <HomepageText fallback="Open management console" />
             </button>
           </div>
         </SandboxModal>
       )}
       {modal === "folder" && (
-        <SandboxModal title="Create folder" onClose={() => setModal(null)}>
+        <SandboxModal title={localize("Create folder")} onClose={() => setModal(null)}>
           <form
             className="sb-form"
             onSubmit={(e) => {
@@ -745,7 +722,7 @@ export default function WebmailView({ state, dispatch }) {
             }}
           >
             <label>
-              Folder name
+              <HomepageText fallback="Folder name" />
               <input
                 required
                 maxLength={48}
@@ -754,13 +731,13 @@ export default function WebmailView({ state, dispatch }) {
               />
             </label>
             <button className="sb-primary" disabled={!folderName.trim()}>
-              Create folder
+              <HomepageText fallback="Create folder" />
             </button>
           </form>
         </SandboxModal>
       )}
       {modal === "move" && selected && (
-        <SandboxModal title="Move to folder" onClose={() => setModal(null)}>
+        <SandboxModal title={localize("Move to folder")} onClose={() => setModal(null)}>
           <form
             className="sb-form"
             onSubmit={(e) => {
@@ -770,7 +747,7 @@ export default function WebmailView({ state, dispatch }) {
             }}
           >
             <label>
-              Folder
+              <HomepageText fallback="Folder" />
               <select
                 aria-label="Folder"
                 value={moveFolder}
@@ -783,13 +760,13 @@ export default function WebmailView({ state, dispatch }) {
                 ))}
               </select>
             </label>
-            <button className="sb-primary">Move email</button>
+            <button className="sb-primary"><HomepageText fallback="Move email" /></button>
           </form>
         </SandboxModal>
       )}
       {modal === "scheduled" && (
         <SandboxModal
-          title="Scheduled emails"
+          title={localize("Scheduled emails")}
           onClose={() => setModal(null)}
           wide
         >
@@ -799,10 +776,10 @@ export default function WebmailView({ state, dispatch }) {
               .map((email) => (
                 <div className="sb-scheduled-email" key={email.id}>
                   <div>
-                    <strong>{email.subject}</strong>
+                    <strong><HomepageText fallback={email.subject} /></strong>
                     <p>
                       {email.recipient} ·{" "}
-                      {email.scheduledAt?.replace("T", " ").slice(0, 16)} UTC
+                      {email.scheduledAt?.replace("T", " ").slice(0, 16)} <HomepageText fallback="UTC" />
                     </p>
                   </div>
                   <button
@@ -812,12 +789,12 @@ export default function WebmailView({ state, dispatch }) {
                       dispatch({ type: "SEND_SCHEDULED", id: email.id })
                     }
                   >
-                    Send now
+                    <HomepageText fallback="Send now" />
                   </button>
                   <button
                     type="button"
                     className="sb-icon"
-                    aria-label={`Cancel scheduled ${email.subject}`}
+                    aria-label={`${localize("Cancel scheduled")} ${localize(email.subject)}`}
                     onClick={() => dispatch({ type: "TRASH", id: email.id })}
                   >
                     <Trash2 size={16} />
@@ -826,8 +803,7 @@ export default function WebmailView({ state, dispatch }) {
               ))}
             {!state.emails.some((e) => e.folder === "scheduled") && (
               <p className="sb-empty">
-                No scheduled messages. Compose an email and choose Schedule to
-                add one.
+                <HomepageText fallback="No scheduled messages. Compose an email and choose Schedule to add one." />
               </p>
             )}
             <button
@@ -838,7 +814,7 @@ export default function WebmailView({ state, dispatch }) {
                 setCompose({});
               }}
             >
-              Compose message
+              <HomepageText fallback="Compose message" />
             </button>
           </div>
         </SandboxModal>

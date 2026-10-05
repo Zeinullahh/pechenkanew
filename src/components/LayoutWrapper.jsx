@@ -6,7 +6,6 @@ import ParallaxGlobe from "@/components/ParallaxGlobe";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import CookieConsent from "@/components/CookieConsent";
 import BackToTopButton from "@/components/BackToTopButton";
-import BrowserLocaleRedirect from "@/components/BrowserLocaleRedirect";
 export default function LayoutWrapper({ children, initialLanguage }) {
   const pathname = usePathname();
   // Strip the locale prefix (e.g. "/en/...") so route checks work on localized URLs
@@ -21,7 +20,6 @@ export default function LayoutWrapper({ children, initialLanguage }) {
 
   return (
     <LanguageProvider initialLanguage={initialLanguage}>
-      <BrowserLocaleRedirect currentLocale={initialLanguage} />
       {showParallaxGlobe && <ParallaxGlobe />}
       <div className={!isPolicyPage ? "default-content-wrapper pt-20" : "default-content-wrapper"}>
         {children}

@@ -115,11 +115,13 @@ export function webSandboxReducer(state, action) {
   }
   return state;
 }
-const eventLog = (state, category, detail, action = category) => ({
+const eventLog = (state, category, detail, action = category, detailKey, values) => ({
   id: `audit-${state.sequence + 1}`,
   time: new Date(state.now).toISOString().slice(11, 19),
   category,
   detail,
+  detailKey,
+  values,
   action,
   type: "ADMIN",
 });
@@ -180,10 +182,10 @@ export function sandboxReducer(state, action) {
           ? null
           : state.selectedEmailId,
         logs: [
-          eventLog(state, "Admin Domain Purge", detail, "Permanently Deleted"),
+          eventLog(state, "Admin Domain Purge", detail, "Permanently Deleted", "homeSandbox.auditPurge", { subject: email.subject, count: copies.length }),
           ...state.logs,
         ],
-        toast: { title: "Domain-wide purge complete", detail, type: "success" },
+        toast: { title: "Domain-wide purge complete", detail: "Purged {subject} from {count} domain mailboxes.", values: { subject: email.subject, count: copies.length }, type: "success" },
       };
     }
     case "TRASH":
@@ -254,12 +256,15 @@ export function sandboxReducer(state, action) {
             "Attack Intercepted",
             detail,
             "Quarantined by AI-CSD",
+            "homeSandbox.auditAttack",
+            { verdict: attacks[0].securityAnalysis.verdict, count: attacks.length },
           ),
           ...state.logs,
         ],
         toast: {
           title: "Simulated zero-day attack intercepted",
-          detail,
+          detail: "{verdict}. {count} deliveries quarantined.",
+          values: { verdict: attacks[0].securityAnalysis.verdict, count: attacks.length },
           type: "critical",
         },
       };
@@ -313,7 +318,8 @@ export function sandboxReducer(state, action) {
         ],
         toast: {
           title: "Reply sent in demo",
-          detail: `Delivered to ${reply.recipient}. Available in Sent.`,
+          detail: "Delivered to {recipient}. Available in Sent.",
+          values: { recipient: reply.recipient },
           type: "success",
         },
       };
@@ -402,19 +408,20 @@ export function sandboxReducer(state, action) {
         return e;
       });
 
-      const detail = `Фолдер «${folderName}» создан: ${movedCount} писем перенаправлено.`;
+      const detail = `Folder ${folderName} created: ${movedCount} messages moved.`;
       return {
         ...state,
         sequence: state.sequence + 1,
         customFolders,
         emails,
         logs: [
-          eventLog(state, "AI Mail Organization", detail, "Folder Created & Routed"),
+          eventLog(state, "AI Mail Organization", detail, "Folder Created & Routed", "homeSandbox.auditFolder", { folder: folderName, count: movedCount }),
           ...state.logs,
         ],
         toast: {
-          title: `Фолдер «${folderName}» создан`,
-          detail: `${movedCount} писем перенаправлено в новую папку`,
+          title: "Folder {folderName} created",
+          detail: "{count} messages moved to the new folder",
+          values: { folderName, count: movedCount },
           type: "success",
         },
       };
@@ -657,52 +664,36 @@ export function filterTraffic(
 }
 
 // A local, evidence-based assistant: every response uses the current inbox and selected incident.
-export function answerSecurityQuestion(question, email, emails, logs) {
+export function answerSecurityQuestion(question, email, emails, logs, localize = (copy) => copy) {
   const q = question.toLowerCase();
-  const threats = emails.filter(
-    (e) => isIncoming(e) && e.threatType !== "secure",
-  );
-  if (/переведи|перенаправ|папк|фолдер|folder|move.*to/.test(q)) {
+  const threats = emails.filter((item) => isIncoming(item) && item.threatType !== "secure");
+  if (/folder|move.*to|папк|перевед|klasör|taşı|dossier|déplac|ordner|verschieb|フォルダ|移動|폴더|옮|文件夹|移动|مجلد|نقل/i.test(q)) {
     let folder = "Finance & Audit";
     if (/audit|аудит/i.test(q) && !/finance|финанс/i.test(q)) folder = "Audit";
     else if (/finance|финанс/i.test(q) && !/audit|аудит/i.test(q)) folder = "Finance";
     else if (/executive|руковод/i.test(q)) folder = "Executive Board";
-    return `Фолдер «${folder}» был создан (кастомный фолдер добавлен в систему), и соответствующие письма были перенаправлены туда. Вы можете открыть его в боковом меню.`;
+    return localize("Created {folder} and moved matching messages there. Find them under My Folders.", { folder });
   }
-  if (/purge|delet|удал|очист/.test(q))
-    return `Use ADMIN: Domain-Wide Purge or Delete across entire domain to remove every delivery of the selected campaign from both products. ${logs.filter((l) => l.category === "Admin Domain Purge").length} purge operations are recorded in the CMC audit log.`;
-  if (/how many|summary|overview|count|сколько|сводк/.test(q))
-    return `There are ${threats.length} quarantined deliveries: ${threats.filter((e) => e.threatType === "phishing").length} phishing, ${threats.filter((e) => e.threatType === "malware").length} malware, ${threats.filter((e) => e.threatType === "dangerous_links").length} dangerous links, and ${threats.filter((e) => e.threatType === "spam").length} spam. Counts reflect your current demo actions.`;
-  const match =
-    emails.find(
-      (e) =>
-        q.includes(e.senderEmail.toLowerCase()) ||
-        (q.includes("macro") && e.threatType === "malware") ||
-        (/ceo|wire/.test(q) && e.threatType === "phishing"),
-    ) || email;
-  if (!match)
-    return `Select an email to inspect an incident, or ask for a quarantine summary. The demo currently contains ${threats.length} quarantined deliveries.`;
+  if (/purge|delet|удал|sil|supprim|lösch|削除|삭제|删除|حذف/i.test(q)) {
+    const count = logs.filter((item) => item.category === "Admin Domain Purge").length;
+    return localize("Use domain-wide delete to remove every copy of a campaign. The audit log records {count} purge operations.", { count });
+  }
+  if (/how many|summary|overview|count|сколько|сводк|özet|kaç|résum|combien|zusammenfass|wie viele|要約|요약|몇|摘要|多少|ملخص|كم/i.test(q)) {
+    const count = (type) => threats.filter((item) => item.threatType === type).length;
+    return localize("The demo contains {total} quarantined messages: {phishing} phishing, {malware} malware, {links} dangerous links, and {spam} spam.", { total: threats.length, phishing: count("phishing"), malware: count("malware"), links: count("dangerous_links"), spam: count("spam") });
+  }
+  const match = emails.find((item) => q.includes(item.senderEmail.toLowerCase()) || (q.includes("macro") && item.threatType === "malware") || (/ceo|wire/i.test(q) && item.threatType === "phishing")) || email;
+  if (!match) return localize("Select a message to inspect, or ask for a quarantine summary. There are {count} quarantined messages.", { count: threats.length });
   const analysis = match.securityAnalysis;
-  if (/attach|macro|hash|virus|malware|влож|вирус|хеш/.test(q)) {
+  if (/attach|macro|hash|virus|malware|влож|вирус|хеш|ek|hash|pièce jointe|anhang|添付|첨부|附件|مرفق/i.test(q)) {
     const attachments = analysis?.attachments || [];
     return attachments.length
-      ? attachments
-          .map(
-            (a) =>
-              `${a?.name || "Attachment"}: ${a?.virusTotalVerdict || "No scan result"}. SHA-256: ${a?.sha256 || a?.hash || "not available"}. ${a?.isMalicious ? "Download is blocked." : "Clean in the demonstration scan."}`,
-          )
-          .join("\n")
-      : `“${match.subject}” has no attachments. ${analysis?.summary || ""}`;
+      ? attachments.map((item) => localize("{name}: {verdict}. SHA-256: {hash}. {status}", { name: item?.name || localize("Attachment"), verdict: localize(item?.virusTotalVerdict || "No scan result"), hash: item?.sha256 || item?.hash || localize("not available"), status: localize(item?.isMalicious ? "Download is blocked." : "Clean in the demonstration scan.") })).join("\n")
+      : localize("{subject} has no attachments. {summary}", { subject: localize(match.subject), summary: localize(analysis?.summary || "") });
   }
-  if (/dkim|spf|spoof|sender|отправ|подмен/.test(q))
-    return `Sender: ${match.senderEmail}. Authentication: ${analysis?.dkimSpf || "Unknown"}. Spoof score: ${analysis?.spoofScore ?? "Unknown"}/100. ${analysis?.summary || ""}`;
-  if (/link|url|ссыл/.test(q))
-    return (
-      (analysis?.detectedLinks || [])
-        .map((l) => `${l.url}: ${l.status}. ${l.action}.`)
-        .join("\n") || "The selected message contains no detected links."
-    );
-  return `For “${match.subject}”: ${analysis?.verdict || "Awaiting analysis"}. ${analysis?.summary || ""} ${analysis?.aiSuggestedAction || analysis?.aiActionTaken || ""} This local assistant can explain sender authentication, links, attachment hashes, quarantine counts, and purge history from the demo data.`;
+  if (/dkim|spf|spoof|sender|отправ|подмен|gönderen|expéditeur|absender|送信者|발신자|发件人|المرسل/i.test(q)) return localize("Sender: {sender}. Authentication: {auth}. Spoof score: {score}/100. {summary}", { sender: match.senderEmail, auth: localize(analysis?.dkimSpf || "Unknown"), score: analysis?.spoofScore ?? localize("Unknown"), summary: localize(analysis?.summary || "") });
+  if (/link|url|ссыл|bağlantı|lien|リンク|링크|链接|رابط/i.test(q)) return (analysis?.detectedLinks || []).map((item) => localize("{url}: {status}. {action}.", { url: item.url, status: localize(item.status), action: localize(item.action) })).join("\n") || localize("The selected message contains no detected links.");
+  return localize("For {subject}: {verdict}. {summary} {action} Ask about sender authentication, links, attachments, quarantine counts, or purge history.", { subject: localize(match.subject), verdict: localize(analysis?.verdict || "Awaiting analysis"), summary: localize(analysis?.summary || ""), action: localize(analysis?.aiSuggestedAction || analysis?.aiActionTaken || "") });
 }
 
 // Server Security has its own reducer and per-server fixtures; it never enters the

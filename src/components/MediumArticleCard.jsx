@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import EdgeGlowCard from "@/components/EdgeGlowCard";
+import { useHomepageText } from "@/components/HomepageText";
 
 /**
  * MediumArticleCard Component
@@ -10,6 +11,7 @@ import EdgeGlowCard from "@/components/EdgeGlowCard";
  * For static export compatibility, requires manual metadata or uses fallbacks
  */
 export default function MediumArticleCard({ article, index = 0 }) {
+  const localize = useHomepageText();
   const glowColors = ["#8B5CF6", "#EC4899", "#3B82F6", "#10B981"];
   const glowColor = glowColors[index % glowColors.length];
   
@@ -19,8 +21,8 @@ export default function MediumArticleCard({ article, index = 0 }) {
   const [imageError, setImageError] = useState(false);
   
   // Extract data with fallbacks
-  const title = articleData.title || "Featured Article";
-  const description = articleData.description || "Click to read the full article from Silence.";
+  const title = localize(articleData.title || "Featured Article");
+  const description = localize(articleData.description || "Click to read the full article from Silence.");
   const url = articleData.url;
   
   // For LinkedIn posts, try to construct OG image URL
@@ -37,8 +39,8 @@ export default function MediumArticleCard({ article, index = 0 }) {
   };
   
   const image = getImageUrl();
-  const date = articleData.date || "Recent";
-  const readTime = articleData.readTime || "2 min read";
+  const date = localize(articleData.date || "Recent");
+  const readTime = localize(articleData.readTime || "2 min read");
 
   return (
     <a
@@ -92,7 +94,7 @@ export default function MediumArticleCard({ article, index = 0 }) {
 
             {/* Read more link */}
             <div className="mt-auto flex items-center gap-2 pt-4 text-sm font-semibold text-blue-300">
-              Read on LinkedIn
+              {localize("Read on LinkedIn")}
               <svg
                 className="w-4 h-4"
                 fill="none"

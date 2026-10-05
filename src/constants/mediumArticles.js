@@ -49,17 +49,17 @@ export const articles = [
   {
     url: "https://www.linkedin.com/posts/silence-ai_abusing-trusted-cloud-apis-what-silence-activity-7416829033738575872--ZJp?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD_lxEUBin8M9aLVMv9WVpiOwxXv5GbBRgs",
     title: "Be careful on what you trust",
-    description: "🔴 Abusing Trusted Cloud APIs: What Silence AI's Strong Threat Intelligence Reveals..."
+    description: "Attackers can abuse trusted cloud APIs. See what our threat intelligence uncovered."
   },
   {
     url: "https://www.linkedin.com/posts/silence-ai_threatintelligence-threathunting-cybersecurity-activity-7416406312533557248-ijTu?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD_lxEUBin8M9aLVMv9WVpiOwxXv5GbBRgs",
     title: "Silence AI's intelligence is ahead of VirusTotal, owned by Google",
-    description: "🟢 Green on VirusTotal ≠ Safe 😱Recently, our Threat Hunting team at Silence AI took a closer look at active crypt..."
+    description: "A clean VirusTotal result does not guarantee safety. Our threat hunters investigated an active threat."
   },
   {
     url: "https://www.linkedin.com/posts/silence-ai_github-gokbakarerulesetrat-a-curated-activity-7416402278817013760-8na_?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD_lxEUBin8M9aLVMv9WVpiOwxXv5GbBRgs",
     title: "Catching the RAT Before the Beacon: Builder-Level YARA Detection",
-    description: "🧐 RuleSetRAT: Custom YARA Rules and RAT Builder Analysis. What do you do when the required sample isn’t available on V..."
+    description: "RuleSetRAT analysis and custom YARA rules help detect the threat even when the original sample is unavailable."
   },
 ];
 

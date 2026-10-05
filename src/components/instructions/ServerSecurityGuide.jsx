@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { AlertTriangle, LayoutDashboard, List, Mail, Menu, Server, X } from "lucide-react";
+import { AlertTriangle, List, Menu, Server, X } from "lucide-react";
 
 const slugify = (value) => value
   .normalize("NFKC")
@@ -263,27 +263,34 @@ export default function ServerSecurityGuide({ markdown, anchorMarkdown, locale =
           </h1>
           <div className="mt-4 h-px w-full bg-gradient-to-r from-blue-500/45 via-emerald-500/15 to-transparent" />
           {guideViews.length > 0 && (
-            <div className="mt-6 grid grid-cols-2 gap-2 rounded-2xl border border-white/10 bg-[#03050a]/90 p-1.5" role="tablist" aria-label={labels.guideSelector}>
-              {guideViews.map((view) => {
-                const selected = view.id === activeViewId;
-                const Icon = view.id === "workspace" ? Mail : LayoutDashboard;
-                return (
-                  <button
-                    key={view.id}
-                    type="button"
-                    role="tab"
-                    aria-selected={selected}
-                    onClick={() => chooseView(view)}
-                    className={`flex min-w-0 items-center gap-3 rounded-xl border px-3 py-3 text-start transition-all duration-300 sm:px-4 ${selected ? view.id === "workspace" ? "border-emerald-500/35 bg-emerald-500/10 text-white shadow-[0_0_24px_rgba(16,185,129,0.12)]" : "border-blue-500/40 bg-blue-500/10 text-white shadow-[0_0_24px_rgba(37,99,235,0.16)]" : "border-transparent text-slate-400 hover:border-white/10 hover:bg-white/[0.04] hover:text-white"}`}
-                  >
-                    <Icon className={`h-5 w-5 shrink-0 ${selected ? view.id === "workspace" ? "text-emerald-400" : "text-blue-400" : "text-slate-600"}`} />
-                    <span className="min-w-0">
-                      <span className="block truncate text-sm font-bold sm:text-base">{view.label}</span>
-                      <span className="mt-0.5 hidden text-xs leading-5 text-slate-500 sm:block">{view.description}</span>
-                    </span>
-                  </button>
-                );
-              })}
+            <div className="mt-6 flex flex-col items-center" role="tablist" aria-label={labels.guideSelector}>
+              <div className="flex w-full max-w-xl items-center justify-center gap-8 border-b border-white/10 sm:gap-16">
+                {guideViews.map((view) => {
+                  const selected = view.id === activeViewId;
+                  return (
+                    <button
+                      key={view.id}
+                      type="button"
+                      role="tab"
+                      aria-selected={selected}
+                      onClick={() => chooseView(view)}
+                      className={`relative min-h-12 px-2 text-center text-sm font-semibold transition-colors sm:px-4 sm:text-base ${selected ? "text-white" : "text-slate-400 hover:text-white"}`}
+                    >
+                      {view.label}
+                      {selected && (
+                        <motion.span
+                          layoutId="instruction-view-underline"
+                          className="absolute inset-x-0 -bottom-px h-0.5 rounded-full bg-[#3B82F6]"
+                          transition={{ type: "spring", stiffness: 360, damping: 32 }}
+                        />
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+              <p className="mt-3 min-h-5 text-center text-xs leading-5 text-slate-400 sm:text-sm">
+                {guideViews.find((view) => view.id === activeViewId)?.description}
+              </p>
             </div>
           )}
         </div>

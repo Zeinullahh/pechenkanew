@@ -596,18 +596,19 @@ const EmailSecurityPricing = ({
   onCurrencyChange,
   onOpenModal,
 }) => {
+  const { t } = useLanguage();
   const sharedFeatures = plans[0]?.features.slice(0, -3) ?? [];
 
   return (
     <div className="mx-auto max-w-6xl">
       <div className="mb-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-2xl">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-blue-300">Email Security</p>
-          <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Choose the capacity your team needs.</h3>
-          <p className="mt-4 text-sm leading-6 text-white/60">Every plan includes the complete email protection platform. Plans differ only by team size, administrator seats, and mailbox storage.</p>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-blue-300">{t("pricing.emailSecurity.title", "Email Security")}</p>
+          <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">{t("pricing.emailSecurity.subtitle", "Choose the capacity your team needs.")}</h3>
+          <p className="mt-4 text-sm leading-6 text-white/60">{t("pricing.emailSecurity.description", "Every plan includes the complete email protection platform. Plans differ only by team size, administrator seats, and mailbox storage.")}</p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-          <BillingPill billing={billing} setBilling={setBilling} labels={billingLabels} ariaLabel="Email security billing period" />
+          <BillingPill billing={billing} setBilling={setBilling} labels={billingLabels} ariaLabel={t("pricing.emailSecurity.billingPeriod", "Email security billing period")} />
           <CurrencySelector currency={currency} onCurrencyChange={onCurrencyChange} pricingStyle />
         </div>
       </div>
@@ -637,16 +638,16 @@ const EmailSecurityPricing = ({
               }`}
             >
               <div className={`relative flex h-full flex-col p-6 sm:p-7 ${highlighted ? "bg-blue-500/[0.08]" : ""}`}>
-                {highlighted && <span className="absolute right-5 top-5 rounded-full border border-blue-300/25 bg-blue-400/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-blue-100">Most popular</span>}
+                {highlighted && <span className="absolute right-5 top-5 rounded-full border border-blue-300/25 bg-blue-400/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-blue-100">{t("pricing.emailSecurity.mostPopular", "Most popular")}</span>}
                 <p className="pr-24 text-lg font-semibold text-white">{plan.title}</p>
                 <div className="mt-6 flex items-end gap-2">
                   <span className="text-4xl font-semibold tracking-tight text-white">{formatPrice(displayPrice, currency)}</span>
-                  <span className="pb-1 text-xs leading-4 text-white/45">/ user<br />/ month</span>
+                  <span className="pb-1 text-xs leading-4 text-white/45">{t("pricing.emailSecurity.perUser", "/ user")}<br />{t("pricing.emailSecurity.perMonth", "/ month")}</span>
                 </div>
-                <p className="mt-2 text-xs text-white/45">{billing === "yearly" ? "Annual commitment" : "Billed monthly"}</p>
+                <p className="mt-2 text-xs text-white/45">{billing === "yearly" ? t("pricing.emailSecurity.annualCommitment", "Annual commitment") : t("pricing.emailSecurity.billedMonthly", "Billed monthly")}</p>
 
                 <div className="my-6 h-px bg-white/10" />
-                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-200">Plan capacity</p>
+                <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-200">{t("pricing.emailSecurity.planCapacity", "Plan capacity")}</p>
                 <ul className="space-y-3">
                   {differentiators.map((feature) => {
                     const label = typeof feature === "string" ? feature : feature.label;

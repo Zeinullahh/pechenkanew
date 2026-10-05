@@ -4,23 +4,15 @@ import Header from "@/components/Header";
 import ServerSecurityGuide from "@/components/instructions/ServerSecurityGuide";
 
 const adminChapterRules = [
-  { chapter: "1.", sections: ["1.3"] },
-  { chapter: "2.", sections: ["2.1", "2.2"] },
+  { chapter: "2.", sections: ["2.2"] },
   { chapter: "3.", sections: true },
   { chapter: "6.", sections: ["6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "6.11"] },
-  { chapter: "7.", sections: true },
-  { chapter: "8.", sections: true },
-  { chapter: "9.", sections: true },
 ];
 
 const workspaceChapterRules = [
-  { chapter: "1.", sections: ["1.3"] },
-  { chapter: "2.", sections: ["2.1", "2.3"] },
-  { chapter: "4.", sections: true },
-  { chapter: "6.", sections: ["6.1", "6.2", "6.3", "6.6", "6.7", "6.8"] },
-  { chapter: "7.", sections: true },
-  { chapter: "8.", sections: true },
-  { chapter: "9.", sections: true },
+  { chapter: "2.", sections: ["2.3"] },
+  { chapter: "4.", sections: ["4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "4.9", "4.10", "4.11"] },
+  { chapter: "6.", sections: ["6.2", "6.3", "6.7", "6.8"] },
 ];
 
 const localeContent = {
@@ -33,9 +25,9 @@ const localeContent = {
       "Contents": "All users",
       "1. Platform overview": "All users",
       "2. Account access": "All users",
-      "3. CMC — Silence 365 Email Visualizer": "Admin Panel",
+      "3. CMC — Silence 365 Email Visualizer": "Admin Console",
       "4. Email Protector": "Email Workspace",
-      "5. WebSOC / AI-SOC Web": "Admin Panel",
+      "5. WebSOC / AI-SOC Web": "Admin Console",
       "6. Common issues": "All users",
       "7. Security recommendations": "All users",
       "8. Glossary": "All users",
@@ -43,8 +35,8 @@ const localeContent = {
     },
     ui: { sections: "Sections", topic: "topic", topics: "topics", overview: "Overview", reference: "Reference", closeSections: "Close sections", guideSelector: "Choose instruction system" },
     views: [
-      { id: "admin", label: "Admin Panel", description: "CMC setup, domains, users, policies, and monitoring", chapterRules: adminChapterRules },
-      { id: "workspace", label: "Email Workspace", description: "Mailbox, messages, folders, settings, and migration", chapterRules: workspaceChapterRules },
+      { id: "admin", label: "Admin Console", description: "Manage company domains, employees, mail flow, protection settings, and monitoring", chapterRules: adminChapterRules },
+      { id: "workspace", label: "Email Workspace", description: "Read, send, search, and organize messages; manage folders and personal mailbox settings", chapterRules: workspaceChapterRules },
     ],
   },
   ru: {
@@ -56,7 +48,7 @@ const localeContent = {
       "Содержание": "Все пользователи",
       "1. О платформе": "Все пользователи",
       "2. Доступ к учётной записи": "Все пользователи",
-      "3. CMC — Silence 365 Email Visualizer": "Панель администратора",
+      "3. \u043a\u043e\u043d\u0441\u043e\u043b\u044c \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430 ? Silence 365 Email Visualizer": "Admin Console",
       "4. Email Protector": "Почтовое пространство",
       "5. WebSOC / AI-SOC Web": "Панель администратора",
       "6. Типовые неполадки": "Все пользователи",
@@ -66,8 +58,8 @@ const localeContent = {
     },
     ui: { sections: "Разделы", topic: "тема", topics: "темы", overview: "Обзор", reference: "Справка", closeSections: "Закрыть разделы", guideSelector: "Выберите систему инструкций" },
     views: [
-      { id: "admin", label: "Панель администратора", description: "Настройка CMC, доменов, пользователей, политик и мониторинга", chapterRules: adminChapterRules },
-      { id: "workspace", label: "Почтовое пространство", description: "Почта, письма, папки, настройки и миграция", chapterRules: workspaceChapterRules },
+      { id: "admin", label: "Admin Console", description: "Управляйте доменами компании, сотрудниками, почтовыми потоками, настройками защиты и мониторингом", chapterRules: adminChapterRules },
+      { id: "workspace", label: "Email Workspace", description: "Читайте, отправляйте, ищите и сортируйте письма; управляйте папками и настройками почтового ящика", chapterRules: workspaceChapterRules },
     ],
   },
 };

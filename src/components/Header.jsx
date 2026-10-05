@@ -131,7 +131,7 @@ const Header = ({ onOpenModal, hideCta = false, allowedLocales }) => {
 
   const instructionsItems = [
     { key: "instructions-email-security", label: t("header.nav.instructionsEmailSecurity", instructionLabels.email), href: "/instructions/email-security", isActive: pathname === "/instructions/email-security" },
-    { key: "instructions-web-security", label: t("header.nav.instructionsWebSecurity", instructionLabels.web) },
+    { key: "instructions-web-security", label: t("header.nav.instructionsWebSecurity", instructionLabels.web), href: "/instructions/web-security", isActive: pathname === "/instructions/web-security" },
     { key: "instructions-pentester", label: t("header.nav.instructionsPentester", instructionLabels.pentester), href: "/instructions/pentester", isActive: pathname === "/instructions/pentester" },
     { key: "instructions-server-security", label: t("header.nav.instructionsServerSecurity", instructionLabels.server), href: "/instructions/server", isActive: pathname === "/instructions/server" },
   ];
@@ -352,7 +352,7 @@ const Header = ({ onOpenModal, hideCta = false, allowedLocales }) => {
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
             <motion.div
-              className="flex shrink-0 items-center"
+              className="flex shrink-0 items-center translate-y-0.5 sm:translate-y-0"
               animate={{ x: condensedShift }}
               transition={{ duration: 0.3, ease: "easeOut" }}
             >

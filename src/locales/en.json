@@ -120,6 +120,32 @@
     },
     "compliance": {
       "title": "Built for Global Compliance"
+    },
+    "story": {
+      "ariaLabel": "AI-powered cybersecurity department overview",
+      "scene1": {
+        "line1": "AI-Powered",
+        "line2": "Cybersecurity Department",
+        "support": "Autonomous protection. One command layer."
+      },
+      "scene2": {
+        "line1": "Four AI systems.",
+        "line2": "Four vectors of protection.",
+        "email": "Email",
+        "web": "Web",
+        "server": "Server",
+        "pentest": "AI penetration testing"
+      },
+      "scene3": {
+        "line1": "One AI manager",
+        "line2": "above them all.",
+        "support": "Ask. Investigate. Block. Respond."
+      },
+      "scene4": {
+        "line1": "Your security posture.",
+        "line2": "In your hands.",
+        "support": "One interface. Every protection vector."
+      }
     }
   },
   "documentation": {
@@ -1705,6 +1731,18 @@
     "perYear": "per year (est.)",
     "calculator": {
       "subtitle": "Slide to see annual maintenance cost"
+    },
+    "emailSecurity": {
+      "title": "Email Security",
+      "subtitle": "Choose the capacity your team needs.",
+      "description": "Every plan includes the complete email protection platform. Plans differ only by team size, administrator seats, and mailbox storage.",
+      "billingPeriod": "Email security billing period",
+      "mostPopular": "Most popular",
+      "perUser": "/ user",
+      "perMonth": "/ month",
+      "annualCommitment": "Annual commitment",
+      "billedMonthly": "Billed monthly",
+      "planCapacity": "Plan capacity"
     }
   },
   "solution": {

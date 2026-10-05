@@ -442,6 +442,18 @@
     },
     "calculator": {
       "subtitle": "Bewegen Sie den Regler, um die jährlichen Wartungskosten zu sehen"
+    },
+    "emailSecurity": {
+      "title": "E-Mail-Sicherheit",
+      "subtitle": "W?hlen Sie die passende Kapazit?t f?r Ihr Team.",
+      "description": "Jeder Tarif umfasst die vollst?ndige E-Mail-Schutzplattform. Die Tarife unterscheiden sich nur durch Teamgr??e, Administratorkonten und Postfachspeicher.",
+      "billingPeriod": "Abrechnungszeitraum f?r E-Mail-Sicherheit",
+      "mostPopular": "Am beliebtesten",
+      "perUser": "/ Nutzer",
+      "perMonth": "/ Monat",
+      "annualCommitment": "J?hrliche Bindung",
+      "billedMonthly": "Monatliche Abrechnung",
+      "planCapacity": "Tarifumfang"
     }
   },
   "solution": {
@@ -1116,6 +1128,32 @@
       "title": "Empfohlene Artikel",
       "subtitle": "Silence AI ist eines der wenigen privaten Unternehmen mit Geheimdienst-Niveau.",
       "viewAll": "Alle Artikel ansehen"
+    },
+    "story": {
+      "ariaLabel": "?berblick ?ber die KI-gest?tzte Cybersicherheitsabteilung",
+      "scene1": {
+        "line1": "KI-gest?tzt",
+        "line2": "Cybersicherheitsabteilung",
+        "support": "Autonomer Schutz. Eine Steuerungsebene."
+      },
+      "scene2": {
+        "line1": "Vier KI-Systeme.",
+        "line2": "Vier Schutzbereiche.",
+        "email": "E-Mail",
+        "web": "Web",
+        "server": "Server",
+        "pentest": "KI-gest?tzter Penetrationstest"
+      },
+      "scene3": {
+        "line1": "Ein KI-Manager",
+        "line2": "steuert alle.",
+        "support": "Fragen. Untersuchen. Blockieren. Reagieren."
+      },
+      "scene4": {
+        "line1": "Ihre Sicherheitslage.",
+        "line2": "In Ihrer Hand.",
+        "support": "Eine Oberfl?che. Alle Schutzbereiche."
+      }
     }
   },
   "documentation": {

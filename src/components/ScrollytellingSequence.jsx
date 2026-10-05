@@ -8,6 +8,7 @@ const FRAME_COUNT = 118;
 const LAST_FRAME = FRAME_COUNT - 1;
 const FINAL_STORY_FRAME = 117;
 const PREFETCH_RADIUS = 4;
+const MOBILE_PREFETCH_RADIUS = 2;
 const MAX_CACHED_FRAMES = 12;
 const FINAL_FRAME_PREFETCH_POINT = 0.86;
 
@@ -38,6 +39,14 @@ function getFrameForProgress(progress) {
       Math.round(range.frameStart + rangeProgress * (range.frameEnd - range.frameStart))
     )
   );
+}
+
+function getFrameVariant() {
+  return window.innerWidth < 768 ? "mobile" : "desktop";
+}
+
+function getFrameKey(frameIndex, variant = getFrameVariant()) {
+  return `${variant}:${frameIndex}`;
 }
 
 function interpolateScrollValue(value, input, output) {
@@ -208,6 +217,7 @@ export default function ScrollytellingSequence({ children }) {
   const regionVisibleRef = useRef(false);
   const pageVisibleRef = useRef(true);
   const lastPrefetchFrameRef = useRef(-1);
+  const lastCanvasSizeRef = useRef("");
   const [isReady, setIsReady] = useState(false);
   const prefersReducedMotion = useReducedMotion();
   const { t } = useLanguage();
@@ -219,11 +229,14 @@ export default function ScrollytellingSequence({ children }) {
   const trimFrameCache = useCallback((centerFrame) => {
     if (framesRef.current.size <= MAX_CACHED_FRAMES) return;
 
-    const framesByDistance = [...framesRef.current.keys()].sort(
-      (firstFrame, secondFrame) => (
-        Math.abs(firstFrame - centerFrame) - Math.abs(secondFrame - centerFrame)
-      )
-    );
+    const variant = getFrameVariant();
+    const framesByDistance = [...framesRef.current.keys()].sort((firstKey, secondKey) => {
+      const [firstVariant, firstIndex] = firstKey.split(":");
+      const [secondVariant, secondIndex] = secondKey.split(":");
+      if (firstVariant !== secondVariant) return firstVariant === variant ? -1 : 1;
+      return Math.abs(Number(firstIndex) - centerFrame)
+        - Math.abs(Number(secondIndex) - centerFrame);
+    });
 
     framesByDistance.slice(MAX_CACHED_FRAMES).forEach((frameIndex) => {
       framesRef.current.delete(frameIndex);
@@ -231,29 +244,36 @@ export default function ScrollytellingSequence({ children }) {
   }, []);
 
   const loadFrame = useCallback((frameIndex) => {
-    const cachedImage = framesRef.current.get(frameIndex);
+    const variant = getFrameVariant();
+    const frameKey = getFrameKey(frameIndex, variant);
+    const cachedImage = framesRef.current.get(frameKey);
     if (cachedImage) return Promise.resolve(cachedImage);
 
-    const activeRequest = loadingFramesRef.current.get(frameIndex);
+    const activeRequest = loadingFramesRef.current.get(frameKey);
     if (activeRequest) return activeRequest;
 
     const request = new Promise((resolve, reject) => {
       const image = new Image();
       image.decoding = "async";
       image.onload = () => {
-        framesRef.current.set(frameIndex, image);
-        trimFrameCache(targetFrameRef.current);
-        loadingFramesRef.current.delete(frameIndex);
-        resolve(image);
+        // Decode before painting so the canvas does not stall during a scroll frame.
+        image.decode().catch(() => {}).then(() => {
+          framesRef.current.set(frameKey, image);
+          trimFrameCache(targetFrameRef.current);
+          loadingFramesRef.current.delete(frameKey);
+          resolve(image);
+        });
       };
       image.onerror = () => {
-        loadingFramesRef.current.delete(frameIndex);
+        loadingFramesRef.current.delete(frameKey);
         reject(new Error(`Unable to load frame ${frameIndex + 1}`));
       };
-      image.src = `/frames/frame-${frameIndex + 1}.webp`;
+      image.src = variant === "mobile"
+        ? `/frames/mobile/frame-${frameIndex + 1}.webp`
+        : `/frames/frame-${frameIndex + 1}.webp`;
     });
 
-    loadingFramesRef.current.set(frameIndex, request);
+    loadingFramesRef.current.set(frameKey, request);
     return request;
   }, [trimFrameCache]);
 
@@ -262,15 +282,17 @@ export default function ScrollytellingSequence({ children }) {
     if (!canvas) return;
 
     let frameIndex = requestedFrame;
-    let image = framesRef.current.get(frameIndex);
+    const variant = getFrameVariant();
+    const getCachedFrame = (index) => framesRef.current.get(getFrameKey(index, variant));
+    let image = getCachedFrame(frameIndex);
 
     if (!image) {
       for (let distance = 1; distance < FRAME_COUNT; distance += 1) {
         const previousFrame = requestedFrame - distance;
         const nextFrame = requestedFrame + distance;
-        image = framesRef.current.get(previousFrame) || framesRef.current.get(nextFrame);
+        image = getCachedFrame(previousFrame) || getCachedFrame(nextFrame);
         if (image) {
-          frameIndex = framesRef.current.has(previousFrame) ? previousFrame : nextFrame;
+          frameIndex = getCachedFrame(previousFrame) ? previousFrame : nextFrame;
           break;
         }
       }
@@ -280,7 +302,7 @@ export default function ScrollytellingSequence({ children }) {
 
     const viewportWidth = canvas.clientWidth || window.innerWidth;
     const viewportHeight = canvas.clientHeight || window.innerHeight;
-    const isMobile = viewportWidth < 768;
+    const isMobile = variant === "mobile";
     const pixelRatio = Math.min(window.devicePixelRatio || 1, isMobile ? 1 : 1.5);
     const width = Math.max(1, Math.round(viewportWidth * pixelRatio));
     const height = Math.max(1, Math.round(viewportHeight * pixelRatio));
@@ -289,13 +311,14 @@ export default function ScrollytellingSequence({ children }) {
       canvas.width = width;
       canvas.height = height;
     }
+    lastCanvasSizeRef.current = `${viewportWidth}:${viewportHeight}:${pixelRatio}`;
 
     const context = canvas.getContext("2d");
     if (!context) return;
 
     context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
     context.imageSmoothingEnabled = true;
-    context.imageSmoothingQuality = "high";
+    context.imageSmoothingQuality = isMobile ? "medium" : "high";
     context.clearRect(0, 0, viewportWidth, viewportHeight);
 
     const maxImageWidth = viewportWidth * (isMobile ? 1.72 : 0.92);
@@ -334,7 +357,8 @@ export default function ScrollytellingSequence({ children }) {
     if (prefersReducedMotion || lastPrefetchFrameRef.current === centerFrame) return;
     lastPrefetchFrameRef.current = centerFrame;
 
-    for (let offset = -PREFETCH_RADIUS; offset <= PREFETCH_RADIUS; offset += 1) {
+    const radius = getFrameVariant() === "mobile" ? MOBILE_PREFETCH_RADIUS : PREFETCH_RADIUS;
+    for (let offset = -radius; offset <= radius; offset += 1) {
       const frameIndex = centerFrame + offset;
       if (frameIndex >= 0 && frameIndex < FRAME_COUNT) {
         loadFrame(frameIndex).catch(() => {});
@@ -423,6 +447,13 @@ export default function ScrollytellingSequence({ children }) {
     });
 
     const handleResize = () => {
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      const variant = getFrameVariant();
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, variant === "mobile" ? 1 : 1.5);
+      const canvasSize = `${canvas.clientWidth}:${canvas.clientHeight}:${pixelRatio}`;
+      if (canvasSize === lastCanvasSizeRef.current) return;
+      lastPrefetchFrameRef.current = -1;
       currentFrameRef.current = -1;
       renderCurrentFrame();
     };
@@ -454,7 +485,7 @@ export default function ScrollytellingSequence({ children }) {
       </div>
 
       <div className="relative z-10 -mt-[100svh]">
-        <div ref={storyRef} className={prefersReducedMotion ? "relative h-[100svh]" : "relative h-[255svh] md:h-[285vh]"}>
+        <div ref={storyRef} className={prefersReducedMotion ? "relative h-[100svh]" : "relative h-[215svh] md:h-[285vh]"}>
           {prefersReducedMotion ? <ReducedMotionStory /> : <StoryCopy progress={scrollYProgress} />}
         </div>
         <div className="relative z-20 pb-12 sm:pb-16">

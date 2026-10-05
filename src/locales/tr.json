@@ -442,6 +442,18 @@
     "perYear": "yıllık (tahmini)",
     "calculator": {
       "subtitle": "Yıllık bakım maliyetini görmek için kaydırın"
+    },
+    "emailSecurity": {
+      "title": "E-posta G?venli?i",
+      "subtitle": "Ekibinizin ihtiya? duydu?u kapasiteyi se?in.",
+      "description": "Her plan eksiksiz e-posta koruma platformunu i?erir. Planlar yaln?zca ekip b?y?kl???, y?netici koltuklar? ve posta kutusu depolama alan? bak?m?ndan farkl?d?r.",
+      "billingPeriod": "E-posta g?venli?i faturaland?rma d?nemi",
+      "mostPopular": "En pop?ler",
+      "perUser": "/ kullan?c?",
+      "perMonth": "/ ay",
+      "annualCommitment": "Y?ll?k taahh?t",
+      "billedMonthly": "Ayl?k faturaland?r?l?r",
+      "planCapacity": "Plan kapasitesi"
     }
   },
   "solution": {
@@ -1116,6 +1128,32 @@
       "title": "Öne çıkan yazılar",
       "subtitle": "Silence AI, devlet düzeyi istihbarata sahip az sayıdaki özel şirketten biridir.",
       "viewAll": "Tüm yazıları gör"
+    },
+    "story": {
+      "ariaLabel": "Yapay zek? destekli siber g?venlik departman? tan?t?m?",
+      "scene1": {
+        "line1": "Yapay Zek? Destekli",
+        "line2": "Siber G?venlik Departman?",
+        "support": "Otonom koruma. Tek bir komuta katman?."
+      },
+      "scene2": {
+        "line1": "D?rt yapay zek? sistemi.",
+        "line2": "D?rt koruma alan?.",
+        "email": "E-posta",
+        "web": "Web",
+        "server": "Sunucu",
+        "pentest": "Yapay zek? destekli s?zma testi"
+      },
+      "scene3": {
+        "line1": "Hepsini y?neten",
+        "line2": "tek bir yapay zek?.",
+        "support": "Sor. ?ncele. Engelle. M?dahale et."
+      },
+      "scene4": {
+        "line1": "G?venli?iniz.",
+        "line2": "Sizin kontrol?n?zde.",
+        "support": "Tek aray?z. Her koruma alan?."
+      }
     }
   },
   "documentation": {

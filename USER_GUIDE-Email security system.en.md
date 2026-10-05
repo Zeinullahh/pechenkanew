@@ -2,7 +2,7 @@
 
 Unified Email Platform combines three independent products:
 
-- **CMC / Silence 365 Email Visualizer** — email-domain setup, mail-flow visualization, threat review, and organization management;
+- **Admin Console / Silence 365 Email Visualizer** — email-domain setup, mail-flow visualization, threat review, and organization management;
 - **Email Protector** — secure webmail with message classification, attachment scanning, folders, settings, and mail migration;
 - **WebSOC / AI-SOC Web** — connecting web domains to the security gateway, traffic monitoring, geographic restrictions, and balance management.
 
@@ -12,7 +12,7 @@ The appearance and available features depend on the user role, plan, and organiz
 
 1. [Platform overview](#1-platform-overview)
 2. [Account access](#2-account-access)
-3. [CMC — Silence 365 Email Visualizer](#3-cmc-silence-365-email-visualizer)
+3. [Admin Console — Silence 365 Email Visualizer](#3-admin-console-silence-365-email-visualizer)
 4. [Email Protector](#4-email-protector)
 5. [WebSOC / AI-SOC Web](#5-websoc-ai-soc-web)
 6. [Common issues](#6-common-issues)
@@ -26,9 +26,9 @@ The appearance and available features depend on the user role, plan, and organiz
 
 | Task | Product |
 |---|---|
-| Add an email domain and configure MX, SPF, DKIM, and DMARC | CMC |
-| Review mail-flow directions and threat categories | CMC |
-| Manage employees, departments, and company email servers | CMC, administrator role |
+| Add an email domain and configure MX, SPF, DKIM, and DMARC | Admin Console |
+| Review mail-flow directions and threat categories | Admin Console |
+| Manage employees, departments, and company email servers | Admin Console, administrator role |
 | Read, send, and organize email | Email Protector |
 | Check a message classification or attachment-scan result | Email Protector |
 | Migrate messages from another email service | Email Protector |
@@ -75,9 +75,9 @@ Each console has its own sign-in screen and session. If single sign-on is enable
 4. Enter the six-digit code if the 2FA page opens.
 5. After signing in, confirm that the profile shows the expected account.
 
-### 2.2 Accessing CMC
+### 2.2 Accessing Admin Console
 
-CMC may offer:
+Admin Console may offer:
 
 - **Sign in** with email and password;
 - **Continue with Google**;
@@ -93,9 +93,9 @@ To create a customer account:
 5. Use the button beside the email field to send a verification code.
 6. Enter the received code and a password.
 7. Enter a promo code before completing registration, if applicable.
-8. Complete registration and sign in to CMC.
+8. Complete registration and sign in to Admin Console.
 
-For a local account, CMC asks you to configure 2FA:
+For a local account, Admin Console asks you to configure 2FA:
 
 1. On **Set Up Two-Factor Authentication**, scan the QR code with an authenticator app.
 2. If scanning is unavailable, select **Can't scan? Enter key manually** and add the displayed key.
@@ -142,11 +142,11 @@ For normal sign-in:
 
 To recover a password, select **Forgot password?**, request an email code, then enter the code and new password. **Resend code** sends it again.
 
-## 3. CMC — Silence 365 Email Visualizer
+## 3. Admin Console — Silence 365 Email Visualizer
 
 ### 3.1 Initial setup
 
-For a self-service CMC customer account, select a plan and complete **Initial domain mail setup**. The wizard has four stages: **Domain**, **DNS verification**, **Security**, and **Ready**. Progress is saved for the domain.
+For a self-service Admin Console customer account, select a plan and complete **Initial domain mail setup**. The wizard has four stages: **Domain**, **DNS verification**, **Security**, and **Ready**. Progress is saved for the domain.
 
 If the organization uses only Google or Outlook and **Use AI-SOC as security layer (Gmail/Outlook only)** is available, you may continue without configuring hosted domain mail. Use this option only after agreement with the domain administrator.
 
@@ -160,11 +160,11 @@ If the organization uses only Google or Outlook and **Use AI-SOC as security lay
 6. Select **Check now**; the wizard also checks periodically.
 7. Continue only after **Verified** appears.
 
-Some DNS panels append the domain to Name automatically. Follow the CMC prompt to avoid a duplicated domain suffix.
+Some DNS panels append the domain to Name automatically. Follow the Admin Console prompt to avoid a duplicated domain suffix.
 
 ### 3.3 Configuring MX, SPF, DKIM, and DMARC
 
-At **Step 3. Security setup**, CMC shows the exact records to add.
+At **Step 3. Security setup**, Admin Console shows the exact records to add.
 
 | Record | Purpose |
 |---|---|
@@ -197,7 +197,7 @@ Before deletion, confirm that employees and mail clients no longer use the domai
 
 ### 3.5 Dashboard and mail-flow visualization
 
-The CMC dashboard graph represents employees, departments, or domains as nodes and mail exchange as connections. It provides **Incoming**, **Outgoing**, **Time range**, **Filter**, and analytics cards for departments and domains.
+The Admin Console dashboard graph represents employees, departments, or domains as nodes and mail exchange as connections. It provides **Incoming**, **Outgoing**, **Time range**, **Filter**, and analytics cards for departments and domains.
 
 1. Select **Incoming** or **Outgoing**.
 2. Open **Time range** and choose the last hour, 3/6/12/24 hours, all time, or a custom range.
@@ -557,13 +557,13 @@ The trash icon beside a domain deletes it after confirmation. First save the inf
 
 Check the email address, Spam, and Quarantine. Wait several minutes and resend once. If the organization filters system messages, contact the mail administrator.
 
-### 6.4 CMC domain remains pending
+### 6.4 Admin Console domain remains pending
 
 Compare the TXT name and value character by character, check that the DNS panel did not append the domain twice, confirm the correct DNS zone, wait for propagation, and select **Check now**.
 
 ### 6.5 SPF, DKIM, DMARC, or MX does not verify
 
-1. Reopen the CMC record and compare type, name, value, priority, and TTL.
+1. Reopen the Admin Console record and compare type, name, value, priority, and TTL.
 2. For SPF, check for conflicting records at one name.
 3. For DKIM, check the selector and `_domainkey`.
 4. For DMARC, check `_dmarc` and reporting addresses.
@@ -630,7 +630,7 @@ Do not create another payment immediately. Check **Payment history**, refresh th
 
 Use the support channel provided by your organization. Prepare:
 
-- product name: CMC, Email Protector, or WebSOC;
+- product name: Admin Console, Email Protector, or WebSOC;
 - account email without the password;
 - domain, when relevant;
 - date, exact time, and time zone;

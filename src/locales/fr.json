@@ -443,6 +443,18 @@
     "perYear": "par an (est.)",
     "calculator": {
       "subtitle": "Faites glisser le curseur pour voir le coût annuel de maintenance"
+    },
+    "emailSecurity": {
+      "title": "S?curit? des e-mails",
+      "subtitle": "Choisissez la capacit? adapt?e ? votre ?quipe.",
+      "description": "Chaque offre inclut la plateforme compl?te de protection des e-mails. Seuls la taille de l??quipe, le nombre de comptes administrateur et le stockage des bo?tes aux lettres varient.",
+      "billingPeriod": "P?riode de facturation de la s?curit? des e-mails",
+      "mostPopular": "Le plus populaire",
+      "perUser": "/ utilisateur",
+      "perMonth": "/ mois",
+      "annualCommitment": "Engagement annuel",
+      "billedMonthly": "Factur? mensuellement",
+      "planCapacity": "Capacit? de l?offre"
     }
   },
   "solution": {
@@ -1090,6 +1102,32 @@
       "title": "Articles à la une",
       "subtitle": "Silence AI est l'une des rares entreprises privées à disposer d'une intelligence de niveau gouvernemental.",
       "viewAll": "Voir tous les articles"
+    },
+    "story": {
+      "ariaLabel": "Pr?sentation du service de cybers?curit? propuls? par l?IA",
+      "scene1": {
+        "line1": "Propuls? par l?IA",
+        "line2": "Service de cybers?curit?",
+        "support": "Protection autonome. Une couche de commande."
+      },
+      "scene2": {
+        "line1": "Quatre syst?mes d?IA.",
+        "line2": "Quatre axes de protection.",
+        "email": "E-mail",
+        "web": "Web",
+        "server": "Serveur",
+        "pentest": "Test d?intrusion par IA"
+      },
+      "scene3": {
+        "line1": "Un responsable IA",
+        "line2": "pour les diriger.",
+        "support": "Demander. Examiner. Bloquer. R?agir."
+      },
+      "scene4": {
+        "line1": "Votre s?curit?.",
+        "line2": "Entre vos mains.",
+        "support": "Une interface. Tous les axes de protection."
+      }
     }
   },
   "documentation": {

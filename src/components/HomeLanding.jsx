@@ -14,7 +14,7 @@ import Pricing from "@/components/Pricing";
 import Insights from "@/components/Insights";
 import FaqSection from "@/components/FaqSection";
 import ScrollytellingSequence from "@/components/ScrollytellingSequence";
-import Preloader from "@/components/Preloader";
+import ColorBends from "@/components/ColorBends";
 import { DEFAULT_CURRENCY } from "@/lib/currency";
 import { Rocket, BrainCircuit, Radar, ShieldCheck } from "lucide-react";
 
@@ -266,7 +266,9 @@ export default function HomeLanding() {
   const [isGetModalOpen, setIsGetModalOpen] = useState(false);
   const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
   const [isComparisonVisible, setIsComparisonVisible] = useState(false);
+  const [isComplianceBackdropActive, setIsComplianceBackdropActive] = useState(false);
   const comparisonRef = useRef(null);
+  const complianceRef = useRef(null);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -293,12 +295,61 @@ export default function HomeLanding() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    let animationFrame = null;
+
+    const updateBackdrop = () => {
+      animationFrame = null;
+      const complianceSection = complianceRef.current;
+      if (!complianceSection) return;
+
+      setIsComplianceBackdropActive(
+        complianceSection.getBoundingClientRect().top <= window.innerHeight
+      );
+    };
+
+    const requestUpdate = () => {
+      if (animationFrame === null) {
+        animationFrame = window.requestAnimationFrame(updateBackdrop);
+      }
+    };
+
+    updateBackdrop();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+
+    return () => {
+      if (animationFrame !== null) window.cancelAnimationFrame(animationFrame);
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-white overflow-x-clip">
-      <Preloader />
       <Header onOpenModal={openGetModal} />
 
       <main className="relative mx-auto flex flex-col gap-0 pb-16 z-10">
+        <div
+          className={`pointer-events-none fixed inset-0 -z-10 transition-opacity duration-700 ${
+            isComplianceBackdropActive ? "opacity-100" : "opacity-0"
+          }`}
+          aria-hidden="true"
+        >
+          <ColorBends
+            className="absolute inset-0"
+            colors={["#000000", "#00FFC8", "#FFFFFF", "#FF6BFF"]}
+            speed={0.2}
+            frequency={1}
+            warpStrength={1}
+            mouseInfluence={1}
+            parallax={0.5}
+            noise={0.15}
+            intensity={1.5}
+            bandWidth={6}
+            transparent
+          />
+        </div>
         <ScrollytellingSequence>
           <div id="pricing" className="mx-auto w-full max-w-7xl scroll-mt-24">
             <Pricing
@@ -385,7 +436,7 @@ export default function HomeLanding() {
           const doubled = [...complianceItems, ...complianceItems];
 
           return (
-            <section id="compliance" className="pt-24 pb-4 w-full scroll-mt-24">
+            <section ref={complianceRef} id="compliance" className="relative isolate w-full overflow-hidden pt-24 pb-4 scroll-mt-24">
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}

@@ -2,16 +2,11 @@
 
 import { useEffect, useState } from "react";
 
-const FRAME_COUNT = 118;
-const MAX_PARALLEL_REQUESTS = 8;
 const MIN_DISPLAY_MS = 3400;
-const HARD_TIMEOUT_MS = 25000;
+const HARD_TIMEOUT_MS = 20000;
 const FADE_OUT_MS = 700;
-const CACHE_FLAG = "slnc-frames-preloaded";
-const CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
 
 const preloaderStyles = `
-  html.frames-cached .slnc-preloader { display: none !important; }
   .slnc-preloader svg .svg-elem-1 {
     stroke-dashoffset: 2497.524169921875px;
     stroke-dasharray: 2497.524169921875px;
@@ -33,11 +28,6 @@ export default function Preloader() {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    if (document.documentElement.classList.contains("frames-cached")) {
-      setPhase("hidden");
-      return undefined;
-    }
-
     document.body.style.overflow = "hidden";
 
     // The draw transition only fires when .active lands after the initial paint.
@@ -64,33 +54,47 @@ export default function Preloader() {
 
     const hardTimeout = window.setTimeout(reveal, HARD_TIMEOUT_MS);
 
-    let settledCount = 0;
-    let nextFrameNumber = 1;
-    const onFrameSettled = () => {
-      settledCount += 1;
-      setProgress(Math.round((settledCount / FRAME_COUNT) * 100));
-      if (settledCount >= FRAME_COUNT) {
-        try {
-          localStorage.setItem(CACHE_FLAG, String(Date.now()));
-        } catch (error) {
-          /* private mode: skip caching, still reveal */
-        }
-        reveal();
+    const waitForWindowLoad = new Promise((resolve) => {
+      if (document.readyState === "complete") {
+        resolve();
+        return;
       }
-    };
 
-    const loadNext = () => {
-      if (nextFrameNumber > FRAME_COUNT) return;
-      const frameNumber = nextFrameNumber;
-      nextFrameNumber += 1;
-      const image = new Image();
-      image.decoding = "async";
-      image.onload = onFrameSettled;
-      image.onerror = onFrameSettled;
-      image.src = `/frames/frame-${frameNumber}.webp`;
-      loadNext();
-    };
-    for (let i = 0; i < MAX_PARALLEL_REQUESTS; i += 1) loadNext();
+      window.addEventListener("load", resolve, { once: true });
+    });
+
+    const waitForFonts = document.fonts?.ready
+      ? document.fonts.ready.catch(() => undefined)
+      : Promise.resolve();
+
+    // Lazy content manages its own loading state. The entry loader only waits for
+    // assets needed to render the page users can see immediately.
+    const eagerImages = Array.from(document.images).filter(
+      (image) => image.loading !== "lazy" && !image.complete
+    );
+    const imageTasks = eagerImages.map(
+      (image) => new Promise((resolve) => {
+        if (image.complete) {
+          resolve();
+          return;
+        }
+
+        image.addEventListener("load", resolve, { once: true });
+        image.addEventListener("error", resolve, { once: true });
+      })
+    );
+
+    const tasks = [waitForWindowLoad, waitForFonts, ...imageTasks];
+    let settledCount = 0;
+    setProgress(tasks.length ? 0 : 100);
+
+    tasks.forEach((task) => {
+      Promise.resolve(task).finally(() => {
+        settledCount += 1;
+        setProgress(Math.round((settledCount / tasks.length) * 100));
+        if (settledCount === tasks.length) reveal();
+      });
+    });
 
     return () => {
       window.clearTimeout(activateTimer);

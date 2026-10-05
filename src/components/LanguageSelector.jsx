@@ -44,7 +44,7 @@ const LANGUAGE_OPTIONS = [
 ];
 
 export default function LanguageSelector({ align = "right", allowedLocales }) {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -115,7 +115,7 @@ export default function LanguageSelector({ align = "right", allowedLocales }) {
         className="flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-sm font-semibold text-white backdrop-blur-xl transition hover:border-white/30 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
         aria-haspopup="listbox"
         aria-expanded={isOpen}
-        aria-label="Select language"
+        aria-label={t("languageSelector.triggerLabel", "Select language")}
       >
         <span className="h-4 w-6 overflow-hidden rounded-[4px] border border-white/20">
           {ActiveFlag ? (
@@ -144,7 +144,7 @@ export default function LanguageSelector({ align = "right", allowedLocales }) {
       {isOpen && (
         <div
           role="listbox"
-          aria-label="Choose language"
+          aria-label={t("languageSelector.menuLabel", "Choose language")}
           className={clsx(
             "fixed z-[9999] mt-2 w-[90vw] max-w-[16rem] rounded-2xl border border-white/10 bg-black/85 p-2 shadow-[0_18px_45px_rgba(0,0,0,0.45)] backdrop-blur-xl",
             "left-1/2 -translate-x-1/2",
@@ -157,7 +157,7 @@ export default function LanguageSelector({ align = "right", allowedLocales }) {
           {showSearch && (
             <div className="mb-2">
               <label htmlFor="language-search" className="sr-only">
-                Search languages
+                {t("languageSelector.searchLabel", "Search languages")}
               </label>
               <div className="relative">
                 <input
@@ -165,7 +165,7 @@ export default function LanguageSelector({ align = "right", allowedLocales }) {
                   type="search"
                   value={searchTerm}
                   onChange={(event) => setSearchTerm(event.target.value)}
-                  placeholder="Search languages"
+                  placeholder={t("languageSelector.searchPlaceholder", "Search languages")}
                   autoComplete="off"
                   className="w-full rounded-xl border border-white/15 bg-black/55 px-3 py-2 pr-9 text-sm text-white placeholder:text-white/40 focus:border-white/40 focus:outline-none focus:ring-2 focus:ring-white/30"
                 />
@@ -187,7 +187,7 @@ export default function LanguageSelector({ align = "right", allowedLocales }) {
 
           <div className="max-h-72 space-y-1 overflow-y-auto pr-1">
             {filteredOptions.length === 0 && (
-              <p className="px-2 py-2 text-sm text-white/60">No languages found.</p>
+              <p className="px-2 py-2 text-sm text-white/60">{t("languageSelector.noMatches", "No languages found.")}</p>
             )}
 
             {filteredOptions.map((item) => {
@@ -215,7 +215,7 @@ export default function LanguageSelector({ align = "right", allowedLocales }) {
                       </span>
                     )}
                   </span>
-                  <span className="flex min-w-0 flex-1 flex-col text-left">
+                  <span className="flex min-w-0 flex-1 flex-col text-start">
                     <span className="truncate">{item.name}</span>
                     <span className="truncate text-xs text-white/60">{item.englishName}</span>
                   </span>

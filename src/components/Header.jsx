@@ -14,7 +14,19 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const SCROLL_THRESHOLD = 4;
 const DESKTOP_WIDTH = 1130;
 
-const Header = ({ onOpenModal, hideCta = false }) => {
+const INSTRUCTION_NAV_LABELS = {
+  en: { email: "Email Security", web: "Web Security", pentester: "Pentester", server: "Server Security", instructions: "Instructions" },
+  ja: { email: "メールセキュリティ", web: "Webセキュリティ", pentester: "Pentester", server: "Server Security", instructions: "操作ガイド" },
+  zh: { email: "电子邮件安全", web: "Web 安全", pentester: "Pentester", server: "Server Security", instructions: "操作指南" },
+  ko: { email: "이메일 보안", web: "웹 보안", pentester: "Pentester", server: "Server Security", instructions: "사용 안내서" },
+  fr: { email: "Sécurité des e-mails", web: "Sécurité Web", pentester: "Pentester", server: "Server Security", instructions: "Guides" },
+  de: { email: "E-Mail-Sicherheit", web: "Web-Sicherheit", pentester: "Pentester", server: "Server Security", instructions: "Anleitungen" },
+  ru: { email: "Безопасность почты", web: "Веб-безопасность", pentester: "Pentester", server: "Server Security", instructions: "Инструкции" },
+  ar: { email: "أمان البريد الإلكتروني", web: "أمان الويب", pentester: "Pentester", server: "Server Security", instructions: "الإرشادات" },
+  tr: { email: "E-posta Güvenliği", web: "Web Güvenliği", pentester: "Pentester", server: "Server Security", instructions: "Kılavuzlar" },
+};
+
+const Header = ({ onOpenModal, hideCta = false, allowedLocales }) => {
   const pathname = usePathname();
   const isMainPage = pathname === "/";
   const isPolicyPage = pathname?.startsWith("/policies");
@@ -25,7 +37,8 @@ const Header = ({ onOpenModal, hideCta = false }) => {
   const [openDesktopDropdown, setOpenDesktopDropdown] = useState(null);
   const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
   const [activeSectionId, setActiveSectionId] = useState("pricing");
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const instructionLabels = INSTRUCTION_NAV_LABELS[language] || INSTRUCTION_NAV_LABELS.en;
 
   const sectionItems = useMemo(() => [
     { key: "pricing", label: t("header.nav.pricing", "Pricing") },
@@ -117,10 +130,10 @@ const Header = ({ onOpenModal, hideCta = false }) => {
   const condensedShift = isCondensed && isDesktop ? 24 : 0;
 
   const instructionsItems = [
-    { key: "instructions-email-security", label: t("header.nav.instructionsEmailSecurity", "Email Security") },
-    { key: "instructions-web-security", label: t("header.nav.instructionsWebSecurity", "Web Security") },
-    { key: "instructions-pentester", label: t("header.nav.instructionsPentester", "Pentester") },
-    { key: "instructions-server-security", label: t("header.nav.instructionsServerSecurity", "Server Security") },
+    { key: "instructions-email-security", label: t("header.nav.instructionsEmailSecurity", instructionLabels.email), href: "/instructions/email-security", isActive: pathname === "/instructions/email-security" },
+    { key: "instructions-web-security", label: t("header.nav.instructionsWebSecurity", instructionLabels.web) },
+    { key: "instructions-pentester", label: t("header.nav.instructionsPentester", instructionLabels.pentester), href: "/instructions/pentester", isActive: pathname === "/instructions/pentester" },
+    { key: "instructions-server-security", label: t("header.nav.instructionsServerSecurity", instructionLabels.server), href: "/instructions/server", isActive: pathname === "/instructions/server" },
   ];
 
   const navItems = [
@@ -147,8 +160,9 @@ const Header = ({ onOpenModal, hideCta = false }) => {
     },
     {
       key: "instructions",
-      label: t("header.nav.instructions", "Instructions"),
+      label: t("header.nav.instructions", instructionLabels.instructions),
       children: instructionsItems,
+      isActive: instructionsItems.some((item) => item.isActive),
     },
   ];
 
@@ -180,7 +194,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                       <div key={item.key} className="border-b border-white/20 pb-2 text-white">
                         <button
                           type="button"
-                          className="flex w-full items-center justify-between py-2 text-left"
+                          className={clsx("flex w-full items-center justify-between py-2 text-start", item.isActive && "text-blue-200")}
                           onClick={() => setOpenMobileDropdown(expanded ? null : item.key)}
                           aria-expanded={expanded}
                         >
@@ -204,7 +218,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                               initial={{ opacity: 0, y: -6 }}
                               animate={{ opacity: 1, y: 0 }}
                               exit={{ opacity: 0, y: -4 }}
-                              className="mt-2 space-y-2 pl-2"
+                              className="mt-2 space-y-2 ps-2"
                             >
                               {item.children.map((child) => {
                                 if (child.href) {
@@ -212,7 +226,8 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                                     <Link
                                       key={child.key}
                                       href={child.href}
-                                      className="block rounded-lg px-3 py-2 text-white/90 hover:bg-white/10"
+                                      className={clsx("block rounded-lg px-3 py-2 text-white/90 hover:bg-white/10", child.isActive && "bg-blue-500/15 text-blue-200")}
+                                      aria-current={child.isActive ? "page" : undefined}
                                       onClick={() => {
                                         setOpenMobileDropdown(null);
                                         setIsMobileMenuOpen(false);
@@ -228,7 +243,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                                     <button
                                       key={child.key}
                                       type="button"
-                                      className="block w-full rounded-lg px-3 py-2 text-left text-white/90 hover:bg-white/10"
+                                      className="block w-full rounded-lg px-3 py-2 text-start text-white/90 hover:bg-white/10"
                                       onClick={child.onClick}
                                       aria-current={child.isActive ? "true" : undefined}
                                     >
@@ -241,7 +256,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                                   <button
                                     key={child.key}
                                     type="button"
-                                    className="block w-full rounded-lg px-3 py-2 text-left text-white/60 cursor-default"
+                                    className="block w-full rounded-lg px-3 py-2 text-start text-white/60 cursor-default"
                                     onClick={(event) => event.preventDefault()}
                                     aria-disabled
                                   >
@@ -269,7 +284,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                     <button
                       key={item.key}
                       type="button"
-                      className="nav-link border-b border-white/20 py-2 text-white text-left bg-transparent appearance-none focus:outline-none"
+                      className="nav-link border-b border-white/20 py-2 text-white text-start bg-transparent appearance-none focus:outline-none"
                       onClick={() => {
                         if (item.onClick) item.onClick();
                         else if (item.opensModal) onOpenModal?.();
@@ -281,7 +296,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                   );
                 })}
                 <div className="pt-4 flex flex-col gap-4 w-full items-center">
-                  <LanguageSelector align="left" allowedLocales={isPolicyPage ? ["en", "ru"] : undefined} />
+                  <LanguageSelector align="left" allowedLocales={allowedLocales ?? (isPolicyPage ? ["en", "ru"] : undefined)} />
                   {!hideCta && !isPolicyPage && (
                     <GlowButton
                       onClick={() => {
@@ -371,7 +386,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                     >
                       <button
                         type="button"
-                        className="nav-link inline-flex items-center gap-1 bg-transparent text-white appearance-none focus:outline-none"
+                        className={clsx("nav-link inline-flex items-center gap-1 bg-transparent text-white appearance-none focus:outline-none", item.isActive && "text-blue-200")}
                         aria-haspopup="true"
                         aria-expanded={expanded}
                         onClick={() => setOpenDesktopDropdown(expanded ? null : item.key)}
@@ -397,7 +412,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 6 }}
                             transition={{ duration: 0.15, ease: "easeOut" }}
-                            className="absolute left-0 mt-2 w-max min-w-[11rem] overflow-hidden rounded-lg border border-white/15 bg-black/55 p-2 shadow-[0_18px_45px_rgba(0,0,0,0.45)] backdrop-blur-xl"
+                            className="absolute start-0 mt-2 w-max min-w-[11rem] overflow-hidden rounded-lg border border-white/15 bg-black/55 p-2 shadow-[0_18px_45px_rgba(0,0,0,0.45)] backdrop-blur-xl"
                           >
                             {item.children.map((child) => {
                               if (child.href) {
@@ -405,7 +420,8 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                                   <Link
                                     key={child.key}
                                     href={child.href}
-                                    className="block rounded-lg px-3 py-2 text-sm text-white hover:bg-white/10 whitespace-nowrap"
+                                    className={clsx("block rounded-lg px-3 py-2 text-sm text-white hover:bg-white/10 whitespace-nowrap", child.isActive && "bg-blue-500/15 text-blue-200")}
+                                    aria-current={child.isActive ? "page" : undefined}
                                     onClick={() => setOpenDesktopDropdown(null)}
                                   >
                                     {child.label}
@@ -418,7 +434,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                                     <button
                                       key={child.key}
                                       type="button"
-                                      className="block w-full rounded-lg px-3 py-2 text-left text-sm text-white hover:bg-white/10 whitespace-nowrap"
+                                      className="block w-full rounded-lg px-3 py-2 text-start text-sm text-white hover:bg-white/10 whitespace-nowrap"
                                       onClick={child.onClick}
                                       aria-current={child.isActive ? "true" : undefined}
                                     >
@@ -479,7 +495,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                       : undefined
                   }
                 >
-                  <LanguageSelector align={isDesktop ? "right" : "center"} allowedLocales={isPolicyPage ? ["en", "ru"] : undefined} />
+                  <LanguageSelector align={isDesktop ? "right" : "center"} allowedLocales={allowedLocales ?? (isPolicyPage ? ["en", "ru"] : undefined)} />
                 </div>
                 {isDesktop && !hideCta && !isPolicyPage && (
                   <GlowButton onClick={onOpenModal}>

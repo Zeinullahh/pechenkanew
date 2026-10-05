@@ -1,4 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
+import Preloader from "@/components/Preloader";
 import "./globals.css";
 
 const BRAND_REPLACEMENTS = [
@@ -146,16 +147,11 @@ export default async function RootLayout(props) {
         className="antialiased relative"
         style={{ backgroundColor: "#000000" }}
       >
-        {/* Runs before any body markup parses, so returning visitors never see the preloader flash. */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `try{var slncFrames=localStorage.getItem("slnc-frames-preloaded");if(slncFrames&&Date.now()-Number(slncFrames)<604800000){document.documentElement.classList.add("frames-cached")}}catch(e){}`,
-          }}
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
         />
+        <Preloader />
         <NextIntlClientProvider locale={locale} messages={messages}>
           {props.children}
         </NextIntlClientProvider>

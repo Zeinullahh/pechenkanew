@@ -7,10 +7,6 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import CookieConsent from "@/components/CookieConsent";
 import BackToTopButton from "@/components/BackToTopButton";
 import BrowserLocaleRedirect from "@/components/BrowserLocaleRedirect";
-import ColorBends from "@/components/ColorBends";
-
-const BACKGROUND_COLORS = ["#000000", "#00FFC8", "#FFFFFF", "#FF6BFF"];
-
 export default function LayoutWrapper({ children, initialLanguage }) {
   const pathname = usePathname();
   // Strip the locale prefix (e.g. "/en/...") so route checks work on localized URLs
@@ -26,21 +22,6 @@ export default function LayoutWrapper({ children, initialLanguage }) {
   return (
     <LanguageProvider initialLanguage={initialLanguage}>
       <BrowserLocaleRedirect currentLocale={initialLanguage} />
-      {!isPolicyPage && (
-        <ColorBends
-          className="layout-background"
-          colors={BACKGROUND_COLORS}
-          speed={0.2}
-          frequency={1}
-          warpStrength={1}
-          mouseInfluence={1}
-          parallax={0.5}
-          noise={0.15}
-          intensity={1.5}
-          bandWidth={6}
-          transparent
-        />
-      )}
       {showParallaxGlobe && <ParallaxGlobe />}
       <div className={!isPolicyPage ? "default-content-wrapper pt-20" : "default-content-wrapper"}>
         {children}

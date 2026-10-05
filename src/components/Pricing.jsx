@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import { competitiveComparisons } from "@/lib/competitiveComparison";
 import GlassSurface from "@/components/GlassSurface";
 import InteractiveSandbox from "@/components/sandbox/InteractiveSandbox";
+import { PentestEmbed } from "../../window_in_window/src/embed/pentest/PentestEmbed";
 
 
 // Microsoft 365 Pricing Data
@@ -1027,6 +1028,8 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
         {productType === "server" && <><ServerSecurityComparison /><InteractiveSandbox product="server" /></>}
 
         {(productType === "web" || productType === "email" || productType === "pentester") && <ProductComparison productType={productType} />}
+
+        {productType === "pentester" && <PentestEmbed height="min(76vh, 700px)" />}
 
         {productType === "web" && (
           <>

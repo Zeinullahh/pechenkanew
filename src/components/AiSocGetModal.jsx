@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
     BriefcaseBusiness,
@@ -33,12 +33,40 @@ const ACCESS_OPTIONS = [
 
 const AiSocGetModal = ({ isOpen, onClose }) => {
     const { t } = useLanguage();
+    const [selectedSecuritySystem, setSelectedSecuritySystem] = useState(null);
+    const [email, setEmail] = useState("");
+    const [submitted, setSubmitted] = useState(false);
+
+    useEffect(() => {
+        if (!isOpen) {
+            setSelectedSecuritySystem(null);
+            setEmail("");
+            setSubmitted(false);
+        }
+    }, [isOpen]);
 
     if (!isOpen) return null;
 
     const handleRedirect = (url) => {
         if (url === "#") return;
         window.open(url, "_blank", "noopener,noreferrer");
+    };
+
+    const handleAccessOption = (key) => {
+        if (["webSecurity", "pentester", "serverSecurity"].includes(key)) {
+            setSelectedSecuritySystem(key);
+            setEmail("");
+            setSubmitted(false);
+            return;
+        }
+
+        handleRedirect(PRODUCT_LINKS[key]);
+    };
+
+    const resetSecurityForm = () => {
+        setSelectedSecuritySystem(null);
+        setEmail("");
+        setSubmitted(false);
     };
 
     return (
@@ -91,19 +119,60 @@ const AiSocGetModal = ({ isOpen, onClose }) => {
                                         <BriefcaseBusiness className="h-6 w-6" aria-hidden="true" />
                                     </div>
                                     <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                                        {t("aiSocModal.title", "Choose a system to log in to")}
+                                        {selectedSecuritySystem
+                                            ? t(`aiSocModal.${selectedSecuritySystem}`, ACCESS_OPTIONS.find(({ key }) => key === selectedSecuritySystem)?.label ?? "Security")
+                                            : t("aiSocModal.title", "Choose a system to log in to")}
                                     </h2>
                                     <p className="mt-2 text-sm leading-relaxed text-white/60">
-                                        {t("aiSocModal.subtitle", "Select the service you want to access.")}
+                                        {selectedSecuritySystem
+                                            ? t("aiSocModal.emailPrompt", "Enter your email address to check your account.")
+                                            : t("aiSocModal.subtitle", "Select the service you want to access.")}
                                     </p>
                                 </div>
 
-                                <div className="flex flex-col gap-3">
+                                {selectedSecuritySystem ? (
+                                    <form
+                                        className="flex flex-col gap-4"
+                                        onSubmit={(event) => {
+                                            event.preventDefault();
+                                            setSubmitted(true);
+                                        }}
+                                    >
+                                        <label htmlFor="security-access-email" className="text-sm font-medium text-white/80">
+                                            {t("aiSocModal.emailLabel", "Email address")}
+                                        </label>
+                                        <input
+                                            id="security-access-email"
+                                            type="email"
+                                            required
+                                            autoComplete="email"
+                                            value={email}
+                                            onChange={(event) => {
+                                                setEmail(event.target.value);
+                                                setSubmitted(false);
+                                            }}
+                                            placeholder="you@example.com"
+                                            className="w-full rounded-xl border border-blue-200/25 bg-black/35 px-4 py-3 text-white outline-none placeholder:text-white/35 focus:border-blue-200/70 focus:ring-2 focus:ring-blue-400/25"
+                                        />
+                                        <button type="submit" className="w-full rounded-xl border border-blue-200/35 bg-blue-500/20 px-4 py-3 font-semibold text-white transition-colors hover:bg-blue-500/30 focus:outline-none focus:ring-2 focus:ring-blue-300/60">
+                                            {t("aiSocModal.continue", "Continue")}
+                                        </button>
+                                        {submitted && (
+                                            <p role="status" className="rounded-xl border border-amber-200/20 bg-amber-300/10 px-4 py-3 text-sm leading-relaxed text-amber-100">
+                                                {t("aiSocModal.unregistered", "Your account is not registered. Please contact")}{" "}
+                                                <a className="font-semibold underline underline-offset-2" href="mailto:support@silenceai.net">support@silenceai.net</a>.
+                                            </p>
+                                        )}
+                                        <button type="button" onClick={resetSecurityForm} className="self-center rounded-lg px-3 py-2 text-sm text-white/65 transition-colors hover:bg-white/10 hover:text-white">
+                                            {t("aiSocModal.backToSystems", "Back to systems")}
+                                        </button>
+                                    </form>
+                                ) : <div className="flex flex-col gap-3">
                                     {ACCESS_OPTIONS.map(({ key, label, icon: Icon }) => (
                                         <button
                                             key={key}
                                             type="button"
-                                            onClick={() => handleRedirect(PRODUCT_LINKS[key])}
+                                            onClick={() => handleAccessOption(key)}
                                             className="group flex w-full items-center gap-4 rounded-2xl border border-blue-200/25 bg-blue-500/10 px-4 py-3.5 text-left font-semibold text-blue-50 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200/60 hover:bg-blue-500/20 hover:shadow-[0_12px_32px_rgba(37,99,235,0.24)]"
                                         >
                                             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-blue-200/25 bg-blue-400/10 text-blue-200 transition-all duration-300 group-hover:border-blue-100/60 group-hover:bg-blue-300/20 group-hover:text-white group-hover:shadow-[0_0_22px_rgba(96,165,250,0.65)]">
@@ -143,7 +212,7 @@ const AiSocGetModal = ({ isOpen, onClose }) => {
                                         </div>
                                         <ExternalLink className="h-5 w-5 shrink-0 text-white/50 transition-all duration-300 group-hover:scale-110 group-hover:text-white" aria-hidden="true" />
                                     </a>
-                                </div>
+                                </div>}
                             </div>
                         </GlassSurface>
                     </motion.div>

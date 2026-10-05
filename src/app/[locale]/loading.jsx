@@ -1,8 +1,7 @@
 "use client";
 
-import LoadingSpinner from "@/components/LoadingSpinner";
+import Preloader from "@/components/Preloader";
 
 export default function Loading() {
-  // Show loader immediately; no artificial delay so it reflects actual loading state.
-  return <LoadingSpinner isLoading />;
+  return <Preloader />;
 }

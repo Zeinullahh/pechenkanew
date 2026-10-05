@@ -338,14 +338,14 @@ export default function HomeLanding() {
         >
           <ColorBends
             className="absolute inset-0"
-            colors={["#000000", "#00FFC8", "#FFFFFF", "#FF6BFF"]}
+            colors={["#07102D", "#101A46", "#3B1A78", "#7C3AED", "#14532D"]}
             speed={0.2}
             frequency={1}
             warpStrength={1}
             mouseInfluence={1}
             parallax={0.5}
             noise={0.15}
-            intensity={1.5}
+            intensity={0.9}
             bandWidth={6}
             transparent
           />

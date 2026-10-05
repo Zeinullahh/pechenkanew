@@ -42,4 +42,3 @@
 .silence-sandbox .server-sandbox { --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 .silence-sandbox .sb-server-view-switch { margin: 0; height: 36px; flex-shrink: 0; }
-@media (max-width: 1000px) { #server-security-sandbox .sb-toolbar-strip { flex-wrap: wrap; } }

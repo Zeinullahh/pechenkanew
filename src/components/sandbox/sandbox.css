@@ -1,6 +1,10 @@
-/* The product canvases have fixed reference coordinates; only the browser frame scales. */
+/* Product canvases keep their desktop reference coordinates at every screen width. */
 .silence-sandbox {
-  width: 100%;
+  position: relative;
+  left: 50%;
+  width: min(1386px, calc(100vw - 32px));
+  max-width: none;
+  transform: translateX(-50%);
   margin: 64px auto 0;
   color: #f4f7ff;
   font-family: Arial, Helvetica, sans-serif;
@@ -150,7 +154,10 @@
   border: 1px solid #8b5cf647;
   border-radius: 15px;
   background: #01091c;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-inline: contain;
+  scrollbar-color: #6d477f #11141f;
   box-shadow:
     0 0 60px #7c3aed1c,
     0 28px 80px #0004;
@@ -160,6 +167,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  width: 1384px;
+  max-width: none;
   min-height: 48px;
   padding: 8px 18px;
   background: linear-gradient(180deg, #0f1322 0%, #0a0d18 100%);
@@ -251,13 +260,14 @@
   color: #fff;
 }
 .silence-sandbox .sb-viewport {
-  overflow-x: auto;
-  overflow-y: hidden;
-  width: 100%;
-  scrollbar-color: #6d477f #11141f;
+  overflow: hidden;
+  width: 1384px;
+  max-width: none;
 }
 .silence-sandbox .sb-scaled-space {
   position: relative;
+  width: 1384px;
+  height: 950px;
   max-width: none;
 }
 .silence-sandbox .sb-stage {
@@ -274,6 +284,8 @@
   height: 100%;
 }
 .silence-sandbox .sb-scenario-bar {
+  width: 1384px;
+  max-width: none;
   display: flex;
   align-items: center;
   gap: 9px;
@@ -301,6 +313,7 @@
 .silence-sandbox.sb-expanded {
   position: fixed;
   inset: 12px;
+  transform: none;
   width: auto;
   margin: 0;
   z-index: 10000;
@@ -2031,41 +2044,6 @@
   40% {
     transform: scale(1.1);
     opacity: 1;
-  }
-}
-@media (max-width: 800px) {
-  .silence-sandbox {
-    margin-top: 30px;
-  }
-  .silence-sandbox .sb-introduction h3 {
-    font-size: 25px;
-  }
-  .silence-sandbox .sb-toolbar-strip {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-    padding: 10px 14px;
-  }
-  .silence-sandbox .sb-toolbar-left {
-    justify-content: space-between;
-  }
-  .silence-sandbox .sb-toolbar-actions {
-    justify-content: flex-end;
-  }
-  .silence-sandbox .cmc-analytics-widget {
-    position: static;
-    width: 100%;
-    margin-bottom: 12px;
-  }
-  .silence-sandbox .cmc-analytics-grid {
-    grid-template-columns: 1fr;
-  }
-  .silence-sandbox .sb-scenario-bar {
-    align-items: flex-start;
-  }
-  .silence-sandbox .sb-toast {
-    top: 140px;
-    right: 12px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

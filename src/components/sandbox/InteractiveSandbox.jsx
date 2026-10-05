@@ -35,28 +35,7 @@ export default function InteractiveSandbox({ product = "email" }) {
     isServer ? () => createInitialServerState(Date.now()) : isWeb ? createInitialWebState : createInitialEmailState,
   );
   const [expanded, setExpanded] = useState(false);
-  const [scale, setScale] = useState(1);
   const viewport = useRef(null);
-
-  useEffect(() => {
-    const el = viewport.current;
-    if (!el) return;
-    const update = () => {
-      const w = el.clientWidth;
-      if (w > 0) {
-        setScale(w / 1384);
-      }
-    };
-    update();
-    const observer = new ResizeObserver(([entry]) => {
-      const w = entry.contentRect.width;
-      if (w > 0) {
-        setScale(w / 1384);
-      }
-    });
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
     if (!state.toast) return;
@@ -151,15 +130,13 @@ export default function InteractiveSandbox({ product = "email" }) {
           </div>
         </div>
 
-        {/* Viewport with scaled stage */}
+        {/* Fixed desktop canvas; the browser frame scrolls horizontally on narrow screens. */}
         <div className="sb-viewport" ref={viewport}>
           <div
             className="sb-scaled-space"
-            style={{ width: "100%", height: 950 * scale }}
           >
             <div
               className="sb-stage"
-              style={{ transform: `scale(${scale})`, transformOrigin: "0 0" }}
               key={state.resetVersion}
             >
               {!isWeb && !isServer && <div

@@ -8,7 +8,9 @@ const FRAME_COUNT = 118;
 const LAST_FRAME = FRAME_COUNT - 1;
 const FINAL_STORY_FRAME = 117;
 const PREFETCH_RADIUS = 4;
-const MOBILE_PREFETCH_RADIUS = 2;
+const MOBILE_FRAME_STEP = 3;
+const MOBILE_PREFETCH_AHEAD = 4;
+const MOBILE_PREFETCH_BEHIND = 1;
 const MAX_CACHED_FRAMES = 12;
 const FINAL_FRAME_PREFETCH_POINT = 0.86;
 
@@ -32,13 +34,18 @@ function getFrameForProgress(progress) {
     ? 1
     : (clampedProgress - range.progressStart) / (range.progressEnd - range.progressStart);
 
-  return Math.min(
+  const frame = Math.min(
     LAST_FRAME,
     Math.max(
       0,
       Math.round(range.frameStart + rangeProgress * (range.frameEnd - range.frameStart))
     )
   );
+
+  // Weak phones cannot decode every source frame during a fast swipe.
+  return getFrameVariant() === "mobile"
+    ? Math.min(LAST_FRAME, Math.round(frame / MOBILE_FRAME_STEP) * MOBILE_FRAME_STEP)
+    : frame;
 }
 
 function getFrameVariant() {
@@ -355,14 +362,25 @@ export default function ScrollytellingSequence({ children }) {
 
   const preloadNeighborhood = useCallback((centerFrame) => {
     if (prefersReducedMotion || lastPrefetchFrameRef.current === centerFrame) return;
+    const previousFrame = lastPrefetchFrameRef.current;
     lastPrefetchFrameRef.current = centerFrame;
 
-    const radius = getFrameVariant() === "mobile" ? MOBILE_PREFETCH_RADIUS : PREFETCH_RADIUS;
-    for (let offset = -radius; offset <= radius; offset += 1) {
-      const frameIndex = centerFrame + offset;
-      if (frameIndex >= 0 && frameIndex < FRAME_COUNT) {
-        loadFrame(frameIndex).catch(() => {});
+    if (getFrameVariant() === "mobile") {
+      const direction = centerFrame >= previousFrame ? 1 : -1;
+      for (let offset = 0; offset <= MOBILE_PREFETCH_AHEAD; offset += 1) {
+        const frameIndex = centerFrame + direction * offset * MOBILE_FRAME_STEP;
+        if (frameIndex >= 0 && frameIndex < FRAME_COUNT) loadFrame(frameIndex).catch(() => {});
       }
+      for (let offset = 1; offset <= MOBILE_PREFETCH_BEHIND; offset += 1) {
+        const frameIndex = centerFrame - direction * offset * MOBILE_FRAME_STEP;
+        if (frameIndex >= 0 && frameIndex < FRAME_COUNT) loadFrame(frameIndex).catch(() => {});
+      }
+      return;
+    }
+
+    for (let offset = -PREFETCH_RADIUS; offset <= PREFETCH_RADIUS; offset += 1) {
+      const frameIndex = centerFrame + offset;
+      if (frameIndex >= 0 && frameIndex < FRAME_COUNT) loadFrame(frameIndex).catch(() => {});
     }
   }, [loadFrame, prefersReducedMotion]);
 
@@ -473,9 +491,9 @@ export default function ScrollytellingSequence({ children }) {
   }, [isReady, loadFrame, prefersReducedMotion, preloadNeighborhood, queueDraw, scrollYProgress]);
 
   return (
-    <section ref={regionRef} className="relative isolate bg-transparent">
+    <section ref={regionRef} className="relative isolate bg-black">
       <div className="hero-sequence-surface sticky top-0 z-0 h-screen h-[100svh] overflow-hidden pointer-events-none">
-        <canvas ref={canvasRef} className="block h-full w-full opacity-90" aria-hidden="true" />
+        <canvas ref={canvasRef} className="block h-full w-full" aria-hidden="true" />
         {!isReady && (
           <div className="absolute inset-0 flex items-center justify-center bg-black">
             <span className="h-8 w-8 animate-spin rounded-full border-2 border-white/20 border-t-white" />

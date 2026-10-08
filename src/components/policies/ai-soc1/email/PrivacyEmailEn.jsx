@@ -69,7 +69,7 @@ export default function PrivacyEmailEn() {
           <strong>3.1 Service Delivery:</strong> We use this information to provide the selected provider-connected or hosted mail mode and workspace, receive or synchronize mail, store and send messages, perform applicable security checks and classification, and provide optional AI-assisted drafting or automatic-response actions when requested or enabled.
         </p>
         <p className="mb-4">
-          <strong>3.2 AI-Based Processing:</strong> AI phishing-content analysis is planned for production activation; it should not be treated as a currently active incoming-mail check until deployment is confirmed. Separately, a user-requested reply draft may use the selected sender, subject and up to approximately 2,000 characters of the body to generate text for review. Enabled auto-response or draft settings may process eligible incoming mail, including a raw message or metadata and body plus configured AI context files, and may save a draft, send a reply, forward mail or perform another supported mailbox action. Security results and generated content may be stored for the relevant service function.
+          <strong>3.2 Optional AI Assistance:</strong> A user-requested reply draft may use the selected sender, subject and up to approximately 2,000 characters of the body to generate text for review. Enabled auto-response or draft settings may process eligible incoming mail, including a raw message or metadata and body plus configured AI context files, and may save a draft, send a reply, forward mail or perform another supported mailbox action. This assistance is separate from the email security checks. Security results and generated content may be stored for the relevant service function.
         </p>
         <p className="mb-4">
           <strong>3.3 Platform Operations:</strong> Maintain and improve our services, Provide customer support, Process billing and payments, Monitor service performance and availability.
@@ -172,7 +172,7 @@ export default function PrivacyEmailEn() {
           The Email Security service includes an employee email workspace in both provider-connected and hosted modes. Eligible newly received mail may receive security checks and classification. Optional AI drafting and automatic-response processing serves a separate purpose and is triggered by a user request or the applicable enabled setting.
         </p>
         <p className="mb-4">
-          Historical Gmail/Outlook mailbox imports do not receive the normal security classification. Imported incoming mail may appear in Unfiltered and retain an Inbox or source-folder association; sent and trash imports follow their own folder rules. Attachment content may still be scanned during migration until the planned change is deployed. Newly received mail follows the applicable settings and check conditions.
+          Historical Gmail/Outlook mailbox imports do not receive the normal security classification. Imported incoming mail may appear in Unfiltered and retain an Inbox or source-folder association; sent and trash imports follow their own folder rules. Attachment content may still be scanned during migration. Newly received mail follows the applicable settings and check conditions.
         </p>
         <p className="mb-4">
           <strong>12.1 Email Security Functions:</strong> The customer-facing functions below are conditional and are not a guaranteed sequence. A content-threat result may stop later checks.
@@ -193,9 +193,6 @@ export default function PrivacyEmailEn() {
           <p>
             <strong>Attachment antivirus:</strong> Accessible attachments may be scanned for malware when the scanner is enabled and configured. Messages without attachments have no attachment content to scan.
           </p>
-          <p>
-            <strong>AI phishing-content analysis:</strong> This sixth customer-facing function is planned for production activation and is not represented as live until deployment is confirmed. If active, it may use sender, subject and processed body, local heuristics/cache and a configured AI provider for uncertain cases; not every message is sent externally.
-          </p>
         </div>
         <p className="mb-4">
           <strong>12.2 Folder Classification:</strong> Applicable results may place newly processed messages in the following user-visible folders:
@@ -209,7 +206,7 @@ export default function PrivacyEmailEn() {
           <li><strong>Unfiltered:</strong> Imported incoming mail, subject to its source-folder association.</li>
         </ul>
         <p className="mb-4">
-          When the combined phishing detector is effectively off for a mailbox, dedicated known-phishing-domain, domain fraud-risk and dangerous-link checks are skipped. Spoof, spam and eligible antivirus checks are separate and may continue, but no other check is guaranteed to catch the same threat. The employee workspace currently exposes a setting that can override an administrator&apos;s global-off setting; the switch is not currently administrator-only, and no per-customer control is promised. If the AI phishing-content function is activated, its use also follows the effective detector setting. This setting does not stop separately enabled AI assistant, reply-draft or automatic-response features. A folder label does not prove that every check ran.
+          When the combined phishing detector is effectively off for a mailbox, dedicated known-phishing-domain, domain fraud-risk and dangerous-link checks are skipped. Spoof, spam and eligible antivirus checks are separate and may continue, but no other check is guaranteed to catch the same threat. An employee setting may override an administrator&apos;s global-off setting, so that control alone does not disable these checks for every mailbox. This setting does not stop separately enabled AI assistant, reply-draft or automatic-response features. A folder label does not prove that every check ran.
         </p>
         <p>
           <strong>12.3 Administrator Access and Data Privacy:</strong> Email content may be accessible to the organization administrator that created or manages the user account within the CMC. Automated systems process it for the selected mail mode, workspace, applicable security checks and separately enabled optional AI assistance. The restriction on human Silence AI personnel access is stated in Section 13.

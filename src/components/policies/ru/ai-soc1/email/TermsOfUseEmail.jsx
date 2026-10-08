@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import PolicyLayout from "@/components/policies/shared/PolicyLayout";
 import EmailJurisdictionSelector from "@/components/policies/shared/EmailJurisdictionSelector";
+import { kazakhstanBankDetailsText } from "@/components/policies/shared/kazakhstanBankDetails";
 
 const sections = [
   { id: "service-description", title: "1. Описание сервиса" },
@@ -76,6 +77,7 @@ export default function TermsOfUseEmail() {
         <h2 className="text-2xl font-semibold mb-4">9. Разрешение споров и контакты</h2>
         <p className="mb-4">Стороны сначала пытаются разрешить споры путём взаимных переговоров. Если переговоры не приведут к разрешению спора, споры по договорам с Silence AI LLC передаются компетентным судам Шарджи, ОАЭ, а споры по договорам с ТОО &quot;Silence AI&quot; — компетентным судам Республики Казахстан. Ничто в настоящих Условиях не исключает обязательные права или юрисдикцию суда, от которых стороны не могут отказаться по договору.</p>
         <p>Для юридических и связанных с конфиденциальностью вопросов: info@silenceai.net. Казахстан: ТОО &quot;Silence AI&quot;, БИН 250840004804, адрес: КАЗАХСТАН, АСТАНА обл, АСТАНА г, АЛМАТЫ мкр, Проспект Ракымжан Кошкарбаев, 10/1, G-3 блок; D6 этаж. ОАЭ: Silence AI LLC, licence number 2539365.01, адрес: Shams Business Center, Sharjah Media City Free Zone, Al Messaned, Sharjah, UAE.</p>
+        <p className="mt-4"><strong>Банковские реквизиты для договоров с ТОО &quot;Silence AI&quot; (Казахстан):</strong> {kazakhstanBankDetailsText}</p>
       </section>
       <p className="mt-8 text-sm text-gray-400">Последнее обновление: 22.09.2025</p>
     </PolicyLayout>

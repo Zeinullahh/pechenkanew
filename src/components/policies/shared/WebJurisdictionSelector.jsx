@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { kazakhstanBankDetails } from "./kazakhstanBankDetails";
 
 const entities = {
   kz: {
@@ -29,6 +30,7 @@ const labels = {
     company: "Legal entity",
     registration: "Registration",
     address: "Registered address",
+    bank: "Bank details",
     deployment: "Customer deployment server",
     view: "View policy for",
     selected: "Selected",
@@ -40,6 +42,7 @@ const labels = {
     company: "Юридическое лицо",
     registration: "Регистрация",
     address: "Юридический адрес",
+    bank: "Банковские реквизиты",
     deployment: "Сервер клиентского развёртывания",
     view: "Открыть политику:",
     selected: "Выбрано",
@@ -87,6 +90,7 @@ export default function WebJurisdictionSelector({ policy, active, locale = "en" 
         <dl className="mt-5 grid gap-4 border-t border-white/10 pt-5 text-sm sm:grid-cols-2">
           <div><dt className="text-zinc-400">{copy.registration}</dt><dd className="mt-1 font-medium text-zinc-100">{company.registration}</dd></div>
           <div className="sm:col-span-2"><dt className="text-zinc-400">{copy.address}</dt><dd className="mt-1 leading-6 text-zinc-100">{company.address}</dd></div>
+          {selected === "kz" && <div className="sm:col-span-2"><dt className="text-zinc-400">{copy.bank}</dt><dd className="mt-1 leading-6 text-zinc-100">ИИК (номер счёта): {kazakhstanBankDetails.account}; БИК банка: {kazakhstanBankDetails.bik}; наименование филиала: {kazakhstanBankDetails.branch}; КБе: {kazakhstanBankDetails.kbe}.</dd></div>}
           <div className="sm:col-span-2"><dt className="text-zinc-400">{copy.deployment}</dt><dd className="mt-1 leading-6 text-zinc-100">{company.deployment[locale === "ru" ? "ru" : "en"]}</dd></div>
         </dl>
         {isLanding && <Link href={policyHref(selected, policy)} lang={selected === "kz" ? "ru" : "en"} className="mt-6 inline-flex min-h-11 items-center justify-center rounded-lg bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(37,99,235,0.25)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-500 hover:shadow-[0_10px_24px_rgba(37,99,235,0.35)] active:translate-y-0 active:scale-[0.97] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-300 motion-reduce:transform-none">{copy.view} {copy.options[selected]} <span aria-hidden="true" className="ml-2">→</span></Link>}

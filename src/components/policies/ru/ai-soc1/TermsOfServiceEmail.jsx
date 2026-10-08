@@ -3,6 +3,7 @@
 import React from "react";
 import PolicyLayout from "@/components/policies/shared/PolicyLayout";
 import EmailJurisdictionSelector from "@/components/policies/shared/EmailJurisdictionSelector";
+import { kazakhstanBankDetailsText } from "@/components/policies/shared/kazakhstanBankDetails";
 
 const sections = [
   { id: "right-to-use", title: "1. Право на использование" },
@@ -35,6 +36,7 @@ export default function RuAiSocTermsOfServiceEmail() {
           <strong>1.1 Предмет соглашения:</strong> Настоящие Условия предоставления услуг («Условия») регулируют ваш доступ к услугам AI-CSD 1 Email Security и их использование. Для клиентов из Казахстана стороной договора является ТОО &quot;Silence AI&quot;; для клиентов из ОАЭ — Silence AI LLC. Стороной вашего договора является компания, указанная в заказе, регистрации учётной записи или ином соглашении с вами. Настоящие Условия применяются к вам и к вашему работодателю или принципалу, если вы действуете от его имени.
         </p>
         <p className="mb-4"><strong>Реквизиты компаний:</strong> Казахстан: ТОО &quot;Silence AI&quot;, БИН 250840004804, адрес: КАЗАХСТАН, АСТАНА обл, АСТАНА г, АЛМАТЫ мкр, Проспект Ракымжан Кошкарбаев, 10/1, G-3 блок; D6 этаж. ОАЭ: Silence AI LLC, licence number 2539365.01, registered address: Shams Business Center, Sharjah Media City Free Zone, Al Messaned, Sharjah, UAE.</p>
+        <p className="mb-4"><strong>Банковские реквизиты для договоров с ТОО &quot;Silence AI&quot; (Казахстан):</strong> {kazakhstanBankDetailsText}</p>
         <p className="mb-4">
           <strong>1.2 Домены обслуживания и юрисдикция:</strong> Услуга Email Security предоставляется в двух режимах: с подключением существующего почтового провайдера Microsoft 365/Outlook или Gmail и с размещением почтовых ящиков домена клиента на платформе. В обоих режимах сотрудники читают, составляют, отправляют и управляют письмами в рабочем пространстве платформы. Для клиентов по договору с ТОО &quot;Silence AI&quot; (Казахстан) панель администратора CMC расположена по адресу <strong>kz.mail.csd.silenceai.net</strong>, а рабочее пространство сотрудников — <strong>kz.mail.silenceai.net</strong>. Для клиентов по договору с Silence AI LLC (ОАЭ) соответствующие адреса — <strong>mail.csd.silenceai.net</strong> и <strong>mail.silenceai.net</strong>. В CMC администратор настраивает компанию, домены, учётные записи и параметры безопасности. Настоящие Условия охватывают услугу Email Security через соответствующую пару доменов; сторона договора и доменные имена не определяют физическое расположение серверов. Другие продукты Silence AI регулируются отдельно.
         </p>

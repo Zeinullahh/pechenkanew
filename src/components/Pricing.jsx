@@ -21,19 +21,19 @@ const PRICING_DATA = {
     standard: {
       yearly: 7.30,
       monthly: 8.60,
-      kzt: { yearly: 3400, monthly: 3400 },
+      kzt: { yearly: 3650, monthly: 3400 },
       unit: "/user/month",
     },
     premium: { // Premium 100
       yearly: 12.00,
       monthly: 13.45,
-      kzt: { yearly: 5500, monthly: 5500 },
+      kzt: { yearly: 6000, monthly: 5500 },
       unit: "/user/month",
     },
     max: { // Business MAX 100
       yearly: 25.00,
       monthly: 25.00,
-      kzt: { yearly: 11500, monthly: 11500 },
+      kzt: { yearly: 12500, monthly: 11500 },
       unit: "/user/month",
     },
   },

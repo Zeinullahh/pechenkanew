@@ -547,7 +547,7 @@
       "mostPopular": "가장 인기 있는 요금제",
       "perUser": "/ 사용자",
       "perMonth": "/ 월",
-      "annualCommitment": "연간 약정",
+      "annualCharge": "사용자당 12개월 요금 선결제:",
       "billedMonthly": "매월 청구",
       "planCapacity": "요금제 용량"
     }

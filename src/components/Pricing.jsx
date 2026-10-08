@@ -646,7 +646,7 @@ const EmailSecurityPricing = ({
                   <span className="text-4xl font-semibold tracking-tight text-white">{formatPrice(displayPrice, currency)}</span>
                   <span className="pb-1 text-xs leading-4 text-white/45">{t("pricing.emailSecurity.perUser", "/ user")}<br />{t("pricing.emailSecurity.perMonth", "/ month")}</span>
                 </div>
-                <p className="mt-2 text-xs text-white/45">{billing === "yearly" ? t("pricing.emailSecurity.annualCommitment", "Annual commitment") : t("pricing.emailSecurity.billedMonthly", "Billed monthly")}</p>
+                <p className="mt-2 text-xs text-white/45">{billing === "yearly" ? <>{t("pricing.emailSecurity.annualCharge", "Charged upfront for 12 months per user:")} <span className="font-semibold text-white/75">{formatPrice(displayPrice * 12, currency)}</span></> : t("pricing.emailSecurity.billedMonthly", "Billed monthly")}</p>
 
                 <div className="my-6 h-px bg-white/10" />
                 <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-200">{t("pricing.emailSecurity.planCapacity", "Plan capacity")}</p>

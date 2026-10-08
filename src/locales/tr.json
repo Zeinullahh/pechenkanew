@@ -309,7 +309,7 @@
     "tooltips": {
       "web": {
         "title": "Web saldırı koruması",
-        "content": "Sistem, iş mantığı zafiyetleri hariç DDoS, SQLi vb. tüm web saldırı türlerine karşı korur."
+        "content": "Web Security, kullanılabilir WAF, IPS ve DDoS kontrollerini yapılandırılmış hizmet üzerinden yönlendirilen trafiğe uygular. Bu kontroller tehditleri azaltmak için tasarlanmıştır ancak her saldırıyı durduramaz."
       },
       "email": {
         "title": "E-posta saldırı koruması",
@@ -431,7 +431,7 @@
         "description": "Limit yok\nEk ücret yok",
         "button": "Web uygulamasını ve API'leri güvene al",
         "features": {
-          "webProtection": "İş mantığı güvenlik açığı istismarı hariç, her türlü web saldırısına karşı koruma",
+          "webProtection": "Yapılandırılmış hizmet üzerinden yönlendirilen trafik için WAF kontrolleri",
           "ddosProtection": "Gerçek zamanlı DDoS koruması",
           "cmc": "Küresel trafik izleme sistemli CMC",
           "country": "Ülke kara listeye alma özelliği",
@@ -2409,7 +2409,7 @@
     "web": {
       "title": "AI-CSD Web vs Geleneksel WAF Çözümleri",
       "columns": {
-        "aiSoc": "AI-CSD Web (kullandıkça öde)",
+        "aiSoc": "AI-CSD Web (abonelik + aşım)",
         "cloudflare": "Cloudflare WAF + Anti-DDoS ($20/ay)",
         "aws": "AWS WAF (kullandıkça öde)"
       },
@@ -2510,7 +2510,7 @@
   "aiSocPricing": {
     "intro": "AI-CSD, bağımsız siber güvenlik sistemlerinden oluşan bir ürün ailesidir",
     "emailDescription": "Email Security, kurumsal iletişiminiz için koruyucu bir kalkan görevi görür. Gelen ve giden mesajları filtreleyerek phishing girişimlerini, spoofing saldırılarını ve kötü amaçlı bağlantıları kullanıcılarınıza ulaşmadan etkisiz hale getirir; böylece iş yazışmalarınızın bütünlüğünü korur.",
-    "webDescription": "Web Security, trafik desenlerini gerçek zamanlı analiz ederek dijital altyapınızı korur. Web sitelerini ve API'leri yaygın güvenlik açıklarına, DDoS saldırılarına ve yetkisiz erişime karşı savunur; performansı etkilemeden ağ etkinliğine derin görünürlük sağlar.",
+    "webDescription": "Web Security, yapılandırılmış hizmet üzerinden yönlendirilen trafiği analiz eder. Kullanılabilir WAF, IPS ve DDoS kontrolleri tehditleri tespit edip azaltmak ve güvenlik görünürlüğü sağlamak için tasarlanmıştır; her saldırıyı durduramaz.",
     "calendlyIntegration": "Calendly entegrasyonunu destekler"
   },
   "aiSocFaq": {
@@ -2551,6 +2551,7 @@
     ]
   },
   "homepageText": {
+    "protection_applies_to_routed_traffic_enabled_controls_are_designed_to_mi_gin4xh": "Koruma, hizmet üzerinden yönlendirilen trafiğe uygulanır. Etkin kontroller tehditleri azaltmak için tasarlanmıştır ancak her saldırıyı durduramaz; kullanılabilir özellikler siparişinizde belirtilir.",
     "allowed_ports_rpqmgr": "İzin Verilen Bağlantı Noktaları",
     "amount_a2ky21": "Tutar",
     "apply_filters_18ebn34": "Filtreleri Uygula",
@@ -2570,7 +2571,7 @@
     "bandwidth_5lc0i": "Bant genişliği",
     "bandwidth_2o9drs": "Bant genişliği:",
     "billed_annually_at_tl26no": "Yıllık olarak faturalandırılır",
-    "billed_monthly_cancel_anytime_1r79ysm": "Aylık faturalandırılır · İstediğiniz zaman iptal edin",
+    "billed_monthly_cancellation_follows_your_order_and_plan_terms_11eknc8": "Aylık faturalandırma · İptal, sipariş ve plan koşullarına tabidir",
     "blacklist_countries_8ksljy": "Kara Liste Ülkeleri",
     "blacklist_countries_16ekloe": "Kara liste ülkeleri",
     "blacklisted_1ctqsal": "Kara listeye alındı (",
@@ -2629,7 +2630,7 @@
     "console_preferences_tijcbo": "Konsol Tercihleri",
     "contact_sales_1wj8yf7": "Satış Ekibiyle İletişime Geçin",
     "content_1l6x30o": "İçerik:",
-    "control_storage_with_flexible_retention_periods_xtvuqg": "Esnek saklama dönemleriyle depolamayı kontrol edin",
+    "your_order_or_plan_states_the_available_retention_period_1tuyhqr": "Kullanılabilir saklama süresi siparişinizde veya planınızda belirtilir",
     "copy_s6g5lw": "Kopyala",
     "copy_ip_1i99gwt": "IP'yi kopyala",
     "copy_hostname_2m5wnx": "Ana makine adını kopyala",
@@ -2811,10 +2812,10 @@
     "package_selection_starts_after_the_server_is_added_13gcdx6": "Paket seçimi sunucu eklendikten sonra başlar.",
     "packages_19dyed4": "Paketler",
     "packages_plus_structured_os_services_ports_network_account_and_runtime_i_1volexa": "Paketlerin yanı sıra yapılandırılmış işletim sistemi, hizmetler, bağlantı noktaları, ağ, hesap ve çalışma zamanı envanter sinyalleri.",
-    "paddle_checkout_u9qyzf": "Kürek Kontrolü",
+    "paddle_checkout_u9qyzf": "Paddle Checkout",
     "page_1sfsa6u": "Sayfa",
     "partial_additional_configuration_10mybyq": "Kısmi / ek konfigürasyon",
-    "pay_as_you_go_1q46gv6": "Kullandıkça öde",
+    "overage_after_included_usage_1rr3ibz": "Dahil edilen kullanım üzerindeki aşım",
     "pay_only_for_the_compute_you_use_127apru": "Yalnızca kullandığınız bilgi işlem için ödeme yapın.",
     "payment_gateway_11ncarf": "Ödeme Ağ Geçidi:",
     "payment_history_t9jtfh": "Ödeme Geçmişi",
@@ -2829,7 +2830,7 @@
     "number_of_ips_1a5i4az": "IP sayısı",
     "observe_records_only_shadow_evaluates_without_enforcing_enforce_applies__9xtwoe": "Yalnızca kayıtları gözlemleyin. Gölge zorlamadan değerlendirir. Enforce, onaylanmış geçici engellemeleri uygular.",
     "one_autonomous_pentester_everything_included_fomv2o": "Tek bir otonom sızma testi uzmanı. Her şey dahil.",
-    "one_product_full_protection_zy3htc": "Tek ürün. Tam koruma.",
+    "one_product_configurable_web_protection_clwwg6": "Tek ürün. Yapılandırılabilir web koruması.",
     "only_capacity_changes_between_plans_176xpm6": "Planlar arasında yalnızca kapasite değişir.",
     "only_telemetry_explicitly_linked_to_this_incident_is_shown_e21eke": "Yalnızca bu olayla açıkça bağlantılı telemetri gösterilir.",
     "open_n6hn1l": "Açık",
@@ -2859,7 +2860,7 @@
     "show_sender_labels_uw55tw": "Gönderen etiketlerini göster",
     "sha_256_1j0rdj1": "SHA-256",
     "sha_256_dt80lh": "SHA-256:",
-    "siem_log_retention_1uopzvr": "SIEM günlüğü tutma",
+    "planned_siem_log_retention_options_vssevv": "Planlanan SIEM günlüğü saklama seçenekleri",
     "siem_log_storage_4qjyk4": "SIEM günlük depolama",
     "silence_ai_enterprise_e2rug6": "SILENCE AI / KURUMSAL",
     "ssh_kubernetes_access_requires_a_totp_verification_before_the_protected__1dhr6zz": "SSH/Kubernetes erişimi, doğrulanan kaynak IP için korumalı bağlantı noktasının geçici olarak açılmasından önce bir TOTP doğrulaması gerektirir.",
@@ -2891,7 +2892,7 @@
     "we_could_not_load_this_view_this_does_not_mean_guard_protection_failed_mp0yr6": "Bu görünümü yükleyemedik. Bu, Koruma korumasının başarısız olduğu anlamına gelmez.",
     "web_security_bel2xx": "Web Güvenliği",
     "your_company_yha0w5": "ŞİRKETİNİZ",
-    "you_pay_for_your_legitimate_users_never_your_attackers_1qhmtuw": "Meşru kullanıcılarınız için ödeme yaparsınız. Asla saldırganlarınıza.",
+    "blocked_malicious_requests_have_no_request_fee_usage_measurement_follows_g2sfyd": "Engellenen kötü amaçlı istekler için istek ücreti alınmaz; kullanım ölçümü planınıza tabidir.",
     "your_inbox_protected_g3xg2": "Gelen kutunuz korunuyor.",
     "start_protecting_your_website_x0gj9m": "Web sitenizi korumaya başlayın",
     "started_163dnb2": "Başlatıldı",
@@ -3249,7 +3250,7 @@
     "current_language_1ocq0a4": "Geçerli dil",
     "server_security_console_1pivfcx": "Sunucu Güvenliği Konsolu",
     "web_security_cmc_1ggnr48": "Web Güvenliği CMC",
-    "single_predictable_price_zero_request_fees_on_blocked_traffic_full_waf_i_1l1tmno": "Tek, öngörülebilir fiyat · Engellenen trafik için istek ücreti yok · WAF, IPS, DDoS ve SIEM dahil",
+    "one_subscription_no_request_fee_for_blocked_traffic_waf_ips_ddos_control_1kgorxg": "Tek abonelik · Engellenen trafik için istek ücreti yok · Planda WAF, IPS, DDoS kontrolleri ve SIEM",
     "automated_mail_organization_security_hepk6t": "Otomatik E-posta Düzenleme ve Güvenlik",
     "security_configuration_posture_zut1nr": "Güvenlik yapılandırması ve durumu",
     "email_12fq213": "e-posta",

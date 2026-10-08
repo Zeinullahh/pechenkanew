@@ -71,7 +71,7 @@ const AiSocLanding = () => {
       title: t('aiSocComparison.web.title', 'AI-CSD Web vs Traditional WAF Solutions'),
       columns: [
         t('aiSocComparison.common.features', 'Features'),
-        t('aiSocComparison.web.columns.aiSoc', 'AI-CSD Web (pay-as-you-go)'),
+        t('aiSocComparison.web.columns.aiSoc', 'AI-CSD Web (subscription + overage)'),
         t('aiSocComparison.web.columns.cloudflare', 'Cloudflare WAF + Anti-DDoS ($20/mo)'),
         t('aiSocComparison.web.columns.aws', 'AWS WAF (pay-as-you-go)'),
       ],

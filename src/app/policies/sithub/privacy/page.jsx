@@ -393,7 +393,7 @@ const SithubPrivacyPolicy = () => {
               <ul className="list-disc list-inside mb-4 space-y-2">
                 <li>For processing subscription payments</li>
                 <li>PCI DSS compliant</li>
-                <li>Examples: Stripe, PayPal, Kaspi.kz (for clients from Kazakhstan)</li>
+                <li>For agreements with Silence AI LLC in the UAE, online payments are handled by Paddle.com as merchant of record; for agreements with ТОО &quot;Silence AI&quot; in Kazakhstan, payments are handled by ТОО &quot;ФинCeрвисы&quot;</li>
                 <li>Have their own privacy policies</li>
               </ul>
 

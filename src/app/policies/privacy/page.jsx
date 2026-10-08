@@ -6,7 +6,7 @@ export default function PrivacyRedirect() {
   const router = useRouter();
   
   useEffect(() => {
-    router.replace('/policies/ai-soc1/privacy/');
+    router.replace('/policies/ai-csd/privacy/');
   }, [router]);
 
   return (

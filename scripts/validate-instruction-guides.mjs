@@ -71,6 +71,8 @@ const forbiddenScripts = {
   ar: /[\u3040-\u30ff\u3400-\u9fff\u0400-\u04ff\uac00-\ud7af]/u,
   tr: /[\u3040-\u30ff\u3400-\u9fff\u0400-\u04ff\u0600-\u06ff\uac00-\ud7af]/u,
 };
+const slugify = (value) => value.normalize("NFKC").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, "-").replace(/(^-|-$)/g, "");
+const serverGuideName = "Silence_AI_Server_Security_User_Guide(1).md";
 
 let failures = 0;
 const fail = (message) => { failures += 1; console.error(`FAIL ${message}`); };
@@ -92,6 +94,27 @@ for (const sourceName of guides) {
 
     const target = readFileSync(targetPath, "utf8");
     const targetHeadings = headings(target);
+    if (sourceName === serverGuideName) {
+      const chapterHeadings = lines(target).filter((line) => /^# (?:[1-9]|1[0-4])\. /.test(line));
+      const netHeadings = lines(target).filter((line) => /^## 10\.\d+ .*\(NET-\d{2}\)$/.test(line));
+      const section10 = target.match(/^# 10\. .*?(?=^# 11\.)/ms)?.[0] || "";
+      const requiredSections = ["6", "7", "8", "9", "12", "13", "14"];
+      const requiredLabels = ["Countries", "IP addresses", "Blacklisted", "Whitelisted", "Blacklist mode", "Whitelist mode", "Always Block", "Always Allow", "Shut down session", "Blacklist IP address", "First observed", "2525", "1–2", "3–9", "10+"];
+      const checks = [
+        [chapterHeadings.length === 14, "14 numbered chapters"],
+        [netHeadings.length === 11 && netHeadings.every((line, index) => line.includes(`NET-${String(index + 1).padStart(2, "0")}`)), "NET-01 through NET-11 headings"],
+        [requiredLabels.every((label) => section10.includes(label)), "network-access terms and four heat levels"],
+        [requiredSections.every((number) => new RegExp(`^# ${number}\\. .*?\\n\\n[^\\n]+`, "m").test(target)), "related chapter updates"],
+        [!section10.includes("Geo Rules (JSON Array)") && !section10.includes("Account-level country blocklist"), "obsolete blocking procedure removed"],
+        [chapterHeadings.every((line) => target.includes(`](#${slugify(line.slice(2))})`)), "localized chapter anchors"],
+        [!forbiddenScripts[locale].test(target.replace(/`[^`]+`/g, "")), "language script isolation"],
+        [suspiciousEnglishLines(target).length === 0, "no English instructional prose leak"],
+        [latinLanguageLeakLines(target, locale).length === 0, "no other Latin-language prose leak"],
+      ];
+      for (const [ok, label] of checks) if (!ok) fail(`${targetName}: ${label}`);
+      if (checks.every(([ok]) => ok)) pass(`${targetName}: network requirements, chapters, anchors, and language checks`);
+      continue;
+    }
     const checks = [
       [targetHeadings.length === sourceHeadings.length, "heading count"],
       [targetHeadings.map(({ level }) => level).join(",") === sourceHeadings.map(({ level }) => level).join(","), "heading-level sequence"],

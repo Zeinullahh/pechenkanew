@@ -1,5 +1,5 @@
-import AiSocPolicyPage from "@/components/policies/AiSocPolicyPage";
+import EmailPolicyLanding from "@/components/policies/shared/EmailPolicyLanding";
 
 export default function Page() {
-  return <AiSocPolicyPage policy="terms_of_use" variant="email" locale="en" />;
+  return <EmailPolicyLanding policy="terms_of_use" />;
 }

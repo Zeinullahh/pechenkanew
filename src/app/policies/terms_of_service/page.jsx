@@ -6,7 +6,7 @@ export default function TermsOfServiceRedirect() {
   const router = useRouter();
   
   useEffect(() => {
-    router.replace('/policies/ai-soc1/terms_of_service/');
+    router.replace('/policies/ai-csd/terms_of_service/');
   }, [router]);
 
   return (

@@ -16,6 +16,24 @@ Bu kılavuz, Silence AI Server Security kullanan yöneticiler ve yetkili operat�
 > **Önemli çalışma ilkesi**
 > Kayıt, paket kurulumu, sisteme kaydetme, politika yapılandırması ve canlı koruma ayrı aşamalardır. Bir ayar pending olarak işaretlenmişse ona güvenmeden önce panelin etkinleştirildiğini bildirmesini bekleyin.
 
+
+**Belge durumu:** Bölüm 10 gereksinimleri ve bilinen sınırları açıklar. Kod vardır ancak sağlanan belgelere göre gerçek Linux/Kubernetes denemeleri ve tarayıcı hareketleri doğrulanmamıştır. Kaydedildi/bekliyor, uygulandı/onaylandı demek değildir.
+
+- [1. Başlamadan önce](#1-başlamadan-önce)
+- [2. Oturum açma ve Server Security'yi açma](#2-oturum-açma-ve-server-security-yi-açma)
+- [3. Hizmet kaydetme](#3-hizmet-kaydetme)
+- [4. Yerel Server Security'yi kurma ve kaydetme](#4-yerel-server-security-yi-kurma-ve-kaydetme)
+- [5. Koruma durumunu anlama](#5-koruma-durumunu-anlama)
+- [6. MFA ve korumalı erişimi yapılandırma](#6-mfa-ve-korumalı-erişimi-yapılandırma)
+- [7. Server Security konsolunu kullanma](#7-server-security-konsolunu-kullanma)
+- [8. Olayları ve yanıtları inceleme](#8-olayları-ve-yanıtları-inceleme)
+- [9. Güvenlik politikasını yapılandırma](#9-güvenlik-politikasını-yapılandırma)
+- [10. Ağ erişimi denetimleri, küre ve canlı oturumlar](#10-ağ-erişimi-denetimleri-küre-ve-canlı-oturumlar)
+- [11. Sensörleri, envanteri, duruşu ve bulguları inceleme](#11-sensörleri-envanteri-duruşu-ve-bulguları-inceleme)
+- [12. Olayları ve telemetriyi izleme](#12-olayları-ve-telemetriyi-izleme)
+- [13. Sorun giderme](#13-sorun-giderme)
+- [14. En iyi güvenlik ve işletim uygulamaları](#14-en-iyi-güvenlik-ve-işletim-uygulamaları)
+
 # 1. Başlamadan önce
 
 Başlamadan önce aşağıdaki bilgileri ve erişimi hazırlayın:
@@ -160,6 +178,8 @@ Sensör kartları ayrı olarak Healthy, Degraded, Failed, Disabled, Unsupported,
 
 # 6. MFA ve korumalı erişimi yapılandırma
 
+**Port bazında erişim:** Bölüm 10'un hedefi her port için bağımsız uygunluk denetimidir. MFA uygun portları geçici açabilir ama başka porttaki ülke/IP reddini aşamaz; hizmet kimlik doğrulaması sürer. Eski grup açma davranışı bağımsız denetimin çalıştığını kanıtlamaz.
+
 ## 6.1 Hesap MFA'sı
 
 27. Hesap kaydı sırasında Set up 2FA'yı açın.
@@ -211,6 +231,8 @@ Yapılandırılmış korumalı TCP bağlantı noktalarına geçici bir erişim p
 
 # 7. Server Security konsolunu kullanma
 
+**Network access:** Bölüm 10 ayrı sayfayı, sunucu/port seçimini, küreyi, listeyi ve ilke işlemlerini anlatır. Kaydırma ve karşılık gelen denetimler gerçek tarayıcıda henüz doğrulanmamıştır; kurulumunuzda gerçekten görünen etiketleri izleyin.
+
 | **Sekme** | **Amaç** |
 |---|---|
 | Overview | Koruma durumu, sağlama, sensör sağlığı, olaylar, yanıtlar ve son etkinlik. |
@@ -225,6 +247,8 @@ Yapılandırılmış korumalı TCP bağlantı noktalarına geçici bir erişim p
 Ana konsol için Refresh'i kullanın. Events içinde olay gezginini yenilemeniz gerektiğinde sayfayı veya filtreyi değiştirin.
 
 # 8. Olayları ve yanıtları inceleme
+
+**Farklı işlemler:** **Shut down session** mevcut bağlantıyı hedefler; **Blacklist IP address** kapsamındaki yeni bağlantılar için kalıcı engel kaydeder. Otomatik yanıt geçici olabilir ve farklı kurallara bağlıdır. İstek veya kayıt kapatma ya da uygulama onayı değildir.
 
 ## 8.1 Olaylar
 
@@ -253,6 +277,8 @@ Incident details'ı açmak için bir olayı seçin. Önem derecesini, özeti, va
 Kaynağı, işlemi ve kapsamı, nedeni, durumu, başlangıç zamanını ve sona erme zamanını birlikte inceleyin. Yeni bağlantıları engellemek, önceden kurulmuş bir bağlantıyı her zaman sonlandırmaz.
 
 # 9. Güvenlik politikasını yapılandırma
+
+**Ayrı listeler:** **Trusted IPs** otomatik yanıtlarla, **Allowed IPs / CIDRs** Port Guard erişimiyle ilgilidir; açık engeller daha geniş olabilir. Hiçbiri Bölüm 10'daki **Always Allow** veya **Always Block** değildir. Eski kuralları geçişte uzlaştırın; hesap genelindeki HTTP listesi kendiliğinden SSH/Kubernetes engeline dönüşmez.
 
 ## 9.1 Otomatik yanıt modu
 
@@ -305,43 +331,58 @@ Policy → Sensor state; Inventory, File Integrity, Security Configuration, YARA
 
 Suricata için Policy → Suricata monitored interface'i açın, gösterilen adayı seçin veya `ens3` gibi doğrulanmış bir arayüz girin, ardından Save interface'i seçin. Değişiklikten sonra yeni Suricata telemetrisini doğrulayın.
 
-# 10. Ülke tabanlı erişim denetimlerini yönetme
+# 10. Ağ erişimi denetimleri, küre ve canlı oturumlar
 
-## 10.1 Sunucu başına Geo-Country Filtering
+**2026-10-06 tarihli işlev gereksinimi.** Bu bölüm istenen davranışı açıklar; üretim ortamında doğrulama iddiası değildir. Önceden küre web trafiğini gösteriyor, ülke denetimleri ayrıydı ve oturum sonlandırma kullanılamıyordu. CMC/Guard kodunda artık Network access sayfası, sunucu ve porta göre ilkeler, imzalı Guard yenilemesi, port bazında nftables yetkilendirmesi, Linux ana makine ağ ad alanındaki TCP bağlantılarının anlık görüntüsü ve imzalı hedefli kapatma komutları vardır. `NETWORK_ACCESS_NET_CHECKLIST.md` statik, birim ve çapraz derleme kontrollerini kaydeder. Veritabanı geçişi, gerçek Linux/Kubernetes bağlantıları, 2525 üzerinde SSH, tarayıcı etkileşimleri, yeniden başlatma kalıcılığı ve uçtan uca aracı onayı sağlanan belgelerde henüz doğrulanmamıştır. Kaydedilen ilke, çalışan aracı sürümü onaylayana kadar beklemededir; sıraya alınmış komut doğrulanmış kapatma değildir.
 
-Sunucu başına Geo-Country Filtering, yapılandırılmış korumalı TCP bağlantı noktası grubuna uygulanır ve doğrulanmış sunucu erişimi MFA'sı gerektirir.
+## 10.1 Amaç ve kapsam (NET-01)
 
-53. Korumalı TCP bağlantı noktalarını yapılandırın ve SSH 2FA kurulumunu tamamlayın.
+CMC, yapılandırılmış korumalı TCP portlarının erişimini yönetmek için 3B küreyi, ülke listelerini, engelleme penceresini ve yukarı açılan paneli birleştirmelidir. **Ağ oturumu**, gözlenen kaynak IP'den yönetilen sunucunun yapılandırılmış hedef portuna gerçek ve etkin bir TCP bağlantısıdır. SSH **2525** portunda çalışıyorsa kullanılan bağlantı bitene kadar görünür; SSH her zaman 22 değildir. Yapılandırılmış Kubernetes uçları ve diğer korumalı TCP hizmetleri de kapsam içindedir. Hizmet adı yalnızca yapılandırma veya doğrulanmış bilgiden gelir. Kubernetes TCP bağlantısı tek başına kullanıcıyı, pod kabuğunu veya belirli `kubectl exec` işlemini tanımlamaz; çoklanmış bağlantıyı kapatmak birden çok işlemi etkileyebilir. Web ziyareti, HTTP isteği, tarayıcı oturumu, user agent veya erişim günlüğündeki benzersiz IP sayısı ağ oturumu değildir. Bağımsız barındırma, HTTP analizi, kayıt ve faturalama ayrı kalır.
 
-54. Agent configuration'ı açıp Enable Geo-Country Filtering'i etkinleştirin.
+## 10.2 Sunucu ve port seçimi (NET-02)
 
-55. Default Policy altında Allow Unmatched veya Deny Unmatched'ı seçin.
+Görmeden veya düzenlemeden önce seçili sunucuyu ve korumalı TCP portunu gösterin. Her portun ülke modu ve listesi ayrı olabilir; 2525 kuralı başka portu sessizce değiştiremez. **All protected ports** birleşik görünümü karma ilkeleri belirtmelidir. Seçim ve filtreler küreyi, etkin ülke listelerini ve oturum listesini birlikte günceller. Kalıcı **Always Allow** ve **Always Block** IP listeleri seçili sunucunun yapılandırılmış korumalı portlarında geçerlidir; otomatik olarak tüm hesaba veya ilgisiz portlara yayılmaz.
 
-56. Geçerli bir Geo Rules (JSON Array) değeri girip Save'i seçin.
+## 10.3 Pencere ve listeler (NET-03)
 
-57. Agent configuration'ı yeniden açın ve kaydedilmiş anahtarı, varsayılan politikayı, kuralları, bağlantı noktalarını ve 2FA ayarını doğrulayın.
+İlk satır **Countries** ve **IP addresses** sekmelerinden oluşur. **Countries** altında ikinci satır **Blacklisted** ve **Whitelisted** görünümüdür; ülke arama, ekleme ve kaldırma ile ayrı bir **Blacklist mode / Whitelist mode** seçicisi bulunur. Bir listeye bakmak modu değiştirmez. Açıkça seçilen ülkeler ve görüntülenen tamamlayıcı küme seçilen port için anlaşılır olmalıdır. **IP addresses** altında ikinci satır **Always Block** ve **Always Allow** görünümüdür. Her birinde **+**, basit IP girişi, kayıtlı liste ve kaldırma vardır. İki liste sekme veya ülke modu değişse bile aynı anda etkindir. Tekil IPv4 ve IPv6 adreslerini kabul edip eşdeğer yazımları normalleştirin, tekrarları önleyin; JSON, tarayıcı parmak izi, IP-kullanıcı birleşimi veya zorunlu CIDR gerekmez.
 
+## 10.4 Ülke modları (NET-04)
 
+| Mod | Açıkça seçilen ülkeler | Diğer bütün bilinen ülkeler |
+|---|---|---|
+| **Blacklist mode** | Engelli | IP kuralları ve kimlik doğrulamaya bağlı olarak izinli |
+| **Whitelist mode** | IP kuralları ve kimlik doğrulamaya bağlı olarak izinli | Engelli |
 
-- Yapılandırılmış bağlantı noktası için açık kural, varsayılan politikadan önceliklidir.
-- allow kuralı listelenen ülkelere izin verir ve o kuralda listelenmeyenleri reddeder.
+Boş kara liste hiçbir ülkeyi engellemez; boş beyaz liste hiçbir ülkeye izin vermez. Mod değişiminde açık seçimlerin korunmasını veya taşınmasını açıklayın; görüntülenen tamamlayıcı listeyi sessizce kayıtlı seçim saymayın. **Whitelist mode** içinde Kazakistan ve Türkiye seçilirse geçerli IP istisnası dışında diğer ülkeler reddedilir. Her port bağımsız değerlendirilir: bir portun reddi başka izinli portu reddetmez, bir portun izni reddedileni açmaz. MFA zorunludur. Konum bilinmiyorsa **Unknown country** gösterin; ülke uydurmayın. Genel IP için GeoIP hatası kısıtı sessizce kaldırmamalıdır; beyaz liste modunda bilinmeyen ülke **Always Allow** olmadan reddedilir. Özel/yerel kaynaklar coğrafi denetimi atlar fakat IP kısıtları ve MFA'ya tabidir; bunları genel IP arama hatasından ayırın.
 
-- deny kuralı listelenen ülkeleri reddeder ve o kuralda listelenmeyenlere izin verir.
-- Varsayılan politika yalnızca açık kuralı bulunmayan yapılandırılmış bağlantı noktalarına uygulanır.
+## 10.5 Kalıcı IP istisnaları (NET-05)
 
-## 10.2 Hesap düzeyinde ülke engelleme listesi
+**Always Allow**, gözlenen kaynak IP'yi bu sunucunun korumalı portlarında ülke kısıtından kayıt kaldırılana kadar muaf tutar. Örnek: Rusya engellidir, ancak bir çalışan Rusya'dan uzaktan çalışır. Gözlenen IP'sini **Always Allow** listesine eklemek ülke kararını aşar; MFA ve SSH kimlik doğrulaması yine gerekir. Rusya beyaz listede yoksa da aynı istisna işler; kaydı kaldırmak normal ülke kararını geri getirir. **Always Block**, ülkesi izinli olsa da IP'yi reddeder. İki liste mod değişiminde de kalıcı ve aynı anda etkindir. **Always Allow**, hizmet kimlik bilgilerini veya bağımsız otomatik tehdit yanıtlarını atlamaz. **Trusted IPs** bu yanıtlarla ilgilidir ve eşanlamlı değildir; eski kaynak izin listeleri ve açık engeller bilinçli uzlaştırılmalıdır. Aynı normalleştirilmiş IP iki listede olamaz: açık taşıma sunun. Çelişkili veri gelirse engelleme üstün gelir ve çelişki bildirilir. Sıra: **Always Block**, coğrafi istisna **Always Allow**, ilgili portun ülke modu; MFA ve hizmet girişi ayrıca uygulanır. Paylaşılan genel IP aynı adresi kullanan herkesi etkiler; kaynak IP değişirse istisnayı güncelleyin. Yalnız IP bir çalışanı tanımlamaz.
 
-Genel panodaki Blacklist countries, hesap düzeyinde web trafiği engelleme listesidir ve sunucu başına Geo-Country Filtering'den ayrıdır.
+## 10.6 Küre ve dört yoğunluk düzeyi (NET-06)
 
-58. Blacklist countries'ı açın.
+Küre, seçili kapsamda izinli/engelli ülkeleri ve etkin bağlantıları gösterir; engelli ülkedeki izinli IP istisnası anlaşılmalıdır. Ülke ilkesi renkleri ile oturum yoğunluğunu ayrı göstergelerle ayırın. Kaydedilmiş dört düzey **0, 1–2, 3–9 ve 10+ oturumdur**; değerleri doğrulanmış diye yayımlamadan önce güncel uygulama kanıtını kontrol edin. İşaret kümeleri tekil IP ve bağlantılara açılmalı, ülke bilgisinden kesin IP koordinatı türetilmemelidir. Karma ilkeleri ve bilinmeyen/özel konumları belirtin. Eski **Active Users** metriği erişim günlüklerindeki yakın tarihli IP'leri sayıyordu; etkin TCP bağlantılarını değil. Küre ve liste filtreleri, zamanları, toplamları ve veri tazeliğini paylaşır. Kapatıldığı doğrulanan bağlantı sayıdan çıkar; çevrimdışı aracı veya eksik telemetri sıfır değil bilinmeyen/eski veri anlamına gelir.
 
-59. Non-Blacklisted'ı açın ve gerekirse ülke adına veya iki harfli koda göre arayın.
+## 10.7 Oturum listesi (NET-07)
 
-60. Bir ülke seçip Add'i seçin. Değişiklik hemen kaydedilir.
+Yukarı kaydırma listeyi açar; görünür aç/genişlet düğmesi fare ve klavye ile aynı erişimi sağlar. Kapatma/daraltma olmalıdır. Her satır bir bağlantıdır; aynı IP'deki birden çok bağlantı ayrı kalır. Kaynak IP, ülke veya özel/bilinmeyen durumu, sunucu, hedef port, biliniyorsa yapılandırılmış hizmet adı, durum ve gerçekten bilinen zaman gösterilir. **First observed** ilk bilinen gözlemdir; gerçek bağlantı başlangıcı olmak zorunda değildir. Arama, kapsam filtreleri ve sayfalama bütün satırlara eriştirmeli; bir sonuç sayfası toplam sayı değildir.
 
-61. Ülkenin Blacklisted altında göründüğünü doğrulayın.
+## 10.8 Bağlam menüsü ve kapatma (NET-08)
 
-Bir ülkeyi kaldırmak için Blacklisted'ı açın, engellenen ülkeyi seçin ve remove'u seçin. Ülke Non-Blacklisted'a döner.
+Kürede veya listede incelenebilir IP/oturuma sağ tıklamak **Shut down session** ve **Blacklist IP address** işlemlerini açar; dokunmatik ve klavye için görünür eşdeğer menü gerekir. Bir IP'nin birçok bağlantısı varsa tam bağlantı, sunucu ve port açıkça seçilir. **Shut down session**, aracı üzerinden sadece seçili gerçek bağlantıyı keser: 2525/22 SSH, desteklenen Kubernetes yolu veya başka korumalı TCP hizmeti. Sunucuyu, hizmeti, podu veya diğer bağlantıları kapatmaz; başlamış uygulama işini mutlaka durdurmaz ve yeniden bağlanmayı kalıcı engellemez. İşlemden hemen önce bağlantı kimliğini yeniden doğrulayın; tek başına IP, kullanıcı adı, yaklaşık zaman veya yeniden kullanılan PID yeterli değildir. İstenen/kuyruktaki işlem ile doğrulanmış sonucu ayırın; zaten kapanmış, eski kimlik, çevrimdışı, yetkisiz, desteklenmeyen, süresi dolmuş ve başarısız durumları doğru bildirin. Komut göndermek başarı kanıtı değildir; güvenli hedefli kesme yapılamıyorsa somut nedeni belirtin.
+
+## 10.9 Oturumdan engelleme (NET-09)
+
+**Blacklist IP address**, kaynak IP'yi sunucunun aynı kalıcı **Always Block** listesine ekler. Önce kaydedildi/bekliyor, aracı onayından sonra uygulandı veya başarısız gösterin; aynı kayıt **IP addresses** penceresinde görünür. IP **Always Allow** içindeyse açık taşıma işlemi sunun. Uygulandığında kapsamdaki yeni bağlantıları önler; açık bağlantının kapandığı anlamına gelmez, bunun için ayrı kapatma gerekir.
+
+## 10.10 Kaydetme, uygulama ve geçiş (NET-10)
+
+Tek ilke CMC, API/depolama, aracıya teslim edilen yapılandırma ve gerçek yaptırımı bağlar. Kaydedildi, bekliyor, uygulandı ve başarısız durumlarını sürüm/zaman ile ayırın; çevrimdışı aracının kuralı beklemede kalır. Yeniden başlatmada koruyun, eski komutları/tekrarları reddedin, işlemi yapan kişi/hesap/sunucu yetkilerini denetleyin; hedef, işlem, zaman ve sonucu kaydedin. Hesap çapındaki eski HTTP ülke engellemesi ve ayrı Geo JSON düzenleyicisi talimatlarını bu ortak süreçle değiştirin. Hesabın HTTP kara listesini sessizce tüm sunucuların SSH/Kubernetes engeline dönüştürmeyin. Yerel ve IP kısıtlarını korumayı zayıflatmadan veya gizli red oluşturmadan bilinçli taşıyın. Bağımsız HTTP analizi ve diğer özellikler kalır.
+
+## 10.11 Zorunlu kontrol (NET-11)
+
+Tamamlandı demeden önce **NET-01**–**NET-11** için dosya, kanıt ve açık eksikleri kontrol edin: 2525 SSH dahil bağımsız iki port; iki mod, boş listeler ve mod değişimi; iki sekme sırası ve birlikte etkin IP listeleri; Rusya'daki çalışanın her iki modda MFA ile istisnası; engel önceliği, IPv4/IPv6 ve tekrarlar; kürede ve listede gerçek SSH, Kubernetes ve sıradan TCP bağlantıları; dört düzey, eşit toplam ve eski telemetri; kaydırma, fare/klavye ve menüler; aynı IP'de bile yalnız seçili bağlantının kapatılması; zaten kapalı, yetkisiz, eski, başarısız ve desteklenmeyen sonuçlar; kalıcı engel, aracı onayı, yeniden başlatma, hesap ayrımı ve geçiş. Görsel arayüz veya sahte veriler yeterli değildir. Eksik gerçek Linux/Kubernetes ve tarayıcı denemelerini ayrıca belirtin.
 
 # 11. Sensörleri, envanteri, duruşu ve bulguları inceleme
 
@@ -372,6 +413,8 @@ Security Configuration Assessment bulguları ve güvenlik açığı istihbaratı
 
 # 12. Olayları ve telemetriyi izleme
 
+**Veri tazeliği:** erişim günlükleri ve eski **Active Users** etkin TCP bağlantılarını saymaz. Bölüm 10'daki küre ile liste filtreleri, toplamları ve zamanları paylaşır. Eksik veya eski telemetri sıfır değil bilinmeyen/eski anlamına gelir.
+
 Events'ı açın ve kullanılabilir filtreleri kullanın:
 
 - Sensöre göre filtreleyin.
@@ -383,6 +426,8 @@ Events'ı açın ve kullanılabilir filtreleri kullanın:
 Gösterildiğinde olay adını, kaynağını, türünü, kanıtını, önemini, zaman damgasını ve bağlantılı olayı inceleyin.
 
 # 13. Sorun giderme
+
+**Beklenmeyen erişim:** sunucu/portu, ülke modunu, gerçekten gözlenen kaynak IP'yi, **Always Block**/**Always Allow** listelerini, eski kısıtları ve uygulanan sürümü kontrol edin. IP değişince istisnayı güncelleyin. Bekleyen ilke, çevrimdışı aracı veya eski oturum gerçek durumu doğrulamaz; istenen, süresi dolan ya da desteklenmeyen kapatma doğrulanmış kapatma değildir.
 
 > **İlk kural**
 > Erişim denetimlerini değiştirirken bağımsız yönetici erişimini kullanılabilir tutun. Gizli olmayan hata metnini kaydedin; kayıt kodlarını, MFA sırlarını, yedek kodları, özel anahtarları veya bunları içeren ekran görüntülerini asla paylaşmayın.
@@ -401,6 +446,8 @@ Gösterildiğinde olay adını, kaynağını, türünü, kanıtını, önemini, 
 | Paket envanteri boş | Search packages'ı kullanın ve paket tablosunu diğer envanter etkinliğiyle karşılaştırın. Boş tabloyu hiç paket bulunmadığının kanıtı değil, eksik bilgi sayın. |
 
 # 14. En iyi güvenlik ve işletim uygulamaları
+
+**Güncel sınırlar:** Bölüm 10 kodunun tam gerçek Linux/Kubernetes ve tarayıcı doğrulaması sağlanan belgelerde yoktur. Süreli MFA izinleri nftables gerektirir. Toplayıcı yalnız seçilen düğümün ana makine ağ ad alanındaki kurulmuş TCP soketlerini görür; bütün podları, düğümleri veya dış yük dengeleyicileri değil. Soket kimliği yoksa durum desteklenmiyor; büyük anlık görüntü tam değil eski sayılır. Yeniden başlatma, aracı onayı ve hedefli kapatma henüz doğrulanmalıdır.
 
 - Güvenilen ve izin verilen kaynaklar için kullanılabilecek en dar IP/CIDR aralıklarını kullanın.
 - MFA, açık engeller veya ülke kısıtlamaları etkinleştirirken test edilmiş yönetici kurtarma yolunu koruyun.

@@ -12,10 +12,7 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
   const { locale } = await params;
   const content = getInstructionGuideContent(locale, "server");
-  const [markdown, anchorMarkdown] = await Promise.all([
-    readFile(path.join(process.cwd(), content.file), "utf8"),
-    readFile(path.join(process.cwd(), content.sourceFile), "utf8"),
-  ]);
+  const markdown = await readFile(path.join(process.cwd(), content.file), "utf8");
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -23,12 +20,13 @@ export default async function Page({ params }) {
       <main className="flex grow flex-col px-4 pb-16">
         <ServerSecurityGuide
           markdown={markdown}
-          anchorMarkdown={anchorMarkdown}
+          anchorMarkdown={markdown}
           locale={content.locale}
           direction={content.direction}
           pageTitle={content.pageTitle}
           productLabel="Server Security"
           uiLabels={content.ui}
+          chapterHeadingLevel={content.locale === "en" ? 2 : 1}
         />
       </main>
     </div>

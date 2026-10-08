@@ -257,7 +257,7 @@
     "tooltips": {
       "web": {
         "title": "웹 공격 방어",
-        "content": "DDoS, SQLi 등 비즈니스 로직 취약점을 제외한 모든 유형의 웹 공격을 차단합니다."
+        "content": "Web Security는 구성된 서비스를 통해 라우팅된 트래픽에 이용 가능한 WAF, IPS, DDoS 제어를 적용합니다. 이러한 제어는 위협 완화를 위한 것이며 모든 공격을 막을 수는 없습니다."
       },
       "email": {
         "title": "이메일 공격 방어",
@@ -471,7 +471,7 @@
         "description": "제한 없음\n추가 요금 없음",
         "button": "웹앱·API 보호",
         "features": {
-          "webProtection": "비즈니스 로직 악용을 제외한 모든 웹 공격 방어",
+          "webProtection": "구성된 서비스를 통해 라우팅된 트래픽용 WAF 제어",
           "ddosProtection": "실시간 DDoS 방어",
           "cmc": "글로벌 트래픽 모니터링 CMC",
           "country": "국가 차단 기능",
@@ -2441,7 +2441,7 @@
     "web": {
       "title": "AI-CSD Web vs 기존 WAF 솔루션",
       "columns": {
-        "aiSoc": "AI-CSD Web(종량제)",
+        "aiSoc": "AI-CSD Web(구독 + 초과 사용)",
         "cloudflare": "Cloudflare WAF + Anti-DDoS($20/월)",
         "aws": "AWS WAF(종량제)"
       },
@@ -2542,7 +2542,7 @@
   "aiSocPricing": {
     "intro": "AI-CSD는 독립형 사이버보안 시스템 라인업입니다",
     "emailDescription": "Email Security는 기업 커뮤니케이션을 보호하는 방패 역할을 합니다. 수신/발신 메일을 필터링하여 피싱 시도, 스푸핑 공격, 악성 링크를 사용자에게 도달하기 전에 차단해 비즈니스 커뮤니케이션의 무결성을 지킵니다.",
-    "webDescription": "Web Security는 실시간 트래픽 패턴 분석으로 디지털 인프라를 보호합니다. 일반 취약점, DDoS 공격, 무단 접근으로부터 웹사이트와 API를 방어하고 성능 저하 없이 네트워크 활동에 대한 깊은 가시성을 제공합니다.",
+    "webDescription": "Web Security는 구성된 서비스를 통해 라우팅된 트래픽을 분석합니다. 이용 가능한 WAF, IPS, DDoS 제어는 위협 탐지와 완화 및 보안 가시성 제공을 위한 것이지만 모든 공격을 막을 수는 없습니다.",
     "calendlyIntegration": "Calendly 연동 지원"
   },
   "aiSocFaq": {
@@ -2583,8 +2583,9 @@
     ]
   },
   "homepageText": {
+    "protection_applies_to_routed_traffic_enabled_controls_are_designed_to_mi_gin4xh": "보호는 서비스를 통해 라우팅된 트래픽에 적용됩니다. 활성화된 제어는 위협 완화를 위한 것이지만 모든 공격을 막을 수는 없으며, 이용 가능한 기능은 주문서에 명시됩니다.",
     "billed_annually_at_tl26no": "매년 청구 금액:",
-    "billed_monthly_cancel_anytime_1r79ysm": "매월 청구됨 · 언제든지 취소 가능",
+    "billed_monthly_cancellation_follows_your_order_and_plan_terms_11eknc8": "월별 청구 · 해지는 주문 및 요금제 약관에 따릅니다",
     "blacklist_countries_8ksljy": "블랙리스트 국가",
     "blacklist_countries_16ekloe": "블랙리스트 국가",
     "blacklisted_1ctqsal": "블랙리스트에 등록됨(",
@@ -2679,7 +2680,7 @@
     "console_preferences_tijcbo": "콘솔 환경설정",
     "contact_sales_1wj8yf7": "영업팀에 문의",
     "content_1l6x30o": "내용:",
-    "control_storage_with_flexible_retention_periods_xtvuqg": "유연한 보존 기간으로 스토리지 제어",
+    "your_order_or_plan_states_the_available_retention_period_1tuyhqr": "이용 가능한 보존 기간은 주문서 또는 요금제에 명시됩니다",
     "copy_s6g5lw": "복사",
     "copy_ip_1i99gwt": "IP 복사",
     "copy_hostname_2m5wnx": "호스트 이름 복사",
@@ -2807,7 +2808,7 @@
     "number_of_ips_1a5i4az": "IP 수",
     "observe_records_only_shadow_evaluates_without_enforcing_enforce_applies__9xtwoe": "기록만 관찰하세요. Shadow는 시행하지 않고 평가합니다. 승인된 임시 차단을 적용합니다.",
     "one_autonomous_pentester_everything_included_fomv2o": "자율형 침투 테스트 시스템 하나로 모든 기능을 이용하세요.",
-    "one_product_full_protection_zy3htc": "하나의 제품. 완전한 보호.",
+    "one_product_configurable_web_protection_clwwg6": "하나의 제품. 구성 가능한 웹 보호.",
     "only_capacity_changes_between_plans_176xpm6": "계획 간에는 용량만 변경됩니다.",
     "only_telemetry_explicitly_linked_to_this_incident_is_shown_e21eke": "이 사건과 명시적으로 연결된 원격 분석만 표시됩니다.",
     "open_n6hn1l": "열기",
@@ -2825,10 +2826,10 @@
     "package_selection_starts_after_the_server_is_added_13gcdx6": "패키지 선택은 서버 추가 이후부터 시작됩니다.",
     "packages_19dyed4": "패키지",
     "packages_plus_structured_os_services_ports_network_account_and_runtime_i_1volexa": "패키지와 구조화된 OS, 서비스, 포트, 네트워크, 계정 및 런타임 인벤토리 신호.",
-    "paddle_checkout_u9qyzf": "패들 체크아웃",
+    "paddle_checkout_u9qyzf": "Paddle Checkout",
     "page_1sfsa6u": "페이지",
     "partial_additional_configuration_10mybyq": "부분/추가 구성",
-    "pay_as_you_go_1q46gv6": "사용한 만큼 지불하세요",
+    "overage_after_included_usage_1rr3ibz": "포함된 사용량 초과분",
     "pay_only_for_the_compute_you_use_127apru": "사용한 컴퓨팅에 대해서만 비용을 지불하세요.",
     "payment_gateway_11ncarf": "결제 게이트웨이:",
     "payment_history_t9jtfh": "결제 내역",
@@ -2891,7 +2892,7 @@
     "show_sender_labels_uw55tw": "발신자 라벨 표시",
     "sha_256_1j0rdj1": "SHA-256",
     "sha_256_dt80lh": "SHA-256:",
-    "siem_log_retention_1uopzvr": "SIEM 로그 보존",
+    "planned_siem_log_retention_options_vssevv": "예정된 SIEM 로그 보존 기간 옵션",
     "siem_log_storage_4qjyk4": "SIEM 로그 저장",
     "silence_ai_enterprise_e2rug6": "SILENCE AI / 기업용",
     "ssh_kubernetes_access_requires_a_totp_verification_before_the_protected__1dhr6zz": "SSH/Kubernetes 액세스에는 확인된 소스 IP에 대해 보호된 포트가 일시적으로 열리기 전에 TOTP 확인이 필요합니다.",
@@ -2959,7 +2960,7 @@
     "we_could_not_load_this_view_this_does_not_mean_guard_protection_failed_mp0yr6": "이 보기를 로드할 수 없습니다. 이는 Guard 보호가 실패했다는 의미는 아닙니다.",
     "web_security_bel2xx": "웹 보안",
     "your_company_yha0w5": "우리 회사",
-    "you_pay_for_your_legitimate_users_never_your_attackers_1qhmtuw": "합법적인 사용자에 대한 비용을 지불합니다. 결코 공격자가 아닙니다.",
+    "blocked_malicious_requests_have_no_request_fee_usage_measurement_follows_g2sfyd": "차단된 악성 요청에는 요청 요금이 부과되지 않으며, 사용량 측정은 요금제에 따릅니다.",
     "your_inbox_protected_g3xg2": "받은편지함을 보호하세요.",
     "this_action_cannot_be_undone_this_will_permanently_delete_your_account_a_16gz7of": "이 작업은 취소할 수 없습니다. 이렇게 하면 귀하의 계정이 영구적으로 삭제되고 당사 서버에서 귀하의 모든 데이터가 제거됩니다.",
     "this_demonstration_agreement_covers_the_dedicated_staging_node_email_sec_1u5pniv": "이 데모 계약에는 Sarah Jenkins의 메시지에 설명된 전용 스테이징 노드, 이메일 보안 통합 및 기술 핸드오프가 포함됩니다.",
@@ -3281,7 +3282,7 @@
     "current_language_1ocq0a4": "현재 언어",
     "server_security_console_1pivfcx": "서버 보안 콘솔",
     "web_security_cmc_1ggnr48": "웹 보안 CMC",
-    "single_predictable_price_zero_request_fees_on_blocked_traffic_full_waf_i_1l1tmno": "예측 가능한 단일 요금 · 차단된 트래픽에 요청 요금 없음 · WAF, IPS, DDoS, SIEM 포함",
+    "one_subscription_no_request_fee_for_blocked_traffic_waf_ips_ddos_control_1kgorxg": "하나의 구독 · 차단된 트래픽에 요청 요금 없음 · 요금제에 WAF, IPS, DDoS 제어 및 SIEM 포함",
     "automated_mail_organization_security_hepk6t": "자동 메일 정리 및 보안",
     "security_configuration_posture_zut1nr": "보안 설정 및 상태",
     "email_12fq213": "이메일",

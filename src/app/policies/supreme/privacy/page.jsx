@@ -53,7 +53,7 @@ const SupremePrivacyPolicy = () => {
               <p className="mb-4">We design Supreme with a local-first, privacy-by-design architecture: source code is analyzed locally on your machine and is not uploaded to our servers.</p>
               <p className="mb-4"><strong>2.1 Installation and Licensing Information:</strong> When you install and activate Supreme, we may collect: License key or subscription identifier. Extension version and build information. Approximate language and locale settings of your environment. Basic product configuration flags related to licensing and updates.</p>
               <p className="mb-4"><strong>2.2 Service Usage and Technical Data:</strong> When Supreme contacts our servers for license verification or Database updates, we may process: Request timestamps. Extension version and platform metadata. License status (active, expired, invalid). Technical logs related to update/download success or failure. This data does not include your source code or project contents.</p>
-              <p className="mb-4"><strong>2.3 Billing and Account Data:</strong> If you purchase a paid subscription through our website or a payment processor, we may process: Billing address (where required by payment or tax regulations). Subscription plan, term, and payment status. Partial payment details and transaction identifiers are handled by our payment gateway Stripe, see more in their Services Agreement (https://stripe.com/legal/ssa) and Privacy Policy (https://stripe.com/privacy)</p>
+              <p className="mb-4"><strong>2.3 Billing and Account Data:</strong> If you purchase a paid subscription, we may process billing address, subscription plan, payment status and transaction identifiers needed to administer the service. For UAE agreements, Paddle.com handles online payments as merchant of record. For Kazakhstan agreements, payments are handled by ТОО &quot;ФинCeрвисы&quot;. The payment handler collects payment details according to the terms and privacy notice shown at checkout.</p>
               <p className="mb-4"><strong>2.4 Support and Communication Data:</strong> If you contact us for support or inquiries, we may process: Your name and email address. Content of your message and attachments (if any). Technical context you choose to share (for example, error messages, logs you manually provide).</p>
             </section>
 
@@ -91,18 +91,13 @@ const SupremePrivacyPolicy = () => {
 
             <section id="data-sharing">
               <h2 className="text-2xl font-semibold mb-4">7. Data Sharing and Third Parties</h2>
-              <p className="mb-4"><strong>7.1 Payment Processors:</strong> For paid subscriptions, payments are processed via Stripe, Inc. ("Stripe"), a third-party payment gateway. When you provide payment information to subscribe to Supreme, the following data processing occurs:</p>
+              <p className="mb-4"><strong>7.1 Payment Handling:</strong> For subscriptions under an agreement with Silence AI LLC in the UAE, Paddle.com handles online payments as merchant of record. For subscriptions under an agreement with ТОО &quot;Silence AI&quot; in Kazakhstan, ТОО &quot;ФинCeрвисы&quot; handles payments. The checkout or invoice identifies the payment recipient and applicable terms.</p>
               <ul className="list-disc list-inside mb-4 ml-4 space-y-2">
-                <li><strong>Independent Data Controller:</strong> Stripe acts as an independent data controller (not a processor) for payment data. This means Stripe determines how your payment information is processed and is directly responsible for compliance with applicable data protection laws.</li>
-                <li><strong>Payment Data Processed by Stripe:</strong> Stripe directly collects and processes your payment card details (card number, expiration date, CVV), billing address, transaction history, payment method information, device information, and IP address for payment processing, fraud prevention, and regulatory compliance purposes.</li>
-                <li><strong>Stripe's Legal Basis:</strong> Stripe processes your payment data based on: (a) contract performance to process your subscription payments; (b) legitimate interests in preventing fraud and ensuring payment security; and (c) legal obligations under financial regulations and anti-money laundering laws.</li>
-                <li><strong>Data Retention by Stripe:</strong> Stripe retains your payment information in accordance with financial regulatory requirements and their own retention policies, which may extend beyond your subscription period.</li>
-                <li><strong>Stripe's Privacy Policy and Terms:</strong> Your payment data is subject to Stripe's Services Agreement (https://stripe.com/legal/ssa) and Stripe's Privacy Policy (https://stripe.com/privacy). We strongly encourage you to review these documents to understand how Stripe processes your personal data.</li>
-                <li><strong>Our Access to Payment Data:</strong> We do not have access to your complete payment card details. We receive only limited information from Stripe such as the last four digits of your card, card brand, expiration date, transaction status, and transaction identifiers for billing reconciliation and customer support purposes.</li>
-                <li><strong>International Data Transfers:</strong> Stripe may transfer your payment data internationally to countries outside your jurisdiction, including to the United States where Stripe is headquartered. Stripe implements appropriate safeguards for such transfers as described in their Privacy Policy.</li>
-                <li><strong>Cookies and Tracking by Stripe:</strong> Stripe uses cookies, web beacons, device fingerprinting, and similar tracking technologies to facilitate payment processing, prevent fraud, authenticate transactions, and comply with financial regulations. See Section 11 (Cookies and Tracking) for more details.</li>
+                <li><strong>Payment information:</strong> The payment handler processes the payment and billing details required for the transaction. Silence AI receives limited subscription, invoice and transaction information for administration and support.</li>
+                <li><strong>UAE purchases:</strong> Paddle&apos;s <a href="https://www.paddle.com/legal/buyer-terms">Buyer Terms</a> and <a href="https://www.paddle.com/legal/privacy">Privacy Notice</a> explain its separate purchase and data-processing terms.</li>
+                <li><strong>Privacy requests:</strong> For data processed by a payment handler, use the contact and rights information in the notice presented at checkout.</li>
               </ul>
-              <p className="mb-4"><strong>7.2 Right to Change Payment Gateway:</strong> We reserve the right to change our payment processor from Stripe to another payment gateway at our sole discretion. If we change our payment gateway, we will:</p>
+              <p className="mb-4"><strong>7.2 Right to Change Payment Gateway:</strong> We reserve the right to change our payment processor at our sole discretion. If we change our payment gateway, we will:</p>
               <ul className="list-disc list-inside mb-4 ml-4 space-y-2">
                 <li>Provide you with at least thirty (30) calendar days' advance written notice via email to the email address associated with your Supreme account;</li>
                 <li>Inform you of the name and identity of the new payment processor;</li>
@@ -147,29 +142,9 @@ const SupremePrivacyPolicy = () => {
             <section id="cookies-tracking">
               <h2 className="text-2xl font-semibold mb-4">11. Cookies and Tracking</h2>
               <p className="mb-4"><strong>11.1 Supreme Extension:</strong> The Supreme extension itself does not use browser cookies or similar tracking technologies within the Visual Studio Code environment.</p>
-              <p className="mb-4"><strong>11.2 Payment Processor Cookies:</strong> When you purchase a subscription or provide payment information, Stripe (our payment processor) uses cookies, web beacons, device fingerprinting, local storage, and similar tracking technologies. These technologies are used for:</p>
-              <ul className="list-disc list-inside mb-4 ml-4 space-y-2">
-                <li><strong>Payment Processing:</strong> To facilitate secure payment transactions and authentication;</li>
-                <li><strong>Fraud Prevention and Security:</strong> To detect and prevent fraudulent transactions, identify suspicious activity, and protect against unauthorized access;</li>
-                <li><strong>Session Management:</strong> To maintain your payment session and ensure continuity during the checkout process;</li>
-                <li><strong>Regulatory Compliance:</strong> To comply with financial regulations, anti-money laundering laws (AML), and Know Your Customer (KYC) requirements;</li>
-                <li><strong>Analytics and Performance:</strong> To analyze payment system performance and improve the payment experience;</li>
-                <li><strong>Device Recognition:</strong> To recognize your device for security purposes and to streamline future payment processes.</li>
-              </ul>
-              <p className="mb-4"><strong>11.3 Types of Cookies Used by Stripe:</strong> Stripe may use the following types of cookies and similar technologies:</p>
-              <ul className="list-disc list-inside mb-4 ml-4 space-y-2">
-                <li><strong>Strictly Necessary Cookies:</strong> Required for payment processing and cannot be disabled without preventing payment functionality;</li>
-                <li><strong>Security Cookies:</strong> Used to authenticate users, prevent fraud, and protect payment data;</li>
-                <li><strong>Functional Cookies:</strong> Used to remember your payment preferences and provide enhanced payment features;</li>
-                <li><strong>Performance/Analytics Cookies:</strong> Used by Stripe to analyze payment system performance and reliability.</li>
-              </ul>
-              <p className="mb-4"><strong>11.4 Managing Payment Processor Cookies:</strong> Because Stripe's cookies are essential for payment processing, you cannot opt out of these cookies without disabling payment functionality entirely. However, you can:</p>
-              <ul className="list-disc list-inside mb-4 ml-4 space-y-2">
-                <li>Review Stripe's cookie practices in detail by visiting their Privacy Policy at https://stripe.com/privacy;</li>
-                <li>Contact Stripe directly regarding their cookie usage and data processing practices;</li>
-                <li>Choose not to purchase a subscription if you do not consent to Stripe's cookie usage;</li>
-                <li>Cancel your subscription if you no longer wish to be subject to Stripe's data processing.</li>
-              </ul>
+              <p className="mb-4"><strong>11.2 Payment Checkout Cookies:</strong> The payment checkout may use cookies or similar technologies needed for the payment session, authentication, fraud prevention and security. For UAE purchases, Paddle.com describes its practices in its <a href="https://www.paddle.com/legal/privacy">Privacy Notice</a>. For Kazakhstan purchases, consult the notice displayed by ТОО &quot;ФинCeрвисы&quot; at checkout.</p>
+              <p className="mb-4"><strong>11.3 Cookie Categories:</strong> Depending on the checkout, payment technologies may support session continuity, security and fraud prevention. Any optional analytics or preferences depend on the payment handler&apos;s actual checkout and notice.</p>
+              <p className="mb-4"><strong>11.4 Managing Payment Cookies:</strong> Browser settings can control cookies, although blocking those needed for a payment session may prevent checkout from working. Review the payment handler&apos;s notice for further choices and privacy requests.</p>
               <p className="mb-4"><strong>11.5 Third-Party Payment Processor Changes:</strong> If we change our payment processor in the future, the new payment processor may use different cookies and tracking technologies. We will provide thirty (30) days' advance notice of any payment processor change, including information about the new processor's cookie usage. See Section 7.2 for details on payment gateway changes.</p>
               <p className="mb-4"><strong>11.6 Website Cookies:</strong> If you visit our website (for example, to manage subscriptions or view documentation), additional cookie usage on the website will be governed by the separate cookie notice or website privacy policy available there.</p>
             </section>

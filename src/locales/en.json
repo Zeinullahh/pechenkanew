@@ -1590,7 +1590,7 @@
     "tooltips": {
       "web": {
         "title": "Web attack protection",
-        "content": "Protection against major web attacks including DDoS, SQL injection, and other network threats. Business logic vulnerabilities are not included."
+        "content": "Web Security applies available WAF, IPS and DDoS controls to traffic routed through the configured service. These controls are designed to mitigate threats but cannot stop every attack."
       },
       "email": {
         "title": "Email attack protection",
@@ -1714,7 +1714,7 @@
         "description": "No limits\nNo additional fees",
         "button": "Secure web app and APIs",
         "features": {
-          "webProtection": "Protection against all types of web attacks except business logic exploitation",
+          "webProtection": "WAF controls for traffic routed through the configured service",
           "ddosProtection": "Real-time DDoS protection",
           "cmc": "CMC with global traffic monitoring:",
           "country": "Country blocking:",
@@ -2388,7 +2388,7 @@
     "web": {
       "title": "AI-CSD Web vs Traditional WAF Solutions",
       "columns": {
-        "aiSoc": "AI-CSD Web (pay-as-you-go)",
+        "aiSoc": "AI-CSD Web (subscription + overage)",
         "cloudflare": "Cloudflare WAF + Anti-DDoS ($20/mo)",
         "aws": "AWS WAF (pay-as-you-go)"
       },
@@ -2489,7 +2489,7 @@
   "aiSocPricing": {
     "intro": "AI-CSD is a lineup of standalone cybersecurity systems",
     "emailDescription": "Email Security acts as a protective shield for your corporate communications. It filters incoming and outgoing messages to neutralize phishing attempts, spoofing attacks, and malicious links before they reach your users, ensuring the integrity of your business correspondence.",
-    "webDescription": "Web Security safeguards your digital infrastructure by analyzing traffic patterns in real-time. It defends websites and APIs against common vulnerabilities, DDoS attacks, and unauthorized access, providing deep visibility into network activity without impacting performance.",
+    "webDescription": "Web Security analyzes traffic routed through the configured service. Available WAF, IPS and DDoS controls are designed to detect and mitigate threats and provide security visibility, but cannot stop every attack.",
     "calendlyIntegration": "Supports integration with Calendly"
   },
   "aiSocFaq": {
@@ -2530,6 +2530,7 @@
     ]
   },
   "homepageText": {
+    "protection_applies_to_routed_traffic_enabled_controls_are_designed_to_mi_gin4xh": "Protection applies to routed traffic. Enabled controls are designed to mitigate threats but cannot stop every attack; your order states available capabilities.",
     "0_never_billed_u6oxzl": "$0 — never billed",
     "18_user_month_5v6ti9": "$18/user/month",
     "200_mo_annually_e1b16k": "$200/mo annually",
@@ -2643,7 +2644,7 @@
     "behavioral_captcha_bot_challenge_1g3gwg9": "Behavioral CAPTCHA / bot challenge",
     "behavioral_threat_protection_a6r5x9": "Behavioral threat protection",
     "billed_annually_at_tl26no": "Billed annually at",
-    "billed_monthly_cancel_anytime_1r79ysm": "Billed monthly · Cancel anytime",
+    "billed_monthly_cancellation_follows_your_order_and_plan_terms_11eknc8": "Billed monthly · Cancellation follows your order and plan terms",
     "blacklist_countries_8ksljy": "Blacklist Countries",
     "blacklist_countries_16ekloe": "Blacklist countries",
     "blacklisted_1ctqsal": "Blacklisted (",
@@ -2685,7 +2686,7 @@
     "container_and_kubernetes_workload_visibility_1vl7b54": "Container and Kubernetes workload visibility",
     "content_1l6x30o": "Content:",
     "continuous_project_graph_updates_1nzi86t": "Continuous project graph updates",
-    "control_storage_with_flexible_retention_periods_xtvuqg": "Control storage with flexible retention periods",
+    "your_order_or_plan_states_the_available_retention_period_1tuyhqr": "Your order or plan states the available retention period",
     "copy_s6g5lw": "Copy",
     "copy_ip_1i99gwt": "Copy IP",
     "copy_hostname_2m5wnx": "Copy hostname",
@@ -2899,7 +2900,7 @@
     "number_of_ips_1a5i4az": "Number of IPs",
     "observe_records_only_shadow_evaluates_without_enforcing_enforce_applies__9xtwoe": "Observe records only. Shadow evaluates without enforcing. Enforce applies approved temporary blocks.",
     "one_autonomous_pentester_everything_included_fomv2o": "One autonomous pentester. Everything included.",
-    "one_product_full_protection_zy3htc": "One product. Full protection.",
+    "one_product_configurable_web_protection_clwwg6": "One product. Configurable web protection.",
     "one_command_full_server_protection_1v7m07e": "One-command full server protection",
     "only_capacity_changes_between_plans_176xpm6": "Only capacity changes between plans.",
     "only_telemetry_explicitly_linked_to_this_incident_is_shown_e21eke": "Only telemetry explicitly linked to this incident is shown.",
@@ -2923,7 +2924,7 @@
     "page_1sfsa6u": "Page",
     "partial_additional_configuration_10mybyq": "Partial / additional configuration",
     "partial_or_additional_configuration_1xubrhu": "Partial or additional configuration",
-    "pay_as_you_go_1q46gv6": "Pay as you go",
+    "overage_after_included_usage_1rr3ibz": "Overage after included usage",
     "pay_only_for_the_compute_you_use_127apru": "Pay only for the compute you use.",
     "payment_gateway_11ncarf": "Payment Gateway:",
     "payment_history_t9jtfh": "Payment History",
@@ -2979,7 +2980,7 @@
     "runtime_file_malware_protection_17cntwp": "Runtime + file + malware protection",
     "sha_256_1j0rdj1": "SHA-256",
     "sha_256_dt80lh": "SHA-256:",
-    "siem_log_retention_1uopzvr": "SIEM log retention",
+    "planned_siem_log_retention_options_vssevv": "Planned SIEM log retention options",
     "siem_log_storage_4qjyk4": "SIEM log storage",
     "silence_ai_enterprise_e2rug6": "SILENCE AI / ENTERPRISE",
     "ssh_kubernetes_access_requires_a_totp_verification_before_the_protected__1dhr6zz": "SSH/Kubernetes access requires a TOTP verification before the protected port temporarily opens for the verified source IP.",
@@ -3129,7 +3130,7 @@
     "web_security_stack_in_one_dashboard_cevt28": "Web security stack in one dashboard",
     "website_penetration_testing_179yd9n": "Website penetration testing",
     "your_company_yha0w5": "YOUR COMPANY",
-    "you_pay_for_your_legitimate_users_never_your_attackers_1qhmtuw": "You pay for your legitimate users. Never your attackers.",
+    "blocked_malicious_requests_have_no_request_fee_usage_measurement_follows_g2sfyd": "Blocked malicious requests have no request fee; usage measurement follows your plan.",
     "your_inbox_protected_g3xg2": "Your inbox, protected.",
     "your_pentest_can_never_exceed_the_approved_compute_budget_without_your_a_4it49v": "Your pentest can never exceed the approved compute budget without your authorization.",
     "your_price_changes_with_usage_not_with_how_well_we_protect_you_1yeijuk": "Your price changes with usage — not with how well we protect you.",
@@ -3228,7 +3229,7 @@
     "current_language_1ocq0a4": "Current language",
     "server_security_console_1pivfcx": "Server Security Console",
     "web_security_cmc_1ggnr48": "Web Security CMC",
-    "single_predictable_price_zero_request_fees_on_blocked_traffic_full_waf_i_1l1tmno": "Single predictable price · Zero request fees on blocked traffic · Full WAF, IPS, DDoS & SIEM included",
+    "one_subscription_no_request_fee_for_blocked_traffic_waf_ips_ddos_control_1kgorxg": "One subscription · No request fee for blocked traffic · WAF, IPS, DDoS controls and SIEM in the plan",
     "automated_mail_organization_security_hepk6t": "Automated Mail Organization & Security",
     "security_configuration_posture_zut1nr": "Security configuration & posture",
     "email_12fq213": "email",

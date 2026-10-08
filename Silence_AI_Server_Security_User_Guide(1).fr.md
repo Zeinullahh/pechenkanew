@@ -16,6 +16,24 @@ Ce guide s’adresse aux administrateurs et opérateurs autorisés qui utilisent
 > **Principe de fonctionnement important**
 > L’enregistrement, l’installation du paquet, l’enrôlement, la configuration des politiques et la protection active constituent des étapes distinctes. Lorsqu’un paramètre est indiqué comme étant en attente, attendez que le panneau confirme son activation avant de vous y fier.
 
+
+**État de la documentation :** la section 10 définit les exigences et les limites connues. Du code est présent, mais les essais réels Linux/Kubernetes et les gestes du navigateur ne sont pas confirmés dans les documents fournis. Enregistré/en attente ne signifie pas appliqué/confirmé.
+
+- [1. Avant de commencer](#1-avant-de-commencer)
+- [2. Se connecter et ouvrir Server Security](#2-se-connecter-et-ouvrir-server-security)
+- [3. Enregistrer un service](#3-enregistrer-un-service)
+- [4. Installer et enrôler la version native de Server Security](#4-installer-et-enrôler-la-version-native-de-server-security)
+- [5. Comprendre l’état de la protection](#5-comprendre-l-état-de-la-protection)
+- [6. Configurer la MFA et les accès protégés](#6-configurer-la-mfa-et-les-accès-protégés)
+- [7. Utiliser la console Server Security](#7-utiliser-la-console-server-security)
+- [8. Examiner les incidents et les réponses](#8-examiner-les-incidents-et-les-réponses)
+- [9. Configurer la politique de sécurité](#9-configurer-la-politique-de-sécurité)
+- [10. Contrôles d’accès réseau, globe et sessions actives](#10-contrôles-d-accès-réseau-globe-et-sessions-actives)
+- [11. Examiner les capteurs, l’inventaire, la posture et les résultats](#11-examiner-les-capteurs-l-inventaire-la-posture-et-les-résultats)
+- [12. Surveiller les événements et la télémétrie](#12-surveiller-les-événements-et-la-télémétrie)
+- [13. Dépannage](#13-dépannage)
+- [14. Bonnes pratiques de sécurité et d’exploitation](#14-bonnes-pratiques-de-sécurité-et-d-exploitation)
+
 # 1. Avant de commencer
 
 Préparez les informations et les accès suivants avant de commencer :
@@ -160,6 +178,8 @@ Les fiches des capteurs peuvent signaler séparément Healthy, Degraded, Failed,
 
 # 6. Configurer la MFA et les accès protégés
 
+**Accès par port :** la cible de la section 10 évalue l'admissibilité de chaque port indépendamment. La MFA peut ouvrir temporairement les ports admissibles, mais ne lève jamais un refus pays/IP sur un autre port ; l'authentification du service reste nécessaire. L'ancien déverrouillage du groupe de ports n'est pas une preuve que cette évaluation indépendante fonctionne déjà.
+
 ## 6.1 MFA du compte
 
 27. Lors de l’inscription du compte, ouvrez Set up 2FA.
@@ -211,6 +231,8 @@ Les ports TCP protégés configurés sont autorisés ensemble pendant une fenêt
 
 # 7. Utiliser la console Server Security
 
+**Network access :** la section 10 décrit la page dédiée, le choix du serveur/port, le globe, la liste et les commandes de politique. Les gestes de glissement et les commandes correspondantes restent à vérifier dans un navigateur réel ; fiez-vous aux libellés effectivement présents dans votre déploiement.
+
 | **Onglet** | **Fonction**                                                                                                    |
 |------------|-----------------------------------------------------------------------------------------------------------------|
 | Overview   | État de la protection, provisionnement, santé des capteurs, incidents, réponses et activité récente.           |
@@ -225,6 +247,8 @@ Les ports TCP protégés configurés sont autorisés ensemble pendant une fenêt
 Utilisez Refresh pour la console principale. Dans Events, changez de page ou de filtre lorsque vous devez actualiser l’explorateur d’événements lui-même.
 
 # 8. Examiner les incidents et les réponses
+
+**Actions distinctes :** **Shut down session** vise une connexion existante ; **Blacklist IP address** enregistre un blocage durable des nouvelles connexions dans sa portée ; une réponse automatique peut être temporaire et relever d'autres règles. Une demande ou une politique enregistrée ne confirme ni l'arrêt ni l'application.
 
 ## 8.1 Incidents
 
@@ -253,6 +277,8 @@ Sélectionnez un incident pour ouvrir Incident details. Examinez la gravité, le
 Examinez conjointement la source, l’action et sa portée, la raison, l’état, l’heure de début et l’expiration. Le blocage des nouvelles connexions ne met pas nécessairement fin à une connexion déjà établie.
 
 # 9. Configurer la politique de sécurité
+
+**Listes différentes :** **Trusted IPs** concerne les réponses automatiques, **Allowed IPs / CIDRs** l'accès à Port Guard, les blocages explicites peuvent avoir une portée plus large. Ni l'un ni l'autre n'est **Always Allow** ou **Always Block** de la section 10. Réconciliez les anciennes règles lors de la migration ; une ancienne liste HTTP de compte ne devient jamais automatiquement un blocage des ports SSH/Kubernetes.
 
 ## 9.1 Mode de réponse automatique
 
@@ -305,43 +331,58 @@ Policy → Sensor state peut proposer des interrupteurs pour Inventory, File Int
 
 Pour Suricata, ouvrez Policy → Suricata monitored interface, choisissez une interface candidate affichée ou saisissez une interface vérifiée telle que ens3, puis sélectionnez Save interface. Vérifiez la présence d’une télémétrie Suricata récente après la modification.
 
-# 10. Gérer les contrôles d’accès par pays
+# 10. Contrôles d’accès réseau, globe et sessions actives
 
-## 10.1 Geo-Country Filtering par serveur
+**Contrat fonctionnel, demandé le 2026-10-06.** Cette section décrit le comportement exigé, pas une certification en production. Avant ce développement, le globe affichait le trafic Web, les contrôles par pays étaient séparés et l’arrêt de session était indisponible. Le code CMC/Guard comprend désormais une page Network access, des politiques par serveur et par port, une actualisation signée, l’autorisation nftables par port, des instantanés des connexions TCP de l’espace réseau hôte Linux et des commandes signées d’arrêt ciblé. Les contrôles statiques, unitaires et de compilation croisée sont signalés dans `NETWORK_ACCESS_NET_CHECKLIST.md` ; la migration de base de données, les connexions réelles Linux/Kubernetes, SSH sur 2525, le navigateur, les redémarrages et l’accusé de réception de l’agent restent sans validation de bout en bout dans les documents fournis. Une politique enregistrée reste en attente jusqu’à confirmation de sa révision par l’agent ; une commande en file d’attente n’est pas un arrêt confirmé.
 
-Le Geo-Country Filtering par serveur s’applique au groupe de ports TCP protégés configuré et nécessite une MFA d’accès au serveur vérifiée.
+## 10.1 Objet et portée (NET-01)
 
-53. Configurez les ports TCP protégés et terminez la configuration SSH 2FA.
+L’interface CMC doit réunir le globe 3D, les listes de pays, la boîte de blocage et le panneau qui s’ouvre vers le haut pour contrôler les ports TCP protégés. Une **session réseau** est une connexion TCP réellement active, depuis une adresse IP observée vers un port de destination configuré sur un serveur géré. Si SSH écoute sur le port **2525**, sa connexion active doit apparaître jusqu’à sa fermeture ; SSH n’est pas limité au port 22. Cela vaut également pour les terminaux Kubernetes configurés et les autres services TCP protégés. Le nom du service doit provenir d’une configuration ou d’une observation fiable. Une connexion Kubernetes ne prouve ni l’identité d’un utilisateur, ni celle d’un shell de pod ou d’une commande `kubectl exec` ; fermer une connexion multiplexée peut toucher plusieurs opérations. Les visites Web, requêtes HTTP, connexions au navigateur, agents utilisateurs et adresses uniques des journaux d’accès ne sont pas des sessions réseau. Les fonctions indépendantes d’hébergement, d’analyse HTTP, d’inscription et de facturation demeurent distinctes.
 
-54. Ouvrez Agent configuration et activez Enable Geo-Country Filtering.
+## 10.2 Sélection du serveur et du port (NET-02)
 
-55. Sous Default Policy, choisissez Allow Unmatched ou Deny Unmatched.
+Afficher le serveur géré et le port TCP protégé choisis avant toute lecture ou modification. Chaque port possède son propre mode et ses propres pays ; bloquer un pays pour 2525 ne change pas un autre port. La vue **All protected ports** peut agréger les sessions, mais doit signaler les politiques mixtes. Les filtres et la sélection doivent actualiser ensemble le globe, les listes et les sessions. Les listes IP **Always Allow** et **Always Block** persistent au niveau du serveur et s’appliquent à ses ports protégés configurés, jamais automatiquement à tout le compte ni aux ports sans rapport.
 
-56. Saisissez une valeur Geo Rules (JSON Array) valide et sélectionnez Save.
+## 10.3 Boîte de dialogue et listes (NET-03)
 
-57. Rouvrez Agent configuration et vérifiez l’interrupteur, la politique par défaut, les règles, les ports et le paramètre 2FA enregistrés.
+La première rangée propose **Countries** et **IP addresses**. Sous **Countries**, la seconde propose **Blacklisted** et **Whitelisted**, avec recherche, ajout et retrait des pays et un sélecteur distinct **Blacklist mode / Whitelist mode**. Consulter une liste ne change pas le mode. Afficher la sélection explicite et son complément effectif pour le port choisi. Sous **IP addresses**, la seconde rangée propose **Always Block** et **Always Allow**. Chaque liste possède un bouton **+**, un champ pour une adresse IP, les entrées enregistrées et leur suppression. Les deux listes agissent simultanément, quel que soit l’onglet ou le mode pays. Accepter les adresses IPv4 et IPv6 individuelles, normaliser les écritures équivalentes et éviter les doublons ; aucun JSON, empreinte de navigateur, couple IP-utilisateur ni CIDR obligatoire.
 
+## 10.4 Modes pays (NET-04)
 
+| Mode | Pays explicitement choisis | Autres pays connus |
+|---|---|---|
+| **Blacklist mode** | Bloqués | Autorisés sous réserve des règles IP et de l’authentification |
+| **Whitelist mode** | Autorisés sous réserve des règles IP et de l’authentification | Bloqués |
 
-- Une règle explicite pour un port configuré prévaut sur la politique par défaut.
-- Une règle allow autorise les pays répertoriés et refuse ceux qui ne figurent pas dans cette règle.
+Une liste noire vide ne bloque aucun pays ; une liste blanche vide n’en autorise aucun. Expliquer le maintien ou le transfert des pays explicitement sélectionnés lors d’un changement de mode, sans enregistrer silencieusement le complément affiché. En mode liste blanche, choisir le Kazakhstan et la Turquie autorise ces deux pays et bloque les autres, sauf exception IP valide. Chaque port est évalué séparément : un refus sur un port ne refuse pas un autre port autorisé et une autorisation ne déverrouille pas un port refusé. La MFA reste requise. Afficher **Unknown country** si la localisation manque, sans inventer de pays : une adresse publique inconnue ne doit pas ouvrir silencieusement la restriction géographique et elle est refusée en mode liste blanche sauf **Always Allow**. Les adresses privées/locales évitent l’évaluation géographique, mais restent soumises aux restrictions IP et à la MFA ; les distinguer d’un échec GeoIP public.
 
-- Une règle deny refuse les pays répertoriés et autorise ceux qui ne figurent pas dans cette règle.
-- La politique par défaut ne s’applique qu’aux ports configurés dépourvus de règle explicite.
+## 10.5 Exceptions IP persistantes (NET-05)
 
-## 10.2 Liste noire de pays au niveau du compte
+**Always Allow** soustrait l’IP observée aux restrictions géographiques, sur les ports protégés de ce serveur, jusqu’à suppression de l’entrée. Exemple : la Russie est bloquée, mais un employé y travaille à distance. Ajouter son IP source observée à **Always Allow** permet le passage de la règle pays ; la MFA et l’authentification SSH restent nécessaires. Cela fonctionne aussi en mode liste blanche si la Russie n’y figure pas ; retirer l’entrée rétablit la décision normale du pays. **Always Block** refuse l’IP même si son pays serait autorisé. Les deux listes restent actives et persistantes après un changement de mode. **Always Allow** ne contourne ni les identifiants du service ni les réponses automatiques indépendantes ; **Trusted IPs** concerne ces réponses et n’est pas son synonyme. Les anciennes listes d’adresses autorisées et les blocages explicites doivent être réconciliés sans refus caché ni affaiblissement silencieux. Une IP normalisée ne doit pas appartenir aux deux listes ; proposer un déplacement explicite. En cas de données contradictoires, le blocage prime et le conflit est signalé. Ordre : **Always Block**, exception géographique **Always Allow**, puis mode pays du port, sous réserve de MFA et des identifiants. Une IP publique partagée concerne tous ses utilisateurs ; si l’IP source change, l’exception doit être mise à jour. La seule IP n’identifie pas une personne.
 
-Blacklist countries sur le tableau de bord général est une liste noire du trafic web au niveau du compte ; elle est distincte du Geo-Country Filtering par serveur.
+## 10.6 Globe et quatre niveaux de densité (NET-06)
 
-58. Ouvrez Blacklist countries.
+Le globe montre les pays autorisés/bloqués et les connexions actives dans la portée choisie ; une exception IP dans un pays bloqué doit rester visible et compréhensible. La légende distingue la politique pays de la densité des sessions. Les quatre niveaux consignés sont **0, 1–2, 3–9 et 10+ sessions** ; les chiffres exigent confirmation par les dernières données d’implémentation avant publication comme valeurs vérifiées. Les groupes de marqueurs donnent accès aux IP et connexions individuelles, sans prétendre connaître une position précise à partir du seul pays. Montrer les politiques mixtes et les lieux inconnus/privés. L’ancien compteur **Active Users** comptait des IP récentes dans les journaux d’accès, pas des connexions actives. Globe et liste partagent filtres, horodatages, totaux et fraîcheur ; une session fermée et confirmée disparaît, alors qu’un agent hors ligne ou une télémétrie absente produit un état inconnu/périmé, jamais un faux zéro.
 
-59. Ouvrez Non-Blacklisted et recherchez au besoin le nom du pays ou son code à deux lettres.
+## 10.7 Liste des sessions (NET-07)
 
-60. Sélectionnez un pays et choisissez Add. La modification est enregistrée immédiatement.
+Un glissement vers le haut ouvre la liste ; un bouton visible d’ouverture/agrandissement donne le même accès à la souris et au clavier. Prévoir aussi la fermeture/réduction. Chaque ligne représente une connexion ; plusieurs connexions d’une même IP restent distinctes. Afficher IP source, pays ou statut privé/inconnu, serveur, port de destination, service configuré si connu, état et heures effectivement observées. **First observed** désigne la première observation connue, pas nécessairement le début réel de connexion. Recherche, filtres et navigation doivent permettre d’atteindre toutes les lignes ; une page de résultats n’est pas le total.
 
-61. Vérifiez que le pays apparaît sous Blacklisted.
+## 10.8 Menu de session et arrêt (NET-08)
 
-Pour retirer un pays, ouvrez Blacklisted, sélectionnez le pays bloqué et choisissez remove. Le pays revient dans Non-Blacklisted.
+Un clic droit sur une IP/session inspectable du globe ou de la liste ouvre **Shut down session** et **Blacklist IP address** ; un menu visible équivalent sert au tactile et au clavier. En présence de plusieurs connexions d’une IP, choisir sans ambiguïté la connexion, le serveur et le port. **Shut down session** déconnecte uniquement cette connexion réelle via l’agent, qu’il s’agisse de SSH sur 2525/22, du chemin Kubernetes pris en charge ou d’un autre TCP protégé. Il ne coupe ni serveur, service, pod ni autres connexions, n’arrête pas forcément le travail applicatif déjà lancé et ne bloque pas la reconnexion. Vérifier l’identité de la connexion juste avant l’action ; ne pas cibler par seule IP, nom, horodatage approximatif ou PID réutilisé. Afficher demande/en file d’attente puis résultat confirmé, y compris déjà fermée, identité périmée, agent hors ligne, accès refusé, non pris en charge, commande expirée ou échec. Une commande envoyée ne prouve pas l’arrêt ; une impossibilité de fermeture ciblée doit être signalée précisément.
+
+## 10.9 Blocage depuis une session (NET-09)
+
+**Blacklist IP address** ajoute l’IP source à la même liste persistante **Always Block** du serveur. Montrer d’abord enregistré/en attente, puis appliqué ou échoué selon la confirmation de l’agent ; l’entrée doit apparaître dans la boîte **IP addresses**. Si l’IP figure dans **Always Allow**, proposer explicitement son déplacement. Le blocage empêche les nouvelles connexions dans sa portée une fois appliqué ; il ne prouve pas la fin des connexions déjà ouvertes, qui nécessitent un arrêt séparé.
+
+## 10.10 Enregistrement, application et migration (NET-10)
+
+Une seule politique doit relier CMC, API/stockage, configuration livrée et application effective. Distinguer enregistré, en attente, appliqué et échoué, avec révision et heure ; un agent hors ligne laisse la règle en attente. Conserver la politique après redémarrage, rejeter les commandes/relectures périmées, contrôler l’autorisation acteur/compte/serveur et auditer cible, action, instant et résultat. Remplacer les instructions du blocage HTTP global et de l’éditeur géographique JSON par ce parcours commun. Ne jamais transformer automatiquement une ancienne liste noire HTTP de compte en blocage SSH/Kubernetes sur tous les serveurs. Migrer consciemment les restrictions natives et IP existantes sans les affaiblir ni créer de refus cachés. Les analyses HTTP et autres fonctions indépendantes demeurent.
+
+## 10.11 Vérification obligatoire (NET-11)
+
+Avant de déclarer la fonction terminée, contrôler **NET-01** à **NET-11** avec fichiers, preuves et écarts : deux ports indépendants dont SSH sur 2525 ; deux modes et listes vides ; deux rangées d’onglets et listes IP simultanées ; exception de l’employé en Russie dans les deux modes avec MFA ; priorité du blocage, IPv4/IPv6 et doublons ; vraies connexions SSH, Kubernetes et TCP ordinaire dans globe et liste ; quatre niveaux, totaux égaux et télémétrie périmée ; gestes et commandes accessibles ; arrêt d’une seule connexion même si l’IP est partagée ; refus, fermeture préalable, échec et chemin non pris en charge ; blocage persistant, accusé de réception, redémarrage, isolation des comptes et migration. Une interface visible ou des données simulées ne suffisent pas. Consigner séparément les essais réels Linux/Kubernetes et navigateur encore absents.
 
 # 11. Examiner les capteurs, l’inventaire, la posture et les résultats
 
@@ -372,6 +413,8 @@ Utilisez Posture pour les résultats de Security Configuration Assessment et l�
 
 # 12. Surveiller les événements et la télémétrie
 
+**Fraîcheur :** les journaux d'accès et l'ancien compteur **Active Users** ne mesurent pas les connexions TCP actives. Le globe et la liste de la section 10 doivent partager filtres, totaux et horodatages. Une télémétrie absente ou périmée indique inconnu/périmé, pas zéro.
+
 Ouvrez Events et utilisez les filtres disponibles :
 
 - Filtrez par capteur.
@@ -383,6 +426,8 @@ Ouvrez Events et utilisez les filtres disponibles :
 Examinez le nom de l’événement, la source, le type, les preuves, la gravité, l’horodatage et l’incident lié lorsqu’il est affiché.
 
 # 13. Dépannage
+
+**Accès inattendu :** vérifiez d'abord serveur et port, mode pays, IP source réellement observée, listes **Always Block**/**Always Allow**, restrictions anciennes et révision appliquée. Si l'IP change, actualisez l'exception. Une politique en attente, un agent hors ligne ou une session périmée ne confirme pas l'état réel ; un arrêt demandé, expiré ou non pris en charge n'est pas un arrêt confirmé.
 
 > **Première règle**
 > Conservez un accès administrateur indépendant lorsque vous modifiez les contrôles d’accès. Consignez le texte non secret des erreurs et ne communiquez jamais les codes d’enrôlement, secrets MFA, codes de secours, clés privées ou captures d’écran qui les contiennent.
@@ -401,6 +446,8 @@ Examinez le nom de l’événement, la source, le type, les preuves, la gravité
 | Inventaire des paquets vide                        | Utilisez Search packages et comparez le tableau des paquets aux autres activités d’inventaire. Considérez un tableau vide comme une information incomplète et non comme la preuve qu’aucun paquet n’existe. |
 
 # 14. Bonnes pratiques de sécurité et d’exploitation
+
+**Limites actuelles :** le code décrit en section 10 n'a pas de validation réelle complète Linux/Kubernetes ni de vérification des gestes du navigateur dans les documents fournis. Les concessions MFA à durée limitée exigent nftables ; le collecteur ne couvre que les sockets TCP établis dans l'espace réseau hôte du nœud choisi, pas tous les pods, nœuds ou équilibreurs. Si l'identité du socket manque, l'état est non pris en charge ; un instantané trop grand est périmé, non complet. La persistance, l'accusé de réception et l'arrêt ciblé restent à vérifier.
 
 - Utilisez les plages IP/CIDR de confiance et autorisées les plus restreintes possible.
 - Conservez un moyen de récupération administrateur testé lorsque vous activez la MFA, des blocages explicites ou des restrictions par pays.

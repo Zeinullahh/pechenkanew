@@ -616,7 +616,7 @@ export default function EmailSecurityDoc() {
                                 </List>
                                 <Paragraph className="font-medium text-white/80">Способы оплаты:</Paragraph>
                                 <List>
-                                    <li>Банковские карты через Stripe</li>
+                                    <li>Онлайн-платежи по договорам с Silence AI LLC (ОАЭ) обрабатывает Paddle.com; платежи по договорам с ТОО «Silence AI» (Казахстан) обрабатывает ТОО «ФинCeрвисы».</li>
                                     <li>Банковские переводы (для Enterprise)</li>
                                 </List>
                                 <Paragraph>Автопродление: уведомление отправляется за 7 дней до продления. Upgrade доступен в любое время, downgrade вступает в силу со следующего периода.</Paragraph>

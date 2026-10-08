@@ -230,7 +230,7 @@
     "tooltips": {
       "web": {
         "title": "Web 攻击防护",
-        "content": "系统可防护所有类型的 Web 攻击(如 DDoS、SQLi 等),但不包含业务逻辑漏洞。"
+        "content": "Web Security 对经配置服务路由的流量应用可用的 WAF、IPS 和 DDoS 控制措施。这些措施旨在缓解威胁，但无法阻止所有攻击。"
       },
       "email": {
         "title": "电子邮件攻击防护",
@@ -441,7 +441,7 @@
         "description": "无限制\n无额外费用",
         "button": "保护Web应用和API",
         "features": {
-          "webProtection": "防御所有类型的Web攻击,业务逻辑漏洞利用除外",
+          "webProtection": "适用于经配置服务路由流量的 WAF 控制措施",
           "ddosProtection": "实时DDoS保护",
           "cmc": "带有全球流量监控系统的CMC",
           "country": "国家黑名单功能",
@@ -2378,7 +2378,7 @@
     "web": {
       "title": "AI-CSD Web 与传统 WAF 方案对比",
       "columns": {
-        "aiSoc": "AI-CSD Web(按量付费)",
+        "aiSoc": "AI-CSD Web（订阅＋超额用量）",
         "cloudflare": "Cloudflare WAF + Anti-DDoS($20/月)",
         "aws": "AWS WAF(按量付费)"
       },
@@ -2479,7 +2479,7 @@
   "aiSocPricing": {
     "intro": "AI-CSD 是一套独立的网络安全系统组合",
     "emailDescription": "Email Security 是企业通信的防护盾。它会过滤收发邮件,在威胁到达用户前中和钓鱼尝试、伪造攻击和恶意链接,从而保障企业通信的完整性。",
-    "webDescription": "Web Security 通过实时分析流量模式来保护您的数字基础设施。它可防御常见漏洞、DDoS 攻击和未授权访问,并在不影响性能的前提下提供深度网络可视化。",
+    "webDescription": "Web Security 分析经配置服务路由的流量。可用的 WAF、IPS 和 DDoS 控制措施旨在检测并缓解威胁、提供安全可见性，但无法阻止所有攻击。",
     "calendlyIntegration": "支持与Calendly集成"
   },
   "aiSocFaq": {
@@ -2520,6 +2520,7 @@
     ]
   },
   "homepageText": {
+    "protection_applies_to_routed_traffic_enabled_controls_are_designed_to_mi_gin4xh": "防护适用于经服务路由的流量。启用的控制措施旨在缓解威胁，但无法阻止所有攻击；可用功能以您的订单为准。",
     "allowed_ports_rpqmgr": "允许的端口",
     "amount_a2ky21": "金额",
     "apply_filters_18ebn34": "应用过滤器",
@@ -2557,7 +2558,7 @@
     "all_in_one_ot2fx": "多合一",
     "all_in_one_web_defense_e4ge83": "一体化网络防御",
     "billed_annually_at_tl26no": "每年计费于",
-    "billed_monthly_cancel_anytime_1r79ysm": "按月计费 · 随时取消",
+    "billed_monthly_cancellation_follows_your_order_and_plan_terms_11eknc8": "按月计费 · 取消依照订单和方案条款",
     "blacklist_countries_8ksljy": "黑名单国家",
     "blacklist_countries_16ekloe": "黑名单国家",
     "blacklisted_1ctqsal": "列入黑名单（",
@@ -2616,7 +2617,7 @@
     "console_preferences_tijcbo": "控制台首选项",
     "contact_sales_1wj8yf7": "联系销售人员",
     "content_1l6x30o": "内容：",
-    "control_storage_with_flexible_retention_periods_xtvuqg": "通过灵活的保留期控制存储",
+    "your_order_or_plan_states_the_available_retention_period_1tuyhqr": "可用的保留期限以您的订单或方案为准",
     "copy_s6g5lw": "复制",
     "copy_ip_1i99gwt": "复制IP",
     "copy_hostname_2m5wnx": "复制主机名",
@@ -2744,7 +2745,7 @@
     "number_of_ips_1a5i4az": "IP数量",
     "observe_records_only_shadow_evaluates_without_enforcing_enforce_applies__9xtwoe": "仅观察记录。 Shadow 进行评估而不强制执行。强制应用批准的临时块。",
     "one_autonomous_pentester_everything_included_fomv2o": "一套自主渗透测试系统，包含全部功能。",
-    "one_product_full_protection_zy3htc": "一种产品。全面保护。",
+    "one_product_configurable_web_protection_clwwg6": "一个产品。可配置的 Web 防护。",
     "only_capacity_changes_between_plans_176xpm6": "仅容量在计划之间发生变化。",
     "only_telemetry_explicitly_linked_to_this_incident_is_shown_e21eke": "仅显示与此事件明确关联的遥测数据。",
     "open_n6hn1l": "打开",
@@ -2780,10 +2781,10 @@
     "package_selection_starts_after_the_server_is_added_13gcdx6": "添加服务器后开始选择包。",
     "packages_19dyed4": "套餐",
     "packages_plus_structured_os_services_ports_network_account_and_runtime_i_1volexa": "软件包以及结构化操作系统、服务、端口、网络、帐户和运行时库存信号。",
-    "paddle_checkout_u9qyzf": "桨结账",
+    "paddle_checkout_u9qyzf": "Paddle Checkout",
     "page_1sfsa6u": "页面",
     "partial_additional_configuration_10mybyq": "部分/附加配置",
-    "pay_as_you_go_1q46gv6": "随用随付",
+    "overage_after_included_usage_1rr3ibz": "超出包含用量的部分",
     "pay_only_for_the_compute_you_use_127apru": "只需为您使用的计算付费。",
     "payment_gateway_11ncarf": "支付网关：",
     "payment_history_t9jtfh": "付款记录",
@@ -2810,7 +2811,7 @@
     "role_security_administrator_184ib4s": "角色：安全管理员",
     "sha_256_1j0rdj1": "SHA-256",
     "sha_256_dt80lh": "SHA-256:",
-    "siem_log_retention_1uopzvr": "SIEM 日志保留",
+    "planned_siem_log_retention_options_vssevv": "计划提供的 SIEM 日志保留选项",
     "siem_log_storage_4qjyk4": "SIEM 日志存储",
     "silence_ai_enterprise_e2rug6": "SILENCE AI / 企业版",
     "ssh_kubernetes_access_requires_a_totp_verification_before_the_protected__1dhr6zz": "SSH/Kubernetes 访问需要进行 TOTP 验证，然后才能为已验证的源 IP 临时打开受保护端口。",
@@ -2914,7 +2915,7 @@
     "we_could_not_load_this_view_this_does_not_mean_guard_protection_failed_mp0yr6": "我们无法加载此视图。这并不意味着 Guard 保护失败。",
     "web_security_bel2xx": "网络安全",
     "your_company_yha0w5": "您的公司",
-    "you_pay_for_your_legitimate_users_never_your_attackers_1qhmtuw": "您为合法用户付费。永远不要攻击你。",
+    "blocked_malicious_requests_have_no_request_fee_usage_measurement_follows_g2sfyd": "被拦截的恶意请求不收取请求费；用量计算遵循您的方案。",
     "your_inbox_protected_g3xg2": "您的收件箱受到保护。",
     "your_pentest_can_never_exceed_the_approved_compute_budget_without_your_a_4it49v": "未经您的授权，您的渗透测试永远不会超出批准的计算预算。",
     "your_price_changes_with_usage_not_with_how_well_we_protect_you_1yeijuk": "您的价格会随着使用情况而变化，而不是随着我们保护您的程度而变化。",
@@ -3218,7 +3219,7 @@
     "current_language_1ocq0a4": "当前语言",
     "server_security_console_1pivfcx": "服务器安全控制台",
     "web_security_cmc_1ggnr48": "网站安全CMC",
-    "single_predictable_price_zero_request_fees_on_blocked_traffic_full_waf_i_1l1tmno": "统一可预期的价格 · 被拦截请求不收费 · 包含WAF、IPS、DDoS防护和SIEM",
+    "one_subscription_no_request_fee_for_blocked_traffic_waf_ips_ddos_control_1kgorxg": "一项订阅 · 被拦截流量无请求费 · 方案包含 WAF、IPS、DDoS 控制措施和 SIEM",
     "automated_mail_organization_security_hepk6t": "自动整理与保护邮件",
     "security_configuration_posture_zut1nr": "安全配置与态势",
     "email_12fq213": "封邮件",

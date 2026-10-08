@@ -7,7 +7,7 @@ export default function LocalizedTermsOfServiceRedirect({ params }) {
 
   useEffect(() => {
     params.then(({ locale }) =>
-      router.replace(`/${locale}/policies/ai-soc1/terms_of_service/`)
+      router.replace(`/${locale}/policies/ai-csd/terms_of_service/`)
     );
   }, [params, router]);
 

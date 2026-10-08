@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import PolicyLayout from "@/components/policies/shared/PolicyLayout";
+import EmailJurisdictionSelector from "@/components/policies/shared/EmailJurisdictionSelector";
 
 const sections = [
   { id: "about", title: "1. About These Terms" },
@@ -31,16 +32,17 @@ export default function TermsOfUseEmailEn() {
       subtitle="Terms of Use"
       sections={sections}
     >
+      <EmailJurisdictionSelector policy="terms_of_use" active="ae" locale="en" />
       <section id="about">
         <h2 className="text-2xl font-semibold mb-4">1. About These Terms</h2>
         <p className="mb-4">
-          <strong>1.1 Agreement Scope:</strong> These Terms of Use (&quot;Terms&quot;) govern your access to and use of the AI-CSD 1 Email Security &amp; Visualization component provided by Silence AI LLC (&quot;Silence AI,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). These Terms apply to you, the individual or entity accessing our services (&quot;you&quot; or &quot;your&quot;), and your employer or principal if you are acting on their behalf.
+          <strong>1.1 Agreement Scope:</strong> These Terms of Use (&quot;Terms&quot;) govern your access to and use of the AI-CSD 1 Email Security &amp; Visualization component provided under the applicable regional agreement by Silence AI LLC, for UAE customers, or ТОО &quot;Silence AI&quot;, for Kazakhstan customers (the applicable company, &quot;Silence AI,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). These Terms apply to you, the individual or entity accessing our services (&quot;you&quot; or &quot;your&quot;), and your employer or principal if you are acting on their behalf. The contracting company is the company identified in the order, account registration, or other agreement with you.
         </p>
         <p className="mb-4">
           <strong>1.2 Authority and Acceptance:</strong> If you are entering into these Terms on behalf of a company, organization, or other entity, you represent that you have the authority to bind such entity to these Terms. By accessing or using our services, you agree to be bound by these Terms. If you do not agree with these Terms, you must discontinue use of our services immediately.
         </p>
         <p className="mb-4">
-          <strong>1.3 Service Domain and Scope:</strong> The AI-CSD 1 Email Policy system operates across two dedicated domains: (i) <strong>email-soc.silenceai.net</strong> — the Centralized Management Console (CMC) for the Email Security &amp; Visualization subsystem, accessible to administrators; and (ii) <strong>mail.silenceai.net</strong> — the Webmail Client through which end users send and receive emails, accessible to users without administrative privileges. These Terms of Use apply exclusively to services accessible through the aforementioned domains. Any services provided on different domains are subject to separate terms and policies.
+          <strong>1.3 Service Domain and Scope:</strong> For customers contracting with ТОО &quot;Silence AI&quot; in Kazakhstan, the Centralized Management Console (CMC) is at <strong>kz.mail.csd.silenceai.net</strong> and the employee email workspace is at <strong>kz.mail.silenceai.net</strong>. For customers contracting with Silence AI LLC in the UAE, the CMC is at <strong>mail.csd.silenceai.net</strong> and the employee workspace is at <strong>mail.silenceai.net</strong>. Administrators use the CMC for company configuration, domains, accounts and security settings; employees use the workspace to read, compose, send and manage mail. These Terms of Use cover the Email Security service through the applicable domain pair, whether provider-connected or hosted. The domains do not state physical server location; other Silence AI products have separate terms.
         </p>
         <p className="mb-4">
           <strong>1.4 Age Requirement:</strong> Our services are intended for users who are at least 13 years old. By accessing or using the services, you represent and warrant that you are 13 years of age or older. If you are under 13, you must not access or use the services.
@@ -50,36 +52,34 @@ export default function TermsOfUseEmailEn() {
       <section id="service-description">
         <h2 className="text-2xl font-semibold mb-4">2. Service Description and Pricing</h2>
         <p className="mb-4">
-          <strong>2.2 Email Security &amp; Visualization:</strong> Email Security &amp; Visualization offers AI-powered email protection with advanced email-flow visualization, phishing and spoofing defense, and spam filtering. This component includes the <strong>CMC</strong> and a secure <strong>Webmail Client</strong>. The Webmail Client currently supports Outlook- and Gmail-based accounts and is designed for your company&apos;s corporate email addresses. The CMC lets administrators add and manage corporate email accounts and provides a visual view of all incoming and outgoing emails across the organization.
+          <strong>2.2 Email Security &amp; Visualization:</strong> Email Security &amp; Visualization provides an email workspace, email-flow monitoring and conditional security checks. In provider-connected mode, Microsoft 365/Outlook or Gmail remains the mailbox provider; employees sign in through provider OAuth, and company authorization is checked before they use our workspace. The administrator adds approved addresses and supported aliases in the CMC. This mode does not itself require moving hosting or changing MX, SPF, DKIM or DMARC records. Microsoft incoming mail uses Microsoft Graph; Gmail incoming synchronization uses OAuth-authorized IMAP; sending uses the respective authorized provider APIs. In hosted mode, the CMC manages customer domains, mailboxes and supported aliases, and the platform receives and sends mail through its own SMTP mail stack. The administrator follows the supplied hosted-domain MX, SPF, DKIM and DMARC setup. Hosted accounts use applicable local authentication settings. Optional AI drafting and response features are separate from phishing scanning.
         </p>
         <p className="mb-4">
-          During mailbox migration from existing Gmail or Outlook accounts, Silence AI does not scan, analyze, or classify the content of migrated emails. Only after migration, when the Webmail Client is in active use, are all incoming emails automatically scanned and classified for security purposes. This refusal to process migrated email content is a deliberate privacy and compliance measure.
+          Historical Gmail/Outlook mailbox imports do not receive the normal security classification. Imported incoming mail may appear in Unfiltered and retain an Inbox or source-folder association; sent and trash imports follow different folder rules. Newly received mail is checked when eligible, subject to the settings and exceptions described below. Attachment content may still be scanned during migration until the planned change is deployed.
         </p>
         <p className="mb-4">
-          <strong>2.2.1 Five-Layer Email Security Architecture:</strong> The Email Security &amp; Visualization component integrates a comprehensive five-layer sequential validation process for all incoming emails. Each email undergoes the following security assessment sequence:
+          <strong>2.2.1 Email Security Functions:</strong> Eligible newly received mail may undergo the following checks. These are functions, not a guaranteed sequence or a promise that each message receives every check:
         </p>
         <div className="pl-6 space-y-2 mb-4">
-          <p><strong>Layer 1 — Sender Authentication Verification:</strong> Validation of email authenticity through analysis of SPF, DKIM, and DMARC authentication protocols to detect spoofed or forged sender addresses.</p>
-          <p><strong>Layer 2 — Spam Detection:</strong> Identification of unsolicited bulk email, messages from senders with improper DNS configurations, and patterns consistent with spam distribution networks.</p>
-          <p><strong>Layer 3 — Dangerous Link Analysis:</strong> Automated scanning and evaluation of all hyperlinks embedded within email content and attachments to identify malicious URLs, exploit distribution sites, and compromised domains.</p>
-          <p><strong>Layer 4 — Domain-Based Phishing Detection:</strong> Analysis of sender domain characteristics to detect typosquatting, lookalike domains, and other domain-based phishing techniques (e.g., detection of &quot;rncrosoft.com&quot; impersonating legitimate domains).</p>
-          <p><strong>Layer 5 — AI-Powered Content Analysis:</strong> Utilization of artificial intelligence to analyze email body content for phishing context, social engineering indicators, and fraudulent communication patterns.</p>
+          <p><strong>Sender authentication and spoof checks:</strong> SPF, DKIM and DMARC signals where applicable.</p>
+          <p><strong>Spam detection:</strong> Unsolicited and suspicious mail, subject to trusted-sender bypass conditions.</p>
+          <p><strong>Dangerous-link analysis:</strong> Dedicated checks of eligible embedded links.</p>
+          <p><strong>Domain-based phishing and fraud-risk checks:</strong> Known malicious domains, lookalike or homograph indicators and available reputation signals.</p>
+          <p><strong>Attachment antivirus:</strong> Malware analysis of accessible attachments when the scanner is enabled and configured.</p>
+          <p><strong>AI phishing-content analysis:</strong> Planned for production activation; no present operation is promised before deployment is confirmed.</p>
         </div>
         <p className="mb-4">
-          <strong>2.2.2 Automated Folder Classification:</strong> Based on the results of the five-layer validation process, emails are automatically classified and routed to designated security folders: <strong>Possibly Spoofed</strong> (failed authentication), <strong>Spam</strong> (spam characteristics detected), <strong>Dangerous Link</strong> (malicious URLs identified), <strong>Possibly Phishing</strong> (phishing indicators detected), or <strong>Secure</strong> (passed all validation layers). This classification system enables users to efficiently identify and manage security threats while maintaining access to verified secure communications.
+          <strong>2.2.2 Folder Classification and Detector Setting:</strong> Applicable results may route mail to <strong>Spam</strong>, <strong>Dangerous Links</strong>, <strong>Malware in attached files</strong>, <strong>Possibly Phishing</strong> or <strong>Secure</strong>. A spoof-only finding routes to Spam. If the combined phishing detector is effectively off for a mailbox, the dedicated known-phishing-domain, domain fraud-risk and dangerous-link checks are skipped; separate spoof, spam and eligible antivirus checks remain subject to their own conditions. An employee setting may currently override an administrator&apos;s global-off setting, so the switch is not currently administrator-only; no per-customer control is promised. Separate AI drafting and auto-response settings are unaffected by this detector setting.
         </p>
         <p className="mb-4">
-          <strong>2.3 Pricing Information:</strong> Current pricing for AI-CSD 1 services is available on our website at{" "}
-          <a
-            href="https://silenceai.net/en/ai-soc/"
-            className="text-blue-400 hover:text-blue-300 underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            silenceai.net/en/ai-soc/
-          </a>
-          . We reserve the right to modify our pricing at any time. Price changes will be communicated through our platform and will take effect for new billing cycles after the notification period.
+          <strong>2.3 Email Security Pricing:</strong> The following are displayed rates per user per month. The annual-commitment USD rate requires an annual commitment; it does not state that a full year is charged upfront. The KZT display rate is the same under either plan choice. Actual billing frequency and payment terms remain governed by the applicable Order Form or Service Plan and Section 6 of the Terms of Service. Online payments for UAE agreements are handled by Paddle.com as merchant of record; payments for Kazakhstan agreements are handled by ТОО &quot;ФинCeрвисы&quot;.
         </p>
+        <div className="overflow-x-auto mb-4"><table className="w-full text-sm"><thead><tr><th>Plan</th><th>Team size</th><th>Annual commitment USD/user/month</th><th>Monthly plan USD/user/month</th><th>KZT/user/month, either choice</th><th>Administrators</th><th>Mailbox storage/user</th></tr></thead><tbody>
+          <tr><td>Business Standard</td><td>Up to 15 people</td><td>$7.30</td><td>$8.60</td><td>₸3,400</td><td>Up to 1</td><td>8 GB</td></tr>
+          <tr><td>Business Premium 100</td><td>15–300 people</td><td>$12.00</td><td>$13.45</td><td>₸5,500</td><td>Up to 5</td><td>50 GB</td></tr>
+          <tr><td>Business MAX</td><td>Unlimited users</td><td>$25.00</td><td>$25.00</td><td>₸11,500</td><td>Up to 10</td><td>200 GB</td></tr>
+        </tbody></table></div>
+        <p className="mb-4">All three plans include company email on the customer&apos;s own domain, an administrator console, mailbox migration, DNS security setup, an office suite, email-flow monitoring and AI-powered threat protection as available following production activation. AI phishing-content analysis is planned for production activation and remains subject to the applicable detector setting; it is not represented as already active. We reserve the right to modify our pricing at any time. Price changes will be communicated through our platform and will take effect for new billing cycles after the notification period.</p>
       </section>
 
       <section id="sla">
@@ -113,10 +113,10 @@ export default function TermsOfUseEmailEn() {
         <p>
           <strong>5.1 Privacy Policy:</strong> Our collection, use, and protection of your information is governed by our Privacy Policy, which is incorporated into these Terms by reference and available at{" "}
           <a
-            href="/policies/ai-soc1/email/privacy/"
+            href="/en/ae/policies/ai-csd/email/privacy/"
             className="text-blue-400 hover:text-blue-300 underline"
           >
-            /policies/ai-soc1/email/privacy/
+            /en/ae/policies/ai-csd/email/privacy/
           </a>
           .
         </p>
@@ -147,10 +147,10 @@ export default function TermsOfUseEmailEn() {
         <p className="mb-4">
           <strong>8.1 Privacy Policy:</strong> Our collection, use, and protection of your personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference and available at{" "}
           <a
-            href="/policies/ai-soc1/email/privacy/"
+            href="/en/ae/policies/ai-csd/email/privacy/"
             className="text-blue-400 hover:text-blue-300 underline"
           >
-            /policies/ai-soc1/email/privacy/
+            /en/ae/policies/ai-csd/email/privacy/
           </a>
           .
         </p>
@@ -158,14 +158,14 @@ export default function TermsOfUseEmailEn() {
           <strong>8.2 Data Security:</strong> We implement industry-standard security measures to protect your data and maintain the confidentiality of your information.
         </p>
         <p id="email-access" className="mb-4">
-          <strong>8.3 Prohibition on Unauthorized Staff Access to Client Email Data:</strong> Silence AI personnel — including employees, contractors, officers, directors, and any other human agents acting on behalf of Silence AI LLC — are strictly prohibited from reading, accessing, copying, or otherwise reviewing the content of any email messages, email attachments, or email metadata belonging to or associated with a client&apos;s mailboxes, without the <strong>prior, explicit, and documented written consent</strong> of the relevant client organization. This prohibition applies regardless of whether such email data is technically accessible via internal systems, administrative tooling, or third-party API integrations used to provide the Email Security &amp; Visualization component of the Service. Client email data is processed exclusively by automated systems for the sole purpose of delivering the contracted security-scanning and visualization services. Any deviation from this rule, including access for debugging, support, or audit purposes, must be preceded by a written authorization request submitted to, and approved in writing by, an authorized representative of the client. Unauthorized access to client email data by any Silence AI personnel constitutes a material breach of this Agreement and may result in disciplinary action, termination of employment or engagement, and civil or criminal liability under applicable law. Silence AI maintains internal access-control policies and audit logs to enforce and evidence compliance with this provision.
+          <strong>8.3 Prohibition on Unauthorized Staff Access to Client Email Data:</strong> Silence AI personnel — including employees, contractors, officers, directors, and any other human agents acting on behalf of the applicable Silence AI contracting company — are strictly prohibited from reading, accessing, copying, or otherwise reviewing the content of any email messages, email attachments, or email metadata belonging to or associated with a client&apos;s mailboxes, without the <strong>prior, explicit, and documented written consent</strong> of the relevant client organization. This prohibition applies regardless of whether such email data is technically accessible via internal systems, administrative tooling, or authorized provider connections used to provide the Email Security &amp; Visualization component of the Service. Client email data is processed by automated systems for the contracted email workspace, security checks and visualization and, when requested or enabled, optional AI-assisted drafting and automatic-response functions. Any deviation from the human-access restriction, including access for debugging, support, or audit purposes, must be preceded by a written authorization request submitted to, and approved in writing by, an authorized representative of the client. Unauthorized access to client email data by any Silence AI personnel constitutes a material breach of this Agreement and may result in disciplinary action, termination of employment or engagement, and civil or criminal liability under applicable law. Silence AI maintains internal access-control policies and audit logs to enforce and evidence compliance with this provision.
         </p>
         <div id="email-security-domain" className="mb-4">
           <p className="mb-4">
-            <strong>8.4 Email Security and Domain Protection Mechanisms:</strong> As part of the Email Security &amp; Visualization component of the Service, Silence AI enforces industry-standard email authentication mechanisms — including Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting, and Conformance (DMARC) — designed to prevent unauthorized use of a customer&apos;s registered domain for the purposes of email spoofing, impersonation, or fraudulent message delivery.
+            <strong>8.4 Email Security and Domain Protection Mechanisms:</strong> For hosted customer domains, Silence AI provides setup and checks for industry-standard email authentication mechanisms — including Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting, and Conformance (DMARC) — designed to reduce unauthorized use of a customer&apos;s registered domain for spoofing, impersonation, or fraudulent message delivery. In provider-connected mode, the existing mailbox provider remains responsible for its mail infrastructure; merely connecting that mailbox does not require the customer to redirect MX or replace existing SPF, DKIM or DMARC records.
           </p>
           <p className="mb-4">
-            <strong>8.4.1 DMARC Policy Configuration During Setup:</strong> As part of the mandatory domain configuration process, customers are required to complete a guided setup flow during which they must explicitly select a DMARC enforcement policy for their domain. The platform provides exactly two enforcement options: <strong>&quot;reject&quot;</strong> (instructing receiving mail servers to discard unauthenticated messages outright) or <strong>&quot;quarantine&quot;</strong> (instructing receiving mail servers to treat unauthenticated messages as suspicious and route them to a separate folder or hold queue). No alternative enforcement levels are available within the platform. Domain activation is contingent upon the customer completing this configuration step and selecting one of the two aforementioned enforcement policies. The customer retains full responsibility for publishing and maintaining the appropriate DNS records necessary to activate and enforce their selected DMARC policy on their domain.
+            <strong>8.4.1 DMARC Policy Configuration During Hosted-Domain Setup:</strong> As part of hosted-domain configuration, customers complete a guided setup flow during which they select a DMARC enforcement policy for that hosted domain. The platform provides exactly two enforcement options: <strong>&quot;reject&quot;</strong> (instructing receiving mail servers to discard unauthenticated messages outright) or <strong>&quot;quarantine&quot;</strong> (instructing receiving mail servers to treat unauthenticated messages as suspicious and route them to a separate folder or hold queue). No alternative enforcement levels are available within that hosted-domain setup. Hosted-domain activation is contingent upon completing this configuration step and selecting one of those policies. The customer retains full responsibility for publishing and maintaining the appropriate DNS records necessary to activate and enforce the selected DMARC policy on that domain.
           </p>
           <p className="mb-4">
             <strong>8.4.2 SPF and DKIM Alignment Enforcement:</strong> The platform enforces alignment checks using SPF and DKIM in accordance with DMARC alignment requirements, as defined by RFC 7489. These alignment checks are designed to ensure that only authorized sending sources — those whose infrastructure is explicitly permitted by the customer&apos;s published DNS records — may send email on behalf of the customer&apos;s domain within supported email flows. Alignment verification is performed where technically supported by the platform&apos;s infrastructure and the receiving mail server&apos;s configuration. Silence AI does not warrant that alignment enforcement will prevent all forms of domain misuse in environments where the customer has not fully published the requisite DNS records or where third-party sending infrastructure bypasses authenticated email flows.
@@ -197,10 +197,10 @@ export default function TermsOfUseEmailEn() {
         <p>
           Our use of cookies and similar technologies is governed by our Cookie Policy, which is incorporated into these Terms by reference and available at{" "}
           <a
-            href="/policies/ai-soc1/email/cookies/"
+            href="/policies/ai-csd/email/cookies/"
             className="text-blue-400 hover:text-blue-300 underline"
           >
-            /policies/ai-soc1/email/cookies/
+            /policies/ai-csd/email/cookies/
           </a>
           .
         </p>
@@ -249,10 +249,10 @@ export default function TermsOfUseEmailEn() {
       <section id="governing-law">
         <h2 className="text-2xl font-semibold mb-4">14. Governing Law and Disputes</h2>
         <p className="mb-4">
-          <strong>14.1 Applicable Law:</strong> These Terms are governed by the laws of the United Arab Emirates, without regard to conflict of law principles.
+          <strong>14.1 Applicable Law:</strong> Any applicable law is determined by the regional agreement with the contracting company, subject to mandatory law and rights that cannot be excluded by contract.
         </p>
         <p>
-          <strong>14.2 Dispute Resolution:</strong> If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting us. If informal resolution is unsuccessful, disputes shall be resolved through binding arbitration or in courts of competent jurisdiction as determined by applicable law of the United Arab Emirates.
+          <strong>14.2 Dispute Resolution:</strong> The parties will first try to resolve any dispute arising out of or in connection with these Terms through mutual negotiation. If negotiation fails, disputes under agreements with Silence AI LLC shall be submitted to the competent courts in Sharjah, UAE, and disputes under agreements with ТОО &quot;Silence AI&quot; shall be submitted to the competent courts of Kazakhstan. Nothing in these Terms excludes any mandatory rights or court jurisdiction that the parties cannot exclude by contract.
         </p>
       </section>
 
@@ -266,10 +266,12 @@ export default function TermsOfUseEmailEn() {
       <section id="contact">
         <h2 className="text-2xl font-semibold mb-4">16. Contact Information</h2>
         <p>For questions about these Terms or our services, please contact us at:</p>
-        <p>Silence AI LLC</p>
-        <p>Email: info@silenceai.net</p>
+        <p>UAE contracting company: Silence AI LLC, licence number 2539365.01</p>
+        <p>Kazakhstan contracting company: ТОО &quot;Silence AI&quot;, BIN 250840004804</p>
+        <p>Legal and privacy inquiries: info@silenceai.net</p>
         <p>Website: silenceai.net</p>
-        <p>Business registration location: Shams Business Center, Sharjah Media City Free Zone, Al Messaned, Sharjah, UAE</p>
+        <p>UAE registered address: Shams Business Center, Sharjah Media City Free Zone, Al Messaned, Sharjah, UAE</p>
+        <p>Kazakhstan registered address: КАЗАХСТАН, АСТАНА обл, АСТАНА г, АЛМАТЫ мкр, Проспект Ракымжан Кошкарбаев, 10/1, G-3 блок; D6 этаж</p>
       </section>
 
       <section id="misc">

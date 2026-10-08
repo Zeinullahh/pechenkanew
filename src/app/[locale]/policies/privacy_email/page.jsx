@@ -7,7 +7,7 @@ export default function LocalizedPrivacyEmailRedirect({ params }) {
 
   useEffect(() => {
     params.then(({ locale }) =>
-      router.replace(`/${locale}/policies/ai-soc1/email/privacy/`)
+      router.replace(`/${locale}/policies/ai-csd/email/privacy/`)
     );
   }, [params, router]);
 

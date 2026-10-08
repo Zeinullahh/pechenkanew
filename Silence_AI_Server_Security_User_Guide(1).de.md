@@ -16,6 +16,24 @@ Dieses Handbuch richtet sich an Administratoren und autorisierte Bediener von Si
 > **Wichtiger Betriebsgrundsatz**
 > Registrierung, Paketinstallation, Enrollment, Richtlinienkonfiguration und aktiver Schutz sind separate Phasen. Wenn eine Einstellung als pending gekennzeichnet ist, warten Sie auf die Aktivierungsmeldung des Panels, bevor Sie sich darauf verlassen.
 
+
+**Dokumentationsstand:** Abschnitt 10 enthält Anforderungen und bekannte Grenzen. Code ist vorhanden; echte Linux/Kubernetes-Läufe und Browsergesten sind nach den vorliegenden Unterlagen nicht bestätigt. Gespeichert/ausstehend bedeutet nicht angewendet/bestätigt.
+
+- [1. Vorbereitung](#1-vorbereitung)
+- [2. Anmelden und Server Security öffnen](#2-anmelden-und-server-security-öffnen)
+- [3. Dienst registrieren](#3-dienst-registrieren)
+- [4. Natives Server Security installieren und anmelden](#4-natives-server-security-installieren-und-anmelden)
+- [5. Schutzstatus verstehen](#5-schutzstatus-verstehen)
+- [6. MFA und geschützten Zugriff konfigurieren](#6-mfa-und-geschützten-zugriff-konfigurieren)
+- [7. Server-Security-Konsole verwenden](#7-server-security-konsole-verwenden)
+- [8. Vorfälle und Reaktionen prüfen](#8-vorfälle-und-reaktionen-prüfen)
+- [9. Sicherheitsrichtlinie konfigurieren](#9-sicherheitsrichtlinie-konfigurieren)
+- [10. Netzwerkzugriff, Globus und aktive Sitzungen](#10-netzwerkzugriff-globus-und-aktive-sitzungen)
+- [11. Sensoren, Bestand, Sicherheitslage und Befunde prüfen](#11-sensoren-bestand-sicherheitslage-und-befunde-prüfen)
+- [12. Ereignisse und Telemetrie überwachen](#12-ereignisse-und-telemetrie-überwachen)
+- [13. Fehlerbehebung](#13-fehlerbehebung)
+- [14. Bewährte Sicherheits- und Betriebsverfahren](#14-bewährte-sicherheits-und-betriebsverfahren)
+
 # 1. Vorbereitung
 
 Halten Sie vor Beginn folgende Informationen und Zugriffsrechte bereit:
@@ -160,6 +178,8 @@ Sensorkarten können unabhängig Healthy, Degraded, Failed, Disabled, Unsupporte
 
 # 6. MFA und geschützten Zugriff konfigurieren
 
+**Zugriff je Port:** Ziel nach Abschnitt 10 ist eine unabhängige Zulässigkeitsprüfung für jeden Port. MFA kann zulässige Ports kurzzeitig freigeben, überschreibt jedoch keine Länder-/IP-Sperre eines anderen Ports; Dienstanmeldung bleibt nötig. Die bisherige Gruppenfreigabe belegt die unabhängige Prüfung noch nicht.
+
 ## 6.1 Konto-MFA
 
 27. Öffnen Sie bei der Kontoregistrierung Set up 2FA.
@@ -211,6 +231,8 @@ Die konfigurierten geschützten TCP-Ports werden gemeinsam für ein temporäres 
 
 # 7. Server-Security-Konsole verwenden
 
+**Network access:** Abschnitt 10 beschreibt die eigene Seite, Server-/Portwahl, Globus, Liste und Richtlinienbedienung. Wischgesten und entsprechende Knöpfe sind in einem echten Browser noch nicht geprüft; maßgeblich sind die tatsächlich angezeigten Bezeichnungen Ihrer Installation.
+
 | **Registerkarte** | **Zweck** |
 |---|---|
 | Overview | Schutzstatus, Bereitstellung, Sensorzustand, Vorfälle, Reaktionen und letzte Aktivitäten. |
@@ -225,6 +247,8 @@ Die konfigurierten geschützten TCP-Ports werden gemeinsam für ein temporäres 
 Verwenden Sie Refresh für die Hauptkonsole. Ändern Sie in Events Seite oder Filter, um den Ereignis-Explorer selbst zu aktualisieren.
 
 # 8. Vorfälle und Reaktionen prüfen
+
+**Verschiedene Aktionen:** **Shut down session** betrifft eine bestehende Verbindung; **Blacklist IP address** speichert eine dauerhafte Sperre neuer Verbindungen in ihrem Bereich. Automatische Antworten können zeitlich begrenzt und anders geregelt sein. Antrag oder Speichern bestätigt weder Trennung noch Anwendung.
 
 ## 8.1 Vorfälle
 
@@ -253,6 +277,8 @@ Wählen Sie einen Vorfall, um Incident details zu öffnen. Prüfen Sie Schweregr
 Prüfen Sie Quelle, Aktion und Umfang, Grund, Status, Startzeit und Ablauf gemeinsam. Das Blockieren neuer Verbindungen beendet nicht unbedingt eine bereits bestehende Verbindung.
 
 # 9. Sicherheitsrichtlinie konfigurieren
+
+**Unterschiedliche Listen:** **Trusted IPs** betrifft automatische Antworten, **Allowed IPs / CIDRs** den Port-Guard-Zugang; ausdrückliche Sperren können weiter reichen. Keine davon ist **Always Allow** oder **Always Block** aus Abschnitt 10. Alte Regeln bei der Migration abgleichen; eine kontoübergreifende HTTP-Liste wird nie automatisch zur SSH/Kubernetes-Portsperre.
 
 ## 9.1 Automatischer Reaktionsmodus
 
@@ -305,43 +331,58 @@ Policy → Sensor state kann Schalter für Inventory, File Integrity, Security C
 
 Öffnen Sie für Suricata Policy → Suricata monitored interface, wählen Sie einen angezeigten Kandidaten oder geben Sie eine verifizierte Schnittstelle wie ens3 ein und wählen Sie Save interface. Bestätigen Sie nach der Änderung neue Suricata-Telemetrie.
 
-# 10. Länderbasierte Zugriffskontrollen verwalten
+# 10. Netzwerkzugriff, Globus und aktive Sitzungen
 
-## 10.1 Geo-Country Filtering pro Server
+**Funktionsanforderung vom 2026-10-06.** Dieser Abschnitt beschreibt das geforderte Verhalten und bescheinigt keinen Produktivbetrieb. Vor der Implementierung zeigte der Globus Webverkehr; Länderregeln waren getrennt und das Beenden einer Sitzung nicht verfügbar. CMC/Guard-Code enthält inzwischen eine Network-access-Seite, Richtlinien je Server und Port, signierte Guard-Aktualisierung, nftables-Freigabe je Port, TCP-Momentaufnahmen im Linux-Host-Netzwerk-Namespace und signierte Befehle zum gezielten Trennen. `NETWORK_ACCESS_NET_CHECKLIST.md` nennt statische, Unit- und Cross-Build-Prüfungen. Datenbankmigration, reale Linux/Kubernetes-Verbindungen, SSH an Port 2525, Browserbedienung, Neustarts und vollständige Bestätigung durch den Agenten sind in den vorliegenden Unterlagen noch nicht Ende zu Ende geprüft. Gespeichert bedeutet ausstehend, bis der laufende Agent die Revision bestätigt; ein eingereihter Befehl bedeutet keine bestätigte Trennung.
 
-Das serverspezifische Geo-Country Filtering gilt für die konfigurierte Gruppe geschützter TCP-Ports und erfordert verifizierte Serverzugriffs-MFA.
+## 10.1 Zweck und Geltungsbereich (NET-01)
 
-53. Konfigurieren Sie die geschützten TCP-Ports und schließen Sie die SSH-2FA-Einrichtung ab.
+CMC soll 3D-Globus, Länderlisten, Sperrdialog und nach oben ausklappbares Panel für den Zugriff auf konfigurierte geschützte TCP-Ports zusammenführen. Eine **Netzwerksitzung** ist eine tatsächlich aktive TCP-Verbindung von einer beobachteten Quell-IP zu einem konfigurierten Zielport eines verwalteten Servers. Läuft SSH auf Port **2525**, muss die Verbindung während ihrer Nutzung erscheinen; SSH ist nicht auf 22 beschränkt. Dasselbe gilt für konfigurierte Kubernetes-Endpunkte und andere geschützte TCP-Dienste. Dienstnamen müssen aus Konfiguration oder verlässlicher Beobachtung stammen. Eine Kubernetes-TCP-Verbindung beweist weder Benutzeridentität noch Pod-Shell oder einzelne `kubectl exec`-Operation. Das Schließen einer gebündelten Verbindung kann mehrere Vorgänge betreffen. Website-Besuche, HTTP-Anfragen, Browseranmeldungen, User-Agents und einzelne IPs aus Zugriffsprotokollen sind keine solchen Sitzungen. Unabhängiges Webhosting, HTTP-Analyse, Registrierung und Abrechnung bleiben getrennt.
 
-54. Öffnen Sie Agent configuration und aktivieren Sie Enable Geo-Country Filtering.
+## 10.2 Server- und Portauswahl (NET-02)
 
-55. Wählen Sie unter Default Policy die Option Allow Unmatched oder Deny Unmatched.
+Vor Ansicht oder Bearbeitung den ausgewählten Server und geschützten TCP-Port zeigen. Jeder Port kann eigenen Ländermodus und eigene Länderliste haben; eine Regel für 2525 darf keinen anderen Port stillschweigend ändern. **All protected ports** darf aggregieren, muss aber gemischte Regeln kenntlich machen. Auswahl und Filter aktualisieren Globus, wirksame Länderlisten und Sitzungsliste gemeinsam. Die dauerhaften IP-Listen **Always Allow** und **Always Block** gelten für die konfigurierten geschützten Ports des ausgewählten Servers, nicht automatisch für das ganze Konto oder fremde Ports.
 
-56. Geben Sie einen gültigen Wert für Geo Rules (JSON Array) ein und wählen Sie Save.
+## 10.3 Dialog und Listen (NET-03)
 
-57. Öffnen Sie Agent configuration erneut und prüfen Sie gespeicherten Schalter, Standardrichtlinie, Regeln, Ports und 2FA-Einstellung.
+Die erste Reihe enthält **Countries** und **IP addresses**. Unter **Countries** enthält die zweite **Blacklisted** und **Whitelisted**, Suche, Hinzufügen und Entfernen sowie einen getrennten Schalter **Blacklist mode / Whitelist mode**. Der Wechsel der Listenansicht ändert nicht den Modus. Explizit gespeicherte Länder und die wirksame Gegenmenge müssen für den gewählten Port verständlich sein. Unter **IP addresses** enthält die zweite Reihe **Always Block** und **Always Allow**. Jede Liste bietet **+**, ein einfaches IP-Eingabefeld, gespeicherte Einträge und Entfernen. Beide Listen wirken gleichzeitig, unabhängig von Tab und Ländermodus. Einzelne IPv4- und IPv6-Adressen akzeptieren, äquivalente Formen normalisieren und Dubletten verhindern; JSON, Browser-Fingerprints, IP-Benutzer-Paare und verpflichtende CIDR-Ausdrücke sind nicht nötig.
 
+## 10.4 Ländermodi (NET-04)
 
+| Modus | Explizit ausgewählte Länder | Alle anderen bekannten Länder |
+|---|---|---|
+| **Blacklist mode** | Gesperrt | Erlaubt, vorbehaltlich IP-Regeln und Authentifizierung |
+| **Whitelist mode** | Erlaubt, vorbehaltlich IP-Regeln und Authentifizierung | Gesperrt |
 
-- Eine explizite Regel für einen konfigurierten Port hat Vorrang vor der Standardrichtlinie.
-- Eine allow-Regel erlaubt die aufgeführten Länder und verweigert Länder, die nicht in dieser Regel enthalten sind.
+Eine leere schwarze Liste sperrt kein Land; eine leere weiße Liste erlaubt keines. Beim Moduswechsel erklären, ob explizite Einträge erhalten oder übertragen werden; eine angezeigte Gegenmenge nicht heimlich als Auswahl speichern. Kasachstan und die Türkei in **Whitelist mode** erlauben diese Länder und sperren alle anderen, soweit keine gültige IP-Ausnahme greift. Jeder Port wird einzeln bewertet: Eine Sperre auf einem Port sperrt keinen sonst erlaubten Port, und dessen Freigabe öffnet keinen gesperrten Port. MFA bleibt erforderlich. Fehlende Herkunft als **Unknown country** kennzeichnen, nie ein Land erfinden. Unbekannte öffentliche IPs dürfen bei GeoIP-Ausfall Regeln nicht stillschweigend abschalten; im Whitelist-Modus sind sie ohne **Always Allow** gesperrt. Private/lokale Quellen umgehen die Länderbewertung, bleiben aber IP-Regeln und MFA unterworfen und sind von fehlgeschlagener öffentlicher GeoIP-Auflösung zu unterscheiden.
 
-- Eine deny-Regel verweigert die aufgeführten Länder und erlaubt Länder, die nicht in dieser Regel enthalten sind.
-- Die Standardrichtlinie gilt nur für konfigurierte Ports ohne explizite Regel.
+## 10.5 Dauerhafte IP-Ausnahmen (NET-05)
 
-## 10.2 Länder-Sperrliste auf Kontoebene
+**Always Allow** nimmt die beobachtete Quell-IP bis zum Entfernen von Länderbeschränkungen auf den geschützten Ports dieses Servers aus. Beispiel: Russland ist gesperrt, aber ein Mitarbeiter arbeitet dort aus der Ferne. Seine beobachtete IP in **Always Allow** überwindet die Länderregel; MFA und SSH-Anmeldung bleiben nötig. Dasselbe gilt im Whitelist-Modus ohne Russland. Entfernen stellt die normale Länderentscheidung wieder her. **Always Block** sperrt eine passende IP selbst bei sonst erlaubtem Land. Beide Listen bleiben gleichzeitig und über Moduswechsel hinweg wirksam. **Always Allow** umgeht weder Dienstanmeldung noch unabhängige automatische Gefahrenabwehr. **Trusted IPs** betrifft diese Abwehr und ist kein Synonym; alte Quell-Positivlisten und ausdrückliche Sperren müssen bewusst abgeglichen werden. Dieselbe normalisierte IP darf nicht in beiden Listen stehen: einen ausdrücklichen Verschiebevorgang anbieten. Bei widersprüchlichen Daten hat Sperren Vorrang und der Konflikt wird gemeldet. Reihenfolge: **Always Block**, **Always Allow** als Länderausnahme, dann Ländermodus des Ports; MFA und Dienstanmeldung folgen. Eine gemeinsame öffentliche IP betrifft alle Nutzer dieser Adresse; bei Adresswechsel die Ausnahme aktualisieren. Eine IP allein identifiziert keinen Mitarbeiter.
 
-Blacklist countries im allgemeinen Dashboard ist eine Sperrliste für Webverkehr auf Kontoebene und getrennt vom serverspezifischen Geo-Country Filtering.
+## 10.6 Globus und vier Dichtestufen (NET-06)
 
-58. Öffnen Sie Blacklist countries.
+Der Globus zeigt wirksame erlaubte/gesperrte Länder und aktive Verbindungen im gewählten Bereich; eine erlaubte IP in einem gesperrten Land muss erkennbar sein. Länderfarben und Sitzungsdichte getrennt erläutern. Die dokumentierten vier Stufen lauten **0, 1–2, 3–9 und 10+ Sitzungen**; aktuelle Werte vor Veröffentlichung als verifiziert anhand neuer Implementierungsbelege prüfen. Markergruppen müssen zu einzelnen IPs und Verbindungen führen, ohne aus einem Land genaue IP-Koordinaten abzuleiten. Gemischte Regeln sowie unbekannte/private Orte sichtbar machen. Das alte **Active Users** zählte jüngste Protokoll-IPs, keine aktiven TCP-Verbindungen. Globus und Liste verwenden dieselben Filter, Zeitstempel, Summen und Aktualität. Bestätigt geschlossene Verbindungen verschwinden; ein Offline-Agent oder fehlende Telemetrie bedeutet unbekannt/veraltet, nicht null.
 
-59. Öffnen Sie Non-Blacklisted und suchen Sie gegebenenfalls nach Ländernamen oder zweistelligem Code.
+## 10.7 Sitzungsliste (NET-07)
 
-60. Wählen Sie ein Land und dann Add. Die Änderung wird sofort gespeichert.
+Nach oben wischen öffnet die Liste; eine sichtbare Öffnen-/Erweitern-Schaltfläche bietet Maus und Tastatur dieselbe Funktion. Schließen/Einklappen führt zurück zum Globus. Jede Zeile steht für eine Verbindung; mehrere Verbindungen derselben IP bleiben getrennt. Quell-IP, Land oder privat/unbekannt, Server, Zielport, konfigurierter Dienstname wenn verfügbar, Status und tatsächlich bekannte Zeiten anzeigen. **First observed** ist die erste bekannte Beobachtung, nicht zwingend der echte Verbindungsbeginn. Suche, Bereichsfilter und Navigation müssen jede Zeile erreichbar machen; eine Ergebnisseite ist nicht die Gesamtsumme.
 
-61. Bestätigen Sie, dass das Land unter Blacklisted erscheint.
+## 10.8 Kontextmenü und Trennung (NET-08)
 
-Um ein Land zu entfernen, öffnen Sie Blacklisted, wählen das gesperrte Land und dann remove. Das Land wird zu Non-Blacklisted zurückgeführt.
+Rechtsklick auf prüfbare IP/Sitzung im Globus oder der Liste bietet **Shut down session** und **Blacklist IP address**; für Touch und Tastatur ein sichtbares gleichwertiges Menü. Bei mehreren Verbindungen derselben IP die genaue Verbindung mit Server und Port auswählen. **Shut down session** trennt nur diese reale Verbindung über den Agenten, auch SSH auf 2525/22, den unterstützten Kubernetes-Pfad und andere geschützte TCP-Dienste. Es schaltet weder Server, Dienst, Pod noch weitere Verbindungen ab, stoppt nicht unbedingt bereits angestoßene Arbeit und sperrt keine erneute Verbindung. Verbindungsidentität unmittelbar vorher prüfen; IP allein, Benutzername, ungenauer Zeitstempel oder wiederverwendete PID reichen nicht. Angefordert/eingereiht und bestätigt unterscheiden; bereits geschlossen, veraltet, Agent offline, unberechtigt, nicht unterstützt, abgelaufen und fehlgeschlagen ehrlich melden. Ein versandter Befehl ist kein Nachweis; fehlende sichere gezielte Trennung konkret benennen.
+
+## 10.9 Sperren aus einer Sitzung (NET-09)
+
+**Blacklist IP address** fügt die Quell-IP derselben dauerhaften serverbezogenen Liste **Always Block** hinzu. Zuerst gespeichert/ausstehend, erst nach Agentenbestätigung angewendet oder fehlgeschlagen zeigen; der Dialog **IP addresses** zeigt denselben Eintrag. Steht die IP in **Always Allow**, einen ausdrücklichen Wechsel anbieten. Nach Anwendung werden neue Verbindungen im Geltungsbereich verhindert; bestehende Sitzungen sind dadurch nicht nachweislich beendet und benötigen eine gesonderte Trennung.
+
+## 10.10 Speichern, Anwendung und Migration (NET-10)
+
+Eine Richtlinie verbindet CMC, API/Speicher, gelieferte Agentenkonfiguration und tatsächliche Durchsetzung. Gespeichert, ausstehend, angewendet und fehlgeschlagen samt Revision/Zeit getrennt zeigen; Offline-Agenten bleiben ausstehend. Neustarts überstehen, alte Befehle und Richtlinienwiedergaben abweisen, Berechtigung für Akteur/Konto/Server prüfen und Ziel, Aktion, Zeitpunkt und Ergebnis protokollieren. Alte Anleitung zur kontoübergreifenden HTTP-Ländersperre und separaten Geo-JSON-Bearbeitung durch diesen gemeinsamen Ablauf ersetzen. Eine HTTP-Sperrliste niemals stillschweigend in SSH/Kubernetes-Sperren aller Server umdeuten. Bestehende native und IP-Regeln gezielt migrieren, ohne Schutz zu schwächen oder verdeckte Ablehnungen zu erzeugen. Unabhängige HTTP-Analyse und andere Funktionen bleiben bestehen.
+
+## 10.11 Pflichtprüfung (NET-11)
+
+Vor Fertigmeldung **NET-01** bis **NET-11** mit Dateien, Prüfnachweisen und offenen Abweichungen durchgehen: zwei unabhängige Ports einschließlich SSH 2525; beide Modi, leere Listen und Moduswechsel; zwei Tab-Reihen und gleichzeitig aktive IP-Listen; Mitarbeiter in Russland in beiden Modi samt MFA; Sperrvorrang, IPv4/IPv6 und Dubletten; echte SSH-, Kubernetes- und andere TCP-Verbindungen in Globus und Liste; vier Stufen, gleiche Summen und veraltete Daten; Wischen, Maus/Tastatur und Menüs; Trennen genau einer Verbindung auch bei gleicher IP; bereits geschlossen, unberechtigt, veraltet, fehlgeschlagen und nicht unterstützt; dauerhafte Sperre, Agentenbestätigung, Neustarts, Kontoisolation und Migration. Aussehen oder simulierte Daten genügen nicht. Fehlende reale Linux/Kubernetes- und Browserprüfungen getrennt dokumentieren.
 
 # 11. Sensoren, Bestand, Sicherheitslage und Befunde prüfen
 
@@ -372,6 +413,8 @@ Verwenden Sie Posture für Ergebnisse der Security Configuration Assessment und 
 
 # 12. Ereignisse und Telemetrie überwachen
 
+**Aktualität:** Zugriffsprotokolle und das alte **Active Users** zählen keine aktiven TCP-Verbindungen. Globus und Liste nach Abschnitt 10 benötigen gleiche Filter, Summen und Zeitstempel. Fehlende oder alte Telemetrie bedeutet unbekannt/veraltet, nicht null.
+
 Öffnen Sie Events und verwenden Sie die verfügbaren Filter:
 
 - Nach Sensor filtern.
@@ -383,6 +426,8 @@ Verwenden Sie Posture für Ergebnisse der Security Configuration Assessment und 
 Prüfen Sie Ereignisname, Quelle, Typ, Nachweis, Schweregrad, Zeitstempel und gegebenenfalls den verknüpften Vorfall.
 
 # 13. Fehlerbehebung
+
+**Unerwarteter Zugriff:** Server und Port, Ländermodus, tatsächlich beobachtete Quell-IP, **Always Block**/**Always Allow**, alte Einschränkungen und angewendete Revision prüfen. Nach IP-Wechsel Ausnahme aktualisieren. Ausstehende Richtlinie, Offline-Agent oder alte Sitzung belegen keinen Live-Zustand; angeforderte, abgelaufene oder nicht unterstützte Trennung ist keine bestätigte Trennung.
 
 > **Erste Regel**
 > Halten Sie beim Ändern von Zugriffskontrollen einen unabhängigen Administratorzugriff bereit. Zeichnen Sie nicht vertraulichen Fehlertext auf und teilen Sie niemals Enrollment-Codes, MFA-Geheimnisse, Sicherungscodes, private Schlüssel oder Screenshots, die diese enthalten.
@@ -401,6 +446,8 @@ Prüfen Sie Ereignisname, Quelle, Typ, Nachweis, Schweregrad, Zeitstempel und ge
 | Paketbestand ist leer | Verwenden Sie Search packages und vergleichen Sie die Pakettabelle mit anderer Bestandsaktivität. Betrachten Sie eine leere Tabelle als unvollständige Information, nicht als Beleg für fehlende Pakete. |
 
 # 14. Bewährte Sicherheits- und Betriebsverfahren
+
+**Aktuelle Grenzen:** Der Code aus Abschnitt 10 hat laut vorliegenden Unterlagen keine vollständigen realen Linux/Kubernetes- oder Browserprüfungen. Befristete MFA-Freigaben benötigen nftables. Der Sammler sieht nur etablierte TCP-Sockets im Host-Netzwerk-Namespace des gewählten Knotens, nicht sämtliche Pods, Knoten oder Load Balancer. Ohne Socket-Identität lautet der Zustand nicht unterstützt; zu große Momentaufnahmen sind veraltet, nicht vollständig. Neustarts, Bestätigung und gezielte Trennung bleiben zu prüfen.
 
 - Verwenden Sie für vertrauenswürdige und erlaubte Quellen möglichst enge IP-/CIDR-Bereiche.
 - Halten Sie beim Aktivieren von MFA, expliziten Sperren oder Länderbeschränkungen einen getesteten Administrator-Wiederherstellungsweg bereit.

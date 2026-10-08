@@ -309,7 +309,7 @@
     "tooltips": {
       "web": {
         "title": "Web攻撃防御",
-        "content": "本システムはDDoSやSQLiなどのあらゆるWeb攻撃から保護します(ビジネスロジックの脆弱性を除く)。"
+        "content": "Web Securityは設定されたサービスを経由するトラフィックに、利用可能なWAF、IPS、DDoS対策を適用します。脅威の軽減を目的としますが、すべての攻撃を阻止することはできません。"
       },
       "email": {
         "title": "メール攻撃防御",
@@ -433,7 +433,7 @@
         "description": "無制限\n追加料金なし",
         "button": "WebアプリとAPIを保護",
         "features": {
-          "webProtection": "ビジネスロジック以外のすべてのWeb攻撃を防御",
+          "webProtection": "設定されたサービスを経由するトラフィック向けWAF制御",
           "ddosProtection": "リアルタイムDDoS防御",
           "cmc": "グローバルトラフィック監視付きCMC",
           "country": "国別ブロック機能",
@@ -2417,7 +2417,7 @@
     "web": {
       "title": "AI-CSD Web と従来型WAFソリューションの比較",
       "columns": {
-        "aiSoc": "AI-CSD Web(従量課金)",
+        "aiSoc": "AI-CSD Web（サブスクリプション＋超過利用）",
         "cloudflare": "Cloudflare WAF + Anti-DDoS($20/月)",
         "aws": "AWS WAF(従量課金)"
       },
@@ -2518,7 +2518,7 @@
   "aiSocPricing": {
     "intro": "AI-CSD は独立型サイバーセキュリティシステムのラインナップです",
     "emailDescription": "Email Security は企業コミュニケーションを守る防護シールドとして機能します。受信・送信メールをフィルタリングし、フィッシング、なりすまし、悪意あるリンクをユーザーに届く前に無効化し、業務連絡の信頼性を維持します。",
-    "webDescription": "Web Security はリアルタイムのトラフィック分析によってデジタル基盤を保護します。一般的な脆弱性、DDoS攻撃、不正アクセスからWebサイトとAPIを守り、パフォーマンスに影響を与えずにネットワーク活動を高可視化します。",
+    "webDescription": "Web Securityは設定されたサービスを経由するトラフィックを分析します。利用可能なWAF、IPS、DDoS対策は脅威の検出と軽減、セキュリティ状況の可視化を目的としますが、すべての攻撃を阻止できません。",
     "calendlyIntegration": "Calendlyとの連携に対応"
   },
   "aiSocFaq": {
@@ -2559,6 +2559,7 @@
     ]
   },
   "homepageText": {
+    "protection_applies_to_routed_traffic_enabled_controls_are_designed_to_mi_gin4xh": "保護はサービスを経由するトラフィックに適用されます。有効な制御は脅威の軽減を目的としますが、すべての攻撃を阻止できません。利用可能な機能は注文書に記載されます。",
     "290_billed_annually_equivalent_to_less_than_25_server_month_1417crm": "年間 290 ドル請求 – サーバーあたり月額 25 ドル未満に相当",
     "450_maximum_njnzny": "最大$450",
     "5_1m_pentest_compute_tokens_wwtud": "$5 / 100 万ペンテスト コンピューティング トークン",
@@ -2596,7 +2597,7 @@
     "all_in_one_ot2fx": "オールインワン",
     "all_in_one_web_defense_e4ge83": "オールインワンの Web 防御",
     "billed_annually_at_tl26no": "毎年請求されます",
-    "billed_monthly_cancel_anytime_1r79ysm": "毎月請求・いつでもキャンセル可能",
+    "billed_monthly_cancellation_follows_your_order_and_plan_terms_11eknc8": "月額請求 · 解約は注文書とプラン条件に従います",
     "blacklist_countries_8ksljy": "ブラックリストに登録されている国",
     "blacklist_countries_16ekloe": "ブラックリストに載っている国",
     "blacklisted_1ctqsal": "ブラックリストに登録されている (",
@@ -2655,7 +2656,7 @@
     "console_preferences_tijcbo": "コンソールの設定",
     "contact_sales_1wj8yf7": "営業担当者へのお問い合わせ",
     "content_1l6x30o": "内容:",
-    "control_storage_with_flexible_retention_periods_xtvuqg": "柔軟な保存期間でストレージを制御",
+    "your_order_or_plan_states_the_available_retention_period_1tuyhqr": "利用可能な保存期間は注文書またはプランに記載されます",
     "copy_s6g5lw": "コピー",
     "copy_ip_1i99gwt": "IPをコピーする",
     "copy_hostname_2m5wnx": "ホスト名をコピーする",
@@ -2783,7 +2784,7 @@
     "number_of_ips_1a5i4az": "IPの数",
     "observe_records_only_shadow_evaluates_without_enforcing_enforce_applies__9xtwoe": "記録のみを観察してください。シャドウは強制せずに評価します。承認された一時ブロックを適用します。",
     "one_autonomous_pentester_everything_included_fomv2o": "自律型の侵入テストシステムひとつで、必要な機能をすべて利用できます。",
-    "one_product_full_protection_zy3htc": "1つの製品。完全な保護。",
+    "one_product_configurable_web_protection_clwwg6": "一つの製品。設定可能なWeb保護。",
     "only_capacity_changes_between_plans_176xpm6": "プラン間で変わるのは容量のみです。",
     "only_telemetry_explicitly_linked_to_this_incident_is_shown_e21eke": "このインシデントに明示的にリンクされているテレメトリのみが表示されます。",
     "open_n6hn1l": "開く",
@@ -2801,10 +2802,10 @@
     "package_selection_starts_after_the_server_is_added_13gcdx6": "サーバーの追加後にパッケージの選択が開始されます。",
     "packages_19dyed4": "パッケージ",
     "packages_plus_structured_os_services_ports_network_account_and_runtime_i_1volexa": "パッケージと構造化された OS、サービス、ポート、ネットワーク、アカウント、およびランタイム インベントリ シグナル。",
-    "paddle_checkout_u9qyzf": "パドルチェックアウト",
+    "paddle_checkout_u9qyzf": "Paddle Checkout",
     "page_1sfsa6u": "ページ",
     "partial_additional_configuration_10mybyq": "部分的/追加構成",
-    "pay_as_you_go_1q46gv6": "従量課金制",
+    "overage_after_included_usage_1rr3ibz": "含まれる利用枠を超えた分",
     "pay_only_for_the_compute_you_use_127apru": "使用したコンピューティングに対してのみ支払います。",
     "payment_gateway_11ncarf": "支払いゲートウェイ:",
     "payment_history_t9jtfh": "支払い履歴",
@@ -2849,7 +2850,7 @@
     "role_security_administrator_184ib4s": "役割: セキュリティ管理者",
     "sha_256_1j0rdj1": "SHA-256",
     "sha_256_dt80lh": "SHA-256:",
-    "siem_log_retention_1uopzvr": "SIEMログの保持",
+    "planned_siem_log_retention_options_vssevv": "予定されているSIEMログ保存期間の選択肢",
     "siem_log_storage_4qjyk4": "SIEMログストレージ",
     "silence_ai_enterprise_e2rug6": "SILENCE AI / 企業向け",
     "ssh_kubernetes_access_requires_a_totp_verification_before_the_protected__1dhr6zz": "SSH/Kubernetes アクセスでは、検証されたソース IP に対して保護されたポートが一時的に開く前に、TOTP 検証が必要です。",
@@ -2953,7 +2954,7 @@
     "we_could_not_load_this_view_this_does_not_mean_guard_protection_failed_mp0yr6": "このビューをロードできませんでした。これは、Guard 保護が失敗したことを意味するものではありません。",
     "web_security_bel2xx": "ウェブセキュリティ",
     "your_company_yha0w5": "自社",
-    "you_pay_for_your_legitimate_users_never_your_attackers_1qhmtuw": "正規ユーザーに対して料金を支払います。決してあなたの攻撃者ではありません。",
+    "blocked_malicious_requests_have_no_request_fee_usage_measurement_follows_g2sfyd": "ブロックされた悪意のあるリクエストにリクエスト料金はかかりません。利用量の計測はプランに従います。",
     "your_inbox_protected_g3xg2": "あなたの受信箱は保護されています。",
     "your_pentest_can_never_exceed_the_approved_compute_budget_without_your_a_4it49v": "侵入テストは、ユーザーの承認なしに、承認されたコンピューティング予算を超えることはできません。",
     "your_price_changes_with_usage_not_with_how_well_we_protect_you_1yeijuk": "料金は使用量によって変わりますが、当社がどの程度保護するかによって変わります。",
@@ -3257,7 +3258,7 @@
     "current_language_1ocq0a4": "現在の言語",
     "server_security_console_1pivfcx": "サーバーセキュリティコンソール",
     "web_security_cmc_1ggnr48": "WebセキュリティCMC",
-    "single_predictable_price_zero_request_fees_on_blocked_traffic_full_waf_i_1l1tmno": "明確で予測しやすい料金 · 遮断した通信にリクエスト料金なし · WAF、IPS、DDoS、SIEM込み",
+    "one_subscription_no_request_fee_for_blocked_traffic_waf_ips_ddos_control_1kgorxg": "一つのサブスクリプション · ブロックされた通信のリクエスト料金なし · WAF、IPS、DDoS制御とSIEMをプランに含む",
     "automated_mail_organization_security_hepk6t": "メールの自動整理と保護",
     "security_configuration_posture_zut1nr": "セキュリティ設定と状態",
     "email_12fq213": "メール",

@@ -393,7 +393,7 @@ const RuSithubPrivacy = () => {
               <ul className="list-disc list-inside mb-4 space-y-2">
                 <li>Для обработки платежей по подписке</li>
                 <li>Соответствие PCI DSS</li>
-                <li>Примеры: Stripe, PayPal, Kaspi.kz (для клиентов из Казахстана)</li>
+                <li>По договорам с Silence AI LLC в ОАЭ онлайн-платежи обрабатывает Paddle.com как продавец по платёжной операции (merchant of record); по договорам с ТОО &quot;Silence AI&quot; в Казахстане платежи обрабатывает ТОО &quot;ФинCeрвисы&quot;</li>
                 <li>Имеют собственные политики конфиденциальности</li>
               </ul>
 

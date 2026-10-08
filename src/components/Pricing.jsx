@@ -715,7 +715,7 @@ const WebSecurityPricing = ({
       <div className="mb-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-2xl">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-blue-300"><HomepageText fallback="Web Security" /></p>
-          <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl"><HomepageText fallback="One product. Full protection." /></h3>
+          <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl"><HomepageText fallback="One product. Configurable web protection." /></h3>
           <p className="mt-4 text-sm leading-6 text-white/60"><HomepageText fallback="Your price changes with usage — not with how well we protect you." /></p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -763,7 +763,7 @@ const WebSecurityPricing = ({
                     </p>
                   </div>
                 ) : (
-                  <p className="mt-2 text-xs text-white/45"><HomepageText fallback="Billed monthly · Cancel anytime" /></p>
+                  <p className="mt-2 text-xs text-white/45"><HomepageText fallback="Billed monthly · Cancellation follows your order and plan terms" /></p>
                 )}
               </div>
             </div>
@@ -795,7 +795,7 @@ const WebSecurityPricing = ({
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200"><HomepageText fallback="Pay as you go" /></p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200"><HomepageText fallback="Overage after included usage" /></p>
                   <div className="mt-3 grid grid-cols-2 gap-3">
                     <div>
                       <p className="text-xl font-semibold text-white">{formatPrice(convertPrice(1, currency), currency)}</p>
@@ -810,14 +810,14 @@ const WebSecurityPricing = ({
               </div>
               <div className="mt-4 rounded-xl border border-emerald-300/25 bg-emerald-400/[0.08] px-4 py-2.5">
                 <p className="text-xs sm:text-sm font-semibold text-emerald-200"><HomepageText fallback="✓ BLOCKED MALICIOUS TRAFFIC — $0.00" /></p>
-                <p className="mt-0.5 text-[11px] text-white/55"><HomepageText fallback="You pay for your legitimate users. Never your attackers." /></p>
+                <p className="mt-0.5 text-[11px] text-white/55"><HomepageText fallback="Blocked malicious requests have no request fee; usage measurement follows your plan." /></p>
               </div>
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-4 flex items-center justify-between">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200"><HomepageText fallback="SIEM log retention" /></p>
-                <p className="mt-1 text-xs text-white/50"><HomepageText fallback="Control storage with flexible retention periods" /></p>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-200"><HomepageText fallback="Planned SIEM log retention options" /></p>
+                <p className="mt-1 text-xs text-white/50"><HomepageText fallback="Your order or plan states the available retention period" /></p>
               </div>
               <div className="flex items-center gap-1.5 text-xs font-medium text-white/80 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
                 <span>7d</span>
@@ -832,8 +832,9 @@ const WebSecurityPricing = ({
 
         <div className="border-t border-white/10 bg-blue-500/[0.07] px-6 py-4 text-center sm:px-10">
           <p className="text-xs sm:text-sm font-semibold text-white">
-            <HomepageText fallback="Single predictable price · Zero request fees on blocked traffic · Full WAF, IPS, DDoS & SIEM included" />
+            <HomepageText fallback="One subscription · No request fee for blocked traffic · WAF, IPS, DDoS controls and SIEM in the plan" />
           </p>
+          <p className="mt-2 text-xs text-white/55"><HomepageText fallback="Protection applies to routed traffic. Enabled controls are designed to mitigate threats but cannot stop every attack; your order states available capabilities." /></p>
         </div>
       </GlassSurface>
     </div>
@@ -894,7 +895,7 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
       id: "globalShield",
         title: t("pricing.plans.globalShield.title", "Web Security and Traffic Management"),
         features: [
-        t("pricing.plans.globalShield.features.webProtection", "Full WAF protection"),
+        t("pricing.plans.globalShield.features.webProtection", "WAF controls for routed traffic"),
         "Dedicated Web IPS layer",
         t("pricing.plans.globalShield.features.ddosProtection", "Real-time DDoS protection"),
         "Behavioral CAPTCHA and bot protection",

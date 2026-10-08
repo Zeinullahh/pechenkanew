@@ -229,7 +229,7 @@
     "tooltips": {
       "web": {
         "title": "Защита от веб‑атак",
-        "content": "Система защищает от всех типов веб‑атак, таких как DDoS, SQLi и т.д., кроме уязвимостей бизнес‑логики."
+        "content": "Web Security применяет доступные средства WAF, IPS и защиты от DDoS к трафику, направленному через настроенную услугу. Они предназначены для снижения угроз, но не могут остановить каждую атаку."
       },
       "email": {
         "title": "Защита от почтовых атак",
@@ -440,7 +440,7 @@
         "description": "Без ограничений\nБез дополнительных сборов",
         "button": "Защитить веб-приложение и API",
         "features": {
-          "webProtection": "Защита от всех типов веб-атак, кроме эксплуатации бизнес-логики",
+          "webProtection": "Средства WAF для трафика, направленного через настроенную услугу",
           "ddosProtection": "Защита от DDoS в реальном времени",
           "cmc": "CMC с глобальным мониторингом трафика:",
           "country": "Блокировка стран:",
@@ -2383,7 +2383,7 @@
     "web": {
       "title": "AI-CSD Web vs традиционные WAF-решения",
       "columns": {
-        "aiSoc": "AI-CSD Web (с оплатой по факту использования)",
+        "aiSoc": "AI-CSD Web (подписка и оплата превышения)",
         "cloudflare": "Cloudflare WAF + Anti-DDoS ($20/мес)",
         "aws": "AWS WAF (с оплатой по факту использования)"
       },
@@ -2484,7 +2484,7 @@
   "aiSocPricing": {
     "intro": "AI-CSD — это линейка автономных систем кибербезопасности",
     "emailDescription": "Email Security работает как защитный щит для корпоративной переписки. Он фильтрует входящие и исходящие сообщения, нейтрализуя фишинг, спуфинг и вредоносные ссылки до того, как они достигнут пользователей, сохраняя целостность деловой коммуникации.",
-    "webDescription": "Web Security защищает цифровую инфраструктуру, анализируя трафик в реальном времени. Он защищает сайты и API от типовых уязвимостей, DDoS-атак и несанкционированного доступа, обеспечивая глубокую видимость сетевой активности без снижения производительности.",
+    "webDescription": "Web Security анализирует трафик, направленный через настроенную услугу. Доступные средства WAF, IPS и защиты от DDoS предназначены для обнаружения и снижения угроз и предоставляют сведения о безопасности, но не могут остановить каждую атаку.",
     "calendlyIntegration": "Поддерживает интеграцию с Calendly"
   },
   "aiSocFaq": {
@@ -2547,8 +2547,9 @@
     }
   },
   "homepageText": {
+    "protection_applies_to_routed_traffic_enabled_controls_are_designed_to_mi_gin4xh": "Защита применяется к направленному через услугу трафику. Включённые средства предназначены для снижения угроз, но не могут остановить каждую атаку; доступные функции указаны в заказе.",
     "billed_annually_at_tl26no": "Счет выставляется ежегодно в",
-    "billed_monthly_cancel_anytime_1r79ysm": "Оплата ежемесячно · Отмена в любое время",
+    "billed_monthly_cancellation_follows_your_order_and_plan_terms_11eknc8": "Оплата ежемесячно · Отмена регулируется заказом и условиями тарифа",
     "blacklist_countries_8ksljy": "Черный список стран",
     "blacklist_countries_16ekloe": "Черный список стран",
     "blacklisted_1ctqsal": "В чёрном списке (",
@@ -2661,7 +2662,7 @@
     "console_preferences_tijcbo": "Настройки консоли",
     "contact_sales_1wj8yf7": "Свяжитесь с отделом продаж",
     "content_1l6x30o": "Содержание:",
-    "control_storage_with_flexible_retention_periods_xtvuqg": "Управляйте хранилищем с помощью гибких сроков хранения",
+    "your_order_or_plan_states_the_available_retention_period_1tuyhqr": "Доступный срок хранения указан в заказе или тарифном плане",
     "copy_s6g5lw": "Копировать",
     "copy_ip_1i99gwt": "Копировать IP",
     "copy_hostname_2m5wnx": "Скопировать имя хоста",
@@ -2771,10 +2772,10 @@
     "package_selection_starts_after_the_server_is_added_13gcdx6": "Выбор пакета начинается после добавления сервера.",
     "packages_19dyed4": "Пакеты",
     "packages_plus_structured_os_services_ports_network_account_and_runtime_i_1volexa": "Пакеты плюс структурированные сигналы инвентаризации ОС, служб, портов, сети, учетной записи и среды выполнения.",
-    "paddle_checkout_u9qyzf": "Весло",
+    "paddle_checkout_u9qyzf": "Paddle Checkout",
     "page_1sfsa6u": "Страница",
     "partial_additional_configuration_10mybyq": "Частичная/дополнительная настройка",
-    "pay_as_you_go_1q46gv6": "Платите по мере использования",
+    "overage_after_included_usage_1rr3ibz": "Превышение включённого объёма",
     "pay_only_for_the_compute_you_use_127apru": "Платите только за компьютер, который используете.",
     "payment_gateway_11ncarf": "Платежный шлюз:",
     "payment_history_t9jtfh": "История платежей",
@@ -2789,7 +2790,7 @@
     "number_of_ips_1a5i4az": "Количество IP-адресов",
     "observe_records_only_shadow_evaluates_without_enforcing_enforce_applies__9xtwoe": "Соблюдайте только записи. Тень оценивает, не принуждая. Enforce применяет утвержденные временные блокировки.",
     "one_autonomous_pentester_everything_included_fomv2o": "Один автономный пентестер — все функции включены.",
-    "one_product_full_protection_zy3htc": "Один продукт. Полная защита.",
+    "one_product_configurable_web_protection_clwwg6": "Один продукт. Настраиваемая веб-защита.",
     "only_capacity_changes_between_plans_176xpm6": "Между планами меняется только мощность.",
     "only_telemetry_explicitly_linked_to_this_incident_is_shown_e21eke": "Показаны только телеметрические данные, явно связанные с этим инцидентом.",
     "open_n6hn1l": "Открыть",
@@ -2837,7 +2838,7 @@
     "role_security_administrator_184ib4s": "Роль: администратор безопасности",
     "sha_256_1j0rdj1": "SHA-256",
     "sha_256_dt80lh": "SHA-256:",
-    "siem_log_retention_1uopzvr": "Сохранение журнала SIEM",
+    "planned_siem_log_retention_options_vssevv": "Планируемые сроки хранения журналов SIEM",
     "siem_log_storage_4qjyk4": "Хранилище журналов SIEM",
     "silence_ai_enterprise_e2rug6": "SILENCE AI / ДЛЯ БИЗНЕСА",
     "ssh_kubernetes_access_requires_a_totp_verification_before_the_protected__1dhr6zz": "Для доступа по SSH/Kubernetes требуется проверка TOTP, прежде чем защищенный порт временно откроется для проверенного исходного IP-адреса.",
@@ -2923,7 +2924,7 @@
     "we_could_not_load_this_view_this_does_not_mean_guard_protection_failed_mp0yr6": "Не удалось загрузить это представление. Это не означает, что защита Guard не сработала.",
     "web_security_bel2xx": "Веб-безопасность",
     "your_company_yha0w5": "ВАША КОМПАНИЯ",
-    "you_pay_for_your_legitimate_users_never_your_attackers_1qhmtuw": "Вы платите за своих законных пользователей. Никогда не нападающие.",
+    "blocked_malicious_requests_have_no_request_fee_usage_measurement_follows_g2sfyd": "За заблокированные вредоносные запросы плата не взимается; порядок учёта использования указан в вашем плане.",
     "your_inbox_protected_g3xg2": "Ваш почтовый ящик защищен.",
     "your_pentest_can_never_exceed_the_approved_compute_budget_without_your_a_4it49v": "Ваш пентест никогда не может превысить утвержденный бюджет вычислений без вашего разрешения.",
     "your_price_changes_with_usage_not_with_how_well_we_protect_you_1yeijuk": "Ваша цена меняется в зависимости от использования, а не от того, насколько хорошо мы вас защищаем.",
@@ -3245,7 +3246,7 @@
     "current_language_1ocq0a4": "Текущий язык",
     "server_security_console_1pivfcx": "Консоль защиты серверов",
     "web_security_cmc_1ggnr48": "CMC веб-безопасности",
-    "single_predictable_price_zero_request_fees_on_blocked_traffic_full_waf_i_1l1tmno": "Единая предсказуемая цена · Заблокированные запросы не тарифицируются · WAF, IPS, DDoS и SIEM включены",
+    "one_subscription_no_request_fee_for_blocked_traffic_waf_ips_ddos_control_1kgorxg": "Одна подписка · Без платы за заблокированные запросы · Средства WAF, IPS, защиты от DDoS и SIEM в плане",
     "automated_mail_organization_security_hepk6t": "Автоматическая сортировка и защита почты",
     "security_configuration_posture_zut1nr": "Настройки и состояние безопасности",
     "email_12fq213": "письмо",

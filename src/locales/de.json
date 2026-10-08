@@ -309,7 +309,7 @@
     "tooltips": {
       "web": {
         "title": "Schutz vor Webangriffen",
-        "content": "Das System schützt vor ALLEN Arten von Webangriffen wie DDoS, SQLi usw., ausgenommen Geschäftslogik-Schwachstellen."
+        "content": "Web Security wendet verfügbare WAF-, IPS- und DDoS-Kontrollen auf Datenverkehr an, der durch den konfigurierten Dienst geleitet wird. Sie sollen Bedrohungen mindern, können aber nicht jeden Angriff stoppen."
       },
       "email": {
         "title": "Schutz vor E-Mail-Angriffen",
@@ -434,7 +434,7 @@
         "description": "Keine Limits\nKeine zusätzlichen Gebühren",
         "button": "Web-App und APIs sichern",
         "features": {
-          "webProtection": "Schutz gegen alle Arten von Webangriffen, außer Ausnutzung von Geschäftslogik-Schwachstellen",
+          "webProtection": "WAF-Kontrollen für durch den konfigurierten Dienst geleiteten Datenverkehr",
           "ddosProtection": "Echtzeit-DDoS-Schutz",
           "cmc": "CMC mit globalem Verkehrsüberwachungssystem",
           "country": "Ländersperrfunktion",
@@ -2409,7 +2409,7 @@
     "web": {
       "title": "AI-CSD Web vs traditionelle WAF-Lösungen",
       "columns": {
-        "aiSoc": "AI-CSD Web (Pay-as-you-go)",
+        "aiSoc": "AI-CSD Web (Abonnement + Mehrverbrauch)",
         "cloudflare": "Cloudflare WAF + Anti-DDoS (20 $/Monat)",
         "aws": "AWS WAF (Pay-as-you-go)"
       },
@@ -2510,7 +2510,7 @@
   "aiSocPricing": {
     "intro": "AI-CSD ist eine Reihe eigenständiger Cybersicherheits-Systeme",
     "emailDescription": "Email Security dient als Schutzschild für Ihre Unternehmenskommunikation. Eingehende und ausgehende Nachrichten werden gefiltert, um Phishing-Versuche, Spoofing-Angriffe und schädliche Links zu neutralisieren, bevor sie Ihre Nutzer erreichen — so bleibt die Integrität Ihrer Geschäftskorrespondenz erhalten.",
-    "webDescription": "Web Security schützt Ihre digitale Infrastruktur durch Echtzeit-Analyse von Traffic-Mustern. Es verteidigt Websites und APIs gegen typische Schwachstellen, DDoS-Angriffe und unbefugte Zugriffe und bietet tiefe Transparenz über die Netzwerkaktivität ohne Leistungseinbußen.",
+    "webDescription": "Web Security analysiert Datenverkehr, der durch den konfigurierten Dienst geleitet wird. Verfügbare WAF-, IPS- und DDoS-Kontrollen sollen Bedrohungen erkennen und mindern und Sicherheitseinblicke bieten, können aber nicht jeden Angriff stoppen.",
     "calendlyIntegration": "Unterstützt die Integration mit Calendly"
   },
   "aiSocFaq": {
@@ -2551,8 +2551,9 @@
     ]
   },
   "homepageText": {
+    "protection_applies_to_routed_traffic_enabled_controls_are_designed_to_mi_gin4xh": "Der Schutz gilt für durchgeleiteten Datenverkehr. Aktivierte Kontrollen sollen Bedrohungen mindern, können aber nicht jeden Angriff stoppen; Ihr Auftrag nennt die verfügbaren Funktionen.",
     "billed_annually_at_tl26no": "Jährliche Abrechnung bei",
-    "billed_monthly_cancel_anytime_1r79ysm": "Monatliche Abrechnung · Jederzeit kündbar",
+    "billed_monthly_cancellation_follows_your_order_and_plan_terms_11eknc8": "Monatliche Abrechnung · Kündigung gemäß Auftrag und Tarifbedingungen",
     "blacklist_countries_8ksljy": "Länder auf der schwarzen Liste",
     "blacklist_countries_16ekloe": "Länder auf der schwarzen Liste",
     "blacklisted_1ctqsal": "Auf der schwarzen Liste (",
@@ -2629,7 +2630,7 @@
     "console_preferences_tijcbo": "Konsoleneinstellungen",
     "contact_sales_1wj8yf7": "Kontaktieren Sie den Vertrieb",
     "content_1l6x30o": "Inhalt:",
-    "control_storage_with_flexible_retention_periods_xtvuqg": "Kontrollieren Sie die Speicherung mit flexiblen Aufbewahrungsfristen",
+    "your_order_or_plan_states_the_available_retention_period_1tuyhqr": "Die verfügbare Aufbewahrungsfrist steht in Ihrem Auftrag oder Tarif",
     "copy_s6g5lw": "Kopieren",
     "copy_ip_1i99gwt": "IP kopieren",
     "copy_hostname_2m5wnx": "Hostnamen kopieren",
@@ -2775,7 +2776,7 @@
     "number_of_ips_1a5i4az": "Anzahl der IPs",
     "observe_records_only_shadow_evaluates_without_enforcing_enforce_applies__9xtwoe": "Nur Aufzeichnungen beobachten. Shadow wertet aus, ohne zu erzwingen. Durchsetzen wendet genehmigte temporäre Sperren an.",
     "one_autonomous_pentester_everything_included_fomv2o": "Ein autonomer Pentester. Alles inklusive.",
-    "one_product_full_protection_zy3htc": "Ein Produkt. Voller Schutz.",
+    "one_product_configurable_web_protection_clwwg6": "Ein Produkt. Konfigurierbarer Webschutz.",
     "only_capacity_changes_between_plans_176xpm6": "Lediglich die Kapazität ändert sich zwischen den Plänen.",
     "only_telemetry_explicitly_linked_to_this_incident_is_shown_e21eke": "Es werden nur Telemetriedaten angezeigt, die explizit mit diesem Vorfall verknüpft sind.",
     "open_n6hn1l": "Offen",
@@ -2793,10 +2794,10 @@
     "package_selection_starts_after_the_server_is_added_13gcdx6": "Die Paketauswahl beginnt, nachdem der Server hinzugefügt wurde.",
     "packages_19dyed4": "Pakete",
     "packages_plus_structured_os_services_ports_network_account_and_runtime_i_1volexa": "Pakete plus strukturierte Betriebssystem-, Dienste-, Port-, Netzwerk-, Konto- und Laufzeitinventarsignale.",
-    "paddle_checkout_u9qyzf": "Paddelkasse",
+    "paddle_checkout_u9qyzf": "Paddle Checkout",
     "page_1sfsa6u": "Seite",
     "partial_additional_configuration_10mybyq": "Teil-/Zusatzkonfiguration",
-    "pay_as_you_go_1q46gv6": "Bezahlen Sie je nach Bedarf",
+    "overage_after_included_usage_1rr3ibz": "Mehrverbrauch nach dem enthaltenen Kontingent",
     "pay_only_for_the_compute_you_use_127apru": "Zahlen Sie nur für die Rechenleistung, die Sie nutzen.",
     "payment_gateway_11ncarf": "Zahlungsgateway:",
     "payment_history_t9jtfh": "Zahlungshistorie",
@@ -2841,7 +2842,7 @@
     "role_security_administrator_184ib4s": "Rolle: Sicherheitsadministrator",
     "sha_256_1j0rdj1": "SHA-256",
     "sha_256_dt80lh": "SHA-256:",
-    "siem_log_retention_1uopzvr": "SIEM-Protokollaufbewahrung",
+    "planned_siem_log_retention_options_vssevv": "Geplante Optionen zur SIEM-Protokollaufbewahrung",
     "siem_log_storage_4qjyk4": "SIEM-Protokollspeicher",
     "silence_ai_enterprise_e2rug6": "SILENCE AI / UNTERNEHMEN",
     "ssh_kubernetes_access_requires_a_totp_verification_before_the_protected__1dhr6zz": "Der SSH/Kubernetes-Zugriff erfordert eine TOTP-Verifizierung, bevor der geschützte Port vorübergehend für die verifizierte Quell-IP geöffnet wird.",
@@ -2953,7 +2954,7 @@
     "we_could_not_load_this_view_this_does_not_mean_guard_protection_failed_mp0yr6": "Diese Ansicht konnte nicht geladen werden. Dies bedeutet nicht, dass der Guard-Schutz fehlgeschlagen ist.",
     "web_security_bel2xx": "Web-Sicherheit",
     "your_company_yha0w5": "IHR UNTERNEHMEN",
-    "you_pay_for_your_legitimate_users_never_your_attackers_1qhmtuw": "Sie zahlen für Ihre legitimen Benutzer. Niemals deine Angreifer.",
+    "blocked_malicious_requests_have_no_request_fee_usage_measurement_follows_g2sfyd": "Für blockierte schädliche Anfragen fällt keine Anfragegebühr an; die Nutzung wird gemäß Ihrem Tarif gemessen.",
     "your_inbox_protected_g3xg2": "Ihr Posteingang, geschützt.",
     "your_pentest_can_never_exceed_the_approved_compute_budget_without_your_a_4it49v": "Ihr Pentest darf ohne Ihre Genehmigung niemals das genehmigte Rechenbudget überschreiten.",
     "your_price_changes_with_usage_not_with_how_well_we_protect_you_1yeijuk": "Ihr Preis ändert sich mit der Nutzung – nicht davon, wie gut wir Sie schützen.",
@@ -3249,7 +3250,7 @@
     "current_language_1ocq0a4": "Aktuelle Sprache",
     "server_security_console_1pivfcx": "Serversicherheitskonsole",
     "web_security_cmc_1ggnr48": "Web-Sicherheits-CMC",
-    "single_predictable_price_zero_request_fees_on_blocked_traffic_full_waf_i_1l1tmno": "Ein planbarer Preis · Keine Anfragegebühren für blockierten Datenverkehr · WAF, IPS, DDoS und SIEM inklusive",
+    "one_subscription_no_request_fee_for_blocked_traffic_waf_ips_ddos_control_1kgorxg": "Ein Abonnement · Keine Anfragegebühr für blockierten Verkehr · WAF-, IPS-, DDoS-Kontrollen und SIEM im Tarif",
     "automated_mail_organization_security_hepk6t": "Automatische E-Mail-Organisation und Sicherheit",
     "security_configuration_posture_zut1nr": "Sicherheitskonfiguration und -status",
     "email_12fq213": "E-Mail",

@@ -117,8 +117,11 @@ const Header = ({ onOpenModal, hideCta = false, allowedLocales }) => {
 
     const headerOffset = 96;
     const top = window.scrollY + target.getBoundingClientRect().top - headerOffset;
-    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
-    window.history.replaceState(null, "", `#${sectionId}`);
+    window.scrollTo({
+      top: Math.max(0, top),
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+    });
+    window.history.replaceState(window.history.state, "", `#${sectionId}`);
     setActiveSectionId(sectionId);
     setOpenDesktopDropdown(null);
     setOpenMobileDropdown(null);
@@ -141,21 +144,21 @@ const Header = ({ onOpenModal, hideCta = false, allowedLocales }) => {
       key: "pricing",
       label: t("header.nav.pricing", "Pricing"),
       onClick: isMainPage ? () => scrollToSection("pricing") : undefined,
-      href: !isMainPage ? "/#pricing" : undefined,
+      href: !isMainPage ? "/?section=pricing" : undefined,
       isActive: isMainPage && activeSectionId === "pricing",
     },
     {
       key: "compliance",
       label: t("header.nav.compliance", "Compliance"),
       onClick: isMainPage ? () => scrollToSection("compliance") : undefined,
-      href: !isMainPage ? "/#compliance" : undefined,
+      href: !isMainPage ? "/?section=compliance" : undefined,
       isActive: isMainPage && activeSectionId === "compliance",
     },
     {
       key: "resources",
       label: t("header.nav.partners", "Clients/Partners"),
       onClick: isMainPage ? () => scrollToSection("resources") : undefined,
-      href: !isMainPage ? "/#resources" : undefined,
+      href: !isMainPage ? "/?section=resources" : undefined,
       isActive: isMainPage && activeSectionId === "resources",
     },
     {

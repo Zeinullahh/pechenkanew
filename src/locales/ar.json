@@ -296,7 +296,7 @@
     "tooltips": {
       "web": {
         "title": "حماية من هجمات الويب",
-        "content": "يحمي النظام من جميع أنواع هجمات الويب بما في ذلك DDoS وSQLi وغيرهما، باستثناء ثغرات منطق الأعمال"
+        "content": "تطبق Web Security ضوابط WAF وIPS وتخفيف DDoS المتاحة على الحركة الموجهة عبر الخدمة المهيأة. صُممت هذه الضوابط للحد من التهديدات لكنها لا توقف كل هجوم."
       },
       "email": {
         "title": "حماية البريد الإلكتروني",
@@ -368,7 +368,7 @@
         "description": "بلا حدود\nبدون رسوم إضافية",
         "button": "تأمين تطبيق الويب وواجهات برمجة التطبيقات",
         "features": {
-          "webProtection": "حماية ضد جميع أنواع هجمات الويب، باستثناء استغلال ثغرات منطق العمل",
+          "webProtection": "ضوابط WAF للحركة الموجهة عبر الخدمة المهيأة",
           "ddosProtection": "حماية من هجمات DDoS في الوقت الفعلي",
           "cmc": "CMC مع نظام مراقبة حركة المرور العالمية",
           "country": "ميزة القائمة السوداء للبلدان",
@@ -2220,7 +2220,7 @@
     "web": {
       "title": "AI-CSD Web مقابل حلول WAF التقليدية",
       "columns": {
-        "aiSoc": "AI-CSD Web (الدفع حسب الاستخدام)",
+        "aiSoc": "AI-CSD Web (اشتراك ورسوم الاستخدام الزائد)",
         "cloudflare": "Cloudflare WAF + Anti-DDoS ($20/شهريًا)",
         "aws": "AWS WAF (الدفع حسب الاستخدام)"
       },
@@ -2321,7 +2321,7 @@
   "aiSocPricing": {
     "intro": "AI-CSD عبارة عن مجموعة من أنظمة الأمن السيبراني المستقلة",
     "emailDescription": "يعمل Email Security كدرع حماية لاتصالات شركتك. يقوم بتصفية الرسائل الواردة والصادرة لتحييد محاولات التصيد وهجمات الانتحال والروابط الضارة قبل وصولها إلى المستخدمين، مما يضمن سلامة المراسلات التجارية.",
-    "webDescription": "يحمي Web Security بنيتك الرقمية عبر تحليل أنماط الحركة في الوقت الفعلي. يدافع عن المواقع وواجهات API ضد الثغرات الشائعة وهجمات DDoS والوصول غير المصرح به، مع توفير رؤية عميقة لنشاط الشبكة دون التأثير على الأداء.",
+    "webDescription": "تحلل Web Security الحركة الموجهة عبر الخدمة المهيأة. صُممت ضوابط WAF وIPS وتخفيف DDoS المتاحة لكشف التهديدات والحد منها وتوفير رؤية أمنية، لكنها لا توقف كل هجوم.",
     "calendlyIntegration": "يدعم التكامل مع Calendly"
   },
   "aiSocFaq": {
@@ -2362,6 +2362,7 @@
     ]
   },
   "homepageText": {
+    "protection_applies_to_routed_traffic_enabled_controls_are_designed_to_mi_gin4xh": "تنطبق الحماية على الحركة الموجهة عبر الخدمة. صُممت الضوابط المفعلة للحد من التهديدات لكنها لا توقف كل هجوم؛ يحدد طلبك الوظائف المتاحة.",
     "allowed_ports_rpqmgr": "المنافذ المسموح بها",
     "amount_a2ky21": "المبلغ",
     "apply_filters_18ebn34": "تطبيق المرشحات",
@@ -2417,7 +2418,7 @@
     "all_in_one_ot2fx": "الكل في واحد",
     "all_in_one_web_defense_e4ge83": "الكل في واحد الدفاع عن الويب",
     "billed_annually_at_tl26no": "تتم المحاسبة سنويًا على",
-    "billed_monthly_cancel_anytime_1r79ysm": "يتم الدفع شهريًا · الإلغاء في أي وقت",
+    "billed_monthly_cancellation_follows_your_order_and_plan_terms_11eknc8": "تُدفع الرسوم شهريًا · يخضع الإلغاء لشروط طلبك وخطتك",
     "blacklist_countries_8ksljy": "دول القائمة السوداء",
     "blacklist_countries_16ekloe": "دول القائمة السوداء",
     "blacklisted_1ctqsal": "القائمة السوداء (",
@@ -2440,7 +2441,7 @@
     "console_preferences_tijcbo": "تفضيلات وحدة التحكم",
     "contact_sales_1wj8yf7": "اتصل بالمبيعات",
     "content_1l6x30o": "المحتوى:",
-    "control_storage_with_flexible_retention_periods_xtvuqg": "التحكم في التخزين من خلال فترات احتفاظ مرنة",
+    "your_order_or_plan_states_the_available_retention_period_1tuyhqr": "يحدد طلبك أو خطتك مدة الاحتفاظ المتاحة",
     "copy_s6g5lw": "نسخ",
     "copy_ip_1i99gwt": "نسخ IP",
     "copy_hostname_2m5wnx": "انسخ اسم المضيف",
@@ -2586,10 +2587,10 @@
     "package_selection_starts_after_the_server_is_added_13gcdx6": "يبدأ اختيار الحزمة بعد إضافة الخادم.",
     "packages_19dyed4": "الحزم",
     "packages_plus_structured_os_services_ports_network_account_and_runtime_i_1volexa": "الحزم بالإضافة إلى إشارات نظام التشغيل والخدمات والمنافذ والشبكة والحساب ومخزون وقت التشغيل.",
-    "paddle_checkout_u9qyzf": "الخروج مجداف",
+    "paddle_checkout_u9qyzf": "Paddle Checkout",
     "page_1sfsa6u": "الصفحة",
     "partial_additional_configuration_10mybyq": "التكوين الجزئي / الإضافي",
-    "pay_as_you_go_1q46gv6": "ادفع كما تذهب",
+    "overage_after_included_usage_1rr3ibz": "رسوم الاستخدام الزائد بعد الحصة المشمولة",
     "pay_only_for_the_compute_you_use_127apru": "ادفع فقط مقابل الحساب الذي تستخدمه.",
     "payment_gateway_11ncarf": "بوابة الدفع:",
     "payment_history_t9jtfh": "تاريخ الدفع",
@@ -2604,7 +2605,7 @@
     "number_of_ips_1a5i4az": "عدد عناوين IP",
     "observe_records_only_shadow_evaluates_without_enforcing_enforce_applies__9xtwoe": "مراقبة السجلات فقط. يتم تقييم الظل دون فرض. يطبق الفرض الحظر المؤقت المعتمد.",
     "one_autonomous_pentester_everything_included_fomv2o": "نظام واحد لاختبار الاختراق ذاتيًا، وكل الميزات مشمولة.",
-    "one_product_full_protection_zy3htc": "منتج واحد. الحماية الكاملة.",
+    "one_product_configurable_web_protection_clwwg6": "منتج واحد. حماية ويب قابلة للتهيئة.",
     "only_capacity_changes_between_plans_176xpm6": "تتغير السعة فقط بين الخطط.",
     "only_telemetry_explicitly_linked_to_this_incident_is_shown_e21eke": "يتم عرض فقط القياس عن بعد المرتبط صراحةً بهذا الحادث.",
     "open_n6hn1l": "مفتوح",
@@ -2652,7 +2653,7 @@
     "role_security_administrator_184ib4s": "الدور: مسؤول الأمن",
     "sha_256_1j0rdj1": "SHA-256",
     "sha_256_dt80lh": "SHA-256:",
-    "siem_log_retention_1uopzvr": "الاحتفاظ بسجل SIEM",
+    "planned_siem_log_retention_options_vssevv": "خيارات مدة الاحتفاظ بسجلات SIEM المخطط لها",
     "siem_log_storage_4qjyk4": "تخزين سجل SIEM",
     "silence_ai_enterprise_e2rug6": "SILENCE AI / للمؤسسات",
     "ssh_kubernetes_access_requires_a_totp_verification_before_the_protected__1dhr6zz": "يتطلب الوصول إلى SSH/Kubernetes التحقق من TOTP قبل فتح المنفذ المحمي مؤقتًا لعنوان IP المصدر الذي تم التحقق منه.",
@@ -2738,7 +2739,7 @@
     "we_could_not_load_this_view_this_does_not_mean_guard_protection_failed_mp0yr6": "لم نتمكن من تحميل هذا الرأي. هذا لا يعني فشل حماية الحرس.",
     "web_security_bel2xx": "أمن الويب",
     "your_company_yha0w5": "شركتك",
-    "you_pay_for_your_legitimate_users_never_your_attackers_1qhmtuw": "أنت تدفع مقابل المستخدمين الشرعيين. أبدا المهاجمين الخاص بك.",
+    "blocked_malicious_requests_have_no_request_fee_usage_measurement_follows_g2sfyd": "لا تُفرض رسوم طلبات على الطلبات الضارة المحظورة؛ ويخضع احتساب الاستخدام لخطتك.",
     "your_inbox_protected_g3xg2": "صندوق الوارد الخاص بك، محمي.",
     "per_extra_gb_month_1tza2bc": "لكل جيجابايت إضافية / شهر",
     "security_shrhl": "الأمن →",
@@ -3060,7 +3061,7 @@
     "current_language_1ocq0a4": "اللغة الحالية",
     "server_security_console_1pivfcx": "وحدة تحكم أمن الخوادم",
     "web_security_cmc_1ggnr48": "وحدة إدارة أمن الويب",
-    "single_predictable_price_zero_request_fees_on_blocked_traffic_full_waf_i_1l1tmno": "سعر واحد واضح · لا رسوم على الطلبات المحظورة · تشمل الخدمة WAF وIPS وحماية DDoS وSIEM",
+    "one_subscription_no_request_fee_for_blocked_traffic_waf_ips_ddos_control_1kgorxg": "اشتراك واحد · لا رسوم طلبات على الحركة المحظورة · ضوابط WAF وIPS وDDoS وSIEM ضمن الخطة",
     "automated_mail_organization_security_hepk6t": "تنظيم البريد وحمايته تلقائيًا",
     "security_configuration_posture_zut1nr": "إعدادات الأمن ووضعه",
     "email_12fq213": "رسالة بريد إلكتروني",

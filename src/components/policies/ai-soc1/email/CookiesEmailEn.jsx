@@ -25,7 +25,7 @@ export default function CookiesEmailEn() {
       <section id="about">
         <h2 className="text-2xl font-semibold mb-4">1. About This Cookie Policy</h2>
         <p className="mb-4">
-          <strong>1.1 Introduction:</strong> This Cookie Policy explains how Silence AI LLC (&quot;Silence AI,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) uses cookies and similar technologies on the AI-CSD 1 Email Security &amp; Visualization platform and services, including the Centralized Management Console (CMC) at <strong>email-soc.silenceai.net</strong> and the Webmail Client at <strong>mail.silenceai.net</strong>.
+          <strong>1.1 Introduction:</strong> This Cookie Policy explains how Silence AI LLC uses cookies and similar technologies for the UAE Email Security service. Its Centralized Management Console (CMC) is at <strong>mail.csd.silenceai.net</strong>, and its employee email workspace is at <strong>mail.silenceai.net</strong>. The corresponding Kazakhstan service is provided under the agreement with ТОО &quot;Silence AI&quot; at <strong>kz.mail.csd.silenceai.net</strong> and <strong>kz.mail.silenceai.net</strong>. The CMC is the administrator panel; employees use the workspace to read, compose, send and manage email. These domain names do not state the physical server location.
         </p>
         <p>
           <strong>1.2 What Are Cookies:</strong> Cookies are small text files that are stored on your device when you visit a website. They help websites remember information about your visit, which can make it easier to visit the site again and make the site more useful to you.
@@ -35,10 +35,10 @@ export default function CookiesEmailEn() {
       <section id="types-of-cookies">
         <h2 className="text-2xl font-semibold mb-4">2. Types of Cookies We Use</h2>
         <p className="mb-4">
-          <strong>2.1 Technical Cookies (Essential):</strong> We use technical cookies that are strictly necessary for the operation of the AI-CSD 1 Email Security &amp; Visualization component and its CMC. These cookies support: Session Management — maintaining your login session and authentication state on the CMC and Webmail Client; Security — protecting the email CMC and Webmail Client against unauthorized access and supporting email authentication validation; Functionality — enabling core email CMC features, email-flow visualization, and security-folder management; Load Balancing — distributing email CMC and Webmail traffic across our servers for optimal performance; Platform Stability — ensuring proper functioning of the five-layer email security validation and automated folder classification.
+          <strong>2.1 Technical Cookies (Essential):</strong> Technical cookies may support sign-in sessions, security, preferences and navigation in the CMC and employee workspace. Email security checks run under the service settings described in the Terms of Service; a browser cookie does not itself perform or guarantee those checks.
         </p>
         <p>
-          <strong>2.2 Cookie Categories:</strong> All cookies used by Silence AI for the Email Security component fall under the &quot;Strictly Necessary&quot; category. These cookies are essential for: User authentication and account access to the email CMC and Webmail Client; Maintaining user sessions across email-soc.silenceai.net and mail.silenceai.net; Ensuring security of the email security visualization and webmail subsystem; Preserving user preferences and configuration settings; Platform functionality and service delivery.
+          <strong>2.2 Cookie Categories:</strong> Necessary cookies support authentication and account access at the applicable CMC and employee workspace domains. Any optional analytics or preference technology, if used, must be described and offered with the choices required by applicable law.
         </p>
       </section>
 
@@ -55,13 +55,13 @@ export default function CookiesEmailEn() {
       <section id="how-we-use-cookies">
         <h2 className="text-2xl font-semibold mb-4">4. How We Use Technical Cookies</h2>
         <p className="mb-4">
-          <strong>4.1 Session Management:</strong> Authenticate users accessing the email CMC at email-soc.silenceai.net and the Webmail Client at mail.silenceai.net; Maintain login state across different pages and services of the Email Security component; Prevent unauthorized access to user accounts; Enable seamless navigation between email security visualization, mailbox management, and security-folder views.
+          <strong>4.1 Session Management:</strong> Necessary cookies may maintain login state and protect access to the CMC at mail.csd.silenceai.net and the employee workspace at mail.silenceai.net for UAE agreements. The Kazakhstan domains are kz.mail.csd.silenceai.net and kz.mail.silenceai.net. Each domain may have its own session scope.
         </p>
         <p className="mb-4">
           <strong>4.2 Security Functions:</strong> Implement security measures to protect user accounts and the email CMC; Detect and prevent fraudulent access attempts; Support email authentication mechanisms including SPF, DKIM, and DMARC; Protect against cross-site request forgery (CSRF) attacks.
         </p>
         <p className="mb-4">
-          <strong>4.3 Email Security Validation:</strong> Cookies enable the operation of the five-layer email security validation process: Layer 1 — Sender Authentication Verification (SPF, DKIM, DMARC); Layer 2 — Spam Detection; Layer 3 — Dangerous Link Analysis; Layer 4 — Domain-Based Phishing Detection; Layer 5 — AI-Powered Content Analysis. Based on these results, emails are classified into folders such as Possibly Spoofed, Spam, Dangerous Link, Possibly Phishing, and Secure.
+          <strong>4.3 Security Views:</strong> Cookies may preserve the authenticated session needed to view security results and folders. The applicable checks are conditional; the Terms of Service describes sender authentication, spam, dangerous-link, domain-risk and eligible attachment checks. AI phishing-content analysis is planned for production activation and is not represented as active until deployment is confirmed. A spoof-only result routes to Spam; other results may appear in Dangerous Links, Malware in attached files, Possibly Phishing or Secure. Folder placement does not prove that every check ran.
         </p>
         <p>
           <strong>4.4 Platform Functionality:</strong> Remember user preferences and email security settings; Maintain configuration for mailbox accounts and security rules; Store temporary data necessary for webmail and email visualization service delivery; Enable proper functioning of the Webmail Client and CMC.
@@ -84,7 +84,7 @@ export default function CookiesEmailEn() {
           <strong>6.1 Browser Controls:</strong> You can control cookies through your browser settings: Chrome: {`Settings > Privacy and Security > Cookies and other site data`}. Firefox: {`Options > Privacy & Security > Cookies and Site Data`}. Safari: {`Preferences > Privacy > Manage Website Data`}. Edge: {`Settings > Cookies and site permissions > Cookies and site data`}.
         </p>
         <p>
-          <strong>6.2 Impact of Disabling Technical Cookies:</strong> Important Notice: Since we only use technical cookies essential for Email Security operation, disabling these cookies will: Prevent you from logging into the email CMC at email-soc.silenceai.net and the Webmail Client at mail.silenceai.net; Disable access to email security visualization, five-layer validation, and automated folder classification; Impair security features and anti-phishing/anti-spam capabilities; Make the email security services non-functional.
+          <strong>6.2 Impact of Disabling Technical Cookies:</strong> Blocking cookies needed for authentication may prevent sign-in to the applicable CMC or employee workspace and access to account views. Browser cookie settings do not determine which server-side email security checks run for a mailbox; those checks follow the service configuration and eligibility rules.
         </p>
       </section>
 
@@ -120,20 +120,20 @@ export default function CookiesEmailEn() {
         <p className="mb-4">
           This Cookie Policy supplements our AI-CSD 1 Email Privacy Policy, available at{" "}
           <a
-            href="/policies/ai-soc1/email/privacy/"
+            href="/policies/ai-csd/email/privacy/"
             className="text-blue-400 hover:text-blue-300 underline"
           >
-            /policies/ai-soc1/email/privacy/
+            /policies/ai-csd/email/privacy/
           </a>
           .
         </p>
         <p>
           For the Web component Cookie Policy, see{" "}
           <a
-            href="/policies/ai-soc1/web/cookies/"
+            href="/policies/ai-csd/web/cookies/"
             className="text-blue-400 hover:text-blue-300 underline"
           >
-            /policies/ai-soc1/web/cookies/
+            /policies/ai-csd/web/cookies/
           </a>
           .
         </p>

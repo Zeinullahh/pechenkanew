@@ -1,6 +1,5 @@
-import AiSocPolicyPage from "@/components/policies/AiSocPolicyPage";
+import { redirect } from "next/navigation";
 
-export default async function Page({ params }) {
-  const { locale } = await params;
-  return <AiSocPolicyPage policy="terms_of_use" variant="web" locale={locale} />;
+export default function Page() {
+  redirect("/policies/ai-csd/web/terms_of_use/");
 }

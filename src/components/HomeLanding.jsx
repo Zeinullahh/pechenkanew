@@ -280,6 +280,42 @@ export default function HomeLanding() {
   const closeGetModal = () => setIsGetModalOpen(false);
 
   useEffect(() => {
+    let frame = null;
+
+    const scrollToLinkedSection = () => {
+      const url = new URL(window.location.href);
+      const sectionId = url.searchParams.get("section") || url.hash.slice(1);
+      if (!["pricing", "compliance", "resources"].includes(sectionId)) return;
+
+      if (frame !== null) window.cancelAnimationFrame(frame);
+      frame = window.requestAnimationFrame(() => {
+        frame = null;
+        const target = document.getElementById(sectionId);
+        if (!target) return;
+
+        const top = window.scrollY + target.getBoundingClientRect().top - 96;
+        window.scrollTo({
+          top: Math.max(0, top),
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+        });
+
+        if (url.searchParams.has("section")) {
+          url.searchParams.delete("section");
+          url.hash = sectionId;
+          window.history.replaceState(window.history.state, "", `${url.pathname}${url.search}${url.hash}`);
+        }
+      });
+    };
+
+    scrollToLinkedSection();
+    window.addEventListener("hashchange", scrollToLinkedSection);
+    return () => {
+      if (frame !== null) window.cancelAnimationFrame(frame);
+      window.removeEventListener("hashchange", scrollToLinkedSection);
+    };
+  }, []);
+
+  useEffect(() => {
     if (!comparisonRef.current) {
       return undefined;
     }

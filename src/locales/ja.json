@@ -97,8 +97,7 @@
     "light": "ライト",
     "videoInstructions": "ビデオガイド",
     "lightVideoTitle": "Supreme Light ビデオガイド",
-    "openYoutube": "YouTubeで動画を開く",
-    "maxPlaceholder": "動画プレースホルダー — 完全なチュートリアルは近日追加予定です。"
+    "openYoutube": "YouTubeで動画を開く"
   },
   "header": {
     "andManyMore": "そして他にも多数...",
@@ -1213,13 +1212,6 @@
       "tableOfContents": "目次",
       "close": "閉じる"
     },
-    "webSecurity": {
-      "placeholder": {
-        "badge": "Web セキュリティ",
-        "title": "ドキュメントは近日公開予定です",
-        "description": "Web アプリケーションの設定と保護方法を詳細に説明するガイドを準備中です。まもなく公開されますので、しばらくお待ちください。"
-      }
-    },
     "emailSecurity": {
       "title": "メールセキュリティシステム",
       "subtitle": "ドキュメント | バージョン 1.0",
@@ -2304,8 +2296,7 @@
           "自律的な脆弱性修正",
           "脅威インテリジェンスによる強化された検出"
         ],
-        "cta": "Supreme 2 MAXにアップグレード",
-        "videoLabel": "動画プレースホルダー – Supreme 2 MAX セットアップ"
+        "cta": "Supreme 2 MAXにアップグレード"
       },
       "hiddenRisk": {
         "title": "AIが生成したコードの潜在的リスク",

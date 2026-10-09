@@ -1,6 +1,5 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import Header from "@/components/Header";
 import ServerSecurityGuide from "@/components/instructions/ServerSecurityGuide";
 import { getInstructionGuideContent } from "@/i18n/instructionGuides.mjs";
 
@@ -16,7 +15,6 @@ export default async function Page({ params }) {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header hideCta />
       <main className="flex grow flex-col px-4 pb-16">
         <ServerSecurityGuide
           markdown={markdown}
@@ -26,7 +24,7 @@ export default async function Page({ params }) {
           pageTitle={content.pageTitle}
           productLabel="Server Security"
           uiLabels={content.ui}
-          chapterHeadingLevel={content.locale === "en" ? 2 : 1}
+          chapterHeadingLevel={content.locale === "ru" ? 1 : 2}
         />
       </main>
     </div>

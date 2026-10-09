@@ -87,8 +87,7 @@
     "light": "라이트",
     "videoInstructions": "영상 안내",
     "lightVideoTitle": "Supreme Light 영상 안내",
-    "openYoutube": "YouTube에서 영상 열기",
-    "maxPlaceholder": "영상 자리표시자 — 전체 튜토리얼이 곧 추가됩니다."
+    "openYoutube": "YouTube에서 영상 열기"
   },
   "home": {
     "hero": {
@@ -1208,8 +1207,7 @@
           "자율적 취약점 수정",
           "위협 인텔리전스를 통한 강화된 탐지"
         ],
-        "cta": "Supreme 2 MAX로 업그레이드",
-        "videoLabel": "교육용 비디오 플레이스홀더 – Supreme 2 MAX 설정"
+        "cta": "Supreme 2 MAX로 업그레이드"
       },
       "hiddenRisk": {
         "title": "AI 생성 코드의 숨겨진 위험",
@@ -1312,13 +1310,6 @@
       "topics": "토픽",
       "tableOfContents": "목차",
       "close": "닫기"
-    },
-    "webSecurity": {
-      "placeholder": {
-        "badge": "웹 보안",
-        "title": "문서가 곧 제공됩니다",
-        "description": "웹 애플리케이션 설정과 보안에 관한 자세한 가이드를 준비 중입니다. 곧 다시 확인해주세요."
-      }
     },
     "pricingMicrosoft": {
       "business": "Business",

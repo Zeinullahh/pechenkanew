@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import Header from "@/components/Header";
 import BackToTopButton from "@/components/BackToTopButton";
 import RequestDemoModal from "@/components/RequestDemoModal";
 import AiSocGetModal from "@/components/AiSocGetModal";
@@ -367,7 +366,6 @@ export default function HomeLanding() {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-clip">
-      <Header onOpenModal={openGetModal} />
 
       <main className="relative mx-auto flex flex-col gap-0 pb-16 z-10">
         <div
@@ -468,7 +466,7 @@ export default function HomeLanding() {
               flag: "🔒",
               name: "Privacy by Design",
               citation: "GDPR Art. 25 · All GCC frameworks",
-              desc: t("homeCompliance.cards.privacyByDesign.desc", "Supreme's code scanning runs entirely on your local machine — no source code is ever transmitted or processed externally. Account data (Google OAuth profile) is handled separately under our privacy policy."),
+              desc: t("homeCompliance.cards.privacyByDesign.desc", "Supreme's code scanning runs entirely on your local machine — no source code is ever transmitted or processed externally. Account data (Google OAuth profile) is handled separately."),
               supremeOnly: true,
             },
           ];

@@ -1,14 +1,8 @@
 "use client";
-import React, { useState } from 'react';
-import Header from '@/components/Header';
+import React from 'react';
 import PolicySidebar from '@/components/PolicySidebar';
 import BackToTopButton from '@/components/BackToTopButton';
-import Modal from '@/components/Modal';
 const RuCookies = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
   const sections = [
     { id: 'about', title: '1. О настоящей Политике использования файлов cookie' },
     { id: 'types-of-cookies', title: '2. Типы используемых нами файлов cookie' },
@@ -24,7 +18,6 @@ const RuCookies = () => {
 
   return (
     <div className="bg-black text-white">
-      <Header onOpenModal={openModal} />
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-32 pb-20 flex flex-col md:flex-row gap-8">
         <div className="md:w-80">
           <PolicySidebar sections={sections} />
@@ -88,7 +81,6 @@ const RuCookies = () => {
         </main>
       </div>
       <BackToTopButton />
-      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };

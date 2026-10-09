@@ -1,0 +1,398 @@
+.page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+  color: #f8f9ff;
+  background: #03050d;
+}
+
+.page::before {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  content: "";
+  background:
+    radial-gradient(circle at 72% 43%, rgba(75, 60, 174, 0.27), transparent 34%),
+    radial-gradient(circle at 23% 75%, rgba(23, 88, 140, 0.15), transparent 35%),
+    linear-gradient(145deg, #060a17 0%, #03050d 62%, #080619 100%);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 1280px);
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: 116px clamp(24px, 5vw, 76px) 28px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  align-items: center;
+  gap: clamp(30px, 5vw, 72px);
+  flex: 1;
+  padding: 28px 0 72px;
+}
+
+.copy {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 32px;
+  padding: 0 13px;
+  border: 1px solid rgba(162, 145, 255, 0.26);
+  border-radius: 999px;
+  color: #d0c7ff;
+  background: rgba(112, 76, 231, 0.10);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.statusDot,
+.visualCaption span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #af9dff;
+  box-shadow: 0 0 14px rgba(175, 157, 255, 0.9);
+}
+
+.copy h1 {
+  max-width: 720px;
+  margin: 25px 0 20px;
+  font-size: clamp(3.25rem, 5.7vw, 5.8rem);
+  font-weight: 650;
+  line-height: 1.03;
+  letter-spacing: -0.065em;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.copy p {
+  max-width: 480px;
+  margin: 0;
+  color: #a7aec2;
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+  line-height: 1.75;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 13px;
+  margin-top: 36px;
+}
+
+.homeButton,
+.helpLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  min-height: 54px;
+  padding: 0 20px;
+  border-radius: 13px;
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.homeButton {
+  color: #10101d;
+  background: #f5f5ff;
+  box-shadow: 0 14px 36px rgba(139, 120, 255, 0.15);
+}
+
+.homeButton:hover {
+  background: #dcd8ff;
+  box-shadow: 0 16px 40px rgba(139, 120, 255, 0.24);
+  transform: translateY(-2px);
+}
+
+.helpLink {
+  border: 1px solid rgba(204, 211, 240, 0.19);
+  color: #e3e5f2;
+  background: rgba(255, 255, 255, 0.035);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.helpLink:hover {
+  border-color: rgba(195, 184, 255, 0.55);
+  background: rgba(163, 146, 255, 0.09);
+  transform: translateY(-2px);
+}
+
+.homeButton:focus-visible,
+.helpLink:focus-visible,
+.closeButton:focus-visible,
+.contactEmail:focus-visible {
+  outline: 2px solid #c1b5ff;
+  outline-offset: 4px;
+}
+
+.helpDialog {
+  position: fixed;
+  inset: 0;
+  width: min(440px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(216, 211, 255, 0.3);
+  border-radius: 28px;
+  color: #f8f9ff;
+  background: linear-gradient(145deg, rgba(50, 48, 92, 0.82), rgba(12, 18, 39, 0.88) 60%, rgba(39, 29, 76, 0.84));
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.6), inset 0 1px rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(28px) saturate(1.4);
+}
+
+.helpDialog[open] {
+  animation: helpAppear 220ms ease-out both;
+}
+
+.helpDialog::backdrop {
+  background: rgba(2, 4, 12, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.helpDialogContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 30px 42px;
+  text-align: center;
+}
+
+.closeButton {
+  position: absolute;
+  top: 18px;
+  inset-inline-end: 18px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(216, 211, 255, 0.18);
+  border-radius: 11px;
+  color: #d8d8f2;
+  background: rgba(255, 255, 255, 0.07);
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.helpDialogIcon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(190, 177, 255, 0.34);
+  border-radius: 17px;
+  color: #dbd2ff;
+  background: rgba(151, 130, 255, 0.16);
+  box-shadow: 0 0 36px rgba(131, 107, 255, 0.15);
+}
+
+.helpDialogContent h2 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+
+.helpDialogContent p {
+  margin: 12px 0 0;
+  color: #b8bdd2;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.contactEmail {
+  color: #dfd8ff;
+  font-size: 16px;
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-color: rgba(218, 207, 255, 0.55);
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+
+.contactEmail:hover {
+  color: #fff;
+}
+
+@keyframes helpAppear {
+  from { opacity: 0; transform: translateY(12px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 430px;
+  aspect-ratio: 1.12;
+  overflow: hidden;
+  border: 1px solid rgba(193, 191, 255, 0.15);
+  border-radius: 32px;
+  background: linear-gradient(145deg, rgba(26, 30, 65, 0.72), rgba(10, 13, 32, 0.78) 62%, rgba(24, 18, 54, 0.78));
+  box-shadow: 0 35px 100px rgba(0, 0, 0, 0.32), inset 0 1px rgba(255, 255, 255, 0.07);
+}
+
+.visual::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.055), transparent 32%, transparent 75%, rgba(108, 91, 202, 0.065));
+}
+
+.halo {
+  position: absolute;
+  width: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(107, 87, 238, 0.27), rgba(64, 61, 160, 0.1) 40%, transparent 68%);
+  filter: blur(4px);
+}
+
+.orbitOuter,
+.orbitInner {
+  position: absolute;
+  width: 77%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(155, 146, 243, 0.19);
+  border-radius: 50%;
+  box-shadow: 0 0 65px rgba(126, 97, 255, 0.07);
+}
+
+.orbitInner {
+  width: 55%;
+  border-color: rgba(160, 155, 243, 0.13);
+}
+
+.orbitPoint {
+  position: absolute;
+  top: 20%;
+  right: 21%;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #b6a9ff;
+  border-radius: 50%;
+  background: #27245e;
+  box-shadow: 0 0 20px #9e8cff;
+}
+
+.errorNumber {
+  position: relative;
+  z-index: 1;
+  padding-right: 0.1em;
+  background: linear-gradient(135deg, #fff 12%, #c6bdff 52%, #7e8dff 90%);
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(7.5rem, 16vw, 14.4rem);
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: -0.12em;
+  text-shadow: 0 25px 80px rgba(128, 102, 255, 0.12);
+}
+
+.visualCaption {
+  position: absolute;
+  bottom: 28px;
+  left: 31px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #a8aec8;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.2em;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding: 36px 0 58px;
+  }
+
+  .visual {
+    min-height: 320px;
+    max-height: 430px;
+    aspect-ratio: 1.5;
+  }
+
+  .errorNumber {
+    font-size: clamp(8rem, 22vw, 14rem);
+  }
+}
+
+@media (max-width: 560px) {
+  .inner {
+    padding: 112px 22px 24px;
+  }
+
+  .hero {
+    gap: 34px;
+    padding: 34px 0 50px;
+  }
+
+  .copy h1 {
+    font-size: clamp(2.85rem, 12vw, 4.4rem);
+  }
+
+  .actions {
+    align-items: stretch;
+  }
+
+  .homeButton,
+  .helpLink {
+    width: 100%;
+  }
+
+  .visual {
+    min-height: 260px;
+    aspect-ratio: 1.2;
+    border-radius: 23px;
+  }
+
+  .errorNumber {
+    font-size: clamp(6.5rem, 29vw, 10rem);
+  }
+
+  .visualCaption {
+    bottom: 20px;
+    left: 21px;
+    font-size: 9px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homeButton,
+  .helpLink {
+    transition: none;
+  }
+
+  .helpDialog[open] {
+    animation: none;
+  }
+}

@@ -87,8 +87,7 @@
     "light": "Light",
     "videoInstructions": "video talimatları",
     "lightVideoTitle": "Supreme Light Video Talimatları",
-    "openYoutube": "Videoyu YouTube'da aç",
-    "maxPlaceholder": "Video yer tutucu — tam eğitim yakında eklenecek."
+    "openYoutube": "Videoyu YouTube'da aç"
   },
   "languageSelector": {
     "triggerLabel": "Dil seçin",
@@ -1205,13 +1204,6 @@
       "tableOfContents": "İçindekiler",
       "close": "Kapat"
     },
-    "webSecurity": {
-      "placeholder": {
-        "badge": "Web Güvenliği",
-        "title": "Dokümantasyon yakında geliyor",
-        "description": "Web uygulamalarını yapılandırma ve koruma konusunda ayrıntılı bir rehber hazırlıyoruz. Yakında tekrar kontrol edin — materyaller kısa süre içinde yayınlanacak."
-      }
-    },
     "emailSecurity": {
       "title": "E-posta Güvenlik Sistemi",
       "subtitle": "Dokümantasyon | Sürüm 1.0",
@@ -2296,8 +2288,7 @@
           "Özerk güvenlik açığı düzeltme",
           "Tehdit istihbaratı ile geliştirilmiş algılama"
         ],
-        "cta": "Supreme 2 MAX'e Yükselt",
-        "videoLabel": "Eğitim Videosu Yer Tutucusu – Supreme 2 MAX Kurulumu"
+        "cta": "Supreme 2 MAX'e Yükselt"
       },
       "hiddenRisk": {
         "title": "Yapay Zeka Tarafından Oluşturulan Kodun Gizli Riski",

@@ -89,8 +89,7 @@
     "light": "لايت",
     "videoInstructions": "تعليمات الفيديو",
     "lightVideoTitle": "تعليمات فيديو Supreme Light",
-    "openYoutube": "فتح الفيديو على يوتيوب",
-    "maxPlaceholder": "عنصر نائب للفيديو — سيتم إضافة الشرح الكامل قريبًا."
+    "openYoutube": "فتح الفيديو على يوتيوب"
   },
   "languageSelector": {
     "triggerLabel": "اختر اللغة",
@@ -1141,21 +1140,13 @@
       "tableOfContents": "جدول المحتويات",
       "close": "إغلاق"
     },
-    "webSecurity": {
-      "placeholder": {
-        "badge": "أمن الويب",
-        "title": "الوثائق قيد الإعداد",
-        "description": "نُعد دليلًا مفصلًا لإعداد تطبيقات الويب وحمايتها. تفقّد الصفحة قريبًا — سيتم نشر المواد قريبًا."
-      }
-    },
     "supreme": {
       "tabs": {
         "light": "لايت"
       },
       "videoInstructions": "تعليمات الفيديو",
       "lightVideoTitle": "تعليمات فيديو Supreme Light",
-      "openYoutube": "فتح الفيديو على يوتيوب",
-      "maxPlaceholder": "عنصر نائب للفيديو — سيتم إضافة الشرح الكامل قريبًا."
+      "openYoutube": "فتح الفيديو على يوتيوب"
     },
     "emailSecurity": {
       "title": "نظام أمن البريد الإلكتروني",
@@ -2128,8 +2119,7 @@
           "إصلاح المشكلات الأمنية تلقائياً",
           "كشف مُحسَّن عبر استخبارات التهديدات"
         ],
-        "cta": "الترقية إلى Supreme 2 MAX",
-        "videoLabel": "فيديو تعليمي مؤقت – إعداد Supreme 2 MAX"
+        "cta": "الترقية إلى Supreme 2 MAX"
       },
       "hiddenRisk": {
         "title": "خطر خفي في الكود المُوَلَّد بالذكاء الاصطناعي",

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from 'react';
-import Header from '@/components/Header.jsx';
 import Hero from '@/components/Hero.jsx';
 import Pricing from '@/components/Pricing.jsx';
 import { StickyScrollSolution } from '@/components/StickyScrollSolution.jsx';
@@ -222,7 +221,6 @@ const AiSocLanding = () => {
       <main className="relative flex min-h-screen flex-col items-center p-1 pt-8 md:pt-16">
         <Spotlights />
         <div className="w-full max-w-7xl mx-auto">
-          <Header onOpenModal={openModal} />
           <Hero onOpenModal={openModal} />
           <Pricing
             currency={currency}

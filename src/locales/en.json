@@ -37,7 +37,7 @@
         "desc": "Oman Personal Data Protection Law establishing comprehensive rights for data subjects and obligations for controllers and processors."
       },
       "privacyByDesign": {
-        "desc": "Supreme's code scanning runs entirely on your local machine — no source code is ever transmitted or processed externally. Account data (Google OAuth profile) is handled separately under our privacy policy."
+        "desc": "Supreme's code scanning runs entirely on your local machine — no source code is ever transmitted or processed externally. Account data (Google OAuth profile) is handled separately."
       }
     },
     "soc2": {
@@ -57,8 +57,7 @@
     "light": "Light",
     "videoInstructions": "video instructions",
     "lightVideoTitle": "Supreme Light Video Instructions",
-    "openYoutube": "Open video on YouTube",
-    "maxPlaceholder": "Video placeholder — full tutorial will be added soon."
+    "openYoutube": "Open video on YouTube"
   },
   "aiSocModal": {
     "title": "Choose a system to log in to",
@@ -176,13 +175,6 @@
       "topics": "Topics",
       "tableOfContents": "Table of contents",
       "close": "Close"
-    },
-    "webSecurity": {
-      "placeholder": {
-        "badge": "Web Security",
-        "title": "Documentation is coming soon",
-        "description": "We are preparing a detailed guide for configuring and protecting web applications. Check back soon — the materials will appear shortly."
-      }
     },
     "pricingMicrosoft": {
       "business": "Business",
@@ -1268,8 +1260,7 @@
           "Autonomous vulnerability fixing",
           "Enhanced detection via threat intelligence"
         ],
-        "cta": "Upgrade to Supreme 2 MAX",
-        "videoLabel": "Instructional Video Placeholder – Supreme 2 MAX Setup"
+        "cta": "Upgrade to Supreme 2 MAX"
       },
       "hiddenRisk": {
         "title": "The Hidden Risk of AI-Generated Code",

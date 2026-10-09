@@ -1,19 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
-import Header from "@/components/Header";
+import React from "react";
 import PolicySidebar from "@/components/PolicySidebar";
 import BackToTopButton from "@/components/BackToTopButton";
-import Modal from "@/components/Modal";
 
 export default function PolicyLayout({ title, subtitle, children, sections }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
   return (
     <div className="bg-black text-white">
-      <Header onOpenModal={openModal} />
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-32 pb-20 flex flex-col md:flex-row gap-8">
         <div className="md:w-80">
           <PolicySidebar sections={sections} />
@@ -25,7 +18,6 @@ export default function PolicyLayout({ title, subtitle, children, sections }) {
         </main>
       </div>
       <BackToTopButton />
-      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 }

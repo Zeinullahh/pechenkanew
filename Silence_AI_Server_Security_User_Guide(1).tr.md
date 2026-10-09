@@ -1,40 +1,26 @@
-# Silence AI
+# Silence AI Server Security Kullanıcı Kılavuzu
 
-## Server Security Kullanıcı Kılavuzu
+Bu kılavuz, Silence AI yönetim panelinde hizmet kaydı, yerel Server Security kurulumu ve sunucu kaydı, korumalı erişim ayarları ve güvenlik etkinliklerinin incelenmesini açıklar.
 
-Kayıt, kurulum, korumalı erişim, güvenlik izleme ve politika yönetimi için son kullanıcı talimatları.
+Kay?t, paket kurulumu, sunucunun kaydedilmesi, ilkenin saklanmas? ve uygulanmas? ayr? a?amalard?r. Devam etmeden ?nce g?sterilen durumu kontrol edin.
 
-> **MÜŞTERİ BELGELERİ**
-> Hizmetleri kaydetmek, yerel Server Security'yi kurmak, erişim denetimlerini yapılandırmak, olayları incelemek ve sunucu korumasını izlemek için bu kılavuzu kullanın.
+## İçindekiler
 
-Sürüm 1.0 • Ekim 2026
+1. Başlamadan önce
+2. Giriş ve Server Security'yi açma
+3. Hizmet kaydetme
+4. Kurulum, kayıt ve korumayı etkinleştirme
+5. Koruma durumu
+6. MFA ve korumalı erişim
+7. Server Security konsolu
+8. Olaylar ve yanıtlar
+9. Güvenlik ilkesi
+10. Ağ erişimi, küre ve etkin oturumlar
+11. Sensörler, envanter, duruş ve bulgular
+12. Olaylar ve telemetri
+13. Sorun giderme
 
-# Bu kılavuz nasıl kullanılır
-
-Bu kılavuz, Silence AI Server Security kullanan yöneticiler ve yetkili operatörler içindir. Müşteri arayüzünden gerçekleştirebileceğiniz işlemlere ve bir koruma ya da erişim denetimi değişikliğine güvenmeden önce tamamlamanız gereken kontrollere odaklanır.
-
-> **Önemli çalışma ilkesi**
-> Kayıt, paket kurulumu, sisteme kaydetme, politika yapılandırması ve canlı koruma ayrı aşamalardır. Bir ayar pending olarak işaretlenmişse ona güvenmeden önce panelin etkinleştirildiğini bildirmesini bekleyin.
-
-
-**Belge durumu:** Bölüm 10 gereksinimleri ve bilinen sınırları açıklar. Kod vardır ancak sağlanan belgelere göre gerçek Linux/Kubernetes denemeleri ve tarayıcı hareketleri doğrulanmamıştır. Kaydedildi/bekliyor, uygulandı/onaylandı demek değildir.
-
-- [1. Başlamadan önce](#1-başlamadan-önce)
-- [2. Oturum açma ve Server Security'yi açma](#2-oturum-açma-ve-server-security-yi-açma)
-- [3. Hizmet kaydetme](#3-hizmet-kaydetme)
-- [4. Yerel Server Security'yi kurma ve kaydetme](#4-yerel-server-security-yi-kurma-ve-kaydetme)
-- [5. Koruma durumunu anlama](#5-koruma-durumunu-anlama)
-- [6. MFA ve korumalı erişimi yapılandırma](#6-mfa-ve-korumalı-erişimi-yapılandırma)
-- [7. Server Security konsolunu kullanma](#7-server-security-konsolunu-kullanma)
-- [8. Olayları ve yanıtları inceleme](#8-olayları-ve-yanıtları-inceleme)
-- [9. Güvenlik politikasını yapılandırma](#9-güvenlik-politikasını-yapılandırma)
-- [10. Ağ erişimi denetimleri, küre ve canlı oturumlar](#10-ağ-erişimi-denetimleri-küre-ve-canlı-oturumlar)
-- [11. Sensörleri, envanteri, duruşu ve bulguları inceleme](#11-sensörleri-envanteri-duruşu-ve-bulguları-inceleme)
-- [12. Olayları ve telemetriyi izleme](#12-olayları-ve-telemetriyi-izleme)
-- [13. Sorun giderme](#13-sorun-giderme)
-- [14. En iyi güvenlik ve işletim uygulamaları](#14-en-iyi-güvenlik-ve-işletim-uygulamaları)
-
-# 1. Başlamadan önce
+## 1. Başlamadan önce
 
 Başlamadan önce aşağıdaki bilgileri ve erişimi hazırlayın:
 
@@ -55,7 +41,7 @@ Başlamadan önce aşağıdaki bilgileri ve erişimi hazırlayın:
 > **Hosted faturalandırması**
 > Hosted trafik koruması kullanım üzerinden faturalandırılır. Hosted trafik korumasına güvenmeden önce hesapta yeterli bakiye bulunduğunu doğrulayın.
 
-# 2. Oturum açma ve Server Security'yi açma
+## 2. Oturum açma ve Server Security'yi açma
 
 1. Silence AI yönetim panelini açın ve Log in'i seçin.
 
@@ -65,9 +51,9 @@ Başlamadan önce aşağıdaki bilgileri ve erişimi hazırlayın:
 
 Her sunucu satırında Install, Setup / recovery ve Open Security bulunabilir. Kullanılabilir işlem, sunucunun geçerli kayıt durumuna bağlıdır.
 
-# 3. Hizmet kaydetme
+## 3. Hizmet kaydetme
 
-## 3.1 Hosted veya Self-Hosted seçme
+### 3.1 Hosted veya Self-Hosted seçme
 
 | **Dağıtım türü** | **Kullanım durumu** | **Gerekli alanlar** |
 |---|---|---|
@@ -77,7 +63,9 @@ Her sunucu satırında Install, Setup / recovery ve Open Security bulunabilir. K
 > **Kayıt, kurulum değildir**
 > Hosted veya Self-Hosted hizmet kaydı oluşturmak, yerel Server Security paketini kurmaz ya da bir Linux sunucusunu sisteme kaydetmez.
 
-## 3.2 Hizmet kaydını oluşturma
+**Hosted** veya **Self-Hosted** se?meden ?nce **Register new agent** se?in.
+
+### 3.2 Hizmet kaydını oluşturma
 
 4. Register new agent'ı seçin.
 
@@ -89,7 +77,7 @@ Her sunucu satırında Install, Setup / recovery ve Open Security bulunabilir. K
 
 8. Register'ı seçin.
 
-## 3.3 Hosted: sahipliği doğrulama ve trafiği yönlendirme
+### 3.3 Hosted: sahipliği doğrulama ve trafiği yönlendirme
 
 Kayıt akışı iki ayrı öğe gösterir: sahiplik doğrulaması için web sitesi meta etiketi ve Hosted trafik yönlendirmesi için A kaydı.
 
@@ -106,13 +94,17 @@ Kayıt akışı iki ayrı öğe gösterir: sahiplik doğrulaması için web site
 > **Doğrulama başarısız olursa**
 > Alan adı yazımını, genel erişilebilirliği, meta etiketi yerleşimini ve proxy/CDN ana bilgisayar işlemesini kontrol edip Redo verification'ı kullanın.
 
-## 3.4 Self-Hosted dağıtımı
+Görüntülenen **A record** Hosted trafiğini yönlendirir; sahiplik doğrulaması değildir. Web sitesinin meta etiketi sahipliği kanıtlar. Eski sitenin doğrulama sırasında erişilebilir kalması gerekiyorsa DNS geçişinden önce etiketi doğrulayın.
 
-Self-Hosted hizmet kaydını oluşturduktan sonra ortamınız için sağlanan onaylı dağıtım prosedürünü izleyin. Yerel Server Security kurulumu, sunucu tablosunda ayrı bir Install işlemi olmaya devam eder.
+### 3.4 Self-Hosted dağıtımı
 
-# 4. Yerel Server Security'yi kurma ve kaydetme
+Self-Hosted hizmet kaydını oluşturun ve ortamınız için onaylanan dağıtım prosedürünü izleyin. Yerel Server Security kurulumu, sunucu tablosundaki ayrı bir işlemdir.
 
-## 4.1 Yerel paketi kurma
+## 4. Yerel Server Security'yi kurma ve kaydetme
+
+**Registered** hizmet kaydı bulunduğunu, **Installed** yerel paketin kurulduğunu, **Enrolled** tek kullanımlık kodun kabul edildiğini gösterir. Hiçbiri tek başına sağlıklı etkin koruma kanıtı değildir.
+
+### 4.1 Yerel paketi kurma
 
 14. Hedef sunucu için Install'ı seçin.
 
@@ -129,7 +121,9 @@ Panelinizde gösterilen dosya adını, kurulum komutunu ve SHA-256 değerini kul
 > **Paket bütünlüğü**
 > RPM paketlerinde imza kontrolünü etkin tutun ve onaylı imzalama anahtarı prosedürünüzü izleyin. İmzalama anahtarlarını onaylanmamış kaynaklardan edinmeyin veya paket doğrulamasını atlamayın.
 
-## 4.2 Sunucuyu kaydetme
+**Install Server Security** içinden uygun yerel paketi seçin. Yaygın komutlar Ubuntu için `sudo apt install ./<displayed-filename>.deb` ve Fedora için `sudo dnf --setopt=localpkg_gpgcheck=1 install ./<displayed-filename>.rpm` biçimindedir; konsolunuzda gösterilen dosya adı, komut ve SHA-256 esas alınır. Tarayıcı indirmesi uzak sunucuya kurmaz; gerekirse paketi onaylı güvenli yöntemle aktarın. Önceden enrolled sunucuda **Setup / recovery** işlemini yalnız panel yönlendirmesiyle kullanın.
+
+### 4.2 Sunucuyu kaydetme
 
 18. Kurulum iletişim kutusunda 3. Enroll interactively'yi açın.
 
@@ -146,11 +140,13 @@ Panelinizde gösterilen dosya adını, kurulum komutunu ve SHA-256 değerini kul
 
 Sağlama sırasında iletişim kutusu Enrollment in progress, Verified release ready, Installing security stack, Installing core protection, Core check completed, Installing sensors ve Installation complete gibi aşamalar gösterebilir.
 
-## 4.3 Kurtarma ve yeniden kaydetme
+Kullanılmamış kodu değiştirmek için **Replace enrollment code** seçip **Replace code** onaylayın ve yeni kodu kullanın. **This server is enrolled** yalnız kaydı doğrular; kurulumu ve etkin korumayı doğrulamaz. Daha sonraki aşama başarısız olduysa ilk kod tüketilmiş olabilir.
 
-Zaten kayıtlı görünen bir sunucuda Setup / recovery, Re-enroll server ve Generate recovery code seçeneklerini gösterebilir. Kurtarmayı yalnızca amaçlanan sunucu için kullanın ve erişimle ilgili kurtarma sırasında bağımsız bir yönetici erişim yöntemini kullanılabilir tutun.
+### 4.3 Kurtarma ve yeniden kaydetme
 
-## 4.4 Korumayı doğrulama
+Kayıtlı bir sunucu için **Setup / recovery** bölümünü açın ve ilgili sunucuda **Re-enroll server** veya **Generate recovery code** seçeneğini kullanın. Kurtarma sırasında bağımsız yönetici erişimini koruyun.
+
+### 4.4 Korumayı doğrulama
 
 23. Sunucu için Open Security'yi seçin.
 
@@ -163,7 +159,9 @@ Zaten kayıtlı görünen bir sunucuda Setup / recovery, Re-enroll server ve Gen
 > **Bekleyen etkinleştirme**
 > Policy, Saved · pending activation gösteriyorsa yapılandırma kaydedilmiştir ancak henüz etkin kabul edilmemelidir.
 
-# 5. Koruma durumunu anlama
+**Installation complete**, **SSH 2FA: Active**, kaydedilmi? ilke veya doldurulmu? yap?land?rma penceresi tek ba??na ilgili koruman?n sunucuda ger?ekten uyguland???n? kan?tlamaz. G?ncel telemetriyi ve ger?ek uygulama durumunu da kontrol edin.
+
+## 5. Koruma durumunu anlama
 
 | **Durum** | **Anlamı** | **Yapılacak işlem** |
 |---|---|---|
@@ -176,62 +174,34 @@ Zaten kayıtlı görünen bir sunucuda Setup / recovery, Re-enroll server ve Gen
 
 Sensör kartları ayrı olarak Healthy, Degraded, Failed, Disabled, Unsupported, Needs configuration, Telemetry stale veya No telemetry bildirebilir.
 
-# 6. MFA ve korumalı erişimi yapılandırma
+## 6. MFA ve korumalı erişimi yapılandırma
 
-**Port bazında erişim:** Bölüm 10'un hedefi her port için bağımsız uygunluk denetimidir. MFA uygun portları geçici açabilir ama başka porttaki ülke/IP reddini aşamaz; hizmet kimlik doğrulaması sürer. Eski grup açma davranışı bağımsız denetimin çalıştığını kanıtlamaz.
+### 6.1 Hesap MFA'sı
 
-## 6.1 Hesap MFA'sı
+Kayıt sırasında **Set up 2FA** bölümünü açın, QR kodunu tarayın veya gizli anahtarı kimlik doğrulama uygulamasına girin, geçerli altı haneli kodu yazın ve **Verify and finish** seçeneğini seçin. Sonraki girişlerde güncel kodu kullanın. Uygulamaya erişimi kaybederseniz sakladığınız kurtarma kodunu veya kuruluşunuzun onaylı hesap kurtarma prosedürünü kullanın. QR kodunu, gizli anahtarı ve kurtarma kodlarını paylaşmayın.
 
-27. Hesap kaydı sırasında Set up 2FA'yı açın.
+### 6.2 Sunucu erişimi MFA'sı (SSH 2FA / Port Guard)
 
-28. QR kodunu tarayın veya gizli anahtarı bir TOTP kimlik doğrulayıcı uygulamasına girin.
+**SSH 2FA**, yalnızca SSH portu 22'yi değil, yapılandırılmış korumalı TCP portlarını kapsar. Erişim ayarlarını değiştirirken bağımsız bir yönetici oturumu açık tutun.
 
-29. Geçerli altı haneli kodu girip Verify and finish'i seçin.
+1. Sunucu tablosunda düzenlemeyi açın ve **Agent configuration** altında korumalı **TCP ports** değerlerini ayarlayın.
+2. Sunucu satırında **SSH 2FA** seçeneğini seçip QR kodunu tarayın veya **Manual entry key** değerini kimlik doğrulama uygulamasına girin.
+3. Sekiz **Backup / Recovery Codes** kodunu güvenle saklayın; her kod tek kullanımlıktır.
+4. **Next — Verify Code** seçeneğini seçin, geçerli altı haneli kodu girin, **Verify** ile doğrulayın ve kurulumu tamamlayın.
+5. Portları ve erişim ayarını gözden geçirmek için **Agent configuration** bölümünü yeniden açın.
 
-30. Gelecekteki oturum açmalarda geçerli kimlik doğrulayıcı kodunu kullanın.
+### 6.3 Port Guard ile kimlik doğrulama
 
-> **MFA sırlarını koruyun**
-> Kimlik doğrulayıcı sırrını, QR kodunu veya kurtarma kodunu asla başka bir kişiye göndermeyin. Kimlik doğrulayıcı erişimini kaybederseniz kuruluşunuzun onaylı hesap kurtarma kanalını kullanın.
+Dağıtımınız için onaylanan **Port Guard** adresini, korumalı hizmet istemcisiyle aynı ağdan açın. Geçerli kimlik doğrulama kodunu veya kullanılmamış bir yedek kodu girin, **Unlock Ports** seçeneğini seçin ve hizmete yeniden bağlanın. Sayfada gösterilen erişim süresini dikkate alın. Korumalı hizmetin kendi kimlik bilgileri de gereklidir.
 
-## 6.2 Sunucu erişimi MFA'sı (SSH 2FA / Port Guard)
+### 6.4 Sunucu erişimi MFA'sını devre dışı bırakma veya sıfırlama
 
-SSH 2FA denetimi yapılandırılmış TCP bağlantı noktalarını grup olarak korur; yalnızca SSH bağlantı noktası 22 ile sınırlı değildir ve UDP'yi kapsamaz.
+Sunucu erişimi MFA'sını devre dışı bırakmak için **Enable 2FA for access** seçeneğini kapatıp kaydedin. Kapsamını değiştirmek için yapılandırılmış korumalı portları değiştirin veya kaldırın ve kaydedin. Çalışan bir yönetici oturumunu ve bağımsız bir erişim kurtarma yöntemini açık tutun. Ajan değişikliği uyguladıktan sonra panelde bildirilen durumu ve hedef sunucuya erişimi kontrol edin. Çalışan sunucu kayıtlı ayarı kullanmıyorsa sorumlu yöneticiye başvurun. Dosyaları veya hizmetleri elle silmeyin.
 
-> **Erişim denetimlerini değiştirmeden önce**
-> Amaçlanan kaynak ağından erişim doğrulanana kadar bağımsız bir yönetici oturumunu veya test edilmiş kurtarma yöntemini kullanılabilir tutun.
+## 7. Server Security konsolunu kullanma
 
-31. Sunucu tablosunda kalem/düzenleme denetimini açın.
+Bölüm 10, Network access sayfasını, sunucu ve port seçimini, küreyi, bağlantı listesini ve ilke işlemlerini açıklar.
 
-32. Agent configuration içinde korumalı TCP bağlantı noktalarını ekleyin veya kaldırın, ardından Save'i seçin. Bağlantı noktaları 1 ile 65535 arasında tam sayı olmalıdır.
-
-33. 2FA SSH Guard kurulumunu açmak için sunucu satırında SSH 2FA'yı etkinleştirin.
-
-34. QR kodunu tarayın veya Manual entry key'i kimlik doğrulayıcı uygulamanıza girin.
-
-35. Devam etmeden önce sekiz Backup / Recovery Codes kodunun tümünü kaydedin. Her kod tek kullanımlıktır.
-
-36. Next — Verify Code'u seçin, geçerli altı haneli kodu girin ve Verify'ı seçin.
-
-37. 2FA verified successfully! iletisini doğrulayın, Done'ı seçin; ardından Agent configuration'ı yeniden açıp amaçlanan bağlantı noktalarını ve erişim ayarını doğrulayın.
-
-## 6.3 Port Guard ile kimlik doğrulama
-
-38. Dağıtımınız için sağlanan Port Guard adresini, korumalı hizmete bağlanacak aynı ağ kaynağından açın.
-
-39. Geçerli altı haneli kimlik doğrulayıcı kodunu veya kullanılmamış bir yedek kodu girin.
-
-40. Unlock Ports'u seçin.
-
-41. Sayfa bağlantı noktalarının açık olduğunu bildirdikten sonra korumalı hizmete hemen yeniden bağlanın.
-
-Yapılandırılmış korumalı TCP bağlantı noktalarına geçici bir erişim penceresi boyunca birlikte yetki verilir. Gösterilen süre belirleyicidir; oluşturulan varsayılan değer 60 saniyedir. Korumalı hizmet yine kendi kimlik bilgilerini gerektirir.
-
-> **Aynı kaynak ağ**
-> Port Guard için kullanılan tarayıcı ile SSH/veritabanı/uygulama istemcisi, gözlemlenen aynı kaynak ağdan görünmelidir. Ağ değiştirmek yeniden kimlik doğrulama gerektirebilir.
-
-# 7. Server Security konsolunu kullanma
-
-**Network access:** Bölüm 10 ayrı sayfayı, sunucu/port seçimini, küreyi, listeyi ve ilke işlemlerini anlatır. Kaydırma ve karşılık gelen denetimler gerçek tarayıcıda henüz doğrulanmamıştır; kurulumunuzda gerçekten görünen etiketleri izleyin.
 
 | **Sekme** | **Amaç** |
 |---|---|
@@ -246,11 +216,11 @@ Yapılandırılmış korumalı TCP bağlantı noktalarına geçici bir erişim p
 
 Ana konsol için Refresh'i kullanın. Events içinde olay gezginini yenilemeniz gerektiğinde sayfayı veya filtreyi değiştirin.
 
-# 8. Olayları ve yanıtları inceleme
+## 8. Olayları ve yanıtları inceleme
 
 **Farklı işlemler:** **Shut down session** mevcut bağlantıyı hedefler; **Blacklist IP address** kapsamındaki yeni bağlantılar için kalıcı engel kaydeder. Otomatik yanıt geçici olabilir ve farklı kurallara bağlıdır. İstek veya kayıt kapatma ya da uygulama onayı değildir.
 
-## 8.1 Olaylar
+### 8.1 Olaylar
 
 Incident details'ı açmak için bir olayı seçin. Önem derecesini, özeti, varsa kaynak bilgilerini, Timeline'ı, Evidence'ı ve Technical details'ı inceleyin.
 
@@ -263,7 +233,7 @@ Incident details'ı açmak için bir olayı seçin. Önem derecesini, özeti, va
 > **Olay durumu düzeltme değildir**
 > Olayın inceleme durumunu değiştirmek tek başına kötü amaçlı yazılımı kaldırmaz, saldırganı sonlandırmaz veya güvenliği ihlal edilmiş sunucuyu onarmaz.
 
-## 8.2 Yanıtlar
+### 8.2 Yanıtlar
 
 | **Durum** | **Anlamı** |
 |---|---|
@@ -276,11 +246,9 @@ Incident details'ı açmak için bir olayı seçin. Önem derecesini, özeti, va
 
 Kaynağı, işlemi ve kapsamı, nedeni, durumu, başlangıç zamanını ve sona erme zamanını birlikte inceleyin. Yeni bağlantıları engellemek, önceden kurulmuş bir bağlantıyı her zaman sonlandırmaz.
 
-# 9. Güvenlik politikasını yapılandırma
+## 9. Güvenlik politikasını yapılandırma
 
-**Ayrı listeler:** **Trusted IPs** otomatik yanıtlarla, **Allowed IPs / CIDRs** Port Guard erişimiyle ilgilidir; açık engeller daha geniş olabilir. Hiçbiri Bölüm 10'daki **Always Allow** veya **Always Block** değildir. Eski kuralları geçişte uzlaştırın; hesap genelindeki HTTP listesi kendiliğinden SSH/Kubernetes engeline dönüşmez.
-
-## 9.1 Otomatik yanıt modu
+### 9.1 Otomatik yanıt modu
 
 | **Mod** | **Davranış** |
 |---|---|
@@ -290,7 +258,9 @@ Kaynağı, işlemi ve kapsamı, nedeni, durumu, başlangıç zamanını ve sona 
 
 Kurulumdaki normal başlangıç modu Shadow'dur. Enforce kullanmak için Enforce'u seçin, Enable automatic enforcement? iletisini inceleyin ve Enable Enforce'u onaylayın. Enforce yalnızca uygun algılamalara uygulanır.
 
-## 9.2 Güvenilen IP'ler
+**Policy → Automatic response mode** altında modu seçin. **Enforce** için **Enable automatic enforcement?** ekranını inceleyip **Enable Enforce** veya **Cancel** seçin. Otomatik engellemeye güvenmeden önce etkinleşmeyi doğrulayın; her tespit yanıt üretmez.
+
+### 9.2 Güvenilen IP'ler
 
 42. Policy → Trusted IPs'i açın.
 
@@ -302,7 +272,7 @@ Kurulumdaki normal başlangıç modu Shadow'dur. Enforce kullanmak için Enforce
 
 Trusted IPs, kaynağı uygun otomatik yanıt engellemesinden muaf tutar. MFA'yı, ülke kısıtlamalarını, Allowed IPs / CIDRs'ı, hizmet kimlik bilgilerini veya diğer erişim denetimlerini atlamaz.
 
-## 9.3 Allowed IPs / CIDRs
+### 9.3 Allowed IPs / CIDRs
 
 46. Sunucu satırındaki kalem/düzenleme denetimini açın.
 
@@ -312,7 +282,9 @@ Trusted IPs, kaynağı uygun otomatik yanıt engellemesinden muaf tutar. MFA'yı
 
 Kaydedilen liste boşsa Port Guard adres kontrolü tüm kaynakların kimlik doğrulamaya devam etmesine izin verir. Liste boş değilse yalnızca eşleşen adresler veya aralıklar devam edebilir.
 
-## 9.4 Açık engeller
+Alan?n tam ad? **Allowed IPs / CIDRs (comma-separated)** ?eklindedir. Bu liste Port Guard kullanabilecek kaynaklar? s?n?rlar; hizmet eri?imi vermez ve MFA, ?lke filtresi, hizmet kimlik bilgileri veya a??k engelleri atlatmaz. **Trusted IPs** listesinden ayr?d?r. Kaydedilmi? de?er sunucuda uyguland???n? kan?tlamaz; de?i?iklik s?ras?nda ba??ms?z y?netici eri?imini koruyun.
+
+### 9.4 Açık engeller
 
 49. Policy → Explicit blocks'u açın.
 
@@ -325,146 +297,28 @@ Kaydedilen liste boşsa Port Guard adres kontrolü tüm kaynakların kimlik doğ
 > **Yönetici kilitlenmesini önleyin**
 > Engel eklemeden önce aynı kaynak IP'yi veya CIDR'ı kullanabilecek yönetici, izleme, NAT ve paylaşılan adresleri kontrol edin.
 
-## 9.5 Sensörler ve Suricata
+### 9.5 Sensörler ve Suricata
 
 Policy → Sensor state; Inventory, File Integrity, Security Configuration, YARA-X, CrowdSec, Falco ve Suricata anahtarlarını gösterebilir.
 
 Suricata için Policy → Suricata monitored interface'i açın, gösterilen adayı seçin veya `ens3` gibi doğrulanmış bir arayüz girin, ardından Save interface'i seçin. Değişiklikten sonra yeni Suricata telemetrisini doğrulayın.
 
-# 10. Ağ erişimi denetimleri, küre ve canlı oturumlar
+## 10. Ağ erişimi denetimleri, küre ve canlı oturumlar
 
-**2026-10-06 tarihli işlev gereksinimi.** Bu bölüm istenen davranışı açıklar; üretim ortamında doğrulama iddiası değildir. Önceden küre web trafiğini gösteriyor, ülke denetimleri ayrıydı ve oturum sonlandırma kullanılamıyordu. CMC/Guard kodunda artık Network access sayfası, sunucu ve porta göre ilkeler, imzalı Guard yenilemesi, port bazında nftables yetkilendirmesi, Linux ana makine ağ ad alanındaki TCP bağlantılarının anlık görüntüsü ve imzalı hedefli kapatma komutları vardır. `NETWORK_ACCESS_NET_CHECKLIST.md` statik, birim ve çapraz derleme kontrollerini kaydeder. Veritabanı geçişi, gerçek Linux/Kubernetes bağlantıları, 2525 üzerinde SSH, tarayıcı etkileşimleri, yeniden başlatma kalıcılığı ve uçtan uca aracı onayı sağlanan belgelerde henüz doğrulanmamıştır. Kaydedilen ilke, çalışan aracı sürümü onaylayana kadar beklemededir; sıraya alınmış komut doğrulanmış kapatma değildir.
+**Network access** sayfasını açıp yönetilen sunucuyu ve korumalı TCP portunu seçin. Küre ve bağlantı listesinden seçilen kapsamın kaynak IP'lerini, ülkelerini, portlarını ve oturum bilgilerini inceleyin.
 
-## 10.1 Amaç ve kapsam (NET-01)
+**Countries** bölümünde blacklist veya whitelist modunu seçip ilgili portun ülke listesini düzenleyin. **IP addresses** bölümünde sunucunun **Always Block** ve **Always Allow** listelerini yönetin. Always Allow, MFA veya korumalı hizmetin kimlik doğrulamasının yerini almaz.
 
-CMC, yapılandırılmış korumalı TCP portlarının erişimini yönetmek için 3B küreyi, ülke listelerini, engelleme penceresini ve yukarı açılan paneli birleştirmelidir. **Ağ oturumu**, gözlenen kaynak IP'den yönetilen sunucunun yapılandırılmış hedef portuna gerçek ve etkin bir TCP bağlantısıdır. SSH **2525** portunda çalışıyorsa kullanılan bağlantı bitene kadar görünür; SSH her zaman 22 değildir. Yapılandırılmış Kubernetes uçları ve diğer korumalı TCP hizmetleri de kapsam içindedir. Hizmet adı yalnızca yapılandırma veya doğrulanmış bilgiden gelir. Kubernetes TCP bağlantısı tek başına kullanıcıyı, pod kabuğunu veya belirli `kubectl exec` işlemini tanımlamaz; çoklanmış bağlantıyı kapatmak birden çok işlemi etkileyebilir. Web ziyareti, HTTP isteği, tarayıcı oturumu, user agent veya erişim günlüğündeki benzersiz IP sayısı ağ oturumu değildir. Bağımsız barındırma, HTTP analizi, kayıt ve faturalama ayrı kalır.
+Bir bağlantının menüsünden **Shut down session** veya **Blacklist IP address** işlemini seçin. Ardından bildirilen sonucu ve ilke durumunu kontrol edin. Kaydedilen değişiklik veya kuyruğa alınan istek, ancak uygulama sonucu bildirildiğinde tamamlanmış sayılır.
 
-## 10.2 Sunucu ve port seçimi (NET-02)
+## 11. Sensörleri, envanteri, duruşu ve bulguları inceleme
 
-Görmeden veya düzenlemeden önce seçili sunucuyu ve korumalı TCP portunu gösterin. Her portun ülke modu ve listesi ayrı olabilir; 2525 kuralı başka portu sessizce değiştiremez. **All protected ports** birleşik görünümü karma ilkeleri belirtmelidir. Seçim ve filtreler küreyi, etkin ülke listelerini ve oturum listesini birlikte günceller. Kalıcı **Always Allow** ve **Always Block** IP listeleri seçili sunucunun yapılandırılmış korumalı portlarında geçerlidir; otomatik olarak tüm hesaba veya ilgisiz portlara yayılmaz.
+Her sensörün durumunu ve son sinyalini incelemek için **Sensors** bölümünü açın. Bildirilen paket bilgilerini **Inventory** ve **Search packages** ile inceleyin. Yapılandırma bulgularını ve gösterilen önerileri **Posture** bölümünde kontrol edin. Sonuçları yorumlarken gözlem zamanını dikkate alın.
 
-## 10.3 Pencere ve listeler (NET-03)
+## 12. Olayları ve telemetriyi izleme
 
-İlk satır **Countries** ve **IP addresses** sekmelerinden oluşur. **Countries** altında ikinci satır **Blacklisted** ve **Whitelisted** görünümüdür; ülke arama, ekleme ve kaldırma ile ayrı bir **Blacklist mode / Whitelist mode** seçicisi bulunur. Bir listeye bakmak modu değiştirmez. Açıkça seçilen ülkeler ve görüntülenen tamamlayıcı küme seçilen port için anlaşılır olmalıdır. **IP addresses** altında ikinci satır **Always Block** ve **Always Allow** görünümüdür. Her birinde **+**, basit IP girişi, kayıtlı liste ve kaldırma vardır. İki liste sekme veya ülke modu değişse bile aynı anda etkindir. Tekil IPv4 ve IPv6 adreslerini kabul edip eşdeğer yazımları normalleştirin, tekrarları önleyin; JSON, tarayıcı parmak izi, IP-kullanıcı birleşimi veya zorunlu CIDR gerekmez.
+Sunucu telemetrisini incelemek için **Events** bölümünü açın. Sensöre, tam olay türüne veya önem düzeyine göre filtreleyin; **Previous** ve **Next** ile sayfaları değiştirin. Kaynağı, kanıtı, önem düzeyini, zamanı ve varsa ilişkili olayı inceleyin. Eski sonuçlara dayanarak karar vermeden önce görünümü yenileyin.
 
-## 10.4 Ülke modları (NET-04)
+## 13. Sorun giderme
 
-| Mod | Açıkça seçilen ülkeler | Diğer bütün bilinen ülkeler |
-|---|---|---|
-| **Blacklist mode** | Engelli | IP kuralları ve kimlik doğrulamaya bağlı olarak izinli |
-| **Whitelist mode** | IP kuralları ve kimlik doğrulamaya bağlı olarak izinli | Engelli |
-
-Boş kara liste hiçbir ülkeyi engellemez; boş beyaz liste hiçbir ülkeye izin vermez. Mod değişiminde açık seçimlerin korunmasını veya taşınmasını açıklayın; görüntülenen tamamlayıcı listeyi sessizce kayıtlı seçim saymayın. **Whitelist mode** içinde Kazakistan ve Türkiye seçilirse geçerli IP istisnası dışında diğer ülkeler reddedilir. Her port bağımsız değerlendirilir: bir portun reddi başka izinli portu reddetmez, bir portun izni reddedileni açmaz. MFA zorunludur. Konum bilinmiyorsa **Unknown country** gösterin; ülke uydurmayın. Genel IP için GeoIP hatası kısıtı sessizce kaldırmamalıdır; beyaz liste modunda bilinmeyen ülke **Always Allow** olmadan reddedilir. Özel/yerel kaynaklar coğrafi denetimi atlar fakat IP kısıtları ve MFA'ya tabidir; bunları genel IP arama hatasından ayırın.
-
-## 10.5 Kalıcı IP istisnaları (NET-05)
-
-**Always Allow**, gözlenen kaynak IP'yi bu sunucunun korumalı portlarında ülke kısıtından kayıt kaldırılana kadar muaf tutar. Örnek: Rusya engellidir, ancak bir çalışan Rusya'dan uzaktan çalışır. Gözlenen IP'sini **Always Allow** listesine eklemek ülke kararını aşar; MFA ve SSH kimlik doğrulaması yine gerekir. Rusya beyaz listede yoksa da aynı istisna işler; kaydı kaldırmak normal ülke kararını geri getirir. **Always Block**, ülkesi izinli olsa da IP'yi reddeder. İki liste mod değişiminde de kalıcı ve aynı anda etkindir. **Always Allow**, hizmet kimlik bilgilerini veya bağımsız otomatik tehdit yanıtlarını atlamaz. **Trusted IPs** bu yanıtlarla ilgilidir ve eşanlamlı değildir; eski kaynak izin listeleri ve açık engeller bilinçli uzlaştırılmalıdır. Aynı normalleştirilmiş IP iki listede olamaz: açık taşıma sunun. Çelişkili veri gelirse engelleme üstün gelir ve çelişki bildirilir. Sıra: **Always Block**, coğrafi istisna **Always Allow**, ilgili portun ülke modu; MFA ve hizmet girişi ayrıca uygulanır. Paylaşılan genel IP aynı adresi kullanan herkesi etkiler; kaynak IP değişirse istisnayı güncelleyin. Yalnız IP bir çalışanı tanımlamaz.
-
-## 10.6 Küre ve dört yoğunluk düzeyi (NET-06)
-
-Küre, seçili kapsamda izinli/engelli ülkeleri ve etkin bağlantıları gösterir; engelli ülkedeki izinli IP istisnası anlaşılmalıdır. Ülke ilkesi renkleri ile oturum yoğunluğunu ayrı göstergelerle ayırın. Kaydedilmiş dört düzey **0, 1–2, 3–9 ve 10+ oturumdur**; değerleri doğrulanmış diye yayımlamadan önce güncel uygulama kanıtını kontrol edin. İşaret kümeleri tekil IP ve bağlantılara açılmalı, ülke bilgisinden kesin IP koordinatı türetilmemelidir. Karma ilkeleri ve bilinmeyen/özel konumları belirtin. Eski **Active Users** metriği erişim günlüklerindeki yakın tarihli IP'leri sayıyordu; etkin TCP bağlantılarını değil. Küre ve liste filtreleri, zamanları, toplamları ve veri tazeliğini paylaşır. Kapatıldığı doğrulanan bağlantı sayıdan çıkar; çevrimdışı aracı veya eksik telemetri sıfır değil bilinmeyen/eski veri anlamına gelir.
-
-## 10.7 Oturum listesi (NET-07)
-
-Yukarı kaydırma listeyi açar; görünür aç/genişlet düğmesi fare ve klavye ile aynı erişimi sağlar. Kapatma/daraltma olmalıdır. Her satır bir bağlantıdır; aynı IP'deki birden çok bağlantı ayrı kalır. Kaynak IP, ülke veya özel/bilinmeyen durumu, sunucu, hedef port, biliniyorsa yapılandırılmış hizmet adı, durum ve gerçekten bilinen zaman gösterilir. **First observed** ilk bilinen gözlemdir; gerçek bağlantı başlangıcı olmak zorunda değildir. Arama, kapsam filtreleri ve sayfalama bütün satırlara eriştirmeli; bir sonuç sayfası toplam sayı değildir.
-
-## 10.8 Bağlam menüsü ve kapatma (NET-08)
-
-Kürede veya listede incelenebilir IP/oturuma sağ tıklamak **Shut down session** ve **Blacklist IP address** işlemlerini açar; dokunmatik ve klavye için görünür eşdeğer menü gerekir. Bir IP'nin birçok bağlantısı varsa tam bağlantı, sunucu ve port açıkça seçilir. **Shut down session**, aracı üzerinden sadece seçili gerçek bağlantıyı keser: 2525/22 SSH, desteklenen Kubernetes yolu veya başka korumalı TCP hizmeti. Sunucuyu, hizmeti, podu veya diğer bağlantıları kapatmaz; başlamış uygulama işini mutlaka durdurmaz ve yeniden bağlanmayı kalıcı engellemez. İşlemden hemen önce bağlantı kimliğini yeniden doğrulayın; tek başına IP, kullanıcı adı, yaklaşık zaman veya yeniden kullanılan PID yeterli değildir. İstenen/kuyruktaki işlem ile doğrulanmış sonucu ayırın; zaten kapanmış, eski kimlik, çevrimdışı, yetkisiz, desteklenmeyen, süresi dolmuş ve başarısız durumları doğru bildirin. Komut göndermek başarı kanıtı değildir; güvenli hedefli kesme yapılamıyorsa somut nedeni belirtin.
-
-## 10.9 Oturumdan engelleme (NET-09)
-
-**Blacklist IP address**, kaynak IP'yi sunucunun aynı kalıcı **Always Block** listesine ekler. Önce kaydedildi/bekliyor, aracı onayından sonra uygulandı veya başarısız gösterin; aynı kayıt **IP addresses** penceresinde görünür. IP **Always Allow** içindeyse açık taşıma işlemi sunun. Uygulandığında kapsamdaki yeni bağlantıları önler; açık bağlantının kapandığı anlamına gelmez, bunun için ayrı kapatma gerekir.
-
-## 10.10 Kaydetme, uygulama ve geçiş (NET-10)
-
-Tek ilke CMC, API/depolama, aracıya teslim edilen yapılandırma ve gerçek yaptırımı bağlar. Kaydedildi, bekliyor, uygulandı ve başarısız durumlarını sürüm/zaman ile ayırın; çevrimdışı aracının kuralı beklemede kalır. Yeniden başlatmada koruyun, eski komutları/tekrarları reddedin, işlemi yapan kişi/hesap/sunucu yetkilerini denetleyin; hedef, işlem, zaman ve sonucu kaydedin. Hesap çapındaki eski HTTP ülke engellemesi ve ayrı Geo JSON düzenleyicisi talimatlarını bu ortak süreçle değiştirin. Hesabın HTTP kara listesini sessizce tüm sunucuların SSH/Kubernetes engeline dönüştürmeyin. Yerel ve IP kısıtlarını korumayı zayıflatmadan veya gizli red oluşturmadan bilinçli taşıyın. Bağımsız HTTP analizi ve diğer özellikler kalır.
-
-## 10.11 Zorunlu kontrol (NET-11)
-
-Tamamlandı demeden önce **NET-01**–**NET-11** için dosya, kanıt ve açık eksikleri kontrol edin: 2525 SSH dahil bağımsız iki port; iki mod, boş listeler ve mod değişimi; iki sekme sırası ve birlikte etkin IP listeleri; Rusya'daki çalışanın her iki modda MFA ile istisnası; engel önceliği, IPv4/IPv6 ve tekrarlar; kürede ve listede gerçek SSH, Kubernetes ve sıradan TCP bağlantıları; dört düzey, eşit toplam ve eski telemetri; kaydırma, fare/klavye ve menüler; aynı IP'de bile yalnız seçili bağlantının kapatılması; zaten kapalı, yetkisiz, eski, başarısız ve desteklenmeyen sonuçlar; kalıcı engel, aracı onayı, yeniden başlatma, hesap ayrımı ve geçiş. Görsel arayüz veya sahte veriler yeterli değildir. Eksik gerçek Linux/Kubernetes ve tarayıcı denemelerini ayrıca belirtin.
-
-# 11. Sensörleri, envanteri, duruşu ve bulguları inceleme
-
-## 11.1 Sensörler
-
-| **Sensör / görünüm** | **Bildirdiği öğe** |
-|---|---|
-| Guard | Çekirdek koruma sinyali. |
-| File Integrity | İzlenen dosya değişiklikleri. |
-| YARA-X | Kötü amaçlı yazılım örüntüsü kanıtı. |
-| CrowdSec | Davranış tabanlı güvenlik algılamaları. |
-| Falco | Çalışma zamanı ve sistem algılamaları. |
-| Suricata | Ağ algılamaları. |
-| Inventory / Security Configuration | Envanter ve değerlendirme verileri. |
-
-Sensör algılaması bir kanıttır. Otomatik geçici yanıtlar yalnızca etkinleştirilmiş bir yanıt politikası kapsamındaki uygun algılamalarda gerçekleşir.
-
-## 11.2 Envanter ve güvenlik açığı istihbaratı
-
-Inventory; paket adını, sürümünü, ekosistemini, mimarisini ve son gözlemlenme zamanını gösterebilir. Müşteriye yönelik paket tablosunu filtrelemek için Search packages'ı kullanın. Envanter bilgi amaçlıdır; paketlere yama uygulamaz veya güvenlik açıklarını düzeltmez.
-
-> **Boş veya eski verileri dikkatle yorumlayın**
-> Boş, kullanılamayan, bilinmeyen ya da eski envanter/güvenlik açığı bilgisi, sunucuda paket veya güvenlik açığı bulunmadığının kanıtı değildir.
-
-## 11.3 Duruş
-
-Security Configuration Assessment bulguları ve güvenlik açığı istihbaratı durumu için Posture'ı kullanın. Bulgular başarısız veya gerilemiş kontrolleri ve sağlanan rehberleri gösterebilir. Posture bir değerlendirme görünümüdür ve sunucuyu otomatik olarak düzeltmez.
-
-# 12. Olayları ve telemetriyi izleme
-
-**Veri tazeliği:** erişim günlükleri ve eski **Active Users** etkin TCP bağlantılarını saymaz. Bölüm 10'daki küre ile liste filtreleri, toplamları ve zamanları paylaşır. Eksik veya eski telemetri sıfır değil bilinmeyen/eski anlamına gelir.
-
-Events'ı açın ve kullanılabilir filtreleri kullanın:
-
-- Sensöre göre filtreleyin.
-- Tam olay türünü kullanarak olay türüne göre filtreleyin.
-
-- Önem derecesine göre filtreleyin: All severities, critical, high, medium, low veya info.
-- Sayfalandırma için Previous ve Next'i kullanın.
-
-Gösterildiğinde olay adını, kaynağını, türünü, kanıtını, önemini, zaman damgasını ve bağlantılı olayı inceleyin.
-
-# 13. Sorun giderme
-
-**Beklenmeyen erişim:** sunucu/portu, ülke modunu, gerçekten gözlenen kaynak IP'yi, **Always Block**/**Always Allow** listelerini, eski kısıtları ve uygulanan sürümü kontrol edin. IP değişince istisnayı güncelleyin. Bekleyen ilke, çevrimdışı aracı veya eski oturum gerçek durumu doğrulamaz; istenen, süresi dolan ya da desteklenmeyen kapatma doğrulanmış kapatma değildir.
-
-> **İlk kural**
-> Erişim denetimlerini değiştirirken bağımsız yönetici erişimini kullanılabilir tutun. Gizli olmayan hata metnini kaydedin; kayıt kodlarını, MFA sırlarını, yedek kodları, özel anahtarları veya bunları içeren ekran görüntülerini asla paylaşmayın.
-
-| **Durum** | **Önerilen işlem** |
-|---|---|
-| Paket kurulumu başarısız | Seçilen paketin işletim sistemi/mimariyle eşleştiğini doğrulayın, yeniden indirin, gösterilen SHA-256'yı karşılaştırın ve kopyalanan komutu yönetici ayrıcalıklarıyla çalıştırın. RPM için imza kontrolünü etkin tutun. |
-| Kayıt kodunun süresi doluyor | Yalnızca önceki kod kullanılmadıysa veya panel açıkça değiştirmeye izin veriyorsa yeni kod üretin. Kod sonraki bir hatadan önce kabul edildiyse sunucu kayıtlı göründüğünde Setup / recovery'yi kullanın. |
-| Korumanın etkin olduğu doğrulanmadı | Overview'ı açıp Server protection, Provisioning, Sensor health ve Guard access security'yi inceleyin. PENDING, DEGRADED, FAILED veya CONFIGURATION REQUIRED için gösterilen nedeni izleyin. |
-| Policy, Saved · pending activation gösteriyor | Politikayı kaydedilmiş fakat henüz etkin değil kabul edin. Etkinleştirme tamamlanana kadar önceki güvenli yapılandırmayı ve yönetici erişimini koruyun. |
-| MFA kurulumu başarısız | Kimlik doğrulayıcı saatini kontrol edin, geçerli altı haneli kod kullanın, amaçlanan bağlantı noktalarını doğrulayın ve mevcut yönetici oturumunu açık tutun. |
-| Port Guard kilidi açıyor ancak hizmete erişilemiyor | Hemen yeniden bağlanın; tarayıcı/istemcinin gözlemlenen aynı kaynağı kullandığını doğrulayın; korumalı bağlantı noktasını, hizmet kimlik bilgilerini, Allowed IPs'i, ülke kurallarını, açık engelleri, otomatik yanıtları ve ağ politikasını inceleyin. |
-| Kimlik doğrulayıcı erişimi kaybedildi | Varsa kullanılmamış yedek kod kullanın ve ardından kuruluşunuzun onaylı kurtarma sürecini uygulayın. |
-| IP veya ülke kısıtlamaları beklenmedik davranıyor | Denetleyen özelliği belirleyin, kaynak adresini ve bağlantı noktasını doğrulayın, kural önceliği ile süre sonunu inceleyin ve başka kural eklemeden önce yanlışlıkla yönetici kilitlenmesini kontrol edin. |
-| Sensör telemetrisi eksik veya eski | Sensors'ı açın, sensör durumunu ve Last signal'ı inceleyin; uygun olduğunda Suricata arayüzü gibi yapılandırmaları doğrulayın. |
-| Paket envanteri boş | Search packages'ı kullanın ve paket tablosunu diğer envanter etkinliğiyle karşılaştırın. Boş tabloyu hiç paket bulunmadığının kanıtı değil, eksik bilgi sayın. |
-
-# 14. En iyi güvenlik ve işletim uygulamaları
-
-**Güncel sınırlar:** Bölüm 10 kodunun tam gerçek Linux/Kubernetes ve tarayıcı doğrulaması sağlanan belgelerde yoktur. Süreli MFA izinleri nftables gerektirir. Toplayıcı yalnız seçilen düğümün ana makine ağ ad alanındaki kurulmuş TCP soketlerini görür; bütün podları, düğümleri veya dış yük dengeleyicileri değil. Soket kimliği yoksa durum desteklenmiyor; büyük anlık görüntü tam değil eski sayılır. Yeniden başlatma, aracı onayı ve hedefli kapatma henüz doğrulanmalıdır.
-
-- Güvenilen ve izin verilen kaynaklar için kullanılabilecek en dar IP/CIDR aralıklarını kullanın.
-- MFA, açık engeller veya ülke kısıtlamaları etkinleştirirken test edilmiş yönetici kurtarma yolunu koruyun.
-
-- Panel uygun bir etkin/sağlıklı durum bildirene ve güncel telemetri bunu destekleyene kadar kaydedilmiş yapılandırmaya güvenmeyin.
-- Sensör algılamalarını incelenecek kanıtlar olarak değerlendirin; her algılamanın otomatik olarak engellendiğini varsaymayın.
-
-- Otomatik engelin hâlâ etkin olduğunu varsaymadan önce yanıtın sona erme zamanını inceleyin.
-- Onaylı işletim prosedürünüz açıkça gerektirmedikçe kurtarma yöntemi olarak güvenlik dosyalarını veya hizmetlerini elle kaldırmayın.
-
-# Ek A — Hızlı durum başvurusu
-
-| **Öğe** | **Müşteri yorumu** |
-|---|---|
-| Registered | Hizmet kaydı var. |
-| Installed | Yerel paket kuruldu. |
-| Enrolled | Tek kullanımlık kayıt kodu kabul edildi. |
-| Installation complete | Sağlama, kurulumun tamamlanması aşamasına ulaştı; geçerli Overview durumunu ve telemetriyi doğrulayın. |
-| Saved · pending activation | Değişiklik panelde saklanmıştır ancak henüz etkin kabul edilmemelidir. |
-| SSH 2FA: Active | Satır için kimlik doğrulayıcı kurulumu tamamlandı; amaçlanan korumalı bağlantı noktalarını ve geçerli koruma durumunu doğrulayın. |
+Bir işlem tamamlanmazsa seçilen sunucu ve portu, gösterilen durumu ve zamanı, ayrıca hata mesajını kontrol edin. Girdiyi veya bağlantı sorununu düzeltip işlemi yeniden deneyin. Erişim kurallarını değiştirirken bağımsız yönetici oturumunu açık tutun. Hesap veya sunucu erişimini kurtarmak için kuruluşunuzun onaylı prosedürünü kullanın.

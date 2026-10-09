@@ -68,11 +68,6 @@
   <url><loc>https://silenceai.net/policies/terms_of_service/</loc></url>
   <url><loc>https://silenceai.net/policies/terms_of_use/</loc></url>
 
-  <!-- Supreme Policies -->
-  <url><loc>https://silenceai.net/policies/supreme/privacy/</loc></url>
-  <url><loc>https://silenceai.net/policies/supreme/terms_of_service/</loc></url>
-  <url><loc>https://silenceai.net/policies/supreme/terms_of_use/</loc></url>
-
   <!-- AI SOC Policies -->
   <url><loc>https://silenceai.net/policies/ai-soc1/cookies/</loc></url>
   <url><loc>https://silenceai.net/policies/ai-soc1/cookies_email/</loc></url>
@@ -81,10 +76,5 @@
   <url><loc>https://silenceai.net/policies/ai-soc1/terms_of_service/</loc></url>
   <url><loc>https://silenceai.net/policies/ai-soc1/terms_of_use/</loc></url>
   <url><loc>https://silenceai.net/policies/ai-soc1/terms_of_use_email/</loc></url>
-
-  <!-- Sithub Policies -->
-  <url><loc>https://silenceai.net/policies/sithub/privacy/</loc></url>
-  <url><loc>https://silenceai.net/policies/sithub/terms_of_service/</loc></url>
-  <url><loc>https://silenceai.net/policies/sithub/terms_of_use/</loc></url>
 
 </urlset>

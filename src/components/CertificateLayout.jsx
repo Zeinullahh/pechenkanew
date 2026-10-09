@@ -3,8 +3,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import Header from "@/components/Header";
-import RequestDemoModal from "@/components/RequestDemoModal";
 import useCertificateDownload from "@/lib/useCertificateDownload";
 import { Download, Loader2, Smartphone } from "lucide-react";
 
@@ -13,12 +11,8 @@ const CERT_ASPECT = 297 / 210; // Exact A4 aspect ratio
 const CERT_HEIGHT = Math.round(CERT_WIDTH / CERT_ASPECT); // A4 height at 96PPI
 
 export default function CertificateLayout({ name, certId, role }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [scale, setScale] = useState(1);
   const certRef = useRef(null);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
 
   const { handleDownload, isGenerating } = useCertificateDownload(
     certRef,
@@ -56,11 +50,6 @@ export default function CertificateLayout({ name, certId, role }) {
       <div className="fixed inset-0 pointer-events-none print:hidden z-0">
         <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-blue-600/10 rounded-full blur-[120px]" />
         <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-purple-600/10 rounded-full blur-[120px]" />
-      </div>
-
-      {/* Header */}
-      <div className="print:hidden relative z-20 header-container">
-        <Header onOpenModal={openModal} />
       </div>
 
       {/* Main Content */}
@@ -357,8 +346,6 @@ function init_protocol() {
         </div>
         </div>
       </main>
-
-      <RequestDemoModal isOpen={isModalOpen} onClose={closeModal} />
 
       {/* Global & Print Styles */}
       <style jsx global>{`

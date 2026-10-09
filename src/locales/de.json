@@ -87,8 +87,7 @@
     "light": "Light",
     "videoInstructions": "Videoanleitungen",
     "lightVideoTitle": "Supreme Light Videoanleitungen",
-    "openYoutube": "Video auf YouTube öffnen",
-    "maxPlaceholder": "Video-Platzhalter — das vollständige Tutorial wird bald hinzugefügt."
+    "openYoutube": "Video auf YouTube öffnen"
   },
   "languageSelector": {
     "triggerLabel": "Sprache wählen",
@@ -1205,13 +1204,6 @@
       "tableOfContents": "Inhaltsverzeichnis",
       "close": "Schließen"
     },
-    "webSecurity": {
-      "placeholder": {
-        "badge": "Web-Sicherheit",
-        "title": "Dokumentation kommt bald",
-        "description": "Detaillierte Anleitung in Vorbereitung."
-      }
-    },
     "emailSecurity": {
       "title": "E-Mail-Sicherheitssystem",
       "subtitle": "Dokumentation | Version 1.0",
@@ -2296,8 +2288,7 @@
           "Autonome Schwachstellenbehebung",
           "Erweiterte Erkennung durch Bedrohungsintelligenz"
         ],
-        "cta": "Auf Supreme 2 MAX upgraden",
-        "videoLabel": "Video-Platzhalter – Supreme 2 MAX Einrichtung"
+        "cta": "Auf Supreme 2 MAX upgraden"
       },
       "hiddenRisk": {
         "title": "Das verborgene Risiko von KI-generiertem Code",

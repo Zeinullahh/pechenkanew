@@ -87,8 +87,7 @@
     "light": "轻量版",
     "videoInstructions": "视频说明",
     "lightVideoTitle": "Supreme Light 视频说明",
-    "openYoutube": "在 YouTube 上打开视频",
-    "maxPlaceholder": "视频占位符——完整教程即将上线。"
+    "openYoutube": "在 YouTube 上打开视频"
   },
   "home": {
     "hero": {
@@ -1145,8 +1144,7 @@
           "自主漏洞修复",
           "通过威胁情报增强检测"
         ],
-        "cta": "升级到 Supreme 2 MAX",
-        "videoLabel": "演示视频占位符 – Supreme 2 MAX 设置"
+        "cta": "升级到 Supreme 2 MAX"
       },
       "hiddenRisk": {
         "title": "AI 生成代码的潜在风险",
@@ -1249,13 +1247,6 @@
       "topics": "主题",
       "tableOfContents": "目录",
       "close": "关闭"
-    },
-    "webSecurity": {
-      "placeholder": {
-        "badge": "网络安全",
-        "title": "文档即将推出",
-        "description": "我们正在准备详细指南。"
-      }
     },
     "pricingMicrosoft": {
       "business": "Business",

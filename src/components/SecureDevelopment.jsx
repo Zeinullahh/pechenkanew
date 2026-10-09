@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Header from "@/components/Header";
 import BackToTopButton from "@/components/BackToTopButton";
 import RequestSystemModal from "@/components/RequestSystemModal";
 import ComingSoonModal from "@/components/ComingSoonModal";
@@ -148,7 +147,6 @@ export default function SecureDevelopmentPage() {
 
     return (
         <div className="min-h-screen bg-[#01091C] text-slate-200 font-sans selection:bg-pink-500/30 relative overflow-x-clip">
-            <Header />
 
             <main className="relative z-10 pt-20 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
                 {/* Hero */}

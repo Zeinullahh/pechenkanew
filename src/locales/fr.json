@@ -87,8 +87,7 @@
     "light": "Light",
     "videoInstructions": "instructions vidéo",
     "lightVideoTitle": "Instructions vidéo Supreme Light",
-    "openYoutube": "Ouvrir la vidéo sur YouTube",
-    "maxPlaceholder": "Espace réservé vidéo — le tutoriel complet sera ajouté bientôt."
+    "openYoutube": "Ouvrir la vidéo sur YouTube"
   },
   "languageSelector": {
     "triggerLabel": "Choisir la langue",
@@ -1179,13 +1178,6 @@
       "tableOfContents": "Table des matières",
       "close": "Fermer"
     },
-    "webSecurity": {
-      "placeholder": {
-        "badge": "Sécurité Web",
-        "title": "Documentation à venir",
-        "description": "Guide détaillé en cours de préparation."
-      }
-    },
     "emailSecurity": {
       "title": "Système de sécurité des e-mails",
       "subtitle": "Documentation | Version 1.0",
@@ -2270,8 +2262,7 @@
           "Correction autonome des vulnérabilités",
           "Détection renforcée via threat intelligence"
         ],
-        "cta": "Passer à Supreme 2 MAX",
-        "videoLabel": "Vidéo de démonstration – Configuration de Supreme 2 MAX"
+        "cta": "Passer à Supreme 2 MAX"
       },
       "hiddenRisk": {
         "title": "Le risque caché du code généré par IA",

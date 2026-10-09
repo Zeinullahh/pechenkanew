@@ -3,18 +3,12 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Header from "@/components/Header";
-// Footer removed to avoid duplication with LayoutWrapper
 import Supreme2D from "@/components/Supreme2D";
-import RequestDemoModal from "@/components/RequestDemoModal";
 import { Download } from "lucide-react";
 
 export default function CertificatePage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [scale, setScale] = useState(1);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
 
   const handlePrint = () => {
     window.print();
@@ -48,11 +42,6 @@ export default function CertificatePage() {
              <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-purple-600/10 rounded-full blur-[120px]" />
         </div>
 
-      {/* Header hidden on print */}
-      <div className="print:hidden relative z-20">
-        <Header onOpenModal={openModal} />
-      </div>
-      
       {/* Main Content */}
       <main className="relative flex-grow flex flex-col items-center justify-start pt-0 px-4 sm:px-6 z-10 w-full print:p-0 print:h-screen print:justify-center overflow-hidden">
         
@@ -231,16 +220,6 @@ export default function CertificatePage() {
 
       </main>
 
-      {/* Footer Removed (The global layout wrapper likely adds one, so removing from here handles duplication)
-          If this page is rendered within the main layout, LayoutWrapper adds a footer.
-          However, LayoutWrapper is usually wrapping {children} in layout.jsx.
-          This page is a child.
-          So LayoutWrapper (parent) renders <Footer />.
-          Inside this page, we rendered <Footer /> manually before.
-          Removing <Footer /> from here solves the duplication issue.
-      */}
-      <RequestDemoModal isOpen={isModalOpen} onClose={closeModal} />
-      
       {/* Global & Print Styles */}
       <style jsx global>{`
         /* Custom Scrollbar prevention for main page */

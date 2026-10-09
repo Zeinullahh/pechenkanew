@@ -604,9 +604,6 @@ body.not-found-page .default-content-wrapper {
   padding-top: 0 !important;
 }
 
-body.not-found-page footer {
-  display: none !important;
-}
 @keyframes gradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }

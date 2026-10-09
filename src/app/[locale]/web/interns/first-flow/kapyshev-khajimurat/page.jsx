@@ -2,10 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import Supreme2D from "@/components/Supreme2D";
-import RequestDemoModal from "@/components/RequestDemoModal";
 
 
 const Signature = () => (
@@ -43,10 +40,7 @@ const Signature = () => (
 
 
 export default function CertificatePage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
 
   return (
     <div className="min-h-screen bg-[#01091C] text-white overflow-x-hidden font-sans selection:bg-blue-500/30">
@@ -57,7 +51,6 @@ export default function CertificatePage() {
              <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-purple-600/10 rounded-full blur-[120px]" />
         </div>
 
-      <Header onOpenModal={openModal} />
       
       <main className="relative flex flex-col items-center justify-center min-h-screen py-24 px-4 sm:px-6 z-10 w-full">
         
@@ -185,8 +178,6 @@ export default function CertificatePage() {
 
       </main>
 
-      <Footer />
-      <RequestDemoModal isOpen={isModalOpen} onClose={closeModal} />
       
       <style jsx global>{`
         @keyframes draw {

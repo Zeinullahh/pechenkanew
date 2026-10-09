@@ -74,7 +74,7 @@ const policies = {
       { id: "misc", title: "17. Other Terms", items: [
         ["17.1 Severability", "If a provision is unenforceable, the remaining provisions continue to the extent allowed by law."],
         ["17.2 Agreement documents", "These Terms, the applicable Web Security Terms of Service and its DPA, and the customer’s order or service plan form the service agreement. If they conflict, the order controls its commercial specifics, the DPA controls personal-data processing, and the Terms of Service control other legal terms; these Terms of Use describe operational use. Mandatory law prevails. Privacy and Cookie Policies are notices and do not waive statutory rights."],
-        ["17.3 Assignment", "Assignment follows Terms of Service Section 11.9."],
+        ["17.3 Assignment", "Only Silence AI LLC may transfer the UAE service agreement, rights and obligations without separate customer consent, and only to a Silence AI Group Company as defined in Terms of Service Section 11.9. That Section governs advance written notice, obligations before and after transfer, customer assignments and data safeguards."],
       ] },
     ],
   },
@@ -143,7 +143,7 @@ const policies = {
       { id: "misc", title: "17. Прочие условия", items: [
         ["17.1 Делимость", "Если положение не имеет силы, остальные действуют в объёме, допускаемом законом."],
         ["17.2 Договорные документы", "Настоящие Условия, применимые Условия предоставления услуг Web Security с DPA, а также заказ или сервисный план составляют договор об услуге. При противоречии заказ определяет коммерческие условия, DPA — обработку персональных данных, а Условия предоставления услуг — иные юридические условия; настоящие Условия описывают использование услуги. Обязательные нормы закона имеют преимущество. Политики конфиденциальности и cookie являются уведомлениями и не отменяют законных прав."],
-        ["17.3 Уступка", "Уступка регулируется Разделом 11.9 Условий предоставления услуг."],
+        ["17.3 Передача договора", "Только ТОО «Silence AI» вправе без отдельного согласия клиента передать казахстанский договор, права и обязанности, и только Компании группы Silence AI по определению Раздела 11.9 Условий предоставления услуг. Этот Раздел регулирует предварительное письменное уведомление, обязательства до и после передачи, уступку со стороны клиента и гарантии в отношении данных."],
       ] },
     ],
   },

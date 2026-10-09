@@ -3,17 +3,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import Supreme2D from "@/components/Supreme2D";
-import RequestDemoModal from "@/components/RequestDemoModal";
 import { Download } from "lucide-react";
 
 export default function CertificatePage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
 
   const handlePrint = () => {
     window.print();
@@ -29,7 +23,6 @@ export default function CertificatePage() {
         </div>
 
       <div className="print:hidden">
-        <Header onOpenModal={openModal} />
       </div>
       
       <main className="relative flex flex-col items-center justify-center min-h-screen py-12 px-4 sm:px-6 z-10 w-full print:p-0 print:h-screen print:justify-center">
@@ -188,10 +181,6 @@ export default function CertificatePage() {
 
       </main>
 
-      <div className="print:hidden">
-        <Footer />
-      </div>
-      <RequestDemoModal isOpen={isModalOpen} onClose={closeModal} />
       
       {/* Global & Print Styles */}
       <style jsx global>{`

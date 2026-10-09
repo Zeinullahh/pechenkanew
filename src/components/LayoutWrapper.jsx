@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import Footer from "@/components/Footer";
+import SiteHeader from "@/components/SiteHeader";
 import ParallaxGlobe from "@/components/ParallaxGlobe";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import CookieConsent from "@/components/CookieConsent";
@@ -20,11 +21,14 @@ export default function LayoutWrapper({ children, initialLanguage }) {
 
   return (
     <LanguageProvider initialLanguage={initialLanguage}>
+      <div className="print:hidden">
+        <SiteHeader />
+      </div>
       {showParallaxGlobe && <ParallaxGlobe />}
       <div className={!isPolicyPage ? "default-content-wrapper pt-20" : "default-content-wrapper"}>
         {children}
       </div>
-      <div className={isPolicyPage ? "bg-black" : "relative w-full"}>
+      <div className={`${isPolicyPage ? "bg-black" : "relative w-full"} print:hidden`}>
         <Footer />
       </div>
       <CookieConsent />

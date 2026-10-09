@@ -62,21 +62,6 @@ const Footer = () => {
                   {t("footer.links.privacy", "Privacy Policy")}
                 </LocalizedLink>
               </div>
-
-
-              {/* SUPREME */}
-              <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right mt-2 sm:mt-0">Supreme:</div>
-              <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
-                <LocalizedLink href="/policies/supreme/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
-                  {t("footer.links.termsUse", "Terms of Use")}
-                </LocalizedLink>
-                <LocalizedLink href="/policies/supreme/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
-                  {t("footer.links.termsService", "Terms of Service")}
-                </LocalizedLink>
-                <LocalizedLink href="/policies/supreme/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
-                  {t("footer.links.privacy", "Privacy Policy")}
-                </LocalizedLink>
-              </div>
             </div>
           </div>
         </div>

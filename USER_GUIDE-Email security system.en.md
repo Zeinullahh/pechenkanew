@@ -386,10 +386,6 @@ Enter a forwarding address and select **Add**. Choose whether to **Keep a copy i
 
 Enter an address and select **Block sender**. Messages from it go to Spam automatically. Use **Unblock** to reverse the action.
 
-#### Security
-
-**Enable phishing detector** controls checks for known phishing domains, suspicious links, and domain risk for your account.
-
 #### Account management
 
 Change a saved account's display name and email or remove an inactive account from the list.

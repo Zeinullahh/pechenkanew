@@ -26,10 +26,9 @@ const INSTRUCTION_NAV_LABELS = {
   tr: { email: "E-posta Güvenliği", web: "Web Güvenliği", pentester: "Pentester", server: "Server Security", instructions: "Kılavuzlar" },
 };
 
-const Header = ({ onOpenModal, hideCta = false, allowedLocales }) => {
+const Header = ({ onOpenModal }) => {
   const pathname = usePathname();
   const isMainPage = pathname === "/";
-  const isPolicyPage = pathname?.startsWith("/policies");
   const [isCondensed, setIsCondensed] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -299,17 +298,15 @@ const Header = ({ onOpenModal, hideCta = false, allowedLocales }) => {
                   );
                 })}
                 <div className="pt-4 flex flex-col gap-4 w-full items-center">
-                  <LanguageSelector align="left" allowedLocales={allowedLocales ?? (isPolicyPage ? ["en", "ru"] : undefined)} />
-                  {!hideCta && !isPolicyPage && (
-                    <GlowButton
-                      onClick={() => {
-                        onOpenModal?.();
-                        setIsMobileMenuOpen(false);
-                      }}
-                    >
-                      {t("header.cta.loginRegister", "Login/Register")}
-                    </GlowButton>
-                  )}
+                  <LanguageSelector align="left" />
+                  <GlowButton
+                    onClick={() => {
+                      onOpenModal?.();
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    {t("header.cta.loginRegister", "Login/Register")}
+                  </GlowButton>
                 </div>
               </nav>
             </motion.div>
@@ -498,9 +495,9 @@ const Header = ({ onOpenModal, hideCta = false, allowedLocales }) => {
                       : undefined
                   }
                 >
-                  <LanguageSelector align={isDesktop ? "right" : "center"} allowedLocales={allowedLocales ?? (isPolicyPage ? ["en", "ru"] : undefined)} />
+                  <LanguageSelector align={isDesktop ? "right" : "center"} />
                 </div>
-                {isDesktop && !hideCta && !isPolicyPage && (
+                {isDesktop && (
                   <GlowButton onClick={onOpenModal}>
                     {t("header.cta.loginRegister", "Login/Register")}
                   </GlowButton>

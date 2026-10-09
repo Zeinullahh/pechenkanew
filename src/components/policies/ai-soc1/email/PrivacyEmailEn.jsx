@@ -39,6 +39,7 @@ export default function PrivacyEmailEn() {
         <p className="mb-4">
           <strong>1.2 Introduction:</strong> This Privacy Policy describes how Silence AI collects, uses, processes, and protects your personal information when you use the AI-CSD 1 Email Protector subsystem, including the secure webmail client. It does not apply to the Web Security &amp; Traffic Management component or any other Silence AI service operated on a separate domain.
         </p>
+        <p className="mb-4">This Privacy Policy is incorporated into the <a href="https://www.silenceai.net/en/policies/ai-csd/email/terms_of_service/">Email Security Terms of Service</a>. The <a href="https://www.silenceai.net/en/policies/ai-csd/email/terms_of_use/">Email Security Terms of Use</a> also applies. The DPA in the Terms of Service prevails where the documents conflict about processing customer data on the client organization&apos;s behalf.</p>
         <p className="mb-4">
           <strong>1.3 Controller Information:</strong> The applicable contracting company acts as controller for personal data relating to the customer account and administration of the service. UAE: Silence AI LLC, licence number 2539365.01, Shams Business Center, Sharjah Media City Free Zone, Al Messaned, Sharjah, UAE. Kazakhstan: ТОО &quot;Silence AI&quot;, БИН 250840004804, КАЗАХСТАН, АСТАНА обл, АСТАНА г, АЛМАТЫ мкр, Проспект Ракымжан Кошкарбаев, 10/1, G-3 блок; D6 этаж.
         </p>
@@ -85,13 +86,13 @@ export default function PrivacyEmailEn() {
           <strong>4.1 Email Provider Integration:</strong> In provider-connected mode, Microsoft incoming mail is fetched through Microsoft Graph and Gmail incoming mail is synchronized using OAuth-authorized IMAP; sending uses the respective authorized provider APIs. The provider remains the mail server. In hosted mode, the platform receives inbound mail and provides SMTP submission through its own mail infrastructure.
         </p>
         <p className="mb-4">
-          <strong>4.2 Security Scanning Services:</strong> Microsoft Defender: We use Microsoft Defender antivirus to scan email attachments for malware. URLScan.io: We submit email links to URLScan.io for security analysis.
+          <strong>4.2 Security Scanning Services:</strong> ClamAV may scan accessible email attachments for malware when the scanner is enabled and configured; not every attachment is necessarily scanned. URLScan.io: We submit eligible email links to URLScan.io for security analysis.
         </p>
         <p className="mb-4">
           <strong>4.3 URLScan.io Data Storage:</strong> When we submit links to URLScan.io: Scan results are stored in URLScan.io&apos;s database, No email account information, sender details, recipient information, email content, or attachments are shared, Only the URL itself is submitted for analysis.
         </p>
         <p className="mb-4">
-          <strong>4.4 Payment Processing:</strong> For services contracted with Silence AI LLC in the UAE, online purchases are handled by <a href="https://www.paddle.com" className="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">Paddle.com</a> as merchant of record. Paddle handles checkout and payment data under its <a href="https://www.paddle.com/legal/buyer-terms" className="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">Buyer Terms</a> and <a href="https://www.paddle.com/legal/privacy" className="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">Privacy Notice</a>. For services contracted with ТОО &quot;Silence AI&quot; in Kazakhstan, payments are handled by ТОО &quot;ФинCeрвисы&quot;. The applicable checkout or invoice identifies the payment recipient and terms. Silence AI may receive transaction status and limited billing details needed to administer the service. Users will be notified at least 6 months before any change of payment gateway provider under these terms.
+          <strong>4.4 Payment Processing:</strong> For services contracted with Silence AI LLC in the UAE, online purchases are handled by <a href="https://www.paddle.com" className="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">Paddle.com</a> as merchant of record. Paddle handles checkout and payment data under its <a href="https://www.paddle.com/legal/buyer-terms" className="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">Buyer Terms</a> and <a href="https://www.paddle.com/legal/privacy" className="text-blue-400 hover:text-blue-300 underline" target="_blank" rel="noopener noreferrer">Privacy Notice</a>. For services contracted with ТОО &quot;Silence AI&quot; in Kazakhstan, payments are handled by ТОО &quot;ФинCeрвисы&quot;. The applicable checkout or invoice identifies the payment recipient and terms. Silence AI may receive transaction status and limited billing details needed to administer the service. For a planned change of payment gateway provider, the initial notice must be emailed to every affected customer at the address used to sign in to Silence AI Email Security no later than three calendar months before the planned change date. If the customer has not responded within seven calendar days after that email is sent, Silence AI may also notify the customer organization&apos;s administrators through the Email Security administrative panel. This additional notice does not replace the initial email or change the three-calendar-month advance notice period, as set out in Section 3.3.3 of the Email Security Terms of Service.
         </p>
         <p>
           <strong>4.5 Cloud Infrastructure:</strong> We may use cloud service providers for data storage and processing. All third-party processors are contractually bound to protect your data in accordance with this Privacy Policy.
@@ -146,8 +147,8 @@ export default function PrivacyEmailEn() {
         <h2 className="text-2xl font-semibold mb-4">9. Cookies and Tracking Technologies</h2>
         <p>
           Our use of cookies is governed by our separate Cookie Policy, available at{" "}
-          <a href="/policies/ai-csd/email/cookies/" className="text-blue-400 hover:text-blue-300 underline">
-            /policies/ai-csd/email/cookies/
+          <a href="/en/policies/cookies/" className="text-blue-400 hover:text-blue-300 underline">
+            /en/policies/cookies/
           </a>. We primarily use technical cookies necessary for platform functionality.
         </p>
       </section>
@@ -191,7 +192,7 @@ export default function PrivacyEmailEn() {
             <strong>Domain-based phishing and fraud-risk checks:</strong> Known malicious domains, lookalike or homograph indicators and available reputation signals are checked when the combined detector is effectively on.
           </p>
           <p>
-            <strong>Attachment antivirus:</strong> Accessible attachments may be scanned for malware when the scanner is enabled and configured. Messages without attachments have no attachment content to scan.
+            <strong>Attachment antivirus:</strong> ClamAV may scan accessible attachments for malware when the scanner is enabled and configured. Messages without attachments have no attachment content to scan; not every attachment is necessarily scanned.
           </p>
         </div>
         <p className="mb-4">
@@ -206,7 +207,7 @@ export default function PrivacyEmailEn() {
           <li><strong>Unfiltered:</strong> Imported incoming mail, subject to its source-folder association.</li>
         </ul>
         <p className="mb-4">
-          When the combined phishing detector is effectively off for a mailbox, dedicated known-phishing-domain, domain fraud-risk and dangerous-link checks are skipped. Spoof, spam and eligible antivirus checks are separate and may continue, but no other check is guaranteed to catch the same threat. An employee setting may override an administrator&apos;s global-off setting, so that control alone does not disable these checks for every mailbox. This setting does not stop separately enabled AI assistant, reply-draft or automatic-response features. A folder label does not prove that every check ran.
+          When the combined phishing detector is effectively off for a mailbox, dedicated known-phishing-domain, domain fraud-risk and dangerous-link checks are skipped. Spoof, spam and eligible antivirus checks are separate and may continue, but no other check is guaranteed to catch the same threat. Only CMC administrators can change the phishing-detector setting; employees cannot disable it. This setting does not stop separately enabled AI assistant, reply-draft or automatic-response features. A folder label does not prove that every check ran.
         </p>
         <p>
           <strong>12.3 Administrator Access and Data Privacy:</strong> Email content may be accessible to the organization administrator that created or manages the user account within the CMC. Automated systems process it for the selected mail mode, workspace, applicable security checks and separately enabled optional AI assistance. The restriction on human Silence AI personnel access is stated in Section 13.
@@ -216,20 +217,20 @@ export default function PrivacyEmailEn() {
       <section id="human-access-prohibition">
         <h2 className="text-2xl font-semibold mb-4">13. Prohibition on Human Access to User Email Content</h2>
         <p className="mb-4">
-          Silence AI LLC strictly prohibits any and all human personnel — including, without limitation, employees, contractors, founders, engineers, support staff, security analysts, and any other human team members of Silence AI — from reading, accessing, reviewing, copying, or otherwise inspecting the content of any user email, whether in transit or at rest, for any purpose whatsoever.
+          Personnel of Silence AI LLC and ТОО &quot;Silence AI&quot;, including employees and contractors, must not read, access, copy or review client organization email content, attachments or metadata except under the limited exceptions below.
         </p>
         <p className="mb-4">
           Email scanning, classification, threat detection and optional AI drafting or automatic-response processing are carried out by automated systems and programmatic pipelines, with no human Silence AI personnel involved in processing or reviewing email content except under the stated exceptions.
         </p>
         <p>
-          The only exceptions to this prohibition are: (a) where Silence AI is compelled by a valid and binding legal order, court order, or mandatory regulatory requirement under applicable law, in which case Silence AI will, to the extent permitted by law, notify the affected user prior to disclosure; or (b) where the user has given explicit, specific, and informed written consent for a defined and limited purpose. Any access under these exceptions will be strictly minimized to what is legally required, logged, and subject to internal audit. This prohibition is a binding, contractual commitment to all users of the AI-CSD 1 platform.
+          The client-authorized exception requires prior explicit permission by email from an authorized representative of the client organization, specifying the purpose and scope of access. Access must stay within that scope, be logged and end when the authorized purpose is complete. Separately, access or disclosure required by a binding lawful demand is limited to what the law requires; we notify the client organization where legally permitted. This restriction is a contractual commitment under the Email Security Terms of Service and its DPA.
         </p>
       </section>
 
       <section id="changes">
         <h2 className="text-2xl font-semibold mb-4">14. Changes to This Privacy Policy</h2>
         <p>
-          We may update this Privacy Policy from time to time. Material changes will be communicated through: Email notification to registered users, Platform notifications, Updates posted on our website. Continued use of our services after changes become effective constitutes acceptance of the updated Privacy Policy.
+          Silence AI may amend this Privacy Policy without prior client approval. We will notify clients by email to the registered administrator address or by an in-service notification at least seven calendar days before the stated effective date. An email is sent when transmitted; an in-service notice is sent when made available in the account. We will publish the updated text and effective date. If the contracting company changes through an assignment permitted by the Terms of Service, the notice will identify the successor responsible for relevant data and its contact details. Clients may cancel future subscription renewals in the system or delete their account under the Terms of Service; an objection does not itself delay the change or require account deletion.
         </p>
       </section>
 
@@ -250,7 +251,7 @@ export default function PrivacyEmailEn() {
         </p>
       </section>
 
-      <p className="mt-8 text-sm text-gray-400">Last Updated: 10.08.2026</p>
+      <p className="mt-8 text-sm text-gray-400">Last Updated: 08.10.2026</p>
     </PolicyLayout>
   );
 }

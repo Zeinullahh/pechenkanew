@@ -1,7 +1,7 @@
-import { readFile } from "node:fs/promises";
+﻿import { readFile } from "node:fs/promises";
 import path from "node:path";
-import Header from "@/components/Header";
 import ServerSecurityGuide from "@/components/instructions/ServerSecurityGuide";
+import { getInstructionGuideContent } from "@/i18n/instructionGuides.mjs";
 
 const adminChapterRules = [
   { chapter: "2.", sections: ["2.2"] },
@@ -15,80 +15,51 @@ const workspaceChapterRules = [
   { chapter: "6.", sections: ["6.2", "6.3", "6.7", "6.8"] },
 ];
 
-const localeContent = {
-  en: {
-    file: "USER_GUIDE-Email security system.en.md",
-    title: "Email Security Instruction Guide",
-    product: "Email Security",
-    audience: {
-      "Overview": "All users",
-      "Contents": "All users",
-      "1. Platform overview": "All users",
-      "2. Account access": "All users",
-      "3. CMC — Silence 365 Email Visualizer": "Admin Console",
-      "4. Email Protector": "Email Workspace",
-      "5. WebSOC / AI-SOC Web": "Admin Console",
-      "6. Common issues": "All users",
-      "7. Security recommendations": "All users",
-      "8. Glossary": "All users",
-      "9. Contacting support": "All users",
-    },
-    ui: { sections: "Sections", topic: "topic", topics: "topics", overview: "Overview", reference: "Reference", closeSections: "Close sections", guideSelector: "Choose instruction system" },
-    views: [
-      { id: "admin", label: "Admin Console", description: "Manage company domains, employees, mail flow, protection settings, and monitoring", chapterRules: adminChapterRules },
-      { id: "workspace", label: "Email Workspace", description: "Read, send, search, and organize messages; manage folders and personal mailbox settings", chapterRules: workspaceChapterRules },
-    ],
-  },
-  ru: {
-    file: "USER_GUIDE-Email security system.md",
-    title: "Руководство по Email Security",
-    product: "Email Security",
-    audience: {
-      "Обзор": "Все пользователи",
-      "Содержание": "Все пользователи",
-      "1. О платформе": "Все пользователи",
-      "2. Доступ к учётной записи": "Все пользователи",
-      "3. \u043a\u043e\u043d\u0441\u043e\u043b\u044c \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0442\u043e\u0440\u0430 ? Silence 365 Email Visualizer": "Admin Console",
-      "4. Email Protector": "Почтовое пространство",
-      "5. WebSOC / AI-SOC Web": "Панель администратора",
-      "6. Типовые неполадки": "Все пользователи",
-      "7. Рекомендации по безопасности": "Все пользователи",
-      "8. Глоссарий": "Все пользователи",
-      "9. Обращение в поддержку": "Все пользователи",
-    },
-    ui: { sections: "Разделы", topic: "тема", topics: "темы", overview: "Обзор", reference: "Справка", closeSections: "Закрыть разделы", guideSelector: "Выберите систему инструкций" },
-    views: [
-      { id: "admin", label: "Admin Console", description: "Управляйте доменами компании, сотрудниками, почтовыми потоками, настройками защиты и мониторингом", chapterRules: adminChapterRules },
-      { id: "workspace", label: "Email Workspace", description: "Читайте, отправляйте, ищите и сортируйте письма; управляйте папками и настройками почтового ящика", chapterRules: workspaceChapterRules },
-    ],
-  },
+const viewLabels = {
+  en: { full: "Full guide", fullDescription: "All products and instructions", adminDescription: "Domains, employees, mail flow, protection, and monitoring", workspaceDescription: "Messages, folders, and mailbox settings" },
+  ja: { full: "ガイド全体", fullDescription: "すべての製品と手順", adminDescription: "ドメイン、従業員、メールの流れ、保護と監視", workspaceDescription: "メール、フォルダー、メールボックス設定" },
+  zh: { full: "完整指南", fullDescription: "所有产品与操作说明", adminDescription: "域名、员工、邮件流、防护与监控", workspaceDescription: "邮件、文件夹与邮箱设置" },
+  ko: { full: "전체 안내서", fullDescription: "모든 제품과 사용법", adminDescription: "도메인, 직원, 메일 흐름, 보호 및 모니터링", workspaceDescription: "메시지, 폴더 및 메일함 설정" },
+  fr: { full: "Guide complet", fullDescription: "Tous les produits et toutes les instructions", adminDescription: "Domaines, employés, flux, protection et surveillance", workspaceDescription: "Messages, dossiers et paramètres de la boîte" },
+  de: { full: "Gesamtes Handbuch", fullDescription: "Alle Produkte und Anleitungen", adminDescription: "Domains, Mitarbeiter, Mailfluss, Schutz und Überwachung", workspaceDescription: "Nachrichten, Ordner und Postfacheinstellungen" },
+  ru: { full: "Полное руководство", fullDescription: "Все продукты и инструкции", adminDescription: "Домены, сотрудники, почтовые потоки, защита и мониторинг", workspaceDescription: "Письма, папки и настройки почтового ящика" },
+  ar: { full: "الدليل الكامل", fullDescription: "جميع المنتجات والتعليمات", adminDescription: "النطاقات والموظفون وتدفق البريد والحماية والمراقبة", workspaceDescription: "الرسائل والمجلدات وإعدادات البريد" },
+  tr: { full: "Tam kılavuz", fullDescription: "Tüm ürünler ve talimatlar", adminDescription: "Etki alanları, çalışanlar, posta akışı, koruma ve izleme", workspaceDescription: "İletiler, klasörler ve posta kutusu ayarları" },
 };
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  return {
-    title: locale === "ru" ? "Руководство по Email Security - Silence AI" : "Email Security User Guide - Silence AI",
-  };
+  return { title: getInstructionGuideContent(locale, "email").metadataTitle };
 }
 
 export default async function Page({ params }) {
   const { locale } = await params;
-  const content = localeContent[locale] || localeContent.en;
-  const markdown = await readFile(path.join(process.cwd(), content.file), "utf8");
+  const content = getInstructionGuideContent(locale, "email");
+  const [markdown, anchorMarkdown] = await Promise.all([
+    readFile(path.join(process.cwd(), content.file), "utf8"),
+    readFile(path.join(process.cwd(), content.sourceFile), "utf8"),
+  ]);
+  const labels = viewLabels[content.locale];
+  const guideViews = [
+    { id: "full", label: labels.full, description: labels.fullDescription },
+    { id: "admin", label: "Admin Console", description: labels.adminDescription, chapterRules: adminChapterRules },
+    { id: "workspace", label: "Email Workspace", description: labels.workspaceDescription, chapterRules: workspaceChapterRules },
+  ];
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Header hideCta allowedLocales={["en", "ru"]} />
       <main className="flex grow flex-col px-4 pb-16">
         <ServerSecurityGuide
           markdown={markdown}
-          pageTitle={content.title}
-          productLabel={content.product}
+          anchorMarkdown={anchorMarkdown}
+          locale={content.locale}
+          direction={content.direction}
+          pageTitle={content.pageTitle}
+          productLabel="Email Security"
           chapterHeadingLevel={2}
-          chapterAudienceLabels={content.audience}
           uiLabels={content.ui}
-          guideViews={content.views}
-          defaultViewId="admin"
+          guideViews={guideViews}
+          defaultViewId="full"
         />
       </main>
     </div>

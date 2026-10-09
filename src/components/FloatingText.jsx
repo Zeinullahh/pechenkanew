@@ -1,19 +1,12 @@
 "use client";
 import React from "react";
 import { FloatingDock } from "./ui/floating-dock";
-import { IconBrandX, IconBrandYoutube, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons-react";
+import { IconBrandYoutube, IconBrandLinkedin } from "@tabler/icons-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function FloatingText({ className }) {
   const { t } = useLanguage();
   const links = [
-    {
-      title: "X",
-      icon: (
-        <IconBrandX className="h-full w-full text-black" />
-      ),
-      href: "https://x.com/silence_codes",
-    },
     {
       title: "LinkedIn",
       icon: (
@@ -26,14 +19,7 @@ export function FloatingText({ className }) {
       icon: (
         <IconBrandYoutube className="h-full w-full text-[#FF0000]" />
       ),
-      href: "https://www.youtube.com/@silence_codes",
-    },
-    {
-      title: "Instagram",
-      icon: (
-        <IconBrandInstagram className="h-full w-full text-[#E4405F]" />
-      ),
-      href: "https://www.instagram.com/silence.eng/",
+      href: "https://www.youtube.com/@silenceai_net",
     },
   ];
   const text1 = t("floatingText.headline", "Understand how hackers think");

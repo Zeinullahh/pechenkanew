@@ -2,16 +2,17 @@
 
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import EmailSecurityDocumentation from "@/components/instructions/EmailSecurityDocumentation";
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { useMessages } from "next-intl";
+import { useLocale, useMessages } from "next-intl";
 
 export default function AiSocDocumentationTabs() {
     const { t } = useLanguage();
+    const locale = useLocale();
     const messages = useMessages();
     const tabLabels = messages?.documentation?.tabs ?? {};
-    const placeholderCopy = messages?.documentation?.webSecurity?.placeholder ?? {};
     const tabs = useMemo(
         () => [
             { id: "web", label: tabLabels?.web ?? "Web Security" },
@@ -84,17 +85,13 @@ export default function AiSocDocumentationTabs() {
                         </motion.div>
                     ) : (
                         <motion.div
-                            key="web-placeholder"
+                            key="web-guide"
                             initial={{ opacity: 0, y: 12, filter: "blur(10px)" }}
                             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                             exit={{ opacity: 0, y: -8, filter: "blur(10px)" }}
                             transition={{ duration: 0.4, ease: "easeOut" }}
                         >
-                            <WebSecurityPlaceholder
-                                badge={placeholderCopy?.badge ?? "Web Security"}
-                                title={placeholderCopy?.title ?? "Documentation is coming soon"}
-                                description={placeholderCopy?.description ?? "We are preparing a detailed guide for configuring and protecting web applications. Check back soon — the materials will appear shortly."}
-                            />
+                            <WebSecurityResources badge={tabLabels?.web ?? "Web Security"} locale={locale} />
                         </motion.div>
                     )}
                 </AnimatePresence>
@@ -103,7 +100,7 @@ export default function AiSocDocumentationTabs() {
     );
 }
 
-function WebSecurityPlaceholder({ badge, title, description }) {
+function WebSecurityResources({ badge, locale }) {
     return (
         <div className="mx-auto w-full max-w-7xl">
             <div className="relative">
@@ -138,6 +135,12 @@ function WebSecurityPlaceholder({ badge, title, description }) {
                                     />
                                 </div>
                             </motion.div>
+                            <Link
+                                href={`/${locale}/instructions/web-security`}
+                                className="rounded-full border border-purple-300/30 px-5 py-2 text-sm font-medium text-purple-100 transition hover:border-purple-300/60 hover:bg-purple-400/10"
+                            >
+                                {badge} →
+                            </Link>
                         </div>
                     </Card>
                 </div>

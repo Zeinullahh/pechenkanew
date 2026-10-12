@@ -581,7 +581,8 @@ export default function HomeLanding() {
             { name: "QazCloud", amount: "$100", unit: "million", logo: "/partners/qazcloud.png" },
             { name: "KazakhCinema", amount: "$50", unit: "million", logo: "/partners/kazakhcinema.png" },
             { name: "Neuro Force", amount: "$8", unit: "million", logo: "/partners/neuroforce.png" },
-            { name: "Astana Innovations", amount: "$15", unit: "million", logo: "/partners/astana_innovations.png" },
+            { name: "Astana Innovations", category: "Government", logo: "/partners/astana_innovations.png" },
+            { name: "Akimat of Astana", category: "Government", logo: "/partners/akimat-astana.png" },
             { name: "JetQ Group", amount: "$50", unit: "million", logo: "/partners/jetq.png" },
             { name: "Samruk Kazyna", amount: "$88.6", unit: "billion", metric: "aum", logo: "/partners/samruk_kazyna.png" },
           ];
@@ -624,12 +625,18 @@ export default function HomeLanding() {
                       </div>
 
                       <div className="text-center mt-2">
-                        <div className="text-[10px] text-white/30 font-mono tracking-wider uppercase">
-                          {p.metric === "aum"
-                            ? t("homePartners.aum", "AUM (Assets Under Management)")
-                            : t("homePartners.marketCap", "Market Cap")}
-                        </div>
-                        <div className="text-sm font-medium text-white/80">{p.amount} {t(`homePartners.${p.unit}`, p.unit === "billion" ? "Billion" : "Million")}</div>
+                        {p.category ? (
+                          <div className="text-sm font-medium text-white/80">{p.category}</div>
+                        ) : (
+                          <>
+                            <div className="text-[10px] text-white/30 font-mono tracking-wider uppercase">
+                              {p.metric === "aum"
+                                ? t("homePartners.aum", "AUM (Assets Under Management)")
+                                : t("homePartners.marketCap", "Market Cap")}
+                            </div>
+                            <div className="text-sm font-medium text-white/80">{p.amount} {t(`homePartners.${p.unit}`, p.unit === "billion" ? "Billion" : "Million")}</div>
+                          </>
+                        )}
                       </div>
                     </div>
                   ))}

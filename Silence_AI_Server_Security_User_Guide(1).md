@@ -1,8 +1,8 @@
 # Silence AI Server Security User Guide
 
-This guide explains how to register a service, install and enroll native Server Security, configure protected access, and review security activity in the Silence AI admin panel.
+This guide explains how to identify a server, install and enroll native Server Security, configure protected access, and review security activity in the Silence AI admin panel.
 
-Registration, installation, enrollment, policy configuration, and live enforcement are separate states. A value displayed in the panel confirms what is saved or reported by the panel; it does not by itself prove that a running server has applied the value.
+A server entry, installation, enrollment, policy configuration, and live enforcement are separate states. A value displayed in the panel confirms what is saved or reported by the panel; it does not by itself prove that a running server has applied the value.
 
 ## Table of contents
 
@@ -10,7 +10,7 @@ Registration, installation, enrollment, policy configuration, and live enforceme
 
 - [2. Sign in and open Server Security](#2-sign-in-and-open-server-security)
 
-- [3. Register and connect a server](#3-register-and-connect-a-server)
+- [3. Identify the server](#3-identify-the-server)
 
 - [4. Install, enroll, and activate protection](#4-install-enroll-and-activate-protection)
 
@@ -35,9 +35,7 @@ Registration, installation, enrollment, policy configuration, and live enforceme
 
 ## 1. Before you begin
 
-You need a Silence AI account with Server Security access, the service domain or server name, and network access from the target server to Silence AI. Hosted registration also needs the destination IP and access to the website. Self-Hosted registration needs the upstream URL and an approved deployment procedure for your environment. Native installation needs administrator access to the target Linux server.
-
-Hosted traffic is usage-billed. Keep the account balance funded before relying on Hosted traffic protection; check the balance shown in the account billing area.
+You need a Silence AI account with Server Security access, the target server's name or address, network access from that server to Silence AI, and administrator access to the target Linux server.
 
 The current package selector exposes these native targets:
 
@@ -61,55 +59,15 @@ The package selector in your account is authoritative. Other operating systems a
 
 Each server row can expose **Install**, **Setup / recovery**, and **Open Security**. The available action depends on whether that server has been enrolled.
 
-## 3. Register and connect a server
+## 3. Identify the server
 
-### 3.1 Choose Hosted or Self-Hosted
+In **Servers**, locate the Linux server you intend to protect. Confirm its displayed name and address before selecting **Install**. If the server is absent, use your organization's approved server onboarding process to add it, then return to the server table.
 
-Select **Register new agent**, then choose **Hosted** or **Self-Hosted**.
-
-- **Hosted** registers a website for traffic protection through the Hosted service. It requires **Domain** and **IP Address**.
-
-- **Self-Hosted** registers a service that runs in your environment. It requires **Domain** and **Upstream URL**.
-
-Neither choice installs native Server Security or enrolls a Linux server automatically.
-
-### 3.2 Create the service record
-
-1. Select the deployment type and continue to the agent data step.
-
-2. Enter **Domain**. Use the host name without a path.
-
-3. For Hosted, enter **IP Address**. For Self-Hosted, enter **Upstream URL**.
-
-4. Select **Register**.
-
-This creates the service record. Registration does not by itself verify domain ownership, route traffic, install a native package, enroll a server, or activate native protection.
-
-### 3.3 Verify Hosted domain ownership and route traffic
-
-After Hosted registration, the panel displays both a DNS record and a website meta tag. They serve different purposes:
-
-- The displayed **A record** routes the domain to the Hosted protection service. It is not the ownership-verification method.
-
-- The displayed meta tag proves that you control the website.
-
-1. Add the supplied meta tag inside the website's HTML `<head>`.
-
-2. Save the website change and confirm that the existing website is publicly reachable at the registered domain.
-
-3. In the registration dialog, select **Verify Domain Ownership** and confirm **Verification successful!**.
-
-4. Add the displayed A record to the domain's DNS for Hosted traffic routing. Allow the change to propagate, then confirm the website remains reachable through the intended domain.
-
-Verification succeeds only when the service can retrieve the expected meta tag from the registered domain. Website meta-tag verification and DNS routing are separate operations; complete verification before changing DNS when the existing website must remain available for the verification check. If verification fails, check the domain spelling, public reachability, meta-tag placement, and proxy or CDN host handling, then select **Redo verification**. Successful verification does not by itself prove that traffic is already flowing through the protection service; confirm that the website is reachable through the configured domain and that Hosted billing prerequisites are met.
-
-### 3.4 Self-Hosted registration and deployment
-
-Create the Self-Hosted service record, then follow the approved deployment procedure for your environment. Native Server Security installation is a separate action in the server table.
+A server entry does not mean the native package is installed, the server is enrolled, or protection is active.
 
 ## 4. Install, enroll, and activate protection
 
-**Registered** means a service record exists. **Installed** means the native package was installed. **Enrolled** means the one-time enrollment code was accepted. These states do not independently prove that the security stack is installed, healthy, or enforcing policy.
+**Listed** means a server entry appears in the panel. **Installed** means the native package was installed. **Enrolled** means the one-time enrollment code was accepted. These states do not independently prove that the security stack is healthy or enforcing policy.
 
 ### 4.1 Install the native package
 
@@ -208,7 +166,7 @@ To disable server-access MFA, turn **Enable 2FA for access** off and save. To re
 
 ## 7. Use the Server Security console
 
-Open **Open Security** for a registered server. The available tabs are:
+Open **Open Security** for a server in the list. The available tabs are:
 
 | Tab | What it shows |
 

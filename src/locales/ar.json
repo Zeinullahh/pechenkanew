@@ -79,6 +79,7 @@
     }
   },
   "homePartners": {
+    "aum": "الأصول المدارة (AUM)",
     "title": "العملاء والشركاء",
     "subtitle": "المعروض هنا بعض من أبرز عملائنا وشركائنا، وهذه ليست قائمة كاملة.",
     "marketCap": "القيمة السوقية",
@@ -882,7 +883,6 @@
     "subtitleTail": "— ويتم التسليم بسرعة الشركات الناشئة.",
     "learnMore": "اعرف المزيد",
     "logos": {
-      "kmg": "KazMunayGas",
       "nak": "Nur Astana Kurylys"
     },
     "features": {

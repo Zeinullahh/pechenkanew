@@ -87,6 +87,7 @@
     }
   },
   "homePartners": {
+    "aum": "運用資産（AUM）",
     "title": "クライアントとパートナー",
     "subtitle": "ここでは主要なクライアントとパートナーの一部をご紹介しています。全一覧ではありません。",
     "marketCap": "時価総額",
@@ -954,7 +955,6 @@
     "subtitleTail": "— そしてスタートアップのスピードで出荷します。",
     "learnMore": "詳細を見る",
     "logos": {
-      "kmg": "KazMunayGas",
       "nak": "Nur Astana Kurylys"
     },
     "features": {

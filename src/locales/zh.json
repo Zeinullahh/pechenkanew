@@ -77,6 +77,7 @@
     }
   },
   "homePartners": {
+    "aum": "管理资产（AUM）",
     "title": "客户与合作伙伴",
     "subtitle": "这里展示的是我们部分领先客户与合作伙伴,并非完整名单。",
     "marketCap": "市值",
@@ -758,7 +759,6 @@
       }
     },
     "logos": {
-      "kmg": "KazMunayGas",
       "nak": "Nur Astana Kurylys"
     }
   },

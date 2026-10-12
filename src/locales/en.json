@@ -47,6 +47,7 @@
     }
   },
   "homePartners": {
+    "aum": "AUM (Assets Under Management)",
     "title": "Clients and Partners",
     "subtitle": "Featured here are some of our leading clients and partners; this is not a complete list.",
     "marketCap": "Market Cap",
@@ -2196,7 +2197,6 @@
       }
     },
     "logos": {
-      "kmg": "KazMunayGas",
       "nak": "Nur Astana Kurylis"
     }
   },

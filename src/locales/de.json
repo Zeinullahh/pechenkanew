@@ -77,6 +77,7 @@
     }
   },
   "homePartners": {
+    "aum": "Verwaltetes Vermögen (AUM)",
     "title": "Kunden und Partner",
     "subtitle": "Hier sind einige unserer führenden Kunden und Partner aufgeführt; dies ist keine vollständige Liste.",
     "marketCap": "Marktkapitalisierung",
@@ -919,7 +920,6 @@
     "subtitleTail": "— und geliefert mit Startup-Geschwindigkeit.",
     "learnMore": "Mehr erfahren",
     "logos": {
-      "kmg": "KazMunayGas",
       "nak": "Nur Astana Kurylys"
     },
     "features": {

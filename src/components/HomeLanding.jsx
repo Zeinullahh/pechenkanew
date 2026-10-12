@@ -577,12 +577,13 @@ export default function HomeLanding() {
         {/* Partners Section */}
         {(() => {
           const partners = [
-            { name: "Nur Astana Kurylys", capAmount: "$1.5", capUnit: "billion", logo: "/partners/nur-astana-kurylys.png" },
-            { name: "Kazatomprom", capAmount: "$20.774", capUnit: "billion", logo: "/partners/kazatomprom.png" },
-            { name: "Alibaba", capAmount: "$283.4", capUnit: "billion", logo: "/partners/alibaba.png" },
-            { name: "QazCloud", capAmount: "$100", capUnit: "million", logo: "/partners/qazcloud.png" },
-            { name: "KazakhCinema", capAmount: "$50", capUnit: "million", logo: "/partners/kazakhcinema.png" },
-            { name: "Neuro Force", capAmount: "$8", capUnit: "million", logo: "/partners/neuroforce.png" },
+            { name: "Nur Astana Kurylys", amount: "$1.5", unit: "billion", logo: "/partners/nur-astana-kurylys.png" },
+            { name: "QazCloud", amount: "$100", unit: "million", logo: "/partners/qazcloud.png" },
+            { name: "KazakhCinema", amount: "$50", unit: "million", logo: "/partners/kazakhcinema.png" },
+            { name: "Neuro Force", amount: "$8", unit: "million", logo: "/partners/neuroforce.png" },
+            { name: "Astana Innovations", amount: "$15", unit: "million", logo: "/partners/astana_innovations.png" },
+            { name: "JetQ Group", amount: "$50", unit: "million", logo: "/partners/jetq.png" },
+            { name: "Samruk Kazyna", amount: "$88.6", unit: "billion", metric: "aum", logo: "/partners/samruk_kazyna.png" },
           ];
 
           const allPartners = [...partners, ...partners, ...partners, ...partners];
@@ -623,8 +624,12 @@ export default function HomeLanding() {
                       </div>
 
                       <div className="text-center mt-2">
-                        <div className="text-[10px] text-white/30 font-mono tracking-wider uppercase">{t("homePartners.marketCap", "Market Cap")}</div>
-                        <div className="text-sm font-medium text-white/80">{p.capAmount} {t(`homePartners.${p.capUnit}`, p.capUnit === "billion" ? "Billion" : "Million")}</div>
+                        <div className="text-[10px] text-white/30 font-mono tracking-wider uppercase">
+                          {p.metric === "aum"
+                            ? t("homePartners.aum", "AUM (Assets Under Management)")
+                            : t("homePartners.marketCap", "Market Cap")}
+                        </div>
+                        <div className="text-sm font-medium text-white/80">{p.amount} {t(`homePartners.${p.unit}`, p.unit === "billion" ? "Billion" : "Million")}</div>
                       </div>
                     </div>
                   ))}

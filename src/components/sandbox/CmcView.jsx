@@ -116,24 +116,6 @@ export default function CmcView({ state, dispatch }) {
         >
           <Menu size={30} strokeWidth={2} />
         </button>
-        <nav aria-label={localize("CMC navigation")}>
-          <button type="button" onClick={() => setModal("instructions")}>
-            <HomepageText fallback="Instructions" />
-          </button>
-          <button type="button" onClick={() => setModal("web")}>
-            <HomepageText fallback="Web Security" />
-          </button>
-          <button
-            type="button"
-            className="active"
-            onClick={() => {
-              setShowThreats(false);
-              setModal(null);
-            }}
-          >
-            <HomepageText fallback="Email Security" />
-          </button>
-        </nav>
         <button
           type="button"
           className="cmc-profile"

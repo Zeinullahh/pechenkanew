@@ -52,13 +52,6 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import {
   Table,
   TableBody,
   TableCell,
@@ -446,50 +439,6 @@ function PaymentForm({ dispatch }) {
 }
 
 /* =========================================================================
-   7. Navbar — 1:1 match of websoc/CMC/src/components/Navbar.jsx
-   ========================================================================= */
-function Navbar() {
-  return (
-    <div className="flex justify-center items-center w-full">
-      <NavigationMenu>
-        <NavigationMenuList className="flex gap-4">
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              asChild
-              className={`${navigationMenuTriggerStyle()} bg-transparent text-white hover:bg-white/10`}
-            >
-              <a href="https://silence.codes/en/instructions/ai-soc/" target="_blank" rel="noopener noreferrer">
-                <HomepageText fallback="Instructions" />
-              </a>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              asChild
-              className={`${navigationMenuTriggerStyle()} bg-transparent text-white hover:bg-white/10`}
-            >
-              <a href="https://web-soc.silenceai.net/" target="_blank" rel="noopener noreferrer">
-                <HomepageText fallback="Web Security" />
-              </a>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              asChild
-              className={`${navigationMenuTriggerStyle()} bg-transparent text-white hover:bg-white/10`}
-            >
-              <a href="https://email-soc.silenceai.net/" target="_blank" rel="noopener noreferrer">
-                <HomepageText fallback="Email Security" />
-              </a>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-    </div>
-  );
-}
-
-/* =========================================================================
    8. UserProfileMenu — 1:1 match of websoc/CMC/src/components/UserProfileMenu.jsx
    ========================================================================= */
 function UserProfileMenu({ state, dispatch }) {
@@ -674,7 +623,6 @@ export default function WebsocHeader({ state, dispatch }) {
             </Dialog>
           </div>
 
-          <Navbar />
           <UserProfileMenu state={state} dispatch={dispatch} />
         </div>
       </div>

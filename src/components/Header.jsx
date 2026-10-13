@@ -41,7 +41,6 @@ const Header = ({ onOpenModal }) => {
 
   const sectionItems = useMemo(() => [
     { key: "pricing", label: t("header.nav.pricing", "Pricing") },
-    { key: "compliance", label: t("header.nav.compliance", "Compliance") },
     { key: "resources", label: t("header.nav.partners", "Clients/Partners") },
   ], [t]);
 
@@ -147,11 +146,10 @@ const Header = ({ onOpenModal }) => {
       isActive: isMainPage && activeSectionId === "pricing",
     },
     {
-      key: "compliance",
-      label: t("header.nav.compliance", "Compliance"),
-      onClick: isMainPage ? () => scrollToSection("compliance") : undefined,
-      href: !isMainPage ? "/?section=compliance" : undefined,
-      isActive: isMainPage && activeSectionId === "compliance",
+      key: "articles",
+      label: t("header.nav.articles", "Articles"),
+      href: "/articles",
+      isActive: pathname === "/articles" || pathname.startsWith("/articles/"),
     },
     {
       key: "resources",

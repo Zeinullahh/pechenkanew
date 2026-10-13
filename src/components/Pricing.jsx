@@ -937,7 +937,7 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
         </h2>
 
         {/* Architecture / Product Selector */}
-        <div className="relative z-10 mb-12 flex flex-col items-center justify-center sm:mb-16">
+        <div className="relative z-10 mb-8 flex flex-col items-center justify-center sm:mb-10">
           {/* Top Text */}
           <p className="text-purple-200/80 text-xs sm:text-sm uppercase tracking-[0.2em] mb-8 font-medium text-center">
             {t("aiSocPricing.intro", "AI-SOC is a lineup of standalone cybersecurity systems")}
@@ -997,6 +997,18 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
               ))}
             </div>
           </div>
+        </div>
+
+        <div className="relative z-10 mb-8 flex flex-col items-center text-center">
+          <p className="text-sm font-medium text-white/70 sm:text-base">
+            <HomepageText fallback="Request special pricing" />
+          </p>
+          <a
+            href="mailto:info@silenceai.net"
+            className="mt-3 inline-flex rounded-full border border-blue-300/30 bg-blue-400/10 px-5 py-2.5 text-sm font-semibold text-blue-200 transition-colors hover:border-blue-300/60 hover:bg-blue-400/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+          >
+            info@silenceai.net
+          </a>
         </div>
 
         {(visiblePlans.length > 0 || productType === "server" || productType === "pentester") && (

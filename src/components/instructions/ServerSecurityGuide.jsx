@@ -126,7 +126,7 @@ function Block({ block }) {
   return <p className="break-words leading-7 text-slate-300">{inline(block.text)}</p>;
 }
 
-export default function ServerSecurityGuide({ markdown, anchorMarkdown, locale = "en", direction = "ltr", pageTitle = "Server Security Instruction Guide", productLabel = "Server Security", chapterHeadingLevel = 1, chapterAudienceLabels = {}, uiLabels = {}, guideViews = [], defaultViewId }) {
+export default function ServerSecurityGuide({ markdown, anchorMarkdown, locale = "en", direction = "ltr", pageTitle = "Server Security Instruction Guide", productLabel = "Server Security", chapterHeadingLevel = 1, chapterAudienceLabels = {}, uiLabels = {}, guideViews = [], defaultViewId, topContent }) {
   const labels = {
     sections: "Sections",
     topic: "topic",
@@ -262,6 +262,7 @@ export default function ServerSecurityGuide({ markdown, anchorMarkdown, locale =
           <h1 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
             {pageTitle}
           </h1>
+          {topContent}
           <div className="mt-4 h-px w-full bg-gradient-to-r from-blue-500/45 via-emerald-500/15 to-transparent" />
           {guideViews.length > 0 && (
             <div className="mt-6 flex flex-col items-center" role="tablist" aria-label={labels.guideSelector}>

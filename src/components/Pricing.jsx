@@ -12,6 +12,7 @@ import { competitiveComparisons } from "@/lib/competitiveComparison";
 import GlassSurface from "@/components/GlassSurface";
 import InteractiveSandbox from "@/components/sandbox/InteractiveSandbox";
 import { PentestEmbed } from "../../window_in_window/src/embed/pentest/PentestEmbed";
+import EmailWorkspaceStoreLinks from "./EmailWorkspaceStoreLinks";
 
 
 // Microsoft 365 Pricing Data
@@ -1040,6 +1041,8 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
           )}
           </div>
         )}
+
+        {productType === "email" && <EmailWorkspaceStoreLinks className="mt-10" />}
 
         {productType === "server" && <><ServerSecurityComparison /><InteractiveSandbox product="server" /></>}
 

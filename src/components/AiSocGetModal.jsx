@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import GlassSurface from "./GlassSurface";
+import EmailWorkspaceStoreLinks from "./EmailWorkspaceStoreLinks";
 
 const PRODUCT_LINKS = {
     emailWorkspace: "https://kz.mail.silenceai.net",
@@ -183,6 +184,8 @@ const AiSocGetModal = ({ isOpen, onClose }) => {
                                             </span>
                                         </button>
                                     ))}
+
+                                    <EmailWorkspaceStoreLinks stacked className="mt-3" />
 
                                     <div className="my-3 h-px w-full bg-white/10" />
 

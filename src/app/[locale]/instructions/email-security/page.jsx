@@ -1,6 +1,7 @@
 ﻿import { readFile } from "node:fs/promises";
 import path from "node:path";
 import ServerSecurityGuide from "@/components/instructions/ServerSecurityGuide";
+import EmailWorkspaceStoreLinks from "@/components/EmailWorkspaceStoreLinks";
 import { getInstructionGuideContent } from "@/i18n/instructionGuides.mjs";
 
 const adminChapterRules = [
@@ -56,6 +57,7 @@ export default async function Page({ params }) {
           direction={content.direction}
           pageTitle={content.pageTitle}
           productLabel="Email Security"
+          topContent={<EmailWorkspaceStoreLinks className="mt-6" />}
           chapterHeadingLevel={2}
           uiLabels={content.ui}
           guideViews={guideViews}

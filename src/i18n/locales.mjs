@@ -7,7 +7,10 @@ export const supportedLocales = [
   "de",
   "ru",
   "ar",
-  "tr"
+  "tr",
+  "pl",
+  "ms",
+  "id"
 ];
 
 export const defaultLocale = "en";

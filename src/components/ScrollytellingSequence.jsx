@@ -8,10 +8,10 @@ import { FRAME_COUNT, getFrameVariant, getPreloadedFrameUrl } from "@/components
 const LAST_FRAME = FRAME_COUNT - 1;
 const FINAL_STORY_FRAME = 117;
 const PREFETCH_RADIUS = 4;
-const MOBILE_FRAME_STEP = 3;
-const MOBILE_PREFETCH_AHEAD = 4;
-const MOBILE_PREFETCH_BEHIND = 1;
+const MOBILE_PREFETCH_AHEAD = 6;
+const MOBILE_PREFETCH_BEHIND = 3;
 const MAX_CACHED_FRAMES = 12;
+const MAX_CACHED_MOBILE_FRAMES = 20;
 const FINAL_FRAME_PREFETCH_POINT = 0.86;
 
 const FRAME_RANGES = [
@@ -42,10 +42,7 @@ function getFrameForProgress(progress) {
     )
   );
 
-  // Weak phones cannot decode every source frame during a fast swipe.
-  return getFrameVariant() === "mobile"
-    ? Math.min(LAST_FRAME, Math.round(frame / MOBILE_FRAME_STEP) * MOBILE_FRAME_STEP)
-    : frame;
+  return frame;
 }
 
 function getFrameKey(frameIndex, variant = getFrameVariant()) {
@@ -230,9 +227,9 @@ export default function ScrollytellingSequence({ children }) {
   });
 
   const trimFrameCache = useCallback((centerFrame) => {
-    if (framesRef.current.size <= MAX_CACHED_FRAMES) return;
-
     const variant = getFrameVariant();
+    const cacheLimit = variant === "mobile" ? MAX_CACHED_MOBILE_FRAMES : MAX_CACHED_FRAMES;
+    if (framesRef.current.size <= cacheLimit) return;
     const framesByDistance = [...framesRef.current.keys()].sort((firstKey, secondKey) => {
       const [firstVariant, firstIndex] = firstKey.split(":");
       const [secondVariant, secondIndex] = secondKey.split(":");
@@ -241,7 +238,7 @@ export default function ScrollytellingSequence({ children }) {
         - Math.abs(Number(secondIndex) - centerFrame);
     });
 
-    framesByDistance.slice(MAX_CACHED_FRAMES).forEach((frameIndex) => {
+    framesByDistance.slice(cacheLimit).forEach((frameIndex) => {
       framesRef.current.delete(frameIndex);
     });
   }, []);
@@ -362,11 +359,11 @@ export default function ScrollytellingSequence({ children }) {
     if (getFrameVariant() === "mobile") {
       const direction = centerFrame >= previousFrame ? 1 : -1;
       for (let offset = 0; offset <= MOBILE_PREFETCH_AHEAD; offset += 1) {
-        const frameIndex = centerFrame + direction * offset * MOBILE_FRAME_STEP;
+        const frameIndex = centerFrame + direction * offset;
         if (frameIndex >= 0 && frameIndex < FRAME_COUNT) loadFrame(frameIndex).catch(() => {});
       }
       for (let offset = 1; offset <= MOBILE_PREFETCH_BEHIND; offset += 1) {
-        const frameIndex = centerFrame - direction * offset * MOBILE_FRAME_STEP;
+        const frameIndex = centerFrame - direction * offset;
         if (frameIndex >= 0 && frameIndex < FRAME_COUNT) loadFrame(frameIndex).catch(() => {});
       }
       return;

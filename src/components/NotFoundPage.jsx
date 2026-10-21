@@ -15,6 +15,9 @@ const copy = {
   zh: { title: "页面未找到", description: "页面地址可能已更改，或链接有误。请返回首页。", home: "返回首页", help: "需要帮助？", contact: "请通过以下邮箱联系我们", close: "关闭" },
   ar: { title: "الصفحة غير موجودة", description: "ربما تغير عنوان الصفحة أو كان الرابط غير صحيح. يمكنك العودة إلى الصفحة الرئيسية.", home: "العودة إلى الرئيسية", help: "هل تحتاج إلى مساعدة؟", contact: "يرجى التواصل معنا عبر", close: "إغلاق" },
   tr: { title: "Sayfa bulunamadı", description: "Adres değişmiş veya bağlantı hatalı olabilir. Ana sayfaya dönebilirsiniz.", home: "Ana sayfaya dön", help: "Yardıma mı ihtiyacınız var?", contact: "Lütfen bize şu adresten ulaşın", close: "Kapat" },
+  pl: { title: "Nie znaleziono strony", description: "Adres mógł się zmienić lub link może być nieprawidłowy. Wróć na stronę główną.", home: "Strona główna", help: "Potrzebujesz pomocy?", contact: "Napisz do nas na", close: "Zamknij" },
+  ms: { title: "Halaman tidak ditemui", description: "Alamat mungkin telah berubah atau pautan mungkin tidak betul. Kembali ke halaman utama.", home: "Kembali ke laman utama", help: "Perlukan bantuan?", contact: "Hubungi kami di", close: "Tutup" },
+  id: { title: "Halaman tidak ditemukan", description: "Alamat mungkin berubah atau tautannya salah. Kembali ke halaman utama.", home: "Kembali ke beranda", help: "Butuh bantuan?", contact: "Hubungi kami di", close: "Tutup" },
 };
 
 const localePattern = new RegExp(`^/(${supportedLocales.join("|")})(?:/|$)`);

@@ -64,6 +64,27 @@ const contentByLocale = {
     server: { pageTitle: "Server Security Kullanım Kılavuzu", metadataTitle: "Server Security Kullanıcı Kılavuzu - Silence AI" },
     web: { pageTitle: "Web Security Kullan\u0131m K\u0131lavuzu", metadataTitle: "Web Security Kullan\u0131c\u0131 K\u0131lavuzu - Silence AI" },
   },
+  pl: {
+    ui: { sections: "Sekcje", topic: "temat", topics: "tematy", overview: "Przegląd", reference: "Materiały", closeSections: "Zamknij sekcje", guideSelector: "Wybierz instrukcję" },
+    email: { pageTitle: "Instrukcja Email Security", metadataTitle: "Instrukcja użytkownika Email Security - Silence AI" },
+    pentester: { pageTitle: "Instrukcja AI-CSD Pentester", metadataTitle: "Instrukcja użytkownika AI-CSD Pentester - Silence AI" },
+    server: { pageTitle: "Instrukcja Server Security", metadataTitle: "Instrukcja użytkownika Server Security - Silence AI" },
+    web: { pageTitle: "Instrukcja Web Security", metadataTitle: "Instrukcja użytkownika Web Security - Silence AI" },
+  },
+  ms: {
+    ui: { sections: "Bahagian", topic: "topik", topics: "topik", overview: "Gambaran keseluruhan", reference: "Rujukan", closeSections: "Tutup bahagian", guideSelector: "Pilih panduan" },
+    email: { pageTitle: "Panduan Email Security", metadataTitle: "Panduan Pengguna Email Security - Silence AI" },
+    pentester: { pageTitle: "Panduan AI-CSD Pentester", metadataTitle: "Panduan Pengguna AI-CSD Pentester - Silence AI" },
+    server: { pageTitle: "Panduan Server Security", metadataTitle: "Panduan Pengguna Server Security - Silence AI" },
+    web: { pageTitle: "Panduan Web Security", metadataTitle: "Panduan Pengguna Web Security - Silence AI" },
+  },
+  id: {
+    ui: { sections: "Bagian", topic: "topik", topics: "topik", overview: "Ikhtisar", reference: "Referensi", closeSections: "Tutup bagian", guideSelector: "Pilih panduan" },
+    email: { pageTitle: "Panduan Email Security", metadataTitle: "Panduan Pengguna Email Security - Silence AI" },
+    pentester: { pageTitle: "Panduan AI-CSD Pentester", metadataTitle: "Panduan Pengguna AI-CSD Pentester - Silence AI" },
+    server: { pageTitle: "Panduan Server Security", metadataTitle: "Panduan Pengguna Server Security - Silence AI" },
+    web: { pageTitle: "Panduan Web Security", metadataTitle: "Panduan Pengguna Web Security - Silence AI" },
+  },
 };
 
 const englishFiles = {
@@ -76,7 +97,7 @@ const englishFiles = {
 export function getInstructionGuideContent(locale, guide) {
   const resolvedLocale = supportedLocales.includes(locale) ? locale : "en";
   const localized = contentByLocale[resolvedLocale];
-  const file = resolvedLocale === "en"
+  const file = ["en", "pl", "ms", "id"].includes(resolvedLocale)
     ? englishFiles[guide]
     : guide === "email" && resolvedLocale === "ru"
       ? "USER_GUIDE-Email security system.md"

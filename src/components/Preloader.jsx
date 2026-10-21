@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { supportedLocales } from "@/i18n/locales.mjs";
-import { FRAME_COUNT, getFrameVariant, preloadStoryFrames } from "@/components/storyFrames";
+import { getFrameVariant, getRequiredFrameIndices, preloadStoryFrames } from "@/components/storyFrames";
 
 const loadingLabels = {
   en: "Loading experience…",
@@ -17,8 +17,7 @@ const loadingLabels = {
   zh: "正在加载网站…",
 };
 
-const MIN_DISPLAY_MS = 3400;
-const HARD_TIMEOUT_MS = 20000;
+const MIN_DISPLAY_MS = 1400;
 const FADE_OUT_MS = 700;
 
 const preloaderStyles = `
@@ -65,8 +64,6 @@ export default function Preloader() {
     const reveal = () => {
       if (finished) return;
       finished = true;
-      window.clearTimeout(hardTimeout);
-
       const wait = Math.max(0, MIN_DISPLAY_MS - (Date.now() - startedAt));
       fadeTimer = window.setTimeout(() => {
         setPhase("fading");
@@ -77,59 +74,43 @@ export default function Preloader() {
       }, wait);
     };
 
-    // The homepage must stay covered until every story frame is available.
-    const hardTimeout = isHome ? null : window.setTimeout(reveal, HARD_TIMEOUT_MS);
-
-    const waitForWindowLoad = new Promise((resolve) => {
-      if (document.readyState === "complete") {
-        resolve();
-        return;
-      }
-
-      window.addEventListener("load", resolve, { once: true });
-    });
-
-    const waitForFonts = document.fonts?.ready
-      ? document.fonts.ready.catch(() => undefined)
-      : Promise.resolve();
-
-    // Lazy content manages its own loading state. The entry loader only waits for
-    // assets needed to render the page users can see immediately.
-    const eagerImages = Array.from(document.images).filter(
-      (image) => image.loading !== "lazy" && !image.complete
-    );
-    const imageTasks = eagerImages.map(
-      (image) => new Promise((resolve) => {
-        if (image.complete) {
-          resolve();
-          return;
-        }
-
-        image.addEventListener("load", resolve, { once: true });
-        image.addEventListener("error", resolve, { once: true });
-      })
-    );
-
-    const tasks = [waitForWindowLoad, waitForFonts, ...imageTasks];
-    let settledCount = 0;
+    // The homepage opens after its scroll frames and default email pricing UI
+    // are ready. Below-the-fold images, fonts, and the YouTube player do not gate it.
     let loadedFrames = 0;
     let framesReady = !isHome;
-    const total = tasks.length + (isHome ? FRAME_COUNT : 0);
+    let pricingReady = !isHome;
+    const variant = isHome ? getFrameVariant() : null;
+    const requiredFrameCount = isHome ? getRequiredFrameIndices().length : 0;
     const updateProgress = () => {
-      if (!cancelled) setProgress(Math.round(((settledCount + loadedFrames) / total) * 100));
+      if (!cancelled) {
+        setProgress(isHome
+          ? Math.round(((loadedFrames + Number(pricingReady)) / (requiredFrameCount + 1)) * 100)
+          : 100);
+      }
     };
     const checkReady = () => {
-      if (!cancelled && framesReady && settledCount === tasks.length) reveal();
+      if (!cancelled && framesReady && pricingReady) reveal();
     };
 
     if (isHome) {
-      const frameRequest = preloadStoryFrames(getFrameVariant(), (count) => {
+      const markPricingReady = () => {
+        pricingReady = true;
+        updateProgress();
+        checkReady();
+      };
+      if (document.documentElement.dataset.emailPricingReady === "true") {
+        markPricingReady();
+      } else {
+        window.addEventListener("email-pricing-ready", markPricingReady, { once: true });
+      }
+
+      const frameRequest = preloadStoryFrames(variant, (count) => {
         loadedFrames = count;
         updateProgress();
       });
-      unsubscribeFrames = frameRequest.unsubscribe;
       frameRequest.promise.then(() => {
         framesReady = true;
+        updateProgress();
         checkReady();
       }).catch((loadError) => {
         if (!cancelled) {
@@ -137,22 +118,19 @@ export default function Preloader() {
           setError(true);
         }
       });
+      unsubscribeFrames = () => {
+        frameRequest.unsubscribe();
+        window.removeEventListener("email-pricing-ready", markPricingReady);
+      };
+    } else {
+      updateProgress();
+      reveal();
     }
-
-    tasks.forEach((task) => {
-      Promise.resolve(task).finally(() => {
-        if (cancelled) return;
-        settledCount += 1;
-        updateProgress();
-        checkReady();
-      });
-    });
 
     return () => {
       cancelled = true;
       unsubscribeFrames();
       window.clearTimeout(activateTimer);
-      window.clearTimeout(hardTimeout);
       window.clearTimeout(fadeTimer);
       window.clearTimeout(hiddenTimer);
       document.body.style.overflow = "";

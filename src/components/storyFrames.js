@@ -12,6 +12,10 @@ function frameKey(variant, index) {
   return `${variant}:${index}`;
 }
 
+export function getRequiredFrameIndices() {
+  return Array.from({ length: FRAME_COUNT }, (_, index) => index);
+}
+
 export function getFrameUrl(index, variant = getFrameVariant()) {
   return variant === "mobile"
     ? `/frames/mobile/frame-${index + 1}.webp`
@@ -23,10 +27,11 @@ export function getPreloadedFrameUrl(index, variant = getFrameVariant()) {
 }
 
 export function preloadStoryFrames(variant, onProgress) {
+  const requiredFrames = getRequiredFrameIndices();
   let request = inFlight.get(variant);
   if (!request) {
     const listeners = new Set();
-    const loadedCount = () => Array.from({ length: FRAME_COUNT }, (_, index) =>
+    const loadedCount = () => requiredFrames.map((index) =>
       cachedUrls.has(frameKey(variant, index))
     ).filter(Boolean).length;
     request = { listeners, loadedCount, promise: null };
@@ -35,8 +40,8 @@ export function preloadStoryFrames(variant, onProgress) {
     let nextIndex = 0;
     const failures = [];
     const worker = async () => {
-      while (nextIndex < FRAME_COUNT) {
-        const index = nextIndex++;
+      while (nextIndex < requiredFrames.length) {
+        const index = requiredFrames[nextIndex++];
         const key = frameKey(variant, index);
         if (cachedUrls.has(key)) continue;
 

@@ -2,17 +2,26 @@
 import HomepageText, { useHomepageText } from "@/components/HomepageText";
 
 
-import React, { useState, useMemo } from "react";
-import { CybersecurityLamp } from "./CybersecurityLamp";
+import React, { useState, useMemo, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { convertPrice, formatPrice } from "@/lib/currency";
 import CurrencySelector from "./CurrencySelector";
 import { motion } from "framer-motion";
 import { competitiveComparisons } from "@/lib/competitiveComparison";
 import GlassSurface from "@/components/GlassSurface";
-import InteractiveSandbox from "@/components/sandbox/InteractiveSandbox";
-import { PentestEmbed } from "../../window_in_window/src/embed/pentest/PentestEmbed";
 import EmailWorkspaceStoreLinks from "./EmailWorkspaceStoreLinks";
+import DeferredContent from "./DeferredContent";
+
+const InteractiveSandbox = dynamic(() => import("@/components/sandbox/InteractiveSandbox"), { ssr: false });
+const PentestEmbed = dynamic(
+  () => import("../../window_in_window/src/embed/pentest/PentestEmbed").then((module) => module.PentestEmbed),
+  { ssr: false }
+);
+const CybersecurityLamp = dynamic(
+  () => import("./CybersecurityLamp").then((module) => module.CybersecurityLamp),
+  { ssr: false }
+);
 
 
 // Microsoft 365 Pricing Data
@@ -850,6 +859,14 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
   const [hoveredProductType, setHoveredProductType] = useState(null);
   const highlightedProductType = hoveredProductType ?? productType;
 
+  useEffect(() => {
+    document.documentElement.dataset.emailPricingReady = "true";
+    window.dispatchEvent(new Event("email-pricing-ready"));
+    return () => {
+      delete document.documentElement.dataset.emailPricingReady;
+    };
+  }, []);
+
 
   const billingLabels = useMemo(
     () => ({
@@ -924,6 +941,28 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
   return (
     <section className="pricing-glass-stage pricing-glass-stage--viewport w-screen pt-12 sm:pt-16 relative px-4 sm:px-6 lg:px-8">
       <div className="container relative z-[1] mx-auto max-w-7xl">
+        <div className="mx-auto mb-12 w-full max-w-5xl sm:mb-16">
+          <div className="aspect-video overflow-hidden rounded-2xl border border-white/15 bg-black shadow-[0_24px_80px_rgba(0,0,0,0.45)] sm:rounded-3xl">
+            <iframe
+              className="h-full w-full"
+              src="https://www.youtube-nocookie.com/embed/KE7Dt7tsJgk"
+              title="Silence AI presentation video"
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+          <a
+            href="https://youtu.be/KE7Dt7tsJgk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 block text-center text-sm text-white/55 underline-offset-4 transition-colors hover:text-white focus-visible:underline"
+          >
+            Watch on YouTube
+          </a>
+        </div>
+
         {/* Pricing Title - Simplified and smaller */}
         <h2
           className="font-bold text-white text-center mb-8 sm:mb-12 leading-none"
@@ -1042,22 +1081,30 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
           </div>
         )}
 
-        {productType === "email" && <EmailWorkspaceStoreLinks className="mt-10" />}
+        {productType === "email" && (
+          <DeferredContent minHeight={160}>
+            <EmailWorkspaceStoreLinks className="mt-10" />
+          </DeferredContent>
+        )}
 
-        {productType === "server" && <><ServerSecurityComparison /><InteractiveSandbox product="server" /></>}
+        {productType === "server" && <DeferredContent minHeight={600}><ServerSecurityComparison /><InteractiveSandbox product="server" /></DeferredContent>}
 
-        {(productType === "web" || productType === "email" || productType === "pentester") && <ProductComparison productType={productType} />}
+        {(productType === "web" || productType === "email" || productType === "pentester") && (
+          <DeferredContent minHeight={460}>
+            <ProductComparison productType={productType} />
+          </DeferredContent>
+        )}
 
-        {productType === "pentester" && <PentestEmbed height="min(76vh, 700px)" />}
+        {productType === "pentester" && <DeferredContent minHeight={650}><PentestEmbed height="min(76vh, 700px)" /></DeferredContent>}
 
         {productType === "web" && (
           <>
-            <InteractiveSandbox product="web" />
+            <DeferredContent minHeight={650}><InteractiveSandbox product="web" /></DeferredContent>
           </>
         )}
         {productType === "email" && (
           <>
-            <InteractiveSandbox />
+            <DeferredContent minHeight={650}><InteractiveSandbox /></DeferredContent>
             {showLamp && (
               <div className="relative left-1/2 -translate-x-1/2 w-[100vw] h-[220px] max-w-none overflow-visible z-10">
                 <CybersecurityLamp

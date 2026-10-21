@@ -110,6 +110,9 @@ export const metadata = {
       'ru': '/ru',
       'ar': '/ar',
       'tr': '/tr',
+      'pl': '/pl',
+      'ms': '/ms',
+      'id': '/id',
     },
   },
   other: {

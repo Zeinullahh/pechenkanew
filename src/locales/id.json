@@ -1,0 +1,3433 @@
+{
+  "homeCompliance": {
+    "badge": "Kepatuhan Regulasi",
+    "title": "Dirancang untuk Kepatuhan Global",
+    "subtitle": "Continuous live compliance coverage",
+    "statusLabel": "Patuh",
+    "supremeOnly": "Supreme only",
+    "cards": {
+      "gdpr": {
+        "desc": "The world's most stringent privacy and security law, governing personal data of all EU residents. Sets the global benchmark for data protection worldwide."
+      },
+      "ukGdpr": {
+        "desc": "Post-Brexit UK equivalent of EU GDPR, retained in domestic law. Substantively identical in scope and obligations — EU GDPR compliance extends to UK GDPR."
+      },
+      "ccpa": {
+        "desc": "Registration uses Google OAuth, which transmits profile data (name, email, Google ID) to our servers — this is personal data under CCPA. Users retain full rights to know, access, and delete their account data at any time."
+      },
+      "pipeda": {
+        "desc": "Applies to any commercial organization handling Canadian residents' data regardless of where the company is based. As we scale globally, personal data from Canadian users is handled with the same minimal-collection standards."
+      },
+      "ksaPdpl": {
+        "desc": "Saudi Personal Data Protection Law enforced by SDAIA. Governs collection, processing, and cross-border transfer of personal data."
+      },
+      "uaePdpl": {
+        "desc": "UAE Personal Data Protection Law regulating personal data processing across the mainland and free zones, including DIFC and ADGM."
+      },
+      "qatarPdpl": {
+        "desc": "Qatar's Personal Data Privacy Protection Law administered by the Ministry of Transport and Communications."
+      },
+      "bahrainPdpl": {
+        "desc": "Bahrain Personal Data Protection Law regulated by the Personal Data Protection Authority (PDPA), aligned with international standards."
+      },
+      "kuwaitDp": {
+        "desc": "Kuwait's Electronic Communications and Transactions Law establishing data protection obligations for electronic service providers."
+      },
+      "omanPdpl": {
+        "desc": "Oman Personal Data Protection Law establishing comprehensive rights for data subjects and obligations for controllers and processors."
+      },
+      "privacyByDesign": {
+        "desc": "Supreme's code scanning runs entirely on your local machine — no source code is ever transmitted or processed externally. Account data (Google OAuth profile) is handled separately."
+      }
+    },
+    "soc2": {
+      "badge": "SOC 2",
+      "title": "Audit and readiness reports",
+      "description": "Independent assurance and readiness documentation are available for review."
+    }
+  },
+  "homePartners": {
+    "aum": "AUM (Assets Under Management)",
+    "title": "Klien dan Mitra",
+    "subtitle": "Featured here are some of our leading clients and partners; this is not a complete list.",
+    "marketCap": "Market Cap",
+    "billion": "Miliar",
+    "million": "Juta"
+  },
+  "supremeInstructions": {
+    "light": "Light",
+    "videoInstructions": "video instructions",
+    "lightVideoTitle": "Supreme Light Video Instructions",
+    "openYoutube": "Open video on YouTube"
+  },
+  "aiSocModal": {
+    "title": "Choose a system to log in to",
+    "emailSecurity": "Login/Register to Email security",
+    "webSecurity": "Web Security",
+    "getOnlyOffice": "Get OnlyOffice",
+    "subtitle": "Select the service you want to access.",
+    "emailWorkspace": "Email Workspace",
+    "emailAdminPanel": "Email Admin Panel",
+    "pentester": "Pentester",
+    "serverSecurity": "Server Security",
+    "close": "Close",
+    "emailPrompt": "Enter your email address to check your account.",
+    "emailLabel": "Email address",
+    "continue": "Continue",
+    "unregistered": "Your account is not registered. Please contact",
+    "backToSystems": "Back to systems",
+    "onlyOfficeRedirectNote": "You will be redirected to the official OnlyOffice website to download it."
+  },
+  "emailSecurityModal": {
+    "title": "Email Security",
+    "subtitle": "Select how you would like to access your account",
+    "webmail": {
+      "title": "Webmail",
+      "desc": "Access your inbox directly"
+    },
+    "admin": {
+      "title": "Admin Console",
+      "desc": "Manage security settings and users"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Keamanan siber kini tidak lagi",
+      "titleHighlight": "rumit atau mahal",
+      "subtitle": "Bangun dengan aman. Luncurkan dengan percaya diri."
+    },
+    "systems": {
+      "title": "Sistem",
+      "cta": "Lihat detail",
+      "aiSoc": {
+        "title": "AI-CSD",
+        "desc": "Managed detection & response system powered and operated by AI. Used to prevent web and email attacks",
+        "badge": "Langganan"
+      },
+      "sithub": {
+        "title": "Sithub",
+        "desc": "Self-hosted GitHub alternative with built-in security scanning. All repositories and code analysis stay within your network.",
+        "badge": "Langganan"
+      },
+      "supreme": {
+        "title": "Supreme",
+        "desc": "Local code vulnerability scanner for VS Code. Analyze code without sending it to external servers.",
+        "badge": "Ekstensi"
+      }
+    },
+    "services": {
+      "title": "Layanan pengembangan khusus",
+      "subtitle": "AI agents, integrations, and full-cycle software delivery with security baked in from day one.",
+      "cta": "Lihat layanan",
+      "cardsTitle": {
+        "agents": "Agents",
+        "integrations": "Integrations",
+        "delivery": "Delivery"
+      },
+      "cards": {
+        "agents": "Production-grade AI agents with guardrails, RAG, and secure connectors.",
+        "integrations": "Vendor-neutral integrations with your stack, IAM, and data governance.",
+        "delivery": "Full-cycle delivery with reliability SLOs, observability, and security reviews."
+      }
+    },
+    "resources": {
+      "title": "Artikel pilihan",
+      "subtitle": "Silence AI is one of few private companies that have government level intelligence.",
+      "viewAll": "Lihat semua artikel"
+    },
+    "compliance": {
+      "title": "Dirancang untuk kepatuhan global"
+    },
+    "story": {
+      "ariaLabel": "AI-powered cybersecurity department overview",
+      "scene1": {
+        "line1": "AI-Powered",
+        "line2": "Cybersecurity Department",
+        "support": "Autonomous protection. One command layer."
+      },
+      "scene2": {
+        "line1": "Four AI systems.",
+        "line2": "Four vectors of protection.",
+        "email": "Email",
+        "web": "Web",
+        "server": "Server",
+        "pentest": "AI penetration testing"
+      },
+      "scene3": {
+        "line1": "One AI manager",
+        "line2": "above them all.",
+        "support": "Ask. Investigate. Block. Respond."
+      },
+      "scene4": {
+        "line1": "Your security posture.",
+        "line2": "In your hands.",
+        "support": "One interface. Every protection vector."
+      },
+      "loading": "Memuat ikhtisar keamanan…"
+    }
+  },
+  "documentation": {
+    "tabs": {
+      "web": "Web Security",
+      "email": "Email Security"
+    },
+    "system": {
+      "sections": "Sections",
+      "topics": "Topics",
+      "tableOfContents": "Table of contents",
+      "close": "Close"
+    },
+    "pricingMicrosoft": {
+      "business": "Business",
+      "enterprise": "Enterprise",
+      "withoutTeams": "Plans without Teams",
+      "withTeams": "With Teams",
+      "yearly": "Yearly",
+      "monthly": "Monthly",
+      "planHighlights": "Plan highlights",
+      "userMonth": "user/month",
+      "paidYearly": "paid yearly",
+      "paidMonthly": "paid monthly",
+      "plans": {
+        "businessPremium": {
+          "title": "Silence 365 Business Max"
+        },
+        "businessStandard": {
+          "title": "Silence 365 Business Standard"
+        },
+        "businessBasic": {
+          "title": "Microsoft 365 Business Basic (no Teams)"
+        },
+        "enterpriseE3": {
+          "title": "Silence 365 Enterprise 300+"
+        },
+        "enterpriseE5": {
+          "title": "Silence 365 Enterprise 500+"
+        }
+      },
+      "features": {
+        "secureAccess300": "Unlimited number of users (based on organization size)",
+        "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
+        "adminConsole": "Admin console with domain-wide email management and bulk operations",
+        "aiThreatDetection": "AI-powered threat detection with automatic email categorization",
+        "securityPipeline": "Multi-layered email security pipeline (SPF, DKIM, DMARC, spam, malware, phishing)",
+        "securityFolders": "Email sorting into security folders (Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed)",
+        "linkScannerAv": "Advanced link scanner and antivirus protection for attachments",
+        "emailFlowVisualization": "Email flow visualization across the domain/organization with comprehensive filters",
+        "bulkManageDelete": "Ability to manage and delete emails across all users in the domain",
+        "customFoldersRules": "Custom folders with auto-filtering rules (sender, domain, subject)",
+        "storage10gb": "10 GB secure mailbox storage per user",
+        "storage5tb": "5 TB secure mailbox storage per user",
+        "storage10tb": "10 TB secure mailbox storage per user",
+        "multiAccountSupport": "Multi-account support (Gmail/Outlook integration)",
+        "support247": "24/7 email and web support",
+        "fullTextSearch": "Email search with full-text capabilities",
+        "aiAssistedCategorization": "AI-assisted email categorization into security folders",
+        "basicFiltering": "Custom folders with basic filtering rules",
+        "prioritySupport": "Priority support with faster response times",
+        "dedicatedAM": "Dedicated account management",
+        "unlimitedUsers": "Supports unlimited users"
+      }
+    },
+    "emailSecurity": {
+      "title": "Email Security System",
+      "subtitle": "Documentation | Version 1.0",
+      "description": "How to configure and operate the corporate email security platform.",
+      "chapters": [
+        {
+          "id": "getting-started",
+          "title": "Getting started",
+          "label": "Getting started",
+          "description": "Initial onboarding steps plus domain and DNS configuration in the CMC Admin Panel.",
+          "sections": [
+            {
+              "id": "admin-setup",
+              "title": "For administrators",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "To onboard the system:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Sign in to the CMC Admin Panel at admin.silenceai.net using Google or Microsoft OAuth.",
+                    "Register your company domain.",
+                    "Verify domain ownership through DNS.",
+                    "Configure security records (SPF, DKIM, DMARC).",
+                    "Create email accounts for employees."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "After configuration, users can access the webmail client and send protected messages."
+                }
+              ]
+            },
+            {
+              "id": "user-onboarding",
+              "title": "For end users",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "To start working with email:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Get your credentials from the administrator.",
+                    "Sign in to mail.silenceai.net with email/password or OAuth.",
+                    "Send your first message using the \"Compose\" button.",
+                    "Review the system folders that automatically categorize messages by security level."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Incoming mail is automatically scanned for threats and routed into folders."
+                }
+              ]
+            },
+            {
+              "id": "add-domain",
+              "title": "Add a domain",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Domain management starts in the CMC Admin Panel."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Open the CMC Admin Panel.",
+                    "Click \"Add Domain\".",
+                    "Enter the domain name without www (for example, company.com).",
+                    "Click \"Add\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "The system issues a verification token to confirm domain ownership."
+                }
+              ]
+            },
+            {
+              "id": "verify-domain",
+              "title": "Verify domain ownership",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "After adding a domain, prove that you own it."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Copy the TXT record from the CMC:"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "_cmc-verification.company.com TXT \"cmc-verify-abc123xyz\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Add the record to your domain's DNS settings.",
+                    "Wait for the automatic check (every 5 minutes) or click \"Check Now\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Verification can take up to 48 hours. After success, the domain status becomes verified."
+                }
+              ]
+            },
+            {
+              "id": "configure-spf",
+              "title": "Configure the SPF record",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "SPF defines which servers may send email on behalf of your domain."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "In the CMC open \"DNS Configuration\" → \"SPF\".",
+                    "Click \"Check Current SPF\" to review existing records.",
+                    "Click \"Generate SPF Record\".",
+                    "Copy the suggested record:"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "company.com TXT \"v=spf1 include:_spf.silenceai.net -all\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Add the record to DNS."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "If an SPF record already exists (for example, for Gmail), place our include before the final -all qualifier."
+                }
+              ]
+            },
+            {
+              "id": "configure-dkim",
+              "title": "Generate DKIM keys",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DKIM adds a cryptographic signature to your mail."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "In the CMC open \"DNS Configuration\" → \"DKIM\".",
+                    "Click \"Generate DKIM Keys\".",
+                    "The system creates a key pair (the private key stays on the server, the public key is for DNS).",
+                    "Copy the DNS record:"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "silenceai._domainkey.company.com TXT \"v=DKIM1; k=rsa; p=MIIBIjAN...\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Add the record to DNS.",
+                    "Run \"Verify DKIM\" to confirm."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "configure-dmarc",
+              "title": "Set up DMARC policy",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DMARC defines what to do with messages that fail SPF or DKIM checks."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "In the CMC open \"DNS Configuration\" → \"DMARC\".",
+                    "Select a policy:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "quarantine — move to spam (recommended)",
+                    "reject — drop the message"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Click \"Generate DMARC Record\".",
+                    "Copy the record:"
+                  ]
+                },
+                {
+                  "type": "code",
+                  "content": "_dmarc.company.com TXT \"v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@silenceai.net\""
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Add the record to DNS."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Start with quarantine, monitor reports for 1-2 weeks, then switch to reject if desired."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "user-management",
+          "title": "User management",
+          "label": "User management",
+          "description": "Creating and maintaining mail accounts.",
+          "sections": [
+            {
+              "id": "create-account",
+              "title": "Create an email account",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Open the \"Email Accounts\" section in the CMC.",
+                    "Click \"Create Account\".",
+                    "Fill out the fields:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Email: john.doe@company.com",
+                    "First and last name",
+                    "Password (minimum 8 characters, uppercase, lowercase, digit, special character)",
+                    "Storage quota: pick a mailbox size"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Click \"Create\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "The user can sign in to webmail immediately."
+                }
+              ]
+            },
+            {
+              "id": "suspend-activate",
+              "title": "Suspend or reactivate an account",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Find the user in \"Email Accounts\".",
+                    "In the Actions menu choose:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Suspend — pause access (the user cannot sign in)",
+                    "Activate — restore access"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Confirm the action."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "change-quota",
+              "title": "Change storage quota",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Find the user in the list.",
+                    "Choose \"Edit Quota\" in the Actions menu.",
+                    "Select a new storage size.",
+                    "Save changes."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Changes take effect immediately."
+                }
+              ]
+            },
+            {
+              "id": "delete-account",
+              "title": "Delete an account",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Find the user in the list.",
+                    "Choose \"Delete\" in the Actions menu.",
+                    "Confirm the deletion."
+                  ]
+                },
+                {
+                  "type": "callout",
+                  "intent": "warning",
+                  "content": "Warning: All user data will be removed permanently."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mail-operations",
+          "title": "Mail operations",
+          "label": "Mail operations",
+          "description": "Everyday actions in the webmail client.",
+          "sections": [
+            {
+              "id": "send-letter",
+              "title": "Send a message",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "In webmail click \"Compose\".",
+                    "Fill in:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "To: recipient address",
+                    "Subject: email subject",
+                    "Body: message text (rich formatting available)"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Attach files if needed (up to 25 MB per file).",
+                    "Click \"Send\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Messages are automatically signed with DKIM and delivered."
+                }
+              ]
+            },
+            {
+              "id": "custom-folder",
+              "title": "Create a custom folder with rules",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Custom folders automatically sort messages by the rules you define."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "In the sidebar click \"Create Folder\".",
+                    "Enter a folder name (for example, \"Clients\").",
+                    "Click \"Add Rules\".",
+                    "Configure the rule:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Filter by: Sender Domain",
+                    "Match mode: Contains",
+                    "Value: client.com"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Enable \"Apply to existing emails\" if you want to reprocess current messages.",
+                    "Click \"Create\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "All new mail from *@client.com will go to the \"Clients\" folder automatically."
+                }
+              ]
+            },
+            {
+              "id": "add-whitelist",
+              "title": "Add a sender to the whitelist",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "If a message was flagged as spam by mistake:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Open the email in the SPAM folder.",
+                    "Click \"Not Spam\" → \"Add to Whitelist\".",
+                    "Choose:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Whitelist sender email",
+                    "Whitelist sender domain"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Confirm the action."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Future messages from this sender will no longer be sent to spam."
+                }
+              ]
+            },
+            {
+              "id": "email-signature",
+              "title": "Set up an email signature",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Open Settings → \"Email Signature\".",
+                    "Enable \"Enable signature\".",
+                    "Enter the signature text in the editor.",
+                    "Click \"Save\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "The signature is added to every outgoing message automatically."
+                }
+              ]
+            },
+            {
+              "id": "vacation-responder",
+              "title": "Configure an auto-reply",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Open Settings → \"Vacation Responder\".",
+                    "Enable \"Enable vacation responder\".",
+                    "Set the start and end dates.",
+                    "Enter the auto-reply text.",
+                    "Check \"Reply once per sender\" to send a single response to each sender.",
+                    "Click \"Save\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "The auto-responder runs during the selected dates and shuts off automatically."
+                }
+              ]
+            },
+            {
+              "id": "forwarding",
+              "title": "Configure forwarding",
+              "body": [
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Open Settings → \"Email Forwarding\".",
+                    "Click \"Add Forwarding Address\".",
+                    "Enter the forwarding email.",
+                    "Enable \"Keep copy in inbox\" if you want to retain a copy.",
+                    "Click \"Save\"."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "All incoming email will be forwarded to the selected address."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "domain-administration",
+          "title": "Domain administration",
+          "label": "Domain administration",
+          "description": "Analytics and bulk mail operations for the domain.",
+          "sections": [
+            {
+              "id": "view-activity",
+              "title": "Review domain mail activity",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Administrators can view every message for every user in the domain."
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Open CMC → \"Email Activity\".",
+                    "Use the filters:"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "By user",
+                    "By folder (Secure, Spam, Phishing)",
+                    "By date",
+                    "By threat type"
+                  ]
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Use the search bar for subject or sender lookups."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "bulk-delete",
+              "title": "Delete messages for all users",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "If a malicious message was sent to everyone:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Open \"Email Activity\".",
+                    "Locate the message via filters or search.",
+                    "Select the messages to remove.",
+                    "Click \"Delete Selected\".",
+                    "Confirm the bulk deletion."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "The message is removed from every user mailbox."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "concepts",
+          "title": "Concepts",
+          "label": "Concepts",
+          "description": "Key platform concepts and security flows.",
+          "sections": [
+            {
+              "id": "system-overview",
+              "title": "System overview",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Email Security System is a platform that protects corporate email from cyber threats."
+                },
+                {
+                  "type": "list",
+                  "title": "Components:",
+                  "items": [
+                    "CMC Admin Panel — administrator console for domains, users, and DNS settings.",
+                    "Webmail Client — employee mailbox with automatic threat protection.",
+                    "Infrastructure Services — SMTP server and security pipeline for message processing."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "security-stack",
+              "title": "Security pipeline",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Every inbound message passes through six layers of protection:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "Layer 0: Phishing Domain Check — evaluate sender domains against known phishing databases.",
+                    "Layer 1: Spoof Detection — validate SPF, DKIM, and DMARC alignment.",
+                    "Layer 2: Spam Detection — analyse content with RSPAMD for spam traits.",
+                    "Layer 3: Link Scanner — scan URLs with URLScan.io for malicious links.",
+                    "Layer 4: Antivirus — inspect attachments with Bitdefender.",
+                    "Layer 5: AI Phishing Detection — analyse message content with AI for phishing signals."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "If a threat is detected, processing stops and the message is placed in the corresponding folder."
+                }
+              ]
+            },
+            {
+              "id": "system-folders",
+              "title": "System folders",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Messages are routed to folders based on the inspection results:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Unfiltered — new mail before processing (temporary).",
+                    "Secure — messages that passed all checks.",
+                    "Possibly Spoofed — sender authenticity is suspicious.",
+                    "SPAM — spam messages.",
+                    "Dangerous Links — messages containing malicious URLs.",
+                    "Malware — messages with infected attachments.",
+                    "Possibly Phishing — phishing indicators detected.",
+                    "Sent — sent mail."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "A single message may appear in multiple folders (for example, SPAM and Possibly Spoofed)."
+                }
+              ]
+            },
+            {
+              "id": "custom-folders",
+              "title": "Custom folders",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Users can create custom folders with automatic filtering rules."
+                },
+                {
+                  "type": "list",
+                  "title": "Filtering rules:",
+                  "items": [
+                    "By sender domain",
+                    "By sender email",
+                    "By subject",
+                    "By sender name"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "title": "Match modes:",
+                  "items": [
+                    "Contains",
+                    "Equals",
+                    "Starts with",
+                    "Ends with"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Rules can be applied to existing mail (retroactive filtering)."
+                }
+              ]
+            },
+            {
+              "id": "spf",
+              "title": "SPF (Sender Policy Framework)",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "SPF is a DNS record that defines servers allowed to send mail for the domain."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Format:"
+                },
+                {
+                  "type": "code",
+                  "content": "v=spf1 include:_spf.silenceai.net -all"
+                },
+                {
+                  "type": "list",
+                  "title": "Mechanisms:",
+                  "items": [
+                    "include:domain — allow servers from the referenced domain",
+                    "ip4:x.x.x.x — allow a specific IP address",
+                    "-all — reject everything else",
+                    "~all — mark everything else as suspicious"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "SPF check: the recipient verifies that the sender IP is authorised in the domain's SPF record. If the check fails, the message is flagged as suspicious."
+                }
+              ]
+            },
+            {
+              "id": "dkim",
+              "title": "DKIM (DomainKeys Identified Mail)",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DKIM adds a cryptographic signature to confirm the message was sent by the domain owner and was not altered in transit."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "How it works:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "When sending, the server signs the message with a private key and adds a DKIM-Signature header.",
+                    "The recipient fetches the public key from DNS and verifies the signature."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "DNS record:"
+                },
+                {
+                  "type": "code",
+                  "content": "selector._domainkey.domain.com TXT \"v=DKIM1; k=rsa; p=public_key\""
+                },
+                {
+                  "type": "paragraph",
+                  "content": "The private key is stored on the server in encrypted form and never shared with clients."
+                }
+              ]
+            },
+            {
+              "id": "dmarc",
+              "title": "DMARC (Domain-based Message Authentication)",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "DMARC defines the policy for messages that fail SPF or DKIM."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Format:"
+                },
+                {
+                  "type": "code",
+                  "content": "_dmarc.domain.com TXT \"v=DMARC1; p=quarantine; rua=mailto:reports@domain.com\""
+                },
+                {
+                  "type": "list",
+                  "title": "Parameters:",
+                  "items": [
+                    "p=quarantine — deliver to spam",
+                    "p=reject — reject the message",
+                    "p=none — monitor only",
+                    "rua= — address for aggregate reports"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "DMARC check: the recipient confirms the message passes SPF or DKIM with aligned domains. If not, the configured policy applies."
+                }
+              ]
+            },
+            {
+              "id": "attachments",
+              "title": "Attachments and antivirus",
+              "body": [
+                {
+                  "type": "list",
+                  "title": "Restrictions:",
+                  "items": [
+                    "Maximum file size: 25 MB",
+                    "All file types are supported"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Attachment scanning: every file is scanned by Bitdefender. If malware is detected, the message moves to the Malware folder and the attachment is blocked."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Storage: attachments are kept per message on the server. Infected files are moved to quarantine."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "access-control",
+          "title": "Access control",
+          "label": "Access control",
+          "description": "User roles and access protection.",
+          "sections": [
+            {
+              "id": "user-roles",
+              "title": "User roles",
+              "body": [
+                {
+                  "type": "list",
+                  "title": "Admin",
+                  "items": [
+                    "Full access to the CMC Admin Panel",
+                    "Domain and DNS management",
+                    "Create and manage users",
+                    "View all domain mail",
+                    "Perform bulk mail operations"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "title": "Subordinate",
+                  "items": [
+                    "Limited CMC access",
+                    "View the user list",
+                    "Access only their own mail"
+                  ]
+                },
+                {
+                  "type": "list",
+                  "title": "User",
+                  "items": [
+                    "Access to the webmail client",
+                    "Work with their own mail",
+                    "Configure personal settings"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "role-assignment",
+              "title": "Role assignment",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Auto-admin: the first user who signs in via OAuth automatically becomes an Admin."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Creating Subordinate users: Admins add subordinate accounts in the CMC under \"User Management\"."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Creating User accounts: Admins create mailboxes under \"Email Accounts\"; the accounts receive the User role."
+                }
+              ]
+            },
+            {
+              "id": "authentication",
+              "title": "Authentication",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "OAuth 2.0: Google or Microsoft sign-in with PKCE for security.",
+                    "Email/password: credentials issued by the administrator in the CMC.",
+                    "JWT tokens: access tokens last 7 days and are stored in httpOnly cookies.",
+                    "Token refresh: access tokens renew automatically via refresh tokens; once the refresh token expires, sign-in is required again."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "access-protection",
+              "title": "Access protection",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "Rate limiting: maximum 5 sign-in attempts per 15 minutes from a single IP.",
+                    "Session management: active sessions stored in the database and validated on each request.",
+                    "Audit logging: critical administrator and user actions are recorded."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quotas-limits",
+          "title": "Quotas and limits",
+          "label": "Quotas and limits",
+          "description": "Storage, sending, and user quotas.",
+          "sections": [
+            {
+              "id": "storage-quota",
+              "title": "Storage quota",
+              "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Each user gets a mailbox quota. At 100% usage the user cannot send or receive mail."
+                }
+              ]
+            },
+            {
+              "id": "sending-limits",
+              "title": "Sending limits",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "Business Basic: 500 messages per user per day",
+                    "Business Standard: 1000 messages per day",
+                    "Business Premium: 2000 messages per day",
+                    "Enterprise: 10000 messages per day"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "user-limit",
+              "title": "User limit",
+              "body": [
+                {
+                  "type": "list",
+                  "items": [
+                    "Business plans: based on organization size",
+                    "Enterprise plans: unlimited users"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "supreme": {
+    "title": "Supreme",
+    "hero": {
+      "badge": "Supreme · VSCode Extension",
+      "title": "Local Code Vulnerability Scanner",
+      "description": "Scan your code locally without exposing it to external servers. Fast, comprehensive vulnerability detection right in your editor."
+    },
+    "video": {
+      "title": "Installation & Usage tutorial (5 minutes)",
+      "cardTitle": "How to Use Supreme",
+      "cardSubtitle": "Installation & Setup Guide"
+    },
+    "pricing": {
+      "title": "Simple Pricing",
+      "subtitle": "Choose the plan that works best for you",
+      "monthly": {
+        "title": "Monthly",
+        "description": "Flexible, cancel anytime"
+      },
+      "month": "month",
+      "subscribe": "Subscribe Now",
+      "saveBadge": "Save 30%",
+      "yearly": {
+        "title": "Yearly",
+        "description": "Best value"
+      },
+      "year": "year",
+      "perMonthApprox": "~{value} per month"
+    },
+    "languages": {
+      "title": "Supported Languages",
+      "subtitle": "Comprehensive security scanning for all major programming languages"
+    },
+    "cicd": {
+      "title": "CI/CD & Container Scanning",
+      "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
+    },
+    "features": {
+      "title": "Powerful Features",
+      "subtitle": "Everything you need for secure code development",
+      "items": [
+        "Code analyzer runs locally, the code is not being exposed to external servers",
+        "Finds vulnerable packages vulnerabilities within the project",
+        "Finds Misconfigurations, and Secrets",
+        "Can scan for CI/CD misconfigurations and vulnerabilities"
+      ]
+    },
+    "screenshots": [
+      {
+        "title": "Very straightforward interface"
+      },
+      {
+        "title": "Well structured security reports"
+      },
+      {
+        "title": "History of scans"
+      }
+    ],
+    "lightbox": {
+      "close": "Close",
+      "alt": "Screenshot"
+    },
+    "landing": {
+      "hero": {
+        "headline": "Build Fast. Ship Safe.",
+        "subheadline": "Your AI writes the code. Supreme 2 secures it.",
+        "tagline": "74+ intelligent scanners. Deep architecture-level analysis. The world's first MCP-based code scanner.",
+        "ctaMax": "Upgrade to Supreme 2 MAX",
+        "ctaFree": "Start Free with Supreme 2 Light"
+      },
+      "pricingLight": {
+        "name": "Supreme 2 Light",
+        "price": "Free",
+        "subprice": "Forever · No credit card required",
+        "features": [
+          "VSCode extension",
+          "Full project scanning",
+          "74+ scanners",
+          "Comprehensive report",
+          "Report-only workflow (no auto-fix)"
+        ],
+        "cta": "Get Supreme 2 Light"
+      },
+      "pricingMax": {
+        "name": "Supreme 2 MAX",
+        "price": "$18/month",
+        "subprice": "$150/year · Best Value",
+        "badge": "Best Value",
+        "features": [
+          "MCP server-based scanner",
+          "Full project scanning",
+          "74+ scanners",
+          "Comprehensive report",
+          "LLM-friendly report for auto-remediation",
+          "Autonomous vulnerability fixing",
+          "Enhanced detection via threat intelligence"
+        ],
+        "cta": "Upgrade to Supreme 2 MAX"
+      },
+      "hiddenRisk": {
+        "title": "The Hidden Risk of AI-Generated Code",
+        "llmTitle": "LLM = partial visibility",
+        "llmItems": [
+          "Only see pasted snippets",
+          "Miss hidden files",
+          "Ignore dependency chains",
+          "Don't scan architecture",
+          "Don't systematically audit configs"
+        ],
+        "supremeTitle": "Supreme 2 = full repository scan",
+        "diagramRepo": "Repo",
+        "diagramScanner": "Deep Scanner",
+        "diagramFindings": "Full findings"
+      },
+      "meet": {
+        "title": "Meet SUPREME 2",
+        "features": [
+          "74+ scanners",
+          "Deep multi-language support",
+          "Architecture-aware analysis",
+          "Parallel scanning engine",
+          "Intelligent vulnerability detection"
+        ]
+      },
+      "mcp": {
+        "title": "The World's First MCP-Based Code Scanner",
+        "subtitle": "Supreme 2 MAX runs as an MCP server so your LLM can trigger full scans, consume structured JSON, understand categorized vulnerabilities, securely refactor, and re-validate fixes."
+      },
+      "comparison": {
+        "title": "Supreme 2 Light vs Supreme 2 MAX",
+        "maxAdvantage": "MAX Advantage: Includes detailed Threat Intelligence and runs as an MCP Server meant to be used by LLMs."
+      },
+      "whyLeads": {
+        "title": "Why Supreme Leads the Market"
+      },
+      "llmVsSupreme": {
+        "title": "Searching for vulns/misconfigs with LLMs VS Supreme 2",
+        "llmTitle": "LLM-only review",
+        "llmItems": [
+          "Analyzes fragments",
+          "Misses configs",
+          "Skips hidden modules",
+          "Ignores dependency graphs"
+        ],
+        "supremeTitle": "Supreme 2",
+        "supremeItems": [
+          "Scans entire repository",
+          "Parses configs",
+          "Checks dependency trees",
+          "Detects cross-file patterns",
+          "Performs architecture analysis"
+        ]
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "What programming languages does Supreme 2 support?",
+        "a1": "Supreme 2 supports major modern languages, configuration formats, and infrastructure files across backend, frontend, cloud, scripting, and documentation workflows.",
+        "a1Coverage": "Coverage includes 41 different scanner types across 100+ file extensions.",
+        "q2": "What scanner types and file formats are covered in detail?",
+        "a2Intro": "Supreme 2 supports 41 scanner types covering all major programming languages and file formats.",
+        "a2Total": "Total: 41 scanner types covering 100+ file extensions.",
+        "q3": "What is MCP and why does it matter?",
+        "a3": "MCP allows Supreme 2 MAX to run as a structured security server. Instead of raw text, it returns categorized JSON vulnerability reports for automated remediation, AI-driven fixing, programmatic interpretation, and continuous improvement workflows.",
+        "q4": "Does Supreme 2 store my code?",
+        "a4": "Supreme 2 scans locally in your environment. Your code never leaves your computer. You can check the source code of Supreme 2 Light on GitHub, and also monitor network activity while code is being scanned.",
+        "q5": "What are the pre-installation requirements?",
+        "a5Prefix": "To run Supreme 2, you must have",
+        "a5Python": "Python 3.0 or higher",
+        "a5Suffix": "installed on your machine. Additionally, you must ensure that",
+        "a5Pip": "pip",
+        "a5End": "is installed prior to the installation of Supreme itself.",
+        "q6": "Is Supreme 2 suitable for startups?",
+        "a6": "Yes. It is especially effective for AI-first startup teams shipping fast with LLM-generated code, where hidden cross-file risks are easy to miss without repository-wide security analysis.",
+        "a1ScannerTypes": "different scanner types",
+        "a1Across": "across",
+        "a1Extensions": "file extensions",
+        "a2Covering": "covering all major programming languages and file formats."
+      }
+    }
+  },
+  "languageSelector": {
+    "triggerLabel": "Pilih bahasa",
+    "menuLabel": "Pilih bahasa",
+    "searchLabel": "Cari bahasa",
+    "searchPlaceholder": "Cari berdasarkan nama",
+    "searchResults": "Hasil pencarian",
+    "noMatches": "Tidak ada bahasa yang cocok.",
+    "popular": "Paling populer",
+    "allLanguages": "Semua bahasa"
+  },
+  "header": {
+    "andManyMore": "Dan masih banyak lagi...",
+    "nav": {
+      "main": "Utama",
+      "pricing": "Harga",
+      "articles": "Artikel",
+      "compliance": "Kepatuhan",
+      "partners": "Klien/Mitra",
+      "affiliate": "Program afiliasi",
+      "instructions": "Panduan",
+      "product": "AI-CSD",
+      "secureDevelopment": "SLNC-env",
+      "developerServices": "Layanan pengembangan",
+      "home": "Beranda",
+      "systems": "Sistem",
+      "systemsAiSoc": "AI-CSD",
+      "systemsSithub": "Sithub",
+      "systemsSupreme": "Supreme",
+      "systemsSlncEnv": "SLNC-env",
+      "services": "Layanan",
+      "instructionsAiSoc": "AI-CSD",
+      "instructionsSupreme": "Supreme",
+      "instructionsSithub": "Sithub",
+      "instructionsEmailSecurity": "Keamanan Email",
+      "instructionsWebSecurity": "Keamanan Web",
+      "instructionsPentester": "Pentester",
+      "instructionsServerSecurity": "Keamanan Server"
+    },
+    "login": "Masuk",
+    "cta": {
+      "loginRegister": "Masuk/Daftar",
+      "contact": "Hubungi",
+      "download": "Unduh",
+      "requestDemo": "Minta demo",
+      "get": "Mulai"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Silence AI. All rights reserved.",
+    "contactLabel": "Kontak",
+    "contactValue": "support@silenceai.net",
+    "addressLabel": "Alamat",
+    "addressValue": "Astana, Kazakhstan",
+    "links": {
+      "cookies": "Kebijakan Cookie",
+      "termsUse": "Ketentuan Penggunaan",
+      "termsService": "Ketentuan Layanan",
+      "privacy": "Kebijakan Privasi",
+      "affiliateTerms": "Ketentuan Program Afiliasi"
+    }
+  },
+  "policySidebar": {
+    "tableOfContents": "Table of Contents",
+    "close": "Close",
+    "topics": "Topics"
+  },
+  "andManyMore": "Et bien plus encore...",
+  "affiliate": {
+    "hero": {
+      "tagline": "Join the Silence AI Partner Program",
+      "title": "Turn your invitations into revenue.",
+      "subtitle": "We offer 10% reward for all the spendings of the invited clients for 6 months.",
+      "cta": "Join the partner program",
+      "earnings": "$2,940.00",
+      "growth": "+18% compared to last month",
+      "snapshot": {
+        "label": "Live snapshot",
+        "caption": "Performance updates every 60 seconds and confirmed payments sync instantly."
+      },
+      "graph": {
+        "label": "Revenue trend",
+        "title": "Referral revenue growth",
+        "window": "Last 30 days",
+        "label0": "Week 1",
+        "label1": "Week 2",
+        "label2": "Week 3",
+        "label3": "Week 4",
+        "label4": "Week 5",
+        "label5": "Week 6",
+        "label6": "Today"
+      },
+      "metric": {
+        "conversion": "Activations",
+        "conversionChange": "24 new teams this month",
+        "pending": "Pending rewards",
+        "pendingChange": "Withdrawals processed within 2 business days"
+      }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "create": {
+        "title": "Create your link",
+        "description": "Generate a unique referral link or promo code in your Silence AI dashboard."
+      },
+      "share": {
+        "title": "Share",
+        "description": "Invite teams via email, LinkedIn, or your communities. Track performance in real time."
+      },
+      "earn": {
+        "title": "Earn",
+        "description": "Receive your commission as soon as referred customers activate Silence AI protection."
+      }
+    },
+    "commission": {
+      "heading": "Balance rewards",
+      "highlight": {
+        "label": "Why partners love it"
+      },
+      "reward": {
+        "title": "10% reward on every balance top-up",
+        "description": "When an invited team tops up their Silence AI wallet, 10% of the net amount is paid to you instantly."
+      },
+      "settlement": {
+        "title": "Real-time ledger settlement",
+        "description": "Rewards are credited to your partner balance within one minute after the transaction, with no manual approval queue."
+      },
+      "withdrawal": {
+        "title": "Withdrawals processed within 2 business days",
+        "description": "Withdrawal requests are automatically verified and arrive in your bank account within two business days."
+      },
+      "sample": {
+        "label": "Top-up examples",
+        "caption": "Partner earnings grow with each top-up — no tier resets or product association required.",
+        "topup": "$250 top-up → $25 reward",
+        "topupHigher": "$1,000 top-up → $100 reward"
+      },
+      "note": "Commission is calculated on the net amount after processing fees are deducted."
+    },
+    "faq": {
+      "title": "Questions & answers",
+      "payments": {
+        "question": "How do I receive my payments?",
+        "answer": "Add your VISA or Mastercard number in your profile. Payments can be withdrawn directly to the card on file."
+      },
+      "discounts": {
+        "question": "Do referred customers get discounts?",
+        "answer": "No. Referred customers do not receive any discount on their purchases; only the partner earns a commission on successful referrals."
+      },
+      "statistics": {
+        "question": "When will I see my referral statistics?",
+        "answer": "As soon as a user signs up with your promo code or referral link, their email address and associated reward appear in your dashboard."
+      }
+    },
+    "termsAff": {
+      "label": "Affiliate Program",
+      "title": "Affiliate Terms of Service",
+      "gitServer": {
+        "title": "Git Repository Server",
+        "tag": "Self-hosted version control"
+      },
+      "analyzer": {
+        "title": "Security Analyzer",
+        "tag": "Local code scanning engine"
+      },
+      "vulnDb": {
+        "title": "Vulnerability Database",
+        "tag": "Security patches downloaded"
+      },
+      "intro": "These terms describe how rewards are issued and paid to partners participating in the Silence AI affiliate program.",
+      "meta": {
+        "effective": "Effective date: 10 November 2024",
+        "lastUpdated": "Last updated: 10 November 2024"
+      },
+      "sections": {
+        "overview": {
+          "title": "1. Program Overview",
+          "body1": "1.1 Agreement Scope: These Affiliate Terms of Service (\"Terms\") govern your participation in the Silence AI affiliate program operated by Silence AI LLC (\"Silence AI,\" \"we,\" \"us,\" or \"our\"). These Terms apply to you, the individual or entity enrolling as an affiliate partner (\"you\" or \"your\"), and, where applicable, your employer, principal, or organization if you act on their behalf.",
+          "body2": "1.2 Program Summary: Under this program, qualified partners earn commission-based rewards when referred customers purchase or top up the AI-CSD 1 product. Participation in the affiliate program also requires compliance with the general Silence AI Terms of Service."
+        },
+        "eligibility": {
+          "title": "2. Partner Eligibility",
+          "item1": "You must maintain an active Silence AI affiliate account with accurate business and payment details.",
+          "item2": "Referrals must complete registration through your issued link or promo code.",
+          "item3": "Accounts found to be fraudulent, self-referred, or in breach of applicable law are not eligible for rewards."
+        },
+        "commission": {
+          "title": "3. Commission Structure",
+          "body1": "You earn a 10% reward on every balance top-up completed by an account registered through your invitation.",
+          "body2": "Commission is calculated from the net top-up amount after payment processing fees are deducted."
+        },
+        "rewardPosting": {
+          "title": "4. Reward Posting",
+          "body1": "Rewards post to your partner balance within one minute after the transaction successfully clears. There is no manual approval queue.",
+          "body2": "Notifications appear in your affiliate dashboard alongside the customer identifier and top-up amount."
+        },
+        "withdrawals": {
+          "title": "5. Withdrawals",
+          "body1": "Withdrawal requests are processed within two business days and paid out using the settlement method on file.",
+          "body2": "Minimum withdrawal thresholds and supported payout networks are published inside the affiliate dashboard."
+        },
+        "productScope": {
+          "title": "6. Product Scope",
+          "body1": "Rewards are only provided for the AI-CSD 1 product. Other Silence AI services are excluded from the affiliate program unless explicitly stated otherwise in writing.",
+          "body2": "If additional products become eligible, Silence AI will publish an updated list inside these terms."
+        },
+        "compliance": {
+          "title": "7. Partner Conduct & Compliance",
+          "item1": "Partners must represent Silence AI accurately and avoid misleading claims about features or pricing.",
+          "item2": "Marketing communications must comply with applicable anti-spam, privacy, and advertising regulations.",
+          "item3": "Silence AI may suspend or terminate accounts that violate these obligations or harm the brand."
+        },
+        "changes": {
+          "title": "8. Changes & Contact",
+          "body1": "Silence AI may update these affiliate terms to reflect changes in the program or applicable law. Updated versions take effect upon publication on this page.",
+          "body2": "Questions about the affiliate program can be sent to support@silenceai.net."
+        }
+      }
+    },
+    "balanceRewards": {
+      "lampTitle": "Balance rewards"
+    }
+  },
+  "hero": {
+    "headline": "AI-CSD — Departemen Keamanan Siber Berbasis AI",
+    "subheading": "A unified AI cybersecurity platform that combines Web Security and Email Security in a single control center.",
+    "playgroundHeading": "AI-Powered Cybersecurity Department",
+    "bullets": {
+      "web": "Real-time protection for web infrastructure and APIs",
+      "email": "Advanced protection against phishing, spoofing, and malicious email threats",
+      "vulnerability": "Vulnerability detection",
+      "unified": "Unified security monitoring and threat detection"
+    },
+    "buttons": {
+      "connect": "Hubungkan dalam 4 menit",
+      "tour": "Tonton demo 90 detik"
+    },
+    "tooltips": {
+      "web": {
+        "title": "Web attack protection",
+        "content": "Web Security applies available WAF, IPS and DDoS controls to traffic routed through the configured service. These controls are designed to mitigate threats but cannot stop every attack."
+      },
+      "email": {
+        "title": "Email attack protection",
+        "content": "AI analyzes incoming and outgoing emails to detect phishing, spoofing attempts, malicious links, and other email-based attacks."
+      },
+      "unified": {
+        "title": "Unified security monitoring and threat detection",
+        "content": "AI-CSD provides centralized monitoring of web infrastructure and email communications within a single security platform."
+      },
+      "vulnerability": {
+        "title": "Vulnerability detection",
+        "content": "The system identifies flaws in application code and via dynamic interaction with your website/API, including through the intelligence engine."
+      }
+    }
+  },
+  "playground": {
+    "options": {
+      "globeShield": "Web security and traffic management",
+      "emailSecurity": "Email security and visualization"
+    }
+  },
+  "cookie": {
+    "title": "Technical cookie notice",
+    "description": "This site uses only first-party technical cookies to remember your language preferences and avoid showing this notice repeatedly. No third-party or tracking cookies are used.",
+    "more": "Learn more in our",
+    "link": "Cookie Policy",
+    "ok": "OK"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Mobile-friendly plans designed to scale with your product.",
+    "percentMaintenance": "{percent}% annual maintenance",
+    "planEstimate": "${value}",
+    "tooltips": {
+      "cmcGlobal": {
+        "title": "CMC with global traffic monitoring",
+        "content": "The Centralized Management Console (CMC) seamlessly integrates with other security systems and uses the same domain and interface as Global Shield and Security Tester. Here you can block countries, close ports, and manage security at scale."
+      },
+      "countryBlacklisting": {
+        "title": "Country blocking",
+        "content": "Block all traffic originating from a selected country"
+      },
+      "portManagement": {
+        "title": "Port closing",
+        "content": "Close unused ports to reduce the attack surface (e.g., disable port 22 if SSH is not needed)"
+      },
+      "cmcEmail": {
+        "title": "CMC with Advanced Email Flow Visualizer",
+        "content": "The Central Management Console (CMC) integrates seamlessly with other security systems and is available under the same domain and interface as Global Shield and Security Tester. In this console, you can monitor email flows and review emails from all corporate users you have added."
+      },
+      "dynamicVulnerability": {
+        "title": "Dynamic Vulnerability Search",
+        "content": "Detects vulnerabilities by interacting with your website, including the vulnerability search method via the intelligence system."
+      },
+      "codeAnalyzer": {
+        "title": "Code Analyzer",
+        "content": "Identifies security issues directly in your codebase via a VS Code plugin, helping you fix problems before deployment."
+      },
+      "intelligenceReport": {
+        "title": "Intelligence Report",
+        "content": "Generates detailed information about your target, including open ports, running services, subdomains, and other sensitive information that may require action."
+      },
+      "fullVulnerability": {
+        "title": "FULL Vulnerability Check",
+        "content": "A FULL vulnerability check includes both dynamic vulnerability analysis and source code vulnerability analysis."
+      }
+    },
+    "aiSoc": {
+      "tabs": {
+        "email": "Email Security",
+        "web": "Web Security",
+        "pentester": "Pentester",
+        "server": "Server Security"
+      },
+      "billing": {
+        "yearly": "Yearly",
+        "monthly": "Monthly"
+      },
+      "cta": "Request the system",
+      "contactSupport": "Contact us",
+      "planTitles": {
+        "premium": "Business Premium 100",
+        "max": "Business MAX",
+        "standard": "Business Standard"
+      },
+      "features": {
+        "common": {
+          "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
+          "officeSuite": "Desktop and mobile office suite including document, spreadsheet, presentation, and email tools",
+          "adminConsole": "Admin console with domain-wide email management and bulk operations",
+          "dnsSecuritySetup": "Email security setup through DNS (SPF, DKIM, DMARC) on the admin console",
+          "emailMigration": "Email migration",
+          "aiThreatProtection": "5 layered, AI-powered threat protection with automatic email categorization (Secure, Spam, Dangerous Links, Phishing, Spoofed)",
+          "emailFlowVisualization": "Advanced email flow visualization across entire domain with comprehensive filters on the Admin Console",
+          "domainWideDeletion": "Ability for admin to delete emails across all users in domain"
+        },
+        "shared": {
+          "unlimitedSecurity": "Unlimited 4-layer email security"
+        },
+        "premium": {
+          "userLimit": "For enterprises with 15-300 employees",
+          "adminLimit": "Up to 5 administrators",
+          "storage": "Up to 50GB storage per user"
+        },
+        "max": {
+          "userLimit": "Unlimited number of users",
+          "adminLimit": "Up to 10 administrators",
+          "storage": "Up to 200GB storage per user"
+        },
+        "standard": {
+          "userLimit": "For enterprises with 15 or less employees",
+          "adminLimit": "Up to 1 administrator",
+          "storage": "Up to 8GB storage per user"
+        }
+      }
+    },
+    "plans": {
+      "globalShield": {
+        "title": "Web Security and Traffic Management",
+        "price": "$0.06/GB",
+        "description": "No limits\nNo additional fees",
+        "button": "Secure web app and APIs",
+        "features": {
+          "webProtection": "WAF controls for traffic routed through the configured service",
+          "ddosProtection": "Real-time DDoS protection",
+          "cmc": "CMC with global traffic monitoring:",
+          "country": "Country blocking:",
+          "port": "Port closing:",
+          "aiManager": "AI manager: shows security reports and executes your orders — tell it to blacklist a range of IP addresses and it adds them by itself",
+          "captcha": "Behavioral CAPTCHA 200× more optimized than reCAPTCHA — AI tracks user behavior and shows a Cloudflare Turnstile-style check only when a bot is detected"
+        }
+      },
+      "emailProtector": {
+        "title": "Email Security and Visualization",
+        "price": "$10/month/account",
+        "description": "Up to 10 emails per day\nAdditional emails: $0.035 each",
+        "button": "Secure Email",
+        "features": {
+          "cmcEmail": "CMC with the most advanced email flow visualizer",
+          "visibility": "Full visibility of sent and received emails from all email accounts, in the CMC, with automatic threat categorization",
+          "webClient": "Secure WebMail client",
+          "phishing": "Phishing protection",
+          "malware": "Malicious attachment scanning",
+          "links": "Dangerous link detection",
+          "spam": "Anti-spam filtering",
+          "fakeSender": "Spoofed sender protection"
+        }
+      },
+      "securityTester": {
+        "title": "Vulnerability Search",
+        "price": "$25/month",
+        "description": "Up to 50 FULL vulnerability checks per month\nAdditional FULL checks: $0.5 each",
+        "button": "Start testing",
+        "features": {
+          "dynamic": "Dynamic vulnerability search",
+          "codeAnalyzer": "Code Analyzer",
+          "reports": "Easy-to-understand security assessment reports",
+          "intelligence": "Intelligence Report"
+        }
+      }
+    },
+    "perYear": "per year (est.)",
+    "calculator": {
+      "subtitle": "Slide to see annual maintenance cost"
+    },
+    "emailSecurity": {
+      "title": "Email Security",
+      "subtitle": "Choose the capacity your team needs.",
+      "description": "Every plan includes the complete email protection platform. Plans differ only by team size, administrator seats, and mailbox storage.",
+      "billingPeriod": "Email security billing period",
+      "mostPopular": "Most popular",
+      "perUser": "/ user",
+      "perMonth": "/ month",
+      "annualCharge": "Charged upfront for 12 months per user:",
+      "billedMonthly": "Billed monthly",
+      "planCapacity": "Plan capacity"
+    }
+  },
+  "solution": {
+    "sectionTitle": "AI-CSD Platform Overview",
+    "sectionSubtitle": "AI-CSD provides a unified interface for monitoring and protecting web infrastructure and corporate email in real time.",
+    "cards": {
+      "globalShield": {
+        "title": "Global Shield - CIA-level traffic monitoring",
+        "description": "Our interactive 3D globe provides impressive traffic visualization: requests per second, active users, and byte volume.",
+        "bullets": {
+          "one": "Simple setup: provide your IP and domain.",
+          "two": "Receive an agent IP to add to your DNS.",
+          "three": "Port closing for zero exposure surface."
+        }
+      },
+      "emailProtector": {
+        "title": "Email Protector - world's first AI email protection",
+        "description": "The first commercial AI-based email protection system. Our vector view makes it easy to track flows over time and detect threats.",
+        "bullets": {
+          "one": "Detects spoofing, spam, phishing, and malware.",
+          "two": "Admin can add email accounts to protect.",
+          "three": "Most advanced commercial email flow visualizer."
+        }
+      },
+      "securityTester": {
+        "title": "Security Tester - next-gen vulnerability testing",
+        "description": "Our system provides a One-Time-Token (OTT) for comprehensive audits. Connect via our browser or the VS Code extension.",
+        "bullets": {
+          "one": "Define the scope and target in the CMC.",
+          "two": "Paste the OTT and start the check.",
+          "three": "Intelligence-driven risk insights."
+        }
+      }
+    },
+    "cmc": {
+      "title": "Central Management Console (CMC)",
+      "description": "All three components are controlled through a unified console offering centralized visualization, easy configuration and monitoring, and comprehensive security reports."
+    }
+  },
+  "valueSection": {
+    "title": "Why AI-CSD",
+    "subtitle": "AI-CSD makes enterprise-level cybersecurity accessible to any company. Deploy protection in minutes and manage web and email security from one unified platform.",
+    "features": {
+      "deploy": {
+        "title": "Deploy in minutes",
+        "description": "Set up web and email protection in under 4 minutes without complex configuration."
+      },
+      "ai": {
+        "title": "AI-powered analysis",
+        "description": "Advanced AI continuously analyzes traffic, emails, and threats in real time."
+      },
+      "visualization": {
+        "title": "Advanced visualization",
+        "description": "Monitor web traffic and email flows through an advanced visual interface."
+      },
+      "affordable": {
+        "title": "Affordable security",
+        "description": "Enterprise-level protection without the cost of traditional cybersecurity systems."
+      }
+    }
+  },
+  "insights": {
+    "items": [
+      {
+        "title": "39 seconds",
+        "description": "A hacker attack occurs every 39 seconds"
+      },
+      {
+        "title": "20M DDoS attacks",
+        "description": "20.5 million DDoS attacks in Q1 2025 alone"
+      },
+      {
+        "title": "Every day",
+        "description": "30,000 websites are hacked every day"
+      }
+    ]
+  },
+  "floatingText": {
+    "headline": "Understand how hackers think",
+    "description": "Follow us for daily analysis of attack techniques and real threats"
+  },
+  "modal": {
+    "title": "Under development",
+    "body": "The system is expected to launch on October 10"
+  },
+  "lamp": {
+    "title": "The reality of cyberattacks"
+  },
+  "stickySolution": {
+    "webSecurity": {
+      "title": "Step 1 · Connect your infrastructure",
+      "description": "Add your website domain and server IP address to connect AI-CSD protection."
+    },
+    "ciaMonitoring": {
+      "title": "Step 2 · Real-time traffic monitoring",
+      "description": "Monitor traffic activity across countries, users, bandwidth, and requests per second."
+    },
+    "userGrowth": {
+      "title": "Step 3 · Interactive global traffic visualization",
+      "description": "The 3D globe displays traffic patterns and geographic activity in real time."
+    },
+    "aiEmailProtection": {
+      "title": "Step 4 · Email security monitoring",
+      "description": "Administrators can monitor and manage corporate email flows and detect threats."
+    },
+    "emailVisualization": {
+      "title": "Step 4 · Email security monitoring",
+      "description": "Administrators can monitor and manage corporate email flows and detect threats."
+    },
+    "secureWebmail": {
+      "title": "Step 4 · Email security monitoring",
+      "description": "Administrators can monitor and manage corporate email flows and detect threats."
+    }
+  },
+  "notFound": {
+    "title": "Halaman tidak ditemukan",
+    "description": "Kami tidak dapat menemukan halaman ini.",
+    "cta": "Kembali ke beranda"
+  },
+  "heroSection": {
+    "badge": "Production-ready AI & Software",
+    "title": "Custom AI and Software Development",
+    "description": "We build production-ready AI agents and custom software.",
+    "country": "Kazakhstan",
+    "market": "global market",
+    "startProject": "Start a project",
+    "liveDemo": "Live Demo — AI Agent",
+    "live": "Live",
+    "aiAgent": "AI Agent v2.1",
+    "processing": "Processing requests...",
+    "active": "Active",
+    "userMessage": "Analyze customer data trends",
+    "aiResponse": "Analysis in progress",
+    "tasks": {
+      "dataCollection": "Data collection",
+      "aiAnalysis": "AI analysis",
+      "reportGeneration": "Report generation"
+    },
+    "stats": {
+      "tasks": "Tasks",
+      "success": "Success",
+      "speed": "Speed"
+    }
+  },
+  "secureDevelopment": {
+    "hero": {
+      "badge": "SLNC-env · Secure Development Environment",
+      "title": "Build systems with secure and private code",
+      "description": "Private development environment for enterprises, where code never leaves your corporate network. While providing the latest AI-powered technology",
+      "requestSystem": "Request system"
+    },
+    "components": {
+      "title": "Everything stays inside",
+      "subtitle": "Three components, one sealed loop",
+      "description": "Code, prompts, and builds never leave your network. SLNC-env keeps AI assistance, reviews, and delivery private for cloud providers, government teams, and industrial facilities.",
+      "sithub": {
+        "title": "Sithub Server",
+        "tag": "Local version control"
+      },
+      "llm": {
+        "title": "LLM Server (Qwen-Code)",
+        "tag": "On-site intelligence"
+      },
+      "ide": {
+        "title": "IDE with local Copilot",
+        "tag": "Cursor-level experience"
+      },
+      "staysOnPrem": "Stays on-prem. No egress.",
+      "gitServer": {
+        "title": "Git Repository Server",
+        "tag": "Self-hosted"
+      },
+      "analyzer": {
+        "title": "Security Analyzer",
+        "tag": "Local scanning"
+      },
+      "vulnDb": {
+        "title": "Vulnerability Database",
+        "tag": "Synced daily"
+      },
+      "onPremNotice": "Stays on-prem. No egress."
+    },
+    "timeline": {
+      "title": "Why isolated and verified code matters",
+      "subtitle": "Recent wake-up calls",
+      "incident": {
+        "title": "Critical incident — code leaked",
+        "heading": "DeepSeek leak exposed source code and prompts to the open internet",
+        "description": "Keep inference and analysis on-site. No external model egress. Audit trails by default.",
+        "seePlan": "See containment plan"
+      },
+      "stuxnet": {
+        "attack": "Stuxnet",
+        "target": "Natanz enrichment facility",
+        "impact": "Destroyed ~1,000 centrifuges",
+        "severity": "Critical",
+        "year": "2010"
+      },
+      "blackEnergy": {
+        "attack": "BlackEnergy",
+        "target": "Ukrainian power grid",
+        "impact": "230,000 customers without power",
+        "severity": "High",
+        "year": "2015"
+      },
+      "triton": {
+        "attack": "TRITON",
+        "target": "Saudi petrochemical plant",
+        "impact": "Safety systems disabled",
+        "severity": "Critical",
+        "year": "2017"
+      },
+      "colonialPipeline": {
+        "attack": "Colonial Pipeline",
+        "target": "US fuel pipeline",
+        "impact": "Fuel paralysis for 6 days",
+        "severity": "High",
+        "year": "2021"
+      },
+      "pdvsa": {
+        "attack": "PDVSA",
+        "target": "Venezuelan refining",
+        "impact": "Refinery operations disrupted",
+        "severity": "Medium",
+        "year": "2025"
+      }
+    },
+    "analyzer": {
+      "title": "Analyzer that outperforms CodeQL",
+      "subtitle": "Live assurance",
+      "features": {
+        "quality": {
+          "title": "Automatic code quality",
+          "description": "Structure, style, and best practice checks tailored for security-critical code"
+        },
+        "vulnerability": {
+          "title": "Vulnerability scans",
+          "description": "SQLi, XSS, authentication bypass, and insecure dependencies detected instantly"
+        },
+        "secrets": {
+          "title": "Secrets guard",
+          "description": "Keys, tokens, and credentials blocked at commit time"
+        },
+        "config": {
+          "title": "Configuration hardening",
+          "description": "Docker/K8s, IAM, and network policies analyzed for privilege escalation"
+        }
+      },
+      "beyondCodeQL": {
+        "title": "Detects what static queries miss",
+        "subtitle": "Beyond CodeQL",
+        "description": "Finds misconfigurations and vulnerable packages faster than CodeQL and offers fixes, not just alerts.",
+        "points": {
+          "packages": "Knows package graphs and flags risky dependencies in seconds.",
+          "config": "Detects configuration drift and privilege escalation — beyond static rules.",
+          "patches": "Every finding comes with a suggested patch and an assignee."
+        }
+      },
+      "visualizer": {
+        "title": "Code analyzer in action",
+        "subtitle": "Visualizer",
+        "description": "Clean screenshots of recent scans, beautifully rendered in the on-site console.",
+        "privateWorkspace": "Private workspace only",
+        "andManyMore": "And many more...",
+        "shots": {
+          "scanOverview": {
+            "title": "Scan overview",
+            "description": "See issues grouped by severity before code leaves your network."
+          },
+          "misconfigurations": {
+            "title": "Misconfiguration detection",
+            "description": "Our AI-powered code analyzer detects even misconfigurations in code."
+          },
+          "inlineDiffs": {
+            "title": "Inline diffs",
+            "description": "Review suggested fixes inline with security context."
+          }
+        },
+        "frame": "SLNC-env Analyzer"
+      }
+    },
+    "industries": {
+      "title": "Built for regulated and high-impact industries",
+      "subtitle": "Where we deploy",
+      "oilGas": {
+        "title": "Oil and Gas",
+        "description": "Drilling, refining, pipeline control"
+      },
+      "energy": {
+        "title": "Energy",
+        "description": "Grid, distribution, and EMS"
+      },
+      "nuclear": {
+        "title": "Nuclear",
+        "description": "Reactor controls and safety"
+      },
+      "manufacturing": {
+        "title": "Manufacturing",
+        "description": "ICS, OT, and robotics"
+      },
+      "government": {
+        "title": "Government",
+        "description": "Ministries, defense, critical agencies"
+      }
+    },
+    "pricing": {
+      "subtitle": "Simple, transparent pricing",
+      "title": "Choose a plan",
+      "limitedOffer": "Limited time offer",
+      "priceIncreaseNotice": "Lock in current prices! After 6 months, prices will increase by 30%",
+      "monthlyPlan": "Monthly",
+      "monthlyDesc": "Flexible billing",
+      "yearlyPlan": "Annual",
+      "yearlyDesc": "Best value",
+      "month": "month",
+      "billedAnnually": "Billed annually for",
+      "doubleSavings": "2x SAVINGS",
+      "getStarted": "Get started",
+      "features": {
+        "fullAccess": "Full platform access",
+        "support": "Priority support",
+        "cancelAnytime": "Cancel anytime",
+        "priceLock": "Price locked for 12 months"
+      }
+    },
+    "comingSoon": {
+      "title": "Coming Soon",
+      "message": "This feature is currently under development."
+    },
+    "requestSystem": "Request system"
+  },
+  "pricingCta": {
+    "requestSystem": "Minta sistem"
+  },
+  "contactForm": {
+    "title": "Hubungi Kami",
+    "success": "Terima kasih! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda.",
+    "errorRequired": "Harap isi nama, email, dan pesan singkat Anda.",
+    "errorSend": "Pesan tidak dapat dikirim. Silakan coba lagi nanti.",
+    "placeholders": {
+      "name": "Nama Anda",
+      "email": "Email",
+      "type": "Jenis proyek (opsional)",
+      "budget": "Anggaran (opsional)",
+      "message": "Ceritakan proyek Anda..."
+    },
+    "submit": {
+      "idle": "Kirim Pesan",
+      "loading": "Mengirim…"
+    }
+  },
+  "consulting": {
+    "title": "Consulting Questionnaire",
+    "searchPlaceholder": "Search questions...",
+    "noResults": "No questions found.",
+    "questions": [
+      {
+        "question": "What is your company's core value proposition beyond competitive pricing?",
+        "answer": "Security is our primary differentiator. We position ourselves as a company that builds highly secure systems with enterprise-grade security practices embedded throughout the development lifecycle."
+      },
+      {
+        "question": "How long has your company been in business, and what is your track record?",
+        "answer": "We have successfully delivered major projects including: NAK (Nur Astana Kurylys) - AI-powered team management platform, and Chic Flowers - Complete digital platform for a major flower retail company."
+      },
+      {
+        "question": "What differentiates your technical capabilities and service quality from EPAM and other competitors?",
+        "answer": "Our key differentiator is our security-first development approach. We integrate security practices from project inception through deployment and maintenance."
+      },
+      {
+        "question": "How do you maintain quality while offering competitive pricing?",
+        "answer": "We offer services at 15% below market rates while maintaining exceptional quality through optimized operations, strategic talent sourcing, and efficient project management methodologies."
+      },
+      {
+        "question": "What specific software development services do you provide?",
+        "answer": "End-to-end software development: custom applications, AI-powered solutions, cybersecurity product development (Silence AI-CSD), system integration, cloud migration, and DevOps. We also offer dedicated product development and staff augmentation."
+      },
+      {
+        "question": "Which industries and domains do you specialize in?",
+        "answer": "Construction, retail, fintech, cybersecurity, and digital platforms — including AI-driven team management, e-commerce, and enterprise security solutions."
+      },
+      {
+        "question": "What technology stacks and platforms does your team have expertise in?",
+        "answer": "GO, Swift, Flutter, cloud platforms (AWS/Azure/GCP), Docker/Kubernetes, FastAPI, JavaScript, and AI/ML frameworks. We build proprietary security tools like Silence AI-CSD."
+      },
+      {
+        "question": "Do you offer end-to-end product development or specific services only?",
+        "answer": "We offer both: MVPs, full-cycle product delivery, staff augmentation, and cybersecurity integration."
+      },
+      {
+        "question": "Can you provide both staff augmentation and dedicated team models?",
+        "answer": "Yes, we provide flexible engagement models: staff augmentation, dedicated teams, and project-based outsourcing."
+      },
+      {
+        "question": "Do you offer consulting, architecture, and advisory services beyond development?",
+        "answer": "Yes: cybersecurity consulting, system architecture design, technology advisory, and security compliance assessments using Silence AI-CSD."
+      }
+    ]
+  },
+  "requestDemoModal": {
+    "title": "Contact Us",
+    "contactInfo": "You can contact us at",
+    "contactSuffix": "for questions or a demo.",
+    "close": "Close",
+    "successTitle": "Request Sent!",
+    "successBody": "We will contact you shortly to schedule the demo."
+  },
+  "requestSystemModal": {
+    "title": "Request the System",
+    "fields": {},
+    "submit": "Download",
+    "successTitle": "Request Sent!",
+    "successBody": "Thank you. System download instructions will be sent to your email."
+  },
+  "whyChooseUs": {
+    "badge": "Results-driven Engineering",
+    "title": "Why Choose Us",
+    "subtitle": "Trusted by teams from",
+    "subtitleHighlight": "billion-dollar organizations",
+    "subtitleTail": "— and delivered at startup speed.",
+    "learnMore": "Learn More",
+    "features": {
+      "fast": {
+        "title": "Fast Delivery with Enterprise Quality",
+        "description": "Fast, iterative delivery cycles meeting enterprise reliability and compliance standards.",
+        "pill": "Speed + Quality"
+      },
+      "ai": {
+        "title": "AI-focused Product Engineering",
+        "description": "From prototypes to production AI agents — we design, train, and deploy models that solve real business problems.",
+        "pill": "AI Engineering"
+      },
+      "local": {
+        "title": "Local Expertise, Global Reach",
+        "description": "Deep knowledge of the Kazakhstan market and regulations combined with international best practices.",
+        "pill": "Local + Global"
+      }
+    },
+    "logos": {
+      "nak": "Nur Astana Kurylis"
+    }
+  },
+  "servicesBlock": {
+    "badge": "What We Offer",
+    "title": "Our Services",
+    "description": "Premium UI, solid engineering, and fast delivery — everything you need to launch a product that looks and works like a major brand.",
+    "learnMore": "Learn More",
+    "learnMoreAria": "Learn more about the service",
+    "services": {
+      "aiAgents": {
+        "title": "AI Agents",
+        "description": "Custom conversational and autonomous agents for support, operations, and analytics.",
+        "tag": "Automation"
+      },
+      "customSoftware": {
+        "title": "Custom Software",
+        "description": "End-to-end web and desktop applications tailored to your workflows.",
+        "tag": "Development"
+      },
+      "cybersecurity": {
+        "title": "Cybersecurity",
+        "description": "Audits, pentests, and continuous monitoring.",
+        "tag": "Protection"
+      },
+      "backend": {
+        "title": "Backend / DevOps",
+        "description": "Scalable APIs, CI/CD pipelines, and cloud infrastructure.",
+        "tag": "Scale"
+      },
+      "mobile": {
+        "title": "Mobile Apps",
+        "description": "Cross-platform applications with native performance and polished UX.",
+        "tag": "Shipping"
+      }
+    }
+  },
+  "caseStudies": {
+    "badge": "Proven Impact",
+    "title": "Case Studies",
+    "subtitle": "We do not deliver features. We deliver results.",
+    "caseStudy": "Case Study",
+    "problem": "Problem:",
+    "solution": "Solution:",
+    "liveImpact": "Live Impact",
+    "before": "Before",
+    "after": "After",
+    "buildCta": "Build something like this →",
+    "items": {
+      "nak": {
+        "title": "NAK — AI-Powered Team Management",
+        "problem": "Manual resource allocation",
+        "solution": "AI planning agent",
+        "result": "+32% productivity",
+        "metricLabel": "Team performance index"
+      },
+      "chic": {
+        "title": "Chic Flowers — eCommerce",
+        "problem": "Low online conversions",
+        "solution": "Personalized recommendation engine + UX refresh",
+        "result": "+45% online sales",
+        "metricLabel": "Conversion growth"
+      },
+      "silence": {
+        "title": "Silence AI-CSD",
+        "problem": "High false alarm rate",
+        "solution": "AI detection and automated response",
+        "result": "-68% false positives",
+        "metricLabel": "False alarm volume"
+      }
+    }
+  },
+  "howWeWork": {
+    "title": "How We Work",
+    "subtitle": "Ultra-fast delivery pipeline — optimized for velocity.",
+    "steps": {
+      "discovery": {
+        "title": "Discovery",
+        "desc": "Requirements, stakeholders, success metrics."
+      },
+      "design": {
+        "title": "Design",
+        "desc": "UX, architecture, prototype."
+      },
+      "poc": {
+        "title": "Proof of Concept",
+        "desc": "Quick validation with measurable KPIs."
+      },
+      "build": {
+        "title": "Development",
+        "desc": "Iterative sprints, automated testing."
+      },
+      "deploy": {
+        "title": "Deployment",
+        "desc": "CI/CD, monitoring, security hardening."
+      },
+      "support": {
+        "title": "Support & Scaling",
+        "desc": "Maintenance, roadmap, continuous improvement."
+      }
+    }
+  },
+  "technologyStack": {
+    "title": "Stack technologique",
+    "subtitle": "A carefully selected production stack, built for speed, scalability, and beautiful user experiences.",
+    "categories": []
+  },
+  "backToTop": {
+    "label": "Kembali ke atas"
+  },
+  "pricingCustom": {
+    "title": "Transparent Pricing",
+    "subtitle": "Mobile-friendly plans designed to scale with your product.",
+    "perYear": "per year (estimated)",
+    "percentMaintenance": "{percent}% annual maintenance",
+    "planEstimate": "${value}",
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "features": {
+          "fix": "Critical fixes (48h SLA)",
+          "updates": "Monthly updates",
+          "audit": "Quarterly security audits",
+          "manager": "Dedicated manager"
+        }
+      },
+      "pro": {
+        "name": "Pro",
+        "badge": "Most Popular",
+        "features": {
+          "fix": "Critical fixes (24h SLA)",
+          "updates": "10h monthly updates",
+          "audit": "Monthly security audits",
+          "manager": "Dedicated manager"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "badge": "Best Value",
+        "features": {
+          "fix": "Critical fixes (4h SLA)",
+          "updates": "Unlimited updates + roadmap",
+          "audit": "Weekly audits + backups",
+          "manager": "Dedicated manager"
+        }
+      }
+    },
+    "calculator": {
+      "title": "Project Cost Calculator",
+      "subtitle": "Drag to see your annual maintenance",
+      "projectCost": "Project Cost:",
+      "projectValue": "${value}"
+    }
+  },
+  "badRequest": {
+    "title": "Bad Request",
+    "cta": "Return to Homepage",
+    "description": "The page you are looking for could not be found or the request was invalid."
+  },
+  "countrySelect": {
+    "title": "Select Country",
+    "subtitle": "Choose your location to continue",
+    "searchPlaceholder": "Search country...",
+    "noResults": "No countries found",
+    "continue": "Continue",
+    "comingSoon": {
+      "title": "Almost Ready!",
+      "message": "The admin panel for subscription management will be ready in",
+      "hours": "hours",
+      "notification": "We will notify you when it is available!",
+      "back": "Back",
+      "gotIt": "Got it!"
+    }
+  },
+  "aiSocComparison": {
+    "sectionTitle": "Competitive Advantages",
+    "common": {
+      "features": "Features"
+    },
+    "web": {
+      "title": "AI-CSD Web vs Traditional WAF Solutions",
+      "columns": {
+        "aiSoc": "AI-CSD Web (subscription + overage)",
+        "cloudflare": "Cloudflare WAF + Anti-DDoS ($20/mo)",
+        "aws": "AWS WAF (pay-as-you-go)"
+      },
+      "rows": {
+        "complexWaf": {
+          "feature": "WAF with detection of complex attacks"
+        },
+        "ddos": {
+          "feature": "Protection against DDoS attacks",
+          "cloudflare": "Weak at this pricing plan"
+        },
+        "proactive": {
+          "feature": "Proactive 24/7 protection"
+        },
+        "monitoring": {
+          "feature": "Monitor live users, RPS, and bandwidth by country — with full historical tracking"
+        },
+        "setup": {
+          "feature": "Setup time",
+          "aiSoc": "2 mins (no cybersec knowledge needed)",
+          "cloudflare": "2 mins (no cybersec knowledge needed)",
+          "aws": "1 day (cybersec specialist needed)"
+        }
+      }
+    },
+    "email": {
+      "title": "AI-CSD Email vs Traditional Email Security",
+      "columns": {
+        "aiSoc": "AI-CSD Email",
+        "outlook": "Outlook/Gmail",
+        "kaspersky": "Kaspersky (connected to an email provider)"
+      },
+      "rows": {
+        "viewAll": {
+          "feature": "View on all emails across the domain"
+        },
+        "delete": {
+          "feature": "Admin can delete employee's emails"
+        },
+        "activeProtection": {
+          "feature": "Active Protection against all types of email attacks"
+        },
+        "aiManual": {
+          "feature": "AI that manually checks the emails"
+        },
+        "setup": {
+          "feature": "Secure setup completion time",
+          "aiSoc": "2 mins No cybersec. knowledge needed",
+          "outlook": "No-full security",
+          "kaspersky": "1-3 days (connecting to an email provider, can only be done by a cybersec. specialist)"
+        }
+      }
+    }
+  },
+  "aiSocValueSection": {
+    "title": "Why AI-CSD",
+    "subtitle": "AI-CSD makes enterprise-level cybersecurity accessible to any company. Deploy protection in minutes and manage web and email security from one unified platform.",
+    "features": {
+      "deploy": {
+        "title": "Deploy in minutes",
+        "description": "Set up web and email protection in under 4 minutes without complex configuration."
+      },
+      "ai": {
+        "title": "AI-powered analysis",
+        "description": "Advanced AI continuously analyzes traffic, emails, and threats in real time."
+      },
+      "visualization": {
+        "title": "Advanced visualization",
+        "description": "Monitor web traffic and email flows through an advanced visual interface."
+      },
+      "affordable": {
+        "title": "Affordable security",
+        "description": "Enterprise-level protection without the cost of traditional cybersecurity systems."
+      }
+    }
+  },
+  "aiSocInsights": {
+    "title": "THE CYBERSECURITY PROBLEM TODAY",
+    "subtitle": "Modern cyber threats are growing faster than most companies can respond.",
+    "items": [
+      {
+        "stat": "Every 39 seconds",
+        "suffix": "a hacker attack occurs",
+        "description": "Global cyberattacks are increasing every year, targeting businesses of all sizes."
+      },
+      {
+        "stat": "20.5 million",
+        "suffix": "DDoS attacks in Q1 2025",
+        "description": "Massive traffic floods can take websites and APIs offline within minutes."
+      },
+      {
+        "stat": "30,000",
+        "suffix": "websites are hacked every day",
+        "description": "From startups to enterprise platforms, web infrastructure remains a constant target."
+      }
+    ]
+  },
+  "aiSocPricing": {
+    "intro": "AI-CSD is a lineup of standalone cybersecurity systems",
+    "emailDescription": "Email Security acts as a protective shield for your corporate communications. It filters incoming and outgoing messages to neutralize phishing attempts, spoofing attacks, and malicious links before they reach your users, ensuring the integrity of your business correspondence.",
+    "webDescription": "Web Security analyzes traffic routed through the configured service. Available WAF, IPS and DDoS controls are designed to detect and mitigate threats and provide security visibility, but cannot stop every attack.",
+    "calendlyIntegration": "Supports integration with Calendly"
+  },
+  "aiSocFaq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "Is AI-CSD just a security engine or a full email platform?",
+        "response": "AI-CSD can be used in two different ways, depending on how your organization manages email.\n\n1️⃣ As a standalone secure email platform\n\nAI-CSD can operate as your organization's primary email system, similar to Gmail or Outlook. It includes its own mail server infrastructure, secure webmail interface, and administrative console for managing corporate accounts. In this mode, organizations use AI-CSD as their main email platform while benefiting from built-in AI-driven security protection.\n\n2️⃣ As an AI security layer for existing email systems\n\nAI-CSD can also work alongside existing Gmail or Outlook environments as an additional security layer. In this setup, users keep their current email provider while AI-CSD analyzes email traffic and protects against phishing, spoofing, malicious links, and other threats without requiring migration."
+      },
+      {
+        "question": "Can AI-CSD be used alongside existing Gmail or Outlook environments?",
+        "response": "Yes. AI-CSD can run as an additional security layer while you keep Gmail or Outlook as your primary provider."
+      },
+      {
+        "question": "What happens when AI-CSD operates as the primary email infrastructure?",
+        "response": "When AI-CSD is your main platform, it provides secure webmail, domain-level admin controls, and built-in threat protection inside the full email workflow."
+      },
+      {
+        "question": "Can administrators create and control corporate email accounts?",
+        "response": "Yes. Administrators can create and manage accounts, monitor domain-wide email activity, and delete messages from user accounts when necessary."
+      },
+      {
+        "question": "Can existing corporate email accounts be connected to AI-CSD?",
+        "response": "Yes. Existing Gmail or Outlook-based corporate accounts can be connected to AI-CSD, adding structured protection without replacing your current provider."
+      },
+      {
+        "question": "Is security pre-configured or does it require manual setup?",
+        "response": "AI-CSD is pre-configured and AI-powered. It provides built-in protection with minimal setup based on the instructions page."
+      },
+      {
+        "question": "Beyond email and web filtering, what advanced threats are detected?",
+        "response": "AI-CSD detects phishing context, spoofing patterns, malicious links, malware attachments, and suspicious behaviors across email and web traffic."
+      },
+      {
+        "question": "Does AI-CSD use threat intelligence to prevent attacks in advance?",
+        "response": "Yes. AI-CSD uses threat intelligence feeds to block known malicious infrastructure before attacks reach protected systems."
+      }
+    ]
+  },
+  "homepageText": {
+    "protection_applies_to_routed_traffic_enabled_controls_are_designed_to_mi_gin4xh": "Protection applies to routed traffic. Enabled controls are designed to mitigate threats but cannot stop every attack; your order states available capabilities.",
+    "0_never_billed_u6oxzl": "$0 — never billed",
+    "18_user_month_5v6ti9": "$18/user/month",
+    "200_mo_annually_e1b16k": "$200/mo annually",
+    "25_host_month_annually_da1tac": "$25/host/month annually",
+    "29_server_month_108vdgt": "$29/server/month",
+    "290_billed_annually_equivalent_to_less_than_25_server_month_1417crm": "$290 billed annually · equivalent to less than $25/server/month",
+    "290_server_year_1mofbbk": "$290/server/year",
+    "30_host_month_on_demand_1r1rqvl": "$30/host/month on-demand",
+    "350_mo_annually_1wzr7m6": "$350/mo annually",
+    "450_maximum_njnzny": "$450 maximum",
+    "5_1m_pentest_compute_tokens_wwtud": "$5 / 1M Pentest Compute Tokens",
+    "7_user_month_1puwijj": "$7/user/month",
+    "825_month_billed_annually_1tqkulp": "$825/month — billed annually",
+    "example_pricing_uses_a_hypothetical_notion_class_saas_application_with_a_f103so": "*Example pricing uses a hypothetical Notion-class SaaS application with approximately 2M lines of first-party code. It does not represent Notion's actual private codebase. Competitor pricing may vary by contract, scope, targets and product configuration. Estimated figures are based on publicly available pricing and researched market assumptions.*",
+    "month_m9gekc": "/ month",
+    "protected_server_1y7l6a2": "/ protected server /",
+    "1_choose_a_native_package_a12mdz": "1. Choose a native package",
+    "1_2b_pentest_compute_tokens_per_year_provisioned_as_100m_included_tokens_reu1g5": "1.2B Pentest Compute Tokens per year, provisioned as 100M included tokens every month.",
+    "100m_90m_tokens_bna441": "100M / 90M tokens ·",
+    "100m_pentest_compute_tokens_included_every_month_1jrjxqs": "100M Pentest Compute Tokens included every month.",
+    "140m_190m_tokens_jt7vrd": "140M–190M tokens",
+    "1_3_days_1u57adp": "1–3 days",
+    "2_months_free_188lhx2": "2 months free",
+    "2_months_free_save_840_year_1c2wiq2": "2 months free · Save $840 / year",
+    "2_download_and_install_7f2qwx": "2. Download and install",
+    "3_enroll_interactively_9eqky3": "3. Enroll interactively",
+    "5_min_1cpptho": "5 min",
+    "15_min_fkx527": "< 15 min",
+    "a_different_approach_to_penetration_testing_11wf1il": "A different approach to penetration testing.",
+    "a_normal_initial_code_is_no_longer_available_use_re_enrollment_only_to_r_qljy7c": "A normal INITIAL code is no longer available. Use re-enrollment only to recover lost local identity.",
+    "acl_rules_requests_add_ons_whlrg7": "ACL + rules + requests + add-ons",
+    "admin_domain_wide_purge_1xd99m1": "ADMIN: Domain-Wide Purge",
+    "ai_smart_responder_w059u4": "AI Smart Responder",
+    "ai_compute_included_additional_compute_is_prepaid_you_always_know_the_ma_vkeyb4": "AI compute included. Additional compute is prepaid — you always know the maximum cost before a pentest starts.",
+    "ai_forwards_emails_sends_them_to_specific_folder_replies_makes_response__wmu2yb": "AI forwards emails, sends them to specific folder, replies/makes response-draft to emails",
+    "ai_security_manager_that_can_execute_security_actions_1dyhcx": "AI security manager that can execute security actions",
+    "ai_csd_email_4emkew": "AI-CSD Email",
+    "ai_csd_email_vs_alternatives_xytm7t": "AI-CSD Email vs. alternatives",
+    "ai_csd_web_1mdet2e": "AI-CSD Web",
+    "ai_csd_web_vs_traditional_alternatives_1mis2w0": "AI-CSD Web vs. traditional alternatives",
+    "ai_powered_zero_day_phishing_email_detection_em28s9": "AI-powered zero day phishing email detection",
+    "api_penetration_testing_1xsls1e": "API penetration testing",
+    "api_security_testing_zsi57r": "API security testing",
+    "aws_waf_4mgxt0": "AWS WAF",
+    "aws_configuration_10x5leo": "AWS configuration",
+    "ability_to_run_local_mail_server_16erslq": "Ability to run local mail server",
+    "access_protection_p49oqu": "Access Protection",
+    "access_and_network_events_differ_from_host_level_incidents_and_active_bl_mc1hj6": "Access and network events differ from host-level incidents and active blocks.",
+    "access_control_threat_detection_and_automated_response_in_one_server_sec_1i9mwcg": "Access control, threat detection and automated response — in one server security platform.",
+    "account_oyp43g": "Account",
+    "action_and_scope_1uvirku": "Action and scope",
+    "active_8qzyhb": "Active",
+    "active_response_is_available_setup_and_dashboard_workflow_vary_by_config_1qnd94u": "Active Response is available; setup and dashboard workflow vary by configuration.",
+    "active_users_1werxir": "Active Users:",
+    "active_protection_against_all_types_of_email_attacks_7rjtfl": "Active protection against all types of email attacks",
+    "active_responses_1jd4ojj": "Active responses",
+    "add_17rv3f8": "Add",
+    "add_a_server_install_its_native_package_and_follow_provisioning_to_activ_lyqbx7": "Add a server, install its native package, and follow provisioning to active protection.",
+    "add_explicit_block_uz460x": "Add explicit block",
+    "add_trusted_source_xda4vc": "Add trusted source",
+    "additional_paid_system_required_4r8pd4": "Additional paid system required",
+    "admin_can_delete_employees_emails_14jrala": "Admin can delete employees' emails",
+    "administrator_silenceai_net_r1onvf": "Administrator · silenceai.net",
+    "administrator_enforced_deny_rules_they_differ_from_automatic_temporary_r_jp9ije": "Administrator-enforced deny rules. They differ from automatic temporary responses and take precedence over temporary access windows.",
+    "advanced_payg_y0kkkt": "Advanced / PAYG",
+    "agent_configuration_1jh2a34": "Agent Configuration",
+    "agent_deployment_and_security_modules_require_additional_configuration_1aietcj": "Agent deployment and security modules require additional configuration.",
+    "agent_registration_t4oxff": "Agent registration",
+    "all_processed_requests_metered_glwz2y": "All processed requests metered",
+    "all_severities_56txjn": "All severities",
+    "all_statuses_u1q98u": "All statuses",
+    "all_in_one_ot2fx": "All-in-one",
+    "all_in_one_web_defense_e4ge83": "All-in-one Web Defense",
+    "allowed_ports_rpqmgr": "Allowed Ports",
+    "amount_a2ky21": "Amount",
+    "apply_filters_18ebn34": "Apply Filters",
+    "apply_range_szzzse": "Apply range",
+    "architecture_ophdcy": "Architecture",
+    "are_you_sure_you_want_to_delete_this_agent_traffic_routing_through_webso_t7ipof": "Are you sure you want to delete this agent? Traffic routing through WebSOC will be stopped.",
+    "attachment_isolated_qaqbaf": "Attachment isolated",
+    "attachments_pbl36p": "Attachments (",
+    "attack_chain_discovery_vmgoar": "Attack-chain discovery",
+    "audit_log_16gw6a3": "Audit log ·",
+    "aurora_13v9spt": "Aurora",
+    "authenticated_testing_lrdx7w": "Authenticated testing",
+    "authentication_authorization_testing_1l599i6": "Authentication & authorization testing",
+    "automated_defense_10zh8lx": "Automated Defense",
+    "automated_firewall_response_f77swe": "Automated firewall response",
+    "automated_protection_1uyta5k": "Automated protection",
+    "automated_remediation_controls_16ri08i": "Automated remediation controls",
+    "automated_response_depends_on_configured_workflows_and_integrations_1xd8io8": "Automated response depends on configured workflows and integrations.",
+    "automatic_graphify_security_graph_creation_1oy164l": "Automatic Graphify security graph creation",
+    "automatic_ip_subnet_blocking_1g4klhs": "Automatic IP / subnet blocking",
+    "automatic_pr_with_fixed_code_1td9rid": "Automatic PR with fixed code",
+    "automatic_access_expiration_f875gz": "Automatic access expiration",
+    "automatic_access_revocation_1k4g3xi": "Automatic access revocation",
+    "automatic_protection_will_begin_applying_approved_temporary_ip_blocks_wh_sw4lp8": "Automatic protection will begin applying approved temporary IP blocks when detections meet policy requirements.",
+    "automatic_response_mode_h1hhji": "Automatic response mode",
+    "automatic_temporary_responses_suppressions_failures_and_completed_action_826r2n": "Automatic temporary responses, suppressions, failures, and completed actions.",
+    "automatically_blocks_attacking_ips_1gd1prm": "Automatically blocks attacking IPs",
+    "autonomous_pentester_vooeah": "Autonomous Pentester",
+    "autonomous_vulnerability_investigation_1aqiiod": "Autonomous vulnerability investigation",
+    "available_via_aws_waf_shield_aq2szr": "Available via AWS WAF / Shield",
+    "available_but_in_much_higher_pricing_option_bk6de5": "Available, but in much higher pricing option",
+    "average_jzhdjc": "Average",
+    "back_to_email_list_eosf6d": "Back to email list",
+    "balance_kxxksr": "Balance",
+    "bandwidth_5lc0i": "Bandwidth",
+    "bandwidth_2o9drs": "Bandwidth:",
+    "behavioral_ai_based_web_attack_analysis_xbcgol": "Behavioral / AI-based web attack analysis",
+    "behavioral_captcha_bot_challenge_1g3gwg9": "Behavioral CAPTCHA / bot challenge",
+    "behavioral_threat_protection_a6r5x9": "Behavioral threat protection",
+    "billed_annually_at_tl26no": "Billed annually at",
+    "billed_monthly_cancellation_follows_your_order_and_plan_terms_11eknc8": "Billed monthly · Cancellation follows your order and plan terms",
+    "blacklist_countries_8ksljy": "Blacklist Countries",
+    "blacklist_countries_16ekloe": "Blacklist countries",
+    "blacklisted_1ctqsal": "Blacklisted (",
+    "blocked_malicious_requests_billed_as_traffic_19lvcdk": "Blocked malicious requests billed as traffic",
+    "blue_1svzzzh": "Blue",
+    "bot_protection_g61y2h": "Bot protection",
+    "brute_force_and_rate_limit_protection_1ilvzqz": "Brute-force and rate-limit protection",
+    "built_in_3l91ca": "Built in",
+    "business_logic_testing_uliwb8": "Business-logic testing",
+    "business_logic_vulnerability_discovery_19simhs": "Business-logic vulnerability discovery",
+    "captcha_challenge_1u3uqk9": "CAPTCHA / Challenge",
+    "ci_cd_integration_cxqxx3": "CI/CD integration",
+    "compare_the_model_k93qb6": "COMPARE THE MODEL",
+    "can_act_on_detected_threats_9i4djl": "Can act on detected threats",
+    "cancel_ew9em3": "Cancel",
+    "central_policy_management_ma6p9n": "Central policy management",
+    "centralized_guard_management_1pm5uwk": "Centralized Guard management",
+    "centralized_management_v4tapn": "Centralized Management",
+    "change_password_11q3s6m": "Change password",
+    "check_point_wafaas_vy6ky": "Check Point WAFaaS",
+    "choose_w4fyow": "Choose",
+    "choose_the_external_server_facing_capture_interface_when_network_topolog_poknsl": "Choose the external/server-facing capture interface when network topology is ambiguous. The selection is included in signed policy.",
+    "clear_filters_a043pl": "Clear filters",
+    "clear_filters_52iz3o": "Clear filters ·",
+    "click_a_domain_or_sender_to_inspect_its_emails_32xv6c": "Click a domain or sender to inspect its emails.",
+    "cloudwatch_external_tooling_6gv8xl": "CloudWatch / external tooling",
+    "cloudflare_business_1vzihb4": "Cloudflare Business",
+    "company_hub_1jpxqn7": "Company Hub",
+    "compare_how_silence_ai_combines_source_code_analysis_live_application_te_kyy19h": "Compare how Silence AI combines source-code analysis, live application testing and business-logic pentesting in one autonomous workflow.",
+    "competitive_advantages_k3rmym": "Competitive advantages",
+    "complete_protection_3x3an9": "Complete Protection",
+    "complete_protection_without_security_add_ons_1vh0uyv": "Complete protection, without security add-ons.",
+    "compose_message_1w13hog": "Compose message",
+    "confirm_18tbqwf": "Confirm",
+    "confirm_deletion_m5vo47": "Confirm deletion",
+    "connecting_findings_with_response_depends_on_configured_workflows_and_in_cgwjqs": "Connecting findings with response depends on configured workflows and integrations.",
+    "console_preferences_tijcbo": "Console Preferences",
+    "contact_sales_1wj8yf7": "Contact Sales",
+    "container_and_kubernetes_workload_visibility_1vl7b54": "Container and Kubernetes workload visibility",
+    "content_1l6x30o": "Content:",
+    "continuous_project_graph_updates_1nzi86t": "Continuous project graph updates",
+    "your_order_or_plan_states_the_available_retention_period_1tuyhqr": "Your order or plan states the available retention period",
+    "copy_s6g5lw": "Copy",
+    "copy_ip_1i99gwt": "Copy IP",
+    "copy_hostname_2m5wnx": "Copy hostname",
+    "copy_key_1sbl3jv": "Copy key",
+    "copy_name_1x8g9xj": "Copy name",
+    "copy_tag_8v8m5g": "Copy tag",
+    "corrected_code_remediation_suggestions_fuks7j": "Corrected-code / remediation suggestions",
+    "correlated_security_activity_requiring_review_1sacujf": "Correlated security activity requiring review.",
+    "country_1diicx": "Country",
+    "country_blocking_1rlasjg": "Country blocking",
+    "coverage_spans_multiple_cloud_security_capabilities_and_configuration_bgfm7m": "Coverage spans multiple Cloud Security capabilities and configuration.",
+    "create_folder_1t905w3": "Create folder",
+    "cross_service_attack_path_analysis_1yq55ot": "Cross-service attack-path analysis",
+    "current_package_projection_paginated_by_the_server_zwbrcb": "Current package projection, paginated by the server.",
+    "custom_range_13ikcs7": "Custom Range",
+    "ddos_protection_1tvg2ai": "DDoS protection",
+    "department_1agxq9z": "DEPARTMENT",
+    "dkim_spf_il9z84": "DKIM / SPF",
+    "dns_dashboard_configuration_1fgzanv": "DNS + dashboard configuration",
+    "dns_delegation_1s2hn14": "DNS delegation:",
+    "dns_routing_3n3y6o": "DNS routing:",
+    "dns_based_deployment_1y6tgbl": "DNS-based deployment",
+    "date_ggjuyh": "Date",
+    "dedicated_web_ips_layer_1v070fz": "Dedicated Web IPS layer",
+    "dedicated_enterprise_node_12s0bo7": "Dedicated enterprise node",
+    "deep_source_code_analysis_sast_dast_api_testing_and_business_logic_secur_118uerv": "Deep source-code analysis, SAST, DAST, API testing and business-logic security testing powered by a persistent security graph and autonomous AI agents.",
+    "delegation_not_verified_60c3hy": "Delegation not verified",
+    "delegation_verified_dns_pending_zvek2k": "Delegation verified / DNS pending",
+    "delete_oay2cq": "Delete",
+    "delete_account_qfu7wh": "Delete Account",
+    "delete_account_1he9lwa": "Delete Account?",
+    "delete_across_entire_domain_jzn470": "Delete across entire domain",
+    "demo_access_all_protected_mailboxes_l9otcb": "Demo access: all protected mailboxes",
+    "demo_clock_1eb40j6": "Demo clock:",
+    "dependency_and_configuration_analysis_1pnsd8z": "Dependency and configuration analysis",
+    "deployment_schedule_12fzzxb": "Deployment schedule",
+    "deposit_amount_1ioai37": "Deposit Amount:",
+    "description_sjj37t": "Description",
+    "designed_for_no_security_expertise_1e1t4ul": "Designed for no security expertise",
+    "detectify_wf99jo": "Detectify",
+    "detecting_12jryem": "Detecting",
+    "detection_health_and_bounded_evidence_from_each_engine_dj4xs2": "Detection health and bounded evidence from each engine.",
+    "disabling_a_sensor_stops_its_detection_guard_mfa_and_firewall_protection_1joyruy": "Disabling a sensor stops its detection. Guard MFA and firewall protection remain active.",
+    "dismiss_an1pf7": "Dismiss",
+    "dismiss_notification_1eat1e": "Dismiss notification",
+    "domain_1gqyxox": "Domain",
+    "domain_setup_details_ugfm22": "Domain setup details",
+    "domain_visibility_all_demo_mailboxes_1bq4edz": "Domain visibility: all demo mailboxes",
+    "download_t8quxl": "Download",
+    "download_pdf_rt7m6j": "Download PDF",
+    "est_1cmqimj": "EST.",
+    "ecosystem_1m80dpn": "Ecosystem",
+    "elena_rostova_11b7qp6": "Elena Rostova",
+    "eligible_ile4gg": "Eligible",
+    "email_cmc_19yodyi": "Email CMC",
+    "email_protector_tzya1d": "Email Protector",
+    "email_security_lrtmmz": "Email Security",
+    "email_system_sandbox_1iepjeb": "Email System Sandbox",
+    "email_system_sandbox_demo_1u2jt7u": "Email System Sandbox Demo",
+    "email_visualizer_silenceai_net_dejua0": "Email Visualizer · silenceai.net",
+    "email_workspace_1fb8guu": "Email Workspace",
+    "email_sandbox_view_1968pxx": "Email sandbox view",
+    "emerald_1r2jvfj": "Emerald",
+    "enable_2fa_1ylpb1t": "Enable 2FA",
+    "enable_enforce_jlbofc": "Enable Enforce",
+    "enable_automatic_enforcement_lw0nhc": "Enable automatic enforcement?",
+    "enter_an_affiliate_promo_code_to_receive_a_discount_1oxrps7": "Enter an affiliate promo code to receive a discount",
+    "enter_your_current_origin_host_or_ip_the_server_websoc_should_proxy_to_f_peqp1o": "Enter your current origin host or IP (the server WebSOC should proxy to), for example:",
+    "entry_pricing_commercial_model_eb78on": "Entry pricing / commercial model",
+    "estimated_pentest_compute_c9icof": "Estimated Pentest Compute",
+    "events_217z8": "Events",
+    "everything_above_is_included_1cegu1p": "Everything above is included.",
+    "everything_included_with_one_complete_product_t4v0g": "Everything included with one complete product",
+    "evidence_1wt8chw": "Evidence",
+    "example_enterprise_application_notion_class_q23kyt": "Example enterprise application (Notion-class)",
+    "executive_reports_1e4q60a": "Executive reports",
+    "exit_expanded_demo_1xbj4rh": "Exit expanded demo",
+    "expand_demo_12ezyzc": "Expand demo",
+    "expiration_cy12fc": "Expiration",
+    "explicit_blocks_xg7bbp": "Explicit blocks",
+    "exploitability_validation_qqksnh": "Exploitability validation",
+    "explore_email_cmc_and_email_workspace_simulate_attacks_and_inspect_email_ihup0": "Explore Email CMC and Email Workspace. Simulate attacks and inspect email security evidence.",
+    "explore_server_security_console_inspect_engine_telemetry_test_policy_rul_abq4sh": "Explore Server Security Console, inspect engine telemetry, test policy rules, and simulate native server enrollment and attacks.",
+    "explore_the_web_security_cmc_simulate_attacks_and_inspect_waf_traffic_te_2z8ot6": "Explore the Web Security CMC, simulate attacks, and inspect WAF traffic telemetry.",
+    "failed_and_regressed_checks_are_prioritized_guidance_is_shown_only_when__1vmyfd6": "Failed and regressed checks are prioritized. Guidance is shown only when supplied by the sensor.",
+    "feature_1ymsk4d": "Feature",
+    "features_u1k6p6": "Features",
+    "file_integrity_monitoring_14tuqay": "File Integrity Monitoring",
+    "filter_1vvvdef": "Filter",
+    "first_seen_oxli00": "First seen",
+    "folder_1q0oot": "Folder",
+    "folder_name_4w489w": "Folder name",
+    "fortimail_x3czu0": "FortiMail",
+    "from_571_month_1j95ljx": "From $571/month",
+    "from_sender_1mqej13": "From (Sender)",
+    "from_utc_1ncsgjg": "From (UTC)",
+    "from_15k_yr_1ob51ba": "From ≈ $15K/yr",
+    "from_cqvkal": "From:",
+    "full_dast_1jkoyy4": "Full DAST",
+    "full_sast_1sguauz": "Full SAST",
+    "full_waf_protection_180fd0d": "Full WAF protection",
+    "full_assessment_wmiwem": "Full assessment",
+    "full_security_assessment_18z8ilg": "Full security assessment",
+    "full_security_platform_4n66et": "Full security platform",
+    "generate_reply_1er7162": "Generate reply",
+    "geo_match_rules_1j766xk": "Geo match rules",
+    "globe_style_8yr94b": "Globe style",
+    "gmail_eg3yt1": "Gmail",
+    "graph_first_source_code_analysis_1tzpyt1": "Graph-first source-code analysis",
+    "guard_access_security_1c0geo2": "Guard access security",
+    "guard_is_the_core_availability_signal_optional_sensor_issues_reduce_cove_x5plyu": "Guard is the core availability signal; optional sensor issues reduce coverage.",
+    "guided_anti_impersonation_setup_1r4peob": "Guided anti-impersonation setup",
+    "high_1gq8xlp": "High",
+    "high_complexity_7h8xdv": "High complexity",
+    "hostname_target_d22202": "Hostname (target):",
+    "how_compute_billing_works_121f6rp": "How compute billing works",
+    "ip_cidr_access_policies_1rlk7zh": "IP / CIDR access policies",
+    "ip_address_1vjcbqs": "IP Address",
+    "ip_address_9dn5gq": "IP address:",
+    "identity_provider_mfa_and_access_policies_use_a_different_access_model_er25qq": "Identity-provider MFA and access policies use a different access model.",
+    "illustrative_example_actual_compute_requirements_are_calculated_from_you_1yyyizn": "Illustrative example. Actual compute requirements are calculated from your project before testing begins.",
+    "incident_1273893": "Incident",
+    "incident_details_cbxqo5": "Incident details",
+    "incidents_1bczcbg": "Incidents",
+    "incidents_active_blocks_in_one_dashboard_70z32s": "Incidents + active blocks in one dashboard",
+    "included_maximum_additional_bknqqr": "Included / maximum additional",
+    "included_every_month_157oba4": "Included every month",
+    "included_in_every_plan_12h6nqm": "Included in every plan",
+    "individual_events_may_still_appear_in_the_event_explorer_17gdkvw": "Individual events may still appear in the event explorer.",
+    "infrastructure_inventory_and_audit_logs_5xu71z": "Infrastructure inventory and audit logs",
+    "inspect_gzwmnr": "Inspect",
+    "install_setup_cwhnnc": "Install / Setup",
+    "install_server_security_1b8o67": "Install Server Security",
+    "instant_deployment_1psqeql": "Instant deployment",
+    "instructions_k7ffxg": "Instructions",
+    "integrated_web_threat_siem_1jeqgco": "Integrated Web Threat SIEM",
+    "integrated_app_security_1vvl8uj": "Integrated app security",
+    "intelligent_model_routing_1c8tcv1": "Intelligent model routing",
+    "intruder_ai_pentest_mz8ohj": "Intruder AI Pentest",
+    "inventory_activity_b2ns2s": "Inventory activity",
+    "issue_qn92w0": "Issue",
+    "just_in_time_server_access_1nl6ary": "Just-in-time server access",
+    "kimi_k2_7_code_security_agents_wtpt54": "Kimi K2.7 Code security agents",
+    "kimi_k3_advanced_reasoning_1y7marr": "Kimi K3 advanced reasoning",
+    "live_interactive_sandbox_abinrs": "LIVE INTERACTIVE SANDBOX",
+    "live_sandbox_1jsjzb0": "LIVE SANDBOX",
+    "large_autonomous_penetration_tests_require_different_amounts_of_reasonin_xbfxdu": "Large autonomous penetration tests require different amounts of reasoning. Your project is graphed and estimated before expensive AI testing begins.",
+    "last_observed_ujd3mz": "Last observed",
+    "last_seen_ngc6c8": "Last seen",
+    "last_signal_2ahjrf": "Last signal",
+    "latest_installation_lifecycle_report_bwiada": "Latest installation lifecycle report.",
+    "link_inspection_12sq0j1": "Link inspection",
+    "links_attachments_1knkj7t": "Links / Attachments",
+    "live_11rknnz": "Live",
+    "live_website_testing_dast_1w4e6nh": "Live website testing (DAST)",
+    "loading_servers_16fbkvz": "Loading servers…",
+    "loading_verified_package_metadata_16k2crw": "Loading verified package metadata…",
+    "loading_6kndir": "Loading...",
+    "local_demo_resets_on_reload_7bg0bw": "Local demo · resets on reload",
+    "logout_11l94wb": "Logout",
+    "low_1dcndpd": "Low",
+    "lower_level_telemetry_for_advanced_investigation_results_are_filtered_an_4l3j39": "Lower-level telemetry for advanced investigation. Results are filtered and paginated on the server.",
+    "mfa_access_policies_use_a_different_model_from_temporary_source_ip_autho_13q2q1i": "MFA access policies use a different model from temporary source-IP authorization.",
+    "mfa_and_totp_authentication_1qmji4f": "MFA and TOTP authentication",
+    "malicious_ip_blocking_u4rd55": "Malicious IP blocking",
+    "malware_in_attachment_q9cl3k": "Malware in attachment",
+    "managed_ml_protections_178o1w4": "Managed / ML protections",
+    "managed_rules_controls_yucuvf": "Managed rules & controls",
+    "mark_investigating_16ri724": "Mark investigating",
+    "maximum_available_protection_no_security_feature_gates_wh7n8y": "Maximum available protection. No security feature gates.",
+    "medium_2pbr86": "Medium",
+    "message_1cam7ic": "Message",
+    "microsoft_365_outlook_n905w1": "Microsoft 365 / Outlook",
+    "move_email_funpdg": "Move email",
+    "move_to_block_x2dkcg": "Move to block",
+    "multi_step_attack_paths_ilpqjt": "Multi-step attack paths",
+    "multi_step_workflow_analysis_1c0nkgq": "Multi-step workflow analysis",
+    "multiple_repositories_projects_supported_1j7ynz0": "Multiple repositories/projects supported",
+    "multiple_security_capabilities_2i1khh": "Multiple security capabilities",
+    "name_g6oewk": "Name:",
+    "native_entry_1o13e4m": "Native entry",
+    "native_5_35k_yr_est_1wxk545": "Native ≈ $5.35K/yr · EST.",
+    "network_controls_have_a_different_scope_from_host_level_automated_blocki_k78k83": "Network controls have a different scope from host-level automated blocking.",
+    "next_1padbm0": "Next",
+    "no_countries_available_kxxlqb": "No countries available",
+    "no_countries_blacklisted_ary1ia": "No countries blacklisted",
+    "no_data_y1y3f2": "No data",
+    "no_detected_links_in_this_traffic_selection_10uf3fb": "No detected links in this traffic selection.",
+    "no_emails_here_1yv04nb": "No emails here",
+    "no_emails_in_this_category_qzmd9w": "No emails in this category.",
+    "no_explicit_blocks_configured_12ezt1i": "No explicit blocks configured.",
+    "no_feature_tiers_no_paid_testing_add_ons_only_ai_compute_scales_with_usa_898jxn": "No feature tiers. No paid testing add-ons. Only AI compute scales with usage.",
+    "no_matching_countries_found_vikisb": "No matching countries found",
+    "no_matching_emails_adjust_the_timeframe_or_filters_to_see_more_traffic_e88phk": "No matching emails. Adjust the timeframe or filters to see more traffic.",
+    "no_negative_balances_no_surprise_overage_invoices_unused_purchased_compu_16fb6mm": "No negative balances. No surprise overage invoices. Unused purchased compute remains available for future assessments; included monthly compute refreshes each billing cycle.",
+    "no_packages_reported_1wuwfqk": "No packages reported.",
+    "no_paid_security_add_ons_no_per_admin_charges_no_artificial_limits_on_de_enn8ye": "No paid security add-ons. No per-admin charges. No artificial limits on detections, blocked attacks, security rules, or remediations.",
+    "no_provisioning_report_received_x1sw8": "No provisioning report received.",
+    "no_scheduled_messages_compose_an_email_and_choose_schedule_to_add_one_14k40xx": "No scheduled messages. Compose an email and choose Schedule to add one.",
+    "no_servers_added_1qb3yyw": "No servers added",
+    "no_structured_evidence_was_attached_y7tdbx": "No structured evidence was attached.",
+    "no_surprise_ai_bills_kdtkd7": "No surprise AI bills",
+    "no_trusted_sources_configured_iez8tx": "No trusted sources configured.",
+    "nodezero_1n0874b": "NodeZero",
+    "non_blacklisted_2hkvo7": "Non-blacklisted (",
+    "none_deku7v": "None",
+    "not_a_primary_native_capability_1v39huc": "Not a primary native capability",
+    "not_a_separate_ips_4mr66k": "Not a separate IPS",
+    "not_request_metered_like_payg_waf_1lz3jsu": "Not request-metered like PAYG WAF",
+    "notion_class_app_2m_loc_2z2g3i": "Notion-class app · ~2M LOC",
+    "number_of_ips_1a5i4az": "Number of IPs",
+    "observe_records_only_shadow_evaluates_without_enforcing_enforce_applies__9xtwoe": "Observe records only. Shadow evaluates without enforcing. Enforce applies approved temporary blocks.",
+    "one_autonomous_pentester_everything_included_fomv2o": "One autonomous pentester. Everything included.",
+    "one_product_configurable_web_protection_clwwg6": "One product. Configurable web protection.",
+    "one_command_full_server_protection_1v7m07e": "One-command full server protection",
+    "only_capacity_changes_between_plans_176xpm6": "Only capacity changes between plans.",
+    "only_telemetry_explicitly_linked_to_this_incident_is_shown_e21eke": "Only telemetry explicitly linked to this incident is shown.",
+    "open_n6hn1l": "Open",
+    "open_email_protector_26a8n3": "Open Email Protector",
+    "open_security_84kkst": "Open Security",
+    "open_in_webmail_15mgq5p": "Open in Webmail",
+    "open_management_console_khmdcp": "Open management console",
+    "open_the_pink_arrow_to_review_five_threat_categories_183rdjq": "Open the pink arrow to review five threat categories.",
+    "or_enter_custom_amount_6p8ymz": "Or enter custom amount",
+    "organization_silenceai_net_2lod9g": "Organization: silenceai.net",
+    "origin_ip_address_3xdb7g": "Origin IP Address",
+    "ownership_and_dns_verified_1w10g3o": "Ownership and DNS verified",
+    "package_1ymq5cr": "Package",
+    "package_and_system_inventory_ifeohz": "Package and system inventory",
+    "package_integrity_details_1ffyvha": "Package integrity details",
+    "package_selection_starts_after_the_server_is_added_13gcdx6": "Package selection starts after the server is added.",
+    "packages_19dyed4": "Packages",
+    "packages_plus_structured_os_services_ports_network_account_and_runtime_i_1volexa": "Packages plus structured OS, services, ports, network, account, and runtime inventory signals.",
+    "paddle_checkout_u9qyzf": "Paddle Checkout",
+    "page_1sfsa6u": "Page",
+    "partial_additional_configuration_10mybyq": "Partial / additional configuration",
+    "partial_or_additional_configuration_1xubrhu": "Partial or additional configuration",
+    "overage_after_included_usage_1rr3ibz": "Overage after included usage",
+    "pay_only_for_the_compute_you_use_127apru": "Pay only for the compute you use.",
+    "payment_gateway_11ncarf": "Payment Gateway:",
+    "payment_history_t9jtfh": "Payment History",
+    "peak_move_shemf7": "Peak move",
+    "permissions_inspect_incidents_review_audit_events_purge_campaigns_1bap0y": "Permissions: inspect incidents, review audit events, purge campaigns.",
+    "persistent_source_code_security_graph_10o4369": "Persistent source-code security graph",
+    "plan_optional_products_drkdub": "Plan + optional products",
+    "platform_simple_usage_122cdsw": "Platform + simple usage",
+    "points_1b5hejq": "Points",
+    "policy_1g6zau7": "Policy",
+    "port_1qx5adi": "Port",
+    "predictable_integrated_pricing_3yoop": "Predictable integrated pricing",
+    "prepaid_compute_viiepp": "Prepaid compute",
+    "previous_1t5jxvs": "Previous",
+    "pricing_1e656gd": "Pricing",
+    "primary_1jcui61": "Primary",
+    "proceed_to_checkout_13it4t6": "Proceed to Checkout",
+    "promocode_g9kgz9": "Promocode",
+    "protected_ssh_and_configured_tcp_services_moroqj": "Protected SSH and configured TCP services",
+    "protected_server_kze38y": "Protected server:",
+    "protected_services_18mps8j": "Protected services:",
+    "protection_1wyj3mi": "Protection",
+    "provisioning_s7tu94": "Provisioning",
+    "published_pricing_models_differ_by_server_host_cloud_plan_agent_capacity_gjp6ma": "Published pricing models differ by server, host, cloud plan, agent capacity, or user. Pricing may change; competitor pricing checked September 2026.",
+    "q4_2026_fintech_partners_international_949isp": "Q4 2026 · FinTech Partners International",
+    "rps_1k8pop0": "RPS",
+    "rps_15n79zu": "RPS:",
+    "range_share_1mpgq9p": "Range share",
+    "re_enroll_server_1vbhula": "Re-enroll server",
+    "reason_i36sl5": "Reason",
+    "refresh_28r6qc": "Refresh",
+    "regenerate_1nc1tqn": "Regenerate",
+    "register_avtc68": "Register",
+    "register_new_agent_ef8agf": "Register new agent",
+    "release_u9yqe6": "Release",
+    "remediation_recommendations_fcmu8y": "Remediation recommendations",
+    "remove_9c35st": "Remove",
+    "reply_sent_available_in_sent_and_auto_responded_1ky5l03": "Reply sent · available in Sent and Auto-responded.",
+    "request_based_uq4hv1": "Request based",
+    "request_based_billing_v6kjrz": "Request-based billing",
+    "requires_aws_services_integrations_1af3wds": "Requires AWS services / integrations",
+    "reset_demo_1drv32f": "Reset Demo",
+    "reset_canvas_position_1spcj9z": "Reset canvas position",
+    "reset_selection_sai23y": "Reset selection",
+    "resolve_1qqbo5f": "Resolve",
+    "response_nrnldq": "Response",
+    "response_mode_11etgbl": "Response mode:",
+    "response_17soux8": "Response:",
+    "retention_status_events_eg5s9u": "Retention status: events",
+    "review_your_draft_wur8mr": "Review your draft",
+    "revision_1pi2b08": "Revision",
+    "role_security_administrator_184ib4s": "Role: Security administrator",
+    "runtime_file_malware_protection_17cntwp": "Runtime + file + malware protection",
+    "sha_256_1j0rdj1": "SHA-256",
+    "sha_256_dt80lh": "SHA-256:",
+    "planned_siem_log_retention_options_vssevv": "Planned SIEM log retention options",
+    "siem_log_storage_4qjyk4": "SIEM log storage",
+    "silence_ai_enterprise_e2rug6": "SILENCE AI / ENTERPRISE",
+    "ssh_kubernetes_access_requires_a_totp_verification_before_the_protected__1dhr6zz": "SSH/Kubernetes access requires a TOTP verification before the protected port temporarily opens for the verified source IP.",
+    "save_lewgh4": "Save",
+    "save_1_980_lob3rs": "Save $1,980",
+    "save_draft_7055cb": "Save draft",
+    "save_interface_1bay23": "Save interface",
+    "schedule_19hwlpo": "Schedule",
+    "scroll_to_zoom_drag_to_pan_or_double_click_to_reset_the_canvas_1i1677y": "Scroll to zoom, drag to pan, or double-click to reset the canvas.",
+    "secure_setup_completion_time_vt2i1e": "Secure setup completion time",
+    "security_console_12twc7a": "Security Console",
+    "security_ops_1yth0iv": "Security Ops",
+    "security_ops_department_18_emails_b0tdvs": "Security Ops Department · 18 emails",
+    "security_alerts_and_incident_timeline_14pg6ni": "Security alerts and incident timeline",
+    "security_analytics_logs_13a0sux": "Security analytics / logs",
+    "security_configuration_assessment_mjl1tp": "Security configuration assessment",
+    "security_engines_1p4mr1g": "Security engines",
+    "security_events_1dhcvvc": "Security events",
+    "security_graph_1ayh323": "Security graph:",
+    "security_incidents_are_forwarded_to_security_silenceai_net_yvnjir": "Security incidents are forwarded to security@silenceai.net.",
+    "security_logs_46n4qy": "Security logs",
+    "security_misconfiguration_detection_14fb9fh": "Security misconfiguration detection",
+    "security_policy_14013tn": "Security policy",
+    "security_reports_1ojcrro": "Security reports",
+    "select_a_message_to_review_its_contents_and_security_analysis_aa1r9b": "Select a message to review its contents and security analysis.",
+    "select_amount_usd_6hazf4": "Select amount ($ USD)",
+    "select_language_12c4dp5": "Select language",
+    "selected_9jpdka": "Selected:",
+    "send_at_utc_1mhxqud": "Send at (UTC)",
+    "send_now_a7axwf": "Send now",
+    "send_reply_1f4jclr": "Send reply",
+    "sensor_health_9r3rir": "Sensor health",
+    "sensor_state_ktb3iq": "Sensor state",
+    "separate_modules_9h8m09": "Separate modules",
+    "server_workload_protection_1tt44p0": "Server & Workload Protection",
+    "server_security_1pzlq3s": "Server Security",
+    "server_security_sandbox_113x8p3": "Server Security Sandbox",
+    "server_security_sandbox_demo_1pp3t6e": "Server Security Sandbox Demo",
+    "server_inventory_1vxlq9u": "Server inventory",
+    "server_protection_176f1o5": "Server protection",
+    "server_sandbox_view_16hlihi": "Server sandbox view",
+    "servers_1kw6xw3": "Servers",
+    "servers_onboarding_h22ie6": "Servers & Onboarding",
+    "servers_are_unavailable_1uyakyj": "Servers are unavailable.",
+    "service_level_agreement_jphqnu": "Service Level Agreement",
+    "setup_management_approach_10na7ma": "Setup / management approach",
+    "setup_by_general_it_specialist_b8p87l": "Setup by general IT specialist",
+    "severity_v7rniq": "Severity",
+    "show_sender_labels_uw55tw": "Show sender labels",
+    "signed_cmc_policy_only_the_browser_never_talks_to_guard_or_a_sensor_dire_1gxoppd": "Signed CMC policy only; the browser never talks to Guard or a sensor directly.",
+    "silence_ai_nlxb2a": "Silence AI",
+    "silence_ai_assistant_1coztea": "Silence AI Assistant",
+    "silence_ai_autonomous_penetration_tester_1lwfge": "Silence AI Autonomous Penetration Tester",
+    "silence_ai_cmc_dashboard_l0sgar": "Silence AI CMC dashboard",
+    "silence_ai_vs_traditional_server_security_1w8gyhr": "Silence AI vs Traditional Server Security",
+    "simulate_attack_1kzg7gl": "Simulate Attack",
+    "simulate_an_attack_to_see_waf_rate_limiting_engage_then_inspect_the_glob_lo4fhz": "Simulate an attack to see WAF rate limiting engage, then inspect the globe and telemetry.",
+    "simulate_an_attack_open_its_message_and_delete_the_campaign_across_the_d_t8039a": "Simulate an attack, open its message, and delete the campaign across the domain. Review the result in Email Protector and the audit log.",
+    "single_use_secret_4dbqct": "Single-use secret.",
+    "size_1a4x3zw": "Size",
+    "snyk_8lppg": "Snyk",
+    "source_r5qyuw": "Source",
+    "source_ip_1lvdqrd": "Source IP",
+    "source_code_live_app_in_one_assessment_rn3c2u": "Source code + live app in one assessment",
+    "source_code_1g7ehqt": "Source code:",
+    "source_code_security_testing_sast_1uqrqsa": "Source-code security testing (SAST)",
+    "source_code_aware_penetration_testing_2y1ir0": "Source-code-aware penetration testing",
+    "sources_195ydw1": "Sources",
+    "spoof_score_1h2kwg": "Spoof Score",
+    "stage_cscafh": "Stage",
+    "staging_handoff_tuesday_review_contact_sarah_jenkins_taxbys": "Staging handoff: Tuesday. Review contact: Sarah Jenkins.",
+    "start_penetration_testing_fmq6yy": "Start Penetration Testing",
+    "start_protecting_servers_k94d84": "Start protecting servers",
+    "start_protecting_your_website_x0gj9m": "Start protecting your website",
+    "started_163dnb2": "Started",
+    "status_3pd73": "Status",
+    "step_1_add_ownership_meta_tag_on_your_origin_website_k9ew68": "Step 1. Add ownership meta tag on your origin website",
+    "step_1_ownership_meta_tag_pw2zww": "Step 1. Ownership meta tag",
+    "step_2_acme_delegation_cname_71dyj": "Step 2. ACME delegation CNAME",
+    "step_2_add_acme_delegation_cname_1qw8uoc": "Step 2. Add ACME delegation CNAME",
+    "step_3_dns_a_record_to_add_switch_traffic_through_websoc_1ko55a9": "Step 3. DNS A record to add (switch traffic through WebSOC)",
+    "step_3_dns_a_record_to_route_traffic_via_websoc_1ub10ej": "Step 3. DNS A record to route traffic via WebSOC",
+    "subject_18ix78v": "Subject",
+    "suricata_monitored_interface_ebdmev": "Suricata monitored interface",
+    "swipe_or_drag_horizontally_to_compare_every_option_1ppwfu9": "Swipe or drag horizontally to compare every option",
+    "switch_between_email_cmc_and_email_workspace_then_simulate_an_attack_and_mp4eup": "Switch between Email CMC and Email Workspace, then simulate an attack and inspect quarantined messages.",
+    "switch_between_security_console_and_servers_fleet_simulate_an_attack_to__8xb6kx": "Switch between Security Console and Servers Fleet, simulate an attack to see CrowdSec auto-block rogue IPs, or customize signed policy.",
+    "threat_inspector_ai_csd_hwvi6": "THREAT INSPECTOR / AI-CSD",
+    "totp_temporarily_allows_the_administrator_s_source_ip_normal_ssh_or_kube_9od533": "TOTP temporarily allows the administrator’s source IP; normal SSH or Kubernetes authentication still applies.",
+    "totp_unlocks_ssh_kubernetes_only_when_needed_2bqg7h": "TOTP unlocks SSH / Kubernetes only when needed",
+    "ttl_4vu3pv": "TTL:",
+    "technical_details_8fsw8u": "Technical details",
+    "technical_developer_reports_j2pdl9": "Technical developer reports",
+    "telemetry_is_stale_for_at_least_one_component_this_is_a_cmc_visibility_w_inzsno": "Telemetry is stale for at least one component. This is a CMC visibility warning, not proof that Guard firewall protection stopped.",
+    "temporary_firewall_authorization_jgko45": "Temporary firewall authorization",
+    "tenant_isolated_tn4zno": "Tenant isolated",
+    "the_macro_payload_is_blocked_only_its_scan_report_is_available_1lzqwqu": "The macro payload is blocked. Only its scan report is available.",
+    "this_action_cannot_be_undone_this_will_permanently_delete_your_account_a_16gz7of": "This action cannot be undone. This will permanently delete your account and remove all your data from our servers.",
+    "this_demonstration_agreement_covers_the_dedicated_staging_node_email_sec_1u5pniv": "This demonstration agreement covers the dedicated staging node, email security integration, and technical handoff described in Sarah Jenkins’s message.",
+    "this_server_is_enrolled_tz3djp": "This server is enrolled",
+    "threat_grid_1jx97vr": "Threat Grid",
+    "time_zone_1rhzoka": "Time zone",
+    "timeframe_8fa82p": "TimeFrame:",
+    "timeline_djv8ja": "Timeline",
+    "to_utc_1mpm1nt": "To (UTC)",
+    "top_up_balance_4hyyi1": "Top Up Balance",
+    "total_1c0as9p": "Total",
+    "traffic_from_3srgsk": "Traffic from:",
+    "transaction_id_1ysrm3g": "Transaction ID",
+    "triggered_when_bot_behavior_is_detected_wdzef9": "Triggered when bot behavior is detected",
+    "trusted_ips_3zqhwy": "Trusted IPs",
+    "trusted_sources_are_exempt_from_automatic_security_blocks_but_still_foll_17xzmv0": "Trusted sources are exempt from automatic security blocks, but still follow normal authentication and MFA requirements.",
+    "trusted_sources_remain_subject_to_normal_authentication_and_mfa_requirem_10j9hsj": "Trusted sources remain subject to normal authentication and MFA requirements.",
+    "try_again_982hh6": "Try again",
+    "try_it_y4azvb": "Try it:",
+    "turnstile_super_bot_fight_mode_y48441": "Turnstile / Super Bot Fight Mode",
+    "type_1qgcws5": "Type:",
+    "utc_1he5119": "UTC",
+    "unlimited_administrators_no_per_user_pricing_16fb8ck": "Unlimited administrators. No per-user pricing.",
+    "unmetered_ddos_protection_1r405nv": "Unmetered DDoS protection",
+    "up_to_100_agents_mwdro": "Up to 100 agents",
+    "updated_miz9ao": "Updated",
+    "usage_based_1905drv": "Usage based",
+    "use_add_server_above_then_choose_an_ubuntu_deb_or_fedora_rpm_package_man_188dbqy": "Use Add Server above, then choose an Ubuntu DEB or Fedora RPM package manually.",
+    "use_timeframe_and_filter_to_narrow_traffic_switch_to_outgoing_for_sent_m_11dfkum": "Use TimeFrame and Filter to narrow traffic. Switch to Outgoing for sent messages.",
+    "verified_by_the_cmc_against_signed_native_package_metadata_before_delive_1b5ba6q": "Verified by the CMC against signed native package metadata before delivery.",
+    "verify_ownership_and_dns_4aenar": "Verify ownership and DNS",
+    "verifying_ismekq": "Verifying...",
+    "version_q0zd4n": "Version",
+    "via_waf_rules_u769me": "Via WAF rules",
+    "via_security_rules_yv4meo": "Via security rules",
+    "view_q5w460": "View",
+    "view_account_activity_1h0gqcc": "View account activity",
+    "view_all_emails_across_the_domain_from_an_admin_console_1fme4xf": "View all emails across the domain from an Admin Console",
+    "view_in_mail_1upresu": "View in Mail",
+    "virustotal_q4tczi": "VirusTotal:",
+    "vulnerability_security_posture_monitoring_wd5anr": "Vulnerability & security posture monitoring",
+    "vulnerability_detection_1xpq2n6": "Vulnerability detection",
+    "vulnerability_prioritization_13r245k": "Vulnerability prioritization",
+    "vulnerability_retesting_1zommm": "Vulnerability retesting",
+    "waf_ips_captcha_siem_ai_19px5sz": "WAF + IPS + CAPTCHA + SIEM + AI",
+    "we_could_not_load_this_view_this_does_not_mean_guard_protection_failed_mp0yr6": "We could not load this view. This does not mean Guard protection failed.",
+    "weak_uhuaqx": "Weak",
+    "web_security_bel2xx": "Web Security",
+    "web_security_sandbox_14f3hyq": "Web Security Sandbox",
+    "web_security_sandbox_demo_9zp8xl": "Web Security Sandbox Demo",
+    "web_security_stack_in_one_dashboard_cevt28": "Web security stack in one dashboard",
+    "website_penetration_testing_179yd9n": "Website penetration testing",
+    "your_company_yha0w5": "YOUR COMPANY",
+    "blocked_malicious_requests_have_no_request_fee_usage_measurement_follows_g2sfyd": "Blocked malicious requests have no request fee; usage measurement follows your plan.",
+    "your_inbox_protected_g3xg2": "Your inbox, protected.",
+    "your_pentest_can_never_exceed_the_approved_compute_budget_without_your_a_4it49v": "Your pentest can never exceed the approved compute budget without your authorization.",
+    "your_price_changes_with_usage_not_with_how_well_we_protect_you_1yeijuk": "Your price changes with usage — not with how well we protect you.",
+    "a_physical_server_virtual_machine_cloud_instance_or_kubernetes_worker_no_1q6ve4r": "a physical server, virtual machine, cloud instance, or Kubernetes worker node running Silence AI Guard. Containers running on a protected node are included.",
+    "admin_silenceai_net_1196ktk": "admin@silenceai.net",
+    "attachments_7azybl": "attachments",
+    "audit_1w319rc": "audit",
+    "billed_annually_fdxi0z": "billed annually",
+    "builtin_4ort5s": "builtIn",
+    "days_this_view_does_not_run_deletion_jobs_1gjwanu": "days. This view does not run deletion jobs.",
+    "days_incidents_responses_and_administrative_audit_1glp42a": "days; incidents, responses, and administrative audit",
+    "elena_r_1xwccs2": "elena.r",
+    "emails_1j83iho": "emails",
+    "emails_current_timeframe_and_filters_vo4wc0": "emails · current timeframe and filters",
+    "events_589chw": "events",
+    "first_10m_requests_payg_6k07jz": "first 10M requests / PAYG",
+    "intercepted_threats_1jukubh": "intercepted threats",
+    "jmqst011_of5d0a": "jmqst011",
+    "legitimate_requests_12wwgky": "legitimate requests",
+    "links_1u66m9z": "links ·",
+    "origin_your_domain_com_1dssztw": "origin.your-domain.com",
+    "partial_1iqstju": "partial",
+    "per_extra_1m_requests_1sllg92": "per extra 1M requests",
+    "per_extra_gb_month_1tza2bc": "per extra GB / month",
+    "protected_server_77721o": "protected server",
+    "security_shrhl": "security →",
+    "silenceai_net_s37p9j": "silenceai.net",
+    "soc_1otn7h8": "soc",
+    "unavailable_13ml53d": "unavailable",
+    "10_min_1dg5h4s": "~10 min",
+    "15_min_ghwhz3": "~15 min",
+    "2m_lines_of_code_8_4m_source_tokens_19u58g8": "~2M lines of code · 8.4M source tokens",
+    "30_min_1u90mw2": "~30 min",
+    "5_min_a0ft48": "~5 min",
+    "choose_the_server_operating_system_manually_package_download_does_not_me_2lngpv": "· choose the server operating system manually. Package download does not mean the remote server is installed.",
+    "blocked_means_new_connections_from_the_source_are_denied_within_the_show_13ievhq": "“Blocked” means new connections from the source are denied within the shown scope. Existing connections may remain.",
+    "3_5k_test_14006jn": "≈ $3.5K/test",
+    "5_min_wzvnng": "≈ 5 min",
+    "blocked_malicious_traffic_0_00_azdknf": "✓ BLOCKED MALICIOUS TRAFFIC — $0.00",
+    "all_time_14kttt9": "All time",
+    "incoming_19fgb0p": "Incoming",
+    "outgoing_1al3twb": "Outgoing",
+    "analytics_company_flow_13g08em": "Analytics & Company Flow",
+    "department_flow_1txaxed": "Department flow",
+    "finance_audit_20kudo": "Finance & Audit",
+    "executive_board_86beex": "Executive Board",
+    "emails_1qbu3y4": "Emails",
+    "in_out_1ih3z07": "In / Out",
+    "threats_9sjnli": "Threats",
+    "domain_volume_l48en1": "Domain volume",
+    "annual_1wcrvd6": "Annual",
+    "monthly_669v12": "Monthly",
+    "year_1cf05y4": "year",
+    "month_1nicidh": "month",
+    "pentester_9w1g83": "Pentester",
+    "supports_integration_with_calendly_1mzi8b9": "Supports integration with Calendly",
+    "open_email_1g8u06h": "Open email",
+    "to_idyip0": "to",
+    "star_ml4gwh": "Star",
+    "unstar_1r98402": "Unstar",
+    "cancel_scheduled_1nncbdo": "Cancel scheduled",
+    "to_n75aoq": "To:",
+    "open_domain_16gq0yn": "Open domain",
+    "open_sender_439fy6": "Open sender",
+    "open_employee_1vf72ff": "Open employee",
+    "expand_analytics_cards_6daspe": "Expand analytics cards",
+    "collapse_analytics_cards_1sgujp1": "Collapse analytics cards",
+    "expand_analytics_q871qp": "Expand analytics",
+    "collapse_analytics_wabjn6": "Collapse analytics",
+    "department_flow_and_domain_volume_analytics_1m4usr6": "Department flow and Domain volume analytics",
+    "switch_to_cmc_1exhatf": "Switch to CMC",
+    "compose_6nwqz7": "Compose",
+    "scheduled_1b7ctnc": "Scheduled",
+    "system_hoku70": "SYSTEM",
+    "quarantine_snm13l": "QUARANTINE",
+    "my_folders_1b11bgu": "MY FOLDERS",
+    "unfiltered_fwnjmt": "Unfiltered",
+    "secure_18y5ib4": "Secure",
+    "important_1ju3j5x": "Important",
+    "auto_responded_1umeakr": "Auto-responded",
+    "sent_1quzo9r": "Sent",
+    "drafts_ykz9u5": "Drafts",
+    "trash_1596lh": "Trash",
+    "spam_9z2ozs": "SPAM",
+    "possibly_phishing_wxcscu": "Possibly Phishing",
+    "dangerous_links_ijk6ga": "Dangerous links",
+    "malware_in_attachments_18a9fvd": "Malware in attachments",
+    "from_6s9hn9": "From",
+    "to_iaukp0": "To",
+    "verified_1jnn2zp": "Verified",
+    "quarantined_rqk1zj": "Quarantined",
+    "now_12mubvb": "Now",
+    "not_available_1pb0ho5": "Not available",
+    "search_emails_headers_hashes_1pd59k0": "Search emails, headers, hashes",
+    "search_emails_headers_hashes_1cn701e": "Search emails, headers, hashes…",
+    "current_language_1ocq0a4": "Current language",
+    "server_security_console_1pivfcx": "Server Security Console",
+    "web_security_cmc_1ggnr48": "Web Security CMC",
+    "one_subscription_no_request_fee_for_blocked_traffic_waf_ips_ddos_control_1kgorxg": "One subscription · No request fee for blocked traffic · WAF, IPS, DDoS controls and SIEM in the plan",
+    "automated_mail_organization_security_hepk6t": "Automated Mail Organization & Security",
+    "security_configuration_posture_zut1nr": "Security configuration & posture",
+    "email_12fq213": "email",
+    "server_security_competitor_comparison_scroll_horizontally_to_view_all_ve_1c20si1": "Server security competitor comparison. Scroll horizontally to view all vendors.",
+    "comparison_legend_1ve6pm5": "Comparison legend",
+    "search_emails_headers_hashes_1jiyb0t": "Search emails, headers, hashes?",
+    "be_careful_on_what_you_trust_mm32ts": "Be careful on what you trust",
+    "abusing_trusted_cloud_apis_what_silence_ai_s_strong_threat_intelligence__1763u4h": "🔴 Abusing Trusted Cloud APIs: What Silence AI's Strong Threat Intelligence Reveals...",
+    "silence_ai_s_intelligence_is_ahead_of_virustotal_owned_by_google_zlqefz": "Silence AI's intelligence is ahead of VirusTotal, owned by Google",
+    "green_on_virustotal_safe_recently_our_threat_hunting_team_at_silence_ai__1aodwzq": "🟢 Green on VirusTotal ≠ Safe 😱Recently, our Threat Hunting team at Silence AI took a closer look at active crypt...",
+    "catching_the_rat_before_the_beacon_builder_level_yara_detection_1fn9n5u": "Catching the RAT Before the Beacon: Builder-Level YARA Detection",
+    "rulesetrat_custom_yara_rules_and_rat_builder_analysis_what_do_you_do_whe_c6bi3s": "🧐 RuleSetRAT: Custom YARA Rules and RAT Builder Analysis. What do you do when the required sample isn’t available on V...",
+    "featured_article_q07k4l": "Featured Article",
+    "click_to_read_the_full_article_from_silence_1ln0785": "Click to read the full article from Silence.",
+    "recent_mg65fi": "Recent",
+    "2_min_read_1nhw0n3": "2 min read",
+    "read_on_linkedin_1soy10s": "Read on LinkedIn",
+    "simulated_web_attack_intercepted_iyisay": "Simulated web attack intercepted",
+    "waf_rate_limiting_is_active_for_the_detected_l7_ddos_flood_tqkuz7": "WAF rate limiting is active for the detected L7 DDoS flood.",
+    "simulated_zero_day_attack_intercepted_zt0yvp": "Simulated zero-day attack intercepted",
+    "domain_wide_purge_complete_47lrl3": "Domain-wide purge complete",
+    "reply_sent_in_demo_ko0etx": "Reply sent in demo",
+    "draft_saved_hox9mn": "Draft saved",
+    "email_scheduled_5rhuns": "Email scheduled",
+    "email_sent_in_demo_1dr44dx": "Email sent in demo",
+    "scheduled_email_sent_in_demo_11ow2qs": "Scheduled email sent in demo",
+    "available_in_sent_1x3hm1v": "Available in Sent.",
+    "verdict_count_deliveries_quarantined_8m9cyd": "{verdict}. {count} deliveries quarantined.",
+    "purged_subject_from_count_domain_mailboxes_osgc8n": "Purged {subject} from {count} domain mailboxes.",
+    "delivered_to_recipient_available_in_sent_aq46cn": "Delivered to {recipient}. Available in Sent.",
+    "folder_foldername_created_1tqwm22": "Folder {folderName} created",
+    "count_messages_moved_to_the_new_folder_17nzkob": "{count} messages moved to the new folder",
+    "attackers_can_abuse_trusted_cloud_apis_see_what_our_threat_intelligence__1vl676d": "Attackers can abuse trusted cloud APIs. See what our threat intelligence uncovered.",
+    "a_clean_virustotal_result_does_not_guarantee_safety_our_threat_hunters_i_13g7f9k": "A clean VirusTotal result does not guarantee safety. Our threat hunters investigated an active threat.",
+    "rulesetrat_analysis_and_custom_yara_rules_help_detect_the_threat_even_wh_5x4tgd": "RuleSetRAT analysis and custom YARA rules help detect the threat even when the original sample is unavailable.",
+    "move_all_messages_to_finance_audit_j0ueox": "Move all messages to Finance & Audit",
+    "created_folder_and_moved_matching_messages_there_find_them_under_my_fold_1j2pqds": "Created {folder} and moved matching messages there. Find them under My Folders.",
+    "move_all_messages_to_folder_1bfmw02": "Move all messages to {folder}",
+    "open_ai_assistant_ppglr1": "Open AI Assistant",
+    "ask_sai_security_and_mail_assistant_chat_8xnsi3": "Ask SAI Security and Mail Assistant chat",
+    "replay_folder_demo_1xi1qc5": "Replay folder demo",
+    "email_context_2sv2nm": "Email context:",
+    "you_1efd4xo": "You",
+    "move_messages_to_finance_audit_1mcsj0a": "Move messages to Finance & Audit",
+    "create_an_executive_folder_1g6r34u": "Create an Executive folder",
+    "summarize_threats_coftsr": "Summarize threats",
+    "ask_ai_assistant_or_request_folder_routing_clkai6": "Ask AI assistant or request folder routing",
+    "for_example_move_all_messages_to_finance_audit_dy725g": "For example: Move all messages to Finance & Audit",
+    "send_message_1ocggf0": "Send message",
+    "use_domain_wide_delete_to_remove_every_copy_of_a_campaign_the_audit_log__8fm492": "Use domain-wide delete to remove every copy of a campaign. The audit log records {count} purge operations.",
+    "the_demo_contains_total_quarantined_messages_phishing_phishing_malware_m_mej1az": "The demo contains {total} quarantined messages: {phishing} phishing, {malware} malware, {links} dangerous links, and {spam} spam.",
+    "select_a_message_to_inspect_or_ask_for_a_quarantine_summary_there_are_co_xw084p": "Select a message to inspect, or ask for a quarantine summary. There are {count} quarantined messages.",
+    "name_verdict_sha_256_hash_status_fbdmin": "{name}: {verdict}. SHA-256: {hash}. {status}",
+    "attachment_1417wqw": "Attachment",
+    "not_available_1n457f9": "not available",
+    "subject_has_no_attachments_summary_1cavtm2": "{subject} has no attachments. {summary}",
+    "sender_sender_authentication_auth_spoof_score_score_100_summary_od9mn6": "Sender: {sender}. Authentication: {auth}. Spoof score: {score}/100. {summary}",
+    "unknown_1kmy72x": "Unknown",
+    "url_status_action_1k9h29s": "{url}: {status}. {action}.",
+    "the_selected_message_contains_no_detected_links_bynpul": "The selected message contains no detected links.",
+    "for_subject_verdict_summary_action_ask_about_sender_authentication_links_o7zq95": "For {subject}: {verdict}. {summary} {action} Ask about sender authentication, links, attachments, quarantine counts, or purge history.",
+    "hello_i_can_analyze_threats_links_and_attachments_or_organize_your_messa_11sp9ka": "Hello! I can analyze threats, links, and attachments or organize your messages into folders.",
+    "download_is_blocked_17hlwvj": "Download is blocked.",
+    "clean_in_the_demonstration_scan_1slfcrs": "Clean in the demonstration scan.",
+    "no_scan_result_1rg6qfk": "No scan result",
+    "awaiting_analysis_1jc47vb": "Awaiting analysis",
+    "ai_csd_admin_console_auajei": "AI-CSD Admin Console",
+    "settings_menu_1x1wqbj": "Settings Menu",
+    "cmc_navigation_19dek2c": "CMC navigation",
+    "traffic_direction_10680kn": "Traffic direction",
+    "email_traffic_topology_ly6shz": "Email traffic topology",
+    "open_department_finance_audit_1n5svby": "Open department Finance & Audit",
+    "open_department_security_ops_1dzc0ud": "Open department Security Ops",
+    "open_threat_grid_1d5umtx": "Open Threat Grid",
+    "close_threat_grid_1uqx6kr": "Close Threat Grid",
+    "select_timeframe_36clo7": "Select TimeFrame",
+    "filter_email_traffic_1j7qvo6": "Filter Email Traffic",
+    "e_g_invoice_or_security_gaj8wl": "e.g. Invoice or Security",
+    "cmc_audit_log_1wxavez": "CMC Audit Log",
+    "email_visualizer_instructions_1jtz612": "Email Visualizer Instructions",
+    "web_security_email_links_1l3g4uh": "Web Security · Email links",
+    "ai_csd_webmail_client_17t66xs": "AI-CSD Webmail Client",
+    "clear_search_ozrfba": "Clear search",
+    "toggle_theme_12b5ivk": "Toggle theme",
+    "mailbox_folders_qx3wrq": "Mailbox folders",
+    "email_list_1l9sg3l": "Email list",
+    "email_view_17kyzug": "Email view",
+    "move_to_folder_4e3gu3": "Move to folder",
+    "threat_inspector_dpe2do": "Threat Inspector",
+    "scheduled_emails_17wmh5l": "Scheduled emails",
+    "silenceai_net_active_company_domain_12zihr9": "silenceai.net · Active Company Domain",
+    "open_company_silenceai_net_1kof9ma": "Open company silenceai.net",
+    "e_g_team_or_apple_com_1t60vey": "e.g. team@ or apple.com",
+    "unnamed_attachment_1al5w74": "Unnamed attachment",
+    "size_unavailable_j9eus6": "Size unavailable",
+    "download_blocked_malware_detected_wxhwck": "Download blocked: malware detected",
+    "preview_1yfnwtz": "Preview",
+    "attachment_preview_gic1to": "Attachment preview",
+    "download_blocked_e8mq5h": "Download blocked",
+    "clean_1wzno4e": "Clean",
+    "hide_details_12grv3z": "Hide details",
+    "show_details_1p2cciq": "Show details",
+    "no_scan_result_available_1v26mm3": "No scan result available",
+    "malicious_j4b2l9": "malicious",
+    "clean_mbe0xq": "clean",
+    "alex_vance_via_external_relay_xwlo05": "Alex Vance (via external relay)",
+    "elena_rostova_cfo_k3ztgr": "Elena Rostova (CFO)",
+    "urgent_confidential_acquisition_wire_transfer_authorization_7fn67c": "URGENT: Confidential Acquisition & Wire Transfer Authorization",
+    "elena_i_am_in_a_board_meeting_right_now_and_cannot_talk_on_the_phone_ple_t4r6k4": "Elena, I am in a board meeting right now and cannot talk on the phone. Please prepare a wire transfer of $84,500...",
+    "elena_i_am_currently_tied_up_in_an_offsite_strategic_board_meeting_with__igmdzh": "Elena,\n\nI am currently tied up in an offsite strategic board meeting with our European investors and cannot take voice calls.\n\nWe are closing an expedited acquisition deal that requires immediate escrow settlement before 12:00 PM UTC. Please execute an urgent wire authorization of $84,500 to the intermediary account provided in the secure portal below:\n\nPortal: https://silenceai-support.co/wire-portal/auth\nRef: ACQ-2026-EU-ESCROW\n\nDo not discuss this on Slack as this transaction is under strict NDA until public market disclosure on Monday. Confirm once initiated.\n\nAlex Vance\nChief Executive Officer\nSilence AI LLC",
+    "zero_day_phishing_intercepted_12qu5o7": "Zero-Day Phishing Intercepted",
+    "high_confidence_executive_impersonation_ceo_fraud_the_sender_address_use_f6efk2": "High-confidence executive impersonation (CEO fraud). The sender address uses a typo-squatted lookalike domain designed to bypass visual inspection. Urgency patterns and wire transfer instructions detected.",
+    "quarantined_before_delivery_admin_alert_broadcasted_to_security_operatio_1q0bjle": "Quarantined before delivery. Admin alert broadcasted to Security Operations.",
+    "permanently_delete_across_domain_and_add_originating_subnet_24_to_cmc_bl_1mmalbu": "Permanently delete across domain and add originating subnet /24 to CMC blacklist.",
+    "fail_domain_mismatch_silenceai_support_co_silenceai_net_17d6i2l": "FAIL (Domain mismatch: silenceai-support.co != silenceai.net)",
+    "blocked_by_ai_csd_web_filter_17fl66b": "Blocked by AI-CSD Web Filter",
+    "microsoft_365_security_alert_1nev2pt": "Microsoft 365 Security Alert",
+    "david_chen_tech_lead_15ygcfe": "David Chen (Tech Lead)",
+    "action_required_enterprise_sso_session_expiring_in_24_hours_1l9zfs6": "Action Required: Enterprise SSO Session Expiring in 24 Hours",
+    "your_microsoft_entra_id_authentication_token_requires_re_validation_fail_1jnwce8": "Your Microsoft Entra ID authentication token requires re-validation. Failure to confirm will suspend active GitHub & Azure deployments...",
+    "notice_silence_ai_enterprise_administrator_portal_your_single_sign_on_ss_h345qh": "Notice: Silence AI Enterprise Administrator Portal\n\nYour Single Sign-On (SSO) security token for Microsoft 365 & Azure Enterprise is scheduled to expire within 24 hours.\n\nIf this session is not re-authenticated immediately, your organization's API pipelines, repository webhooks, and cloud deploy tokens will be temporarily locked to prevent unauthorized privilege escalation.\n\nVerify your account immediately:\nhttps://login-m1crosoft-online-sec.com/entra/oauth2/reauth\n\nSecurity ID: SEC-9941-MSFT\nTenant: silenceai.net",
+    "dangerous_link_neutralized_ovt08s": "Dangerous Link Neutralized",
+    "credential_harvesting_attack_the_email_mimics_microsoft_365_entra_id_ale_1hrf2jc": "Credential harvesting attack. The email mimics Microsoft 365 Entra ID alerts, routing through an unverified VPS hosting an adversary-in-the-middle (AiTM) reverse proxy.",
+    "url_neutralized_with_zero_delay_browser_isolation_redirect_1gpwomx": "URL neutralized with zero-delay browser isolation redirect.",
+    "domain_wide_url_purge_completed_0_employees_entered_credentials_19q58pg": "Domain-wide URL purge completed. 0 employees entered credentials.",
+    "fail_untrusted_ip_185_220_101_5_b9usqm": "FAIL (Untrusted IP 185.220.101.5)",
+    "replaced_with_ai_csd_warning_barrier_1n21dbb": "Replaced with AI-CSD Warning Barrier",
+    "global_logistics_billing_js25j2": "Global Logistics Billing",
+    "support_queue_1hi0cd3": "Support Queue",
+    "overdue_remittance_freight_statement_inv_771204_gm1jxr": "Overdue Remittance & Freight Statement #INV-771204",
+    "attached_is_the_corrected_freight_invoice_and_tariff_breakdown_for_conta_vvfic8": "Attached is the corrected freight invoice and tariff breakdown for container shipping manifest. Please remit pending balance...",
+    "hello_accounts_payable_please_find_attached_the_updated_remittance_advic_c0jj1u": "Hello Accounts Payable,\n\nPlease find attached the updated remittance advice and statement of account regarding airfreight billings for shipment REF-44029.\n\nDue to changes in port tariffs, a differential surcharge has been applied. Review the attached breakdown in the Excel spreadsheet to ensure your payments balance before end of month:\n\nAttachment: Invoice_Remittance_Overdue_771204.xlsm [BLOCKED BY AI-CSD DEFENSE]\n\nBest regards,\nBilling Operations\nApex Logistics Global",
+    "malware_in_attachment_blocked_1bv13p4": "Malware in Attachment Blocked",
+    "weaponized_excel_macro_detected_attachment_contains_obfuscated_vba_paylo_bodd3c": "Weaponized Excel macro detected. Attachment contains obfuscated VBA payload configured to download a remote Trojan RAT upon workbook open.",
+    "infected_attachment_sanitized_stripped_safe_sanitized_text_forwarded_wit_emf3qt": "Infected attachment sanitized & stripped. Safe sanitized text forwarded with alert.",
+    "quarantine_attachment_alert_vendor_of_compromised_email_account_9tr5qk": "Quarantine attachment, alert vendor of compromised email account.",
+    "pass_compromised_legitimate_vendor_account_t0p637": "PASS (Compromised legitimate vendor account)",
+    "trojan_downloader_vba_agent_58_72_engines_flagged_15mjcvh": "Trojan.Downloader.VBA.Agent (58/72 engines flagged)",
+    "sarah_jenkins_1bkt5e": "Sarah Jenkins",
+    "api_integration_sla_dedicated_enterprise_node_contract_q62ah1": "API Integration SLA & Dedicated Enterprise Node Contract",
+    "hi_david_our_legal_team_reviewed_the_api_security_spec_for_the_ai_csd_ga_c11cnv": "Hi David, our legal team reviewed the API security spec for the AI-CSD gateway. Everything looks solid, we're ready to proceed with the Q4 deployment...",
+    "hi_david_our_infrastructure_and_legal_teams_have_completed_their_formal__om8ziv": "Hi David,\n\nOur infrastructure and legal teams have completed their formal review of the AI-CSD Email & Web Gateway integration spec. \n\nWe are very impressed with the sub-millisecond inspection latency and automated impersonation detection. Everything aligns with our regulatory SOC 2 Type II compliance mandate.\n\nAttached is the finalized enterprise SLA agreement for your countersignature:\n- Attachment: SLA_Agreement_Q4_v3.pdf\n\nCould we schedule a quick 15-minute handoff call on Monday to finalize the private staging keys?\n\nLooking forward to launching!\n\nBest regards,\nSarah Jenkins\nVP of Technology Integrations\nFinTech Partners International",
+    "verified_safe_1l9i1iy": "Verified Safe",
+    "legitimate_corporate_correspondence_full_cryptographic_authentication_pa_ndjgu5": "Legitimate corporate correspondence. Full cryptographic authentication passed. Content and links verified against real-time threat intelligence feeds.",
+    "delivered_to_secure_inbox_ai_response_draft_prepared_1lfw31e": "Delivered to Secure Inbox. AI Response Draft prepared.",
+    "send_pre_generated_ai_response_draft_or_schedule_review_qwsje0": "Send pre-generated AI response draft or schedule review.",
+    "pass_dmarc_aligned_fintech_partners_io_1iurpap": "PASS (DMARC Aligned: fintech-partners.io)",
+    "verified_clean_yb53l0": "Verified Clean",
+    "no_threats_detected_0_72_engines_k29b9z": "No threats detected (0/72 engines)",
+    "silence_ai_devops_automation_1inalk6": "Silence AI DevOps Automation",
+    "alex_vance_ceo_mlv484": "Alex Vance (CEO)",
+    "automated_report_weekly_zero_day_defense_health_threat_mitigation_fwh4o0": "Automated Report: Weekly Zero-Day Defense Health & Threat Mitigation",
+    "all_128_protected_mailboxes_operating_at_100_uptime_142_total_threats_in_1iyqo03": "All 128 protected mailboxes operating at 100% uptime. 142 total threats intercepted this week with zero false negatives...",
+    "weekly_security_summary_for_tenant_silenceai_net_key_metrics_for_past_7__1ex1y6h": "Weekly Security Summary for Tenant: silenceai.net\n\nKey Metrics for past 7 days:\n- Protected Mailboxes: 128\n- Total Inbound / Outbound Scanned: 34,812 emails\n- Malicious Links Neutralized: 32\n- Impersonation / CEO Spoofs Blocked: 18\n- Zero-Day Phishing Kits Stopped: 27\n- Infected Attachments Stripped: 20\n- Spam Filtered: 45\n\nSystem Status:\n- AI-CSD Gateway Latency: 1.8ms avg\n- Admin Console: Fully Operational\n- Anti-Impersonation Engine: Active (Strict Mode)",
+    "verified_safe_internal_system_8sddeg": "Verified Safe Internal System",
+    "internal_cluster_monitoring_dispatch_tls_1_3_encrypted_zero_anomalies_3lmn30": "Internal cluster monitoring dispatch. TLS 1.3 encrypted, zero anomalies.",
+    "delivered_to_secure_inbox_12dyvop": "Delivered to Secure Inbox.",
+    "archived_after_review_ggpsyr": "Archived after review.",
+    "pass_internal_cryptographic_signature_1xyoj0r": "PASS (Internal Cryptographic Signature)",
+    "crypto_capital_yield_18kf4h": "Crypto Capital Yield",
+    "maria_gomez_hr_cmnd9o": "Maria Gomez (HR)",
+    "guaranteed_450_apy_on_ai_automated_liquidity_pools_1j6m1ht": "Guaranteed 450% APY on AI Automated Liquidity Pools",
+    "exclusive_invitation_for_accredited_investors_learn_how_proprietary_arbi_bewpye": "Exclusive invitation for accredited investors. Learn how proprietary arbitrage algorithms beat market downturns...",
+    "dear_investor_discover_our_proprietary_automated_arbitrage_trading_proto_1cn4wa1": "Dear Investor,\n\nDiscover our proprietary automated arbitrage trading protocol that delivers up to 450% APY without market exposure risk!\n\nSign up today to receive our free whitepaper and immediate beta access:\nhttps://crypto-super-wealth.biz/optin\n\nClick here to unsubscribe from all marketing communications.",
+    "unsolicited_bulk_spam_pj5bah": "Unsolicited Bulk Spam",
+    "mass_mailing_marketing_spam_campaign_from_unregistered_commercial_sender_1qoclz": "Mass-mailing marketing spam campaign from unregistered commercial sender with low domain reputation score.",
+    "routed_to_spam_folder_automatically_1udzhq9": "Routed to Spam folder automatically.",
+    "leave_in_spam_for_automatic_30_day_purge_q0bhb3": "Leave in spam for automatic 30-day purge.",
+    "neutral_whzvi0": "NEUTRAL",
+    "low_reputation_domain_1urkc5c": "Low reputation domain",
+    "hello_sender_thank_you_for_your_message_regarding_subject_i_will_review__hrgk9r": "Hello {sender},\n\nThank you for your message regarding “{subject}”. I will review the details and follow up shortly.\n\nBest regards,\nElena",
+    "security_team_please_review_the_quarantined_message_subject_from_sendere_1lqkk0p": "Security team,\n\nPlease review the quarantined message “{subject}” from {senderEmail}. AI-CSD reported: {summary}\n\nPlease verify the sender through a trusted channel before taking any action.\n\nElena",
+    "hello_name_your_domain_workspace_update_is_ready_to_review_1vajv1n": "Hello {name}, your {domain} workspace update is ready to review.",
+    "hello_name_subject_your_workspace_activity_has_been_processed_successful_1gzok4d": "Hello {name},\n\n{subject}.\n\nYour workspace activity has been processed successfully. You can review the summary at your next sign-in. No changes to your account are required.\n\nThank you,\nThe {domain} team",
+    "your_account_activity_summary_e6y7mi": "Your account activity summary",
+    "your_workspace_is_ready_1bctt5i": "Your workspace is ready",
+    "security_notification_1hdtnu2": "Security notification",
+    "your_weekly_update_m9xp9m": "Your weekly update",
+    "account_confirmation_8xrj2x": "Account confirmation",
+    "your_service_receipt_18pvse9": "Your service receipt",
+    "new_activity_in_your_workspace_146urfh": "New activity in your workspace",
+    "pass_dkim_spf_dmarc_aligned_1pdehc8": "PASS (DKIM / SPF / DMARC aligned)",
+    "authenticated_sender_no_suspicious_links_or_attachments_in_this_demonstr_1j3r46m": "Authenticated sender. No suspicious links or attachments in this demonstration message.",
+    "thank_you_for_the_update_we_have_reviewed_the_account_summary_e3bcfu": "Thank you for the update. We have reviewed the account summary.",
+    "hello_thank_you_for_the_update_we_have_reviewed_the_account_summary_and__sqz41e": "Hello,\n\nThank you for the update. We have reviewed the account summary and everything is in order.\n\nBest regards,\nSilence AI",
+    "hi_sarah_thank_you_for_confirming_the_sla_and_security_review_we_are_exc_za0j6x": "Hi Sarah,\n\nThank you for confirming the SLA and security review. We are excited to partner with FinTech Partners.\n\nI've reviewed the updated PDF and our team has allocated the dedicated private node cluster for your staging rollout next Tuesday. I will share the cryptographic keys and gateway endpoints via our secure developer portal tomorrow morning.\n\nBest regards,\nDavid Chen\nTech Lead · Silence AI",
+    "zero_day_ceo_fraud_intercepted_uny9mg": "Zero-Day CEO Fraud Intercepted",
+    "zero_day_macro_malware_blocked_19emgg7": "Zero-Day Macro Malware Blocked",
+    "macro_download_blocked_gh1sxt": "Macro download blocked",
+    "macro_malware_updated_vendor_rates_number_ky306s": "Macro Malware: Updated vendor rates #{number}",
+    "ceo_fraud_confidential_wire_authorization_number_1tt76ra": "CEO Fraud: Confidential wire authorization #{number}",
+    "scroll_horizontally_to_view_all_providers_1nwpri6": "Scroll horizontally to view all providers.",
+    "penetration_testing_billing_period_38toxu": "Penetration testing billing period",
+    "billing_period_1lhtxil": "Billing period"
+  },
+  "homeSandbox": {
+    "emailCount": "{count, plural, one {# email} other {# emails}}",
+    "auditPurge": "Deleted “{subject}” from {count} domain mailboxes.",
+    "auditAttack": "{verdict}. Quarantined {count} deliveries.",
+    "auditFolder": "Created folder {folder} and moved {count} messages."
+  },
+  "homepageControls": {
+    "selectCurrency": "Select currency",
+    "chooseCurrency": "Choose currency",
+    "backToTop": "Back to top",
+    "otherCountry": "Other",
+    "close": "Close"
+  }
+}

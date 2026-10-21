@@ -12,6 +12,9 @@ import {
   RU,
   SA,
   TR,
+  PL,
+  MY,
+  ID,
   VN,
 } from "country-flag-icons/react/3x2";
 import { useRouter, usePathname } from "@/i18n/navigation";
@@ -28,6 +31,9 @@ const FLAG_COMPONENTS = {
   RU,
   SA,
   TR,
+  PL,
+  MY,
+  ID,
   VN,
 };
 
@@ -41,6 +47,9 @@ const LANGUAGE_OPTIONS = [
   { code: "ru", label: "RU", name: "Русский", englishName: "Russian", flag: "RU" },
   { code: "ar", label: "AR", name: "العربية", englishName: "Arabic", flag: "SA" },
   { code: "tr", label: "TR", name: "Türkçe", englishName: "Turkish", flag: "TR" },
+  { code: "pl", label: "PL", name: "Polski", englishName: "Polish", flag: "PL" },
+  { code: "ms", label: "MS", name: "Bahasa Melayu", englishName: "Malay", flag: "MY" },
+  { code: "id", label: "ID", name: "Bahasa Indonesia", englishName: "Indonesian", flag: "ID" },
 ];
 
 export default function LanguageSelector({ align = "right", allowedLocales }) {
@@ -52,9 +61,10 @@ export default function LanguageSelector({ align = "right", allowedLocales }) {
   const containerRef = useRef(null);
 
   const options = useMemo(() => {
-    if (!allowedLocales) return LANGUAGE_OPTIONS;
-    return LANGUAGE_OPTIONS.filter((item) => allowedLocales.includes(item.code));
-  }, [allowedLocales]);
+    const available = pathname.startsWith("/policies") ? ["en", "ru"] : allowedLocales;
+    if (!available) return LANGUAGE_OPTIONS;
+    return LANGUAGE_OPTIONS.filter((item) => available.includes(item.code));
+  }, [allowedLocales, pathname]);
 
   const showSearch = options.length > 3;
 

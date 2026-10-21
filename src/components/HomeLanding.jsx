@@ -1,23 +1,25 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import BackToTopButton from "@/components/BackToTopButton";
-import RequestDemoModal from "@/components/RequestDemoModal";
-import AiSocGetModal from "@/components/AiSocGetModal";
-import { FloatingText } from "@/components/FloatingText";
 import { useLanguage } from "@/contexts/LanguageContext";
 import EdgeGlowCard from "@/components/EdgeGlowCard";
 import MediumArticleCard from "@/components/MediumArticleCard";
 import Pricing from "@/components/Pricing";
-import Insights from "@/components/Insights";
-import FaqSection from "@/components/FaqSection";
 import ScrollytellingSequence from "@/components/ScrollytellingSequence";
-import ColorBends from "@/components/ColorBends";
+import DeferredContent from "@/components/DeferredContent";
 import { DEFAULT_CURRENCY } from "@/lib/currency";
 import { Rocket, BrainCircuit, Radar, ShieldCheck } from "lucide-react";
 
 import { articles, featuredResourcesConfig } from "@/constants/mediumArticles";
+
+const AiSocGetModal = dynamic(() => import("@/components/AiSocGetModal"), { ssr: false });
+const FloatingText = dynamic(() => import("@/components/FloatingText").then((module) => module.FloatingText), { ssr: false });
+const Insights = dynamic(() => import("@/components/Insights"));
+const FaqSection = dynamic(() => import("@/components/FaqSection"));
+const ColorBends = dynamic(() => import("@/components/ColorBends"), { ssr: false });
 
 const valueFeatures = [
   {
@@ -265,7 +267,6 @@ function AutoScrollSection({ children, speed = 0.5, className = "" }) {
 
 export default function HomeLanding() {
   const { t } = useLanguage();
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isGetModalOpen, setIsGetModalOpen] = useState(false);
   const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
   const [isComparisonVisible, setIsComparisonVisible] = useState(false);
@@ -273,8 +274,6 @@ export default function HomeLanding() {
   const comparisonRef = useRef(null);
   const complianceRef = useRef(null);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
   const openGetModal = () => setIsGetModalOpen(true);
   const closeGetModal = () => setIsGetModalOpen(false);
 
@@ -374,7 +373,7 @@ export default function HomeLanding() {
           }`}
           aria-hidden="true"
         >
-          <ColorBends
+          {isComplianceBackdropActive && <ColorBends
             className="absolute inset-0"
             colors={["#07102D", "#101A46", "#3B1A78", "#7C3AED", "#14532D"]}
             speed={0.2}
@@ -386,7 +385,7 @@ export default function HomeLanding() {
             intensity={0.9}
             bandWidth={6}
             transparent
-          />
+          />}
         </div>
         <ScrollytellingSequence>
           <div id="pricing" className="mx-auto w-full max-w-7xl scroll-mt-24">
@@ -400,6 +399,7 @@ export default function HomeLanding() {
         </ScrollytellingSequence>
 
         {/* Compliance Section */}
+        <DeferredContent id="compliance" minHeight={520} className="scroll-mt-24" renderOnServer>
         {(() => {
           const complianceItems = [
             {
@@ -474,7 +474,7 @@ export default function HomeLanding() {
           const doubled = [...complianceItems, ...complianceItems];
 
           return (
-            <section ref={complianceRef} id="compliance" className="relative isolate w-full overflow-hidden pt-24 pb-4 scroll-mt-24">
+            <section ref={complianceRef} className="relative isolate w-full overflow-hidden pt-24 pb-4">
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -517,6 +517,7 @@ export default function HomeLanding() {
                     <img
                       src="/soc2.png"
                       alt="AICPA SOC 2 compliance mark"
+                      loading="lazy"
                       className="h-16 w-16 shrink-0 object-contain drop-shadow-[0_0_16px_rgba(167,243,208,0.22)]"
                     />
                     <div>
@@ -573,8 +574,10 @@ export default function HomeLanding() {
             </section>
           );
         })()}
+        </DeferredContent>
 
         {/* Partners Section */}
+        <DeferredContent id="resources" minHeight={420} className="scroll-mt-24" renderOnServer>
         {(() => {
           const partners = [
             { name: "Nur Astana Kurylys", amount: "$1.5", unit: "billion", logo: "/partners/nur-astana-kurylys.png" },
@@ -590,7 +593,7 @@ export default function HomeLanding() {
           const allPartners = [...partners, ...partners, ...partners, ...partners];
 
           return (
-            <section id="resources" className="pt-32 pb-12 w-full scroll-mt-24">
+            <section className="pt-32 pb-12 w-full">
               <span id="partners" className="-mt-24 block" />
               <div className="mb-10 text-center px-4">
                 <h2 className="text-3xl font-bold sm:text-4xl text-white">
@@ -613,6 +616,7 @@ export default function HomeLanding() {
                           <img
                             src={p.logo}
                             alt={p.name}
+                            loading="lazy"
                             className="max-h-full max-w-full object-contain"
                             onError={(e) => {
                               e.currentTarget.style.display = "none";
@@ -645,12 +649,16 @@ export default function HomeLanding() {
             </section>
           );
         })()}
+        </DeferredContent>
 
+        <DeferredContent minHeight={180}>
         <div className="w-full max-w-7xl mx-auto pt-20 px-4 sm:px-6 lg:px-8">
           <FloatingText />
         </div>
+        </DeferredContent>
 
         {/* Featured Resources */}
+        <DeferredContent minHeight={400} renderOnServer>
         <section className="space-y-8 pt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <div className="space-y-2">
@@ -684,12 +692,16 @@ export default function HomeLanding() {
             ))}
           </div>
         </section>
+        </DeferredContent>
 
+        <DeferredContent minHeight={400}>
         <div className="w-full max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
           <Insights />
         </div>
+        </DeferredContent>
 
         {/* Why AI-CSD */}
+        <DeferredContent minHeight={460} renderOnServer>
         <div className="w-full max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
@@ -731,6 +743,7 @@ export default function HomeLanding() {
             ))}
           </div>
         </div>
+        </DeferredContent>
 
         {false && <>
         <section className="w-full max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
@@ -834,12 +847,11 @@ export default function HomeLanding() {
 
         </>}
 
-        <FaqSection />
+        <DeferredContent minHeight={400} renderOnServer><FaqSection /></DeferredContent>
       </main>
 
       <BackToTopButton />
-      <RequestDemoModal isOpen={isModalOpen} onClose={closeModal} />
-      <AiSocGetModal isOpen={isGetModalOpen} onClose={closeGetModal} />
+      {isGetModalOpen && <AiSocGetModal isOpen onClose={closeGetModal} />}
     </div>
   );
 }

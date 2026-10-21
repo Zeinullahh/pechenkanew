@@ -4,7 +4,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Link as LocalizedLink } from '@/i18n/navigation';
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const policyLocale = ["pl", "ms", "id"].includes(language) ? "en" : language;
   const year = new Date().getFullYear();
   const copyright = t("footer.copyright", `© ${year} Silence AI. All rights reserved.`, { year });
 
@@ -28,7 +29,7 @@ const Footer = () => {
 
           <div className="w-full lg:w-auto order-1 lg:order-2">
             <div className="flex justify-center lg:justify-end mb-4">
-              <LocalizedLink href="/policies/cookies" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
+              <LocalizedLink href="/policies/cookies" locale={policyLocale} className="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
                 {t("footer.links.cookies", "Cookies Policy")}
               </LocalizedLink>
             </div>
@@ -38,13 +39,13 @@ const Footer = () => {
               {/* AI-CSD 1 Web */}
               <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right">AI-CSD 1 Web:</div>
               <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
-                <LocalizedLink href="/policies/ai-csd/web/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                <LocalizedLink href="/policies/ai-csd/web/terms_of_use" locale={policyLocale} className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                   {t("footer.links.termsUse", "Terms of Use")}
                 </LocalizedLink>
-                <LocalizedLink href="/policies/ai-csd/web/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                <LocalizedLink href="/policies/ai-csd/web/terms_of_service" locale={policyLocale} className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                   {t("footer.links.termsService", "Terms of Service")}
                 </LocalizedLink>
-                <LocalizedLink href="/policies/ai-csd/web/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                <LocalizedLink href="/policies/ai-csd/web/privacy" locale={policyLocale} className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                   {t("footer.links.privacy", "Privacy Policy")}
                 </LocalizedLink>
               </div>
@@ -52,13 +53,13 @@ const Footer = () => {
               {/* AI-CSD 1 Email */}
               <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right mt-2 sm:mt-0">AI-CSD 1 Email:</div>
               <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
-                <LocalizedLink href="/policies/ai-csd/email/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                <LocalizedLink href="/policies/ai-csd/email/terms_of_use" locale={policyLocale} className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                   {t("footer.links.termsUse", "Terms of Use")}
                 </LocalizedLink>
-                <LocalizedLink href="/policies/ai-csd/email/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                <LocalizedLink href="/policies/ai-csd/email/terms_of_service" locale={policyLocale} className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                   {t("footer.links.termsService", "Terms of Service")}
                 </LocalizedLink>
-                <LocalizedLink href="/policies/ai-csd/email/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                <LocalizedLink href="/policies/ai-csd/email/privacy" locale={policyLocale} className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                   {t("footer.links.privacy", "Privacy Policy")}
                 </LocalizedLink>
               </div>

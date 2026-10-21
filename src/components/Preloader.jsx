@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { supportedLocales } from "@/i18n/locales.mjs";
+import { FRAME_COUNT, getFrameVariant, preloadStoryFrames } from "@/components/storyFrames";
 
 const loadingLabels = {
   en: "Loading experience…",
@@ -36,12 +38,19 @@ const preloaderStyles = `
 `;
 
 export default function Preloader() {
-  const locale = usePathname()?.split("/")[1];
+  const pathname = usePathname();
+  const locale = pathname?.split("/")[1];
+  const isHome = supportedLocales.includes(locale) && pathname?.replace(/\/$/, "") === `/${locale}`;
   const [phase, setPhase] = useState("visible");
   const [progress, setProgress] = useState(0);
   const [isActive, setIsActive] = useState(false);
+  const [error, setError] = useState(false);
+  const [retryCount, setRetryCount] = useState(0);
 
   useEffect(() => {
+    setPhase("visible");
+    setProgress(0);
+    setError(false);
     document.body.style.overflow = "hidden";
 
     // The draw transition only fires when .active lands after the initial paint.
@@ -50,6 +59,8 @@ export default function Preloader() {
     let finished = false;
     let fadeTimer = null;
     let hiddenTimer = null;
+    let cancelled = false;
+    let unsubscribeFrames = () => {};
 
     const reveal = () => {
       if (finished) return;
@@ -66,7 +77,8 @@ export default function Preloader() {
       }, wait);
     };
 
-    const hardTimeout = window.setTimeout(reveal, HARD_TIMEOUT_MS);
+    // The homepage must stay covered until every story frame is available.
+    const hardTimeout = isHome ? null : window.setTimeout(reveal, HARD_TIMEOUT_MS);
 
     const waitForWindowLoad = new Promise((resolve) => {
       if (document.readyState === "complete") {
@@ -100,24 +112,52 @@ export default function Preloader() {
 
     const tasks = [waitForWindowLoad, waitForFonts, ...imageTasks];
     let settledCount = 0;
-    setProgress(tasks.length ? 0 : 100);
+    let loadedFrames = 0;
+    let framesReady = !isHome;
+    const total = tasks.length + (isHome ? FRAME_COUNT : 0);
+    const updateProgress = () => {
+      if (!cancelled) setProgress(Math.round(((settledCount + loadedFrames) / total) * 100));
+    };
+    const checkReady = () => {
+      if (!cancelled && framesReady && settledCount === tasks.length) reveal();
+    };
+
+    if (isHome) {
+      const frameRequest = preloadStoryFrames(getFrameVariant(), (count) => {
+        loadedFrames = count;
+        updateProgress();
+      });
+      unsubscribeFrames = frameRequest.unsubscribe;
+      frameRequest.promise.then(() => {
+        framesReady = true;
+        checkReady();
+      }).catch((loadError) => {
+        if (!cancelled) {
+          console.error("Homepage frames could not be preloaded.", loadError);
+          setError(true);
+        }
+      });
+    }
 
     tasks.forEach((task) => {
       Promise.resolve(task).finally(() => {
+        if (cancelled) return;
         settledCount += 1;
-        setProgress(Math.round((settledCount / tasks.length) * 100));
-        if (settledCount === tasks.length) reveal();
+        updateProgress();
+        checkReady();
       });
     });
 
     return () => {
+      cancelled = true;
+      unsubscribeFrames();
       window.clearTimeout(activateTimer);
       window.clearTimeout(hardTimeout);
       window.clearTimeout(fadeTimer);
       window.clearTimeout(hiddenTimer);
       document.body.style.overflow = "";
     };
-  }, []);
+  }, [isHome, pathname, retryCount]);
 
   if (phase === "hidden") return null;
 
@@ -156,6 +196,15 @@ export default function Preloader() {
         <p className="mt-3 font-mono text-[11px] tracking-[0.3em] text-white/40">
           {progress}%
         </p>
+        {error && (
+          <button
+            type="button"
+            className="mt-5 rounded border border-white/40 px-4 py-2 text-xs text-white hover:bg-white/10"
+            onClick={() => setRetryCount((count) => count + 1)}
+          >
+            Some frames failed to load. Retry
+          </button>
+        )}
         <span className="sr-only">{loadingLabels[locale] || loadingLabels.en}</span>
       </div>
     </div>

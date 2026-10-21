@@ -3,8 +3,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { FRAME_COUNT, getFrameVariant, getPreloadedFrameUrl } from "@/components/storyFrames";
 
-const FRAME_COUNT = 118;
 const LAST_FRAME = FRAME_COUNT - 1;
 const FINAL_STORY_FRAME = 117;
 const PREFETCH_RADIUS = 4;
@@ -46,10 +46,6 @@ function getFrameForProgress(progress) {
   return getFrameVariant() === "mobile"
     ? Math.min(LAST_FRAME, Math.round(frame / MOBILE_FRAME_STEP) * MOBILE_FRAME_STEP)
     : frame;
-}
-
-function getFrameVariant() {
-  return window.innerWidth < 768 ? "mobile" : "desktop";
 }
 
 function getFrameKey(frameIndex, variant = getFrameVariant()) {
@@ -275,9 +271,7 @@ export default function ScrollytellingSequence({ children }) {
         loadingFramesRef.current.delete(frameKey);
         reject(new Error(`Unable to load frame ${frameIndex + 1}`));
       };
-      image.src = variant === "mobile"
-        ? `/frames/mobile/frame-${frameIndex + 1}.webp`
-        : `/frames/frame-${frameIndex + 1}.webp`;
+      image.src = getPreloadedFrameUrl(frameIndex, variant);
     });
 
     loadingFramesRef.current.set(frameKey, request);

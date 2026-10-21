@@ -26,6 +26,11 @@ const viewLabels = {
   ru: { full: "Полное руководство", fullDescription: "Все продукты и инструкции", adminDescription: "Домены, сотрудники, почтовые потоки, защита и мониторинг", workspaceDescription: "Письма, папки и настройки почтового ящика" },
   ar: { full: "الدليل الكامل", fullDescription: "جميع المنتجات والتعليمات", adminDescription: "النطاقات والموظفون وتدفق البريد والحماية والمراقبة", workspaceDescription: "الرسائل والمجلدات وإعدادات البريد" },
   tr: { full: "Tam kılavuz", fullDescription: "Tüm ürünler ve talimatlar", adminDescription: "Etki alanları, çalışanlar, posta akışı, koruma ve izleme", workspaceDescription: "İletiler, klasörler ve posta kutusu ayarları" },
+  pl: { full: "Pełny przewodnik", fullDescription: "Wszystkie produkty i instrukcje", adminDescription: "Domeny, pracownicy, przepływ poczty, ochrona i monitorowanie", workspaceDescription: "Wiadomości, foldery i ustawienia skrzynki" },
+  ms: { full: "Panduan penuh", fullDescription: "Semua produk dan panduan", adminDescription: "Domain, pekerja, aliran mel, perlindungan dan pemantauan", workspaceDescription: "Mesej, folder dan tetapan peti mel" },
+  id: { full: "Panduan lengkap", fullDescription: "Semua produk dan panduan", adminDescription: "Domain, karyawan, alur email, perlindungan, dan pemantauan", workspaceDescription: "Pesan, folder, dan pengaturan kotak surat" },
+  pt: { full: "Guia completo", fullDescription: "Todos os produtos e instruções", adminDescription: "Domínios, colaboradores, fluxo de correio, proteção e monitorização", workspaceDescription: "Mensagens, pastas e definições da caixa de correio" },
+  es: { full: "Guía completa", fullDescription: "Todos los productos e instrucciones", adminDescription: "Dominios, empleados, flujo de correo, protección y supervisión", workspaceDescription: "Mensajes, carpetas y ajustes del buzón" },
 };
 
 export async function generateMetadata({ params }) {
@@ -40,7 +45,7 @@ export default async function Page({ params }) {
     readFile(path.join(process.cwd(), content.file), "utf8"),
     readFile(path.join(process.cwd(), content.sourceFile), "utf8"),
   ]);
-  const labels = viewLabels[content.locale];
+  const labels = viewLabels[content.locale] ?? viewLabels.en;
   const guideViews = [
     { id: "full", label: labels.full, description: labels.fullDescription },
     { id: "admin", label: "Admin Console", description: labels.adminDescription, chapterRules: adminChapterRules },

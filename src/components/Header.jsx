@@ -27,6 +27,8 @@ const INSTRUCTION_NAV_LABELS = {
   pl: { email: "Bezpieczeństwo poczty", web: "Bezpieczeństwo stron", pentester: "Pentester", server: "Bezpieczeństwo serwerów", instructions: "Instrukcje" },
   ms: { email: "Keselamatan E-mel", web: "Keselamatan Web", pentester: "Pentester", server: "Keselamatan Pelayan", instructions: "Panduan" },
   id: { email: "Keamanan Email", web: "Keamanan Web", pentester: "Pentester", server: "Keamanan Server", instructions: "Panduan" },
+  pt: { email: "Segurança de Email", web: "Segurança Web", pentester: "Pentester", server: "Segurança de Servidores", instructions: "Guias" },
+  es: { email: "Seguridad del Correo", web: "Seguridad Web", pentester: "Pentester", server: "Seguridad de Servidores", instructions: "Guías" },
 };
 
 const Header = ({ onOpenModal }) => {

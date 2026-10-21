@@ -15,6 +15,8 @@ import {
   PL,
   MY,
   ID,
+  PT,
+  ES,
   VN,
 } from "country-flag-icons/react/3x2";
 import { useRouter, usePathname } from "@/i18n/navigation";
@@ -34,6 +36,8 @@ const FLAG_COMPONENTS = {
   PL,
   MY,
   ID,
+  PT,
+  ES,
   VN,
 };
 
@@ -50,6 +54,8 @@ const LANGUAGE_OPTIONS = [
   { code: "pl", label: "PL", name: "Polski", englishName: "Polish", flag: "PL" },
   { code: "ms", label: "MS", name: "Bahasa Melayu", englishName: "Malay", flag: "MY" },
   { code: "id", label: "ID", name: "Bahasa Indonesia", englishName: "Indonesian", flag: "ID" },
+  { code: "pt", label: "PT", name: "Português", englishName: "Portuguese", flag: "PT" },
+  { code: "es", label: "ES", name: "Español", englishName: "Spanish", flag: "ES" },
 ];
 
 export default function LanguageSelector({ align = "right", allowedLocales }) {

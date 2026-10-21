@@ -85,6 +85,20 @@ const contentByLocale = {
     server: { pageTitle: "Panduan Server Security", metadataTitle: "Panduan Pengguna Server Security - Silence AI" },
     web: { pageTitle: "Panduan Web Security", metadataTitle: "Panduan Pengguna Web Security - Silence AI" },
   },
+  pt: {
+    ui: { sections: "Secções", topic: "tópico", topics: "tópicos", overview: "Visão geral", reference: "Referência", closeSections: "Fechar secções", guideSelector: "Escolher guia" },
+    email: { pageTitle: "Guia do Email Security", metadataTitle: "Guia do Utilizador do Email Security - Silence AI" },
+    pentester: { pageTitle: "Guia do AI-CSD Pentester", metadataTitle: "Guia do Utilizador do AI-CSD Pentester - Silence AI" },
+    server: { pageTitle: "Guia do Server Security", metadataTitle: "Guia do Utilizador do Server Security - Silence AI" },
+    web: { pageTitle: "Guia do Web Security", metadataTitle: "Guia do Utilizador do Web Security - Silence AI" },
+  },
+  es: {
+    ui: { sections: "Secciones", topic: "tema", topics: "temas", overview: "Resumen", reference: "Referencia", closeSections: "Cerrar secciones", guideSelector: "Elegir guía" },
+    email: { pageTitle: "Guía de Email Security", metadataTitle: "Guía del usuario de Email Security - Silence AI" },
+    pentester: { pageTitle: "Guía de AI-CSD Pentester", metadataTitle: "Guía del usuario de AI-CSD Pentester - Silence AI" },
+    server: { pageTitle: "Guía de Server Security", metadataTitle: "Guía del usuario de Server Security - Silence AI" },
+    web: { pageTitle: "Guía de Web Security", metadataTitle: "Guía del usuario de Web Security - Silence AI" },
+  },
 };
 
 const englishFiles = {
@@ -97,7 +111,7 @@ const englishFiles = {
 export function getInstructionGuideContent(locale, guide) {
   const resolvedLocale = supportedLocales.includes(locale) ? locale : "en";
   const localized = contentByLocale[resolvedLocale];
-  const file = ["en", "pl", "ms", "id"].includes(resolvedLocale)
+  const file = ["en", "pl", "ms", "id", "pt", "es"].includes(resolvedLocale)
     ? englishFiles[guide]
     : guide === "email" && resolvedLocale === "ru"
       ? "USER_GUIDE-Email security system.md"

@@ -18,6 +18,8 @@ const copy = {
   pl: { title: "Nie znaleziono strony", description: "Adres mógł się zmienić lub link może być nieprawidłowy. Wróć na stronę główną.", home: "Strona główna", help: "Potrzebujesz pomocy?", contact: "Napisz do nas na", close: "Zamknij" },
   ms: { title: "Halaman tidak ditemui", description: "Alamat mungkin telah berubah atau pautan mungkin tidak betul. Kembali ke halaman utama.", home: "Kembali ke laman utama", help: "Perlukan bantuan?", contact: "Hubungi kami di", close: "Tutup" },
   id: { title: "Halaman tidak ditemukan", description: "Alamat mungkin berubah atau tautannya salah. Kembali ke halaman utama.", home: "Kembali ke beranda", help: "Butuh bantuan?", contact: "Hubungi kami di", close: "Tutup" },
+  pt: { title: "Página não encontrada", description: "O endereço pode ter mudado ou a ligação pode estar incorreta. Volte à página inicial.", home: "Voltar ao início", help: "Precisa de ajuda?", contact: "Contacte-nos em", close: "Fechar" },
+  es: { title: "Página no encontrada", description: "La dirección puede haber cambiado o el enlace puede ser incorrecto. Vuelve a la página de inicio.", home: "Volver al inicio", help: "¿Necesitas ayuda?", contact: "Contáctanos en", close: "Cerrar" },
 };
 
 const localePattern = new RegExp(`^/(${supportedLocales.join("|")})(?:/|$)`);

@@ -5,7 +5,7 @@ import { Link as LocalizedLink } from '@/i18n/navigation';
 
 const Footer = () => {
   const { t, language } = useLanguage();
-  const policyLocale = ["pl", "ms", "id"].includes(language) ? "en" : language;
+  const policyLocale = ["pl", "ms", "id", "pt", "es"].includes(language) ? "en" : language;
   const year = new Date().getFullYear();
   const copyright = t("footer.copyright", `© ${year} Silence AI. All rights reserved.`, { year });
 

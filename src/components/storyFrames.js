@@ -16,14 +16,14 @@ export function getRequiredFrameIndices() {
   return Array.from({ length: FRAME_COUNT }, (_, index) => index);
 }
 
-export function getFrameUrl(index, variant = getFrameVariant()) {
-  return variant === "mobile"
-    ? `/frames/mobile/frame-${index + 1}.webp`
-    : `/frames/frame-${index + 1}.webp`;
+export function getFrameUrl(index) {
+  // Use the full-size sequence on phones too. The 960px mobile copies are
+  // visibly soft when the story is drawn on high-density mobile canvases.
+  return `/frames/frame-${index + 1}.webp`;
 }
 
 export function getPreloadedFrameUrl(index, variant = getFrameVariant()) {
-  return cachedUrls.get(frameKey(variant, index)) || getFrameUrl(index, variant);
+  return cachedUrls.get(frameKey(variant, index)) || getFrameUrl(index);
 }
 
 export function preloadStoryFrames(variant, onProgress) {
@@ -46,7 +46,7 @@ export function preloadStoryFrames(variant, onProgress) {
         if (cachedUrls.has(key)) continue;
 
         try {
-          const response = await fetch(getFrameUrl(index, variant));
+          const response = await fetch(getFrameUrl(index));
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
           const blob = await response.blob();
           cachedUrls.set(key, URL.createObjectURL(blob));

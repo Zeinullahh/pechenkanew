@@ -11,7 +11,8 @@ const PREFETCH_RADIUS = 4;
 const MOBILE_PREFETCH_AHEAD = 6;
 const MOBILE_PREFETCH_BEHIND = 3;
 const MAX_CACHED_FRAMES = 12;
-const MAX_CACHED_MOBILE_FRAMES = 20;
+const MAX_CACHED_MOBILE_FRAMES = 12;
+const MAX_MOBILE_PIXEL_RATIO = 2.5;
 const FINAL_FRAME_PREFETCH_POINT = 0.86;
 
 const FRAME_RANGES = [
@@ -301,7 +302,7 @@ export default function ScrollytellingSequence({ children }) {
     const viewportWidth = canvas.clientWidth || window.innerWidth;
     const viewportHeight = canvas.clientHeight || window.innerHeight;
     const isMobile = variant === "mobile";
-    const pixelRatio = Math.min(window.devicePixelRatio || 1, isMobile ? 1 : 1.5);
+    const pixelRatio = Math.min(window.devicePixelRatio || 1, isMobile ? MAX_MOBILE_PIXEL_RATIO : 1.5);
     const width = Math.max(1, Math.round(viewportWidth * pixelRatio));
     const height = Math.max(1, Math.round(viewportHeight * pixelRatio));
 
@@ -316,7 +317,7 @@ export default function ScrollytellingSequence({ children }) {
 
     context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
     context.imageSmoothingEnabled = true;
-    context.imageSmoothingQuality = isMobile ? "medium" : "high";
+    context.imageSmoothingQuality = "high";
     context.clearRect(0, 0, viewportWidth, viewportHeight);
 
     const maxImageWidth = viewportWidth * (isMobile ? 1.72 : 0.92);
@@ -459,7 +460,7 @@ export default function ScrollytellingSequence({ children }) {
       const canvas = canvasRef.current;
       if (!canvas) return;
       const variant = getFrameVariant();
-      const pixelRatio = Math.min(window.devicePixelRatio || 1, variant === "mobile" ? 1 : 1.5);
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, variant === "mobile" ? MAX_MOBILE_PIXEL_RATIO : 1.5);
       const canvasSize = `${canvas.clientWidth}:${canvas.clientHeight}:${pixelRatio}`;
       if (canvasSize === lastCanvasSizeRef.current) return;
       lastPrefetchFrameRef.current = -1;

@@ -664,7 +664,10 @@ export function filterTraffic(
 }
 
 // A local, evidence-based assistant: every response uses the current inbox and selected incident.
-export function answerSecurityQuestion(question, email, emails, logs, localize = (copy) => copy) {
+export function answerSecurityQuestion(question, email, emails, logs, localize = (copy, values) =>
+  String(copy).replace(/\{(\w+)\}/g, (placeholder, key) =>
+    Object.hasOwn(values || {}, key) ? String(values[key]) : placeholder
+  )) {
   const q = question.toLowerCase();
   const threats = emails.filter((item) => isIncoming(item) && item.threatType !== "secure");
   if (/folder|move.*to|папк|перевед|klasör|taşı|dossier|déplac|ordner|verschieb|フォルダ|移動|폴더|옮|文件夹|移动|مجلد|نقل/i.test(q)) {

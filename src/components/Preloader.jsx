@@ -18,7 +18,10 @@ const loadingLabels = {
 };
 
 const MIN_DISPLAY_MS = 1400;
+const RETURN_VISIT_DISPLAY_MS = 150;
 const FADE_OUT_MS = 700;
+const VIDEO_READY_TIMEOUT_MS = 15000;
+const HOME_ASSETS_READY_KEY = "slnc-home-assets-ready-v1";
 
 const preloaderStyles = `
   .slnc-preloader svg .svg-elem-1 {
@@ -55,16 +58,23 @@ export default function Preloader() {
     // The draw transition only fires when .active lands after the initial paint.
     const activateTimer = window.setTimeout(() => setIsActive(true), 60);
     const startedAt = Date.now();
+    let hasVisited = false;
+    try {
+      hasVisited = window.localStorage.getItem(HOME_ASSETS_READY_KEY) === "true";
+    } catch {
+      // Browsers can disable storage; the normal browser cache still works.
+    }
     let finished = false;
     let fadeTimer = null;
     let hiddenTimer = null;
+    let videoTimeout = null;
     let cancelled = false;
     let unsubscribeFrames = () => {};
 
     const reveal = () => {
       if (finished) return;
       finished = true;
-      const wait = Math.max(0, MIN_DISPLAY_MS - (Date.now() - startedAt));
+      const wait = Math.max(0, (hasVisited ? RETURN_VISIT_DISPLAY_MS : MIN_DISPLAY_MS) - (Date.now() - startedAt));
       fadeTimer = window.setTimeout(() => {
         setPhase("fading");
         hiddenTimer = window.setTimeout(() => {
@@ -74,25 +84,39 @@ export default function Preloader() {
       }, wait);
     };
 
-    // The homepage opens after its scroll frames and default email pricing UI
-    // are ready. Below-the-fold images, fonts, and the YouTube player do not gate it.
+    // The homepage opens after its scroll frames, pricing UI, and presentation
+    // player are ready. A timeout prevents a blocked third-party embed from
+    // trapping visitors behind the preloader indefinitely.
     let loadedFrames = 0;
     let framesReady = !isHome;
     let pricingReady = !isHome;
+    let videoReady = !isHome;
     const variant = isHome ? getFrameVariant() : null;
     const requiredFrameCount = isHome ? getRequiredFrameIndices().length : 0;
     const updateProgress = () => {
       if (!cancelled) {
         setProgress(isHome
-          ? Math.round(((loadedFrames + Number(pricingReady)) / (requiredFrameCount + 1)) * 100)
+          ? Math.round(((loadedFrames + Number(pricingReady) + Number(videoReady)) / (requiredFrameCount + 2)) * 100)
           : 100);
       }
     };
     const checkReady = () => {
-      if (!cancelled && framesReady && pricingReady) reveal();
+      if (!cancelled && framesReady && pricingReady && videoReady) reveal();
     };
 
     if (isHome) {
+      const markVideoReady = () => {
+        videoReady = true;
+        window.clearTimeout(videoTimeout);
+        updateProgress();
+        checkReady();
+      };
+      if (document.documentElement.dataset.presentationVideoReady === "true") {
+        markVideoReady();
+      } else {
+        window.addEventListener("presentation-video-ready", markVideoReady, { once: true });
+        videoTimeout = window.setTimeout(markVideoReady, VIDEO_READY_TIMEOUT_MS);
+      }
       const markPricingReady = () => {
         pricingReady = true;
         updateProgress();
@@ -110,6 +134,11 @@ export default function Preloader() {
       });
       frameRequest.promise.then(() => {
         framesReady = true;
+        try {
+          window.localStorage.setItem(HOME_ASSETS_READY_KEY, "true");
+        } catch {
+          // Storage is optional; loaded frames are still kept in memory.
+        }
         updateProgress();
         checkReady();
       }).catch((loadError) => {
@@ -121,6 +150,7 @@ export default function Preloader() {
       unsubscribeFrames = () => {
         frameRequest.unsubscribe();
         window.removeEventListener("email-pricing-ready", markPricingReady);
+        window.removeEventListener("presentation-video-ready", markVideoReady);
       };
     } else {
       updateProgress();
@@ -133,6 +163,7 @@ export default function Preloader() {
       window.clearTimeout(activateTimer);
       window.clearTimeout(fadeTimer);
       window.clearTimeout(hiddenTimer);
+      window.clearTimeout(videoTimeout);
       document.body.style.overflow = "";
     };
   }, [isHome, pathname, retryCount]);

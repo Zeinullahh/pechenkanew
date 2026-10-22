@@ -2,7 +2,7 @@
 import HomepageText, { useHomepageText } from "@/components/HomepageText";
 
 
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { convertPrice, formatPrice } from "@/lib/currency";
@@ -854,6 +854,8 @@ const WebSecurityPricing = ({
 
 const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) => {
   const { t } = useLanguage();
+  const presentationFrameRef = useRef(null);
+  const [presentationVideoUrl, setPresentationVideoUrl] = useState("about:blank");
   const [billing, setBilling] = useState("yearly"); // "yearly" or "monthly"
   const [productType, setProductType] = useState("email");
   const [hoveredProductType, setHoveredProductType] = useState(null);
@@ -866,6 +868,56 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
       delete document.documentElement.dataset.emailPricingReady;
     };
   }, []);
+
+  useEffect(() => {
+    const url = new URL("https://www.youtube-nocookie.com/embed/KE7Dt7tsJgk");
+    url.searchParams.set("enablejsapi", "1");
+    url.searchParams.set("origin", window.location.origin);
+    setPresentationVideoUrl(url.toString());
+  }, []);
+
+  useEffect(() => {
+    // The iframe loads eagerly while the homepage preloader is visible. The
+    // YouTube API's onReady event confirms that the player can accept input;
+    // an iframe load event alone only confirms that its document arrived.
+    let cancelled = false;
+    let player;
+    const markReady = () => {
+      if (cancelled) return;
+      document.documentElement.dataset.presentationVideoReady = "true";
+      window.dispatchEvent(new Event("presentation-video-ready"));
+    };
+    const createPlayer = () => {
+      if (cancelled || presentationVideoUrl === "about:blank" || !presentationFrameRef.current || !window.YT?.Player) return;
+      player = new window.YT.Player(presentationFrameRef.current, {
+        events: { onReady: markReady },
+      });
+    };
+
+    if (presentationVideoUrl === "about:blank") return undefined;
+
+    if (window.YT?.Player) {
+      createPlayer();
+    } else {
+      const previousReady = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = () => {
+        previousReady?.();
+        createPlayer();
+      };
+      if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
+        const script = document.createElement("script");
+        script.src = "https://www.youtube.com/iframe_api";
+        script.async = true;
+        document.head.appendChild(script);
+      }
+    }
+
+    return () => {
+      cancelled = true;
+      player?.destroy?.();
+      delete document.documentElement.dataset.presentationVideoReady;
+    };
+  }, [presentationVideoUrl]);
 
 
   const billingLabels = useMemo(
@@ -945,9 +997,10 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
           <div className="aspect-video overflow-hidden rounded-2xl border border-white/15 bg-black shadow-[0_24px_80px_rgba(0,0,0,0.45)] sm:rounded-3xl">
             <iframe
               className="h-full w-full"
-              src="https://www.youtube-nocookie.com/embed/KE7Dt7tsJgk"
+              ref={presentationFrameRef}
+              src={presentationVideoUrl}
               title="Silence AI presentation video"
-              loading="lazy"
+              loading="eager"
               referrerPolicy="strict-origin-when-cross-origin"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen

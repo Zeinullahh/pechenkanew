@@ -65,6 +65,9 @@ export default async function LocaleLayout(props) {
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
+      <link rel="preconnect" href="https://www.youtube-nocookie.com" />
+      <link rel="preconnect" href="https://www.youtube.com" />
+      <link rel="preconnect" href="https://i.ytimg.com" />
       <LayoutWrapper initialLanguage={locale}>{props.children}</LayoutWrapper>
     </NextIntlClientProvider>
   );

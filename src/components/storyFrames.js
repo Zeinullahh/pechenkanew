@@ -1,6 +1,7 @@
 export const FRAME_COUNT = 118;
 
 const CONCURRENT_DOWNLOADS = 8;
+const MOBILE_FRAME_VERSION = 2;
 const cachedUrls = new Map();
 const inFlight = new Map();
 
@@ -16,14 +17,16 @@ export function getRequiredFrameIndices() {
   return Array.from({ length: FRAME_COUNT }, (_, index) => index);
 }
 
-export function getFrameUrl(index) {
-  // Use the full-size sequence on phones too. The 960px mobile copies are
-  // visibly soft when the story is drawn on high-density mobile canvases.
-  return `/frames/frame-${index + 1}.webp`;
+export function getFrameUrl(index, variant = getFrameVariant()) {
+  // The 1280px mobile sequence matches the 1.8x canvas without downloading
+  // the full desktop files. The version avoids reusing older 960px copies.
+  return variant === "mobile"
+    ? `/frames/mobile/frame-${index + 1}.webp?v=${MOBILE_FRAME_VERSION}`
+    : `/frames/frame-${index + 1}.webp`;
 }
 
 export function getPreloadedFrameUrl(index, variant = getFrameVariant()) {
-  return cachedUrls.get(frameKey(variant, index)) || getFrameUrl(index);
+  return cachedUrls.get(frameKey(variant, index)) || getFrameUrl(index, variant);
 }
 
 export function preloadStoryFrames(variant, onProgress) {
@@ -46,7 +49,7 @@ export function preloadStoryFrames(variant, onProgress) {
         if (cachedUrls.has(key)) continue;
 
         try {
-          const response = await fetch(getFrameUrl(index));
+          const response = await fetch(getFrameUrl(index, variant));
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
           const blob = await response.blob();
           cachedUrls.set(key, URL.createObjectURL(blob));

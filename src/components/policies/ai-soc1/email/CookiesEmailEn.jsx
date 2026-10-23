@@ -25,7 +25,7 @@ export default function CookiesEmailEn() {
       <section id="about">
         <h2 className="text-2xl font-semibold mb-4">1. About This Cookie Policy</h2>
         <p className="mb-4">
-          <strong>1.1 Introduction:</strong> This Cookie Policy explains how Silence AI LLC uses cookies and similar technologies for the UAE Email Security service. Its Centralized Management Console (CMC) is at <strong>mail.csd.silenceai.net</strong>, and its employee email workspace is at <strong>mail.silenceai.net</strong>. The corresponding Kazakhstan service is provided under the agreement with ТОО &quot;Silence AI&quot; at <strong>kz.mail.csd.silenceai.net</strong> and <strong>kz.mail.silenceai.net</strong>. The CMC is the administrator panel; employees use the workspace to read, compose, send and manage email. These domain names do not state the physical server location.
+          <strong>1.1 Introduction:</strong> This Cookie Policy explains how Silence AI LLC uses cookies and similar technologies for the UAE Email Security service. Its Centralized Management Console (CMC) is at <strong>email.csd.silenceai.net</strong>, and its employee email workspace is at <strong>mail.silenceai.net</strong>. The corresponding Kazakhstan service is provided under the agreement with ТОО &quot;Silence AI&quot; at <strong>kz.email.csd.silenceai.net</strong> and <strong>kz.mail.silenceai.net</strong>. The CMC is the administrator panel; employees use the workspace to read, compose, send and manage email. These domain names do not state the physical server location.
         </p>
         <p>
           <strong>1.2 What Are Cookies:</strong> Cookies are small text files that are stored on your device when you visit a website. They help websites remember information about your visit, which can make it easier to visit the site again and make the site more useful to you.
@@ -55,7 +55,7 @@ export default function CookiesEmailEn() {
       <section id="how-we-use-cookies">
         <h2 className="text-2xl font-semibold mb-4">4. How We Use Technical Cookies</h2>
         <p className="mb-4">
-          <strong>4.1 Session Management:</strong> Necessary cookies may maintain login state and protect access to the CMC at mail.csd.silenceai.net and the employee workspace at mail.silenceai.net for UAE agreements. The Kazakhstan domains are kz.mail.csd.silenceai.net and kz.mail.silenceai.net. Each domain may have its own session scope.
+          <strong>4.1 Session Management:</strong> Necessary cookies may maintain login state and protect access to the CMC at email.csd.silenceai.net and the employee workspace at mail.silenceai.net for UAE agreements. The Kazakhstan domains are kz.email.csd.silenceai.net and kz.mail.silenceai.net. Each domain may have its own session scope.
         </p>
         <p className="mb-4">
           <strong>4.2 Security Functions:</strong> Implement security measures to protect user accounts and the email CMC; Detect and prevent fraudulent access attempts; Support email authentication mechanisms including SPF, DKIM, and DMARC; Protect against cross-site request forgery (CSRF) attacks.

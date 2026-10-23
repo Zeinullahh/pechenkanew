@@ -18,7 +18,7 @@ import EmailWorkspaceStoreLinks from "./EmailWorkspaceStoreLinks";
 
 const PRODUCT_LINKS = {
     emailWorkspace: "https://kz.mail.silenceai.net",
-    emailAdminPanel: "https://kz.mail.csd.silenceai.net",
+    emailAdminPanel: "https://kz.email.csd.silenceai.net",
     webSecurity: "https://kz.web.csd.silenceai.net",
     pentester: "https://kz.pentester.csd.silenceai.net",
     serverSecurity: "https://kz.server.csd.silenceai.net",

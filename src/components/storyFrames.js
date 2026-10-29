@@ -3,7 +3,12 @@ import { createStoryFrameDecoder } from "./storyFrameDecoder.mjs";
 export const FRAME_COUNT = 118;
 
 const CONCURRENT_DOWNLOADS = 8;
-const MOBILE_FRAME_VERSION = 2;
+const MOBILE_FRAME_VERSION = 3;
+const DESKTOP_FRAME_VERSION = 3;
+// At the mobile canvas's 2x cap, 1920px covers its visible image on typical
+// phones. Keep the 4K download out of the retained decoded working set.
+const MOBILE_DECODE_WIDTH = 1920;
+const MOBILE_DECODE_HEIGHT = 1080;
 const cachedUrls = new Map();
 const inFlight = new Map();
 let mobileDecoder;
@@ -17,7 +22,11 @@ export function getMobileFrameDecoder() {
         try {
           const response = await fetch(url);
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
-          return await createImageBitmap(await response.blob());
+          return await createImageBitmap(await response.blob(), {
+            resizeWidth: MOBILE_DECODE_WIDTH,
+            resizeHeight: MOBILE_DECODE_HEIGHT,
+            resizeQuality: "high",
+          });
         } catch {
           // Older WebKit versions may expose ImageBitmap but reject WebP.
         }
@@ -26,7 +35,16 @@ export function getMobileFrameDecoder() {
       image.decoding = "async";
       image.src = url;
       await image.decode();
-      return image;
+      // Preserve the memory bound when bitmap resizing is unavailable.
+      const canvas = document.createElement("canvas");
+      canvas.width = MOBILE_DECODE_WIDTH;
+      canvas.height = MOBILE_DECODE_HEIGHT;
+      const context = canvas.getContext("2d");
+      if (!context) throw new Error("Unable to prepare mobile frame canvas");
+      context.imageSmoothingQuality = "high";
+      context.drawImage(image, 0, 0, canvas.width, canvas.height);
+      canvas.close = () => { canvas.width = 0; canvas.height = 0; };
+      return canvas;
     },
   });
   return mobileDecoder;
@@ -45,11 +63,11 @@ export function getRequiredFrameIndices() {
 }
 
 export function getFrameUrl(index, variant = getFrameVariant()) {
-  // The 1280px mobile sequence matches the 1.8x canvas without downloading
-  // the full desktop files. The version avoids reusing older 960px copies.
+  // Desktop uses the restored 1440p originals; mobile has 4K upscaled copies.
+  // Version both paths so browser caches cannot hide the asset upgrade.
   return variant === "mobile"
     ? `/frames/mobile/frame-${index + 1}.webp?v=${MOBILE_FRAME_VERSION}`
-    : `/frames/frame-${index + 1}.webp`;
+    : `/frames/frame-${index + 1}.webp?v=${DESKTOP_FRAME_VERSION}`;
 }
 
 export function getPreloadedFrameUrl(index, variant = getFrameVariant()) {

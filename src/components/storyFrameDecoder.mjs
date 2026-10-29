@@ -1,6 +1,9 @@
 // A replaceable working set, not a FIFO: old scroll requests never queue ahead
 // of the current target. An already running browser decode cannot be cancelled.
-export function createStoryFrameDecoder({ decode, frameCount = 118, maxFrames = 16, maxBytes = 48 * 1024 * 1024 }) {
+export function createStoryFrameDecoder({
+  decode, frameCount = 118, maxFrames = 16, maxBytes = 48 * 1024 * 1024,
+  schedule = (callback) => setTimeout(callback, 0), cancel = clearTimeout,
+}) {
   const cache = new Map();
   const active = new Map();
   const failed = new Map();
@@ -16,7 +19,7 @@ export function createStoryFrameDecoder({ decode, frameCount = 118, maxFrames = 
     // Keep immediate reverse neighbours warm as well as the forward runway.
     for (let distance = 1; distance <= 10; distance++) {
       indices.push(target + direction * distance);
-      if (distance <= 4) indices.push(target - direction * distance);
+      if (distance % 2 === 0 && distance <= 8) indices.push(target - direction * (distance / 2));
     }
     return indices.filter((index) => index >= 0 && index < frameCount);
   };
@@ -52,7 +55,7 @@ export function createStoryFrameDecoder({ decode, frameCount = 118, maxFrames = 
     });
   };
   const pump = () => {
-    clearTimeout(timer);
+    cancel(timer);
     timer = null;
     if (paused) return;
     if (!cache.has(target) && !active.has(target) && !failed.has(target) && active.size < 2) {
@@ -76,7 +79,8 @@ export function createStoryFrameDecoder({ decode, frameCount = 118, maxFrames = 
       cache.delete(index);
     }
     if (cache.size >= maxFrames || bytes + estimate > maxBytes) return;
-    timer = setTimeout(() => { timer = null; start(next); }, 16);
+    // Yield to input without adding a whole display frame to every decode.
+    timer = schedule(() => { timer = null; start(next); });
   };
   return {
     get: (index) => cache.get(index),
@@ -103,7 +107,13 @@ export function createStoryFrameDecoder({ decode, frameCount = 118, maxFrames = 
       paused = false;
       return new Promise((resolve, reject) => {
         const check = () => {
-          const needed = priorities().slice(0, 4);
+          const current = cache.get(target);
+          // Frame dimensions can vary between asset versions or decoders.
+          // Never wait for more decoded images than the byte budget can hold.
+          const capacity = current
+            ? Math.max(1, Math.floor(maxBytes / (current.width * current.height * 4)))
+            : 4;
+          const needed = priorities().slice(0, Math.min(4, maxFrames, capacity));
           const error = needed.map((index) => failed.get(index)).find(Boolean);
           if (error || needed.every((index) => cache.has(index))) {
             listeners.delete(check);
@@ -115,6 +125,6 @@ export function createStoryFrameDecoder({ decode, frameCount = 118, maxFrames = 
         check();
       });
     },
-    pause() { paused = true; clearTimeout(timer); timer = null; },
+    pause() { paused = true; cancel(timer); timer = null; },
   };
 }

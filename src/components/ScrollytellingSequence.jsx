@@ -9,7 +9,8 @@ const LAST_FRAME = FRAME_COUNT - 1;
 const FINAL_STORY_FRAME = 117;
 const PREFETCH_RADIUS = 4;
 const MAX_CACHED_FRAMES = 12;
-const MAX_MOBILE_PIXEL_RATIO = 1.25;
+const MAX_MOBILE_PIXEL_RATIO = 2;
+const MAX_DESKTOP_PIXEL_RATIO = 2;
 const FINAL_FRAME_PREFETCH_POINT = 0.86;
 
 const FRAME_RANGES = [
@@ -313,7 +314,7 @@ export default function ScrollytellingSequence({ children }) {
     const viewportWidth = canvas.clientWidth || window.innerWidth;
     const viewportHeight = canvas.clientHeight || window.innerHeight;
     const isMobile = variant === "mobile";
-    const pixelRatio = Math.min(window.devicePixelRatio || 1, isMobile ? MAX_MOBILE_PIXEL_RATIO : 1.5);
+    const pixelRatio = Math.min(window.devicePixelRatio || 1, isMobile ? MAX_MOBILE_PIXEL_RATIO : MAX_DESKTOP_PIXEL_RATIO);
     const width = Math.max(1, Math.round(viewportWidth * pixelRatio));
     const height = Math.max(1, Math.round(viewportHeight * pixelRatio));
 
@@ -328,7 +329,7 @@ export default function ScrollytellingSequence({ children }) {
 
     context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
     context.imageSmoothingEnabled = true;
-    context.imageSmoothingQuality = isMobile ? "medium" : "high";
+    context.imageSmoothingQuality = "high";
     context.clearRect(0, 0, viewportWidth, viewportHeight);
 
     const maxImageWidth = viewportWidth * (isMobile ? 1.72 : 0.92);
@@ -478,7 +479,7 @@ export default function ScrollytellingSequence({ children }) {
       const canvas = canvasRef.current;
       if (!canvas) return;
       const variant = getFrameVariant();
-      const pixelRatio = Math.min(window.devicePixelRatio || 1, variant === "mobile" ? MAX_MOBILE_PIXEL_RATIO : 1.5);
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, variant === "mobile" ? MAX_MOBILE_PIXEL_RATIO : MAX_DESKTOP_PIXEL_RATIO);
       const canvasSize = `${canvas.clientWidth}:${canvas.clientHeight}:${pixelRatio}`;
       if (canvasSize === lastCanvasSizeRef.current) return;
       lastPrefetchFrameRef.current = -1;
@@ -514,9 +515,9 @@ export default function ScrollytellingSequence({ children }) {
       </div>
 
       <div className="relative z-10 -mt-[100svh]">
-        {/* 215svh gives 115svh of travel for 118 frames; 400svh made each
-            frame last about 2.6 times as much scroll distance on mobile. */}
-        <div ref={storyRef} className={prefersReducedMotion ? "relative h-[100svh]" : "relative h-[215svh] md:h-[285vh]"}>
+        {/* 175svh gives 75svh of travel for all 118 frames on mobile,
+            about 1.53x the frame progression of the previous 215svh. */}
+        <div ref={storyRef} className={prefersReducedMotion ? "relative h-[100svh]" : "relative h-[175svh] md:h-[285vh]"}>
           {prefersReducedMotion ? <ReducedMotionStory /> : <StoryCopy progress={scrollYProgress} />}
         </div>
         <div className="relative z-20 pb-12 sm:pb-16">

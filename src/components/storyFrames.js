@@ -1,9 +1,36 @@
+import { createStoryFrameDecoder } from "./storyFrameDecoder.mjs";
+
 export const FRAME_COUNT = 118;
 
 const CONCURRENT_DOWNLOADS = 8;
 const MOBILE_FRAME_VERSION = 2;
 const cachedUrls = new Map();
 const inFlight = new Map();
+let mobileDecoder;
+
+export function getMobileFrameDecoder() {
+  if (!mobileDecoder) mobileDecoder = createStoryFrameDecoder({
+    frameCount: FRAME_COUNT,
+    decode: async (index) => {
+      const url = getPreloadedFrameUrl(index, "mobile");
+      if (typeof createImageBitmap === "function") {
+        try {
+          const response = await fetch(url);
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return await createImageBitmap(await response.blob());
+        } catch {
+          // Older WebKit versions may expose ImageBitmap but reject WebP.
+        }
+      }
+      const image = new Image();
+      image.decoding = "async";
+      image.src = url;
+      await image.decode();
+      return image;
+    },
+  });
+  return mobileDecoder;
+}
 
 export function getFrameVariant() {
   return window.innerWidth < 768 ? "mobile" : "desktop";

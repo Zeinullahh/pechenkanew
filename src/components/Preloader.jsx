@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { supportedLocales } from "@/i18n/locales.mjs";
-import { getFrameVariant, getRequiredFrameIndices, preloadStoryFrames } from "@/components/storyFrames";
+import { getFrameVariant, getRequiredFrameIndices, getMobileFrameDecoder, preloadStoryFrames } from "@/components/storyFrames";
 
 const loadingLabels = {
   en: "Loading experience…",
@@ -89,6 +89,7 @@ export default function Preloader() {
     // trapping visitors behind the preloader indefinitely.
     let loadedFrames = 0;
     let framesReady = !isHome;
+    let decodedReady = !isHome || getFrameVariant() !== "mobile";
     let pricingReady = !isHome;
     let videoReady = !isHome;
     const variant = isHome ? getFrameVariant() : null;
@@ -96,7 +97,7 @@ export default function Preloader() {
     const updateProgress = () => {
       if (!cancelled) {
         setProgress(isHome
-          ? Math.round(((loadedFrames + Number(pricingReady) + Number(videoReady)) / (requiredFrameCount + 2)) * 100)
+          ? Math.round(((loadedFrames + Number(decodedReady) + Number(pricingReady) + Number(videoReady)) / (requiredFrameCount + 3)) * 100)
           : 100);
       }
     };
@@ -132,7 +133,12 @@ export default function Preloader() {
         loadedFrames = count;
         updateProgress();
       });
-      frameRequest.promise.then(() => {
+      frameRequest.promise.then(async () => {
+        if (cancelled) return;
+        // Share a small decoded runway with the canvas, not 118 decoded images.
+        if (variant === "mobile") await getMobileFrameDecoder().warm();
+        if (cancelled) return;
+        decodedReady = true;
         framesReady = true;
         try {
           window.localStorage.setItem(HOME_ASSETS_READY_KEY, "true");

@@ -582,7 +582,7 @@ export default function HomeLanding() {
           const partners = [
             { name: "Nur Astana Kurylys", amount: "$1.5", unit: "billion", logo: "/partners/nur-astana-kurylys.png" },
             { name: "QazCloud", amount: "$100", unit: "million", logo: "/partners/qazcloud.png" },
-            { name: "KazakhCinema", amount: "$50", unit: "million", logo: "/partners/kazakhcinema.png" },
+            { name: "KazakhCinema", category: "Government", logo: "/partners/kazakhcinema.png" },
             { name: "Neuro Force", amount: "$8", unit: "million", logo: "/partners/neuroforce.png" },
             { name: "Astana Innovations", category: "Government", logo: "/partners/astana_innovations.png" },
             { name: "Akimat of Astana", category: "Government", logo: "/partners/akimat-astana.png" },

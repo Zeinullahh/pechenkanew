@@ -3,10 +3,10 @@ import { createStoryFrameDecoder } from "./storyFrameDecoder.mjs";
 export const FRAME_COUNT = 118;
 
 const CONCURRENT_DOWNLOADS = 8;
-const MOBILE_FRAME_VERSION = 3;
+const MOBILE_FRAME_VERSION = 4;
 const DESKTOP_FRAME_VERSION = 3;
-// At the mobile canvas's 2x cap, 1920px covers its visible image on typical
-// phones. Keep the 4K download out of the retained decoded working set.
+// Full HD sources match the mobile decoded working images and cover the
+// visible image on typical phones at the canvas's 2x pixel-ratio cap.
 const MOBILE_DECODE_WIDTH = 1920;
 const MOBILE_DECODE_HEIGHT = 1080;
 const cachedUrls = new Map();
@@ -63,7 +63,7 @@ export function getRequiredFrameIndices() {
 }
 
 export function getFrameUrl(index, variant = getFrameVariant()) {
-  // Desktop uses the restored 1440p originals; mobile has 4K upscaled copies.
+  // Desktop uses the restored 1440p originals; mobile uses Full HD copies.
   // Version both paths so browser caches cannot hide the asset upgrade.
   return variant === "mobile"
     ? `/frames/mobile/frame-${index + 1}.webp?v=${MOBILE_FRAME_VERSION}`

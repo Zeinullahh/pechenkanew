@@ -10,7 +10,7 @@ function globalValue(t, name, value) {
   });
 }
 
-test("mobile 4K sources are decoded into bounded 1080p working images", async (t) => {
+test("mobile Full HD sources are decoded into bounded 1080p working images", async (t) => {
   const requests = [];
   const options = [];
   globalValue(t, "fetch", async (url) => {
@@ -29,7 +29,7 @@ test("mobile 4K sources are decoded into bounded 1080p working images", async (t
   assert.equal(decoder.get(0).width, 1920);
   assert.equal(decoder.get(0).height, 1080);
   assert.ok(options.every((config) => config.resizeQuality === "high"));
-  assert.ok(requests.every((url) => url.includes("/mobile/") && url.endsWith("?v=3")));
+  assert.ok(requests.every((url) => url.includes("/mobile/") && url.endsWith("?v=4")));
   assert.equal(getFrameUrl(0, "desktop"), "/frames/frame-1.webp?v=3");
 });
 
@@ -37,7 +37,7 @@ test("fallback resizing also bounds retained memory and releases canvas pixels",
   const draws = [];
   globalValue(t, "createImageBitmap", undefined);
   globalValue(t, "Image", class {
-    async decode() { this.naturalWidth = 3840; this.naturalHeight = 2160; }
+    async decode() { this.naturalWidth = 1920; this.naturalHeight = 1080; }
   });
   globalValue(t, "document", {
     createElement(name) {

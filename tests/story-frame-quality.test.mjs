@@ -10,7 +10,7 @@ function globalValue(t, name, value) {
   });
 }
 
-test("mobile Full HD sources are decoded into bounded 1080p working images", async (t) => {
+test("mobile 900p sources are decoded at their native resolution", async (t) => {
   const requests = [];
   const options = [];
   globalValue(t, "fetch", async (url) => {
@@ -26,10 +26,10 @@ test("mobile Full HD sources are decoded into bounded 1080p working images", asy
   t.after(() => decoder.pause());
   await decoder.warm();
   decoder.pause();
-  assert.equal(decoder.get(0).width, 1920);
-  assert.equal(decoder.get(0).height, 1080);
+  assert.equal(decoder.get(0).width, 1600);
+  assert.equal(decoder.get(0).height, 900);
   assert.ok(options.every((config) => config.resizeQuality === "high"));
-  assert.ok(requests.every((url) => url.includes("/mobile/") && url.endsWith("?v=4")));
+  assert.ok(requests.every((url) => url.includes("/mobile/") && url.endsWith("?v=5")));
   assert.equal(getFrameUrl(0, "desktop"), "/frames/frame-1.webp?v=3");
 });
 
@@ -37,7 +37,7 @@ test("fallback resizing also bounds retained memory and releases canvas pixels",
   const draws = [];
   globalValue(t, "createImageBitmap", undefined);
   globalValue(t, "Image", class {
-    async decode() { this.naturalWidth = 1920; this.naturalHeight = 1080; }
+    async decode() { this.naturalWidth = 1600; this.naturalHeight = 900; }
   });
   globalValue(t, "document", {
     createElement(name) {
@@ -51,9 +51,9 @@ test("fallback resizing also bounds retained memory and releases canvas pixels",
   await decoder.warm();
   decoder.pause();
   const first = decoder.get(0);
-  assert.equal(first.width, 1920);
-  assert.equal(first.height, 1080);
-  assert.ok(draws.every((args) => args[3] === 1920 && args[4] === 1080));
+  assert.equal(first.width, 1600);
+  assert.equal(first.height, 900);
+  assert.ok(draws.every((args) => args[3] === 1600 && args[4] === 900));
   // A distant target drops old canvases immediately, before its decode starts.
   decoder.setTarget(100);
   assert.equal(first.width, 0);

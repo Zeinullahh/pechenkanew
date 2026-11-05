@@ -10,15 +10,15 @@ import MediumArticleCard from "@/components/MediumArticleCard";
 import Pricing from "@/components/Pricing";
 import ScrollytellingSequence from "@/components/ScrollytellingSequence";
 import DeferredContent from "@/components/DeferredContent";
+import { FloatingText } from "@/components/FloatingText";
+import Insights from "@/components/Insights";
+import FaqSection from "@/components/FaqSection";
 import { DEFAULT_CURRENCY } from "@/lib/currency";
 import { Rocket, BrainCircuit, Radar, ShieldCheck } from "lucide-react";
 
 import { articles, featuredResourcesConfig } from "@/constants/mediumArticles";
 
 const AiSocGetModal = dynamic(() => import("@/components/AiSocGetModal"), { ssr: false });
-const FloatingText = dynamic(() => import("@/components/FloatingText").then((module) => module.FloatingText), { ssr: false });
-const Insights = dynamic(() => import("@/components/Insights"));
-const FaqSection = dynamic(() => import("@/components/FaqSection"));
 const ColorBends = dynamic(() => import("@/components/ColorBends"), { ssr: false });
 
 const valueFeatures = [
@@ -276,6 +276,49 @@ export default function HomeLanding() {
 
   const openGetModal = () => setIsGetModalOpen(true);
   const closeGetModal = () => setIsGetModalOpen(false);
+
+  useEffect(() => {
+    const key = `slnc-home-scroll:${window.location.pathname}`;
+    const navigation = performance.getEntriesByType("navigation")[0];
+    const isReload = navigation?.type === "reload";
+    const hasSectionLink = window.location.hash || new URLSearchParams(window.location.search).has("section");
+    let savedY = 0;
+    try {
+      savedY = Number(window.sessionStorage.getItem(key)) || 0;
+    } catch {
+      // Storage may be unavailable; native browser scroll restoration still works.
+    }
+    let restored = !isReload || Boolean(hasSectionLink) || savedY <= 0;
+    let restoreFrame = null;
+
+    const savePosition = () => {
+      if (!restored) return;
+      try {
+        window.sessionStorage.setItem(key, String(window.scrollY));
+      } catch {
+        // Storage is optional.
+      }
+    };
+    const restorePosition = () => {
+      if (restored) return;
+      restored = true;
+      restoreFrame = window.requestAnimationFrame(() => {
+        window.scrollTo({ top: savedY, behavior: "auto" });
+      });
+    };
+
+    window.addEventListener("scroll", savePosition, { passive: true });
+    window.addEventListener("pagehide", savePosition);
+    window.addEventListener("slnc-preloader-hidden", restorePosition);
+    if (document.body.style.overflow !== "hidden") restorePosition();
+
+    return () => {
+      if (restoreFrame !== null) window.cancelAnimationFrame(restoreFrame);
+      window.removeEventListener("scroll", savePosition);
+      window.removeEventListener("pagehide", savePosition);
+      window.removeEventListener("slnc-preloader-hidden", restorePosition);
+    };
+  }, []);
 
   useEffect(() => {
     let frame = null;
@@ -580,6 +623,7 @@ export default function HomeLanding() {
         <DeferredContent id="resources" minHeight={420} className="scroll-mt-24" renderOnServer>
         {(() => {
           const partners = [
+            { name: "Citizensec", category: "CyberPolice", logo: "/partners/citizensec.png", website: "https://citizensec.kz", featuredLogo: true },
             { name: "Nur Astana Kurylys", amount: "$1.5", unit: "billion", logo: "/partners/nur-astana-kurylys.png" },
             { name: "QazCloud", amount: "$100", unit: "million", logo: "/partners/qazcloud.png" },
             { name: "KazakhCinema", category: "Government", logo: "/partners/kazakhcinema.png" },
@@ -588,6 +632,9 @@ export default function HomeLanding() {
             { name: "Akimat of Astana", category: "Government", logo: "/partners/akimat-astana.png" },
             { name: "JetQ Group", amount: "$50", unit: "million", logo: "/partners/jetq.png" },
             { name: "Samruk Kazyna", amount: "$88.6", unit: "billion", metric: "aum", logo: "/partners/samruk_kazyna.png" },
+            { name: "MBT Connection", amount: "$1", unit: "million", logo: "/partners/mbt-connection-header-logo.svg" },
+            { name: "MSSP Global", amount: "$50", unit: "million", logo: "/partners/mssp.png", website: "https://mssp.global" },
+            { name: "КНБ Государственная Техническая Служба", category: "Government", logo: "/partners/sts.png", website: "https://sts.kz", compactName: true },
           ];
 
           const allPartners = [...partners, ...partners, ...partners, ...partners];
@@ -609,14 +656,14 @@ export default function HomeLanding() {
                   {allPartners.map((p, i) => (
                     <div
                       key={`${p.name}-${i}`}
-                      className="shrink-0 w-64 mx-3 glass-readable rounded-2xl p-5 flex flex-col items-center gap-4 group opacity-50 hover:opacity-100 transition-opacity duration-300"
+                      className={`shrink-0 w-64 mx-3 glass-readable rounded-2xl p-5 flex flex-col items-center gap-4 group transition-opacity duration-300 ${p.featuredLogo ? "opacity-100" : "opacity-50 hover:opacity-100"}`}
                     >
-                      <div className="relative h-32 w-48 flex flex-col items-center justify-center gap-2 grayscale group-hover:grayscale-0 transition-all duration-300">
-                        <div className="relative h-20 w-full flex items-center justify-center">
+                      <div className={`relative h-32 w-48 flex flex-col items-center justify-center gap-2 transition-all duration-300 ${p.featuredLogo ? "" : "grayscale group-hover:grayscale-0"}`}>
+                        <div className={`relative ${p.featuredLogo ? "h-24" : "h-20"} w-full flex items-center justify-center`}>
                           <img
                             src={p.logo}
                             alt={p.name}
-                            loading="lazy"
+                            loading={p.featuredLogo ? "eager" : "lazy"}
                             className="max-h-full max-w-full object-contain"
                             onError={(e) => {
                               e.currentTarget.style.display = "none";
@@ -624,7 +671,13 @@ export default function HomeLanding() {
                           />
                         </div>
                         <div className="text-center">
-                          <span className="text-sm font-bold text-white/50 group-hover:text-white transition-colors duration-300">{p.name}</span>
+                          {p.website ? (
+                            <a href={p.website} target="_blank" rel="noopener noreferrer" className={`${p.compactName ? "text-xs leading-tight" : "text-sm"} font-bold text-white/50 group-hover:text-white transition-colors duration-300 hover:underline`}>
+                              {p.name}
+                            </a>
+                          ) : (
+                            <span className="text-sm font-bold text-white/50 group-hover:text-white transition-colors duration-300">{p.name}</span>
+                          )}
                         </div>
                       </div>
 
@@ -651,7 +704,7 @@ export default function HomeLanding() {
         })()}
         </DeferredContent>
 
-        <DeferredContent minHeight={180}>
+        <DeferredContent minHeight={180} renderOnServer>
         <div className="w-full max-w-7xl mx-auto pt-20 px-4 sm:px-6 lg:px-8">
           <FloatingText />
         </div>
@@ -694,7 +747,7 @@ export default function HomeLanding() {
         </section>
         </DeferredContent>
 
-        <DeferredContent minHeight={400}>
+        <DeferredContent minHeight={400} renderOnServer>
         <div className="w-full max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
           <Insights />
         </div>

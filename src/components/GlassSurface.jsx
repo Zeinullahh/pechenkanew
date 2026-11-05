@@ -71,6 +71,7 @@ const GlassSurface = ({
   };
 
   useEffect(() => {
+    if (!svgSupported) return;
     updateDisplacementMap();
     [
       { ref: redChannelRef, offset: redOffset },
@@ -100,11 +101,12 @@ const GlassSurface = ({
     blueOffset,
     xChannel,
     yChannel,
-    mixBlendMode
+    mixBlendMode,
+    svgSupported
   ]);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    if (!svgSupported || !containerRef.current) return;
 
     const resizeObserver = new ResizeObserver(() => {
       setTimeout(updateDisplacementMap, 0);
@@ -115,11 +117,11 @@ const GlassSurface = ({
     return () => {
       resizeObserver.disconnect();
     };
-  }, []);
+  }, [svgSupported]);
 
   useEffect(() => {
-    setTimeout(updateDisplacementMap, 0);
-  }, [width, height]);
+    if (svgSupported) setTimeout(updateDisplacementMap, 0);
+  }, [width, height, svgSupported]);
 
   useEffect(() => {
     setSvgSupported(supportsSVGFilters());
@@ -127,6 +129,10 @@ const GlassSurface = ({
 
   const supportsSVGFilters = () => {
     if (typeof window === 'undefined' || typeof document === 'undefined') {
+      return false;
+    }
+
+    if (window.matchMedia('(max-width: 768px), (pointer: coarse)').matches) {
       return false;
     }
 

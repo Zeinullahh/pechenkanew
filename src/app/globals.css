@@ -386,6 +386,17 @@
   backdrop-filter: blur(28px) var(--filter-id) saturate(165%) brightness(1.06);
 }
 
+@media (max-width: 768px), (pointer: coarse) {
+  .pricing-glass-panel .glass-surface__backdrop,
+  .pricing-comparison-surface .glass-surface__backdrop,
+  .pricing-glass-inset,
+  .pricing-glass-menu {
+    background: rgba(12, 17, 34, 0.94);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
 .pricing-button-invert {
   border: 0;
   transition: background-color 220ms ease, color 220ms ease, box-shadow 220ms ease;

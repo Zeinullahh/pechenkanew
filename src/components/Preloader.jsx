@@ -80,13 +80,13 @@ export default function Preloader() {
         hiddenTimer = window.setTimeout(() => {
           document.body.style.overflow = "";
           setPhase("hidden");
+          window.dispatchEvent(new Event("slnc-preloader-hidden"));
         }, FADE_OUT_MS);
       }, wait);
     };
 
-    // The homepage opens after its scroll frames, pricing UI, and presentation
-    // player are ready. A timeout prevents a blocked third-party embed from
-    // trapping visitors behind the preloader indefinitely.
+    // The homepage opens after its first story frames and pricing UI are ready.
+    // The presentation player loads only when the visitor presses Play.
     let loadedFrames = 0;
     let framesReady = !isHome;
     let decodedReady = !isHome || getFrameVariant() !== "mobile";

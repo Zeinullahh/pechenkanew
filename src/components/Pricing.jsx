@@ -2,7 +2,7 @@
 import HomepageText, { useHomepageText } from "@/components/HomepageText";
 
 
-import React, { useState, useMemo, useEffect, useRef } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { convertPrice, formatPrice } from "@/lib/currency";
@@ -854,8 +854,8 @@ const WebSecurityPricing = ({
 
 const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) => {
   const { t } = useLanguage();
-  const presentationFrameRef = useRef(null);
-  const [presentationVideoUrl, setPresentationVideoUrl] = useState("about:blank");
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isSandboxOpen, setIsSandboxOpen] = useState(false);
   const [billing, setBilling] = useState("yearly"); // "yearly" or "monthly"
   const [productType, setProductType] = useState("email");
   const [hoveredProductType, setHoveredProductType] = useState(null);
@@ -863,61 +863,14 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
 
   useEffect(() => {
     document.documentElement.dataset.emailPricingReady = "true";
+    document.documentElement.dataset.presentationVideoReady = "true";
     window.dispatchEvent(new Event("email-pricing-ready"));
+    window.dispatchEvent(new Event("presentation-video-ready"));
     return () => {
       delete document.documentElement.dataset.emailPricingReady;
-    };
-  }, []);
-
-  useEffect(() => {
-    const url = new URL("https://www.youtube-nocookie.com/embed/KE7Dt7tsJgk");
-    url.searchParams.set("enablejsapi", "1");
-    url.searchParams.set("origin", window.location.origin);
-    setPresentationVideoUrl(url.toString());
-  }, []);
-
-  useEffect(() => {
-    // The iframe loads eagerly while the homepage preloader is visible. The
-    // YouTube API's onReady event confirms that the player can accept input;
-    // an iframe load event alone only confirms that its document arrived.
-    let cancelled = false;
-    let player;
-    const markReady = () => {
-      if (cancelled) return;
-      document.documentElement.dataset.presentationVideoReady = "true";
-      window.dispatchEvent(new Event("presentation-video-ready"));
-    };
-    const createPlayer = () => {
-      if (cancelled || presentationVideoUrl === "about:blank" || !presentationFrameRef.current || !window.YT?.Player) return;
-      player = new window.YT.Player(presentationFrameRef.current, {
-        events: { onReady: markReady },
-      });
-    };
-
-    if (presentationVideoUrl === "about:blank") return undefined;
-
-    if (window.YT?.Player) {
-      createPlayer();
-    } else {
-      const previousReady = window.onYouTubeIframeAPIReady;
-      window.onYouTubeIframeAPIReady = () => {
-        previousReady?.();
-        createPlayer();
-      };
-      if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
-        const script = document.createElement("script");
-        script.src = "https://www.youtube.com/iframe_api";
-        script.async = true;
-        document.head.appendChild(script);
-      }
-    }
-
-    return () => {
-      cancelled = true;
-      player?.destroy?.();
       delete document.documentElement.dataset.presentationVideoReady;
     };
-  }, [presentationVideoUrl]);
+  }, []);
 
 
   const billingLabels = useMemo(
@@ -995,16 +948,26 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
       <div className="container relative z-[1] mx-auto max-w-7xl">
         <div className="mx-auto mb-12 w-full max-w-5xl sm:mb-16">
           <div className="aspect-video overflow-hidden rounded-2xl border border-white/15 bg-black shadow-[0_24px_80px_rgba(0,0,0,0.45)] sm:rounded-3xl">
-            <iframe
-              className="h-full w-full"
-              ref={presentationFrameRef}
-              src={presentationVideoUrl}
-              title="Silence AI presentation video"
-              loading="eager"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
+            {isVideoOpen ? (
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube-nocookie.com/embed/KE7Dt7tsJgk?autoplay=1"
+                title="Silence AI presentation video"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={() => setIsVideoOpen(true)}
+                className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_center,#172143,#050505_70%)] text-white"
+                aria-label="Play Silence AI presentation video"
+              >
+                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-2xl text-black shadow-lg" aria-hidden="true">▶</span>
+              </button>
+            )}
           </div>
           <a
             href="https://youtu.be/KE7Dt7tsJgk"
@@ -1063,6 +1026,7 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
                   key={option.id}
                   onClick={() => {
                     setProductType(option.id);
+                    if (option.id !== productType) setIsSandboxOpen(false);
                     if (option.id === "pentester") trackPricingEvent("penetration_testing_pricing_selected");
                   }}
                   onMouseEnter={() => setHoveredProductType(option.id)}
@@ -1135,29 +1099,37 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal, showLamp = true }) =
         )}
 
         {productType === "email" && (
-          <DeferredContent minHeight={160}>
+          <DeferredContent minHeight={160} renderOnServer>
             <EmailWorkspaceStoreLinks className="mt-10" />
           </DeferredContent>
         )}
 
-        {productType === "server" && <DeferredContent minHeight={600}><ServerSecurityComparison /><InteractiveSandbox product="server" /></DeferredContent>}
+        {productType === "server" && <ServerSecurityComparison />}
 
         {(productType === "web" || productType === "email" || productType === "pentester") && (
-          <DeferredContent minHeight={460}>
+          <DeferredContent minHeight={460} renderOnServer>
             <ProductComparison productType={productType} />
           </DeferredContent>
         )}
 
         {productType === "pentester" && <DeferredContent minHeight={650}><PentestEmbed height="min(76vh, 700px)" /></DeferredContent>}
 
-        {productType === "web" && (
-          <>
-            <DeferredContent minHeight={650}><InteractiveSandbox product="web" /></DeferredContent>
-          </>
+        {(productType === "email" || productType === "web" || productType === "server") && (
+          <div className="mt-10 text-center">
+            {!isSandboxOpen && (
+              <button
+                type="button"
+                onClick={() => setIsSandboxOpen(true)}
+                className="rounded-full border border-blue-300/40 bg-blue-400/10 px-6 py-3 font-semibold text-blue-100 transition-colors hover:bg-blue-400/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+              >
+                <HomepageText fallback="Open interactive demo" />
+              </button>
+            )}
+            {isSandboxOpen && <InteractiveSandbox key={productType} product={productType} />}
+          </div>
         )}
         {productType === "email" && (
           <>
-            <DeferredContent minHeight={650}><InteractiveSandbox /></DeferredContent>
             {showLamp && (
               <div className="relative left-1/2 -translate-x-1/2 w-[100vw] h-[220px] max-w-none overflow-visible z-10">
                 <CybersecurityLamp

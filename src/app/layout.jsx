@@ -85,10 +85,10 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: '/supreme_dashboard.jpeg',
-        width: 1200,
-        height: 630,
-        alt: 'Silence AI Dashboard',
+        url: '/preview.png',
+        width: 1882,
+        height: 1057,
+        alt: 'Silence AI cybersecurity department',
       },
     ],
   },
@@ -96,7 +96,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Silence AI - Secure Development Cloud & AI-CSD',
     description: 'Silence AI provides cutting-edge AI cybersecurity, sealed development cloud solutions, and AI-CSD. Keep code, prompts, and builds entirely within your secure network.',
-    images: ['/supreme_dashboard.jpeg'],
+    images: ['/preview.png'],
   },
   alternates: {
     canonical: '/',

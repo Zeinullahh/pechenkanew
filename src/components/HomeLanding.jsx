@@ -446,67 +446,77 @@ export default function HomeLanding() {
         {(() => {
           const complianceItems = [
             {
-              flag: "🇪🇺",
+              flagCode: "eu",
+              badge: "GDPR",
               name: "GDPR",
               citation: "EU Regulation 2016/679",
               desc: t("homeCompliance.cards.gdpr.desc", "The world's most stringent privacy and security law, governing personal data of all EU residents. Sets the global benchmark for data protection worldwide."),
             },
             {
-              flag: "🇬🇧",
+              flagCode: "gb",
+              badge: "UK GDPR",
               name: "UK GDPR",
               citation: "UK Data Protection Act 2018",
               desc: t("homeCompliance.cards.ukGdpr.desc", "Post-Brexit UK equivalent of EU GDPR, retained in domestic law. Substantively identical in scope and obligations — EU GDPR compliance extends to UK GDPR."),
             },
             {
-              flag: "🇺🇸",
+              flagCode: "us",
+              badge: "CCPA / CPRA",
               name: "CCPA / CPRA",
               citation: "California Consumer Privacy Act, 2020",
               desc: t("homeCompliance.cards.ccpa.desc", "Registration uses Google OAuth, which transmits profile data (name, email, Google ID) to our servers — this is personal data under CCPA. Users retain full rights to know, access, and delete their account data at any time."),
             },
             {
-              flag: "🇨🇦",
+              flagCode: "ca",
+              badge: "PIPEDA",
               name: "PIPEDA",
               citation: "Canada — Personal Information Protection and Electronic Documents Act",
               desc: t("homeCompliance.cards.pipeda.desc", "Applies to any commercial organization handling Canadian residents' data regardless of where the company is based. As we scale globally, personal data from Canadian users is handled with the same minimal-collection standards."),
             },
             {
-              flag: "🇸🇦",
+              flagCode: "sa",
+              badge: "KSA PDPL",
               name: "KSA PDPL",
               citation: "Saudi Arabia — SDAIA, 2023",
               desc: t("homeCompliance.cards.ksaPdpl.desc", "Saudi Personal Data Protection Law enforced by SDAIA. Governs collection, processing, and cross-border transfer of personal data."),
             },
             {
-              flag: "🇦🇪",
+              flagCode: "ae",
+              badge: "UAE PDPL",
               name: "UAE PDPL",
               citation: "Federal Law No. 45 of 2021",
               desc: t("homeCompliance.cards.uaePdpl.desc", "UAE Personal Data Protection Law regulating personal data processing across the mainland and free zones, including DIFC and ADGM."),
             },
             {
-              flag: "🇶🇦",
+              flagCode: "qa",
+              badge: "Qatar PDPL",
               name: "Qatar PDPL",
               citation: "Law No. 13 of 2016",
               desc: t("homeCompliance.cards.qatarPdpl.desc", "Qatar's Personal Data Privacy Protection Law administered by the Ministry of Transport and Communications."),
             },
             {
-              flag: "🇧🇭",
+              flagCode: "bh",
+              badge: "Bahrain PDPL",
               name: "Bahrain PDPL",
               citation: "Law No. 30 of 2018",
               desc: t("homeCompliance.cards.bahrainPdpl.desc", "Bahrain Personal Data Protection Law regulated by the Personal Data Protection Authority (PDPA), aligned with international standards."),
             },
             {
-              flag: "🇰🇼",
+              flagCode: "kw",
+              badge: "Kuwait DP",
               name: "Kuwait DP",
               citation: "Decree-Law No. 20 of 2014",
               desc: t("homeCompliance.cards.kuwaitDp.desc", "Kuwait's Electronic Communications and Transactions Law establishing data protection obligations for electronic service providers."),
             },
             {
-              flag: "🇴🇲",
+              flagCode: "om",
+              badge: "Oman PDPL",
               name: "Oman PDPL",
               citation: "Royal Decree No. 6 of 2022",
               desc: t("homeCompliance.cards.omanPdpl.desc", "Oman Personal Data Protection Law establishing comprehensive rights for data subjects and obligations for controllers and processors."),
             },
             {
-              flag: "🔒",
+              badge: "Privacy by Design",
               name: "Privacy by Design",
               citation: "GDPR Art. 25 · All GCC frameworks",
               desc: t("homeCompliance.cards.privacyByDesign.desc", "Supreme's code scanning runs entirely on your local machine — no source code is ever transmitted or processed externally. Account data (Google OAuth profile) is handled separately."),
@@ -586,16 +596,17 @@ export default function HomeLanding() {
                       className="shrink-0 w-64 mx-3 glass-readable rounded-2xl p-5 flex flex-col justify-between"
                     >
                       <div>
-                        <div className="flex items-center gap-3 mb-3">
-                          <div className="shrink-0 rounded-xl border-0 bg-white/5 p-2 text-xl leading-none">
-                            {item.flag}
-                          </div>
-                          <div>
-                            <div className="font-bold text-white text-sm leading-tight">{item.name}</div>
-                            <div className="text-[11px] text-gray-400 mt-0.5 leading-tight">{item.citation}</div>
-                          </div>
+                        <div className="mb-3 inline-flex max-w-full items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2.5 py-1 text-[11px] font-bold text-emerald-200">
+                          {item.flagCode ? (
+                            <img src={`/flags/${item.flagCode}.svg`} alt="" className="h-3.5 w-5 shrink-0 rounded-[2px] object-cover" />
+                          ) : (
+                            <ShieldCheck aria-hidden="true" className="h-3.5 w-3.5 shrink-0" />
+                          )}
+                          <span className="truncate">{item.badge}</span>
                         </div>
-                        <p className="text-sm text-white leading-relaxed">{item.desc}</p>
+                        <div className="font-bold text-white text-sm leading-tight">{item.name}</div>
+                        <div className="text-[11px] text-gray-400 mt-0.5 leading-tight">{item.citation}</div>
+                        <p className="mt-3 text-sm text-white leading-relaxed">{item.desc}</p>
                       </div>
                       <div className="mt-4 flex items-center justify-between gap-2 flex-wrap">
                         <div className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-green-400">
@@ -623,7 +634,7 @@ export default function HomeLanding() {
         <DeferredContent id="resources" minHeight={420} className="scroll-mt-24" renderOnServer>
         {(() => {
           const partners = [
-            { name: "Citizensec", category: "CyberPolice", logo: "/partners/citizensec.png", website: "https://citizensec.kz", featuredLogo: true },
+            { name: "CitizenSec", category: "CyberPolice", logo: "/partners/citizensec.png", website: "https://citizensec.kz" },
             { name: "Nur Astana Kurylys", amount: "$1.5", unit: "billion", logo: "/partners/nur-astana-kurylys.png" },
             { name: "QazCloud", amount: "$100", unit: "million", logo: "/partners/qazcloud.png" },
             { name: "KazakhCinema", category: "Government", logo: "/partners/kazakhcinema.png" },
@@ -656,14 +667,14 @@ export default function HomeLanding() {
                   {allPartners.map((p, i) => (
                     <div
                       key={`${p.name}-${i}`}
-                      className={`shrink-0 w-64 mx-3 glass-readable rounded-2xl p-5 flex flex-col items-center gap-4 group transition-opacity duration-300 ${p.featuredLogo ? "opacity-100" : "opacity-50 hover:opacity-100"}`}
+                      className="shrink-0 w-64 mx-3 glass-readable rounded-2xl p-5 flex flex-col items-center gap-4 group opacity-50 hover:opacity-100 transition-opacity duration-300"
                     >
-                      <div className={`relative h-32 w-48 flex flex-col items-center justify-center gap-2 transition-all duration-300 ${p.featuredLogo ? "" : "grayscale group-hover:grayscale-0"}`}>
-                        <div className={`relative ${p.featuredLogo ? "h-24" : "h-20"} w-full flex items-center justify-center`}>
+                      <div className="relative h-32 w-48 flex flex-col items-center justify-center gap-2 grayscale group-hover:grayscale-0 transition-[filter] duration-300">
+                        <div className="relative h-20 w-full flex items-center justify-center">
                           <img
                             src={p.logo}
                             alt={p.name}
-                            loading={p.featuredLogo ? "eager" : "lazy"}
+                            loading="lazy"
                             className="max-h-full max-w-full object-contain"
                             onError={(e) => {
                               e.currentTarget.style.display = "none";

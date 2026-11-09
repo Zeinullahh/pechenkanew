@@ -149,3 +149,18 @@ test("repeated target updates still leave one runnable background task", async (
   await h.tick();
   assert.deepEqual(h.started, [0, 1]);
 });
+
+test("mobile stride preloads only frames that the renderer can display", async (t) => {
+  const h = harness(t, { frameStep: 2 });
+  h.decoder.setTarget(20);
+  await flush();
+  await h.finish(20);
+  await h.tick();
+  assert.deepEqual(h.started, [20, 22]);
+  h.decoder.setTarget(18);
+  await flush();
+  await h.finish(18);
+  await h.tick();
+  assert.equal(h.started.includes(19), false);
+  assert.equal(h.started.includes(21), false);
+});

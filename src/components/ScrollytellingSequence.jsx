@@ -3,13 +3,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { FRAME_COUNT, getFrameVariant, getPreloadedFrameUrl, getMobileFrameDecoder } from "@/components/storyFrames";
+import { FRAME_COUNT, MOBILE_FRAME_STEP, getFrameVariant, getPreloadedFrameUrl, getMobileFrameDecoder } from "@/components/storyFrames";
 
 const LAST_FRAME = FRAME_COUNT - 1;
 const FINAL_STORY_FRAME = 117;
 const PREFETCH_RADIUS = 4;
 const MAX_CACHED_FRAMES = 12;
-const MAX_MOBILE_PIXEL_RATIO = 2;
+const MAX_MOBILE_PIXEL_RATIO = 1.25;
 const MAX_DESKTOP_PIXEL_RATIO = 2;
 const FINAL_FRAME_PREFETCH_POINT = 0.86;
 
@@ -42,6 +42,12 @@ function getFrameForProgress(progress) {
   );
 
   return frame;
+}
+
+function getTargetFrame(progress) {
+  const frame = getFrameForProgress(progress);
+  if (getFrameVariant() !== "mobile" || frame === LAST_FRAME) return frame;
+  return Math.min(LAST_FRAME, Math.round(frame / MOBILE_FRAME_STEP) * MOBILE_FRAME_STEP);
 }
 
 function getFrameKey(frameIndex, variant = getFrameVariant()) {
@@ -329,7 +335,7 @@ export default function ScrollytellingSequence({ children }) {
 
     context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
     context.imageSmoothingEnabled = true;
-    context.imageSmoothingQuality = "high";
+    context.imageSmoothingQuality = isMobile ? "medium" : "high";
     context.clearRect(0, 0, viewportWidth, viewportHeight);
 
     const maxImageWidth = viewportWidth * (isMobile ? 1.72 : 0.92);
@@ -392,7 +398,7 @@ export default function ScrollytellingSequence({ children }) {
   useEffect(() => {
     let cancelled = false;
 
-    const initialFrame = prefersReducedMotion ? 0 : getFrameForProgress(scrollYProgress.get());
+    const initialFrame = prefersReducedMotion ? 0 : getTargetFrame(scrollYProgress.get());
     const initialRequest = loadFrame(getFrameVariant() === "mobile" ? initialFrame : 0);
     (getFrameVariant() === "mobile" ? getMobileFrameDecoder().warm() : initialRequest)
       .then(() => {
@@ -400,7 +406,7 @@ export default function ScrollytellingSequence({ children }) {
         setIsReady(true);
         targetFrameRef.current = prefersReducedMotion
           ? 0
-          : getFrameForProgress(scrollYProgress.get());
+          : getTargetFrame(scrollYProgress.get());
         preloadNeighborhood(targetFrameRef.current);
       })
       .catch((error) => {
@@ -415,7 +421,7 @@ export default function ScrollytellingSequence({ children }) {
   useEffect(() => {
     targetFrameRef.current = prefersReducedMotion
       ? 0
-      : getFrameForProgress(scrollYProgress.get());
+      : getTargetFrame(scrollYProgress.get());
     currentFrameRef.current = -1;
     queueDraw();
   }, [prefersReducedMotion, queueDraw, scrollYProgress]);
@@ -428,7 +434,7 @@ export default function ScrollytellingSequence({ children }) {
 
     const renderCurrentFrame = () => {
       const progress = scrollYProgress.get();
-      const frameIndex = prefersReducedMotion ? 0 : getFrameForProgress(progress);
+      const frameIndex = prefersReducedMotion ? 0 : getTargetFrame(progress);
       targetFrameRef.current = frameIndex;
 
       loadFrame(frameIndex)
@@ -465,7 +471,7 @@ export default function ScrollytellingSequence({ children }) {
     const unsubscribe = scrollYProgress.on("change", (progress) => {
       if (prefersReducedMotion || !regionVisibleRef.current || !pageVisibleRef.current) return;
 
-      const frameIndex = getFrameForProgress(progress);
+      const frameIndex = getTargetFrame(progress);
       if (getFrameVariant() !== "mobile" && progress >= FINAL_FRAME_PREFETCH_POINT) loadFrame(FINAL_STORY_FRAME).catch(() => {});
       if (frameIndex === targetFrameRef.current) return;
 
@@ -515,9 +521,7 @@ export default function ScrollytellingSequence({ children }) {
       </div>
 
       <div className="relative z-10 -mt-[100svh]">
-        {/* 175svh gives 75svh of travel for all 118 frames on mobile,
-            about 1.53x the frame progression of the previous 215svh. */}
-        <div ref={storyRef} className={prefersReducedMotion ? "relative h-[100svh]" : "relative h-[175svh] md:h-[285vh]"}>
+        <div ref={storyRef} className={prefersReducedMotion ? "relative h-[100svh]" : "relative h-[215svh] md:h-[285vh]"}>
           {prefersReducedMotion ? <ReducedMotionStory /> : <StoryCopy progress={scrollYProgress} />}
         </div>
         <div className="relative z-20 pb-12 sm:pb-16">

@@ -1,20 +1,23 @@
 import { createStoryFrameDecoder } from "./storyFrameDecoder.mjs";
 
 export const FRAME_COUNT = 118;
+export const MOBILE_FRAME_STEP = 2;
 
 const CONCURRENT_DOWNLOADS = 8;
 const MOBILE_FRAME_VERSION = 5;
 const DESKTOP_FRAME_VERSION = 3;
-// Match the 900p mobile sources without inflating decoded memory by upscaling.
-const MOBILE_DECODE_WIDTH = 1600;
-const MOBILE_DECODE_HEIGHT = 900;
+// Decode near the size actually painted on mobile instead of keeping 900p bitmaps.
 const cachedUrls = new Map();
 const inFlight = new Map();
 let mobileDecoder;
 
 export function getMobileFrameDecoder() {
-  if (!mobileDecoder) mobileDecoder = createStoryFrameDecoder({
+  if (!mobileDecoder) {
+    const decodeWidth = Math.min(1280, Math.max(960, Math.round(window.innerWidth * 1.72)));
+    const decodeHeight = Math.round(decodeWidth * 9 / 16);
+    mobileDecoder = createStoryFrameDecoder({
     frameCount: FRAME_COUNT,
+    frameStep: MOBILE_FRAME_STEP,
     decode: async (index) => {
       const url = getPreloadedFrameUrl(index, "mobile");
       if (typeof createImageBitmap === "function") {
@@ -22,9 +25,9 @@ export function getMobileFrameDecoder() {
           const response = await fetch(url);
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
           return await createImageBitmap(await response.blob(), {
-            resizeWidth: MOBILE_DECODE_WIDTH,
-            resizeHeight: MOBILE_DECODE_HEIGHT,
-            resizeQuality: "high",
+            resizeWidth: decodeWidth,
+            resizeHeight: decodeHeight,
+            resizeQuality: "medium",
           });
         } catch {
           // Older WebKit versions may expose ImageBitmap but reject WebP.
@@ -36,16 +39,17 @@ export function getMobileFrameDecoder() {
       await image.decode();
       // Preserve the memory bound when bitmap resizing is unavailable.
       const canvas = document.createElement("canvas");
-      canvas.width = MOBILE_DECODE_WIDTH;
-      canvas.height = MOBILE_DECODE_HEIGHT;
+      canvas.width = decodeWidth;
+      canvas.height = decodeHeight;
       const context = canvas.getContext("2d");
       if (!context) throw new Error("Unable to prepare mobile frame canvas");
-      context.imageSmoothingQuality = "high";
+      context.imageSmoothingQuality = "medium";
       context.drawImage(image, 0, 0, canvas.width, canvas.height);
       canvas.close = () => { canvas.width = 0; canvas.height = 0; };
       return canvas;
     },
   });
+  }
   return mobileDecoder;
 }
 

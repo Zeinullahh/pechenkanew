@@ -1,7 +1,7 @@
 // A replaceable working set, not a FIFO: old scroll requests never queue ahead
 // of the current target. An already running browser decode cannot be cancelled.
 export function createStoryFrameDecoder({
-  decode, frameCount = 118, maxFrames = 16, maxBytes = 48 * 1024 * 1024,
+  decode, frameCount = 118, frameStep = 1, maxFrames = 16, maxBytes = 48 * 1024 * 1024,
   schedule = (callback) => setTimeout(callback, 0), cancel = clearTimeout,
 }) {
   const cache = new Map();
@@ -18,8 +18,8 @@ export function createStoryFrameDecoder({
     const indices = [target];
     // Keep immediate reverse neighbours warm as well as the forward runway.
     for (let distance = 1; distance <= 10; distance++) {
-      indices.push(target + direction * distance);
-      if (distance % 2 === 0 && distance <= 8) indices.push(target - direction * (distance / 2));
+      indices.push(target + direction * distance * frameStep);
+      if (distance % 2 === 0 && distance <= 8) indices.push(target - direction * (distance / 2) * frameStep);
     }
     return indices.filter((index) => index >= 0 && index < frameCount);
   };

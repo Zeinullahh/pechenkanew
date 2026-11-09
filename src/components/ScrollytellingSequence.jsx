@@ -298,8 +298,15 @@ export default function ScrollytellingSequence({ children }) {
       : framesRef.current.get(getFrameKey(index, variant));
     let image = getCachedFrame(frameIndex);
 
-    // On touch screens, drawing a nearby frame can make the sequence visibly
-    // jump backward when the requested frame finishes decoding.
+    if (!image && variant === "mobile") {
+      const ready = getMobileFrameDecoder().getRenderableFrame(requestedFrame, currentFrameRef.current);
+      if (ready) {
+        image = ready.image;
+        frameIndex = ready.index;
+      }
+    }
+
+    // Desktop retains its nearest-frame fallback.
     if (!image && variant !== "mobile") {
       for (let distance = 1; distance < FRAME_COUNT; distance += 1) {
         const previousFrame = requestedFrame - distance;
@@ -375,7 +382,7 @@ export default function ScrollytellingSequence({ children }) {
     lastPrefetchFrameRef.current = centerFrame;
 
     if (getFrameVariant() === "mobile") {
-      getMobileFrameDecoder().setTarget(centerFrame);
+      // loadFrame already updates the shared decoder target and its runway.
       return;
     }
 

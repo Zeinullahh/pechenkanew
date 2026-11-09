@@ -84,6 +84,18 @@ export function createStoryFrameDecoder({
   };
   return {
     get: (index) => cache.get(index),
+    getRenderableFrame(requested, displayed = -1) {
+      if (cache.has(requested)) return { index: requested, image: cache.get(requested) };
+      // Only advance toward the requested position. A late decode must never
+      // move the picture away from the user's current scroll destination.
+      const forward = requested > displayed;
+      const candidates = [...cache.keys()].filter((index) => forward
+        ? index > displayed && index <= requested
+        : index < displayed && index >= requested);
+      candidates.sort((a, b) => Math.abs(a - requested) - Math.abs(b - requested));
+      const index = candidates[0];
+      return index === undefined ? undefined : { index, image: cache.get(index) };
+    },
     setTarget(index) {
       if (index !== target) {
         direction = index > target ? 1 : -1;

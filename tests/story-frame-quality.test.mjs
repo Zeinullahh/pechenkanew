@@ -10,7 +10,8 @@ function globalValue(t, name, value) {
   });
 }
 
-test("mobile 900p sources are decoded at their native resolution", async (t) => {
+test("mobile sources decode at a bounded phone resolution", async (t) => {
+  globalValue(t, "window", { innerWidth: 390 });
   const requests = [];
   const options = [];
   globalValue(t, "fetch", async (url) => {
@@ -21,19 +22,22 @@ test("mobile 900p sources are decoded at their native resolution", async (t) => 
     options.push(config);
     return { width: config.resizeWidth, height: config.resizeHeight, close() {} };
   });
-  const { getMobileFrameDecoder, getFrameUrl } = await import("../src/components/storyFrames.js?bitmap-quality");
+  const { getMobileFrameDecoder, getFrameUrl, getRequiredFrameIndices } = await import("../src/components/storyFrames.js?bitmap-quality");
+  assert.deepEqual(getRequiredFrameIndices("mobile"), [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22]);
+  assert.deepEqual(getRequiredFrameIndices("desktop"), Array.from({ length: 12 }, (_, index) => index));
   const decoder = getMobileFrameDecoder();
   t.after(() => decoder.pause());
   await decoder.warm();
   decoder.pause();
-  assert.equal(decoder.get(0).width, 1600);
-  assert.equal(decoder.get(0).height, 900);
-  assert.ok(options.every((config) => config.resizeQuality === "high"));
+  assert.equal(decoder.get(0).width, 960);
+  assert.equal(decoder.get(0).height, 540);
+  assert.ok(options.every((config) => config.resizeQuality === "medium"));
   assert.ok(requests.every((url) => url.includes("/mobile/") && url.endsWith("?v=5")));
   assert.equal(getFrameUrl(0, "desktop"), "/frames/frame-1.webp?v=3");
 });
 
 test("fallback resizing also bounds retained memory and releases canvas pixels", async (t) => {
+  globalValue(t, "window", { innerWidth: 390 });
   const draws = [];
   globalValue(t, "createImageBitmap", undefined);
   globalValue(t, "Image", class {
@@ -51,9 +55,9 @@ test("fallback resizing also bounds retained memory and releases canvas pixels",
   await decoder.warm();
   decoder.pause();
   const first = decoder.get(0);
-  assert.equal(first.width, 1600);
-  assert.equal(first.height, 900);
-  assert.ok(draws.every((args) => args[3] === 1600 && args[4] === 900));
+  assert.equal(first.width, 960);
+  assert.equal(first.height, 540);
+  assert.ok(draws.every((args) => args[3] === 960 && args[4] === 540));
   // A distant target drops old canvases immediately, before its decode starts.
   decoder.setTarget(100);
   assert.equal(first.width, 0);

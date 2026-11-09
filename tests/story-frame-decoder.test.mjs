@@ -164,3 +164,17 @@ test("mobile stride preloads only frames that the renderer can display", async (
   assert.equal(h.started.includes(19), false);
   assert.equal(h.started.includes(21), false);
 });
+
+test("ready frames advance toward the target without late-frame backtracking", async (t) => {
+  const h = harness(t);
+  h.decoder.setTarget(20);
+  await flush();
+  await h.finish(20);
+  await h.tick();
+  await h.finish(21);
+  assert.equal(h.decoder.getRenderableFrame(24, 19).index, 21);
+  assert.equal(h.decoder.getRenderableFrame(24, 22), undefined);
+  assert.equal(h.decoder.getRenderableFrame(18, 22).index, 20);
+  assert.equal(h.decoder.getRenderableFrame(18, 19), undefined);
+  assert.equal(h.decoder.getRenderableFrame(20, 22).index, 20);
+});

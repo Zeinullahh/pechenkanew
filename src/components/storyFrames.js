@@ -61,11 +61,12 @@ function frameKey(variant, index) {
   return `${variant}:${index}`;
 }
 
-export function getRequiredFrameIndices() {
+export function getRequiredFrameIndices(variant = getFrameVariant()) {
   // The scrollytelling renderer fetches nearby frames as the visitor scrolls.
   // Keeping all 118 compressed frames in blob URLs for the entire visit can
   // exhaust memory on mobile just as the pricing section comes into view.
-  return Array.from({ length: Math.min(FRAME_COUNT, 12) }, (_, index) => index);
+  const step = variant === "mobile" ? MOBILE_FRAME_STEP : 1;
+  return Array.from({ length: Math.min(Math.ceil(FRAME_COUNT / step), 12) }, (_, index) => index * step);
 }
 
 export function getFrameUrl(index, variant = getFrameVariant()) {
@@ -81,7 +82,7 @@ export function getPreloadedFrameUrl(index, variant = getFrameVariant()) {
 }
 
 export function preloadStoryFrames(variant, onProgress) {
-  const requiredFrames = getRequiredFrameIndices();
+  const requiredFrames = getRequiredFrameIndices(variant);
   let request = inFlight.get(variant);
   if (!request) {
     const listeners = new Set();

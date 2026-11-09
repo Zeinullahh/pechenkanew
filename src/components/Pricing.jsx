@@ -31,19 +31,16 @@ const PRICING_DATA = {
     standard: {
       yearly: 7.30,
       monthly: 8.60,
-      kzt: { yearly: 3650, monthly: 3400 },
       unit: "/user/month",
     },
     premium: { // Premium 100
       yearly: 12.00,
       monthly: 13.45,
-      kzt: { yearly: 6000, monthly: 5500 },
       unit: "/user/month",
     },
     max: { // Business MAX 100
       yearly: 25.00,
       monthly: 25.00,
-      kzt: { yearly: 12500, monthly: 11500 },
       unit: "/user/month",
     },
   },
@@ -629,9 +626,7 @@ const EmailSecurityPricing = ({
         {plans.map((plan) => {
           const priceData = PRICING_DATA.business[plan.id];
           const price = billing === "yearly" ? priceData.yearly : priceData.monthly;
-          const displayPrice = currency === "KZT"
-            ? priceData.kzt[billing]
-            : convertPrice(price, currency);
+          const displayPrice = convertPrice(price, currency);
           const differentiators = plan.features.slice(-3);
           const highlighted = plan.id === "premium";
 

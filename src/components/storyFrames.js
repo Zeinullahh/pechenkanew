@@ -61,12 +61,11 @@ function frameKey(variant, index) {
   return `${variant}:${index}`;
 }
 
-export function getRequiredFrameIndices(variant = getFrameVariant()) {
-  // The scrollytelling renderer fetches nearby frames as the visitor scrolls.
-  // Keeping all 118 compressed frames in blob URLs for the entire visit can
-  // exhaust memory on mobile just as the pricing section comes into view.
-  const step = variant === "mobile" ? MOBILE_FRAME_STEP : 1;
-  return Array.from({ length: Math.min(Math.ceil(FRAME_COUNT / step), 12) }, (_, index) => index * step);
+export function getRequiredFrameIndices() {
+  // Download the entire sequence before revealing the page, including its final
+  // frame. Keep compressed blobs (~7 MB on mobile), while the decoder retains
+  // only a bounded working set of much larger decoded images.
+  return Array.from({ length: FRAME_COUNT }, (_, index) => index);
 }
 
 export function getFrameUrl(index, variant = getFrameVariant()) {

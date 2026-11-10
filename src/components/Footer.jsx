@@ -10,7 +10,7 @@ const Footer = () => {
   const copyright = t("footer.copyright", `© ${year} Silence AI. All rights reserved.`, { year });
 
   return (
-    <footer className="bg-transparent text-white pt-52 pb-20 sm:pt-72 sm:pb-24 lg:pb-12 lg:pt-60">
+    <footer className="relative z-10 isolate bg-black text-white pt-52 pb-20 sm:pt-72 sm:pb-24 lg:pb-12 lg:pt-60">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">

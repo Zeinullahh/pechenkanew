@@ -28,7 +28,7 @@ export default function LayoutWrapper({ children, initialLanguage }) {
       <div className={!isPolicyPage ? "default-content-wrapper pt-20" : "default-content-wrapper"}>
         {children}
       </div>
-      <div className={`${isPolicyPage ? "bg-black" : "relative w-full"} print:hidden`}>
+      <div className="relative z-30 isolate w-full bg-black print:hidden">
         <Footer />
       </div>
       <CookieConsent />

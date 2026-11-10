@@ -85,7 +85,7 @@ export default function Preloader() {
       }, wait);
     };
 
-    // The homepage opens after its first story frames and pricing UI are ready.
+    // The homepage opens after the entire story sequence and pricing UI are ready.
     // The presentation player loads only when the visitor presses Play.
     let loadedFrames = 0;
     let framesReady = !isHome;
@@ -102,7 +102,7 @@ export default function Preloader() {
       }
     };
     const checkReady = () => {
-      if (!cancelled && framesReady && pricingReady && videoReady) reveal();
+      if (!cancelled && framesReady && decodedReady && pricingReady && videoReady) reveal();
     };
 
     if (isHome) {

@@ -1,4 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Preloader from "@/components/Preloader";
 import "./globals.css";
 
@@ -160,6 +161,7 @@ export default async function RootLayout(props) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           {props.children}
         </NextIntlClientProvider>
+        {process.env.VERCEL === "1" && <SpeedInsights />}
       </body>
     </html>
   );
